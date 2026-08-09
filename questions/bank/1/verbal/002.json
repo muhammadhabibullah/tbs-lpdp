@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-002",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "NOMADEN = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Terpencil"
+    },
+    {
+      "key": "B",
+      "text": "Menetap"
+    },
+    {
+      "key": "C",
+      "text": "Berpindah-pindah"
+    },
+    {
+      "key": "D",
+      "text": "Terasing"
+    },
+    {
+      "key": "E",
+      "text": "Tradisional"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Terpencil menggambarkan letak yang jauh dari keramaian, yakni sifat lokasi, bukan kebiasaan berpindah tempat tinggal.",
+    "B": "Salah. Menetap justru merupakan lawan makna nomaden karena berarti tinggal tetap di satu tempat.",
+    "C": "Benar. Nomaden berarti hidup berpindah-pindah dari satu tempat ke tempat lain tanpa tempat tinggal yang tetap.",
+    "D": "Salah. Terasing berarti terpisah atau terkucil dari lingkungan sekitar; kelompok yang menetap pun dapat terasing.",
+    "E": "Salah. Tradisional mengacu pada sikap berpegang pada adat lama, sedangkan nomaden menyangkut pola bertempat tinggal; kedua kata itu tidak bersinonim."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

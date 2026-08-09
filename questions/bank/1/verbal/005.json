@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-005",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "sinonim",
+  "question_text": "DIKOTOMI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Perbedaan pendapat"
+    },
+    {
+      "key": "B",
+      "text": "Pembagian atas dua kelompok yang bertentangan"
+    },
+    {
+      "key": "C",
+      "text": "Pertentangan kepentingan"
+    },
+    {
+      "key": "D",
+      "text": "Penggolongan secara berjenjang"
+    },
+    {
+      "key": "E",
+      "text": "Penyatuan dua unsur berbeda"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Perbedaan pendapat adalah ketidaksamaan pandangan antarorang, sedangkan dikotomi menyangkut pembagian suatu hal menjadi dua bagian.",
+    "B": "Benar. Dikotomi adalah pembagian atas dua kelompok atau dua golongan yang saling bertentangan.",
+    "C": "Salah. Pertentangan kepentingan menekankan konflik antarpihak, bukan tindakan membagi sesuatu menjadi dua bagian yang berlawanan.",
+    "D": "Salah. Penggolongan berjenjang mengacu pada hierarki atau taksonomi bertingkat, sedangkan dikotomi hanya membagi menjadi dua.",
+    "E": "Salah. Penyatuan dua unsur adalah sintesis, yang justru merupakan kebalikan dari pembagian menjadi dua kelompok."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

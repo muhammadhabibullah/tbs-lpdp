@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-010",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "antonim",
+  "question_text": "KONVERGEN >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sentripetal"
+    },
+    {
+      "key": "B",
+      "text": "Divergen"
+    },
+    {
+      "key": "C",
+      "text": "Konsentris"
+    },
+    {
+      "key": "D",
+      "text": "Simetris"
+    },
+    {
+      "key": "E",
+      "text": "Linear"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Sentripetal berarti bergerak menuju pusat sehingga sejalan dengan makna konvergen, bukan lawannya.",
+    "B": "Benar. Konvergen berarti menuju satu titik pertemuan, sedangkan divergen berarti memencar atau menjauh dari satu titik.",
+    "C": "Salah. Konsentris berarti berpusat pada satu titik yang sama sehingga justru sejalan dengan makna memusat pada konvergen.",
+    "D": "Salah. Simetris berarti setangkup antara dua sisi, menyangkut keseimbangan bentuk, bukan arah gerak menuju atau menjauhi satu titik.",
+    "E": "Salah. Linear berarti lurus atau berbentuk garis, menyangkut bentuk lintasan, bukan arah pertemuannya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

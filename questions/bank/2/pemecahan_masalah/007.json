@@ -1,0 +1,43 @@
+{
+  "id": "2-pemecahan_masalah-007",
+  "package": 2,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah perusahaan mengganti seluruh meja kerja pegawai di lantai empat kantornya dengan meja berdiri yang tinggi permukaannya dapat diatur. Selama tiga bulan sesudah penggantian, jumlah keluhan nyeri punggung yang dicatat klinik perusahaan dari pegawai lantai empat turun 35 persen dibandingkan dengan tiga bulan sebelumnya. Bagian sumber daya manusia menyimpulkan bahwa penggunaan meja berdiri itulah yang menurunkan keluhan nyeri punggung pegawai lantai empat.\n\nInformasi berikut yang paling memperkuat simpulan bagian sumber daya manusia tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sebagian besar pegawai lantai empat menyatakan lebih menyukai tampilan meja berdiri daripada tampilan meja kerja yang lama."
+    },
+    {
+      "key": "B",
+      "text": "Biaya pengadaan satu unit meja berdiri hampir dua kali lipat biaya pengadaan satu unit meja kerja biasa."
+    },
+    {
+      "key": "C",
+      "text": "Perusahaan memasang meja berdiri atas rekomendasi konsultan kesehatan kerja yang telah lama bekerja sama dengan perusahaan."
+    },
+    {
+      "key": "D",
+      "text": "Pada periode yang sama, keluhan nyeri punggung pegawai di lantai lain yang tetap memakai meja kerja biasa menurun dengan besaran yang serupa."
+    },
+    {
+      "key": "E",
+      "text": "Pada periode yang sama, keluhan nyeri punggung pegawai di lantai lain yang tetap memakai meja kerja biasa tidak mengalami perubahan."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Kesukaan pegawai terhadap tampilan meja menyangkut selera, bukan keadaan punggung mereka. Informasi ini tidak menambah maupun mengurangi alasan untuk menghubungkan penggantian meja dengan turunnya keluhan nyeri punggung.",
+    "B": "Salah. Perbandingan biaya pengadaan hanya relevan untuk menilai kelayakan anggaran program. Mahal atau murahnya meja berdiri tidak memberi keterangan apa pun mengenai pengaruhnya terhadap keluhan nyeri punggung.",
+    "C": "Salah. Asal usul rekomendasi hanya menjelaskan mengapa perusahaan mengambil keputusan itu. Kewibawaan pihak yang menganjurkan bukan bukti bahwa penggantian meja benar-benar menurunkan keluhan di lantai empat.",
+    "D": "Salah. Informasi ini justru melemahkan simpulan. Jika keluhan di lantai yang tidak diganti mejanya turun dengan besaran serupa, penurunan di lantai empat lebih mungkin disebabkan faktor yang berlaku menyeluruh, misalnya perubahan musim atau perubahan beban kerja, bukan oleh meja berdiri.",
+    "E": "Benar. Lantai lain berfungsi sebagai pembanding yang tidak menerima perlakuan. Apabila keluhan di lantai pembanding tidak berubah pada periode yang sama, penjelasan alternatif berupa faktor menyeluruh yang menekan keluhan di seluruh kantor menjadi gugur, sehingga perbedaan perlakuan pada lantai empat menjadi penjelasan yang jauh lebih kuat."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

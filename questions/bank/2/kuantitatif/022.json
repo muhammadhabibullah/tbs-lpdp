@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-022",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Sebuah bak air dapat diisi sampai penuh oleh pipa A dalam 6 jam dan oleh pipa B dalam 4 jam. Ketika bak dalam keadaan kosong, pipa A dibuka lebih dahulu selama 3 jam, kemudian pipa B ikut dibuka sehingga keduanya mengalir bersama sampai bak penuh. Berapa jam lagi bak tersebut penuh terhitung sejak pipa B dibuka?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "2,4 jam"
+    },
+    {
+      "key": "B",
+      "text": "5 jam"
+    },
+    {
+      "key": "C",
+      "text": "2 jam"
+    },
+    {
+      "key": "D",
+      "text": "1,2 jam"
+    },
+    {
+      "key": "E",
+      "text": "4,2 jam"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 2,4 jam adalah waktu mengisi satu bak penuh oleh kedua pipa sekaligus, yaitu 1 : (5/12). Bagian sebesar 1/2 bak yang sudah terisi pipa A selama 3 jam pertama belum dikurangkan.",
+    "B": "Salah. Nilai 5 jam muncul jika laju gabungan dianggap 1 : (6 + 4) = 1/10 bak per jam sehingga sisa 1/2 bak dibagi 1/10. Yang dijumlahkan pada pekerjaan bersama adalah laju kedua pipa, bukan waktunya.",
+    "C": "Salah. Nilai 2 jam diperoleh dari sisa 1/2 bak dibagi laju pipa B saja, yaitu (1/2) : (1/4). Perhitungan ini menganggap pipa A ditutup saat pipa B dibuka, padahal keduanya mengalir bersama.",
+    "D": "Benar. Laju pipa A = 1/6 bak per jam dan laju pipa B = 1/4 bak per jam. Selama 3 jam pertama terisi 3 × 1/6 = 1/2 bak sehingga sisanya 1/2 bak. Laju gabungan = 1/6 + 1/4 = 5/12 bak per jam, sehingga waktu yang diperlukan = (1/2) : (5/12) = 1/2 × 12/5 = 1,2 jam.",
+    "E": "Salah. Nilai 4,2 jam adalah lama pengisian terhitung sejak pipa A dibuka, yaitu 3 + 1,2 jam, sedangkan yang ditanyakan adalah waktu terhitung sejak pipa B dibuka."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

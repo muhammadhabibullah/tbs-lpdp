@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-007",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 7,
+  "type": "deret_angka",
+  "question_text": "4, 7, 12, 19, 28, 39, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "67"
+    },
+    {
+      "key": "B",
+      "text": "49"
+    },
+    {
+      "key": "C",
+      "text": "51"
+    },
+    {
+      "key": "D",
+      "text": "52"
+    },
+    {
+      "key": "E",
+      "text": "50"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 67 diperoleh dengan melompat ke suku kedelapan (8² + tetapan), bukan suku ketujuh.",
+    "B": "Salah. Nilai 49 diperoleh dengan menghitung 7² tetapi lupa menambahkan tetapan 3.",
+    "C": "Salah. Nilai 51 diperoleh dengan menambahkan 2 × 6 = 12 dan lupa bahwa selisih berikutnya adalah 2 × 6 + 1 = 13.",
+    "D": "Benar. Suku ke-n adalah n² + 3 (1² + 3 = 4, 2² + 3 = 7, dan seterusnya). Suku ketujuh adalah 7² + 3 = 52.",
+    "E": "Salah. Nilai 50 diperoleh dengan menganggap selisih tetap sebesar 11, padahal selisihnya bertambah dua setiap langkah."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

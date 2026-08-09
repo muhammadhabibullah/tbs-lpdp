@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-022",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Pernyataan yang sesuai dengan isi bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Naskah kuno Nusantara umumnya ditulis pada bahan yang mudah rusak, seperti daun lontar, kertas dluwang, dan bilah bambu. Kelembapan udara yang tinggi mempercepat pertumbuhan jamur, sedangkan serangga perusak kertas melubangi lembar demi lembar. Banyak naskah pula yang disimpan di rumah keluarga pemiliknya tanpa pengendalian suhu dan kelembapan sehingga usia bahannya makin pendek.\n\nDigitalisasi kemudian dipandang sebagai jalan keluar. Pemindaian beresolusi tinggi memungkinkan isi naskah dibaca peneliti di berbagai tempat tanpa naskah aslinya harus dipindahkan berulang kali. Salinan digitalnya pun dapat digandakan sehingga rusaknya satu berkas tidak berarti hilangnya seluruh informasi.\n\nNamun, digitalisasi bukanlah pengganti perawatan fisik. Berkas digital menuntut pemeliharaan tersendiri: format yang usang, media penyimpanan yang rusak, dan pangkalan data yang tidak lagi dibiayai dapat membuat hasil pemindaian tidak terbaca. Selain itu, program pemindaian umumnya hanya menjangkau naskah yang telah terdaftar dalam katalog, sedangkan naskah milik perorangan kerap luput dari pendataan.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Digitalisasi menghapus kebutuhan perawatan fisik terhadap naskah kuno"
+    },
+    {
+      "key": "B",
+      "text": "Kerusakan naskah kuno terutama disebabkan oleh serangga perusak kertas"
+    },
+    {
+      "key": "C",
+      "text": "Naskah milik perorangan kerap tidak terjangkau program pemindaian karena belum terdaftar dalam katalog"
+    },
+    {
+      "key": "D",
+      "text": "Berkas hasil pemindaian tidak memerlukan pemeliharaan karena mudah digandakan"
+    },
+    {
+      "key": "E",
+      "text": "Seluruh naskah kuno Nusantara telah dipindai dengan resolusi tinggi"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Paragraf ketiga justru dibuka dengan penegasan bahwa digitalisasi bukanlah pengganti perawatan fisik.",
+    "B": "Salah. Bacaan menyebut jamur akibat kelembapan dan serangga perusak kertas secara sejajar tanpa menyatakan salah satunya sebagai penyebab utama.",
+    "C": "Benar. Bacaan menyatakan program pemindaian umumnya hanya menjangkau naskah yang telah terdaftar dalam katalog, sedangkan naskah milik perorangan kerap luput dari pendataan.",
+    "D": "Salah. Bacaan menegaskan berkas digital menuntut pemeliharaan tersendiri karena format yang usang dan media penyimpanan yang rusak dapat membuatnya tidak terbaca.",
+    "E": "Salah. Pernyataan ini bertentangan dengan bagian akhir bacaan yang menyebut adanya naskah yang belum terdata sehingga tidak terjangkau program pemindaian."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

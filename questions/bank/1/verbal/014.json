@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-014",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "analogi",
+  "question_text": "ASTRONOM : BINTANG = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Ahli botani : Tumbuhan"
+    },
+    {
+      "key": "B",
+      "text": "Tumbuhan : Ahli botani"
+    },
+    {
+      "key": "C",
+      "text": "Dokter : Rumah sakit"
+    },
+    {
+      "key": "D",
+      "text": "Petani : Cangkul"
+    },
+    {
+      "key": "E",
+      "text": "Teleskop : Benda langit"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Astronom adalah ahli yang mengkaji bintang, sebagaimana ahli botani mengkaji tumbuhan; jenis dan arah hubungannya sama.",
+    "B": "Salah. Isinya tepat, tetapi urutannya terbalik karena objek kajian ditempatkan sebelum ahlinya.",
+    "C": "Salah. Dokter dan rumah sakit berhubungan sebagai profesi dengan tempat bekerja, bukan ahli dengan objek kajiannya.",
+    "D": "Salah. Petani dan cangkul berhubungan sebagai pelaku dengan alat yang digunakan, bukan dengan hal yang dipelajarinya.",
+    "E": "Salah. Teleskop adalah alat pengamat, bukan ahli, sehingga unsur pertamanya tidak sepadan dengan astronom."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

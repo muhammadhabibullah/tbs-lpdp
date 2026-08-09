@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-016",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "analogi",
+  "question_text": "KERANGKA : KARANGAN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Lukisan : Sketsa"
+    },
+    {
+      "key": "B",
+      "text": "Bingkai : Lukisan"
+    },
+    {
+      "key": "C",
+      "text": "Kuas : Pelukis"
+    },
+    {
+      "key": "D",
+      "text": "Sketsa : Lukisan"
+    },
+    {
+      "key": "E",
+      "text": "Novel : Bab"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Kedua katanya tepat, tetapi urutannya terbalik karena karya jadi ditempatkan sebelum rancangan awalnya.",
+    "B": "Salah. Bingkai adalah pelengkap yang dipasang setelah lukisan selesai, bukan rancangan yang dibuat sebelum karya digarap.",
+    "C": "Salah. Kuas dan pelukis berhubungan sebagai alat dengan penggunanya, bukan sebagai rancangan awal dengan karya jadi.",
+    "D": "Benar. Kerangka adalah rancangan awal yang disusun sebelum karangan ditulis, sebagaimana sketsa adalah rancangan awal sebelum lukisan digarap.",
+    "E": "Salah. Novel dan bab berhubungan sebagai keseluruhan dengan bagiannya, bukan sebagai rancangan awal dengan hasil akhirnya."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

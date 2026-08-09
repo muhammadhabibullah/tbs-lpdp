@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-011",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "BAB : BUKU = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Penulis : Novel"
+    },
+    {
+      "key": "B",
+      "text": "Kata : Huruf"
+    },
+    {
+      "key": "C",
+      "text": "Puisi : Bait"
+    },
+    {
+      "key": "D",
+      "text": "Bait : Puisi"
+    },
+    {
+      "key": "E",
+      "text": "Sampul : Perpustakaan"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Hubungan penulis dan novel adalah pencipta dengan karyanya, bukan bagian dengan keseluruhan.",
+    "B": "Salah. Kata merupakan keseluruhan yang tersusun atas huruf, sehingga arah hubungannya berlawanan dengan pola pada soal.",
+    "C": "Salah. Urutannya terbalik: puisi adalah keseluruhan dan bait adalah bagiannya, sedangkan pada soal kata pertama merupakan bagian.",
+    "D": "Benar. Bab adalah bagian dari buku, sebagaimana bait adalah bagian dari puisi; jenis dan arah hubungannya sama persis.",
+    "E": "Salah. Sampul memang bagian dari buku, tetapi perpustakaan adalah tempat menyimpan kumpulan buku, sehingga tingkatannya tidak sepadan."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

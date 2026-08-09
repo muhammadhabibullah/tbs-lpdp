@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-006",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 6,
+  "type": "aljabar",
+  "question_text": "Diketahui x + y = 11 dan xy = 14. Nilai dari x² + y² adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "107"
+    },
+    {
+      "key": "B",
+      "text": "149"
+    },
+    {
+      "key": "C",
+      "text": "93"
+    },
+    {
+      "key": "D",
+      "text": "65"
+    },
+    {
+      "key": "E",
+      "text": "121"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 107 diperoleh dengan mengurangkan xy satu kali, padahal penjabaran (x + y)² memuat 2xy.",
+    "B": "Salah. Nilai 149 diperoleh dengan menambahkan 2xy, padahal suku itu harus dipindahkan sehingga dikurangkan.",
+    "C": "Benar. x² + y² = (x + y)² − 2xy = 11² − 2 × 14 = 121 − 28 = 93.",
+    "D": "Salah. Nilai 65 diperoleh dengan menghitung (x − y)² = (x + y)² − 4xy, yang merupakan besaran lain.",
+    "E": "Salah. Nilai 121 diperoleh dengan menghitung (x + y)² = 121 dan berhenti di situ, tanpa mengurangkan 2xy."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

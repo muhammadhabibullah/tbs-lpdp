@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-015",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Premis 1: Semua mahasiswa yang lulus ujian komprehensif berhak mengikuti sidang skripsi.\nPremis 2: Rani berhak mengikuti sidang skripsi.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rani lulus ujian komprehensif."
+    },
+    {
+      "key": "B",
+      "text": "Rani tidak lulus ujian komprehensif."
+    },
+    {
+      "key": "C",
+      "text": "Semua mahasiswa yang berhak mengikuti sidang skripsi telah lulus ujian komprehensif."
+    },
+    {
+      "key": "D",
+      "text": "Rani belum tentu lulus ujian komprehensif."
+    },
+    {
+      "key": "E",
+      "text": "Sebagian mahasiswa yang lulus ujian komprehensif tidak berhak mengikuti sidang skripsi."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Premis pertama hanya menyatakan kelulusan ujian komprehensif membawa hak mengikuti sidang, bukan bahwa hak tersebut hanya diperoleh melalui jalan itu; menyimpulkan demikian berarti membalik arah implikasi.",
+    "B": "Salah. Tidak ada premis yang menutup kemungkinan Rani lulus ujian komprehensif, sehingga penyangkalan seperti ini sama tidak berdasarnya dengan pemastian.",
+    "C": "Salah. Pernyataan ini merupakan kebalikan premis pertama dan tidak dijamin olehnya; dapat saja ada jalan lain yang membuat seorang mahasiswa berhak mengikuti sidang skripsi.",
+    "D": "Benar. Premis kedua hanya menyatakan Rani memenuhi akibat, sedangkan akibat itu dapat timbul dari sebab lain, sehingga status kelulusan ujian komprehensif Rani tidak dapat dipastikan.",
+    "E": "Salah. Pernyataan ini justru bertentangan dengan premis pertama yang menjamin semua mahasiswa lulus ujian komprehensif berhak mengikuti sidang skripsi."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

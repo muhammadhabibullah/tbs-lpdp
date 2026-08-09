@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-005",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "Diketahui a : b = 7 : 10. Apabila a = 56, berapakah nilai b?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "8"
+    },
+    {
+      "key": "B",
+      "text": "560"
+    },
+    {
+      "key": "C",
+      "text": "39,2"
+    },
+    {
+      "key": "D",
+      "text": "136"
+    },
+    {
+      "key": "E",
+      "text": "80"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 8 diperoleh dengan berhenti pada faktor pengali perbandingan (56 ÷ 7) dan tidak mengalikannya kembali.",
+    "B": "Salah. Nilai 560 diperoleh dengan mengalikan dengan 10 tanpa membaginya dengan 7.",
+    "C": "Salah. Nilai 39,2 diperoleh dengan membalik perbandingan sehingga menghitung 56 × 7/10.",
+    "D": "Salah. Nilai 136 diperoleh dengan menghitung jumlah a dan b, bukan nilai b saja.",
+    "E": "Benar. a : b = 7 : 10, sehingga b = a × 10/7 = 56 × 10/7 = 80."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

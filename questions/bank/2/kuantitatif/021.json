@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-021",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Umur seorang ayah saat ini 4 kali umur anaknya. Delapan tahun mendatang, umur ayah menjadi 2,5 kali umur anaknya. Berapakah umur ayah saat ini?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "32 tahun"
+    },
+    {
+      "key": "B",
+      "text": "8 tahun"
+    },
+    {
+      "key": "C",
+      "text": "48 tahun"
+    },
+    {
+      "key": "D",
+      "text": "16 tahun"
+    },
+    {
+      "key": "E",
+      "text": "40 tahun"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Misalkan umur anak saat ini a tahun, maka umur ayah 4a tahun. Delapan tahun mendatang berlaku 4a + 8 = 2,5(a + 8), sehingga 4a + 8 = 2,5a + 20, lalu 1,5a = 12 dan a = 8. Umur ayah saat ini = 4 × 8 = 32 tahun. Pemeriksaan: delapan tahun lagi umur mereka 40 dan 16 tahun, dan 40 = 2,5 × 16.",
+    "B": "Salah. Nilai 8 tahun adalah umur anak saat ini, yaitu nilai a yang diperoleh dari persamaan. Umur ayah adalah 4 kali nilai tersebut.",
+    "C": "Salah. Nilai 48 tahun muncul jika persamaan 1,5a = 12 langsung dibaca a = 12 tanpa membagi kedua ruas dengan 1,5, lalu umur ayah dihitung 4 × 12.",
+    "D": "Salah. Nilai 16 tahun adalah umur anak delapan tahun mendatang (8 + 8), bukan umur ayah pada saat ini.",
+    "E": "Salah. Nilai 40 tahun adalah umur ayah delapan tahun mendatang (32 + 8), yaitu angka yang muncul saat memeriksa perbandingan 2,5 kali, padahal yang ditanyakan umur ayah saat ini."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-002",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "TENDENSI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kecenderungan"
+    },
+    {
+      "key": "B",
+      "text": "Ketegangan"
+    },
+    {
+      "key": "C",
+      "text": "Perselisihan"
+    },
+    {
+      "key": "D",
+      "text": "Ketetapan"
+    },
+    {
+      "key": "E",
+      "text": "Kesimpulan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Tendensi berarti kecenderungan, yaitu arah sikap atau keinginan yang menonjol pada seseorang maupun pada suatu keadaan.",
+    "B": "Salah. Ketegangan berpadanan dengan tensi; kemiripan bentuk antara tensi dan tendensi menjadi jebakan pada butir ini.",
+    "C": "Salah. Perselisihan berarti pertikaian antara dua pihak, sedangkan tendensi menunjuk pada kecondongan sikap satu pihak.",
+    "D": "Salah. Ketetapan berarti keputusan yang sudah dipastikan, berlawanan sifat dengan tendensi yang masih berupa kecondongan.",
+    "E": "Salah. Kesimpulan adalah hasil akhir suatu penalaran, sedangkan tendensi adalah kecondongan yang mendahului dan bukan hasil."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

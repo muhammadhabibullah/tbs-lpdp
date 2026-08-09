@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-023",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Modal sebesar Rp8.000.000,00 disimpan di sebuah bank dengan bunga tunggal 9% per tahun. Berapakah jumlah simpanan tersebut setelah 8 bulan?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp8.060.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp480.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp8.720.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp8.576.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp8.480.000,00"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai Rp8.060.000,00 memakai bunga satu bulan saja, yaitu 8.000.000 × 9% : 12 = 60.000. Hasil bagi per bulan tersebut masih harus dikalikan 8 karena simpanan berjalan 8 bulan.",
+    "B": "Salah. Rp480.000,00 memang besar bunga selama 8 bulan, tetapi yang ditanyakan adalah jumlah simpanan, yaitu modal ditambah bunga.",
+    "C": "Salah. Nilai Rp8.720.000,00 memakai bunga satu tahun penuh, yaitu 8.000.000 × 9% = 720.000, padahal simpanan baru berjalan 8 bulan sehingga bunga harus dihitung sebanding dengan waktunya.",
+    "D": "Salah. Nilai Rp8.576.000,00 muncul jika 8 bulan ditulis sebagai 0,8 tahun sehingga bunga dihitung 8.000.000 × 9% × 0,8 = 576.000. Delapan bulan setara 8/12 tahun, bukan 0,8 tahun.",
+    "E": "Benar. Bunga tunggal = 8.000.000 × 9% × 8/12 = 8.000.000 × 0,09 × 2/3 = Rp480.000,00. Jumlah simpanan = 8.000.000 + 480.000 = Rp8.480.000,00."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

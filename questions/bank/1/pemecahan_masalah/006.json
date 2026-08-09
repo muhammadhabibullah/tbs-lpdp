@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-006",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Enam pegawai, yaitu Andi, Budi, Citra, Dewi, Eka, dan Fajar, ditempatkan pada tiga divisi, yaitu Divisi P, Divisi Q, dan Divisi R. Setiap divisi diisi tepat dua pegawai dan setiap pegawai menempati tepat satu divisi. Penempatan tunduk pada ketentuan berikut.\n(1) Andi dan Budi tidak ditempatkan pada divisi yang sama.\n(2) Citra ditempatkan di Divisi Q.\n(3) Dewi tidak ditempatkan di Divisi R.\n(4) Eka tidak ditempatkan pada divisi yang sama dengan Citra.\n(5) Fajar tidak ditempatkan di Divisi P.\n\nBerdasarkan ketentuan tersebut, pernyataan berikut yang tidak mungkin benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Eka ditempatkan di Divisi P dan Fajar ditempatkan di Divisi Q."
+    },
+    {
+      "key": "B",
+      "text": "Andi ditempatkan di Divisi R dan Budi ditempatkan di Divisi P."
+    },
+    {
+      "key": "C",
+      "text": "Budi dan Citra ditempatkan di Divisi Q."
+    },
+    {
+      "key": "D",
+      "text": "Dewi dan Eka ditempatkan di Divisi P."
+    },
+    {
+      "key": "E",
+      "text": "Eka dan Fajar ditempatkan di Divisi R."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Jika Fajar berada di Divisi Q, kuota Divisi Q habis oleh Citra dan Fajar. Dewi yang dilarang menempati Divisi R oleh ketentuan 3 karena itu harus masuk Divisi P, sehingga bersama Eka kuota Divisi P pun habis. Andi dan Budi lalu terpaksa sama-sama menempati Divisi R, dan hal itu melanggar ketentuan 1. Kombinasi ini mustahil.",
+    "B": "Salah. Keadaan ini mungkin terjadi, misalnya Divisi P berisi Budi dan Dewi, Divisi Q berisi Citra dan Fajar, serta Divisi R berisi Andi dan Eka.",
+    "C": "Salah. Keadaan ini mungkin terjadi, misalnya Divisi P berisi Andi dan Dewi, Divisi Q berisi Budi dan Citra, serta Divisi R berisi Eka dan Fajar.",
+    "D": "Salah. Keadaan ini mungkin terjadi, misalnya Divisi P berisi Dewi dan Eka, Divisi Q berisi Andi dan Citra, serta Divisi R berisi Budi dan Fajar.",
+    "E": "Salah. Keadaan ini mungkin terjadi, misalnya Divisi P berisi Budi dan Dewi, Divisi Q berisi Andi dan Citra, serta Divisi R berisi Eka dan Fajar."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

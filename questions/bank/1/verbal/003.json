@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-003",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "ELABORASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Penjabaran secara terperinci"
+    },
+    {
+      "key": "B",
+      "text": "Penyingkatan isi"
+    },
+    {
+      "key": "C",
+      "text": "Pengulangan pernyataan"
+    },
+    {
+      "key": "D",
+      "text": "Penarikan simpulan"
+    },
+    {
+      "key": "E",
+      "text": "Penyuntingan naskah"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Elaborasi adalah penggarapan atau penguraian suatu gagasan secara tekun dan terperinci sehingga menjadi lebih jelas.",
+    "B": "Salah. Penyingkatan isi berarti memampatkan uraian; hal ini berlawanan dengan elaborasi yang justru memperinci uraian.",
+    "C": "Salah. Pengulangan hanya menyebut kembali pernyataan yang sama tanpa menambah rincian, sedangkan elaborasi menambah kedalaman uraian.",
+    "D": "Salah. Penarikan simpulan memadatkan uraian menjadi intisari, sedangkan elaborasi mengembangkan uraian menjadi lebih luas.",
+    "E": "Salah. Penyuntingan naskah adalah kegiatan memperbaiki kesalahan tulisan, bukan mengembangkan gagasan secara terperinci."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

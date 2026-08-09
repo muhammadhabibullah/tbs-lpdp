@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-020",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan, pembangkit panas bumi dapat beroperasi hingga puluhan tahun karena ...",
+  "image": null,
+  "passage": "Energi panas bumi berasal dari panas yang tersimpan di dalam kerak bumi. Pada wilayah yang dilalui jalur gunung api, kantong magma memanaskan air tanah hingga terbentuk uap bertekanan tinggi. Uap tersebut dialirkan melalui sumur produksi untuk memutar turbin pembangkit listrik, kemudian air yang telah mendingin diinjeksikan kembali ke dalam reservoir. Siklus tertutup semacam itu menjaga cadangan uap di dalam reservoir sehingga pembangkit dapat beroperasi hingga puluhan tahun.\n\nBerbeda dengan pembangkit tenaga surya dan tenaga angin yang keluarannya bergantung pada cuaca, pembangkit panas bumi menghasilkan daya yang relatif tetap sepanjang hari. Karena sifat tersebut, panas bumi kerap ditempatkan sebagai pemikul beban dasar dalam sistem kelistrikan. Emisi karbonnya pun jauh lebih rendah daripada emisi pembangkit berbahan bakar batu bara.\n\nMeskipun demikian, pemanfaatan panas bumi berjalan lambat. Biaya pengeboran eksplorasi sangat tinggi, sedangkan hasilnya belum pasti: sebuah sumur dapat saja tidak menghasilkan uap yang memadai setelah dana besar dikeluarkan. Sebagian besar wilayah prospek panas bumi juga berada di kawasan hutan lindung yang perizinannya berlapis. Hambatan utama pemanfaatan panas bumi dengan demikian terletak pada risiko tahap awal, bukan pada ketersediaan sumber dayanya.",
+  "options": [
+    {
+      "key": "A",
+      "text": "emisi karbonnya jauh lebih rendah daripada emisi pembangkit berbahan bakar batu bara"
+    },
+    {
+      "key": "B",
+      "text": "keluarannya relatif tetap sepanjang hari dan tidak bergantung pada keadaan cuaca"
+    },
+    {
+      "key": "C",
+      "text": "uap yang terbentuk dari pemanasan kantong magma memiliki tekanan yang sangat tinggi"
+    },
+    {
+      "key": "D",
+      "text": "wilayah prospeknya berada di kawasan hutan lindung yang lingkungannya terjaga"
+    },
+    {
+      "key": "E",
+      "text": "air yang telah mendingin diinjeksikan kembali sehingga cadangan uap di reservoir terjaga"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Rendahnya emisi karbon disebut sebagai keunggulan lingkungan pada paragraf kedua, bukan sebagai penyebab panjangnya usia operasi pembangkit.",
+    "B": "Salah. Keluaran yang relatif tetap berkaitan dengan kestabilan pasokan harian sehingga panas bumi dijadikan pemikul beban dasar, bukan dengan lamanya pembangkit dapat beroperasi.",
+    "C": "Salah. Tekanan uap yang tinggi dijelaskan sebagai syarat terbentuknya tenaga penggerak turbin, sedangkan yang menjaga keberlanjutan operasi adalah terpeliharanya cadangan uap.",
+    "D": "Salah. Letak wilayah prospek di kawasan hutan lindung justru disebut pada paragraf ketiga sebagai sumber hambatan perizinan, bukan sebagai penunjang usia operasi.",
+    "E": "Benar. Bacaan menyatakan air yang telah mendingin diinjeksikan kembali ke dalam reservoir dan siklus tertutup itulah yang menjaga cadangan uap sehingga pembangkit dapat beroperasi hingga puluhan tahun."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

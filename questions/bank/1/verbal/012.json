@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-012",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 12,
+  "type": "analogi",
+  "question_text": "TERMOMETER : SUHU = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Seismograf : Bencana"
+    },
+    {
+      "key": "B",
+      "text": "Barometer : Tekanan udara"
+    },
+    {
+      "key": "C",
+      "text": "Timbangan : Pedagang"
+    },
+    {
+      "key": "D",
+      "text": "Termos : Panas"
+    },
+    {
+      "key": "E",
+      "text": "Tekanan udara : Barometer"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Yang diukur seismograf adalah kekuatan getaran gempa, sedangkan bencana adalah peristiwa yang mungkin menyertainya, bukan besaran terukur.",
+    "B": "Benar. Termometer adalah alat untuk mengukur suhu, sebagaimana barometer adalah alat untuk mengukur tekanan udara; jenis dan arah hubungannya sama.",
+    "C": "Salah. Hubungan timbangan dan pedagang adalah alat dengan penggunanya, bukan alat dengan besaran yang diukur.",
+    "D": "Salah. Termos berfungsi mempertahankan panas, bukan mengukurnya, sehingga hubungannya alat dengan sifat yang dipertahankan.",
+    "E": "Salah. Pasangan kata ini benar isinya, tetapi urutannya terbalik karena besaran ditempatkan sebelum alat ukurnya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

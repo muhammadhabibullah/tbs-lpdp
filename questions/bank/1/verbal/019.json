@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-019",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Simpulan yang paling tepat berdasarkan paragraf ketiga bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Hutan mangrove tumbuh di wilayah peralihan antara daratan dan laut, terutama pada muara sungai yang berlumpur. Sistem perakarannya yang rapat dan menjulang di atas permukaan air membuat mangrove mampu meredam energi gelombang sebelum gelombang itu mencapai garis pantai. Sejumlah kajian di kawasan pesisir tropis menunjukkan bahwa jalur mangrove selebar seratus meter dapat menurunkan tinggi gelombang hingga lebih dari separuhnya. Selain itu, akar mangrove menahan sedimen yang terbawa arus sehingga laju abrasi berkurang dan daratan baru perlahan-lahan terbentuk.\n\nFungsi mangrove tidak berhenti pada perlindungan fisik. Rongga di antara akarnya menjadi tempat pemijahan berbagai jenis ikan, udang, dan kepiting yang menopang perikanan rakyat. Mangrove juga menyimpan karbon dalam jumlah besar. Sebagian besar karbon itu tertimbun pada lapisan tanah yang tergenang dan miskin oksigen sehingga bahan organik di dalamnya terurai sangat lambat.\n\nMeskipun demikian, luas hutan mangrove terus menyusut akibat pembukaan tambak, perluasan permukiman, dan penebangan untuk kayu bakar. Upaya penanaman kembali kerap gagal karena bibit ditanam pada lokasi yang tidak sesuai dengan pola pasang surut setempat, bukan karena kekurangan bibit.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Ketepatan pemilihan lokasi lebih menentukan keberhasilan penanaman kembali mangrove daripada jumlah bibit"
+    },
+    {
+      "key": "B",
+      "text": "Penebangan pohon mangrove untuk kayu bakar merupakan penyebab utama menyusutnya luas hutan mangrove pesisir"
+    },
+    {
+      "key": "C",
+      "text": "Penanaman kembali mangrove sebaiknya dihentikan karena upaya tersebut selalu berakhir dengan kegagalan"
+    },
+    {
+      "key": "D",
+      "text": "Tambak dan permukiman dapat dibangun tanpa merusak mangrove asalkan bibit ditanam kembali"
+    },
+    {
+      "key": "E",
+      "text": "Ketersediaan bibit mangrove di kawasan pesisir masih sangat terbatas"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Bacaan menegaskan bahwa kegagalan penanaman kembali disebabkan oleh lokasi yang tidak sesuai dengan pola pasang surut dan bukan oleh kekurangan bibit, sehingga ketepatan lokasi lebih menentukan keberhasilannya.",
+    "B": "Salah. Penebangan pohon mangrove untuk kayu bakar disebut sejajar dengan pembukaan tambak dan perluasan permukiman; bacaan tidak menyatakan salah satunya sebagai penyebab utama.",
+    "C": "Salah. Bacaan menyatakan penanaman kembali kerap gagal, bukan selalu gagal, dan sama sekali tidak menganjurkan penghentiannya.",
+    "D": "Salah. Bacaan tidak menyatakan adanya cara membangun tambak dan permukiman tanpa merusak mangrove; pernyataan ini melampaui isi teks.",
+    "E": "Salah. Pernyataan ini bertentangan dengan bacaan yang justru menegaskan bahwa kegagalan penanaman bukan karena kekurangan bibit."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

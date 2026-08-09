@@ -1,0 +1,43 @@
+{
+  "id": "2-pemecahan_masalah-005",
+  "package": 2,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Lima peserta lomba karya tulis, yaitu Nadia, Oka, Prita, Rian, dan Sinta, memperoleh nilai akhir yang berbeda-beda. Diketahui ketentuan berikut.\n(1) Nilai Rian lebih tinggi daripada nilai Prita.\n(2) Nilai Prita lebih tinggi daripada nilai Oka dan lebih tinggi daripada nilai Nadia.\n(3) Nilai Sinta lebih tinggi daripada nilai Oka, tetapi lebih rendah daripada nilai Rian.\n\nPernyataan yang pasti benar berdasarkan ketentuan tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Nilai Sinta lebih tinggi daripada nilai Prita."
+    },
+    {
+      "key": "B",
+      "text": "Nadia memperoleh nilai terendah di antara kelima peserta."
+    },
+    {
+      "key": "C",
+      "text": "Rian memperoleh nilai tertinggi di antara kelima peserta."
+    },
+    {
+      "key": "D",
+      "text": "Nilai Oka lebih tinggi daripada nilai Nadia."
+    },
+    {
+      "key": "E",
+      "text": "Sinta menempati urutan kedua berdasarkan nilai."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Ketentuan tidak pernah membandingkan Sinta dengan Prita secara langsung. Urutan Rian, Prita, Nadia, Sinta, Oka dari nilai tertinggi ke terendah memenuhi seluruh ketentuan, tetapi pada urutan itu nilai Sinta justru lebih rendah daripada nilai Prita.",
+    "B": "Salah. Pada urutan Rian, Prita, Nadia, Sinta, Oka yang memenuhi seluruh ketentuan, nilai terendah dipegang Oka, sedangkan Nadia menempati urutan ketiga. Ketentuan hanya menempatkan Nadia di bawah Prita tanpa membandingkannya dengan Oka.",
+    "C": "Benar. Ketentuan 1 menempatkan Rian di atas Prita, ketentuan 3 menempatkan Rian di atas Sinta, dan melalui Prita ketentuan 2 menempatkan Rian di atas Oka sekaligus di atas Nadia. Rian karena itu berada di atas keempat peserta lain pada setiap urutan yang memenuhi ketentuan, dan hal ini terbukti pada kelima urutan yang sah.",
+    "D": "Salah. Nadia dan Oka sama-sama hanya dinyatakan berada di bawah Prita, sedangkan hubungan keduanya tidak pernah ditetapkan. Pada urutan Rian, Prita, Nadia, Sinta, Oka, nilai Nadia justru lebih tinggi daripada nilai Oka.",
+    "E": "Salah. Ketentuan 3 hanya menempatkan Sinta di bawah Rian tanpa menutup kemungkinan Prita menyela di antara keduanya. Pada urutan Rian, Prita, Nadia, Sinta, Oka, Sinta menempati urutan keempat, bukan urutan kedua."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

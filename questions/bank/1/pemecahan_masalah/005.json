@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-005",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Enam pegawai, yaitu Andi, Budi, Citra, Dewi, Eka, dan Fajar, ditempatkan pada tiga divisi, yaitu Divisi P, Divisi Q, dan Divisi R. Setiap divisi diisi tepat dua pegawai dan setiap pegawai menempati tepat satu divisi. Penempatan tunduk pada ketentuan berikut.\n(1) Andi dan Budi tidak ditempatkan pada divisi yang sama.\n(2) Citra ditempatkan di Divisi Q.\n(3) Dewi tidak ditempatkan di Divisi R.\n(4) Eka tidak ditempatkan pada divisi yang sama dengan Citra.\n(5) Fajar tidak ditempatkan di Divisi P.\n\nBerdasarkan ketentuan tersebut, pernyataan berikut yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Dewi ditempatkan di Divisi P."
+    },
+    {
+      "key": "B",
+      "text": "Fajar ditempatkan di Divisi Q."
+    },
+    {
+      "key": "C",
+      "text": "Andi dan Fajar ditempatkan pada divisi yang sama."
+    },
+    {
+      "key": "D",
+      "text": "Budi ditempatkan di Divisi R."
+    },
+    {
+      "key": "E",
+      "text": "Divisi R memuat sedikitnya satu di antara Eka dan Fajar."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Penempatan Divisi P berisi Andi dan Eka, Divisi Q berisi Citra dan Dewi, serta Divisi R berisi Budi dan Fajar memenuhi seluruh ketentuan dengan Dewi di Divisi Q.",
+    "B": "Salah. Penempatan Divisi P berisi Andi dan Dewi, Divisi Q berisi Budi dan Citra, serta Divisi R berisi Eka dan Fajar memenuhi seluruh ketentuan dengan Fajar di Divisi R.",
+    "C": "Salah. Pada penempatan Divisi P berisi Andi dan Dewi, Divisi Q berisi Budi dan Citra, serta Divisi R berisi Eka dan Fajar, Andi berada di Divisi P sedangkan Fajar di Divisi R.",
+    "D": "Salah. Pada penempatan Divisi P berisi Andi dan Dewi, Divisi Q berisi Budi dan Citra, serta Divisi R berisi Eka dan Fajar, Budi justru berada di Divisi Q.",
+    "E": "Benar. Andaikan Divisi R tidak memuat Eka maupun Fajar, maka Eka harus di Divisi P karena ketentuan 4 melarangnya di Divisi Q, dan Fajar harus di Divisi Q karena ketentuan 5 melarangnya di Divisi P. Divisi Q lalu penuh oleh Citra dan Fajar, sehingga Dewi yang dilarang di Divisi R terpaksa masuk Divisi P bersama Eka. Akibatnya Divisi R hanya tersisa bagi Andi dan Budi, dan hal itu melanggar ketentuan 1. Jadi Divisi R selalu memuat Eka atau Fajar, dan hal ini terbukti pada kedelapan penempatan yang sah."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

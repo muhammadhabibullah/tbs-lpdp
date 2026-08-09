@@ -1,0 +1,43 @@
+{
+  "id": "2-pemecahan_masalah-010",
+  "package": 2,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan banyaknya kunjungan ke Perpustakaan Daerah Kota Cempaka menurut jenis layanan pada tahun 2022 dan tahun 2023.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...",
+  "image": null,
+  "passage": "Jenis Layanan | Kunjungan 2022 | Kunjungan 2023\nPeminjaman buku | 12.400 | 13.020\nRuang baca | 8.600 | 10.750\nLayanan digital | 3.500 | 5.250\nRuang diskusi | 2.500 | 2.400\nJumlah | 27.000 | 31.420",
+  "options": [
+    {
+      "key": "A",
+      "text": "Setiap jenis layanan mengalami kenaikan jumlah kunjungan pada tahun 2023."
+    },
+    {
+      "key": "B",
+      "text": "Kenaikan jumlah kunjungan tertinggi secara persentase terjadi pada layanan ruang baca."
+    },
+    {
+      "key": "C",
+      "text": "Jumlah kunjungan layanan digital pada tahun 2023 melampaui seperlima jumlah seluruh kunjungan pada tahun tersebut."
+    },
+    {
+      "key": "D",
+      "text": "Kenaikan jumlah kunjungan tertinggi secara persentase terjadi pada layanan digital."
+    },
+    {
+      "key": "E",
+      "text": "Penurunan kunjungan ruang diskusi terjadi karena perpustakaan mengurangi jumlah ruang diskusi yang tersedia."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Kunjungan ruang diskusi turun dari 2.500 pada tahun 2022 menjadi 2.400 pada tahun 2023, yaitu berkurang 100 kunjungan. Karena satu jenis layanan menurun, pernyataan bahwa setiap jenis layanan naik tidak berlaku.",
+    "B": "Salah. Kenaikan ruang baca memang paling besar secara jumlah, yaitu 10.750 − 8.600 = 2.150 kunjungan, tetapi secara persentase hanya 2.150 : 8.600 = 25 persen. Persentase itu masih kalah oleh layanan digital yang naik 50 persen. Pernyataan ini mempertukarkan kenaikan terbesar menurut jumlah dengan kenaikan terbesar menurut persentase.",
+    "C": "Salah. Seperlima dari seluruh kunjungan tahun 2023 adalah 31.420 : 5 = 6.284 kunjungan, sedangkan layanan digital hanya mencatat 5.250 kunjungan. Angka itu masih berada di bawah seperlima, bukan melampauinya.",
+    "D": "Benar. Persentase kenaikan tiap layanan adalah peminjaman buku 620 : 12.400 = 5 persen, ruang baca 2.150 : 8.600 = 25 persen, layanan digital 1.750 : 3.500 = 50 persen, sedangkan ruang diskusi justru turun 4 persen. Persentase kenaikan terbesar dimiliki layanan digital.",
+    "E": "Salah. Tabel hanya mencatat banyaknya kunjungan menurut jenis layanan dan tidak memuat keterangan apa pun mengenai banyaknya ruang diskusi yang disediakan perpustakaan. Sebab penurunan itu tidak dapat ditentukan dari data yang tersedia."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

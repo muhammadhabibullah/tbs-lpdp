@@ -1,0 +1,43 @@
+{
+  "id": "2-pemecahan_masalah-011",
+  "package": 2,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Masalah utama yang dikemukakan dalam tajuk rencana tersebut adalah ...",
+  "image": null,
+  "passage": "Pengelolaan sampah di banyak kota masih bertumpu pada kecepatan mengangkut. Armada truk bekerja hampir tanpa henti, tetapi timbunan di tempat pemrosesan akhir terus meninggi dan sebagian telah melampaui daya tampung yang dirancang. Sebagian besar anggaran kebersihan pun terserap untuk biaya angkut dan bahan bakar, bukan untuk mengurangi sampah dari sumbernya. Pemilahan di tingkat rumah tangga memang telah lama dianjurkan, tetapi fasilitas pengolahan di tingkat kelurahan belum tersedia secara merata sehingga sampah yang sudah dipilah warga kembali tercampur di dalam bak truk. Selama kebersihan kota dinilai dari seberapa cepat sampah diangkut, persoalan sampah hanya berpindah tempat dan tidak pernah berkurang. Titik berat kebijakan sudah waktunya digeser dari pengangkutan menuju pengurangan dan pengolahan sampah di dekat sumbernya.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Kebijakan persampahan kota masih bertumpu pada pengangkutan sehingga sampah hanya berpindah tempat dan tidak berkurang."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian besar anggaran kebersihan kota terserap untuk biaya angkut dan bahan bakar."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian tempat pemrosesan akhir telah melampaui daya tampung yang dirancang."
+    },
+    {
+      "key": "D",
+      "text": "Fasilitas pengolahan sampah di tingkat kelurahan belum tersedia secara merata."
+    },
+    {
+      "key": "E",
+      "text": "Warga kota enggan memilah sampah rumah tangga karena tidak memperoleh insentif."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Seluruh keterangan dalam teks, mulai dari truk yang bekerja tanpa henti, anggaran yang habis untuk biaya angkut, sampai sampah terpilah yang tercampur kembali, dirangkum pada kalimat bahwa selama kebersihan kota dinilai dari kecepatan mengangkut, persoalan sampah hanya berpindah tempat. Pernyataan itulah pokok persoalan yang hendak diangkat penulis dan yang melandasi anjuran pada kalimat penutup.",
+    "B": "Salah. Penyerapan anggaran untuk biaya angkut dan bahan bakar memang disebut dalam teks, tetapi kedudukannya sebagai bukti yang memperlihatkan bahwa kebijakan berat sebelah pada pengangkutan, bukan sebagai persoalan pokok yang hendak diangkat.",
+    "C": "Salah. Terlampauinya daya tampung tempat pemrosesan akhir merupakan akibat yang dipakai penulis untuk menunjukkan bahwa pengangkutan tidak menyelesaikan masalah. Perincian ini menopang pokok persoalan, tetapi bukan pokok persoalan itu sendiri.",
+    "D": "Salah. Ketimpangan fasilitas pengolahan di tingkat kelurahan disebut sebagai contoh yang menerangkan mengapa pemilahan rumah tangga menjadi sia-sia. Perincian ini hanyalah satu mata rantai dalam uraian, sedangkan penulis menyoroti arah kebijakan secara keseluruhan.",
+    "E": "Salah. Teks tidak pernah menyatakan warga enggan memilah sampah, apalagi menghubungkannya dengan ketiadaan insentif. Teks justru menyebutkan warga sudah memilah sampah, tetapi hasil pemilahan itu tercampur kembali saat diangkut."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

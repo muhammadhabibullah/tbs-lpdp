@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-002",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 2,
+  "type": "logika_analitis",
+  "question_text": "Lima peserta seminar, yaitu Andi, Budi, Citra, Dewi, dan Eka, tampil pada lima sesi presentasi yang diberi nomor 1 sampai 5. Setiap sesi diisi tepat satu peserta dan setiap peserta tampil tepat satu kali. Penjadwalan tunduk pada ketentuan berikut.\n(1) Citra tampil sebelum Dewi.\n(2) Andi tampil tepat sesudah Budi.\n(3) Eka tidak tampil pada sesi pertama maupun sesi kelima.\n\nBerdasarkan ketentuan tersebut, pernyataan berikut yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Citra tampil pada sesi pertama."
+    },
+    {
+      "key": "B",
+      "text": "Sesi kelima ditempati oleh Andi atau Dewi."
+    },
+    {
+      "key": "C",
+      "text": "Eka tampil sesudah Citra."
+    },
+    {
+      "key": "D",
+      "text": "Budi tampil sebelum Citra."
+    },
+    {
+      "key": "E",
+      "text": "Dewi tampil pada sesi kelima."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Susunan Budi, Andi, Citra, Eka, Dewi memenuhi seluruh ketentuan, tetapi sesi pertama ditempati Budi, bukan Citra.",
+    "B": "Benar. Eka dilarang mengisi sesi kelima oleh ketentuan 3; Budi tidak mungkin mengisi sesi kelima karena Andi harus tampil tepat sesudahnya (ketentuan 2); Citra juga tidak mungkin karena masih harus disusul Dewi (ketentuan 1). Sesi kelima karena itu hanya dapat diisi Andi atau Dewi, dan hal ini terbukti pada keenam susunan yang sah.",
+    "C": "Salah. Pada susunan Budi, Andi, Eka, Citra, Dewi, Eka justru tampil pada sesi ketiga, yaitu lebih awal daripada Citra yang tampil pada sesi keempat.",
+    "D": "Salah. Pada susunan Citra, Budi, Andi, Eka, Dewi, Citra tampil pada sesi pertama sehingga Budi berada sesudah Citra, bukan sebelumnya.",
+    "E": "Salah. Pada susunan Citra, Dewi, Eka, Budi, Andi, sesi kelima ditempati Andi, sedangkan Dewi berada pada sesi kedua."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

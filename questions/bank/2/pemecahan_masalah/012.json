@@ -1,0 +1,43 @@
+{
+  "id": "2-pemecahan_masalah-012",
+  "package": 2,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Sebuah koperasi sekolah menjual buku tulis seharga Rp4.500,00 per buah, pulpen seharga Rp3.000,00 per buah, dan penggaris seharga Rp2.500,00 per buah. Seorang guru membeli 12 buku tulis, 8 pulpen, dan 6 penggaris. Apabila koperasi memberikan potongan harga 10 persen atas seluruh nilai pembelian, jumlah uang yang harus dibayarkan guru tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp78.300,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp87.600,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp93.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp102.300,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp83.700,00"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai Rp78.300,00 muncul apabila banyaknya buku tulis dan pulpen tertukar, yaitu 8 buku tulis dan 12 pulpen, sehingga nilai pembelian menjadi Rp36.000,00 + Rp36.000,00 + Rp15.000,00 = Rp87.000,00 dan sesudah potongan 10 persen menjadi Rp78.300,00.",
+    "B": "Salah. Nilai Rp87.600,00 muncul apabila potongan 10 persen hanya diterapkan pada buku tulis, yaitu Rp48.600,00 + Rp24.000,00 + Rp15.000,00. Soal menyatakan potongan diberikan atas seluruh nilai pembelian, bukan atas satu jenis barang saja.",
+    "C": "Salah. Nilai Rp93.000,00 adalah nilai pembelian sebelum potongan harga, yaitu Rp54.000,00 + Rp24.000,00 + Rp15.000,00. Jawaban ini melewatkan langkah penerapan potongan 10 persen.",
+    "D": "Salah. Nilai Rp102.300,00 muncul apabila potongan 10 persen justru ditambahkan pada nilai pembelian, yaitu 110 persen × Rp93.000,00. Potongan harga seharusnya mengurangi jumlah yang dibayarkan.",
+    "E": "Benar. Nilai pembelian buku tulis adalah 12 × Rp4.500,00 = Rp54.000,00, pulpen 8 × Rp3.000,00 = Rp24.000,00, dan penggaris 6 × Rp2.500,00 = Rp15.000,00, sehingga seluruhnya Rp93.000,00. Dengan potongan 10 persen, guru membayar 90 persen × Rp93.000,00 = Rp83.700,00."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

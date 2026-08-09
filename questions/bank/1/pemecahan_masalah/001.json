@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-001",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 1,
+  "type": "logika_analitis",
+  "question_text": "Lima peserta seminar, yaitu Andi, Budi, Citra, Dewi, dan Eka, tampil pada lima sesi presentasi yang diberi nomor 1 sampai 5. Setiap sesi diisi tepat satu peserta dan setiap peserta tampil tepat satu kali. Penjadwalan tunduk pada ketentuan berikut.\n(1) Citra tampil sebelum Dewi.\n(2) Andi tampil tepat sesudah Budi.\n(3) Eka tidak tampil pada sesi pertama maupun sesi kelima.\n\nJika Dewi tampil pada sesi kedua, peserta yang pasti tampil pada sesi kelima adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Andi"
+    },
+    {
+      "key": "B",
+      "text": "Budi"
+    },
+    {
+      "key": "C",
+      "text": "Citra"
+    },
+    {
+      "key": "D",
+      "text": "Dewi"
+    },
+    {
+      "key": "E",
+      "text": "Eka"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Dewi pada sesi kedua menuntut Citra menempati sesi pertama (ketentuan 1). Pasangan Budi-Andi yang harus berurutan karena itu hanya dapat mengisi sesi keempat dan kelima, sehingga Eka mengisi sesi ketiga. Susunan tunggal yang memenuhi seluruh ketentuan adalah Citra, Dewi, Eka, Budi, Andi, dan sesi kelima ditempati Andi.",
+    "B": "Salah. Ketentuan 2 mengharuskan Andi tampil tepat sesudah Budi, sehingga Budi tidak mungkin menempati sesi terakhir. Pada susunan tunggal yang berlaku Budi berada pada sesi keempat.",
+    "C": "Salah. Ketentuan 1 mengharuskan Citra tampil sebelum Dewi, sedangkan Dewi sudah berada pada sesi kedua, sehingga Citra terkunci pada sesi pertama.",
+    "D": "Salah. Syarat pada soal menetapkan Dewi tampil pada sesi kedua, sehingga Dewi tidak mungkin sekaligus menempati sesi kelima.",
+    "E": "Salah. Ketentuan 3 secara tegas melarang Eka tampil pada sesi kelima. Pada susunan tunggal yang berlaku Eka mengisi sesi ketiga."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

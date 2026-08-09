@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-013",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "BAKTERI : ANTIBIOTIK = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Nyamuk : Malaria"
+    },
+    {
+      "key": "B",
+      "text": "Penyakit : Vaksin"
+    },
+    {
+      "key": "C",
+      "text": "Hama : Pestisida"
+    },
+    {
+      "key": "D",
+      "text": "Antiseptik : Kuman"
+    },
+    {
+      "key": "E",
+      "text": "Pupuk : Tanaman"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nyamuk dan malaria berhubungan sebagai pembawa dengan penyakit yang ditularkannya, bukan sebagai pengganggu dengan zat pembasminya.",
+    "B": "Salah. Vaksin bekerja mencegah dengan membentuk kekebalan dan bukan membasmi; selain itu penyakit bukanlah organisme sebagaimana bakteri.",
+    "C": "Benar. Antibiotik adalah zat yang digunakan untuk membasmi bakteri, sebagaimana pestisida adalah zat yang digunakan untuk membasmi hama.",
+    "D": "Salah. Pasangan ini menempatkan zat pembasmi pada unsur pertama sehingga arah hubungannya terbalik.",
+    "E": "Salah. Pupuk diberikan untuk menyuburkan tanaman, bukan untuk membasminya, sehingga sifat hubungannya justru berlawanan."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

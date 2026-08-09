@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-009",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "HAUS : MINUM = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Lapar : Nasi"
+    },
+    {
+      "key": "B",
+      "text": "Lelah : Beristirahat"
+    },
+    {
+      "key": "C",
+      "text": "Minum : Haus"
+    },
+    {
+      "key": "D",
+      "text": "Sakit : Dokter"
+    },
+    {
+      "key": "E",
+      "text": "Tidur : Malam"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Lapar dan nasi menghubungkan keadaan dengan benda pemuasnya, sedangkan haus dan minum menghubungkan keadaan dengan tindakan.",
+    "B": "Benar. Minum adalah tindakan yang menghilangkan haus, sebagaimana beristirahat adalah tindakan yang menghilangkan lelah.",
+    "C": "Salah. Isi pasangannya sepadan, tetapi urutannya terbalik karena tindakan diletakkan sebelum keadaan yang mendorongnya.",
+    "D": "Salah. Sakit dan dokter menghubungkan keadaan dengan orang yang menanganinya, bukan dengan tindakan yang dilakukan oleh orang yang mengalaminya.",
+    "E": "Salah. Tidur dan malam menghubungkan kegiatan dengan waktu berlangsungnya, bukan keadaan dengan tindakan pemulihnya."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

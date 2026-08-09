@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-008",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "MUKADIMAH >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pendahuluan"
+    },
+    {
+      "key": "B",
+      "text": "Pengantar"
+    },
+    {
+      "key": "C",
+      "text": "Ikhtisar"
+    },
+    {
+      "key": "D",
+      "text": "Lampiran"
+    },
+    {
+      "key": "E",
+      "text": "Penutup"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Pendahuluan bermakna sama dengan mukadimah, yaitu bagian pembuka suatu karangan.",
+    "B": "Salah. Pengantar juga merupakan sinonim mukadimah karena sama-sama menunjuk bagian awal sebuah naskah.",
+    "C": "Salah. Ikhtisar adalah ringkasan isi; bagian ini merangkum uraian dan tidak bertentangan dengan bagian pembuka.",
+    "D": "Salah. Lampiran adalah bahan tambahan di luar tubuh karangan, bukan bagian yang mengakhiri uraian.",
+    "E": "Benar. Mukadimah adalah bagian pembuka suatu naskah, sehingga lawannya adalah penutup, yaitu bagian yang mengakhirinya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

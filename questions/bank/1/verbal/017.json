@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-017",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "reading",
+  "question_text": "Gagasan utama bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Hutan mangrove tumbuh di wilayah peralihan antara daratan dan laut, terutama pada muara sungai yang berlumpur. Sistem perakarannya yang rapat dan menjulang di atas permukaan air membuat mangrove mampu meredam energi gelombang sebelum gelombang itu mencapai garis pantai. Sejumlah kajian di kawasan pesisir tropis menunjukkan bahwa jalur mangrove selebar seratus meter dapat menurunkan tinggi gelombang hingga lebih dari separuhnya. Selain itu, akar mangrove menahan sedimen yang terbawa arus sehingga laju abrasi berkurang dan daratan baru perlahan-lahan terbentuk.\n\nFungsi mangrove tidak berhenti pada perlindungan fisik. Rongga di antara akarnya menjadi tempat pemijahan berbagai jenis ikan, udang, dan kepiting yang menopang perikanan rakyat. Mangrove juga menyimpan karbon dalam jumlah besar. Sebagian besar karbon itu tertimbun pada lapisan tanah yang tergenang dan miskin oksigen sehingga bahan organik di dalamnya terurai sangat lambat.\n\nMeskipun demikian, luas hutan mangrove terus menyusut akibat pembukaan tambak, perluasan permukiman, dan penebangan untuk kayu bakar. Upaya penanaman kembali kerap gagal karena bibit ditanam pada lokasi yang tidak sesuai dengan pola pasang surut setempat, bukan karena kekurangan bibit.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Cara menanam kembali mangrove pada lokasi yang sesuai dengan pola pasang surut"
+    },
+    {
+      "key": "B",
+      "text": "Berbagai fungsi hutan mangrove dan tekanan yang menyebabkan luasnya menyusut"
+    },
+    {
+      "key": "C",
+      "text": "Kemampuan hutan mangrove meredam gelombang di kawasan pesisir tropis"
+    },
+    {
+      "key": "D",
+      "text": "Peran hutan mangrove sebagai penyimpan karbon pada lahan yang tergenang"
+    },
+    {
+      "key": "E",
+      "text": "Kerugian ekonomi yang ditimbulkan oleh pembukaan tambak di wilayah pesisir"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Hal ini hanya disinggung pada kalimat terakhir sebagai penjelas kegagalan rehabilitasi, sehingga terlalu sempit untuk menjadi gagasan utama.",
+    "B": "Benar. Bacaan menguraikan fungsi mangrove sebagai peredam gelombang, penahan sedimen, tempat pemijahan, dan penyimpan karbon, lalu menutup dengan penyusutan luasnya; kedua hal itulah cakupan seluruh bacaan.",
+    "C": "Salah. Kemampuan meredam gelombang hanya dibahas pada paragraf pertama dan tidak mencakup isi paragraf kedua serta ketiga.",
+    "D": "Salah. Penyimpanan karbon hanyalah satu di antara beberapa fungsi yang disebutkan pada paragraf kedua, bukan pokok seluruh bacaan.",
+    "E": "Salah. Bacaan menyebut pembukaan tambak sebagai penyebab menyusutnya mangrove, tetapi tidak membahas kerugian ekonominya sama sekali."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

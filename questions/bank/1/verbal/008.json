@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-008",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "LANCUNG >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Palsu"
+    },
+    {
+      "key": "B",
+      "text": "Awet"
+    },
+    {
+      "key": "C",
+      "text": "Lancang"
+    },
+    {
+      "key": "D",
+      "text": "Tulen"
+    },
+    {
+      "key": "E",
+      "text": "Tiruan"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Palsu berarti tidak asli, dan justru itulah makna lancung, sedangkan yang diminta adalah lawan katanya.",
+    "B": "Salah. Awet berarti tahan lama; kata ini menyangkut daya tahan suatu barang, bukan keaslian atau kemurniannya.",
+    "C": "Salah. Lancang berarti berbuat sesuatu tanpa izin sehingga dianggap kurang sopan; kemiripan bunyinya dengan lancung menggoda, tetapi maknanya berlainan.",
+    "D": "Benar. Lancung berarti tidak tulen atau tidak asli, sehingga lawan katanya adalah tulen, yaitu murni dan tidak bercampur unsur lain.",
+    "E": "Salah. Tiruan berarti dibuat menyerupai barang yang asli sehingga sejalan dengan makna lancung, bukan berlawanan dengannya."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

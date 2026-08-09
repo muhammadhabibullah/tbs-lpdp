@@ -1,0 +1,57 @@
+7. 6, 3,  18,  9,  54,  27,  162,  …..,  …..
+A. 64, 648
+B. 81, 486
+C. 96, 540
+D. 78, 435
+E. 52, 300
+Jawaban : B
+
+8. 95, 16,  110,  81,  135,  …..,  …..
+A. 9, 64
+B. 25, 125
+C. 96, 180
+D. 91, 250
+E. 256, 160
+Jawaban : E
+
+9. Diketahui 4x + y = -4 dan x + 3y = 21. Berapakah 2x + 2y ?
+A. 3
+B. 5
+C. 8
+D. 10
+E. 16
+
+10. Lima tahun yang lalu, jumlah usia dua orang bersaudara adalah 24 tahun. Sedangkan tiga tahun yang akan datang, dua kali usia yang tua sama dengan dua kali usia yang muda ditambah dengan 12 tahun. Pada saat ini, usia yang tua adalah ….
+A. 14 tahun
+B. 17 tahun
+C. 18 tahun
+D. 20 tahun
+E. 21 tahun
+Jawaban : D
+
+11. Berapakah biaya yang diperlukan untuk mengecat tembok setinggi 4 m dan panjangnya 13 m, jika biaya mengecat ditetapkan Rp 4.500,-/m2
+A. Rp 207.000
+B. Rp 225.000
+C. Rp 216.000
+D. Rp 254.000
+E. Rp 234.000
+Jawaban : E
+
+12. Rata-rata tinggi siswa pria adalah 165 cm. Rata-rata tinggi siswa perempuan adalah 155 cm. Berapakah jumlah murid pria ?
+1) Jumlah seluruh siswa adalah 30 orang
+2) Rata-rata tinggi seluruh siswa adalah 160 orang
+A. Bisa dijawab dengan informasi nomor 1 saja
+B. Bisa dijawab dengan informasi nomor 2 saja
+C. Bisa dijawab dengan salah satu informasi saja
+D. Hanya bisa dijawab dengan kedua informasi
+E. Kedua informasi tidak cukup dan butuh informasi tambahan
+Jawaban : D
+
+13. Berapakah nilai z ?
+1) x + 2y +2z = 10
+2) 2x + 4y – 2z = 2
+A. Bisa dijawab dengan informasi nomor 1 saja
+B. Bisa dijawab dengan informasi nomor 2 saja
+C. Bisa dijawab dengan salah satu informasi saja
+D. Hanya bisa dijawab dengan kedua informasi
+E. Kedua informasi tidak cukup dan butuh informasi tambahan

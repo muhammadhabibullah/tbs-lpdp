@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-024",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Sebuah tabung tertutup memiliki jari-jari alas 7 cm dan tinggi 20 cm. Dengan menggunakan π = 22/7, berapakah luas permukaan tabung tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "308 cm²"
+    },
+    {
+      "key": "B",
+      "text": "748 cm²"
+    },
+    {
+      "key": "C",
+      "text": "880 cm²"
+    },
+    {
+      "key": "D",
+      "text": "1.034 cm²"
+    },
+    {
+      "key": "E",
+      "text": "1.188 cm²"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 308 cm² hanya luas kedua lingkaran alas dan tutup (2 × 154 cm²); luas selimut tabung belum dihitung.",
+    "B": "Salah. Nilai 748 cm² muncul jika luas selimut dihitung πrt = 22/7 × 7 × 20 = 440 cm² karena faktor 2 terlewat, lalu ditambah 308 cm².",
+    "C": "Salah. Nilai 880 cm² hanya luas selimut tabung (2πrt); kedua lingkaran alas dan tutup belum ikut dijumlahkan.",
+    "D": "Salah. Nilai 1.034 cm² adalah luas permukaan tabung tanpa tutup (880 + 154), padahal tabung pada soal ini tertutup sehingga kedua lingkaran harus dihitung.",
+    "E": "Benar. Luas selimut = 2πrt = 2 × 22/7 × 7 × 20 = 880 cm². Luas satu lingkaran = πr² = 22/7 × 7 × 7 = 154 cm². Karena tabung tertutup, luas permukaan = 880 + 2 × 154 = 1.188 cm²."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

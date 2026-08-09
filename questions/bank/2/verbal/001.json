@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-001",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "MUTAKHIR = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Terdahulu"
+    },
+    {
+      "key": "B",
+      "text": "Terkemuka"
+    },
+    {
+      "key": "C",
+      "text": "Terkini"
+    },
+    {
+      "key": "D",
+      "text": "Terpandang"
+    },
+    {
+      "key": "E",
+      "text": "Terpencil"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Terdahulu berarti yang lebih dahulu terjadi atau lampau, justru berlawanan dengan mutakhir yang menunjuk pada yang paling baru.",
+    "B": "Salah. Terkemuka berarti menonjol atau ternama; kata ini menilai kedudukan seseorang atau sesuatu, bukan kebaruan waktunya.",
+    "C": "Benar. Mutakhir berarti terbaru atau paling akhir dalam perkembangannya sehingga sepadan dengan terkini.",
+    "D": "Salah. Terpandang berarti dihormati dan disegani; maknanya menyangkut martabat, bukan kebaruan.",
+    "E": "Salah. Terpencil berarti terasing atau jauh dari keramaian; maknanya berkaitan dengan letak, bukan dengan waktu perkembangan."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

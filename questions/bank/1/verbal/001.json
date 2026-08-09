@@ -1,0 +1,28 @@
+{
+  "id": "1-verbal-001",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "INSINUASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    { "key": "A", "text": "Sindiran" },
+    { "key": "B", "text": "Pujian" },
+    { "key": "C", "text": "Pernyataan" },
+    { "key": "D", "text": "Perumpamaan" },
+    { "key": "E", "text": "Penegasan" }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Insinuasi berarti sindiran, yaitu pernyataan tidak langsung yang bermaksud menyindir atau menuduh secara halus.",
+    "B": "Salah. Pujian adalah pernyataan positif yang mengapresiasi, berlawanan nuansa dengan insinuasi yang bernada negatif.",
+    "C": "Salah. Pernyataan adalah istilah umum untuk ungkapan; insinuasi lebih spesifik bermakna sindiran tidak langsung.",
+    "D": "Salah. Perumpamaan adalah kiasan perbandingan (analogi), bukan sindiran halus.",
+    "E": "Salah. Penegasan berarti menyatakan sesuatu secara eksplisit dan tegas, kebalikan dari sifat tidak langsung insinuasi."
+  },
+  "difficulty": "easy",
+  "source": "example-hand-written",
+  "verified": true
+}

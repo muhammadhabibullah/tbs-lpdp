@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-007",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "NISBI >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semu"
+    },
+    {
+      "key": "B",
+      "text": "Relatif"
+    },
+    {
+      "key": "C",
+      "text": "Mutlak"
+    },
+    {
+      "key": "D",
+      "text": "Bertahap"
+    },
+    {
+      "key": "E",
+      "text": "Sementara"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Semu berarti tampak nyata padahal sebenarnya tidak; kata ini menyangkut kepalsuan wujud, bukan ketergantungan pada pembanding.",
+    "B": "Salah. Relatif justru merupakan sinonim nisbi karena sama-sama berarti bergantung pada hal lain sebagai pembanding.",
+    "C": "Benar. Nisbi berarti bergantung pada pembanding, sehingga lawannya adalah mutlak, yaitu berlaku tanpa syarat dan tanpa pembanding.",
+    "D": "Salah. Bertahap berarti berlangsung setingkat demi setingkat; kata ini menggambarkan cara berlangsungnya sesuatu, bukan pertentangan dengan kenisbian.",
+    "E": "Salah. Sementara berarti berlaku dalam waktu terbatas dan berlawanan dengan tetap, bukan dengan nisbi."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

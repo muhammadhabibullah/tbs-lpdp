@@ -1,0 +1,43 @@
+{
+  "id": "2-pemecahan_masalah-006",
+  "package": 2,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Perhatikan ketiga pernyataan berikut.\n(1) Setiap proposal penelitian yang lolos seleksi administrasi dinilai oleh dua orang penelaah.\n(2) Setiap proposal penelitian yang dinilai oleh dua orang penelaah memperoleh berita acara penilaian.\n(3) Proposal penelitian berjudul Kota Tangguh tidak memperoleh berita acara penilaian.\n\nKesimpulan yang pasti benar berdasarkan ketiga pernyataan tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Proposal penelitian berjudul Kota Tangguh tidak lolos seleksi administrasi."
+    },
+    {
+      "key": "B",
+      "text": "Proposal penelitian berjudul Kota Tangguh dinilai oleh satu orang penelaah."
+    },
+    {
+      "key": "C",
+      "text": "Setiap proposal penelitian yang memperoleh berita acara penilaian lolos seleksi administrasi."
+    },
+    {
+      "key": "D",
+      "text": "Proposal penelitian berjudul Kota Tangguh diajukan melewati batas waktu pendaftaran."
+    },
+    {
+      "key": "E",
+      "text": "Setiap proposal penelitian yang tidak lolos seleksi administrasi tidak dinilai oleh penelaah mana pun."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Pernyataan 1 dan 2 membentuk rantai: lolos seleksi administrasi mengakibatkan dinilai dua penelaah, dan dinilai dua penelaah mengakibatkan memperoleh berita acara penilaian. Karena itu setiap proposal yang lolos seleksi administrasi pasti memperoleh berita acara penilaian. Pernyataan 3 menyatakan proposal Kota Tangguh tidak memperoleh berita acara penilaian, sehingga menurut kontraposisi rantai tersebut proposal itu tidak lolos seleksi administrasi.",
+    "B": "Salah. Dari ketiga pernyataan hanya dapat disimpulkan bahwa proposal Kota Tangguh tidak dinilai oleh dua orang penelaah. Banyaknya penelaah yang sebenarnya menilai proposal itu tidak disebutkan sama sekali; jumlahnya dapat nol dan tidak harus satu.",
+    "C": "Salah. Pernyataan 1 dan 2 hanya berlaku satu arah, yaitu dari lolos seleksi menuju berita acara penilaian. Membalik arah hubungan itu merupakan konversi yang tidak sahih karena berita acara penilaian dapat saja diterbitkan bagi proposal yang ditelaah melalui jalur lain.",
+    "D": "Salah. Ketiga pernyataan sama sekali tidak menyinggung batas waktu pendaftaran. Alasan proposal Kota Tangguh tidak lolos seleksi administrasi dapat bermacam-macam dan tidak dapat ditentukan dari premis yang tersedia.",
+    "E": "Salah. Pernyataan ini merupakan inversi dari pernyataan 1, yaitu menyangkal syarat sekaligus menyangkal akibatnya, dan inversi bukan bentuk penyimpulan yang sahih. Proposal yang tidak lolos seleksi administrasi tetap mungkin ditelaah, misalnya oleh seorang penelaah saja."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

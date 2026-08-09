@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-020",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Kata \"meredam\" pada paragraf pertama bacaan tersebut bermakna ...",
+  "image": null,
+  "passage": "Hutan mangrove tumbuh di wilayah peralihan antara daratan dan laut, terutama pada muara sungai yang berlumpur. Sistem perakarannya yang rapat dan menjulang di atas permukaan air membuat mangrove mampu meredam energi gelombang sebelum gelombang itu mencapai garis pantai. Sejumlah kajian di kawasan pesisir tropis menunjukkan bahwa jalur mangrove selebar seratus meter dapat menurunkan tinggi gelombang hingga lebih dari separuhnya. Selain itu, akar mangrove menahan sedimen yang terbawa arus sehingga laju abrasi berkurang dan daratan baru perlahan-lahan terbentuk.\n\nFungsi mangrove tidak berhenti pada perlindungan fisik. Rongga di antara akarnya menjadi tempat pemijahan berbagai jenis ikan, udang, dan kepiting yang menopang perikanan rakyat. Mangrove juga menyimpan karbon dalam jumlah besar. Sebagian besar karbon itu tertimbun pada lapisan tanah yang tergenang dan miskin oksigen sehingga bahan organik di dalamnya terurai sangat lambat.\n\nMeskipun demikian, luas hutan mangrove terus menyusut akibat pembukaan tambak, perluasan permukiman, dan penebangan untuk kayu bakar. Upaya penanaman kembali kerap gagal karena bibit ditanam pada lokasi yang tidak sesuai dengan pola pasang surut setempat, bukan karena kekurangan bibit.",
+  "options": [
+    {
+      "key": "A",
+      "text": "menghentikan sama sekali"
+    },
+    {
+      "key": "B",
+      "text": "memantulkan kembali"
+    },
+    {
+      "key": "C",
+      "text": "menyerap seluruhnya"
+    },
+    {
+      "key": "D",
+      "text": "mengalihkan arah"
+    },
+    {
+      "key": "E",
+      "text": "mengurangi kekuatan"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Bacaan menyebut penurunan tinggi gelombang hingga lebih dari separuhnya, yang berarti gelombang berkurang, bukan berhenti sepenuhnya.",
+    "B": "Salah. Memantulkan berarti mengembalikan gelombang ke arah datangnya, sedangkan bacaan menerangkan pelemahan energi gelombang.",
+    "C": "Salah. Penyerapan seluruh energi bertentangan dengan keterangan bahwa gelombang masih tersisa meski tingginya berkurang.",
+    "D": "Salah. Bacaan tidak menyinggung perubahan arah gelombang, melainkan berkurangnya energi dan tinggi gelombang.",
+    "E": "Benar. Dalam konteks tersebut meredam berarti mengurangi kekuatan energi gelombang, sesuai keterangan bahwa tinggi gelombang turun lebih dari separuhnya."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-015",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 15,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nP = 4⁵\nQ = 5⁴\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Selisih antara P dan Q lebih besar daripada 404"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. P = 1.024 dan Q = 625, sehingga P > Q.",
+    "B": "Salah. P = 1.024 dan Q = 625, sehingga P > Q; nilai Q tidak melebihi nilai P (625 tidak lebih besar daripada 1.024).",
+    "C": "Salah. P = 1.024 dan Q = 625, sehingga P > Q; kedua nilai tidak sama (1.024 ≠ 625).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 1.024 dan Q = 625), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 1.024 dan Q = 625, selisihnya 399, tidak lebih besar daripada 404."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

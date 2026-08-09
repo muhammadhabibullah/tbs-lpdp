@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-009",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "antonim",
+  "question_text": "SKEPTIS >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Ragu"
+    },
+    {
+      "key": "B",
+      "text": "Kritis"
+    },
+    {
+      "key": "C",
+      "text": "Acuh"
+    },
+    {
+      "key": "D",
+      "text": "Pasrah"
+    },
+    {
+      "key": "E",
+      "text": "Percaya"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Ragu merupakan sinonim skeptis karena sama-sama menunjukkan sikap kurang yakin terhadap kebenaran sesuatu.",
+    "B": "Salah. Kritis berarti tajam dalam menganalisis dan menilai; sikap ini sering menyertai skeptisisme, bukan melawannya.",
+    "C": "Salah. Acuh dalam pemakaian baku berarti peduli, sedangkan lawan skeptis berkaitan dengan keyakinan, bukan kepedulian.",
+    "D": "Salah. Pasrah berarti menyerahkan diri pada keadaan; sikap ini menyangkut penerimaan nasib, bukan keyakinan atas kebenaran suatu hal.",
+    "E": "Benar. Skeptis berarti selalu meragukan kebenaran sesuatu, sehingga lawannya adalah percaya atau menerima kebenaran itu tanpa keraguan."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

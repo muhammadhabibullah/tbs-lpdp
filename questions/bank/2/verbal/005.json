@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-005",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "EKSPLISIT >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tersurat"
+    },
+    {
+      "key": "B",
+      "text": "Terperinci"
+    },
+    {
+      "key": "C",
+      "text": "Tegas"
+    },
+    {
+      "key": "D",
+      "text": "Tersirat"
+    },
+    {
+      "key": "E",
+      "text": "Terbuka"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Tersurat berarti dinyatakan secara nyata dalam tulisan sehingga merupakan sinonim eksplisit, bukan lawannya.",
+    "B": "Salah. Terperinci berarti diuraikan bagian demi bagian; sifat ini menyertai penyampaian yang terus terang dan tidak melawannya.",
+    "C": "Salah. Tegas berarti jelas dan tidak ragu-ragu sehingga maknanya searah dengan eksplisit.",
+    "D": "Benar. Eksplisit berarti dinyatakan secara langsung dan gamblang, sehingga lawannya adalah tersirat, yaitu makna yang hanya terkandung dan tidak dinyatakan.",
+    "E": "Salah. Terbuka berarti tidak menyembunyikan sesuatu; sikap ini sejalan dengan penyampaian yang eksplisit."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

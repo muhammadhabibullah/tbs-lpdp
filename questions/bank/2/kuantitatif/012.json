@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-012",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 12,
+  "type": "deret_angka",
+  "question_text": "5, −10, 20, −40, 80, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−80"
+    },
+    {
+      "key": "B",
+      "text": "160"
+    },
+    {
+      "key": "C",
+      "text": "320"
+    },
+    {
+      "key": "D",
+      "text": "200"
+    },
+    {
+      "key": "E",
+      "text": "−160"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai −80 diperoleh dengan menggunakan rasio −1, padahal rasio deret ini −2.",
+    "B": "Salah. Nilai 160 diperoleh dengan menerapkan besar rasio dengan tanda yang keliru.",
+    "C": "Salah. Nilai 320 diperoleh dengan mengalikan dengan rasio dua kali sehingga melompat satu suku terlalu jauh.",
+    "D": "Salah. Nilai 200 diperoleh dengan menambahkan selisih dua suku terakhir (120) alih-alih mengalikan dengan rasio −2.",
+    "E": "Benar. Setiap suku diperoleh dengan mengalikan suku sebelumnya dengan −2: 80 × (−2) = −160."
+  },
+  "difficulty": "medium",
+  "source": "deret_angka.py",
+  "verified": true
+}

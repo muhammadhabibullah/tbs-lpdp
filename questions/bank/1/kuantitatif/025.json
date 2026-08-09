@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-025",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Sebuah trapesium sama kaki memiliki panjang sisi-sisi sejajar 32 cm dan 20 cm, sedangkan panjang masing-masing kakinya 10 cm. Berapakah luas trapesium tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "208 cm²"
+    },
+    {
+      "key": "B",
+      "text": "256 cm²"
+    },
+    {
+      "key": "C",
+      "text": "260 cm²"
+    },
+    {
+      "key": "D",
+      "text": "416 cm²"
+    },
+    {
+      "key": "E",
+      "text": "520 cm²"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Karena trapesium sama kaki, proyeksi setiap kaki pada sisi terpanjang = (32 − 20) : 2 = 6 cm. Dengan teorema Pythagoras, tinggi = √(10² − 6²) = √64 = 8 cm. Luas = ½ × (32 + 20) × 8 = 26 × 8 = 208 cm².",
+    "B": "Salah. Nilai 256 cm² diperoleh dari 32 × 8, yaitu menganggap bangun tersebut persegi panjang seluas sisi terpanjang dikali tinggi sehingga dua segitiga di kedua ujung ikut terhitung penuh.",
+    "C": "Salah. Nilai 260 cm² muncul jika panjang kaki 10 cm langsung dipakai sebagai tinggi: ½ × (32 + 20) × 10 = 260. Kaki bukan tinggi karena posisinya miring.",
+    "D": "Salah. Nilai 416 cm² diperoleh jika faktor ½ pada rumus luas trapesium terlewat, yaitu (32 + 20) × 8 = 416.",
+    "E": "Salah. Nilai 520 cm² menggabungkan dua kesalahan sekaligus, yaitu memakai kaki 10 cm sebagai tinggi dan melewatkan faktor ½: (32 + 20) × 10 = 520."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

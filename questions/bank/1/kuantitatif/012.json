@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-012",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 12,
+  "type": "deret_angka",
+  "question_text": "2, 4, 8, 16, 32, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "48"
+    },
+    {
+      "key": "B",
+      "text": "128"
+    },
+    {
+      "key": "C",
+      "text": "34"
+    },
+    {
+      "key": "D",
+      "text": "64"
+    },
+    {
+      "key": "E",
+      "text": "96"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 48 diperoleh dengan menambahkan selisih dua suku terakhir (16) alih-alih mengalikan dengan rasio 2.",
+    "B": "Salah. Nilai 128 diperoleh dengan mengalikan dengan rasio dua kali sehingga melompat satu suku terlalu jauh.",
+    "C": "Salah. Nilai 34 diperoleh dengan menambahkan selisih dua suku pertama (2) seolah-olah deret ini deret aritmetika.",
+    "D": "Benar. Setiap suku diperoleh dengan mengalikan suku sebelumnya dengan 2: 32 × 2 = 64.",
+    "E": "Salah. Nilai 96 diperoleh dengan menggunakan rasio 3, padahal rasio deret ini 2."
+  },
+  "difficulty": "easy",
+  "source": "deret_angka.py",
+  "verified": true
+}

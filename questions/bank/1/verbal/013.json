@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-013",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "HANGAT : PANAS = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Basah : Lembap"
+    },
+    {
+      "key": "B",
+      "text": "Lembap : Kering"
+    },
+    {
+      "key": "C",
+      "text": "Sejuk : Dingin"
+    },
+    {
+      "key": "D",
+      "text": "Awan : Hujan"
+    },
+    {
+      "key": "E",
+      "text": "Sejuk : Segar"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Basah dan lembap memang dua tingkatan dari sifat yang sama, tetapi arahnya terbalik karena tingkat yang lebih kuat ditempatkan lebih dahulu.",
+    "B": "Salah. Lembap dan kering merupakan keadaan yang berlawanan, bukan dua tingkatan dari sifat yang sama.",
+    "C": "Benar. Hangat adalah tingkat yang lebih lemah dari panas, sebagaimana sejuk adalah tingkat yang lebih lemah dari dingin.",
+    "D": "Salah. Awan dan hujan berhubungan sebagai sebab dan akibat, bukan sebagai dua tingkatan intensitas.",
+    "E": "Salah. Sejuk dan segar merupakan dua sifat yang bermiripan, bukan dua tingkatan dari sifat yang sama."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

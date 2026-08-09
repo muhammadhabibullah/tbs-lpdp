@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-021",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Simpulan yang paling tepat berdasarkan paragraf ketiga bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Energi panas bumi berasal dari panas yang tersimpan di dalam kerak bumi. Pada wilayah yang dilalui jalur gunung api, kantong magma memanaskan air tanah hingga terbentuk uap bertekanan tinggi. Uap tersebut dialirkan melalui sumur produksi untuk memutar turbin pembangkit listrik, kemudian air yang telah mendingin diinjeksikan kembali ke dalam reservoir. Siklus tertutup semacam itu menjaga cadangan uap di dalam reservoir sehingga pembangkit dapat beroperasi hingga puluhan tahun.\n\nBerbeda dengan pembangkit tenaga surya dan tenaga angin yang keluarannya bergantung pada cuaca, pembangkit panas bumi menghasilkan daya yang relatif tetap sepanjang hari. Karena sifat tersebut, panas bumi kerap ditempatkan sebagai pemikul beban dasar dalam sistem kelistrikan. Emisi karbonnya pun jauh lebih rendah daripada emisi pembangkit berbahan bakar batu bara.\n\nMeskipun demikian, pemanfaatan panas bumi berjalan lambat. Biaya pengeboran eksplorasi sangat tinggi, sedangkan hasilnya belum pasti: sebuah sumur dapat saja tidak menghasilkan uap yang memadai setelah dana besar dikeluarkan. Sebagian besar wilayah prospek panas bumi juga berada di kawasan hutan lindung yang perizinannya berlapis. Hambatan utama pemanfaatan panas bumi dengan demikian terletak pada risiko tahap awal, bukan pada ketersediaan sumber dayanya.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Percepatan pemanfaatan panas bumi lebih ditentukan oleh penanganan risiko pada tahap eksplorasi daripada oleh penambahan cadangan sumber daya"
+    },
+    {
+      "key": "B",
+      "text": "Cadangan panas bumi yang berada di kawasan hutan lindung sudah tidak layak lagi dimanfaatkan"
+    },
+    {
+      "key": "C",
+      "text": "Pengeboran sumur eksplorasi panas bumi selalu berakhir tanpa menghasilkan uap yang memadai"
+    },
+    {
+      "key": "D",
+      "text": "Perizinan di kawasan hutan lindung merupakan satu-satunya penghambat pemanfaatan panas bumi"
+    },
+    {
+      "key": "E",
+      "text": "Pembangkit panas bumi sebaiknya digantikan oleh pembangkit tenaga surya yang biayanya lebih rendah"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Paragraf ketiga menegaskan hambatan utama terletak pada risiko tahap awal dan bukan pada ketersediaan sumber daya, sehingga percepatan pemanfaatannya bergantung pada penanganan risiko eksplorasi.",
+    "B": "Salah. Bacaan menyebut perizinan di kawasan hutan lindung berlapis sehingga menghambat, tetapi tidak pernah menyatakan cadangan di kawasan itu tidak layak dimanfaatkan.",
+    "C": "Salah. Bacaan menyatakan sebuah sumur dapat saja tidak menghasilkan uap yang memadai; ungkapan itu menunjukkan kemungkinan, bukan kepastian yang selalu terjadi.",
+    "D": "Salah. Paragraf ketiga menyebut dua hambatan sekaligus, yaitu risiko biaya eksplorasi dan perizinan berlapis, sehingga perizinan tidak dapat disebut satu-satunya penghambat.",
+    "E": "Salah. Bacaan membandingkan kestabilan keluaran kedua jenis pembangkit, tetapi tidak membandingkan biayanya dan tidak menganjurkan penggantian pembangkit."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-019",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 19,
+  "type": "soal_cerita",
+  "question_text": "Sebuah bus berangkat dari Kota A pukul 07.00 dengan kecepatan tetap 60 km/jam. Pada pukul 08.30, sebuah mobil berangkat dari Kota A menempuh jalur yang sama dengan kecepatan tetap 80 km/jam. Pada jarak berapa kilometer dari Kota A mobil tersebut tepat menyusul bus?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "240 km"
+    },
+    {
+      "key": "B",
+      "text": "270 km"
+    },
+    {
+      "key": "C",
+      "text": "360 km"
+    },
+    {
+      "key": "D",
+      "text": "450 km"
+    },
+    {
+      "key": "E",
+      "text": "480 km"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 240 km muncul jika selisih keberangkatan dianggap 1 jam sehingga ketertinggalan dihitung 60 km, waktu menyusul 60 : 20 = 3 jam, dan jaraknya 80 × 3 = 240 km. Selisih keberangkatan sebenarnya 1,5 jam.",
+    "B": "Salah. Nilai 270 km adalah jarak yang ditempuh bus selama 4,5 jam setelah mobil berangkat (60 × 4,5); jarak 90 km yang sudah ditempuh bus sebelum pukul 08.30 belum ditambahkan.",
+    "C": "Benar. Sampai pukul 08.30 bus telah menempuh 1,5 × 60 = 90 km. Selisih kecepatan = 80 − 60 = 20 km/jam, sehingga mobil menyusul setelah 90 : 20 = 4,5 jam, yaitu pada jarak 80 × 4,5 = 360 km dari Kota A. Pemeriksaan: bus menempuh 60 × 6 = 360 km, sama.",
+    "D": "Salah. Nilai 450 km muncul jika jarak tempuh mobil 360 km masih ditambah lagi ketertinggalan 90 km, padahal 90 km tersebut sudah diperhitungkan dalam waktu menyusul.",
+    "E": "Salah. Nilai 480 km muncul jika kecepatan mobil 80 km/jam dikalikan seluruh selang waktu sejak bus berangkat (6 jam), padahal mobil hanya bergerak selama 4,5 jam."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

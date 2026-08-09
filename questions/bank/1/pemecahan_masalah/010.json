@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-010",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah perusahaan logistik mengganti seluruh armada pengiriman jarak pendeknya, yang semula berupa sepeda motor berbahan bakar minyak, dengan sepeda motor listrik. Manajemen memperkirakan langkah tersebut akan menurunkan biaya operasional perusahaan secara signifikan. Dasar perkiraan itu adalah perhitungan bahwa biaya energi listrik per kilometer tempuh jauh lebih rendah daripada biaya bahan bakar minyak per kilometer tempuh pada rute pengiriman yang sama. Jarak tempuh dan volume pengiriman diperkirakan tidak berubah setelah peralihan armada.\n\nAsumsi yang mendasari perkiraan manajemen tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tambahan biaya perawatan dan penggantian baterai sepeda motor listrik tidak melampaui penghematan yang diperoleh dari selisih biaya energi."
+    },
+    {
+      "key": "B",
+      "text": "Harga bahan bakar minyak dipastikan terus meningkat pada lima tahun mendatang."
+    },
+    {
+      "key": "C",
+      "text": "Sepeda motor listrik memiliki kecepatan tempuh yang sama dengan sepeda motor berbahan bakar minyak."
+    },
+    {
+      "key": "D",
+      "text": "Seluruh pengemudi perusahaan telah berpengalaman mengendarai sepeda motor listrik."
+    },
+    {
+      "key": "E",
+      "text": "Pemerintah memberikan subsidi pembelian kendaraan listrik kepada perusahaan logistik."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Perkiraan manajemen hanya membandingkan satu komponen biaya, yaitu energi per kilometer. Apabila komponen biaya lain yang khas kendaraan listrik, seperti perawatan dan penggantian baterai, ternyata lebih besar daripada penghematan energinya, biaya operasional justru dapat naik. Karena penyangkalan pernyataan ini menggugurkan kesimpulan, pernyataan tersebut merupakan asumsi yang harus dipenuhi.",
+    "B": "Salah. Penghematan sudah muncul dari selisih biaya energi pada tingkat harga yang berlaku sekarang. Kenaikan harga bahan bakar pada masa depan hanya akan memperkuat perkiraan, tetapi bukan syarat yang wajib terpenuhi.",
+    "C": "Salah. Kesetaraan kecepatan tempuh berkaitan dengan mutu dan ketepatan waktu layanan pengiriman, sedangkan klaim yang diajukan manajemen menyangkut penurunan biaya operasional.",
+    "D": "Salah. Pengalaman pengemudi menyangkut kesiapan pelaksanaan peralihan armada, sedangkan argumen manajemen sepenuhnya bertumpu pada perbandingan biaya energi per kilometer, bukan pada keterampilan pengemudi.",
+    "E": "Salah. Argumen tidak menyandarkan penghematan pada bantuan pemerintah. Tanpa subsidi sekalipun, selisih biaya energi yang dijadikan dasar perhitungan tetap berlaku."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

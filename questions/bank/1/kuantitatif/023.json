@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-023",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "geometri",
+  "question_text": "Sebuah taman berbentuk persegi panjang dengan panjang 20 m dan lebar 12 m. Di bagian dalam taman dibuat kolam berbentuk persegi dengan panjang sisi 6 m. Seluruh bagian taman di luar kolam ditanami rumput. Berapakah luas bagian taman yang ditanami rumput?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "204 m²"
+    },
+    {
+      "key": "B",
+      "text": "216 m²"
+    },
+    {
+      "key": "C",
+      "text": "240 m²"
+    },
+    {
+      "key": "D",
+      "text": "264 m²"
+    },
+    {
+      "key": "E",
+      "text": "276 m²"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Luas taman = 20 × 12 = 240 m² dan luas kolam = 6 × 6 = 36 m². Luas bagian yang ditanami rumput = 240 − 36 = 204 m².",
+    "B": "Salah. Nilai 216 m² muncul jika yang dikurangkan adalah keliling kolam (4 × 6 = 24 m), bukan luas kolam (36 m²).",
+    "C": "Salah. Nilai 240 m² adalah luas seluruh taman; luas kolam seluas 36 m² belum dikurangkan.",
+    "D": "Salah. Nilai 264 m² muncul jika keliling kolam (24) justru ditambahkan pada luas taman, bukan luas kolam yang dikurangkan.",
+    "E": "Salah. Nilai 276 m² diperoleh dari 240 + 36, yaitu menjumlahkan luas kolam padahal kolam tidak ditanami rumput sehingga luasnya harus dikurangkan."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

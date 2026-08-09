@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-008",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "deret_angka",
+  "question_text": "2, 4, 6, 10, 16, 26, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "42"
+    },
+    {
+      "key": "B",
+      "text": "30"
+    },
+    {
+      "key": "C",
+      "text": "68"
+    },
+    {
+      "key": "D",
+      "text": "36"
+    },
+    {
+      "key": "E",
+      "text": "52"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Setiap suku merupakan jumlah dua suku sebelumnya (2 + 4 = 6; 4 + 6 = 10). Suku berikutnya adalah 16 + 26 = 42.",
+    "B": "Salah. Nilai 30 diperoleh dengan menjumlahkan suku terakhir dengan suku kedua, bukan dengan suku kelima.",
+    "C": "Salah. Nilai 68 diperoleh dengan melanjutkan deret dua langkah sehingga memperoleh suku kedelapan.",
+    "D": "Salah. Nilai 36 diperoleh dengan menjumlahkan suku terakhir dengan suku keempat, bukan dengan suku kelima.",
+    "E": "Salah. Nilai 52 diperoleh dengan menggandakan suku terakhir alih-alih menjumlahkannya dengan suku sebelumnya."
+  },
+  "difficulty": "medium",
+  "source": "deret_angka.py",
+  "verified": true
+}

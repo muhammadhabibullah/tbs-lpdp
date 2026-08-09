@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-007",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 7,
+  "type": "aljabar",
+  "question_text": "Jika y = 3x² + 4x + 9, nilai y untuk x = 4 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "73"
+    },
+    {
+      "key": "B",
+      "text": "41"
+    },
+    {
+      "key": "C",
+      "text": "49"
+    },
+    {
+      "key": "D",
+      "text": "169"
+    },
+    {
+      "key": "E",
+      "text": "55"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. y = 3 × (4)² + 4 × (4) + 9 = 48 + 16 + 9 = 73.",
+    "B": "Salah. Nilai 41 diperoleh dengan salah tanda pada suku + 4x ketika mensubstitusikan x = 4.",
+    "C": "Salah. Nilai 49 diperoleh dengan membaca 3x² sebagai 3 × 2 × x sehingga pangkat dua berubah menjadi perkalian dua.",
+    "D": "Salah. Nilai 169 diperoleh dengan mengkuadratkan 3x sebagai satu kesatuan, yaitu (3 × 4)², padahal yang dikuadratkan hanya x.",
+    "E": "Salah. Nilai 55 diperoleh dengan salah tanda pada tetapan + 9."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

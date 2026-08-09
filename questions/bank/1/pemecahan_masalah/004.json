@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-004",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Enam pegawai, yaitu Andi, Budi, Citra, Dewi, Eka, dan Fajar, ditempatkan pada tiga divisi, yaitu Divisi P, Divisi Q, dan Divisi R. Setiap divisi diisi tepat dua pegawai dan setiap pegawai menempati tepat satu divisi. Penempatan tunduk pada ketentuan berikut.\n(1) Andi dan Budi tidak ditempatkan pada divisi yang sama.\n(2) Citra ditempatkan di Divisi Q.\n(3) Dewi tidak ditempatkan di Divisi R.\n(4) Eka tidak ditempatkan pada divisi yang sama dengan Citra.\n(5) Fajar tidak ditempatkan di Divisi P.\n\nJika Andi ditempatkan di Divisi Q, pernyataan berikut yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Budi ditempatkan di Divisi P."
+    },
+    {
+      "key": "B",
+      "text": "Dewi ditempatkan di Divisi R."
+    },
+    {
+      "key": "C",
+      "text": "Eka ditempatkan di Divisi Q."
+    },
+    {
+      "key": "D",
+      "text": "Fajar ditempatkan di Divisi R."
+    },
+    {
+      "key": "E",
+      "text": "Budi dan Eka ditempatkan pada divisi yang sama."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Penempatan Divisi P berisi Dewi dan Eka, Divisi Q berisi Andi dan Citra, serta Divisi R berisi Budi dan Fajar memenuhi seluruh ketentuan, tetapi Budi berada di Divisi R.",
+    "B": "Salah. Ketentuan 3 melarang Dewi ditempatkan di Divisi R, sehingga pernyataan ini tidak pernah benar pada penempatan mana pun.",
+    "C": "Salah. Citra berada di Divisi Q dan ketentuan 4 melarang Eka sedivisi dengan Citra. Lagi pula kuota Divisi Q sudah habis oleh Andi dan Citra.",
+    "D": "Benar. Dengan Andi di Divisi Q, kuota dua orang pada Divisi Q telah terisi penuh oleh Andi dan Citra. Ketentuan 5 melarang Fajar berada di Divisi P, sehingga satu-satunya divisi yang tersisa bagi Fajar adalah Divisi R. Hal ini berlaku pada kedua penempatan sah yang memuat Andi di Divisi Q.",
+    "E": "Salah. Divisi Q sudah penuh, sedangkan Dewi dilarang menempati Divisi R sehingga Dewi pasti mengisi Divisi P. Budi dan Eka karena itu selalu terpisah, misalnya pada penempatan Divisi P berisi Budi dan Dewi, Divisi Q berisi Andi dan Citra, serta Divisi R berisi Eka dan Fajar."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

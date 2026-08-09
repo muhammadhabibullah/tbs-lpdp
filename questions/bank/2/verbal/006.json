@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-006",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "ANTIPATI >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Simpati"
+    },
+    {
+      "key": "B",
+      "text": "Empati"
+    },
+    {
+      "key": "C",
+      "text": "Apatis"
+    },
+    {
+      "key": "D",
+      "text": "Toleransi"
+    },
+    {
+      "key": "E",
+      "text": "Curiga"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Antipati adalah perasaan tidak suka atau menolak terhadap seseorang maupun sesuatu, sehingga lawannya adalah simpati, yaitu rasa suka dan tertarik.",
+    "B": "Salah. Empati adalah kemampuan menghayati perasaan orang lain; kemampuan itu dapat dimiliki tanpa disertai rasa suka sehingga bukan lawan langsung antipati.",
+    "C": "Salah. Apatis berarti tidak peduli dan tidak menaruh perhatian; sikap ini netral, bukan kebalikan dari rasa tidak suka.",
+    "D": "Salah. Toleransi berarti menahan diri terhadap perbedaan; sikap ini masih dapat dimiliki orang yang sebenarnya tidak menyukai pihak lain.",
+    "E": "Salah. Curiga berarti menaruh sangka buruk terhadap pihak lain; perasaan itu searah dengan antipati, bukan melawannya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

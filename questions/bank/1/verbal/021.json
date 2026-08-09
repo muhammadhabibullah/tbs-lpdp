@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-021",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Tujuan penulis menyampaikan bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Banyak pelajar menyiapkan ujian dengan membaca ulang catatan berkali-kali. Cara tersebut terasa efektif karena teks yang berulang kali dibaca menjadi semakin akrab, dan keakraban itu sering disalahartikan sebagai penguasaan materi. Penelitian di bidang psikologi kognitif menunjukkan hasil yang berbeda. Ketika pelajar diminta menutup catatan lalu berusaha mengingat kembali isinya, daya ingat jangka panjang mereka jauh lebih baik daripada kelompok yang hanya membaca ulang, meskipun kelompok kedua justru merasa lebih siap menghadapi ujian.\n\nUpaya mengingat kembali menuntut otak menelusuri dan menyusun ulang informasi yang telah tersimpan, dan proses yang menuntut usaha itulah yang memperkuat jejak ingatan. Manfaatnya bertambah apabila latihan mengingat diberi jeda beberapa hari, bukan dipadatkan dalam satu malam.\n\nTemuan tersebut memberi pesan penting bagi pelajar: rasa mudah pada saat belajar bukanlah petunjuk yang dapat diandalkan. Strategi yang terasa berat justru sering kali membuahkan hasil yang lebih tahan lama.",
+  "options": [
+    {
+      "key": "A",
+      "text": "membandingkan hasil penelitian psikologi kognitif dari berbagai negara"
+    },
+    {
+      "key": "B",
+      "text": "menguraikan secara terperinci cara kerja otak dalam menyimpan informasi"
+    },
+    {
+      "key": "C",
+      "text": "mencela pelajar yang menyiapkan diri hanya dengan membaca ulang catatan pelajaran"
+    },
+    {
+      "key": "D",
+      "text": "menganjurkan latihan mengingat kembali sebagai cara belajar yang lebih efektif"
+    },
+    {
+      "key": "E",
+      "text": "menegaskan bahwa belajar hingga larut malam merupakan penyebab utama kegagalan ujian"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Bacaan hanya merujuk pada temuan psikologi kognitif secara umum tanpa membandingkan penelitian dari negara mana pun.",
+    "B": "Salah. Cara kerja otak hanya disinggung sekilas sebagai penjelas mengapa mengingat kembali efektif, bukan sebagai pokok pembahasan yang diuraikan terperinci.",
+    "C": "Salah. Penulis memaparkan mengapa membaca ulang terasa efektif meskipun hasilnya kurang bertahan; nada bacaan menjelaskan temuan penelitian, bukan mencela pelajar yang menggunakan cara itu.",
+    "D": "Benar. Seluruh bacaan mengarah pada anjuran agar pelajar berlatih mengingat kembali karena cara itu terbukti menghasilkan daya ingat jangka panjang yang lebih baik daripada membaca ulang.",
+    "E": "Salah. Bacaan hanya menyatakan latihan mengingat sebaiknya diberi jeda dan tidak dipadatkan dalam satu malam; hal itu tidak sama dengan menyebutnya penyebab utama kegagalan ujian."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

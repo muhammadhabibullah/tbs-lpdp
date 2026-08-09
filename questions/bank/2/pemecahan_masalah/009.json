@@ -1,0 +1,43 @@
+{
+  "id": "2-pemecahan_masalah-009",
+  "package": 2,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan banyaknya peserta pelatihan keterampilan yang diselenggarakan Balai Latihan Kerja Kota Anggrek sepanjang tahun 2024.\n\nSimpulan isi tabel yang tepat adalah ...",
+  "image": null,
+  "passage": "Bidang Pelatihan | Jumlah Peserta\nTata Boga | 48\nMenjahit | 65\nDesain Grafis | 72\nPerbengkelan | 39\nTata Rias | 56\nJumlah | 280",
+  "options": [
+    {
+      "key": "A",
+      "text": "Bidang pelatihan dengan jumlah peserta paling sedikit adalah Tata Boga."
+    },
+    {
+      "key": "B",
+      "text": "Jumlah peserta bidang Desain Grafis lebih banyak daripada gabungan peserta bidang Tata Boga dan Perbengkelan."
+    },
+    {
+      "key": "C",
+      "text": "Bidang pelatihan dengan jumlah peserta paling banyak adalah Desain Grafis."
+    },
+    {
+      "key": "D",
+      "text": "Peserta bidang Menjahit mencakup lebih dari seperempat seluruh peserta pelatihan."
+    },
+    {
+      "key": "E",
+      "text": "Lulusan bidang Desain Grafis paling cepat memperoleh pekerjaan dibandingkan dengan lulusan bidang lain."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Bidang Tata Boga memiliki 48 peserta, sedangkan Perbengkelan hanya 39 peserta. Jumlah peserta paling sedikit ada pada bidang Perbengkelan, bukan Tata Boga.",
+    "B": "Salah. Gabungan peserta Tata Boga dan Perbengkelan berjumlah 48 + 39 = 87 orang, sedangkan peserta Desain Grafis hanya 72 orang. Jumlah peserta Desain Grafis justru lebih sedikit daripada gabungan keduanya.",
+    "C": "Benar. Dengan membandingkan kelima angka pada kolom jumlah peserta, yaitu 48, 65, 72, 39, dan 56, nilai terbesar adalah 72 yang dimiliki bidang Desain Grafis. Bidang itulah yang menampung peserta paling banyak.",
+    "D": "Salah. Seperempat dari seluruh peserta adalah 280 : 4 = 70 orang, sedangkan peserta bidang Menjahit berjumlah 65 orang. Jumlah tersebut belum mencapai seperempat, apalagi melampauinya.",
+    "E": "Salah. Tabel hanya memuat banyaknya peserta menurut bidang pelatihan dan sama sekali tidak memuat keterangan mengenai penyerapan kerja lulusan. Pernyataan ini tidak dapat dinilai benar atau salah berdasarkan data yang tersedia."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

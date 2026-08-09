@@ -1,0 +1,43 @@
+{
+  "id": "2-pemecahan_masalah-008",
+  "package": 2,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Balai penyuluhan pertanian membagikan benih padi varietas baru kepada seluruh petani di Desa Sukamaju untuk satu musim tanam. Pada akhir musim, hasil panen gabah desa tersebut tercatat 15 persen lebih tinggi daripada hasil panen musim sebelumnya. Penyuluh menyimpulkan bahwa varietas baru itulah yang meningkatkan produktivitas lahan padi di Desa Sukamaju.\n\nPertanyaan yang paling relevan diajukan untuk menguji kekuatan simpulan penyuluh tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Berapa harga satu kilogram benih varietas baru dibandingkan dengan harga benih yang biasa dipakai petani?"
+    },
+    {
+      "key": "B",
+      "text": "Apakah curah hujan dan pasokan air irigasi pada musim tanam tersebut sebanding dengan musim tanam sebelumnya?"
+    },
+    {
+      "key": "C",
+      "text": "Berapa orang petani Desa Sukamaju yang pernah mengikuti penyuluhan pertanian pada tahun sebelumnya?"
+    },
+    {
+      "key": "D",
+      "text": "Apakah beras yang dihasilkan varietas baru tersebut diminati pembeli di pasar kabupaten?"
+    },
+    {
+      "key": "E",
+      "text": "Berapa lama waktu yang dibutuhkan varietas baru tersebut sejak ditanam sampai siap dipanen?"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Perbandingan harga benih menyangkut untung rugi usaha tani, bukan sebab naiknya hasil panen. Benih yang lebih mahal maupun lebih murah tetap dapat menghasilkan kenaikan 15 persen tersebut.",
+    "B": "Benar. Seluruh petani menerima benih baru sehingga tidak ada kelompok pembanding, dan satu-satunya perbandingan yang tersedia adalah antarmusim. Air merupakan penentu hasil padi yang paling besar dan dapat berbeda antarmusim. Jika curah hujan dan pasokan irigasi ternyata jauh lebih baik pada musim tersebut, kenaikan hasil panen dapat dijelaskan tanpa melibatkan varietas baru sehingga simpulan penyuluh runtuh; jika keduanya sebanding, simpulan itu justru menguat. Jawaban atas pertanyaan ini karena itu langsung menentukan kuat lemahnya simpulan.",
+    "C": "Salah. Banyaknya petani yang pernah mengikuti penyuluhan pada tahun sebelumnya merupakan keterangan latar yang berlaku sama bagi kedua musim yang dibandingkan, sehingga tidak menjelaskan perbedaan hasil panen antara kedua musim itu.",
+    "D": "Salah. Minat pembeli di pasar menyangkut mutu dan nilai jual beras, sedangkan simpulan penyuluh menyangkut banyaknya gabah yang dihasilkan lahan. Laku atau tidak lakunya beras tidak mengubah besarnya hasil panen yang tercatat.",
+    "E": "Salah. Umur panen varietas hanya menerangkan lamanya satu siklus tanam. Pertanyaan ini tidak menyentuh kemungkinan adanya faktor lain yang berubah pada musim tersebut dan karena itu tidak menguji hubungan sebab akibat yang diklaim penyuluh."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

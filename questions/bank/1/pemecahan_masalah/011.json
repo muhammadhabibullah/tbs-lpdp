@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-011",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah sekolah menerapkan program membaca mandiri selama lima belas menit setiap pagi bagi seluruh siswa kelas VIII. Program tersebut berjalan sepanjang tahun ajaran tanpa pendampingan khusus dari guru. Pada akhir tahun ajaran, nilai rata-rata ujian pemahaman bacaan siswa kelas VIII naik dari 68 menjadi 79. Kepala sekolah menyimpulkan bahwa program membaca mandiri tersebut merupakan penyebab utama kenaikan nilai ujian pemahaman bacaan siswa.\n\nInformasi berikut yang paling melemahkan kesimpulan kepala sekolah adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sebagian besar siswa kelas VIII menyatakan menikmati kegiatan membaca mandiri setiap pagi."
+    },
+    {
+      "key": "B",
+      "text": "Nilai rata-rata ujian matematika siswa kelas VIII pada tahun ajaran tersebut tidak mengalami perubahan."
+    },
+    {
+      "key": "C",
+      "text": "Soal ujian pemahaman bacaan akhir tahun disusun oleh tim guru yang sama dengan tahun sebelumnya."
+    },
+    {
+      "key": "D",
+      "text": "Pada tahun ajaran yang sama sekolah menambah dua jam pelajaran bahasa Indonesia per minggu yang seluruhnya difokuskan pada latihan pemahaman bacaan."
+    },
+    {
+      "key": "E",
+      "text": "Sekolah lain yang menerapkan program membaca mandiri serupa juga mencatat kenaikan nilai ujian pemahaman bacaan."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Rasa senang siswa terhadap kegiatan tidak membantah hubungan sebab akibat yang diklaim. Jika berpengaruh sama sekali, informasi ini justru cenderung mendukung kesimpulan kepala sekolah.",
+    "B": "Salah. Tidak berubahnya nilai matematika menutup kemungkinan adanya perbaikan menyeluruh pada semua mata pelajaran, sehingga informasi ini memperkuat, bukan melemahkan, kesimpulan.",
+    "C": "Salah. Kesamaan tim penyusun soal menjaga keterbandingan hasil antartahun dan menyingkirkan dugaan bahwa soal menjadi lebih mudah, sehingga pengaruhnya justru memperkuat kesimpulan.",
+    "D": "Benar. Informasi ini memunculkan penyebab alternatif yang berlangsung pada periode yang sama dan mengarah langsung pada keterampilan yang diukur, yaitu pemahaman bacaan. Kenaikan nilai karena itu dapat dijelaskan oleh tambahan jam pelajaran, sehingga klaim bahwa membaca mandiri merupakan penyebab utama kehilangan dasar.",
+    "E": "Salah. Temuan serupa di sekolah lain menambah bukti keterkaitan antara program dan kenaikan nilai, sehingga arah pengaruhnya memperkuat kesimpulan kepala sekolah."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

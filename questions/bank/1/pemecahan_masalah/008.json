@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-008",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "logika_analitis",
+  "question_text": "Perhatikan kedua pernyataan berikut.\n(1) Semua peserta kelas intensif memperoleh modul tambahan.\n(2) Tidak seorang pun penerima modul tambahan mengikuti kelas akhir pekan.\n\nKesimpulan yang pasti benar berdasarkan kedua pernyataan tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua penerima modul tambahan adalah peserta kelas intensif."
+    },
+    {
+      "key": "B",
+      "text": "Tidak ada peserta kelas intensif yang mengikuti kelas akhir pekan."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian penerima modul tambahan bukan peserta kelas intensif."
+    },
+    {
+      "key": "D",
+      "text": "Semua peserta kelas akhir pekan mengikuti kelas intensif."
+    },
+    {
+      "key": "E",
+      "text": "Semua orang yang tidak memperoleh modul tambahan mengikuti kelas akhir pekan."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Pernyataan 1 berlaku satu arah. Penerima modul tambahan dapat berasal dari kelompok lain di luar kelas intensif, misalnya peserta kelas reguler, sehingga pembalikan hubungan tersebut tidak sahih.",
+    "B": "Benar. Setiap peserta kelas intensif termasuk penerima modul tambahan menurut pernyataan 1, sedangkan menurut pernyataan 2 tidak seorang pun penerima modul tambahan mengikuti kelas akhir pekan. Rangkaian kedua premis itu memaksa himpunan peserta kelas intensif terpisah sepenuhnya dari himpunan peserta kelas akhir pekan.",
+    "C": "Salah. Pernyataan 1 hanya menjamin bahwa setiap peserta kelas intensif menerima modul tambahan, tetapi tidak menutup kemungkinan seluruh penerima modul tambahan justru berasal dari kelas intensif. Karena itu pernyataan ini mungkin benar, tetapi tidak pasti benar.",
+    "D": "Salah. Premis tidak memuat informasi bahwa peserta kelas akhir pekan tergabung dalam kelas intensif. Kesimpulan ini hanya dapat benar apabila tidak ada seorang pun peserta kelas akhir pekan, sehingga tidak pasti benar.",
+    "E": "Salah. Pernyataan 2 hanya membatasi ke mana penerima modul tambahan boleh tergolong dan tidak menyatakan apa pun tentang orang yang tidak memperoleh modul tambahan. Orang seperti itu dapat saja tidak mengikuti kelas mana pun, sehingga kesimpulan ini tidak pasti benar."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

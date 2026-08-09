@@ -1,0 +1,44 @@
+3. Penalaran Masalah
+11. Seorang petani memiliki 10 ekor ayam dan 5 ekor kambing. Setiap ayam menghasilkan 2 telur per hari, dan setiap kambing menghasilkan 3 liter susu per hari. Berapa banyak telur dan susu yang akan dihasilkan dalam satu minggu?
+A. 140 telur dan 105 liter susu
+B. 70 telur dan 105 liter susu
+C. 140 telur dan 35 liter susu
+D. 70 telur dan 35 liter susu
+E. 140 telur dan 210 liter susu
+Jawaban: A. 140 telur dan 105 liter susu
+
+12. Sebuah perusahaan memiliki tiga departemen: A, B, dan C. Departemen A memiliki 15 karyawan, B memiliki 20 karyawan, dan C memiliki 25 karyawan. Setiap karyawan di departemen A menghasilkan 10 unit produk per hari, di B menghasilkan 8 unit produk per hari, dan di C menghasilkan 12 unit produk per hari. Berapa total unit produk yang dihasilkan oleh perusahaan tersebut dalam satu hari?
+
+A. 770 unit
+B. 800 unit
+C. 950 unit
+D. 1080 unit
+E. 1200 unit
+Jawaban: C. 950 unit
+
+13. Ani memiliki 6 kelereng merah, 4 kelereng biru, dan 10 kelereng hijau. Jika Ani mengambil 2 kelereng secara acak, berapa probabilitas Ani mendapatkan satu kelereng merah dan satu kelereng biru?
+
+A. 1/15
+B. 2/15
+C. 3/25
+D. 4/25
+E. 1/5
+Jawaban: B. 2/15
+
+14. Rani memiliki 4 jenis permen berbeda dan ingin membagikan semuanya kepada 2 temannya secara adil. Berapa banyak cara Rani dapat membagikan permen-permen tersebut sehingga setiap teman mendapatkan 2 permen?
+
+A. 6 cara
+B. 12 cara
+C. 24 cara
+D. 36 cara
+E. 48 cara
+Jawaban: B. 12 cara
+
+15. Sebuah toko menjual 3 jenis buah: apel, jeruk, dan pisang. Harga satu apel adalah Rp5.000, satu jeruk Rp4.000, dan satu pisang Rp3.000. Jika seseorang membeli 4 apel, 3 jeruk, dan 5 pisang, berapa total uang yang harus dibayarkan?
+
+A. Rp29.000
+B. Rp38.000
+C. Rp40.000
+D. Rp47.000
+E. Rp50.000
+Jawaban: B. Rp38.000

@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/muhammadhabibullah/tbs-lpdp/questions/schema.json",
+  "title": "LPDP TBS Question",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "package",
+    "subtest",
+    "number",
+    "type",
+    "question_text",
+    "image",
+    "passage",
+    "options",
+    "correct_option",
+    "explanations",
+    "difficulty",
+    "source",
+    "verified"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]+-(verbal|kuantitatif|pemecahan_masalah)-[0-9]{3}$",
+      "description": "Stable ID derived from path: <package>-<subtest>-<NNN>"
+    },
+    "package": { "type": "integer", "minimum": 1 },
+    "subtest": { "enum": ["verbal", "kuantitatif", "pemecahan_masalah"] },
+    "number": { "type": "integer", "minimum": 1, "maximum": 25 },
+    "type": {
+      "enum": [
+        "sinonim",
+        "antonim",
+        "analogi",
+        "silogisme",
+        "kalimat_efektif",
+        "reading",
+        "aritmetika",
+        "aljabar",
+        "deret_angka",
+        "perbandingan_kuantitatif",
+        "kecukupan_data",
+        "peluang_kombinatorik",
+        "soal_cerita",
+        "geometri",
+        "logika_analitis",
+        "penalaran_kasus",
+        "interpretasi_data",
+        "analisis_teks"
+      ],
+      "description": "Which subtests may carry which type is enforced by validate_bank.py (TYPES_BY_SUBTEST in common.py), not by this schema"
+    },
+    "question_text": { "type": "string", "minLength": 5 },
+    "image": {
+      "type": ["string", "null"],
+      "pattern": "^images/[^/]+\\.(png|jpg|jpeg|svg|webp)$",
+      "description": "Path relative to the package directory, or null"
+    },
+    "passage": {
+      "type": ["string", "null"],
+      "description": "Shared stimulus rendered above the stem (white-space: pre-wrap): reading passage for type=reading/analisis_teks, pipe-delimited table for type=interpretasi_data; null otherwise"
+    },
+    "options": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["key", "text"],
+        "properties": {
+          "key": { "enum": ["A", "B", "C", "D", "E"] },
+          "text": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "correct_option": { "enum": ["A", "B", "C", "D", "E"] },
+    "explanations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["A", "B", "C", "D", "E"],
+      "properties": {
+        "A": { "type": "string", "minLength": 10 },
+        "B": { "type": "string", "minLength": 10 },
+        "C": { "type": "string", "minLength": 10 },
+        "D": { "type": "string", "minLength": 10 },
+        "E": { "type": "string", "minLength": 10 }
+      }
+    },
+    "difficulty": { "enum": ["easy", "medium", "hard"] },
+    "source": { "type": "string", "minLength": 1 },
+    "verified": { "type": "boolean" }
+  }
+}

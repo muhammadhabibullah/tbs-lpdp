@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-018",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 18,
+  "type": "soal_cerita",
+  "question_text": "Sebuah proyek dapat diselesaikan oleh Tim A dalam 12 hari dan oleh Tim B dalam 18 hari apabila masing-masing bekerja sendiri. Kedua tim bekerja bersama selama 4 hari, kemudian Tim A dipindahkan ke proyek lain sehingga sisa pekerjaan diselesaikan oleh Tim B sendiri. Berapa hari lagi yang diperlukan Tim B untuk menyelesaikan sisa pekerjaan tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "3,2 hari"
+    },
+    {
+      "key": "B",
+      "text": "8 hari"
+    },
+    {
+      "key": "C",
+      "text": "10 hari"
+    },
+    {
+      "key": "D",
+      "text": "12 hari"
+    },
+    {
+      "key": "E",
+      "text": "14 hari"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 3,2 hari diperoleh dari sisa pekerjaan 4/9 dibagi laju gabungan 5/36, yaitu jika kedua tim dianggap tetap bekerja bersama sampai selesai, padahal Tim A sudah dipindahkan.",
+    "B": "Benar. Laju Tim A = 1/12 bagian per hari dan Tim B = 1/18 bagian per hari, sehingga laju gabungan = 1/12 + 1/18 = 5/36 bagian per hari. Selama 4 hari terselesaikan 4 × 5/36 = 5/9 bagian, sehingga sisa pekerjaan = 1 − 5/9 = 4/9 bagian. Waktu yang diperlukan Tim B = (4/9) : (1/18) = 4/9 × 18 = 8 hari.",
+    "C": "Salah. Nilai 10 hari muncul jika bagian yang sudah selesai (5/9) tertukar dengan sisa pekerjaan, sehingga dihitung 5/9 × 18 = 10 hari.",
+    "D": "Salah. Nilai 12 hari muncul jika kontribusi Tim B selama 4 hari pertama diabaikan, sehingga sisa pekerjaan dihitung 1 − 4/12 = 2/3 lalu 2/3 × 18 = 12 hari.",
+    "E": "Salah. Nilai 14 hari diperoleh dari 18 − 4, yaitu menganggap Tim B bekerja sendirian sejak hari pertama dan sekadar mengurangkan 4 hari dari waktu totalnya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

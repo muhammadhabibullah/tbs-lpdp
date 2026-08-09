@@ -1,0 +1,55 @@
+2. Penalaran Kuantitatif
+Aritmatika
+
+6. Jika 5x – 7 = 18, maka nilai x adalah…
+
+A. 2
+B. 3
+C. 4
+D. 5
+E. 6
+Jawaban: D. 5
+
+Geometri
+
+7. Sebuah persegi memiliki keliling 24 cm. Berapa panjang sisi persegi tersebut?
+
+A. 4 cm
+B. 5 cm
+C. 6 cm
+D. 7 cm
+E. 8 cm
+Jawaban: C. 6 cm
+
+Aljabar
+
+8. Jika y = 3x^2 + 2x – 5, maka nilai y ketika x = 2 adalah…
+
+A. 5
+B. 9
+C. 11
+D. 15
+E. 17
+Jawaban: E. 17
+
+Statistika
+
+9. Rata-rata dari lima angka adalah 10. Jika empat angka pertama adalah 8, 12, 10, dan 9, berapakah angka kelima?
+
+A. 10
+B. 11
+C. 12
+D. 13
+E. 14
+Jawaban: B. 11
+
+Logika Matematika
+
+10. Jika semua B adalah C dan semua D adalah B, maka…
+
+A. Semua C adalah D
+B. Semua D adalah C
+C. Tidak ada C yang D
+D. Tidak ada B yang D
+E. Tidak ada hubungan antara B dan D
+Jawaban: B. Semua D adalah C

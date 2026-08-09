@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-017",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nBerdasarkan hasil penelitian tersebut menunjukkan bahwa penggunaan pupuk organik dapat meningkatkan hasil panen padi.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Berdasarkan hasil penelitian tersebut, menunjukkan bahwa penggunaan pupuk organik dapat meningkatkan hasil panen padi."
+    },
+    {
+      "key": "B",
+      "text": "Berdasarkan dari hasil penelitian tersebut menunjukkan bahwa penggunaan pupuk organik dapat meningkatkan hasil panen padi."
+    },
+    {
+      "key": "C",
+      "text": "Hasil penelitian tersebut menunjukkan bahwa penggunaan pupuk organik dapat meningkatkan hasil panen padi."
+    },
+    {
+      "key": "D",
+      "text": "Hasil daripada penelitian tersebut menunjukkan bahwa penggunaan pupuk organik dapat meningkatkan hasil panen padi."
+    },
+    {
+      "key": "E",
+      "text": "Hasil penelitian tersebut menunjukkan bahwa penggunaan pupuk organik dapat menaikkan peningkatan hasil panen padi."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Penambahan tanda koma tidak menghadirkan subjek; frasa berdasarkan hasil penelitian tersebut tetap berupa keterangan sehingga kalimatnya masih tidak bersubjek.",
+    "B": "Salah. Selain tetap tidak bersubjek karena diawali keterangan, kalimat ini menambah kemubaziran melalui gabungan berdasarkan dari yang tidak dikenal dalam bahasa Indonesia baku.",
+    "C": "Benar. Preposisi berdasarkan dihilangkan sehingga hasil penelitian tersebut menjadi subjek yang jelas bagi predikat menunjukkan, dan kalimatnya tidak lagi memuat unsur mubazir.",
+    "D": "Salah. Kata daripada dipakai untuk membandingkan, bukan untuk menyatakan hubungan milik; pemakaian seperti ini melanggar kaidah kehematan dan ketepatan bentuk.",
+    "E": "Salah. Subjeknya memang sudah jelas, tetapi frasa menaikkan peningkatan merupakan pleonasme karena kedua kata itu menyatakan makna yang sama."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

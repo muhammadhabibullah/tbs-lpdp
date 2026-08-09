@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-004",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "LATEN = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Menular"
+    },
+    {
+      "key": "B",
+      "text": "Mendesak"
+    },
+    {
+      "key": "C",
+      "text": "Berbahaya"
+    },
+    {
+      "key": "D",
+      "text": "Berkepanjangan"
+    },
+    {
+      "key": "E",
+      "text": "Tersembunyi"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Menular menyangkut cara suatu penyakit berpindah kepada orang lain; kata ini kerap berdampingan dengan laten sehingga menggoda, tetapi maknanya berbeda.",
+    "B": "Salah. Mendesak berarti memerlukan penanganan segera, sedangkan sesuatu yang laten justru belum tampak dan belum terasa mendesak.",
+    "C": "Salah. Berbahaya menunjuk pada besarnya risiko, bukan pada keadaan terpendam yang belum terlihat.",
+    "D": "Salah. Berkepanjangan menyangkut lamanya waktu berlangsung, bukan keadaan tidak tampak di permukaan.",
+    "E": "Benar. Laten berarti tersembunyi atau terpendam, yaitu ada tetapi belum tampak dan belum menimbulkan akibat yang nyata."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

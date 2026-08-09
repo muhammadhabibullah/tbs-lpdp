@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-006",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 6,
+  "type": "aritmetika",
+  "question_text": "Nilai dari 25 × 23 − 30 × 16 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "529"
+    },
+    {
+      "key": "B",
+      "text": "−95"
+    },
+    {
+      "key": "C",
+      "text": "95"
+    },
+    {
+      "key": "D",
+      "text": "1.055"
+    },
+    {
+      "key": "E",
+      "text": "−290"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 529 diperoleh dengan mengurangkan jumlah 30 dan 16, bukan hasil kalinya.",
+    "B": "Salah. Nilai −95 diperoleh dengan membalik urutan pengurangan sehingga tandanya tertukar.",
+    "C": "Benar. 25 × 23 − 30 × 16 = 575 − 480 = 95.",
+    "D": "Salah. Nilai 1.055 diperoleh dengan menjumlahkan kedua hasil kali, bukan mengurangkannya.",
+    "E": "Salah. Nilai −290 diperoleh dengan menukar faktor kedua pada masing-masing perkalian, yaitu 25 × 16 − 30 × 23."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

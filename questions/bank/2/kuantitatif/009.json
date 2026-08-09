@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-009",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 9,
+  "type": "deret_angka",
+  "question_text": "2, 6, 12, 36, 42, 126, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "396"
+    },
+    {
+      "key": "B",
+      "text": "378"
+    },
+    {
+      "key": "C",
+      "text": "384"
+    },
+    {
+      "key": "D",
+      "text": "132"
+    },
+    {
+      "key": "E",
+      "text": "210"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 396 diperoleh dengan melanjutkan dua langkah sekaligus, yaitu menambah lalu mengalikan.",
+    "B": "Salah. Nilai 378 diperoleh dengan menerapkan perkalian dengan 3 padahal giliran berikutnya adalah penjumlahan dengan 6.",
+    "C": "Salah. Nilai 384 diperoleh dengan menerapkan kedua operasi sekaligus dalam satu langkah.",
+    "D": "Benar. Operasi berselang-seling: kalikan 3, lalu tambah 6, lalu kalikan 3 lagi, dan seterusnya (2 × 3 = 6; 6 + 6 = 12). Suku terakhir diperoleh melalui perkalian, sehingga langkah berikutnya adalah penjumlahan: 126 + 6 = 132.",
+    "E": "Salah. Nilai 210 diperoleh dengan menganggap deret memiliki selisih tetap sebesar selisih dua suku terakhir (84)."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

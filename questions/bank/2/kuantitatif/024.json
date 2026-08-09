@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-024",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Sebuah balok memiliki panjang 15 cm, lebar 8 cm, dan tinggi 6 cm. Berapakah luas seluruh permukaan balok tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "258 cm²"
+    },
+    {
+      "key": "B",
+      "text": "468 cm²"
+    },
+    {
+      "key": "C",
+      "text": "516 cm²"
+    },
+    {
+      "key": "D",
+      "text": "396 cm²"
+    },
+    {
+      "key": "E",
+      "text": "720 cm²"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 258 cm² adalah jumlah luas tiga sisi yang saling berbeda, yaitu 120 + 90 + 48. Setiap sisi balok memiliki pasangan yang kongruen, sehingga hasil ini masih harus dikalikan 2.",
+    "B": "Salah. Nilai 468 cm² muncul jika pasangan sisi samping seluas 8 × 6 = 48 cm² hanya dihitung satu kali, yaitu 240 + 180 + 48, padahal sisi berukuran 8 cm × 6 cm ada dua buah.",
+    "C": "Benar. Luas permukaan balok = 2(pl + pt + lt) = 2(15 × 8 + 15 × 6 + 8 × 6) = 2(120 + 90 + 48) = 2 × 258 = 516 cm².",
+    "D": "Salah. Nilai 396 cm² adalah luas permukaan balok tanpa tutup, yaitu 516 − 120, padahal soal meminta luas seluruh permukaan sehingga sisi atas seluas 15 × 8 = 120 cm² tetap dihitung.",
+    "E": "Salah. Nilai 720 cm² diperoleh dengan menerapkan rumus luas permukaan kubus, yaitu 6 × luas alas = 6 × 120. Rumus itu tidak berlaku karena keenam sisi balok tidak sama luas."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

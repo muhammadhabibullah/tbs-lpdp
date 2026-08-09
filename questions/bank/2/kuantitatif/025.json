@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-025",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Sebuah taman berbentuk juring lingkaran dengan sudut pusat 60° dan jari-jari 21 m. Seluruh tepi taman itu, yaitu bagian busur beserta kedua sisi lurusnya, akan dipasangi pagar. Dengan π = 22/7, berapakah panjang pagar yang diperlukan?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "22 m"
+    },
+    {
+      "key": "B",
+      "text": "132 m"
+    },
+    {
+      "key": "C",
+      "text": "32 m"
+    },
+    {
+      "key": "D",
+      "text": "64 m"
+    },
+    {
+      "key": "E",
+      "text": "43 m"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 22 m hanya panjang busur juring. Tepi taman juga meliputi dua sisi lurus yang masing-masing merupakan jari-jari sepanjang 21 m.",
+    "B": "Salah. Nilai 132 m adalah keliling lingkaran penuh berjari-jari 21 m, yaitu 2 × 22/7 × 21. Taman hanya berupa juring bersudut pusat 60°, yaitu seperenam lingkaran.",
+    "C": "Salah. Nilai 32 m muncul jika 21 m dianggap sebagai diameter sehingga jari-jarinya menjadi 10,5 m: busurnya 11 m dan kelilingnya 11 + 2 × 10,5 = 32 m. Pada soal, 21 m sudah dinyatakan sebagai jari-jari.",
+    "D": "Benar. Panjang busur = 60/360 × 2 × 22/7 × 21 = 1/6 × 132 = 22 m. Tepi taman terdiri atas busur dan dua jari-jari, sehingga panjang pagar = 22 + 21 + 21 = 64 m.",
+    "E": "Salah. Nilai 43 m diperoleh dari 22 + 21, yaitu hanya satu jari-jari yang ditambahkan pada panjang busur, padahal juring dibatasi oleh dua jari-jari."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

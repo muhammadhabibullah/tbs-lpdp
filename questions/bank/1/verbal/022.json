@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-022",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan, membaca ulang catatan berkali-kali terasa efektif karena ...",
+  "image": null,
+  "passage": "Banyak pelajar menyiapkan ujian dengan membaca ulang catatan berkali-kali. Cara tersebut terasa efektif karena teks yang berulang kali dibaca menjadi semakin akrab, dan keakraban itu sering disalahartikan sebagai penguasaan materi. Penelitian di bidang psikologi kognitif menunjukkan hasil yang berbeda. Ketika pelajar diminta menutup catatan lalu berusaha mengingat kembali isinya, daya ingat jangka panjang mereka jauh lebih baik daripada kelompok yang hanya membaca ulang, meskipun kelompok kedua justru merasa lebih siap menghadapi ujian.\n\nUpaya mengingat kembali menuntut otak menelusuri dan menyusun ulang informasi yang telah tersimpan, dan proses yang menuntut usaha itulah yang memperkuat jejak ingatan. Manfaatnya bertambah apabila latihan mengingat diberi jeda beberapa hari, bukan dipadatkan dalam satu malam.\n\nTemuan tersebut memberi pesan penting bagi pelajar: rasa mudah pada saat belajar bukanlah petunjuk yang dapat diandalkan. Strategi yang terasa berat justru sering kali membuahkan hasil yang lebih tahan lama.",
+  "options": [
+    {
+      "key": "A",
+      "text": "kegiatan tersebut menuntut usaha yang besar dari otak"
+    },
+    {
+      "key": "B",
+      "text": "keakraban terhadap teks yang berulang dibaca disalahartikan sebagai penguasaan materi"
+    },
+    {
+      "key": "C",
+      "text": "kegiatan tersebut terbukti memperkuat daya ingat jangka panjang"
+    },
+    {
+      "key": "D",
+      "text": "kegiatan tersebut biasanya dilakukan dengan jeda beberapa hari"
+    },
+    {
+      "key": "E",
+      "text": "pelajar yang membaca ulang catatan memperoleh nilai ujian yang lebih tinggi"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Tuntutan usaha yang besar justru merupakan ciri kegiatan mengingat kembali, bukan membaca ulang.",
+    "B": "Benar. Bacaan menyatakan teks yang berulang kali dibaca menjadi semakin akrab dan keakraban itu sering disalahartikan sebagai penguasaan materi.",
+    "C": "Salah. Pernyataan ini bertentangan dengan bacaan yang menyebut daya ingat jangka panjang kelompok pembaca ulang justru lebih rendah.",
+    "D": "Salah. Pemberian jeda beberapa hari dikaitkan bacaan dengan latihan mengingat kembali, bukan dengan kebiasaan membaca ulang.",
+    "E": "Salah. Bacaan menyebut kelompok pembaca ulang hanya merasa lebih siap, tetapi tidak menyatakan nilai ujian mereka lebih tinggi."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

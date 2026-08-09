@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-003",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "ANOMALI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Keseragaman"
+    },
+    {
+      "key": "B",
+      "text": "Keteraturan"
+    },
+    {
+      "key": "C",
+      "text": "Kelangkaan"
+    },
+    {
+      "key": "D",
+      "text": "Ketidakpastian"
+    },
+    {
+      "key": "E",
+      "text": "Penyimpangan"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Keseragaman berarti kesamaan bentuk atau sifat; keadaan itu justru menjadi latar yang dilanggar oleh anomali.",
+    "B": "Salah. Keteraturan menunjuk pada pola yang tetap, sedangkan anomali adalah kejadian yang melanggar pola tersebut.",
+    "C": "Salah. Kelangkaan berarti jarang didapat; anomali memang jarang terjadi, tetapi inti maknanya adalah ketidaksesuaian dengan kaidah, bukan jumlahnya.",
+    "D": "Salah. Ketidakpastian berkaitan dengan sesuatu yang belum dapat dipastikan, sedangkan anomali adalah keadaan yang justru sudah teramati dan menyimpang dari kelaziman.",
+    "E": "Benar. Anomali berarti kelainan atau penyimpangan dari keadaan yang normal dan biasa terjadi."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

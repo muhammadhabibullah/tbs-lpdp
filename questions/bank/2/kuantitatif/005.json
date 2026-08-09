@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-005",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "Rata-rata 4 bilangan adalah 12. Apabila bilangan 27 ditambahkan ke dalam kelompok tersebut, berapakah rata-rata 5 bilangan itu?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "12"
+    },
+    {
+      "key": "B",
+      "text": "15"
+    },
+    {
+      "key": "C",
+      "text": "18,75"
+    },
+    {
+      "key": "D",
+      "text": "9,6"
+    },
+    {
+      "key": "E",
+      "text": "19,5"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 12 diperoleh dengan menganggap rata-rata tidak berubah oleh penambahan satu bilangan.",
+    "B": "Benar. Jumlah semula = 4 × 12 = 48; jumlah baru = 48 + 27 = 75; rata-rata baru = 75 ÷ 5 = 15.",
+    "C": "Salah. Nilai 18,75 diperoleh dengan membagi jumlah baru dengan 4, yaitu banyaknya bilangan semula.",
+    "D": "Salah. Nilai 9,6 diperoleh dengan membagi jumlah semula dengan 5 tanpa menambahkan bilangan baru.",
+    "E": "Salah. Nilai 19,5 diperoleh dengan merata-ratakan rata-rata lama dengan bilangan baru seolah-olah keduanya berbobot sama."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

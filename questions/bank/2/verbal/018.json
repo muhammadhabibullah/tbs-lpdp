@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-018",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nMeskipun harga bahan baku terus naik, namun para perajin tetap memproduksi kerajinan rotan yang berkwalitas ekspor agar supaya pesanan pelanggan tidak terlambat.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Meskipun harga bahan baku terus naik, namun para perajin tetap memproduksi kerajinan rotan yang berkualitas ekspor agar pesanan pelanggan tidak terlambat."
+    },
+    {
+      "key": "B",
+      "text": "Meskipun harga bahan baku terus naik, para perajin tetap memproduksi kerajinan rotan yang berkwalitas ekspor agar pesanan pelanggan tidak terlambat."
+    },
+    {
+      "key": "C",
+      "text": "Meskipun harga bahan baku terus naik, para perajin tetap memproduksi kerajinan rotan yang berkualitas ekspor agar supaya pesanan pelanggan tidak terlambat."
+    },
+    {
+      "key": "D",
+      "text": "Meskipun harga bahan baku terus naik, para perajin tetap memproduksi kerajinan rotan yang berkualitas ekspor agar pesanan pelanggan tidak terlambat."
+    },
+    {
+      "key": "E",
+      "text": "Meskipun harga bahan baku terus naik ke atas, para perajin tetap memproduksi kerajinan rotan yang berkualitas ekspor agar pesanan pelanggan tidak terlambat."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Konjungsi meskipun dan namun masih dipakai bersama dalam satu kalimat; penggabungan konjungsi subordinatif dengan konjungsi antarkalimat itu membuat induk kalimatnya kehilangan kedudukan.",
+    "B": "Salah. Bentuk berkwalitas tidak sesuai dengan kaidah ejaan; bentuk bakunya adalah berkualitas karena bahasa Indonesia tidak menggunakan gabungan huruf kw untuk kata serapan tersebut.",
+    "C": "Salah. Gabungan agar supaya merupakan pleonasme karena agar dan supaya berfungsi sama sebagai konjungsi tujuan sehingga cukup dipakai salah satu.",
+    "D": "Benar. Konjungsi namun dihilangkan sehingga hubungan anak kalimat dan induk kalimat menjadi jelas, ejaan berkualitas sudah baku, dan konjungsi tujuan hanya dipakai satu kali.",
+    "E": "Salah. Frasa naik ke atas merupakan pleonasme karena makna arah ke atas sudah terkandung di dalam kata naik."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

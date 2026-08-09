@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-010",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "KAMUS : KATA = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kata : Kamus"
+    },
+    {
+      "key": "B",
+      "text": "Kamus : Bahasa"
+    },
+    {
+      "key": "C",
+      "text": "Ensiklopedia : Perpustakaan"
+    },
+    {
+      "key": "D",
+      "text": "Atlas : Peta"
+    },
+    {
+      "key": "E",
+      "text": "Peta : Wilayah"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Urutannya terbalik karena satuan isi diletakkan sebelum buku rujukan yang menghimpunnya.",
+    "B": "Salah. Bahasa bukan satuan yang dihimpun di dalam kamus, melainkan keseluruhan sistem yang cakupannya jauh lebih luas daripada isi kamus.",
+    "C": "Salah. Ensiklopedia dan perpustakaan berhubungan sebagai buku dengan tempat penyimpanannya, bukan sebagai buku rujukan dengan satuan isi yang dihimpunnya.",
+    "D": "Benar. Kamus adalah buku rujukan yang menghimpun kata, sebagaimana atlas adalah buku rujukan yang menghimpun peta.",
+    "E": "Salah. Peta dan wilayah berhubungan sebagai gambaran dengan hal yang digambarkan, bukan sebagai penghimpun dengan satuan isinya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

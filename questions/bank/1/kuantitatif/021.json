@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-021",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Sejumlah uang dibagikan kepada tiga orang karyawan dengan perbandingan 3 : 4 : 5. Selisih antara bagian terbesar dan bagian terkecil adalah Rp1.200.000,00. Berapa jumlah seluruh uang yang dibagikan?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp1.800.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp3.000.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp4.800.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp7.200.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp14.400.000,00"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai Rp1.800.000,00 muncul jika selisih Rp1.200.000,00 dianggap setara 5 + 3 = 8 bagian sehingga satu bagian bernilai Rp150.000,00, lalu dikalikan 12. Selisih seharusnya setara 5 − 3 = 2 bagian.",
+    "B": "Salah. Rp3.000.000,00 hanyalah nilai bagian terbesar, yaitu 5 × 600.000, bukan jumlah seluruh uang yang dibagikan.",
+    "C": "Salah. Rp4.800.000,00 adalah jumlah bagian terbesar dan bagian terkecil saja (8 × 600.000); bagian karyawan kedua yang bernilai 4 bagian belum ikut dijumlahkan.",
+    "D": "Benar. Selisih bagian terbesar dan terkecil setara 5 − 3 = 2 bagian, sehingga 2 bagian = Rp1.200.000,00 dan 1 bagian = Rp600.000,00. Jumlah seluruh uang = (3 + 4 + 5) × 600.000 = 12 × 600.000 = Rp7.200.000,00.",
+    "E": "Salah. Nilai Rp14.400.000,00 muncul jika Rp1.200.000,00 dianggap sebagai nilai satu bagian, lalu langsung dikalikan 12 bagian."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

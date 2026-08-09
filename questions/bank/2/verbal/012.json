@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-012",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 12,
+  "type": "analogi",
+  "question_text": "TUNANETRA : PENGLIHATAN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tunarungu : Telinga"
+    },
+    {
+      "key": "B",
+      "text": "Tunarungu : Pendengaran"
+    },
+    {
+      "key": "C",
+      "text": "Pendengaran : Tunarungu"
+    },
+    {
+      "key": "D",
+      "text": "Tunadaksa : Kecerdasan"
+    },
+    {
+      "key": "E",
+      "text": "Tunawicara : Pendengaran"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Telinga adalah organ tubuh, sedangkan penglihatan pada soal menunjuk pada fungsi indra; kedua unsurnya tidak sepadan.",
+    "B": "Benar. Tunanetra adalah sebutan bagi penyandang hambatan pada fungsi penglihatan, sebagaimana tunarungu adalah sebutan bagi penyandang hambatan pada fungsi pendengaran.",
+    "C": "Salah. Isi pasangannya sepadan, tetapi urutannya terbalik karena fungsi indra diletakkan sebelum sebutan penyandangnya.",
+    "D": "Salah. Tunadaksa berkaitan dengan hambatan pada anggota tubuh, sedangkan hambatan pada kecerdasan disebut tunagrahita, sehingga pasangannya tidak sesuai.",
+    "E": "Salah. Tunawicara berkaitan dengan hambatan berbicara, bukan dengan pendengaran, sehingga kedua unsurnya tidak berpasangan."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

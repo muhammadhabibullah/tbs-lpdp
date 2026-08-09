@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-011",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "ULAT : KUPU-KUPU = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Berudu : Katak"
+    },
+    {
+      "key": "B",
+      "text": "Kupu-kupu : Ulat"
+    },
+    {
+      "key": "C",
+      "text": "Ulat : Daun"
+    },
+    {
+      "key": "D",
+      "text": "Ayam : Telur"
+    },
+    {
+      "key": "E",
+      "text": "Kepompong : Sutra"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Ulat adalah bentuk muda yang kelak berubah menjadi kupu-kupu, sebagaimana berudu adalah bentuk muda yang kelak berubah menjadi katak.",
+    "B": "Salah. Isi pasangannya sepadan, tetapi urutannya terbalik karena bentuk dewasa diletakkan sebelum bentuk mudanya.",
+    "C": "Salah. Ulat dan daun berhubungan sebagai hewan dengan makanannya, bukan sebagai tahap muda dengan tahap dewasanya.",
+    "D": "Salah. Ayam dan telur berhubungan sebagai induk dengan hasil pembiakannya dan arahnya pun terbalik, bukan sebagai bentuk muda dengan bentuk dewasa.",
+    "E": "Salah. Kepompong dan sutra berhubungan sebagai sumber dengan bahan yang dihasilkannya, bukan sebagai tahapan dalam daur hidup."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

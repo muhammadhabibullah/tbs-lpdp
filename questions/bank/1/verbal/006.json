@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-006",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "HETEROGEN >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Majemuk"
+    },
+    {
+      "key": "B",
+      "text": "Beragam"
+    },
+    {
+      "key": "C",
+      "text": "Kompleks"
+    },
+    {
+      "key": "D",
+      "text": "Homogen"
+    },
+    {
+      "key": "E",
+      "text": "Terpadu"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Majemuk berarti terdiri atas banyak unsur yang berbeda sehingga bersinonim dengan heterogen, bukan lawannya.",
+    "B": "Salah. Beragam juga bermakna bermacam-macam; kata ini sinonim heterogen, sedangkan yang diminta adalah lawan katanya.",
+    "C": "Salah. Kompleks berarti rumit karena banyak keterkaitan, menyangkut tingkat kerumitan, bukan keseragaman jenis.",
+    "D": "Benar. Homogen berarti terdiri atas unsur-unsur yang sejenis, berlawanan dengan heterogen yang berarti terdiri atas unsur berbeda-beda.",
+    "E": "Salah. Terpadu berarti disatukan menjadi satu kesatuan; unsur yang dipadukan justru dapat tetap berbeda jenis."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

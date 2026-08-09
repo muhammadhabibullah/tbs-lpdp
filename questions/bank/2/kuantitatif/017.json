@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-017",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 17,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nP = 60% dari 300\nQ = 2/4 dari 300\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "P dan Q keduanya merupakan bilangan ganjil"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. P = 180 dan Q = 150, sehingga P > Q.",
+    "B": "Salah. P = 180 dan Q = 150, sehingga P > Q; nilai Q tidak melebihi nilai P (150 tidak lebih besar daripada 180).",
+    "C": "Salah. P = 180 dan Q = 150, sehingga P > Q; kedua nilai tidak sama (180 ≠ 150).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 180 dan Q = 150), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 180 dan Q = 150, keduanya bukan bilangan ganjil."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

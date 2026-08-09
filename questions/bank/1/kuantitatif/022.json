@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-022",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Rata-rata nilai ujian 25 siswa adalah 72. Apabila nilai 5 siswa yang rata-ratanya 60 tidak diikutsertakan dalam perhitungan, berapakah rata-rata nilai 20 siswa yang tersisa?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "60,0"
+    },
+    {
+      "key": "B",
+      "text": "66,0"
+    },
+    {
+      "key": "C",
+      "text": "72,0"
+    },
+    {
+      "key": "D",
+      "text": "74,4"
+    },
+    {
+      "key": "E",
+      "text": "75,0"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 60,0 muncul jika jumlah nilai yang tersisa (1.500) tetap dibagi 25, yaitu banyak siswa semula, padahal pembaginya harus 20 siswa.",
+    "B": "Salah. Nilai 66,0 adalah rata-rata sederhana dari 72 dan 60, padahal kedua kelompok memiliki banyak siswa yang berbeda sehingga tidak dapat dirata-ratakan secara langsung.",
+    "C": "Salah. Nilai 72,0 adalah rata-rata semula. Mengeluarkan kelompok yang nilainya di bawah rata-rata pasti menaikkan rata-rata kelompok yang tersisa.",
+    "D": "Salah. Nilai 74,4 muncul jika kelebihan nilai (72 − 60) × 5 = 60 dibagi 25 siswa, yaitu 72 + 2,4; pembaginya seharusnya 20 siswa yang tersisa.",
+    "E": "Benar. Jumlah nilai 25 siswa = 25 × 72 = 1.800. Jumlah nilai 5 siswa yang dikeluarkan = 5 × 60 = 300. Jumlah nilai yang tersisa = 1.800 − 300 = 1.500 untuk 20 siswa, sehingga rata-ratanya = 1.500 : 20 = 75,0."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

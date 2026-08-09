@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-015",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "analogi",
+  "question_text": "VIRUS : PENYAKIT = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Karat : Kelembapan"
+    },
+    {
+      "key": "B",
+      "text": "Dokter : Pasien"
+    },
+    {
+      "key": "C",
+      "text": "Hujan : Payung"
+    },
+    {
+      "key": "D",
+      "text": "Kuman : Cairan antiseptik"
+    },
+    {
+      "key": "E",
+      "text": "Percikan api : Kebakaran"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Karat memang timbul karena kelembapan, tetapi urutannya terbalik karena akibat ditempatkan sebelum penyebabnya.",
+    "B": "Salah. Dokter dan pasien berhubungan sebagai pelaku dengan pihak yang dilayani, bukan sebagai penyebab dengan akibat.",
+    "C": "Salah. Hujan dan payung berhubungan sebagai keadaan dengan alat pelindung, bukan sebagai penyebab dengan akibat yang ditimbulkan.",
+    "D": "Salah. Kuman dan cairan antiseptik berhubungan sebagai sasaran dengan penangkalnya, sehingga alur hubungannya berbeda.",
+    "E": "Benar. Virus menimbulkan penyakit, sebagaimana percikan api menimbulkan kebakaran; keduanya hubungan penyebab dengan akibat pada arah yang sama."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

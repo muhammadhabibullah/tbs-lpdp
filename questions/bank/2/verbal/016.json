@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-016",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Premis 1: Setiap peneliti yang datanya tidak lengkap tidak dapat menerbitkan artikel pada jurnal terakreditasi.\nPremis 2: Dani adalah peneliti yang menerbitkan artikel pada jurnal terakreditasi.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Data penelitian Dani lengkap."
+    },
+    {
+      "key": "B",
+      "text": "Data penelitian Dani belum tentu lengkap."
+    },
+    {
+      "key": "C",
+      "text": "Setiap peneliti yang datanya lengkap dapat menerbitkan artikel pada jurnal terakreditasi."
+    },
+    {
+      "key": "D",
+      "text": "Artikel Dani terbit karena datanya lebih lengkap daripada data peneliti lainnya."
+    },
+    {
+      "key": "E",
+      "text": "Sebagian peneliti yang datanya tidak lengkap dapat menerbitkan artikel pada jurnal terakreditasi."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Premis pertama menutup rapat kemungkinan terbitnya artikel bagi peneliti yang datanya tidak lengkap; karena Dani adalah peneliti yang artikelnya terbit pada jurnal terakreditasi, keadaan data tidak lengkap itu mustahil berlaku padanya sehingga data penelitiannya pasti lengkap.",
+    "B": "Salah. Simpulan berbentuk kehati-hatian tidak diperlukan di sini karena penyangkalan akibat pada premis pertama bersifat mutlak, sehingga kelengkapan data Dani justru dapat dipastikan.",
+    "C": "Salah. Premis pertama hanya menjadikan kelengkapan data sebagai syarat yang harus dipenuhi, bukan jaminan bahwa artikel pasti terbit; masih ada persyaratan lain yang tidak disebutkan.",
+    "D": "Salah. Kedua premis tidak memuat perbandingan kelengkapan data antarpeneliti dan tidak menyatakan kelengkapan data sebagai penyebab terbitnya artikel.",
+    "E": "Salah. Pernyataan ini bertentangan langsung dengan premis pertama yang menyatakan tidak seorang pun peneliti berdata tidak lengkap dapat menerbitkan artikel pada jurnal terakreditasi."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

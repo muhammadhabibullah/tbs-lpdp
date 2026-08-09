@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-004",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "SUAKA = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Persinggahan"
+    },
+    {
+      "key": "B",
+      "text": "Perlindungan"
+    },
+    {
+      "key": "C",
+      "text": "Pelestarian"
+    },
+    {
+      "key": "D",
+      "text": "Perjanjian"
+    },
+    {
+      "key": "E",
+      "text": "Pertahanan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Persinggahan adalah tempat berhenti sementara dalam perjalanan; kata ini tidak mengandung unsur keselamatan dari ancaman seperti pada suaka.",
+    "B": "Benar. Suaka berarti perlindungan atau tempat berlindung, sebagaimana terlihat pada gabungan kata suaka margasatwa dan suaka politik.",
+    "C": "Salah. Pelestarian berarti upaya menjaga sesuatu agar tetap ada dan tidak berubah; kata ini terbawa dari tujuan suaka margasatwa, padahal makna kata suaka sendiri adalah perlindungannya, bukan upaya pelestariannya.",
+    "D": "Salah. Perjanjian adalah kesepakatan antara dua pihak; keterkaitannya dengan suaka hanya muncul dari konteks hukum, bukan dari makna katanya.",
+    "E": "Salah. Pertahanan berarti upaya menahan atau menangkis serangan sehingga bersifat aktif melawan, sedangkan suaka bersifat memberi tempat yang aman."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

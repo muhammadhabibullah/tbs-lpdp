@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-019",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Gagasan utama bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Energi panas bumi berasal dari panas yang tersimpan di dalam kerak bumi. Pada wilayah yang dilalui jalur gunung api, kantong magma memanaskan air tanah hingga terbentuk uap bertekanan tinggi. Uap tersebut dialirkan melalui sumur produksi untuk memutar turbin pembangkit listrik, kemudian air yang telah mendingin diinjeksikan kembali ke dalam reservoir. Siklus tertutup semacam itu menjaga cadangan uap di dalam reservoir sehingga pembangkit dapat beroperasi hingga puluhan tahun.\n\nBerbeda dengan pembangkit tenaga surya dan tenaga angin yang keluarannya bergantung pada cuaca, pembangkit panas bumi menghasilkan daya yang relatif tetap sepanjang hari. Karena sifat tersebut, panas bumi kerap ditempatkan sebagai pemikul beban dasar dalam sistem kelistrikan. Emisi karbonnya pun jauh lebih rendah daripada emisi pembangkit berbahan bakar batu bara.\n\nMeskipun demikian, pemanfaatan panas bumi berjalan lambat. Biaya pengeboran eksplorasi sangat tinggi, sedangkan hasilnya belum pasti: sebuah sumur dapat saja tidak menghasilkan uap yang memadai setelah dana besar dikeluarkan. Sebagian besar wilayah prospek panas bumi juga berada di kawasan hutan lindung yang perizinannya berlapis. Hambatan utama pemanfaatan panas bumi dengan demikian terletak pada risiko tahap awal, bukan pada ketersediaan sumber dayanya.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Cara kerja pembangkit listrik tenaga panas bumi dalam mengubah uap menjadi tenaga listrik"
+    },
+    {
+      "key": "B",
+      "text": "Keunggulan energi panas bumi dan hambatan yang membuat pemanfaatannya berjalan lambat"
+    },
+    {
+      "key": "C",
+      "text": "Perbandingan keluaran pembangkit panas bumi dengan pembangkit tenaga surya dan tenaga angin"
+    },
+    {
+      "key": "D",
+      "text": "Tingginya biaya pengeboran eksplorasi sebagai penyebab mahalnya tarif listrik panas bumi"
+    },
+    {
+      "key": "E",
+      "text": "Perizinan berlapis di kawasan hutan lindung sebagai penghambat pembangunan pembangkit listrik"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Cara kerja pembangkit hanya diuraikan pada paragraf pertama dan tidak mencakup pembahasan keunggulan maupun hambatan pada paragraf berikutnya.",
+    "B": "Benar. Bacaan menguraikan keunggulan panas bumi berupa usia operasi yang panjang, keluaran yang relatif tetap, dan emisi yang rendah, lalu menutup dengan hambatan pemanfaatannya; kedua hal itulah cakupan seluruh bacaan.",
+    "C": "Salah. Perbandingan dengan pembangkit tenaga surya dan tenaga angin hanya menjadi penjelas keunggulan pada paragraf kedua, bukan pokok seluruh bacaan.",
+    "D": "Salah. Bacaan menyebut tingginya biaya pengeboran eksplorasi sebagai risiko tahap awal, tetapi sama sekali tidak membahas tarif listrik yang dihasilkan.",
+    "E": "Salah. Perizinan di kawasan hutan lindung hanyalah satu di antara hambatan yang disebutkan pada paragraf ketiga sehingga terlalu sempit untuk menjadi gagasan utama."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

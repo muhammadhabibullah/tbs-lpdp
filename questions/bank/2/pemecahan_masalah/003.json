@@ -1,0 +1,43 @@
+{
+  "id": "2-pemecahan_masalah-003",
+  "package": 2,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Enam peserta lokakarya, yaitu Gita, Hasan, Indra, Joko, Kirana, dan Lestari, duduk berjajar pada enam kursi yang diberi nomor 1 sampai 6 dari kiri ke kanan. Setiap kursi diduduki tepat satu peserta dan setiap peserta menempati tepat satu kursi. Penempatan tempat duduk tunduk pada ketentuan berikut.\n(1) Kirana duduk tepat di sebelah kanan Joko.\n(2) Gita duduk pada kursi bernomor genap.\n(3) Hasan dan Indra dipisahkan oleh tepat dua peserta lain.\n(4) Lestari tidak duduk pada kursi nomor 1 maupun kursi nomor 6.\n\nJika Gita duduk pada kursi nomor 6, peserta yang duduk pada kursi nomor 2 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Hasan"
+    },
+    {
+      "key": "B",
+      "text": "Joko"
+    },
+    {
+      "key": "C",
+      "text": "Indra"
+    },
+    {
+      "key": "D",
+      "text": "Kirana"
+    },
+    {
+      "key": "E",
+      "text": "Lestari"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Dengan Gita di kursi 6, pasangan Hasan dan Indra yang berjarak tiga kursi hanya dapat menempati kursi 1 dan 4, karena pilihan kursi 2 dan 5 menyisakan kursi 1, 3, dan 4 yang memaksa Lestari menduduki kursi 1 dan melanggar ketentuan 4. Hasan karena itu duduk di kursi 1 atau kursi 4, tidak pernah di kursi 2.",
+    "B": "Benar. Gita di kursi 6 menyisakan kursi 1 sampai 5 bagi lima peserta lain. Pasangan Hasan dan Indra yang dipisahkan tepat dua peserta hanya dapat menempati kursi 1 dan 4 atau kursi 2 dan 5. Pilihan kursi 2 dan 5 menyisakan kursi 1, 3, dan 4 sehingga Joko dan Kirana harus mengisi kursi 3 dan 4 dan Lestari terpaksa mengisi kursi 1, yang dilarang ketentuan 4. Jadi Hasan dan Indra menempati kursi 1 dan 4, sisa kursi 2, 3, dan 5 diisi Joko, Kirana, dan Lestari, dan satu-satunya pasangan kursi berdampingan di antaranya adalah kursi 2 dan 3. Joko menempati kursi 2 dan Kirana kursi 3 pada kedua susunan yang sah.",
+    "C": "Salah. Indra terikat pada ketentuan 3 bersama Hasan sehingga keduanya hanya dapat menempati kursi 1 dan 4. Indra duduk di kursi 1 atau kursi 4, bergantung pada susunan, tetapi tidak pernah di kursi 2.",
+    "D": "Salah. Ketentuan 1 mengharuskan Kirana duduk tepat di sebelah kanan Joko. Karena Joko menempati kursi 2, Kirana terkunci pada kursi 3 dan tidak mungkin menempati kursi 2 itu sendiri.",
+    "E": "Salah. Setelah kursi 1 dan 4 diisi Hasan dan Indra serta kursi 2 dan 3 diisi Joko dan Kirana, satu-satunya kursi yang tersisa bagi Lestari adalah kursi 5. Ketentuan 4 memang tidak melarang kursi 2, tetapi kursi itu sudah terpakai oleh Joko."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-008",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "aljabar",
+  "question_text": "Diketahui 3x + 4y = 34 dan 4x + 4y = 44. Nilai dari 3x + 3y adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "15,6"
+    },
+    {
+      "key": "B",
+      "text": "11"
+    },
+    {
+      "key": "C",
+      "text": "3"
+    },
+    {
+      "key": "D",
+      "text": "30"
+    },
+    {
+      "key": "E",
+      "text": "33"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 15,6 diperoleh dengan menjumlahkan kedua persamaan menjadi 78, membaginya dengan jumlah seluruh koefisien (15) sehingga diperoleh 5,2, lalu mengalikannya dengan 3 — seolah-olah koefisien x dan y sudah sama.",
+    "B": "Salah. Nilai 11 diperoleh dengan berhenti pada x + y dan lupa mengalikannya dengan 3.",
+    "C": "Salah. Nilai 3 diperoleh dengan hanya menghitung 3y dan mengabaikan suku 3x.",
+    "D": "Salah. Nilai 30 diperoleh dengan hanya menghitung 3x dan mengabaikan suku 3y.",
+    "E": "Benar. Menyelesaikan kedua persamaan diperoleh x = 10 dan y = 1, sehingga 3x + 3y = 3 × (10 + 1) = 33."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

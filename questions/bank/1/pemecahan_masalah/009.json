@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-009",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "penalaran_kasus",
+  "question_text": "Pemerintah daerah memasang lampu penerangan bertenaga surya di seluruh ruas jalan lingkungan Kelurahan Mekar pada awal tahun lalu. Enam bulan setelah pemasangan, catatan kepolisian setempat menunjukkan bahwa jumlah pencurian kendaraan bermotor di kelurahan itu turun 40 persen dibandingkan dengan enam bulan sebelumnya. Warga juga melaporkan bahwa aktivitas berjalan kaki pada malam hari meningkat. Dengan bersandar pada data tersebut, pengelola program menyatakan bahwa penerangan jalan yang memadai berperan menekan angka pencurian kendaraan bermotor di Kelurahan Mekar.\n\nKesimpulan dari argumen pengelola program tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Jumlah pencurian kendaraan bermotor di Kelurahan Mekar turun 40 persen dalam enam bulan."
+    },
+    {
+      "key": "B",
+      "text": "Aktivitas warga berjalan kaki pada malam hari meningkat setelah lampu dipasang."
+    },
+    {
+      "key": "C",
+      "text": "Penerangan jalan yang memadai berperan menekan angka pencurian kendaraan bermotor di Kelurahan Mekar."
+    },
+    {
+      "key": "D",
+      "text": "Seluruh ruas jalan lingkungan Kelurahan Mekar telah dipasangi lampu bertenaga surya."
+    },
+    {
+      "key": "E",
+      "text": "Setiap daerah yang memasang lampu bertenaga surya akan mengalami penurunan angka pencurian."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Angka penurunan 40 persen berfungsi sebagai data pendukung yang dipakai pengelola program untuk menopang klaimnya, bukan sebagai pernyataan akhir yang hendak dibuktikan.",
+    "B": "Salah. Peningkatan aktivitas berjalan kaki pada malam hari berkedudukan sebagai bukti tambahan dalam argumen, bukan sebagai kesimpulan yang ditarik dari bukti lain.",
+    "C": "Benar. Ketiga fakta pada teks, yaitu pemasangan lampu, penurunan pencurian sebesar 40 persen, dan meningkatnya aktivitas warga pada malam hari, seluruhnya berfungsi menopang satu pernyataan akhir yang ditandai penanda inferensi pada kalimat terakhir. Pernyataan akhir itulah kesimpulan argumen.",
+    "D": "Salah. Pemasangan lampu di seluruh ruas jalan merupakan premis situasional yang menjelaskan latar peristiwa dan menjadi titik tolak argumen, bukan hal yang hendak disimpulkan.",
+    "E": "Salah. Pengelola program membatasi klaimnya pada Kelurahan Mekar. Generalisasi ke setiap daerah melampaui pernyataan yang benar-benar diajukan dalam teks."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

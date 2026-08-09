@@ -1,0 +1,43 @@
+{
+  "id": "2-verbal-014",
+  "package": 2,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Premis 1: Semua anggota paduan suara mengikuti latihan vokal setiap pekan.\nPremis 2: Semua peserta latihan vokal setiap pekan memiliki kartu kehadiran.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua pemilik kartu kehadiran adalah anggota paduan suara."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian anggota paduan suara tidak memiliki kartu kehadiran."
+    },
+    {
+      "key": "C",
+      "text": "Semua peserta latihan vokal adalah anggota paduan suara."
+    },
+    {
+      "key": "D",
+      "text": "Anggota paduan suara belum tentu memiliki kartu kehadiran."
+    },
+    {
+      "key": "E",
+      "text": "Semua anggota paduan suara memiliki kartu kehadiran."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Pernyataan ini membalik arah simpulan; kedua premis hanya menjamin bahwa anggota paduan suara memiliki kartu kehadiran, bukan bahwa setiap pemilik kartu adalah anggota paduan suara.",
+    "B": "Salah. Pernyataan ini bertentangan dengan hasil penggabungan kedua premis yang justru menjamin seluruh anggota paduan suara memiliki kartu kehadiran.",
+    "C": "Salah. Premis pertama menyatakan anggota paduan suara termasuk peserta latihan vokal, bukan sebaliknya; peserta latihan vokal dapat saja mencakup orang di luar paduan suara.",
+    "D": "Salah. Kepemilikan kartu kehadiran di sini bersifat pasti karena kedua premis berbentuk pernyataan umum yang saling bersambung, sehingga simpulan berbentuk kehati-hatian tidak diperlukan.",
+    "E": "Benar. Semua anggota paduan suara termasuk peserta latihan vokal setiap pekan, dan semua peserta latihan tersebut memiliki kartu kehadiran, sehingga semua anggota paduan suara pasti memiliki kartu kehadiran."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

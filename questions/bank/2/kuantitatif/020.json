@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-020",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Sebanyak 200 gram larutan gula memiliki kadar gula 15%. Ke dalam larutan tersebut ditambahkan sejumlah gula murni sehingga kadar gulanya menjadi 32%. Berapa gram gula murni yang harus ditambahkan?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "34 gram"
+    },
+    {
+      "key": "B",
+      "text": "50 gram"
+    },
+    {
+      "key": "C",
+      "text": "30 gram"
+    },
+    {
+      "key": "D",
+      "text": "64 gram"
+    },
+    {
+      "key": "E",
+      "text": "80 gram"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 34 gram diperoleh dengan menganggap massa larutan tetap 200 gram sehingga tambahan gula dihitung (32% − 15%) × 200 = 34 gram. Gula murni yang ditambahkan ikut menambah massa larutan, sehingga penyebutnya tidak boleh tetap 200 gram.",
+    "B": "Benar. Gula mula-mula = 15% × 200 = 30 gram. Jika ditambahkan x gram gula murni, kadar akhirnya (30 + x) : (200 + x) = 0,32 sehingga 3.000 + 100x = 6.400 + 32x, lalu 68x = 3.400 dan x = 50. Pemeriksaan: (30 + 50) : 250 = 80 : 250 = 32%.",
+    "C": "Salah. Nilai 30 gram adalah massa gula yang sudah terkandung dalam larutan mula-mula, yaitu 15% × 200, bukan massa gula yang harus ditambahkan.",
+    "D": "Salah. Nilai 64 gram adalah 32% × 200, yaitu massa gula yang diperlukan seandainya massa larutan akhir tetap 200 gram. Selain massa larutan yang berubah, 30 gram gula yang sudah ada pun belum dikurangkan.",
+    "E": "Salah. Nilai 80 gram berasal dari perhitungan yang benar mengenai massa larutan akhir, yaitu air 170 gram yang menjadi 68% larutan sehingga massa akhir 250 gram, tetapi 80 gram itu adalah seluruh gula pada larutan akhir (32% × 250). Tambahannya adalah 80 − 30 = 50 gram."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

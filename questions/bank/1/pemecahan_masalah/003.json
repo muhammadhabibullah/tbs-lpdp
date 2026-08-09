@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-003",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Lima peserta seminar, yaitu Andi, Budi, Citra, Dewi, dan Eka, tampil pada lima sesi presentasi yang diberi nomor 1 sampai 5. Setiap sesi diisi tepat satu peserta dan setiap peserta tampil tepat satu kali. Penjadwalan tunduk pada ketentuan berikut.\n(1) Citra tampil sebelum Dewi.\n(2) Andi tampil tepat sesudah Budi.\n(3) Eka tidak tampil pada sesi pertama maupun sesi kelima.\n\nBerdasarkan ketentuan tersebut, pernyataan berikut yang tidak mungkin benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Budi tampil pada sesi pertama."
+    },
+    {
+      "key": "B",
+      "text": "Eka tampil pada sesi kedua."
+    },
+    {
+      "key": "C",
+      "text": "Citra tampil pada sesi kedua."
+    },
+    {
+      "key": "D",
+      "text": "Dewi tampil pada sesi ketiga."
+    },
+    {
+      "key": "E",
+      "text": "Andi tampil pada sesi kelima."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Keadaan ini mungkin terjadi, misalnya pada susunan Budi, Andi, Citra, Eka, Dewi yang memenuhi seluruh ketentuan.",
+    "B": "Salah. Keadaan ini mungkin terjadi, misalnya pada susunan Citra, Eka, Budi, Andi, Dewi yang memenuhi seluruh ketentuan.",
+    "C": "Benar. Jika Citra menempati sesi kedua, sesi pertama tidak dapat diisi Eka (ketentuan 3), tidak dapat diisi Dewi (ketentuan 1), dan tidak dapat diisi Andi karena Andi wajib didahului Budi (ketentuan 2). Sesi pertama karena itu harus diisi Budi, tetapi hal tersebut memaksa Andi menempati sesi kedua sehingga bertabrakan dengan Citra. Tidak ada satu pun susunan sah dengan Citra pada sesi kedua.",
+    "D": "Salah. Keadaan ini mungkin terjadi, misalnya pada susunan Citra, Eka, Dewi, Budi, Andi yang memenuhi seluruh ketentuan.",
+    "E": "Salah. Keadaan ini mungkin terjadi, misalnya pada susunan Citra, Dewi, Eka, Budi, Andi yang memenuhi seluruh ketentuan."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

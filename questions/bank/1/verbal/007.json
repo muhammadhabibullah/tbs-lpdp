@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-007",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "SPORADIS >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Terus-menerus"
+    },
+    {
+      "key": "B",
+      "text": "Terpencar"
+    },
+    {
+      "key": "C",
+      "text": "Kadang-kadang"
+    },
+    {
+      "key": "D",
+      "text": "Mendadak"
+    },
+    {
+      "key": "E",
+      "text": "Acak"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Sporadis berarti terjadi kadang-kadang dan tidak menentu, sehingga lawannya adalah berlangsung terus-menerus tanpa terputus.",
+    "B": "Salah. Terpencar menyangkut sebaran ruang, bukan kesinambungan waktu, sehingga bukan lawan dari sporadis.",
+    "C": "Salah. Kadang-kadang sepadan dengan sporadis karena sama-sama menunjukkan kejadian yang jarang dan tidak teratur, bukan lawannya.",
+    "D": "Salah. Mendadak menyangkut kecepatan munculnya suatu peristiwa, bukan keteraturan atau kesinambungannya.",
+    "E": "Salah. Acak menekankan ketiadaan pola, sifat yang justru melekat pada sesuatu yang sporadis."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

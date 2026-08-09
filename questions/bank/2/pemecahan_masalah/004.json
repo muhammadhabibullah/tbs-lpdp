@@ -1,0 +1,43 @@
+{
+  "id": "2-pemecahan_masalah-004",
+  "package": 2,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Enam peserta lokakarya, yaitu Gita, Hasan, Indra, Joko, Kirana, dan Lestari, duduk berjajar pada enam kursi yang diberi nomor 1 sampai 6 dari kiri ke kanan. Setiap kursi diduduki tepat satu peserta dan setiap peserta menempati tepat satu kursi. Penempatan tempat duduk tunduk pada ketentuan berikut.\n(1) Kirana duduk tepat di sebelah kanan Joko.\n(2) Gita duduk pada kursi bernomor genap.\n(3) Hasan dan Indra dipisahkan oleh tepat dua peserta lain.\n(4) Lestari tidak duduk pada kursi nomor 1 maupun kursi nomor 6.\n\nBerdasarkan ketentuan tersebut, pernyataan berikut yang tidak mungkin benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Hasan duduk pada kursi nomor 1."
+    },
+    {
+      "key": "B",
+      "text": "Kirana duduk pada kursi nomor 2."
+    },
+    {
+      "key": "C",
+      "text": "Gita duduk pada kursi nomor 4."
+    },
+    {
+      "key": "D",
+      "text": "Lestari duduk pada kursi nomor 4."
+    },
+    {
+      "key": "E",
+      "text": "Indra duduk pada kursi nomor 6."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Keadaan ini mungkin terjadi, misalnya pada susunan Hasan, Gita, Lestari, Indra, Joko, Kirana yang memenuhi keempat ketentuan.",
+    "B": "Salah. Keadaan ini mungkin terjadi, misalnya pada susunan Joko, Kirana, Indra, Gita, Lestari, Hasan yang memenuhi keempat ketentuan.",
+    "C": "Salah. Keadaan ini mungkin terjadi, misalnya pada susunan Joko, Kirana, Hasan, Gita, Lestari, Indra; kursi 4 bernomor genap sehingga ketentuan 2 terpenuhi.",
+    "D": "Benar. Andaikan Lestari menempati kursi 4, pasangan Hasan dan Indra yang berjarak tiga kursi hanya dapat mengisi kursi 2 dan 5 atau kursi 3 dan 6. Pada pilihan pertama tersisa kursi 1, 3, dan 6 yang tidak memuat sepasang kursi berdampingan, sehingga Joko dan Kirana tidak dapat ditempatkan menurut ketentuan 1. Pada pilihan kedua tersisa kursi 1, 2, dan 5 yang hanya memuat satu pasangan berdampingan, yaitu kursi 1 dan 2, sehingga Joko mengisi kursi 1, Kirana kursi 2, dan Gita terpaksa mengisi kursi 5 yang bernomor ganjil dan melanggar ketentuan 2. Tidak ada satu pun susunan sah dengan Lestari di kursi 4.",
+    "E": "Salah. Keadaan ini mungkin terjadi, misalnya pada susunan Joko, Kirana, Hasan, Gita, Lestari, Indra yang memenuhi keempat ketentuan."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

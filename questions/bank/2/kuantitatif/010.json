@@ -1,0 +1,43 @@
+{
+  "id": "2-kuantitatif-010",
+  "package": 2,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "deret_angka",
+  "question_text": "12, 15, 21, 33, 57, 105, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "393"
+    },
+    {
+      "key": "B",
+      "text": "201"
+    },
+    {
+      "key": "C",
+      "text": "153"
+    },
+    {
+      "key": "D",
+      "text": "249"
+    },
+    {
+      "key": "E",
+      "text": "210"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 393 diperoleh dengan melanjutkan deret dua langkah sekaligus.",
+    "B": "Benar. Selisih antarsuku berlipat dua setiap langkah: 3, 6, 12, dan seterusnya. Selisih berikutnya adalah 96, sehingga suku berikutnya 105 + 96 = 201.",
+    "C": "Salah. Nilai 153 diperoleh dengan mengulang selisih terakhir (48) alih-alih menggandakannya.",
+    "D": "Salah. Nilai 249 diperoleh dengan mengalikan selisih terakhir dengan 3, bukan dengan 2.",
+    "E": "Salah. Nilai 210 diperoleh dengan menggandakan suku terakhir, padahal yang berlipat dua adalah selisihnya."
+  },
+  "difficulty": "medium",
+  "source": "deret_angka.py",
+  "verified": true
+}

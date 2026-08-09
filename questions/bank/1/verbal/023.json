@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-023",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Frasa \"dipadatkan dalam satu malam\" pada bacaan tersebut mengacu pada ...",
+  "image": null,
+  "passage": "Banyak pelajar menyiapkan ujian dengan membaca ulang catatan berkali-kali. Cara tersebut terasa efektif karena teks yang berulang kali dibaca menjadi semakin akrab, dan keakraban itu sering disalahartikan sebagai penguasaan materi. Penelitian di bidang psikologi kognitif menunjukkan hasil yang berbeda. Ketika pelajar diminta menutup catatan lalu berusaha mengingat kembali isinya, daya ingat jangka panjang mereka jauh lebih baik daripada kelompok yang hanya membaca ulang, meskipun kelompok kedua justru merasa lebih siap menghadapi ujian.\n\nUpaya mengingat kembali menuntut otak menelusuri dan menyusun ulang informasi yang telah tersimpan, dan proses yang menuntut usaha itulah yang memperkuat jejak ingatan. Manfaatnya bertambah apabila latihan mengingat diberi jeda beberapa hari, bukan dipadatkan dalam satu malam.\n\nTemuan tersebut memberi pesan penting bagi pelajar: rasa mudah pada saat belajar bukanlah petunjuk yang dapat diandalkan. Strategi yang terasa berat justru sering kali membuahkan hasil yang lebih tahan lama.",
+  "options": [
+    {
+      "key": "A",
+      "text": "latihan mengingat yang diulang setiap hari selama seminggu"
+    },
+    {
+      "key": "B",
+      "text": "kebiasaan membaca ulang catatan secara perlahan-lahan"
+    },
+    {
+      "key": "C",
+      "text": "pemusatan seluruh kegiatan belajar dalam satu kesempatan yang singkat"
+    },
+    {
+      "key": "D",
+      "text": "berkurangnya waktu tidur karena belajar sampai larut malam"
+    },
+    {
+      "key": "E",
+      "text": "pemberian jeda antarsesi belajar agar ingatan semakin kuat"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Pengulangan setiap hari selama beberapa hari justru merupakan latihan berjeda, yakni kebalikan dari yang dimaksud frasa tersebut.",
+    "B": "Salah. Frasa itu menyoroti penjadwalan belajar yang menumpuk pada satu waktu, bukan metode ataupun kecepatan membaca ulang.",
+    "C": "Benar. Frasa tersebut dipertentangkan dengan latihan yang diberi jeda beberapa hari sehingga maknanya adalah memusatkan seluruh kegiatan belajar dalam satu kesempatan yang singkat.",
+    "D": "Salah. Kata malam memang menggoda ke arah waktu tidur, tetapi bacaan sama sekali tidak membahas berkurangnya waktu tidur.",
+    "E": "Salah. Pemberian jeda justru merupakan cara yang dianjurkan bacaan dan berlawanan dengan makna frasa yang ditanyakan."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

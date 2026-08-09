@@ -1,0 +1,43 @@
+{
+  "id": "1-verbal-018",
+  "package": 1,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan, bahan organik pada tanah mangrove terurai sangat lambat karena ...",
+  "image": null,
+  "passage": "Hutan mangrove tumbuh di wilayah peralihan antara daratan dan laut, terutama pada muara sungai yang berlumpur. Sistem perakarannya yang rapat dan menjulang di atas permukaan air membuat mangrove mampu meredam energi gelombang sebelum gelombang itu mencapai garis pantai. Sejumlah kajian di kawasan pesisir tropis menunjukkan bahwa jalur mangrove selebar seratus meter dapat menurunkan tinggi gelombang hingga lebih dari separuhnya. Selain itu, akar mangrove menahan sedimen yang terbawa arus sehingga laju abrasi berkurang dan daratan baru perlahan-lahan terbentuk.\n\nFungsi mangrove tidak berhenti pada perlindungan fisik. Rongga di antara akarnya menjadi tempat pemijahan berbagai jenis ikan, udang, dan kepiting yang menopang perikanan rakyat. Mangrove juga menyimpan karbon dalam jumlah besar. Sebagian besar karbon itu tertimbun pada lapisan tanah yang tergenang dan miskin oksigen sehingga bahan organik di dalamnya terurai sangat lambat.\n\nMeskipun demikian, luas hutan mangrove terus menyusut akibat pembukaan tambak, perluasan permukiman, dan penebangan untuk kayu bakar. Upaya penanaman kembali kerap gagal karena bibit ditanam pada lokasi yang tidak sesuai dengan pola pasang surut setempat, bukan karena kekurangan bibit.",
+  "options": [
+    {
+      "key": "A",
+      "text": "suhu di kawasan pesisir tropis tergolong tinggi sepanjang tahun"
+    },
+    {
+      "key": "B",
+      "text": "sedimen yang tertahan oleh akar terus bertambah setiap saat"
+    },
+    {
+      "key": "C",
+      "text": "lapisan tanahnya tergenang air dan miskin oksigen"
+    },
+    {
+      "key": "D",
+      "text": "akar mangrove menyerap karbon langsung dari udara"
+    },
+    {
+      "key": "E",
+      "text": "gelombang laut membawa pergi sisa bahan organik dari pantai"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Bacaan memang menyebut kawasan pesisir tropis, tetapi suhu tidak dinyatakan sebagai penyebab lambatnya penguraian.",
+    "B": "Salah. Penahanan sedimen oleh akar disebutkan sebagai penyebab berkurangnya abrasi, bukan sebagai penyebab lambatnya penguraian bahan organik.",
+    "C": "Benar. Bacaan menyatakan bahwa karbon tertimbun pada lapisan tanah yang tergenang dan miskin oksigen sehingga bahan organik di dalamnya terurai sangat lambat.",
+    "D": "Salah. Bacaan menyatakan mangrove menyimpan karbon, tetapi tidak menjelaskan penyerapan langsung oleh akar sebagai alasan lambatnya penguraian.",
+    "E": "Salah. Pernyataan ini tidak terdapat dalam bacaan; gelombang justru disebut sebagai hal yang diredam oleh mangrove."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

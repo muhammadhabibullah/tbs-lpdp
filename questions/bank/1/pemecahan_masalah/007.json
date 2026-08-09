@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-007",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "logika_analitis",
+  "question_text": "Perhatikan ketiga pernyataan berikut.\n(1) Semua pegawai Divisi P mengikuti pelatihan kepemimpinan.\n(2) Sebagian peserta pelatihan kepemimpinan memperoleh sertifikat internasional.\n(3) Andi adalah pegawai Divisi P.\n\nKesimpulan yang pasti benar berdasarkan ketiga pernyataan tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Andi memperoleh sertifikat internasional."
+    },
+    {
+      "key": "B",
+      "text": "Semua peserta pelatihan kepemimpinan adalah pegawai Divisi P."
+    },
+    {
+      "key": "C",
+      "text": "Andi mengikuti pelatihan kepemimpinan."
+    },
+    {
+      "key": "D",
+      "text": "Sebagian pegawai Divisi P memperoleh sertifikat internasional."
+    },
+    {
+      "key": "E",
+      "text": "Andi tidak memperoleh sertifikat internasional."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Pernyataan 2 hanya menyebut sebagian peserta pelatihan yang memperoleh sertifikat internasional, sehingga termasuk atau tidaknya Andi dalam kelompok tersebut tidak dapat dipastikan.",
+    "B": "Salah. Pernyataan 1 hanya berlaku satu arah, yaitu dari pegawai Divisi P menuju peserta pelatihan. Membalik arah hubungan itu merupakan konversi yang tidak sahih karena peserta pelatihan dapat berasal dari divisi lain.",
+    "C": "Benar. Pernyataan 3 menempatkan Andi sebagai anggota himpunan pegawai Divisi P, sedangkan pernyataan 1 menetapkan bahwa seluruh anggota himpunan itu mengikuti pelatihan kepemimpinan. Penerapan premis universal pada kasus tunggal ini sahih pada setiap penafsiran premis.",
+    "D": "Salah. Peserta pelatihan yang memperoleh sertifikat internasional dapat seluruhnya berasal dari luar Divisi P, sehingga irisan antara pegawai Divisi P dan pemegang sertifikat tidak dijamin ada.",
+    "E": "Salah. Premis tidak menutup kemungkinan Andi termasuk peserta yang memperoleh sertifikat. Menyangkal kepemilikan sertifikat sama tidak sahihnya dengan menegaskannya."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

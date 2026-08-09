@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-020",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Sebuah toko menjual satu unit alat elektronik dengan harga sebelum potongan Rp800.000,00. Toko memberikan diskon 25%, kemudian memberikan diskon tambahan 10% dari harga setelah diskon pertama. Atas harga setelah kedua diskon tersebut dikenakan pajak pertambahan nilai sebesar 11%. Berapa jumlah uang yang harus dibayar pembeli?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp540.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp599.400,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp606.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp628.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp666.000,00"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Rp540.000,00 adalah harga setelah kedua diskon, tetapi pajak pertambahan nilai sebesar 11% belum ditambahkan.",
+    "B": "Benar. Harga setelah diskon pertama = 800.000 × (1 − 0,25) = 600.000. Harga setelah diskon kedua = 600.000 × (1 − 0,10) = 540.000. Setelah pajak 11% = 540.000 × 1,11 = 599.400, sehingga pembeli membayar Rp599.400,00.",
+    "C": "Salah. Nilai Rp606.000,00 muncul jika pajak dihitung dari harga setelah diskon pertama, yaitu 540.000 + 11% × 600.000 = 540.000 + 66.000. Pajak seharusnya dihitung dari harga setelah kedua diskon.",
+    "D": "Salah. Nilai Rp628.000,00 muncul jika pajak dihitung dari harga awal, yaitu 540.000 + 11% × 800.000 = 540.000 + 88.000.",
+    "E": "Salah. Nilai Rp666.000,00 diperoleh jika diskon tambahan 10% terlewat, yaitu 600.000 × 1,11 = 666.000."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

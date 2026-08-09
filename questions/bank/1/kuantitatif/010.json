@@ -1,0 +1,43 @@
+{
+  "id": "1-kuantitatif-010",
+  "package": 1,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "deret_angka",
+  "question_text": "19, 49, 23, 44, 27, 39, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "22"
+    },
+    {
+      "key": "B",
+      "text": "31"
+    },
+    {
+      "key": "C",
+      "text": "34"
+    },
+    {
+      "key": "D",
+      "text": "35"
+    },
+    {
+      "key": "E",
+      "text": "43"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 22 diperoleh dengan menerapkan beda deret kedua pada suku terakhir deret pertama.",
+    "B": "Benar. Deret ini terdiri atas dua deret berselang-seling. Suku ganjil (19, 23, 27) naik tetap 4, sedangkan suku genap (49, 44, 39) berubah tetap −5. Suku ketujuh melanjutkan deret pertama: 27 + 4 = 31.",
+    "C": "Salah. Nilai 34 diperoleh dengan melanjutkan deret kedua, padahal suku ketujuh adalah giliran deret pertama.",
+    "D": "Salah. Nilai 35 diperoleh dengan melanjutkan deret pertama dua langkah sekaligus.",
+    "E": "Salah. Nilai 43 diperoleh dengan menambahkan beda deret pertama (4) pada suku terakhir, padahal suku terakhir milik deret kedua."
+  },
+  "difficulty": "medium",
+  "source": "deret_angka.py",
+  "verified": true
+}

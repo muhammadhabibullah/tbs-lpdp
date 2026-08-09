@@ -1,0 +1,43 @@
+{
+  "id": "1-pemecahan_masalah-012",
+  "package": 1,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah lembaga survei memasang kuesioner daring pada laman resminya untuk mengukur tingkat kepuasan masyarakat terhadap layanan transportasi umum di sebuah kota. Kuesioner itu terbuka bagi siapa pun yang berkenan mengisinya. Dari 5.000 orang yang mengisi kuesioner secara sukarela, 82 persen menyatakan puas. Lembaga tersebut kemudian menyimpulkan bahwa mayoritas penduduk kota itu puas terhadap layanan transportasi umum.\n\nKelemahan utama penalaran lembaga survei tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Jumlah 5.000 responden terlalu sedikit untuk menggambarkan keadaan penduduk sebuah kota."
+    },
+    {
+      "key": "B",
+      "text": "Lembaga survei tidak mencantumkan margin kesalahan atas angka 82 persen yang dilaporkan."
+    },
+    {
+      "key": "C",
+      "text": "Kuesioner tidak memuat batasan operasional mengenai apa yang dimaksud dengan puas."
+    },
+    {
+      "key": "D",
+      "text": "Hasil survei tidak dibandingkan dengan tingkat kepuasan terhadap layanan transportasi di kota lain."
+    },
+    {
+      "key": "E",
+      "text": "Responden yang mengisi kuesioner daring secara sukarela belum tentu mewakili seluruh penduduk kota."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Ukuran 5.000 responden tergolong besar untuk survei tingkat kota. Persoalannya terletak pada cara responden terjaring, bukan pada banyaknya responden.",
+    "B": "Salah. Margin kesalahan hanya bermakna pada sampel yang ditarik secara acak, sedangkan responden survei ini terjaring melalui pengisian sukarela. Pencantuman margin kesalahan tidak akan memperbaiki kesahihan penalaran tersebut.",
+    "C": "Salah. Ketiadaan batasan operasional memang mengurangi ketepatan pengukuran, tetapi kelemahan itu bersifat sekunder dan tidak menjelaskan mengapa hasil dari sekelompok pengisi sukarela dianggap berlaku bagi seluruh penduduk.",
+    "D": "Salah. Perbandingan antarkota tidak diperlukan untuk menilai kepuasan penduduk satu kota. Kesimpulan yang diajukan bersifat internal terhadap kota tersebut, bukan bersifat komparatif.",
+    "E": "Benar. Sampel terbentuk melalui pengisian sukarela di laman resmi sehingga hanya menjaring warga yang memiliki akses internet, mengenal laman lembaga, dan terdorong kuat untuk menjawab. Kelompok tersebut belum tentu sebanding dengan populasi kota, sehingga lompatan dari 82 persen responden menjadi mayoritas penduduk kota tidak dapat dibenarkan."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}
