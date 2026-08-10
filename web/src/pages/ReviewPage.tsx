@@ -28,7 +28,7 @@ function matches(question: ReviewQuestion, filter: Filter): boolean {
     case 'doubt':
       return question.is_doubtful
     case 'reported':
-      return question.my_report !== null
+      return Boolean(question.my_report)
     default:
       return true
   }
