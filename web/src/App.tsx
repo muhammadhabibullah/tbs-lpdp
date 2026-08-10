@@ -1,7 +1,18 @@
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { useEffect } from 'react'
+import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import AttemptPage from './pages/AttemptPage'
 import HomePage from './pages/HomePage'
 import ReviewPage from './pages/ReviewPage'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [pathname])
+
+  return null
+}
 
 /**
  * HashRouter, deliberately: GitHub Pages has no rewrite rules, so a deep link
@@ -10,6 +21,7 @@ import ReviewPage from './pages/ReviewPage'
 export default function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/attempt/:attemptId" element={<AttemptPage />} />
