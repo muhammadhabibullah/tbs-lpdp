@@ -1,7 +1,8 @@
 -- =============================================================================
 -- TBS LPDP Try Out — Supabase schema, part 1 of 2 (tables, RLS, RPC)
 -- Apply in the Supabase SQL editor (or `supabase db push`), then apply
--- `schema_v2_reports.sql` for the question-feedback feature (v2).
+-- `schema_v2_reports.sql` for the question-feedback feature (v2), then
+-- `maintenance.sql` once for the pg_cron retention jobs (NF-10).
 -- Prereqs: enable Anonymous sign-in (Auth → Providers), create public bucket
 --          `question-images` (Storage).
 -- Design: docs/TECHNICAL_REQUIREMENTS.md §6–§8. Clients NEVER write tables
@@ -215,6 +216,27 @@ begin
 end;
 $$;
 
+-- BE-16: append one row to the event log unless this section has already hit
+-- the cap. `answers` is bounded by its primary key, so this log is the only
+-- table a client could grow without limit — capping it bounds an attempt's
+-- total storage, which is what keeps a scripted write loop from filling the
+-- free tier's 500 MB. A normal section logs well under 200 rows (NF-1).
+create or replace function public._log_event(
+  p_section_attempt_id uuid, p_question_id text, p_event_type text, p_payload jsonb)
+returns void
+language plpgsql security definer set search_path = public
+as $$
+begin
+  if (select count(*) from public.answer_events
+       where section_attempt_id = p_section_attempt_id) >= 500 then
+    return;
+  end if;
+
+  insert into public.answer_events (section_attempt_id, question_id, event_type, payload)
+  values (p_section_attempt_id, p_question_id, p_event_type, coalesce(p_payload, '{}'::jsonb));
+end;
+$$;
+
 -- Assert the caller owns an ACTIVE, not-past-deadline section; auto-finish if
 -- the deadline passed. Returns the section row.
 create or replace function public._assert_active_section(p_section_attempt_id uuid)
@@ -267,6 +289,15 @@ begin
    order by started_at desc limit 1;
 
   if v_attempt.id is null then
+    -- BE-15: only *creation* is capped, so resuming an active attempt can never
+    -- be blocked. Bounds the row growth (and the scripted key dump) a loop over
+    -- this RPC would otherwise produce on a free-tier project.
+    if (select count(*) from public.attempts
+         where user_id = (select auth.uid())
+           and started_at > now() - interval '1 hour') >= 10 then
+      raise exception 'too many attempts' using errcode = 'P0005';
+    end if;
+
     insert into public.attempts (user_id, package_id)
     values ((select auth.uid()), p_package_id)
     returning * into v_attempt;
@@ -377,9 +408,8 @@ begin
   on conflict (section_attempt_id, question_id)
   do update set selected_option = excluded.selected_option, updated_at = now();
 
-  insert into public.answer_events (section_attempt_id, question_id, event_type, payload)
-  values (p_section_attempt_id, p_question_id, 'save_answer',
-          jsonb_build_object('option', p_option));
+  perform public._log_event(p_section_attempt_id, p_question_id, 'save_answer',
+                            jsonb_build_object('option', p_option));
 
   return json_build_object('ok', true, 'server_time', now());
 end;
@@ -404,9 +434,9 @@ begin
   on conflict (section_attempt_id, question_id)
   do update set is_doubtful = excluded.is_doubtful, updated_at = now();
 
-  insert into public.answer_events (section_attempt_id, question_id, event_type)
-  values (p_section_attempt_id, p_question_id,
-          case when p_doubtful then 'mark_doubt' else 'unmark_doubt' end);
+  perform public._log_event(p_section_attempt_id, p_question_id,
+                            case when p_doubtful then 'mark_doubt' else 'unmark_doubt' end,
+                            '{}'::jsonb);
 
   return json_build_object('ok', true, 'server_time', now());
 end;

@@ -3,10 +3,23 @@ import { Link, useNavigate } from 'react-router-dom'
 import AppShell from '../components/AppShell'
 import { USE_MOCK, api, errorMessage } from '../lib/api'
 import { formatDateTime, formatMinutes } from '../lib/clock'
-import { isSupabaseConfigured } from '../lib/supabase'
+import { isSupabaseConfigured } from '../lib/config'
 import type { AttemptSummary, Package } from '../lib/types'
 
 const MAX_SCORE = 300
+
+/** Server messages are English; the user gets Bahasa Indonesia. */
+function startErrorMessage(err: unknown): string {
+  switch ((err as { code?: string }).code) {
+    // BE-15: the hourly cap on creating attempts.
+    case 'P0005':
+      return 'Terlalu banyak try out dibuka dalam satu jam. Coba lagi nanti, atau lanjutkan try out yang masih berjalan di bawah.'
+    case 'P0002':
+      return 'Paket ini sedang tidak tersedia. Muat ulang halaman dan coba lagi.'
+    default:
+      return `Gagal memulai try out: ${errorMessage(err)}`
+  }
+}
 
 export default function HomePage() {
   const navigate = useNavigate()
@@ -44,7 +57,7 @@ export default function HomePage() {
       const { attempt } = await api.startAttempt(packageId)
       navigate(`/attempt/${attempt.id}`)
     } catch (err) {
-      setError(errorMessage(err))
+      setError(startErrorMessage(err))
       setStartingId(null)
     }
   }

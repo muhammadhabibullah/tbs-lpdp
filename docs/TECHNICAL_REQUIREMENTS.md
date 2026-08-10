@@ -117,6 +117,8 @@ The UI replicates the PUSMENDIK CBT application shown in `exambrowser-ui/` scree
 | BE-5 | **Answer-key secrecy** (C-4): `answer_keys` (correct option + explanations) has **no client-readable RLS policy**. Grading happens inside `finish_section`; `get_review(attempt_id)` returns keys and explanations only for sections the caller has finished. |
 | BE-6 | **RLS everywhere**: users can only read/write their own attempts, answers, and events. Content tables (`packages`, `subtests`) are read-only to clients; all writes to them go through the service-role push script (QG-6). |
 | BE-7 | **Scoring**: per §4 — `score = 5 × correct_count`, stored per section attempt at finish time, summed for the attempt total. |
+| BE-15 | **Attempt-creation budget** (added for the public launch): `start_attempt` refuses to create an 11th attempt for the same user within a rolling hour, raising `P0005`. Only creation is capped — resuming an existing active attempt is never blocked. Bounds both the row growth and the scripted `get_review` key dump a loop over this RPC would otherwise produce. |
+| BE-16 | **Event-log cap** (added for the public launch): `save_answer` / `toggle_doubt` stop appending to `answer_events` once a section attempt holds 500 rows; the write itself still succeeds. `answers` is bounded by its primary key, so this makes an attempt's total storage bounded too. `start` and `finish` events are never dropped. |
 
 ## 6. Data Model (Postgres)
 
@@ -173,6 +175,7 @@ All client access goes through `supabase-js`: anonymous auth + these Postgres fu
 | NF-3 | Timer display accuracy within ±1 s of the server deadline (clock-skew corrected at `start_section` using server time). |
 | NF-4 | The site works on current Chrome/Safari/Firefox/Edge; no browser extensions or lockdown required. |
 | NF-5 | All bank content and DDL are reproducible from git (C-5): a fresh Supabase project is fully set up by `schema.sql` + one push-script run per package. |
+| NF-10 | **Retention** (added for the public launch): `supabase/maintenance.sql` schedules two daily `pg_cron` sweeps — `answer_events` older than 30 days, and anonymous `auth.users` untouched for 60 days that filed no question report. Operational only: nothing in the app reads either, and re-applying the schema files never undoes the jobs. Where BE-15/BE-16 bound how fast the database grows, these bound its total. |
 
 ## 10. Repository Layout
 
@@ -226,7 +229,7 @@ Question production is agent-driven and gated by deterministic checks:
 ## 12. Deployment
 
 - **Frontend**: GitHub Actions workflow builds `web/` (`vite build` with `base: '/tbs-lpdp/'`) on push to `master` and deploys to GitHub Pages. `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are provided as repo Actions variables (they are public by design).
-- **Backend**: `supabase/schema.sql` applied to the Supabase project (SQL editor or `supabase db push`); anonymous sign-in enabled in Auth settings; `question-images` bucket created public-read.
+- **Backend**: `supabase/schema.sql` applied to the Supabase project (SQL editor or `supabase db push`), then `supabase/schema_v2_reports.sql`, then `supabase/maintenance.sql` (NF-10, once); anonymous sign-in enabled in Auth settings; `question-images` bucket created public-read.
 - **Content**: push script per package (§11 step 5).
 
 ## 13. Milestones

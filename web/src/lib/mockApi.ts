@@ -1,4 +1,4 @@
-import { ApiError } from './supabase'
+import { ApiError } from './config'
 import { REPORT_COMMENT_MAX, REPORT_REASONS } from './types'
 import type {
   AttemptState,
@@ -229,6 +229,11 @@ export const mockApi: ExamApi = {
     subtestsOf(bank, packageId) // validates the package exists
     let attempt = state.attempts.find((a) => a.package_id === packageId && a.status === 'active')
     if (!attempt) {
+      // BE-15: mirrors the hourly cap on *creating* attempts in schema.sql.
+      const hourAgo = Date.now() - 3_600_000
+      if (state.attempts.filter((a) => Date.parse(a.started_at) > hourAgo).length >= 10) {
+        throw new ApiError('too many attempts', 'P0005')
+      }
       attempt = {
         id: crypto.randomUUID(),
         package_id: packageId,

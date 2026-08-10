@@ -60,6 +60,12 @@ drop policy if exists question_reports_read_own on public.question_reports;
 create policy question_reports_read_own on public.question_reports
   for select to authenticated using (user_id = (select auth.uid()));
 
+-- Defence in depth: this table is created AFTER schema.sql's blanket
+-- `revoke all on all tables ... from anon`, so it still carries the project's
+-- default grant to anon. RLS already denies every row, but drop the privilege
+-- too, so the table is never one forgotten policy away from being readable.
+revoke all on public.question_reports from anon;
+
 -- ----------------------------------------------------------------- 3. helper -
 -- Fingerprint of the question AS SHOWN (stem, passage, options) — no key
 -- material. md5() is core Postgres, so this needs no extension.

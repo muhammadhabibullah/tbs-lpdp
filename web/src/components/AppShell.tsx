@@ -1,8 +1,19 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
+import FeedbackFooter from './FeedbackFooter'
 
 /** Blue masthead + light page body, mirroring the PUSMENDIK CBT chrome. */
-export default function AppShell({ children, participant }: { children: ReactNode; participant?: string }) {
+export default function AppShell({
+  children,
+  participant,
+  /** Suppressed while a section is running: a mailto would send the candidate
+      out of the app, and the deadline keeps ticking server-side. */
+  hideFeedback = false,
+}: {
+  children: ReactNode
+  participant?: string
+  hideFeedback?: boolean
+}) {
   return (
     <div className="app">
       <header className="masthead">
@@ -33,6 +44,7 @@ export default function AppShell({ children, participant }: { children: ReactNod
         </div>
       </header>
       <main className="page">{children}</main>
+      {hideFeedback ? null : <FeedbackFooter />}
     </div>
   )
 }

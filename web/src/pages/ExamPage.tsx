@@ -6,14 +6,15 @@ import type { AnswerMap } from '../components/DaftarSoal'
 import InformasiSoal from '../components/InformasiSoal'
 import KonfirmasiTes from '../components/KonfirmasiTes'
 import Passage from '../components/Passage'
-import useTick from '../hooks/useTick'
+import SisaWaktu from '../components/SisaWaktu'
 import { api, errorMessage, withRetry } from '../lib/api'
-import { formatClock, remainingMs } from '../lib/clock'
+import { remainingMs } from '../lib/clock'
 import type { ActiveSection, OptionKey } from '../lib/types'
 
 const FONT_SCALES = [0.9, 1, 1.18]
 const FONT_STEP_KEY = 'tbs-lpdp.font-step'
-const URGENT_MS = 60_000
+/** Long enough to collapse a burst of corrections, short enough to lose nothing. */
+const SAVE_DEBOUNCE_MS = 400
 
 export default function ExamPage({
   packageTitle,
@@ -46,9 +47,9 @@ export default function ExamPage({
   const finishedRef = useRef(false)
   const cardRef = useRef<HTMLDivElement>(null)
   const mountedRef = useRef(false)
-
-  useTick(250)
-  const remaining = remainingMs(sectionAttempt.deadline_at)
+  /** question_id → option waiting to be written; drained by flushSaves(). */
+  const pendingSaves = useRef(new Map<string, OptionKey | null>())
+  const saveTimer = useRef<number | null>(null)
 
   const question = questions[index]
   const isLast = index === questions.length - 1
@@ -96,10 +97,60 @@ export default function ExamPage({
     [leaveSection],
   )
 
+  /**
+   * Write every queued answer now and return whether all of them landed.
+   * Safe to call at any time: with nothing queued it is a no-op.
+   */
+  const flushSaves = useCallback(async (): Promise<boolean> => {
+    if (saveTimer.current !== null) {
+      clearTimeout(saveTimer.current)
+      saveTimer.current = null
+    }
+    const queued = [...pendingSaves.current.entries()]
+    if (queued.length === 0) return true
+    pendingSaves.current.clear()
+
+    const results = await Promise.all(
+      queued.map(([questionId, option]) =>
+        withRetry(() => api.saveAnswer(sectionAttempt.id, questionId, option))
+          .then(() => true)
+          .catch((err) => {
+            handleWriteError(err)
+            return false
+          }),
+      ),
+    )
+    const ok = results.every(Boolean)
+    if (ok) setWarning(null)
+    return ok
+  }, [handleWriteError, sectionAttempt.id])
+
+  // Leaving the question — or the screen — settles whatever is still queued.
+  useEffect(() => () => void flushSaves(), [index, flushSaves])
+
+  // A phone switching apps mid-exam must not strand the last answer in the
+  // debounce window; `pagehide` also covers Safari's back-forward cache.
+  useEffect(() => {
+    const settle = () => void flushSaves()
+    const onVisibility = () => {
+      if (document.hidden) settle()
+    }
+    window.addEventListener('pagehide', settle)
+    document.addEventListener('visibilitychange', onVisibility)
+    return () => {
+      window.removeEventListener('pagehide', settle)
+      document.removeEventListener('visibilitychange', onVisibility)
+    }
+  }, [flushSaves])
+
   const finish = useCallback(
     async (auto: boolean) => {
       if (finishedRef.current || finishing) return
       setFinishing(true)
+      // Never grade a section while an answer is still sitting in the queue.
+      await flushSaves()
+      // A rejected flush past the deadline already left the section (P0004).
+      if (finishedRef.current) return
       try {
         await withRetry(() => api.finishSection(sectionAttempt.id))
       } catch (err) {
@@ -114,13 +165,13 @@ export default function ExamPage({
       finishedRef.current = true
       onSectionFinished()
     },
-    [finishing, onSectionFinished, sectionAttempt.id],
+    [finishing, flushSaves, onSectionFinished, sectionAttempt.id],
   )
 
   // FE-7: at 0 the section auto-submits with whatever has been saved.
-  useEffect(() => {
-    if (remaining <= 0 && !finishedRef.current) void finish(true)
-  }, [remaining, finish])
+  const handleExpire = useCallback(() => {
+    if (!finishedRef.current) void finish(true)
+  }, [finish])
 
   function selectOption(option: OptionKey) {
     if (!question || finishedRef.current) return
@@ -128,25 +179,27 @@ export default function ExamPage({
       ...prev,
       [question.id]: { selected_option: option, is_doubtful: prev[question.id]?.is_doubtful ?? false },
     }))
-    // NF-2: optimistic UI, RPC in the background.
-    withRetry(() => api.saveAnswer(sectionAttempt.id, question.id, option))
-      .then(() => setWarning(null))
-      .catch(handleWriteError)
+    // NF-2: optimistic UI, RPC in the background — debounced, so correcting an
+    // answer twice in a row costs one write (and one event row) instead of three.
+    pendingSaves.current.set(question.id, option)
+    if (saveTimer.current !== null) clearTimeout(saveTimer.current)
+    saveTimer.current = window.setTimeout(() => void flushSaves(), SAVE_DEBOUNCE_MS)
   }
 
   function saveNow() {
     if (!question) return
-    const option = answers[question.id]?.selected_option ?? null
+    // A queued option is the newest intent — newer than `answers`, which this
+    // closure may have captured before the last click re-rendered the page.
+    const option = pendingSaves.current.get(question.id) ?? answers[question.id]?.selected_option ?? null
     if (!option) {
       setToast('Pilih salah satu jawaban terlebih dahulu')
       return
     }
-    withRetry(() => api.saveAnswer(sectionAttempt.id, question.id, option))
-      .then(() => {
-        setWarning(null)
-        setToast('Jawaban tersimpan')
-      })
-      .catch(handleWriteError)
+    // Explicit save: skip the debounce and only claim success if it landed.
+    pendingSaves.current.set(question.id, option)
+    void flushSaves().then((ok) => {
+      if (ok) setToast('Jawaban tersimpan')
+    })
   }
 
   function toggleDoubt() {
@@ -168,7 +221,7 @@ export default function ExamPage({
 
   if (!question) {
     return (
-      <AppShell participant="PESERTA ANONIM">
+      <AppShell participant="PESERTA ANONIM" hideFeedback>
         <div className="card">
           <p className="empty-state">
             Mata uji <strong>{subtest.name}</strong> belum memiliki soal di bank. Jalankan generator soal terlebih
@@ -185,7 +238,7 @@ export default function ExamPage({
   const frameStyle = { '--font-scale': String(FONT_SCALES[fontStep]) } as CSSProperties
 
   return (
-    <AppShell participant="PESERTA ANONIM">
+    <AppShell participant="PESERTA ANONIM" hideFeedback>
       <div className="card exam-card" ref={cardRef}>
         <div className="exam-head">
           <div className="exam-title">
@@ -198,10 +251,7 @@ export default function ExamPage({
             </span>
           </div>
           <div className="exam-tools">
-            <div className={`timer-box ${remaining <= URGENT_MS ? 'urgent' : ''}`}>
-              <span className="label">Sisa Waktu:</span>
-              <span className="value">{formatClock(remaining)}</span>
-            </div>
+            <SisaWaktu deadlineAt={sectionAttempt.deadline_at} onExpire={handleExpire} />
             {/* `display: contents` on desktop, so the buttons sit inline next to
                 the timer; on a phone it becomes the header's second row. */}
             <div className="exam-tool-buttons">
@@ -309,9 +359,11 @@ export default function ExamPage({
       ) : null}
 
       {showConfirm ? (
+        /* The remaining time is snapshotted when the dialog opens: it quotes
+           whole minutes and is answered in seconds, so it need not tick. */
         <KonfirmasiTes
           subtestName={subtest.name}
-          remainingMs={remaining}
+          remainingMs={remainingMs(sectionAttempt.deadline_at)}
           answered={answeredCount}
           total={questions.length}
           doubtCount={doubtCount}

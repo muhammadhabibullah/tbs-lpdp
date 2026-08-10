@@ -1,5 +1,6 @@
 import { syncServerTime } from './clock'
-import { ApiError, isSupabaseConfigured, supabase } from './supabase'
+import { ApiError, isSupabaseConfigured } from './config'
+import { supabase } from './supabase'
 import type {
   AttemptState,
   AttemptSummary,
@@ -47,18 +48,37 @@ async function requireSession(): Promise<void> {
   if (error) fail(error)
 }
 
+/**
+ * The published catalogue, fetched once per page load. HomePage asks for it
+ * while `listAttempts` asks again for its section counts; caching the *promise*
+ * collapses those two into one request even when they overlap in flight. A
+ * newly published package appears on the next reload — the catalogue only
+ * changes when the developer runs the push script.
+ */
+let packagesPromise: Promise<Package[]> | null = null
+
 export const supabaseApi: ExamApi = {
   init: requireSession,
 
   async listPackages(): Promise<Package[]> {
     await requireSession()
-    const { data, error } = await supabase
-      .from('packages')
-      .select('id,title,description,is_published,created_at,subtests(*)')
-      .eq('is_published', true)
-      .order('id')
-    if (error) fail(error)
-    return (data as Package[]).map((pkg) => ({ ...pkg, subtests: sortSubtests(pkg.subtests ?? []) }))
+    if (!packagesPromise) {
+      const load = (async () => {
+        const { data, error } = await supabase
+          .from('packages')
+          .select('id,title,description,is_published,created_at,subtests(*)')
+          .eq('is_published', true)
+          .order('id')
+        if (error) fail(error)
+        return (data as Package[]).map((pkg) => ({ ...pkg, subtests: sortSubtests(pkg.subtests ?? []) }))
+      })()
+      // Never cache a rejection: a failed load must be retryable.
+      packagesPromise = load.catch((err) => {
+        packagesPromise = null
+        throw err
+      })
+    }
+    return packagesPromise
   },
 
   async getPackage(packageId: number): Promise<Package> {

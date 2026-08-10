@@ -1,31 +1,13 @@
 import { createClient } from '@supabase/supabase-js'
-
-const url = import.meta.env.VITE_SUPABASE_URL
+import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from './config'
 
 /**
- * The public client key. Supabase's newer projects issue a *publishable* key
- * (`sb_publishable_…`); older ones issue the legacy *anon* JWT. They play the
- * same role — public, RLS-bound, safe in the bundle — so either is accepted.
+ * The Supabase client. Import this module ONLY from code that is behind the
+ * dynamic import in lib/api.ts — it drags the whole client library with it.
+ * Config flags and `ApiError` live in ./config for that reason.
  */
-const publicKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY
-
-/** False until the developer supplies the project URL + public key (C-1). */
-export const isSupabaseConfigured = Boolean(url && publicKey)
-
-export const supabase = createClient(url ?? 'https://placeholder.supabase.co', publicKey ?? 'placeholder-key', {
-  auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false },
-})
-
-export class ApiError extends Error {
-  code?: string
-  constructor(message: string, code?: string) {
-    super(message)
-    this.name = 'ApiError'
-    this.code = code
-  }
-}
-
-/** Section expired server-side — the section was auto-graded (BE-2). */
-export const DEADLINE_PASSED = 'P0004'
-/** Section already finished; writes are rejected. */
-export const ALREADY_FINISHED = 'P0003'
+export const supabase = createClient(
+  SUPABASE_URL ?? 'https://placeholder.supabase.co',
+  SUPABASE_PUBLIC_KEY ?? 'placeholder-key',
+  { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false } },
+)
