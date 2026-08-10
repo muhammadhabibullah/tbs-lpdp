@@ -1,12 +1,15 @@
-import { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useEffect, useMemo, useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import AppShell from '../components/AppShell'
+import { scrollToSection } from '../components/MenuBar'
 import { USE_MOCK, api, errorMessage } from '../lib/api'
 import { formatDateTime, formatMinutes } from '../lib/clock'
 import { isSupabaseConfigured } from '../lib/config'
 import type { AttemptSummary, Package, ServiceStatus } from '../lib/types'
 
 const MAX_SCORE = 300
+/** Packages per page. Two full rows of the grid on a desktop. */
+const PAGE_SIZE = 6
 
 /** FE-19: shown wherever a new attempt is refused for lack of storage. */
 const CAPACITY_MESSAGE =
@@ -30,12 +33,14 @@ function startErrorMessage(err: unknown): string {
 
 export default function HomePage() {
   const navigate = useNavigate()
+  const location = useLocation()
   const [packages, setPackages] = useState<Package[]>([])
   const [attempts, setAttempts] = useState<AttemptSummary[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [startingId, setStartingId] = useState<number | null>(null)
   const [status, setStatus] = useState<ServiceStatus | null>(null)
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
     let cancelled = false
@@ -66,8 +71,28 @@ export default function HomePage() {
     }
   }, [])
 
+  // The menu bar routes here with the wanted anchor in the location state; the
+  // sections only exist once the fetch has resolved, hence the `loading` gate.
+  useEffect(() => {
+    const target = (location.state as { scrollTo?: string } | null)?.scrollTo
+    if (!target || loading) return
+    scrollToSection(target)
+  }, [location.state, loading])
+
   /** BE-18: null status (probe failed / old schema) is treated as accepting. */
   const atCapacity = status !== null && !status.accepting_attempts
+
+  const pageCount = Math.max(1, Math.ceil(packages.length / PAGE_SIZE))
+  const current = Math.min(page, pageCount)
+  const visiblePackages = useMemo(
+    () => packages.slice((current - 1) * PAGE_SIZE, current * PAGE_SIZE),
+    [packages, current],
+  )
+
+  function goToPage(next: number): void {
+    setPage(Math.min(Math.max(1, next), pageCount))
+    scrollToSection('paket')
+  }
 
   async function start(packageId: number) {
     setStartingId(packageId)
@@ -115,8 +140,18 @@ export default function HomePage() {
         </div>
       ) : null}
 
-      <div className="card">
-        <h2 className="section-title">Paket Try Out</h2>
+      <div className="card" id="paket">
+        <div className="spread">
+          <h2 className="section-title" style={{ margin: 0 }}>
+            Paket Try Out
+          </h2>
+          {packages.length > PAGE_SIZE ? (
+            <span className="muted" style={{ fontSize: 13 }}>
+              Menampilkan {(current - 1) * PAGE_SIZE + 1}–{Math.min(current * PAGE_SIZE, packages.length)} dari{' '}
+              {packages.length} paket
+            </span>
+          ) : null}
+        </div>
         {loading ? (
           <div className="loading">Memuat paket…</div>
         ) : packages.length === 0 ? (
@@ -126,7 +161,7 @@ export default function HomePage() {
           </p>
         ) : (
           <div className="package-grid">
-            {packages.map((pkg) => {
+            {visiblePackages.map((pkg) => {
               const totalQuestions = pkg.subtests.reduce((sum, s) => sum + s.question_count, 0)
               const totalSeconds = pkg.subtests.reduce((sum, s) => sum + s.duration_seconds, 0)
               return (
@@ -164,9 +199,37 @@ export default function HomePage() {
             })}
           </div>
         )}
+
+        {pageCount > 1 ? (
+          <nav className="pagination" aria-label="Halaman paket try out">
+            <button className="btn btn-ghost btn-sm" onClick={() => goToPage(current - 1)} disabled={current === 1}>
+              ◀ Sebelumnya
+            </button>
+            <span className="pagination-pages">
+              {Array.from({ length: pageCount }, (_, i) => i + 1).map((n) => (
+                <button
+                  key={n}
+                  className={`page-dot ${n === current ? 'active' : ''}`}
+                  onClick={() => goToPage(n)}
+                  aria-current={n === current ? 'page' : undefined}
+                  aria-label={`Halaman ${n}`}
+                >
+                  {n}
+                </button>
+              ))}
+            </span>
+            <button
+              className="btn btn-ghost btn-sm"
+              onClick={() => goToPage(current + 1)}
+              disabled={current === pageCount}
+            >
+              Selanjutnya ▶
+            </button>
+          </nav>
+        ) : null}
       </div>
 
-      <div className="card">
+      <div className="card" id="riwayat">
         <h2 className="section-title">Riwayat Pengerjaan</h2>
         {loading ? (
           <div className="loading">Memuat riwayat…</div>

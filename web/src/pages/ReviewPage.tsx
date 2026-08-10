@@ -4,6 +4,7 @@ import AppShell from '../components/AppShell'
 import LaporSoal, { REASON_LABELS } from '../components/LaporSoal'
 import Passage from '../components/Passage'
 import { api, errorMessage, withRetry } from '../lib/api'
+import { formatDateTime } from '../lib/clock'
 import { OPTION_KEYS } from '../lib/types'
 import type { QuestionReport, ReportReason, Review, ReviewQuestion } from '../lib/types'
 
@@ -60,6 +61,9 @@ export default function ReviewPage() {
   const [reportConfirmDelete, setReportConfirmDelete] = useState(false)
   const [reportBusy, setReportBusy] = useState(false)
   const [reportError, setReportError] = useState<string | null>(null)
+  const [packageTitle, setPackageTitle] = useState('')
+  /** True for the one render that feeds the print dialog. */
+  const [printing, setPrinting] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -70,6 +74,14 @@ export default function ReviewPage() {
         if (cancelled) return
         setReview(data)
         setActiveSubtest(data.sections[0]?.subtest.id ?? null)
+        // Only for the heading and the PDF filename, so a failure is ignored;
+        // listPackages is cached per page load, so this is usually free.
+        api
+          .listPackages()
+          .then((pkgs) => {
+            if (!cancelled) setPackageTitle(pkgs.find((p) => p.id === data.attempt.package_id)?.title ?? '')
+          })
+          .catch(() => undefined)
       } catch (err) {
         if (!cancelled) setError(errorMessage(err))
       } finally {
@@ -81,6 +93,29 @@ export default function ReviewPage() {
       cancelled = true
     }
   }, [attemptId])
+
+  /**
+   * FE-20: hand the whole Pembahasan to the browser's own print dialog, which
+   * is where "Save as PDF" lives. No new dependency and no server: the print
+   * stylesheet does the work, and the expanded render below makes sure the PDF
+   * carries every subtest and every question rather than whatever tab and
+   * filter happened to be open.
+   */
+  useEffect(() => {
+    if (!printing) return
+    const previousTitle = document.title
+    // Chrome seeds the PDF filename from the document title.
+    document.title = `Pembahasan — ${packageTitle || `Paket ${review?.attempt.package_id ?? ''}`}`
+    const done = () => setPrinting(false)
+    window.addEventListener('afterprint', done)
+    // one frame, so the expanded DOM is committed before the dialog blocks
+    const timer = window.setTimeout(() => window.print(), 60)
+    return () => {
+      window.clearTimeout(timer)
+      window.removeEventListener('afterprint', done)
+      document.title = previousTitle
+    }
+  }, [printing, packageTitle, review])
 
   const section = useMemo(
     () => review?.sections.find((s) => s.subtest.id === activeSubtest) ?? review?.sections[0] ?? null,
@@ -187,10 +222,17 @@ export default function ReviewPage() {
 
   return (
     <AppShell>
+      {/* Print-only masthead: a PDF with no title is a PDF nobody can file. */}
+      <div className="print-header">
+        <strong>Pembahasan — {packageTitle || 'TBS LPDP Try Out'}</strong>
+        <span>Dikerjakan {formatDateTime(review.attempt.started_at)}</span>
+      </div>
+
       <div className="card">
         <div className="score-hero">
           <div>
             <h1 style={{ margin: '0 0 4px', fontSize: 23 }}>{finished ? 'Hasil Try Out' : 'Hasil Sementara'}</h1>
+            {packageTitle ? <p className="muted" style={{ margin: '0 0 4px' }}>{packageTitle}</p> : null}
             <p className="muted" style={{ margin: 0 }}>
               {finished
                 ? 'Seluruh mata uji telah selesai. Ambang skor bersifat indikatif — seleksi LPDP berbasis peringkat.'
@@ -238,7 +280,19 @@ export default function ReviewPage() {
       </div>
 
       <div className="card">
-        <h2 className="section-title">Pembahasan</h2>
+        <div className="spread" style={{ marginBottom: 14 }}>
+          <h2 className="section-title" style={{ margin: 0 }}>
+            Pembahasan
+          </h2>
+          <button
+            className="btn btn-ghost btn-sm no-print"
+            onClick={() => setPrinting(true)}
+            disabled={printing}
+            title="Membuka dialog cetak — pilih “Save as PDF” untuk mengunduh"
+          >
+            {printing ? 'Menyiapkan…' : '⤓ Unduh PDF'}
+          </button>
+        </div>
 
         <div className="review-filters" style={{ marginBottom: 12 }}>
           {review.sections.map((s) => (
@@ -262,14 +316,46 @@ export default function ReviewPage() {
         </div>
 
         <div style={{ marginTop: 16 }}>
-          {visible.length === 0 ? (
+          {printing ? (
+            // The PDF carries the whole attempt, not the tab and filter that
+            // happen to be open — nobody prints a subset on purpose.
+            review.sections.map((s) => (
+              <section className="print-section" key={s.subtest.id}>
+                <h3 className="print-subtest">
+                  {s.subtest.name} — {s.score} poin
+                </h3>
+                {s.questions.map(renderQuestion)}
+              </section>
+            ))
+          ) : visible.length === 0 ? (
             <p className="empty-state">Tidak ada soal pada filter ini.</p>
           ) : (
-            visible.map((question) => {
-              const correct = question.selected_option === question.correct_option
-              const blank = question.selected_option === null
-              return (
-                <article className="review-question" key={question.id}>
+            visible.map(renderQuestion)
+          )}
+        </div>
+      </div>
+
+      {reportingQuestion ? (
+        <LaporSoal
+          key={reportingQuestion.id}
+          questionNumber={reportingQuestion.number}
+          existing={reportingQuestion.my_report}
+          initialConfirmDelete={reportConfirmDelete}
+          submitting={reportBusy}
+          error={reportError}
+          onCancel={() => setReportingId(null)}
+          onSubmit={(reason, comment) => void submitReport(reason, comment)}
+          onDelete={() => void withdrawReport()}
+        />
+      ) : null}
+    </AppShell>
+  )
+
+  function renderQuestion(question: ReviewQuestion) {
+    const correct = question.selected_option === question.correct_option
+    const blank = question.selected_option === null
+    return (
+              <article className="review-question" key={question.id}>
                   <header>
                     <h4>Soal nomor {question.number}</h4>
                     <span className={`tag ${blank ? 'blank' : correct ? 'correct' : 'wrong'}`}>
@@ -328,26 +414,7 @@ export default function ReviewPage() {
                       )
                     })}
                   </div>
-                </article>
-              )
-            })
-          )}
-        </div>
-      </div>
-
-      {reportingQuestion ? (
-        <LaporSoal
-          key={reportingQuestion.id}
-          questionNumber={reportingQuestion.number}
-          existing={reportingQuestion.my_report}
-          initialConfirmDelete={reportConfirmDelete}
-          submitting={reportBusy}
-          error={reportError}
-          onCancel={() => setReportingId(null)}
-          onSubmit={(reason, comment) => void submitReport(reason, comment)}
-          onDelete={() => void withdrawReport()}
-        />
-      ) : null}
-    </AppShell>
-  )
+              </article>
+    )
+  }
 }

@@ -1,16 +1,18 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import FeedbackFooter from './FeedbackFooter'
+import MenuBar from './MenuBar'
 
 /** Blue masthead + light page body, mirroring the PUSMENDIK CBT chrome. */
 export default function AppShell({
   children,
-  /** Suppressed while a section is running: a mailto would send the candidate
-      out of the app, and the deadline keeps ticking server-side. */
-  hideFeedback = false,
+  /** Strips the nav and the footer while a section is running: both lead out of
+      the exam (one to another page, one to a mail client) and the deadline
+      keeps ticking server-side. */
+  hideChrome = false,
 }: {
   children: ReactNode
-  hideFeedback?: boolean
+  hideChrome?: boolean
 }) {
   return (
     <div className="app">
@@ -39,9 +41,10 @@ export default function AppShell({
             </span>
           </div>
         </div>
+        {hideChrome ? null : <MenuBar />}
       </header>
       <main className="page">{children}</main>
-      {hideFeedback ? null : <FeedbackFooter />}
+      {hideChrome ? null : <FeedbackFooter />}
     </div>
   )
 }

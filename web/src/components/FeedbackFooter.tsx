@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 /**
  * The maintainer's address, assembled at runtime: the served HTML is a JS
  * bundle either way, but a plain `mailto:` literal is exactly what address
@@ -24,22 +22,8 @@ export function feedbackMailto(subject = 'Masukan — TBS LPDP Try Out'): string
 }
 
 export default function FeedbackFooter() {
-  const [copied, setCopied] = useState(false)
-
-  async function copyAddress() {
-    try {
-      await navigator.clipboard.writeText(FEEDBACK_EMAIL)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    } catch {
-      // Clipboard blocked (insecure context, permission denied): the address is
-      // on screen next to this button, so selecting it by hand still works.
-      setCopied(false)
-    }
-  }
-
   return (
-    <footer className="site-footer">
+    <footer className="site-footer" id="disclaimer">
       {/* One container for both rows, so the fine print lines up with the
           heading above it instead of being centred on its own. */}
       <div className="site-footer-inner">
@@ -51,14 +35,16 @@ export default function FeedbackFooter() {
               <a href={feedbackMailto()}>{FEEDBACK_EMAIL}</a>. Setiap masukan dibaca dan dipakai untuk memperbaiki bank
               soal.
             </p>
+            <p className="site-footer-contact">
+              <strong>Kontak:</strong> Muhammad Habibullah —{' '}
+              <a href={feedbackMailto()}>{FEEDBACK_EMAIL}</a>
+              <span>(Calon Penerima Beasiswa LPDP Jalur Non-LoA)</span>
+            </p>
           </div>
           <div className="site-footer-actions">
             <a className="btn btn-cyan btn-sm" href={feedbackMailto()}>
               Kirim Masukan
             </a>
-            <button className="btn btn-ghost btn-sm" type="button" onClick={() => void copyAddress()}>
-              {copied ? '✓ Alamat tersalin' : 'Salin alamat email'}
-            </button>
           </div>
         </div>
 
