@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-022",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Sebuah perusahaan memiliki 1.200 karyawan; 55% di antaranya laki-laki dan sisanya perempuan. Sebanyak 25% karyawan laki-laki dan 40% karyawan perempuan mengikuti program pelatihan kepemimpinan. Berapa persen dari seluruh karyawan perusahaan itu yang mengikuti program pelatihan tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "18%"
+    },
+    {
+      "key": "B",
+      "text": "31,75%"
+    },
+    {
+      "key": "C",
+      "text": "32,5%"
+    },
+    {
+      "key": "D",
+      "text": "40%"
+    },
+    {
+      "key": "E",
+      "text": "65%"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. 18% hanyalah kontribusi peserta perempuan terhadap seluruh karyawan (40% × 45% = 18%). Perhitungan ini belum menambahkan kontribusi peserta laki-laki sebesar 25% × 55% = 13,75%.",
+    "B": "Benar. Karyawan laki-laki = 55% × 1.200 = 660 orang dan karyawan perempuan = 1.200 − 660 = 540 orang. Peserta pelatihan = 25% × 660 + 40% × 540 = 165 + 216 = 381 orang, sehingga persentasenya = 381 : 1.200 = 31,75%.",
+    "C": "Salah. 32,5% adalah rata-rata biasa dari 25% dan 40%. Rata-rata tanpa bobot hanya benar apabila banyak karyawan laki-laki dan perempuan sama; karena kelompok laki-laki lebih besar (55%) dan persentase pesertanya lebih kecil, persentase keseluruhan yang benar berada di bawah 32,5%.",
+    "D": "Salah. 40% adalah persentase peserta pada kelompok perempuan saja. Menggunakannya untuk seluruh karyawan berarti menganggap karyawan laki-laki juga mengikuti pelatihan dengan tingkat 40%, padahal tingkat keikutsertaan mereka hanya 25%.",
+    "E": "Salah. 65% diperoleh dengan menjumlahkan 25% dan 40% secara langsung. Kedua persentase itu dihitung dari kelompok yang berbeda (laki-laki dan perempuan), sehingga tidak dapat dijumlahkan begitu saja tanpa memperhitungkan ukuran masing-masing kelompok."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

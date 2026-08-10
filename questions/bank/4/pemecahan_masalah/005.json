@@ -1,0 +1,43 @@
+{
+  "id": "4-pemecahan_masalah-005",
+  "package": 4,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Enam pegawai, yaitu Gilang, Hana, Irfan, Karin, Lukman, dan Melati, dibagi ke dalam dua kelompok kerja, yaitu kelompok Pagi dan kelompok Sore, yang masing-masing beranggotakan tepat tiga orang. Pembagian kelompok tunduk pada ketentuan berikut.\n(1) Gilang dan Hana berada pada kelompok yang berbeda.\n(2) Irfan berada pada kelompok Pagi.\n(3) Jika Karin berada pada kelompok Pagi, Lukman berada pada kelompok Sore.\n(4) Melati berada pada kelompok yang sama dengan Gilang.\n\nApabila Lukman berada pada kelompok Pagi, pernyataan yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Karin berada pada kelompok yang sama dengan Irfan."
+    },
+    {
+      "key": "B",
+      "text": "Gilang berada pada kelompok Pagi."
+    },
+    {
+      "key": "C",
+      "text": "Melati berada pada kelompok yang sama dengan Lukman."
+    },
+    {
+      "key": "D",
+      "text": "Karin berada pada kelompok yang sama dengan Hana."
+    },
+    {
+      "key": "E",
+      "text": "Hana berada pada kelompok yang sama dengan Irfan."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Andaikan Karin berada pada kelompok Pagi, ketentuan 3 mengharuskan Lukman berada pada kelompok Sore, padahal Lukman berada pada kelompok Pagi. Karin karena itu pasti berada pada kelompok Sore, terpisah dari Irfan yang berada pada kelompok Pagi.",
+    "B": "Salah. Kelompok Pagi sudah memuat Irfan dan Lukman sehingga tersisa satu tempat. Gilang harus sekelompok dengan Melati menurut ketentuan 4, dan satu tempat tidak cukup untuk mereka berdua, sehingga Gilang pasti berada pada kelompok Sore.",
+    "C": "Salah. Melati mengikuti Gilang menurut ketentuan 4, dan keduanya harus berada pada kelompok Sore karena kelompok Pagi hanya menyisakan satu tempat. Lukman berada pada kelompok Pagi, sehingga Melati justru terpisah dari Lukman.",
+    "D": "Salah. Karin pasti berada pada kelompok Sore, sedangkan Hana mengisi satu-satunya tempat tersisa pada kelompok Pagi setelah Gilang, Melati, dan Karin dipastikan berada pada kelompok Sore. Karin dan Hana berada pada kelompok yang berbeda.",
+    "E": "Benar. Kelompok Pagi memuat Irfan dan Lukman sehingga tersisa satu tempat. Karin tersingkir dari kelompok Pagi oleh kontraposisi ketentuan 3, dan pasangan Gilang-Melati (ketentuan 4) tidak muat pada satu tempat tersisa sehingga keduanya berada pada kelompok Sore. Satu-satunya pegawai yang dapat mengisi tempat terakhir kelompok Pagi adalah Hana, sehingga kelompok Pagi terdiri atas Hana, Irfan, dan Lukman; ketentuan 1 pun terpenuhi karena Gilang berada pada kelompok Sore."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

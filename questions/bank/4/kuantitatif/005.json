@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-005",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "Diketahui a : b = 4 : 5. Apabila a = 60, berapakah nilai b?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "300"
+    },
+    {
+      "key": "B",
+      "text": "48"
+    },
+    {
+      "key": "C",
+      "text": "15"
+    },
+    {
+      "key": "D",
+      "text": "135"
+    },
+    {
+      "key": "E",
+      "text": "75"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 300 diperoleh dengan mengalikan dengan 5 tanpa membaginya dengan 4.",
+    "B": "Salah. Nilai 48 diperoleh dengan membalik perbandingan sehingga menghitung 60 × 4/5.",
+    "C": "Salah. Nilai 15 diperoleh dengan berhenti pada faktor pengali perbandingan (60 ÷ 4) dan tidak mengalikannya kembali.",
+    "D": "Salah. Nilai 135 diperoleh dengan menghitung jumlah a dan b, bukan nilai b saja.",
+    "E": "Benar. a : b = 4 : 5, sehingga b = a × 5/4 = 60 × 5/4 = 75."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "4-pemecahan_masalah-001",
+  "package": 4,
+  "subtest": "pemecahan_masalah",
+  "number": 1,
+  "type": "peluang_kombinatorik",
+  "question_text": "Sebuah kantong berisi 4 kelereng merah, 3 kelereng biru, dan 9 kelereng hijau. Apabila diambil dua kelereng sekaligus secara acak, peluang terambil satu kelereng merah dan satu kelereng biru adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "1/10"
+    },
+    {
+      "key": "B",
+      "text": "1/5"
+    },
+    {
+      "key": "C",
+      "text": "3/40"
+    },
+    {
+      "key": "D",
+      "text": "3/64"
+    },
+    {
+      "key": "E",
+      "text": "4/7"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Banyak cara mengambil 2 kelereng dari 16 kelereng adalah C(16, 2) = 120. Banyak cara memilih satu merah dan satu biru adalah 4 × 3 = 12. Peluangnya 12/120 = 1/10.",
+    "B": "Salah. Nilai 1/5 diperoleh dengan menghitung pasangan merah-biru dan biru-merah sebagai dua hasil berbeda, padahal kedua kelereng diambil sekaligus sehingga urutannya tidak dibedakan.",
+    "C": "Salah. Nilai 3/40 diperoleh dengan menghitung peluang kedua kelereng sama-sama merah atau sama-sama biru, bukan satu merah dan satu biru.",
+    "D": "Salah. Nilai 3/64 diperoleh dengan memakai 16² sebagai banyak hasil yang mungkin, yaitu pengambilan dua kali dengan pengembalian dan memperhatikan urutan.",
+    "E": "Salah. Nilai 4/7 diperoleh dengan mengabaikan 9 kelereng hijau ketika menghitung banyak cara pengambilan."
+  },
+  "difficulty": "hard",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

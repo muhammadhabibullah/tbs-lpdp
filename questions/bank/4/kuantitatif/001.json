@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-001",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 1,
+  "type": "aritmetika",
+  "question_text": "Nilai dari 29 × 25 − 18 × 9 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−189"
+    },
+    {
+      "key": "B",
+      "text": "887"
+    },
+    {
+      "key": "C",
+      "text": "−563"
+    },
+    {
+      "key": "D",
+      "text": "698"
+    },
+    {
+      "key": "E",
+      "text": "563"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai −189 diperoleh dengan menukar faktor kedua pada masing-masing perkalian, yaitu 29 × 9 − 18 × 25.",
+    "B": "Salah. Nilai 887 diperoleh dengan menjumlahkan kedua hasil kali, bukan mengurangkannya.",
+    "C": "Salah. Nilai −563 diperoleh dengan membalik urutan pengurangan sehingga tandanya tertukar.",
+    "D": "Salah. Nilai 698 diperoleh dengan mengurangkan jumlah 18 dan 9, bukan hasil kalinya.",
+    "E": "Benar. 29 × 25 − 18 × 9 = 725 − 162 = 563."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

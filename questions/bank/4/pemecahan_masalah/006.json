@@ -1,0 +1,43 @@
+{
+  "id": "4-pemecahan_masalah-006",
+  "package": 4,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Enam pemain bulu tangkis, yaitu Nanda, Oki, Pandu, Rendi, Satya, dan Tomi, akan dibagi menjadi tiga pasangan ganda. Setiap pemain tergabung dalam tepat satu pasangan. Pembentukan pasangan tunduk pada ketentuan berikut.\n(1) Nanda tidak berpasangan dengan Oki.\n(2) Jika Pandu berpasangan dengan Rendi, Satya berpasangan dengan Nanda.\n(3) Tomi tidak berpasangan dengan Satya.\n(4) Oki berpasangan dengan Pandu atau dengan Satya.\n\nPernyataan yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rendi berpasangan dengan Tomi."
+    },
+    {
+      "key": "B",
+      "text": "Pandu tidak berpasangan dengan Rendi."
+    },
+    {
+      "key": "C",
+      "text": "Satya berpasangan dengan Nanda."
+    },
+    {
+      "key": "D",
+      "text": "Oki berpasangan dengan Pandu."
+    },
+    {
+      "key": "E",
+      "text": "Nanda tidak berpasangan dengan Rendi."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Rendi memang dapat berpasangan dengan Tomi, misalnya pada susunan Oki-Pandu, Nanda-Satya, Rendi-Tomi. Namun, susunan Oki-Pandu, Nanda-Tomi, Rendi-Satya juga memenuhi seluruh ketentuan, sehingga pernyataan ini tidak pasti benar.",
+    "B": "Benar. Ketentuan 4 memunculkan dua kemungkinan. Jika Oki berpasangan dengan Pandu, Pandu jelas tidak dapat berpasangan dengan Rendi. Jika Oki berpasangan dengan Satya, maka andaikan Pandu berpasangan dengan Rendi, ketentuan 2 menuntut Satya berpasangan dengan Nanda, padahal Satya sudah berpasangan dengan Oki; terjadi kontradiksi sehingga Pandu tetap tidak dapat berpasangan dengan Rendi. Pada kedua kemungkinan, Pandu tidak pernah berpasangan dengan Rendi.",
+    "C": "Salah. Satya berpasangan dengan Nanda hanya pada susunan Oki-Pandu, Nanda-Satya, Rendi-Tomi. Pada susunan sah yang lain, misalnya Oki-Satya, Nanda-Pandu, Rendi-Tomi, Satya justru berpasangan dengan Oki, sehingga pernyataan ini tidak pasti benar.",
+    "D": "Salah. Ketentuan 4 juga membolehkan Oki berpasangan dengan Satya, dan susunan seperti Oki-Satya, Nanda-Pandu, Rendi-Tomi memenuhi seluruh ketentuan. Oki karena itu tidak harus berpasangan dengan Pandu.",
+    "E": "Salah. Susunan Oki-Satya, Nanda-Rendi, Pandu-Tomi memenuhi seluruh ketentuan: Nanda tidak bersama Oki, Pandu tidak bersama Rendi, dan Tomi tidak bersama Satya. Nanda dengan demikian dapat berpasangan dengan Rendi, sehingga pernyataan ini tidak pasti benar."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

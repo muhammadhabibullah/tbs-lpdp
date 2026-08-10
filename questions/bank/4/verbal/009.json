@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-009",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "LAMPU : MENERANGI = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Meja : Kayu"
+    },
+    {
+      "key": "B",
+      "text": "Kulkas : Dapur"
+    },
+    {
+      "key": "C",
+      "text": "Sepatu : Kaki"
+    },
+    {
+      "key": "D",
+      "text": "Radio : Antena"
+    },
+    {
+      "key": "E",
+      "text": "Kipas angin : Menyejukkan"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Meja dan kayu berhubungan sebagai benda dan bahan pembuatnya, bukan benda dan fungsinya.",
+    "B": "Kulkas dan dapur berhubungan sebagai benda dan tempatnya berada, bukan benda dan fungsinya.",
+    "C": "Sepatu dan kaki berhubungan sebagai benda dan anggota tubuh pemakainya, bukan benda dan fungsinya.",
+    "D": "Radio dan antena berhubungan sebagai benda dan salah satu bagiannya, bukan benda dan fungsinya.",
+    "E": "Benar. Lampu berfungsi menerangi, sebagaimana kipas angin berfungsi menyejukkan: hubungan benda dengan fungsinya."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

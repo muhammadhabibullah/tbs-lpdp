@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-006",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "TENTATIF >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sementara"
+    },
+    {
+      "key": "B",
+      "text": "Fleksibel"
+    },
+    {
+      "key": "C",
+      "text": "Terjadwal"
+    },
+    {
+      "key": "D",
+      "text": "Definitif"
+    },
+    {
+      "key": "E",
+      "text": "Spekulatif"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Sementara justru merupakan sinonim tentatif, yaitu belum pasti dan masih dapat berubah.",
+    "B": "Fleksibel berarti luwes atau mudah disesuaikan; maknanya searah dengan tentatif, bukan berlawanan.",
+    "C": "Terjadwal berarti sudah dimasukkan ke dalam jadwal; sesuatu yang terjadwal tetap bisa bersifat tentatif, sehingga bukan lawan maknanya.",
+    "D": "Benar. Tentatif berarti belum pasti dan masih dapat berubah; lawannya adalah definitif, yaitu sudah pasti dan tidak akan diubah lagi.",
+    "E": "Spekulatif berarti bersifat dugaan; maknanya searah dengan ketidakpastian tentatif, bukan berlawanan."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-013",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "DEHIDRASI : CAIRAN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Obesitas : Lemak"
+    },
+    {
+      "key": "B",
+      "text": "Anemia : Sel darah merah"
+    },
+    {
+      "key": "C",
+      "text": "Insomnia : Mimpi"
+    },
+    {
+      "key": "D",
+      "text": "Demam : Suhu tubuh"
+    },
+    {
+      "key": "E",
+      "text": "Luka : Darah"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Obesitas adalah kondisi kelebihan lemak tubuh; arah hubungannya terbalik dari pasangan soal yang menyatakan kekurangan.",
+    "B": "Benar. Dehidrasi adalah kondisi tubuh kekurangan cairan, sebagaimana anemia adalah kondisi tubuh kekurangan sel darah merah.",
+    "C": "Insomnia adalah kesulitan atau kekurangan tidur, bukan kekurangan mimpi, sehingga pasangannya tidak sejajar.",
+    "D": "Demam adalah kondisi suhu tubuh meningkat melebihi normal; hubungannya kelebihan atau kenaikan, bukan kekurangan.",
+    "E": "Luka menyebabkan keluarnya darah; hubungannya sebab dan akibat, bukan kondisi dan zat yang kurang."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

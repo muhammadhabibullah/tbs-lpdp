@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-021",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Seorang pedagang menjual dua buah jam tangan dengan harga jual sama, yaitu Rp240.000,00 per buah. Dari jam pertama ia memperoleh untung 20% terhadap harga belinya, sedangkan dari jam kedua ia menanggung rugi 20% terhadap harga belinya. Secara keseluruhan, dari penjualan kedua jam tangan itu pedagang tersebut mengalami ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "rugi Rp20.000,00"
+    },
+    {
+      "key": "B",
+      "text": "rugi Rp60.000,00"
+    },
+    {
+      "key": "C",
+      "text": "rugi Rp100.000,00"
+    },
+    {
+      "key": "D",
+      "text": "untung Rp40.000,00"
+    },
+    {
+      "key": "E",
+      "text": "tidak untung dan tidak rugi"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Harga beli jam pertama = 240.000 : 1,2 = Rp200.000,00 dan harga beli jam kedua = 240.000 : 0,8 = Rp300.000,00, sehingga total harga beli Rp500.000,00. Total harga jual = 2 × Rp240.000,00 = Rp480.000,00. Jadi pedagang rugi Rp500.000,00 − Rp480.000,00 = Rp20.000,00.",
+    "B": "Salah. Rp60.000,00 hanyalah kerugian dari jam kedua (Rp300.000,00 − Rp240.000,00). Perhitungan ini mengabaikan keuntungan Rp40.000,00 dari jam pertama yang menutup sebagian kerugian itu.",
+    "C": "Salah. Rp100.000,00 diperoleh dengan menghitung 20% dari total harga beli Rp500.000,00. Padahal persentase 20% itu berlaku terpisah pada masing-masing jam — satu sebagai untung dan satu sebagai rugi — bukan sebagai rugi atas seluruh modal.",
+    "D": "Salah. Rp40.000,00 hanyalah keuntungan dari jam pertama (Rp240.000,00 − Rp200.000,00). Perhitungan ini mengabaikan kerugian Rp60.000,00 dari jam kedua yang lebih besar daripada keuntungan tersebut.",
+    "E": "Salah. Kesimpulan impas muncul apabila untung dan rugi masing-masing dihitung 20% dari harga jual yang sama sehingga tampak saling meniadakan. Persentase untung dan rugi dihitung terhadap harga beli, dan kedua harga beli itu berbeda (Rp200.000,00 dan Rp300.000,00), sehingga rugi Rp60.000,00 melebihi untung Rp40.000,00."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

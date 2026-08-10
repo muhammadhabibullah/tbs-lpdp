@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-006",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 6,
+  "type": "aljabar",
+  "question_text": "Diketahui x + y = 14 dan xy = 37. Nilai dari x² + y² adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "159"
+    },
+    {
+      "key": "B",
+      "text": "270"
+    },
+    {
+      "key": "C",
+      "text": "48"
+    },
+    {
+      "key": "D",
+      "text": "122"
+    },
+    {
+      "key": "E",
+      "text": "196"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 159 diperoleh dengan mengurangkan xy satu kali, padahal penjabaran (x + y)² memuat 2xy.",
+    "B": "Salah. Nilai 270 diperoleh dengan menambahkan 2xy, padahal suku itu harus dipindahkan sehingga dikurangkan.",
+    "C": "Salah. Nilai 48 diperoleh dengan menghitung (x − y)² = (x + y)² − 4xy, yang merupakan besaran lain.",
+    "D": "Benar. x² + y² = (x + y)² − 2xy = 14² − 2 × 37 = 196 − 74 = 122.",
+    "E": "Salah. Nilai 196 diperoleh dengan menghitung (x + y)² = 196 dan berhenti di situ, tanpa mengurangkan 2xy."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

@@ -478,6 +478,104 @@ def cone(*, radius_u: float, height_u: float, unit: str,
     )
 
 
+def parallelogram(*, base_u: float, side_u: float, height_u: float, unit: str,
+                  target_w: float = 300, target_h: float = 170) -> Drawing:
+    """Parallelogram from its base, slant side and height.
+
+    All three are stated by the stem, so all three are labelled — the height as
+    a dashed segment with the right angle at its foot. The area the item asks
+    for appears nowhere in the drawing."""
+    if side_u <= height_u:
+        raise ValueError(f"side {side_u} cannot reach height {height_u}")
+    offset_u = math.sqrt(side_u ** 2 - height_u ** 2)
+
+    scale = min(target_w / (base_u + offset_u), target_h / height_u)
+    left, top = 66.0, PAD
+    base_y = top + height_u * scale
+    bl = (left, base_y)
+    br = (left + base_u * scale, base_y)
+    tl = (left + offset_u * scale, top)
+    tr = (tl[0] + base_u * scale, top)
+    centre = ((bl[0] + tr[0]) / 2, (top + base_y) / 2)
+
+    foot = (tl[0], base_y)
+    sq = 12.0
+    parts = [
+        _polygon([bl, br, tr, tl], FILL),
+        # the height, dashed from the top-left vertex straight down to the base
+        f'<line x1="{_f(tl[0])}" y1="{_f(tl[1])}" x2="{_f(foot[0])}" y2="{_f(foot[1])}" '
+        f'stroke="{INK_SOFT}" stroke-width="1.5" stroke-dasharray="5 4"/>',
+        # its right angle, opening into the interior on the left of the foot
+        f'<polyline points="{_f(foot[0] - sq)},{_f(base_y)} {_f(foot[0] - sq)},{_f(base_y - sq)} '
+        f'{_f(foot[0])},{_f(base_y - sq)}" fill="none" stroke="{INK}" stroke-width="1.4"/>',
+        _text(foot[0] + 7, (top + base_y) / 2 + CAP / 2,
+              f"{_num(height_u)} {unit}", anchor="start"),
+        *_dim_h(bl[0], br[0], base_y + GAP + TICK, f"{_num(base_u)} {unit}"),
+        _label_beside(br, tr, centre, f"{_num(side_u)} {unit}"),
+    ]
+    return Drawing(
+        width=tr[0] + 62,
+        height=base_y + GAP + TICK + CAP + 6 + PAD - 8,
+        parts=parts,
+        note=(f"jajargenjang: alas {_num(base_u)} {unit}, sisi miring {_num(side_u)} "
+              f"{unit}, tinggi {_num(height_u)} {unit}; skala {_f(scale)} px per {unit}. "
+              f"Ketiganya diberikan di soal; luas yang ditanya TIDAK tercantum."),
+    )
+
+
+def triangular_prism(*, leg_front_u: float, leg_depth_u: float, height_u: float,
+                     unit: str, target_w: float = 160, target_h: float = 190) -> Drawing:
+    """Upright prism on a right-triangle base, in oblique projection.
+
+    The front bottom edge and the receding edge are the triangle's legs; its
+    hypotenuse is what Pythagoras is for, so that edge is never labelled."""
+    scale = min(target_w / leg_front_u, target_h / height_u)
+    w, h = leg_front_u * scale, height_u * scale
+    depth = leg_depth_u * scale * DEPTH_FACTOR
+    dx = depth * math.cos(math.radians(DEPTH_ANGLE))
+    dy = -depth * math.sin(math.radians(DEPTH_ANGLE))
+
+    left = 60.0
+    top = PAD - dy          # room for the back vertex above the front face
+    x0, y0 = left, top
+    x1, y1 = left + w, top + h
+    A, B = (x0, y1), (x1, y1)          # front bottom edge — the first leg
+    At, Bt = (x0, y0), (x1, y0)
+    Cb = (x0 + dx, y1 + dy)            # back vertex, along the second leg
+    Ct = (x0 + dx, y0 + dy)
+    top_centre = ((At[0] + Bt[0] + Ct[0]) / 3, (At[1] + Bt[1] + Ct[1]) / 3)
+
+    # The base triangle's right angle, drawn skewed on the visible top face.
+    n = math.hypot(dx, dy)
+    u1, u2 = (1.0, 0.0), (dx / n, dy / n)
+    sq = 11.0
+    sq_pts = " ".join(
+        f"{_f(At[0] + vx * sq)},{_f(At[1] + vy * sq)}"
+        for vx, vy in (u1, (u1[0] + u2[0], u1[1] + u2[1]), u2))
+
+    parts = [
+        _polygon([B, Cb, Ct, Bt], FILL_SIDE),      # the hypotenuse face
+        _polygon([At, Bt, Ct], FILL_TOP),          # top triangle
+        f'<rect x="{_f(x0)}" y="{_f(y0)}" width="{_f(w)}" height="{_f(h)}" '
+        f'fill="{FILL}" stroke="{STROKE}" stroke-width="2"/>',
+        f'<line x1="{_f(A[0])}" y1="{_f(A[1])}" x2="{_f(Cb[0])}" y2="{_f(Cb[1])}" '
+        f'stroke="{HIDDEN}" stroke-width="1.5" stroke-dasharray="5 4"/>',
+        f'<polyline points="{sq_pts}" fill="none" stroke="{INK}" stroke-width="1.4"/>',
+        *_dim_h(x0, x1, y1 + GAP + TICK, f"{_num(leg_front_u)} {unit}"),
+        *_dim_v(y0, y1, x0 - GAP - TICK, f"{_num(height_u)} {unit}"),
+        _label_beside(At, Ct, top_centre, f"{_num(leg_depth_u)} {unit}", offset=14),
+    ]
+    return Drawing(
+        width=x1 + 40,
+        height=y1 + GAP + TICK + CAP + 6 + PAD - 8,
+        parts=parts,
+        note=(f"prisma tegak, alas segitiga siku-siku {_num(leg_front_u)} x "
+              f"{_num(leg_depth_u)} {unit}, tinggi {_num(height_u)} {unit}, proyeksi "
+              f"miring {_f(DEPTH_ANGLE)}°; skala {_f(scale)} px per {unit}. "
+              f"Sisi miring alas TIDAK dilabeli."),
+    )
+
+
 def _num(v: float) -> str:
     """Format a quantity for a label: 20 not 20.0, 7.5 stays 7.5."""
     return str(int(v)) if float(v).is_integer() else _f(v)
@@ -854,6 +952,10 @@ FIGURES: list[Figure] = [
         d1_u=24, d2_u=10, unit="cm")),
     Figure("3-kuantitatif-025", "kerucut.svg", lambda: cone(
         radius_u=7, height_u=24, unit="cm")),
+    Figure("4-kuantitatif-024", "jajargenjang.svg", lambda: parallelogram(
+        base_u=25, side_u=17, height_u=15, unit="cm")),
+    Figure("4-kuantitatif-025", "prisma-segitiga.svg", lambda: triangular_prism(
+        leg_front_u=12, leg_depth_u=9, height_u=20, unit="cm")),
 ]
 
 

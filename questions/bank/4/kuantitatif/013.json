@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-013",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 13,
+  "type": "deret_angka",
+  "question_text": "5, 7, 12, 19, ..., ..., 81 Dua bilangan yang tepat untuk mengisi titik-titik tersebut berturut-turut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "50, 31"
+    },
+    {
+      "key": "B",
+      "text": "26, 33"
+    },
+    {
+      "key": "C",
+      "text": "31, 50"
+    },
+    {
+      "key": "D",
+      "text": "28, 39"
+    },
+    {
+      "key": "E",
+      "text": "50, 81"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Pasangan ini diperoleh dengan menemukan kedua bilangan dengan benar tetapi menuliskannya terbalik.",
+    "B": "Salah. Pasangan ini diperoleh dengan menganggap selisih deret tetap sebesar selisih dua suku tercetak terakhir (7), yang tidak membawa deret sampai ke suku terakhir.",
+    "C": "Benar. Setiap suku merupakan jumlah dua suku sebelumnya (5 + 7 = 12; 7 + 12 = 19). Suku berikutnya adalah 31 + 50 = 81. Dua bilangan yang hilang adalah 31 dan 50; suku terakhir yang tercetak (81) mengonfirmasi pola tersebut.",
+    "D": "Salah. Pasangan ini diperoleh dengan membaca deret ini sebagai pola tingkat dua, yaitu selisih yang bertambah tetap 2 setiap langkah.",
+    "E": "Salah. Pasangan ini diperoleh dengan menggeser jawaban satu suku, sehingga titik-titik diisi dengan suku keenam dan suku ketujuh — padahal suku ketujuh sudah tercetak."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

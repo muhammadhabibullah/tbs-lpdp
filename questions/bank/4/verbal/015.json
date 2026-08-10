@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-015",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Premis 1: Semua dosen penerima hibah penelitian menyusun laporan akhir.\nPremis 2: Sebagian penyusun laporan akhir diundang menjadi pemakalah pada seminar hasil.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Dosen penerima hibah penelitian belum tentu diundang menjadi pemakalah pada seminar hasil."
+    },
+    {
+      "key": "B",
+      "text": "Semua dosen penerima hibah penelitian diundang menjadi pemakalah pada seminar hasil."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian dosen penerima hibah penelitian diundang menjadi pemakalah pada seminar hasil."
+    },
+    {
+      "key": "D",
+      "text": "Semua yang diundang menjadi pemakalah pada seminar hasil adalah dosen penerima hibah penelitian."
+    },
+    {
+      "key": "E",
+      "text": "Sebagian penyusun laporan akhir bukan dosen penerima hibah penelitian."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Semua penerima hibah memang menyusun laporan akhir, tetapi yang diundang hanyalah sebagian penyusun laporan; sebagian itu bisa saja tidak mencakup satu pun penerima hibah, sehingga keterundangan penerima hibah tidak dapat dipastikan.",
+    "B": "Terlalu kuat: Premis 2 hanya menyebut sebagian penyusun laporan, dan tidak ada jaminan sebagian itu memuat seluruh penerima hibah.",
+    "C": "Tetap tidak terjamin: sebagian penyusun yang diundang mungkin seluruhnya berasal dari penyusun laporan yang bukan penerima hibah.",
+    "D": "Premis 2 tidak menyatakan bahwa undangan hanya diberikan kepada penyusun laporan tertentu; tidak ada dasar untuk membalik keanggotaan menjadi semua yang diundang adalah penerima hibah.",
+    "E": "Tidak ada premis yang menjamin adanya penyusun laporan akhir di luar penerima hibah; bisa saja semua penyusun laporan justru penerima hibah."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

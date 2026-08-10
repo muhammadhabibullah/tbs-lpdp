@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-022",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Gagasan utama paragraf kedua bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Bank benih adalah fasilitas penyimpanan yang menjaga keanekaragaman genetik tanaman pangan. Benih dikeringkan hingga kadar airnya sangat rendah, kemudian disimpan dalam ruangan bersuhu jauh di bawah nol derajat agar metabolismenya melambat dan benih dapat bertahan selama puluhan tahun. Koleksi semacam ini menjadi cadangan ketika suatu varietas lokal lenyap dari lahan petani, misalnya karena serangan hama, bencana alam, atau beralihnya petani ke segelintir varietas unggul yang seragam.\n\nMeskipun demikian, penyimpanan beku bukan jaminan yang berlaku selamanya. Viabilitas benih menurun secara bertahap sehingga setiap koleksi harus ditanam ulang secara berkala untuk menghasilkan benih segar sebagai pengganti. Sebagian tumbuhan, seperti banyak jenis buah tropis, menghasilkan benih yang rusak apabila dikeringkan sehingga tidak dapat disimpan dengan cara tersebut. Di samping itu, kegiatan penanaman ulang, pencatatan, dan perawatan ruang pendingin menuntut biaya serta tenaga ahli yang berkesinambungan, padahal pendanaan bank benih di banyak negara belum stabil.",
+  "options": [
+    {
+      "key": "A",
+      "text": "berbagai keterbatasan yang membuat penyimpanan beku benih bukan jaminan yang berlaku selamanya"
+    },
+    {
+      "key": "B",
+      "text": "penurunan viabilitas benih secara bertahap selama penyimpanan beku"
+    },
+    {
+      "key": "C",
+      "text": "kerusakan benih banyak jenis buah tropis apabila dikeringkan"
+    },
+    {
+      "key": "D",
+      "text": "besarnya biaya dan kebutuhan tenaga ahli untuk perawatan ruang pendingin"
+    },
+    {
+      "key": "E",
+      "text": "keharusan menanam ulang seluruh koleksi benih setiap tahun"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Kalimat pertama paragraf kedua menyatakan bahwa penyimpanan beku bukan jaminan selamanya, lalu seluruh kalimat berikutnya merinci keterbatasan-keterbatasannya: viabilitas menurun, sebagian benih tidak dapat dikeringkan, serta biaya dan pendanaan yang belum stabil.",
+    "B": "Penurunan viabilitas hanyalah salah satu rincian penjelas, bukan gagasan yang memayungi seluruh paragraf.",
+    "C": "Kerusakan benih buah tropis saat dikeringkan adalah contoh pendukung, bukan gagasan utama paragraf.",
+    "D": "Kebutuhan biaya dan tenaga ahli adalah rincian penjelas terakhir, bukan gagasan yang mencakup seluruh isi paragraf.",
+    "E": "Selain hanya rincian, pernyataan ini juga tidak akurat: bacaan menyebut penanaman ulang dilakukan secara berkala, bukan setiap tahun."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

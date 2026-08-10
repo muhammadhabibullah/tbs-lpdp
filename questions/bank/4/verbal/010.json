@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-010",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "ENTOMOLOGI : SERANGGA = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Ornitologi : Burung"
+    },
+    {
+      "key": "B",
+      "text": "Kardiologi : Paru-paru"
+    },
+    {
+      "key": "C",
+      "text": "Astronomi : Astrologi"
+    },
+    {
+      "key": "D",
+      "text": "Meteorologi : Meteor"
+    },
+    {
+      "key": "E",
+      "text": "Farmasi : Penyakit"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Entomologi adalah ilmu yang mengkaji serangga, sebagaimana ornitologi adalah ilmu yang mengkaji burung.",
+    "B": "Kardiologi mengkaji jantung, bukan paru-paru, sehingga pasangan bidang ilmu dan objek kajiannya tidak tepat.",
+    "C": "Astrologi bukan objek kajian astronomi, melainkan praktik ramalan yang berbeda dari ilmu astronomi.",
+    "D": "Meteorologi mengkaji cuaca dan atmosfer, bukan meteor; kemiripan bentuk katanya justru menjadi jebakan.",
+    "E": "Farmasi mengkaji obat dan peracikannya; penyakit adalah objek kajian bidang lain seperti patologi."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

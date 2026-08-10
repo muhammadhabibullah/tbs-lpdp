@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-007",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "MUSKIL >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pelik"
+    },
+    {
+      "key": "B",
+      "text": "Mudah"
+    },
+    {
+      "key": "C",
+      "text": "Mustahil"
+    },
+    {
+      "key": "D",
+      "text": "Rumit"
+    },
+    {
+      "key": "E",
+      "text": "Lazim"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Pelik justru merupakan sinonim muskil, yaitu sukar atau sulit dipecahkan.",
+    "B": "Benar. Muskil berarti sukar atau pelik; lawan maknanya adalah mudah.",
+    "C": "Mustahil berarti tidak mungkin terjadi; kata ini sering dikacaukan dengan muskil karena bentuknya mirip, padahal muskil berarti sukar, bukan tidak mungkin, dan mustahil juga bukan lawan katanya.",
+    "D": "Rumit berdekatan makna dengan muskil (sulit, berbelit-belit), sehingga merupakan padanan, bukan lawan.",
+    "E": "Lazim berarti umum atau biasa; lawannya adalah janggal atau aneh, bukan muskil."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

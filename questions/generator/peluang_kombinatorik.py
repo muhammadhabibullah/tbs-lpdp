@@ -86,8 +86,8 @@ def gen_two_colour_draw(rng: random.Random):
          "menghitung peluang terambil satu kelereng berwarna merah atau biru pada "
          "satu kali pengambilan"),
         (Fraction(comb(red, 2) + comb(blue, 2), ways),
-         "menghitung peluang kedua kelereng berwarna sama, bukan satu merah dan "
-         "satu biru"),
+         "menghitung peluang kedua kelereng sama-sama merah atau sama-sama biru, "
+         "bukan satu merah dan satu biru"),
         (Fraction(red * blue, comb(red + blue, 2)),
          f"mengabaikan {green} kelereng hijau ketika menghitung banyak cara "
          f"pengambilan"),

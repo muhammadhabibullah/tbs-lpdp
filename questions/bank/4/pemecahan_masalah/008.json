@@ -1,0 +1,43 @@
+{
+  "id": "4-pemecahan_masalah-008",
+  "package": 4,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Kepolisian sebuah kota mencatat bahwa sekitar 70 persen kecelakaan sepeda motor di kota itu terjadi dalam radius lima kilometer dari rumah pengendaranya. Berdasarkan catatan tersebut, seorang pengamat menyimpulkan bahwa berkendara di dekat rumah lebih berbahaya daripada berkendara jauh dari rumah.\n\nPernyataan berikut yang paling melemahkan simpulan pengamat tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sebagian kecelakaan ringan tidak dilaporkan kepada kepolisian sehingga tidak masuk dalam catatan."
+    },
+    {
+      "key": "B",
+      "text": "Jalan dalam radius lima kilometer dari permukiman umumnya berupa jalan lingkungan yang sempit dan ramai."
+    },
+    {
+      "key": "C",
+      "text": "Jumlah sepeda motor yang terdaftar di kota itu terus meningkat dalam lima tahun terakhir."
+    },
+    {
+      "key": "D",
+      "text": "Sebagian besar waktu dan jarak tempuh berkendara para pengendara memang dihabiskan dalam radius lima kilometer dari rumah mereka."
+    },
+    {
+      "key": "E",
+      "text": "Pola serupa juga ditemukan pada catatan kecelakaan mobil pribadi di kota itu."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Kecelakaan ringan yang tidak dilaporkan memang membuat catatan tidak lengkap, tetapi tanpa keterangan bahwa pelaporan itu berbeda menurut jarak dari rumah, kekurangan tersebut memengaruhi kedua kelompok jarak secara serupa dan tidak menggoyahkan perbandingannya.",
+    "B": "Salah. Pernyataan ini justru memberikan mekanisme mengapa area dekat rumah dapat berbahaya, yaitu jalan yang sempit dan ramai, sehingga memperkuat simpulan pengamat, bukan melemahkannya.",
+    "C": "Salah. Pertumbuhan jumlah sepeda motor menyangkut seluruh kota dan tidak berkaitan dengan perbandingan lokasi kecelakaan terhadap rumah pengendara, sehingga tidak menyentuh simpulan yang diuji.",
+    "D": "Benar. Jika sebagian besar berkendara memang berlangsung dalam radius lima kilometer dari rumah, tingginya porsi kecelakaan di area itu hanyalah cerminan porsi paparan berkendara, bukan bukti bahwa tingkat bahayanya lebih tinggi. Untuk menyebut suatu area lebih berbahaya, kecelakaan harus dibandingkan terhadap satuan paparan seperti waktu atau jarak tempuh, dan pernyataan ini menunjukkan bahwa data pengamat belum melakukannya.",
+    "E": "Salah. Ditemukannya pola yang sama pada mobil pribadi hanya menunjukkan gejala itu bukan kekhasan sepeda motor; pernyataan ini tidak menilai apakah berkendara dekat rumah memang lebih berbahaya sehingga tidak melemahkan simpulan."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

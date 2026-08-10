@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-005",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "ABSTRAK >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Samar"
+    },
+    {
+      "key": "B",
+      "text": "Teoretis"
+    },
+    {
+      "key": "C",
+      "text": "Konkret"
+    },
+    {
+      "key": "D",
+      "text": "Rumit"
+    },
+    {
+      "key": "E",
+      "text": "Khayali"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Samar berarti tidak jelas; kata ini searah dengan abstrak yang tak berwujud, bukan lawannya.",
+    "B": "Teoretis berdekatan makna dengan abstrak karena sama-sama tidak menyentuh wujud nyata, sehingga bukan lawan maknanya.",
+    "C": "Benar. Abstrak berarti tidak berwujud atau hanya berupa gagasan; lawannya adalah konkret, yaitu nyata dan berwujud.",
+    "D": "Rumit berlawanan dengan sederhana, bukan dengan abstrak; keduanya berada pada sumbu makna yang berbeda.",
+    "E": "Khayali berarti hanya ada dalam angan-angan; maknanya searah dengan abstrak, bukan berlawanan."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

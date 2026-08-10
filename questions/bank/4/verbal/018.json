@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-018",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nPelatihan ini bertujuan untuk meningkatkan kemampuan peserta dalam menulis karya ilmiah, menyunting naskah, serta bagaimana cara menerbitkannya.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pelatihan ini bertujuan untuk meningkatkan kemampuan peserta dalam menulis karya ilmiah, menyunting naskah, serta bagaimana cara menerbitkannya."
+    },
+    {
+      "key": "B",
+      "text": "Pelatihan ini bertujuan meningkatkan kemampuan peserta dalam menulis karya ilmiah, menyunting naskah, serta menerbitkannya."
+    },
+    {
+      "key": "C",
+      "text": "Pelatihan ini bertujuan meningkatkan kemampuan peserta dalam menulis karya ilmiah, menyunting naskah, serta bagaimana menerbitkannya."
+    },
+    {
+      "key": "D",
+      "text": "Pelatihan ini bertujuan meningkatkan kemampuan peserta di dalam menulis karya ilmiah, menyunting naskah, serta menerbitkannya."
+    },
+    {
+      "key": "E",
+      "text": "Pelatihan ini mempunyai tujuan untuk meningkatkan kemampuan peserta dalam menulis karya ilmiah, menyunting naskah, serta menerbitkannya."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Sama dengan kalimat asal: melanggar kesejajaran karena rincian ketiga berbentuk klausa tanya \"bagaimana cara menerbitkannya\", tidak sejajar dengan verba \"menulis\" dan \"menyunting\", di samping pemborosan \"bertujuan untuk\".",
+    "B": "Benar. Ketiga rincian sejajar sebagai verba (menulis, menyunting, menerbitkan) dan kata \"untuk\" yang mubazir setelah \"bertujuan\" dihilangkan.",
+    "C": "Masih melanggar kesejajaran: kata \"bagaimana\" membuat rincian ketiga berbentuk klausa tanya, berbeda bentuk dari dua rincian lainnya.",
+    "D": "Melanggar ketepatan preposisi: \"di dalam\" dipakai untuk tempat fisik, sedangkan hubungan abstrak cukup dinyatakan dengan \"dalam\".",
+    "E": "Melanggar kehematan: \"mempunyai tujuan untuk\" adalah bentuk berbelit yang cukup dinyatakan dengan \"bertujuan\"."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

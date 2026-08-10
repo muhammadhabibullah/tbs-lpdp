@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-025",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Sebuah prisma tegak memiliki alas berbentuk segitiga siku-siku dengan panjang sisi siku-siku 9 cm dan 12 cm. Tinggi prisma itu 20 cm. Berapakah luas seluruh permukaan prisma tersebut?",
+  "image": "images/prisma-segitiga.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "774 cm²"
+    },
+    {
+      "key": "B",
+      "text": "828 cm²"
+    },
+    {
+      "key": "C",
+      "text": "936 cm²"
+    },
+    {
+      "key": "D",
+      "text": "948 cm²"
+    },
+    {
+      "key": "E",
+      "text": "1.080 cm²"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. 774 cm² diperoleh dari 54 + 720, yaitu hanya menghitung satu bidang segitiga. Prisma memiliki dua bidang segitiga yang kongruen (alas dan tutup), sehingga luas segitiga harus dihitung dua kali.",
+    "B": "Benar. Sisi miring alas = √(9² + 12²) = √225 = 15 cm. Luas kedua bidang segitiga = 2 × (½ × 9 × 12) = 108 cm². Luas seluruh sisi tegak = keliling alas × tinggi = (9 + 12 + 15) × 20 = 720 cm². Luas permukaan = 108 + 720 = 828 cm².",
+    "C": "Salah. 936 cm² muncul apabila luas segitiga dihitung tanpa faktor ½, yaitu 9 × 12 = 108 untuk tiap segitiga, sehingga luas kedua bidang segitiga menjadi 216 cm² dan totalnya 216 + 720 = 936 cm².",
+    "D": "Salah. 948 cm² muncul apabila sisi miring alas dianggap 9 + 12 = 21 cm tanpa teorema Pythagoras, sehingga keliling alas menjadi 42 cm, luas sisi tegak 42 × 20 = 840 cm², dan totalnya 108 + 840 = 948 cm².",
+    "E": "Salah. 1.080 adalah hasil 54 × 20, yaitu volume prisma dalam cm³ (luas alas × tinggi), bukan luas permukaannya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

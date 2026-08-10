@@ -1,0 +1,43 @@
+{
+  "id": "4-pemecahan_masalah-011",
+  "package": 4,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Simpulan yang secara tersirat didukung oleh teks tersebut adalah ...",
+  "image": null,
+  "passage": "Banyak sekolah menjalankan program literasi dengan menetapkan target jumlah buku yang harus diselesaikan setiap siswa dalam satu semester. Capaian program pun dilaporkan dalam angka: berapa judul dibaca dan berapa halaman ditamatkan. Angka memang mudah dihitung, tetapi kebiasaan ini menggeser tujuan program. Demi mengejar target, siswa memilih buku yang tipis dan ringan, membacanya sekilas, lalu segera berpindah ke judul berikutnya. Kemampuan yang menjadi inti literasi, yaitu memahami isi bacaan, menimbang argumen penulis, dan mengaitkannya dengan pengalaman, justru tidak pernah diukur. Selama laporan jumlah buku menjadi satu-satunya tolok ukur keberhasilan, sekolah hanya akan menghasilkan pembaca yang tergesa-gesa, bukan pembaca yang memahami apa yang dibacanya.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Siswa cenderung memilih buku yang tipis agar cepat memenuhi target jumlah bacaan."
+    },
+    {
+      "key": "B",
+      "text": "Keberhasilan program literasi sekolah semestinya dinilai dari pemahaman siswa terhadap bacaan, bukan semata dari banyaknya judul yang diselesaikan."
+    },
+    {
+      "key": "C",
+      "text": "Capaian program literasi mudah dilaporkan karena jumlah buku dan halaman mudah dihitung."
+    },
+    {
+      "key": "D",
+      "text": "Program literasi sekolah perlu dihentikan karena terbukti gagal meningkatkan kemampuan membaca siswa."
+    },
+    {
+      "key": "E",
+      "text": "Semakin banyak judul buku yang diselesaikan siswa, semakin terlatih pula kemampuannya menimbang argumen bacaan."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Pernyataan ini memang disebutkan dalam teks, tetapi kedudukannya hanyalah rincian pendukung yang menggambarkan gejala mengejar target, bukan simpulan yang dituju keseluruhan teks.",
+    "B": "Benar. Seluruh alur teks mengarah ke simpulan ini: penulis menunjukkan bahwa tolok ukur jumlah buku menggeser tujuan program dan bahwa kemampuan inti literasi, yakni pemahaman, tidak pernah diukur, lalu menutup dengan peringatan bahwa tolok ukur jumlah hanya menghasilkan pembaca yang tergesa-gesa. Secara tersirat penulis menghendaki penilaian keberhasilan yang bertumpu pada pemahaman bacaan.",
+    "C": "Salah. Kemudahan menghitung jumlah buku dan halaman hanyalah keterangan yang menjelaskan mengapa angka dipakai sebagai tolok ukur; ini rincian pendukung, bukan simpulan teks.",
+    "D": "Salah. Pernyataan ini melampaui isi teks. Penulis mengkritik tolok ukur keberhasilan program, bukan keberadaan programnya, dan tidak pernah menuntut program literasi dihentikan.",
+    "E": "Salah. Pernyataan ini justru bertentangan dengan teks: mengejar banyak judul digambarkan membuat siswa membaca sekilas dan tergesa-gesa, bukan semakin terlatih menimbang argumen."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

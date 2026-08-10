@@ -1,0 +1,43 @@
+{
+  "id": "4-pemecahan_masalah-003",
+  "package": 4,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Enam mahasiswa, yaitu Ayu, Bima, Citra, Dani, Eka, dan Farhan, duduk mengelilingi sebuah meja bundar pada enam kursi yang berjarak sama dan semuanya menghadap ke pusat meja. Setiap kursi diduduki tepat satu orang. Penempatan duduk tunduk pada ketentuan berikut.\n(1) Ayu duduk berhadapan dengan Dani.\n(2) Bima duduk bersebelahan dengan Ayu.\n(3) Citra tidak duduk bersebelahan dengan Dani.\n\nPernyataan yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Eka duduk berhadapan dengan Citra."
+    },
+    {
+      "key": "B",
+      "text": "Farhan duduk bersebelahan dengan Bima."
+    },
+    {
+      "key": "C",
+      "text": "Dani duduk bersebelahan dengan Bima."
+    },
+    {
+      "key": "D",
+      "text": "Ayu duduk di antara Bima dan Citra."
+    },
+    {
+      "key": "E",
+      "text": "Eka duduk bersebelahan dengan Citra."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Citra menempati salah satu kursi di samping Ayu, sedangkan Eka menempati salah satu kursi di samping Dani. Bergantung pada sisi yang dipilih masing-masing, yang berhadapan dengan Citra dapat Eka ataupun Farhan, sehingga pernyataan ini mungkin benar tetapi tidak pasti benar.",
+    "B": "Salah. Farhan duduk di samping Dani dan Bima di samping Ayu. Keduanya bersebelahan hanya apabila kebetulan berada pada sisi meja yang sama; pada susunan dengan sisi yang berlawanan mereka tidak bersebelahan, sehingga tidak pasti benar.",
+    "C": "Salah. Karena Ayu berhadapan dengan Dani, kedua kursi di samping Ayu tidak bersebelahan dengan kursi Dani. Bima yang duduk di samping Ayu karena itu tidak mungkin bersebelahan dengan Dani; pernyataan ini justru pasti salah.",
+    "D": "Benar. Kursi yang bersebelahan dengan Dani hanya dua, dan Citra dilarang menempatinya oleh ketentuan 3. Selain kedua kursi itu dan kursi Ayu, yang tersisa hanyalah dua kursi yang mengapit Ayu. Bima menempati salah satunya menurut ketentuan 2, sehingga Citra harus menempati kursi pengapit yang satunya lagi. Dengan demikian Ayu selalu duduk di antara Bima dan Citra, sementara Eka dan Farhan mengisi dua kursi di samping Dani.",
+    "E": "Salah. Citra duduk di samping Ayu dan Eka di samping Dani. Pada sebagian susunan yang memenuhi seluruh ketentuan keduanya bersebelahan, tetapi pada susunan yang lain tidak, sehingga pernyataan ini tidak pasti benar."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

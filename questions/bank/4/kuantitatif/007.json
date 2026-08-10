@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-007",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 7,
+  "type": "aljabar",
+  "question_text": "Jika 4x − 26 = 26, nilai x adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "48"
+    },
+    {
+      "key": "B",
+      "text": "0"
+    },
+    {
+      "key": "C",
+      "text": "13"
+    },
+    {
+      "key": "D",
+      "text": "6,5"
+    },
+    {
+      "key": "E",
+      "text": "52"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 48 diperoleh dengan mengurangkan koefisien 4 dari 52, padahal koefisien itu harus dijadikan pembagi.",
+    "B": "Salah. Nilai 0 diperoleh dengan mengurangkan 26 sekali lagi ketika memindahkan ruas, padahal −26 berubah menjadi +26.",
+    "C": "Benar. 4x = 26 + 26 = 52, sehingga x = 52 : 4 = 13.",
+    "D": "Salah. Nilai 6,5 diperoleh dengan membagi 26 dengan 4 tanpa memindahkan −26 lebih dahulu.",
+    "E": "Salah. Nilai 52 diperoleh dengan berhenti pada nilai 4x dan belum membaginya dengan 4."
+  },
+  "difficulty": "easy",
+  "source": "aljabar.py",
+  "verified": true
+}

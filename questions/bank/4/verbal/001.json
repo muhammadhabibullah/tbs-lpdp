@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-001",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "KOLABORASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Koordinasi"
+    },
+    {
+      "key": "B",
+      "text": "Kerja sama"
+    },
+    {
+      "key": "C",
+      "text": "Persaingan"
+    },
+    {
+      "key": "D",
+      "text": "Pembagian tugas"
+    },
+    {
+      "key": "E",
+      "text": "Perkumpulan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Koordinasi adalah pengaturan agar berbagai pihak bertindak selaras; pihak yang terkoordinasi belum tentu bekerja bersama-sama mengerjakan satu hal.",
+    "B": "Benar. Kolaborasi berarti kerja sama, yaitu kegiatan yang dilakukan bersama-sama untuk mencapai tujuan yang sama.",
+    "C": "Persaingan justru mendekati lawan makna kolaborasi karena para pihak saling berhadapan, bukan bekerja bersama.",
+    "D": "Pembagian tugas hanyalah salah satu cara mengatur kerja sama, bukan makna kolaborasi itu sendiri.",
+    "E": "Perkumpulan adalah wadah atau organisasi tempat orang berhimpun, bukan kegiatan bekerja bersama."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

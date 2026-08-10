@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-023",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Sebuah wadah berisi 800 mL larutan pembersih dengan kadar bahan aktif 35%. Sebagian larutan itu diambil, kemudian diganti dengan air murni yang volumenya sama sehingga kadar bahan aktif larutan dalam wadah menjadi 14%. Berapa mL larutan yang diambil?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "112 mL"
+    },
+    {
+      "key": "B",
+      "text": "168 mL"
+    },
+    {
+      "key": "C",
+      "text": "280 mL"
+    },
+    {
+      "key": "D",
+      "text": "320 mL"
+    },
+    {
+      "key": "E",
+      "text": "480 mL"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. 112 mL adalah volume bahan aktif yang tersisa di wadah setelah penggantian (14% × 800 mL), bukan volume larutan yang diambil.",
+    "B": "Salah. 168 mL diperoleh dengan mengalikan selisih kadar (35% − 14% = 21%) dengan 800 mL. Hasil itu adalah volume bahan aktif yang hilang (280 − 112 = 168 mL), bukan volume larutan yang diambil; setiap mL larutan yang diambil hanya mengandung 0,35 mL bahan aktif, sehingga larutan yang harus diambil jauh lebih banyak.",
+    "C": "Salah. 280 mL adalah volume bahan aktif mula-mula (35% × 800 mL), bukan volume larutan yang diambil.",
+    "D": "Salah. 320 mL adalah volume larutan semula yang masih tertinggal di wadah (800 − 480), bukan volume yang diambil dan diganti dengan air.",
+    "E": "Benar. Misalkan x mL larutan diambil. Bahan aktif yang tersisa = 35% × (800 − x), dan setelah air murni ditambahkan, volume larutan kembali 800 mL dengan kadar 14%, sehingga 0,35(800 − x) = 0,14 × 800 = 112. Dari sini 800 − x = 320, jadi x = 480. Pemeriksaan: bahan aktif tersisa = 0,35 × 320 = 112 mL dari 800 mL larutan, yaitu 14%."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

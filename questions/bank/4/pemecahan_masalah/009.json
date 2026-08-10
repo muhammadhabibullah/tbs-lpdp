@@ -1,0 +1,43 @@
+{
+  "id": "4-pemecahan_masalah-009",
+  "package": 4,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan banyaknya pendaftar lomba karya pelajar tingkat kota menurut kategori pada tahun 2025.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...",
+  "image": null,
+  "passage": "Kategori Lomba | Jumlah Pendaftar\nFotografi | 78\nEsai | 54\nPoster | 66\nVideo Pendek | 42\nKomik | 60\nJumlah | 300",
+  "options": [
+    {
+      "key": "A",
+      "text": "Jumlah pendaftar kategori Esai dan Komik sama dengan jumlah pendaftar kategori Fotografi dan Video Pendek."
+    },
+    {
+      "key": "B",
+      "text": "Kategori Komik memiliki pendaftar terbanyak kedua di antara kelima kategori."
+    },
+    {
+      "key": "C",
+      "text": "Kategori Video Pendek memiliki pendaftar paling sedikit karena persyaratan karyanya paling rumit."
+    },
+    {
+      "key": "D",
+      "text": "Selisih antara banyak pendaftar kategori terbanyak dan kategori dengan pendaftar paling sedikit adalah 24 orang."
+    },
+    {
+      "key": "E",
+      "text": "Banyak pendaftar kategori Fotografi melebihi seperempat jumlah seluruh pendaftar."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Gabungan pendaftar Esai dan Komik adalah 54 + 60 = 114 orang, sedangkan gabungan pendaftar Fotografi dan Video Pendek adalah 78 + 42 = 120 orang. Kedua jumlah itu tidak sama.",
+    "B": "Salah. Urutan dari yang terbanyak adalah Fotografi 78, Poster 66, lalu Komik 60. Urutan kedua ditempati kategori Poster, bukan Komik.",
+    "C": "Salah. Secara angka kategori Video Pendek memang memiliki pendaftar paling sedikit, yaitu 42 orang, tetapi tabel sama sekali tidak memuat keterangan tentang persyaratan lomba. Alasan kerumitan persyaratan tidak tercakup oleh data sehingga pernyataan ini tidak dapat dibenarkan berdasarkan tabel.",
+    "D": "Salah. Kategori terbanyak adalah Fotografi dengan 78 pendaftar dan yang paling sedikit adalah Video Pendek dengan 42 pendaftar, sehingga selisihnya 78 − 42 = 36 orang. Angka 24 hanya muncul bila keliru membandingkan Fotografi dengan Esai (78 − 54) atau Poster dengan Video Pendek (66 − 42).",
+    "E": "Benar. Seperempat dari jumlah seluruh pendaftar adalah 300 : 4 = 75 orang, sedangkan kategori Fotografi memiliki 78 pendaftar. Angka itu memang melebihi seperempat jumlah seluruh pendaftar."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

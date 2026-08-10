@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-024",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Sebuah jajargenjang memiliki alas 25 cm dan tinggi 15 cm, sedangkan panjang sisi miringnya 17 cm. Berapakah luas jajargenjang tersebut?",
+  "image": "images/jajargenjang.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "84 cm²"
+    },
+    {
+      "key": "B",
+      "text": "187,5 cm²"
+    },
+    {
+      "key": "C",
+      "text": "315 cm²"
+    },
+    {
+      "key": "D",
+      "text": "375 cm²"
+    },
+    {
+      "key": "E",
+      "text": "425 cm²"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. 84 adalah keliling jajargenjang, yaitu 2 × (25 + 17) = 84 cm, bukan luasnya. Keliling dan luas adalah besaran yang berbeda.",
+    "B": "Salah. 187,5 cm² diperoleh dari ½ × 25 × 15, yaitu menerapkan rumus luas segitiga. Luas jajargenjang tidak memuat faktor ½; jajargenjang justru setara dengan dua segitiga kongruen.",
+    "C": "Salah. 315 cm² diperoleh dari (25 + 17) : 2 × 15, yaitu memperlakukan alas dan sisi miring seperti dua sisi sejajar pada rumus trapesium. Pada jajargenjang, kedua sisi sejajarnya sama panjang, sehingga rumus rata-rata dua sisi tidak berlaku di sini.",
+    "D": "Benar. Luas jajargenjang = alas × tinggi = 25 × 15 = 375 cm². Panjang sisi miring 17 cm tidak dipakai dalam perhitungan luas; informasi itu hanya menentukan kemiringan sisi jajargenjang.",
+    "E": "Salah. 425 cm² diperoleh dari 25 × 17, yaitu mengalikan alas dengan sisi miring. Luas jajargenjang menggunakan tinggi, yaitu jarak tegak lurus antara dua sisi sejajar, bukan panjang sisi miringnya."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

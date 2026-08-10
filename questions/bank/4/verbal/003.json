@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-003",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "MANGKUS = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Berhasil guna"
+    },
+    {
+      "key": "B",
+      "text": "Tepat guna"
+    },
+    {
+      "key": "C",
+      "text": "Serbaguna"
+    },
+    {
+      "key": "D",
+      "text": "Siap pakai"
+    },
+    {
+      "key": "E",
+      "text": "Berdaya tahan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Mangkus berarti berhasil guna atau efektif, yaitu mampu mendatangkan hasil yang diharapkan; dalam arti obat berarti mujarab.",
+    "B": "Tepat guna adalah padanan untuk sangkil (efisien), yaitu tepat dan hemat dalam penggunaan sumber daya; ini pasangan istilah yang paling sering tertukar dengan mangkus.",
+    "C": "Serbaguna berarti dapat dipakai untuk berbagai keperluan; mangkus tidak berkaitan dengan banyaknya kegunaan.",
+    "D": "Siap pakai berarti dapat langsung digunakan; mangkus menyangkut keberhasilan hasil, bukan kesiapan penggunaan.",
+    "E": "Berdaya tahan berarti awet atau tahan lama; mangkus tidak berkaitan dengan keawetan."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

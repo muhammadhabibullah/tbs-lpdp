@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-008",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "RABUN >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Buta"
+    },
+    {
+      "key": "B",
+      "text": "Terang"
+    },
+    {
+      "key": "C",
+      "text": "Awas"
+    },
+    {
+      "key": "D",
+      "text": "Jelas"
+    },
+    {
+      "key": "E",
+      "text": "Nyata"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Buta berarti sama sekali tidak dapat melihat; kata ini searah dengan rabun (kemampuan melihat berkurang) dalam derajat yang lebih berat, bukan lawannya.",
+    "B": "Terang menggambarkan keadaan cahaya atau objek yang dilihat, bukan ketajaman penglihatan seseorang.",
+    "C": "Benar. Rabun berarti kabur atau kurang ketajaman penglihatannya; lawannya adalah awas, yang berarti dapat melihat dengan baik atau tajam penglihatannya.",
+    "D": "Jelas menerangkan objek yang tampak, bukan kemampuan mata yang memandang, sehingga bukan lawan kata rabun.",
+    "E": "Nyata berarti benar-benar ada; kata ini berlawanan dengan maya atau semu, bukan dengan rabun."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

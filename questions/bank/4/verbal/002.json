@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-002",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "STAGNASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kemunduran"
+    },
+    {
+      "key": "B",
+      "text": "Kelesuan"
+    },
+    {
+      "key": "C",
+      "text": "Perlambatan"
+    },
+    {
+      "key": "D",
+      "text": "Kekacauan"
+    },
+    {
+      "key": "E",
+      "text": "Keadaan terhenti"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Kemunduran berarti bergerak ke arah yang lebih buruk; stagnasi tidak bergerak sama sekali, bukan bergerak mundur.",
+    "B": "Kelesuan menggambarkan kegiatan yang menurun atau kurang bergairah, tetapi masih berlangsung; stagnasi berarti berhenti.",
+    "C": "Perlambatan berarti masih berjalan dengan laju yang menurun; ini jebakan yang paling dekat, tetapi stagnasi berarti tidak berjalan lagi.",
+    "D": "Kekacauan berkaitan dengan hilangnya keteraturan, bukan dengan berhentinya suatu proses.",
+    "E": "Benar. Stagnasi berarti keadaan terhenti: tidak bergerak, tidak aktif, atau tidak berjalan."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

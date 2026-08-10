@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-014",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 14,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nP = luas persegi yang panjang sisinya 6 cm\nQ = luas persegi panjang berukuran 6 cm × 4 cm\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Jumlah P dan Q kurang daripada 55 cm²"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. P = 36 cm² dan Q = 24 cm², sehingga P > Q.",
+    "B": "Salah. P = 36 cm² dan Q = 24 cm², sehingga P > Q; nilai Q tidak melebihi nilai P (24 cm² tidak lebih besar daripada 36 cm²).",
+    "C": "Salah. P = 36 cm² dan Q = 24 cm², sehingga P > Q; kedua nilai tidak sama (36 cm² ≠ 24 cm²).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 36 cm² dan Q = 24 cm²), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 36 cm² dan Q = 24 cm², jumlahnya 60 cm², tidak kurang daripada 55 cm²."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

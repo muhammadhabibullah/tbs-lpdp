@@ -1,0 +1,43 @@
+{
+  "id": "4-pemecahan_masalah-007",
+  "package": 4,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah aplikasi belajar bahasa mencatat bahwa pengguna yang mengaktifkan fitur pengingat harian rata-rata menyelesaikan pelajaran hampir dua kali lebih banyak daripada pengguna yang tidak mengaktifkannya. Pengelola aplikasi menyimpulkan bahwa fitur pengingat harian itulah yang menyebabkan pengguna menyelesaikan lebih banyak pelajaran.\n\nPenjelasan lain yang paling mungkin atas perbedaan tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pengguna yang sejak awal bersungguh-sungguh ingin menguasai bahasa cenderung mengaktifkan fitur pengingat sekaligus rajin menyelesaikan pelajaran."
+    },
+    {
+      "key": "B",
+      "text": "Notifikasi pengingat dikirim pada jam yang dapat dipilih sendiri oleh pengguna sehingga jarang terlewat."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian pengguna baru berhenti memakai aplikasi tersebut pada bulan pertama setelah memasangnya."
+    },
+    {
+      "key": "D",
+      "text": "Jumlah pengguna yang mengaktifkan fitur pengingat jauh lebih sedikit daripada jumlah pengguna yang tidak mengaktifkannya."
+    },
+    {
+      "key": "E",
+      "text": "Aplikasi memberikan lencana penghargaan kepada setiap pengguna yang berhasil menyelesaikan satu paket pelajaran."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Pernyataan ini menawarkan sebab lain yang sama-sama menjelaskan data: motivasi awal pengguna dapat memengaruhi dua hal sekaligus, yaitu keputusan mengaktifkan pengingat dan kerajinan menyelesaikan pelajaran. Jika demikian, perbedaan capaian bisa muncul tanpa fitur pengingat menjadi penyebabnya, sehingga simpulan pengelola tidak lagi menjadi satu-satunya penjelasan.",
+    "B": "Salah. Pernyataan ini justru menguraikan cara kerja fitur pengingat yang membuatnya efektif, sehingga cenderung mendukung simpulan pengelola, bukan menawarkan penjelasan lain atas perbedaan capaian.",
+    "C": "Salah. Berhentinya sebagian pengguna baru terjadi tanpa keterangan bahwa gejala itu berbeda antara kelompok yang mengaktifkan dan yang tidak mengaktifkan pengingat, sehingga tidak menjelaskan mengapa capaian kedua kelompok berbeda.",
+    "D": "Salah. Perbandingan yang dilaporkan adalah rata-rata pelajaran yang diselesaikan per pengguna, sehingga perbedaan banyaknya anggota kedua kelompok tidak dengan sendirinya menimbulkan perbedaan rata-rata tersebut.",
+    "E": "Salah. Lencana penghargaan diberikan kepada semua pengguna yang menyelesaikan paket pelajaran, baik yang mengaktifkan pengingat maupun tidak. Faktor yang berlaku sama bagi kedua kelompok tidak dapat menjelaskan perbedaan di antara keduanya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

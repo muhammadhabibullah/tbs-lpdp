@@ -1,0 +1,43 @@
+{
+  "id": "4-pemecahan_masalah-004",
+  "package": 4,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Enam mahasiswa, yaitu Ayu, Bima, Citra, Dani, Eka, dan Farhan, duduk mengelilingi sebuah meja bundar pada enam kursi yang berjarak sama dan semuanya menghadap ke pusat meja. Setiap kursi diduduki tepat satu orang. Penempatan duduk tunduk pada ketentuan berikut.\n(1) Ayu duduk berhadapan dengan Dani.\n(2) Bima duduk bersebelahan dengan Ayu.\n(3) Citra tidak duduk bersebelahan dengan Dani.\n\nApabila Eka duduk berhadapan dengan Bima, pernyataan yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Farhan duduk berhadapan dengan Citra."
+    },
+    {
+      "key": "B",
+      "text": "Bima duduk tepat di sebelah kanan Ayu."
+    },
+    {
+      "key": "C",
+      "text": "Bima duduk bersebelahan dengan Citra."
+    },
+    {
+      "key": "D",
+      "text": "Farhan duduk bersebelahan dengan Ayu."
+    },
+    {
+      "key": "E",
+      "text": "Eka duduk tepat di sebelah kanan Dani."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Dari ketentuan dasar, Bima dan Citra mengapit Ayu (Citra tidak boleh di samping Dani sehingga hanya tersisa kursi pengapit Ayu), sedangkan Eka dan Farhan mengapit Dani. Kursi yang berhadapan dengan kursi pengapit Ayu selalu kursi pengapit Dani. Karena Eka berhadapan dengan Bima, pasangan kursi berhadapan yang tersisa hanyalah kursi Citra dan kursi Farhan, sehingga Farhan pasti berhadapan dengan Citra.",
+    "B": "Salah. Dua susunan yang memenuhi seluruh ketentuan merupakan bayangan cermin satu sama lain: pada susunan yang satu Bima berada tepat di sebelah kanan Ayu, tetapi pada susunan cerminannya Bima justru berada tepat di sebelah kiri Ayu. Posisi kanan atau kiri tidak dapat dipastikan.",
+    "C": "Salah. Bima dan Citra sama-sama mengapit Ayu, sehingga di antara keduanya selalu ada Ayu. Tetangga Bima yang lain adalah Farhan dan tetangga Citra yang lain adalah Eka; Bima dan Citra tidak pernah bersebelahan.",
+    "D": "Salah. Kedua kursi di samping Ayu sudah pasti ditempati Bima dan Citra, sehingga Farhan tidak mungkin bersebelahan dengan Ayu. Farhan selalu duduk di samping Dani.",
+    "E": "Salah. Eka memang duduk di samping Dani, tetapi pada salah satu dari dua susunan yang mungkin Eka berada tepat di sebelah kanan Dani, sedangkan pada susunan cerminannya posisi itu ditempati Farhan. Pernyataan ini tidak pasti benar."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

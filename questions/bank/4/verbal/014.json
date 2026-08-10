@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-014",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Premis 1: Setiap pengunjung museum menitipkan tas di loker atau membawa tas transparan.\nPremis 2: Raka adalah pengunjung museum yang tidak menitipkan tas di loker.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Raka bukan pengunjung museum."
+    },
+    {
+      "key": "B",
+      "text": "Raka tidak membawa tas transparan."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian pengunjung museum tidak menitipkan tas di loker dan tidak membawa tas transparan."
+    },
+    {
+      "key": "D",
+      "text": "Raka belum tentu membawa tas transparan."
+    },
+    {
+      "key": "E",
+      "text": "Raka membawa tas transparan."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Bertentangan langsung dengan Premis 2 yang menyatakan Raka adalah pengunjung museum.",
+    "B": "Bertentangan dengan gabungan kedua premis: karena Raka tidak menitipkan tas di loker, satu-satunya kemungkinan yang tersisa dari Premis 1 adalah ia membawa tas transparan.",
+    "C": "Bertentangan dengan Premis 1 yang menjamin setiap pengunjung memenuhi sekurang-kurangnya salah satu dari kedua ketentuan itu.",
+    "D": "Keraguan ini tidak beralasan: Premis 1 memuat pilihan yang habis terbagi, dan Premis 2 menggugurkan pilihan pertama, sehingga pilihan kedua pasti berlaku, bukan sekadar mungkin.",
+    "E": "Benar. Premis 1 memberi dua kemungkinan bagi setiap pengunjung; Premis 2 menggugurkan kemungkinan pertama untuk Raka, sehingga kemungkinan kedua, yaitu membawa tas transparan, pasti berlaku."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

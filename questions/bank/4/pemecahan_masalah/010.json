@@ -1,0 +1,43 @@
+{
+  "id": "4-pemecahan_masalah-010",
+  "package": 4,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan banyaknya paket yang dikirim lima kantor cabang sebuah perusahaan jasa pengiriman pada triwulan I dan triwulan II tahun 2025.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...",
+  "image": null,
+  "passage": "Kantor Cabang | Triwulan I | Triwulan II\nUtara | 480 | 552\nTimur | 350 | 434\nSelatan | 600 | 660\nBarat | 250 | 320\nPusat | 820 | 902\nJumlah | 2.500 | 2.868",
+  "options": [
+    {
+      "key": "A",
+      "text": "Kenaikan persentase pengiriman tertinggi dari triwulan I ke triwulan II terjadi pada cabang Timur."
+    },
+    {
+      "key": "B",
+      "text": "Pengiriman cabang Pusat pada triwulan II mencakup lebih dari sepertiga pengiriman seluruh cabang pada triwulan itu."
+    },
+    {
+      "key": "C",
+      "text": "Secara persentase, kenaikan pengiriman cabang Barat lebih tinggi daripada kenaikan pengiriman cabang mana pun yang lain."
+    },
+    {
+      "key": "D",
+      "text": "Gabungan pengiriman cabang Utara dan cabang Barat pada triwulan II melebihi pengiriman cabang Pusat pada triwulan yang sama."
+    },
+    {
+      "key": "E",
+      "text": "Setiap cabang mencatat kenaikan pengiriman sekurang-kurangnya 15 persen pada triwulan II."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Cabang Timur memang mencatat kenaikan absolut terbesar, yaitu 434 − 350 = 84 paket, tetapi persentasenya 84 : 350 = 24 persen, masih di bawah cabang Barat yang naik 28 persen. Pernyataan ini mempertukarkan kenaikan absolut dengan kenaikan persentase.",
+    "B": "Salah. Sepertiga dari pengiriman seluruh cabang pada triwulan II adalah 2.868 : 3 = 956 paket, sedangkan cabang Pusat hanya mengirim 902 paket. Angka itu belum mencapai sepertiga pengiriman seluruh cabang.",
+    "C": "Benar. Kenaikan persentase tiap cabang adalah Utara 72 : 480 = 15 persen; Timur 84 : 350 = 24 persen; Selatan 60 : 600 = 10 persen; Barat 70 : 250 = 28 persen; dan Pusat 82 : 820 = 10 persen. Kenaikan cabang Barat yang sebesar 28 persen memang melampaui semua cabang lain.",
+    "D": "Salah. Gabungan pengiriman cabang Utara dan Barat pada triwulan II adalah 552 + 320 = 872 paket, masih di bawah pengiriman cabang Pusat yang mencapai 902 paket pada triwulan yang sama.",
+    "E": "Salah. Cabang Selatan hanya naik 60 : 600 = 10 persen dan cabang Pusat hanya naik 82 : 820 = 10 persen, keduanya di bawah 15 persen, sehingga tidak setiap cabang mencapai kenaikan sekurang-kurangnya 15 persen."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-008",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "aljabar",
+  "question_text": "Diketahui 3x − 3y = 18 dan 5x − 4y = 32. Nilai dari 3x + 3y adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "150"
+    },
+    {
+      "key": "B",
+      "text": "6"
+    },
+    {
+      "key": "C",
+      "text": "30"
+    },
+    {
+      "key": "D",
+      "text": "10"
+    },
+    {
+      "key": "E",
+      "text": "18"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 150 diperoleh dengan menjumlahkan kedua persamaan menjadi 50, membaginya dengan jumlah seluruh koefisien (1) sehingga diperoleh 50, lalu mengalikannya dengan 3 — seolah-olah koefisien x dan y sudah sama.",
+    "B": "Salah. Nilai 6 diperoleh dengan hanya menghitung 3y dan mengabaikan suku 3x.",
+    "C": "Benar. Menyelesaikan kedua persamaan diperoleh x = 8 dan y = 2, sehingga 3x + 3y = 3 × (8 + 2) = 30.",
+    "D": "Salah. Nilai 10 diperoleh dengan berhenti pada x + y dan lupa mengalikannya dengan 3.",
+    "E": "Salah. Nilai 18 diperoleh dengan menghitung 3x − 3y, yaitu selisihnya, bukan jumlahnya."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

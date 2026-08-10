@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-010",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "deret_angka",
+  "question_text": "6, 12, 17, 34, 39, 78, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "161"
+    },
+    {
+      "key": "B",
+      "text": "156"
+    },
+    {
+      "key": "C",
+      "text": "117"
+    },
+    {
+      "key": "D",
+      "text": "83"
+    },
+    {
+      "key": "E",
+      "text": "166"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 161 diperoleh dengan menerapkan kedua operasi sekaligus dalam satu langkah.",
+    "B": "Salah. Nilai 156 diperoleh dengan menerapkan perkalian dengan 2 padahal giliran berikutnya adalah penjumlahan dengan 5.",
+    "C": "Salah. Nilai 117 diperoleh dengan menganggap deret memiliki selisih tetap sebesar selisih dua suku terakhir (39).",
+    "D": "Benar. Operasi berselang-seling: kalikan 2, lalu tambah 5, lalu kalikan 2 lagi, dan seterusnya (6 × 2 = 12; 12 + 5 = 17). Suku terakhir diperoleh melalui perkalian, sehingga langkah berikutnya adalah penjumlahan: 78 + 5 = 83.",
+    "E": "Salah. Nilai 166 diperoleh dengan melanjutkan dua langkah sekaligus, yaitu menambah lalu mengalikan."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

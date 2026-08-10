@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-016",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Premis 1: Setiap karyawan perusahaan itu mengikuti pelatihan daring atau pelatihan tatap muka.\nPremis 2: Setiap peserta pelatihan daring menerima sertifikat elektronik.\nPremis 3: Setiap peserta pelatihan tatap muka menerima sertifikat cetak.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Setiap karyawan perusahaan itu menerima sertifikat elektronik."
+    },
+    {
+      "key": "B",
+      "text": "Karyawan yang menerima sertifikat cetak pasti tidak mengikuti pelatihan daring."
+    },
+    {
+      "key": "C",
+      "text": "Karyawan yang menerima dua sertifikat pasti mengikuti kedua jenis pelatihan."
+    },
+    {
+      "key": "D",
+      "text": "Setiap karyawan perusahaan itu menerima sekurang-kurangnya satu sertifikat."
+    },
+    {
+      "key": "E",
+      "text": "Sebagian karyawan perusahaan itu tidak menerima sertifikat apa pun."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Hanya menutup satu kemungkinan: karyawan yang mengikuti pelatihan tatap muka saja menerima sertifikat cetak, bukan sertifikat elektronik.",
+    "B": "Kata \"atau\" pada Premis 1 tidak melarang seorang karyawan mengikuti kedua pelatihan, sehingga penerima sertifikat cetak bisa saja juga mengikuti pelatihan daring.",
+    "C": "Premis hanya menjamin arah \"mengikuti pelatihan, maka menerima sertifikat\"; kepemilikan dua sertifikat tidak serta-merta membuktikan keikutsertaan pada kedua pelatihan (mengafirmasi akibat).",
+    "D": "Benar. Setiap karyawan masuk ke salah satu dari dua kemungkinan pada Premis 1, dan pada kemungkinan mana pun ia menerima sertifikat (elektronik pada kasus daring, cetak pada kasus tatap muka), sehingga sekurang-kurangnya satu sertifikat pasti diterima.",
+    "E": "Bertentangan dengan simpulan yang sahih: tidak ada kasus pada Premis 1 yang membuat seorang karyawan lolos dari kedua pemberian sertifikat."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

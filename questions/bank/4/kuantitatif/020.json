@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-020",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Panitia sebuah pertunjukan seni menjual dua jenis tiket, yaitu tiket dewasa seharga Rp50.000,00 dan tiket anak seharga Rp30.000,00. Seluruh tiket yang terjual berjumlah 240 lembar dengan total penerimaan Rp10.400.000,00. Berapa lembar tiket dewasa yang terjual?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "80 lembar"
+    },
+    {
+      "key": "B",
+      "text": "120 lembar"
+    },
+    {
+      "key": "C",
+      "text": "130 lembar"
+    },
+    {
+      "key": "D",
+      "text": "160 lembar"
+    },
+    {
+      "key": "E",
+      "text": "208 lembar"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. 80 lembar adalah banyak tiket anak yang terjual (240 − 160), bukan tiket dewasa. Nilai ini juga muncul apabila kedua harga tiket tertukar saat menyusun persamaan.",
+    "B": "Salah. 120 lembar diperoleh dengan menganggap kedua jenis tiket terjual sama banyak (240 : 2). Asumsi itu bertentangan dengan data penerimaan, sebab 120 × Rp50.000,00 + 120 × Rp30.000,00 = Rp9.600.000,00, bukan Rp10.400.000,00.",
+    "C": "Salah. 130 diperoleh dengan membagi total penerimaan dengan jumlah kedua harga tiket, yaitu Rp10.400.000,00 : Rp80.000,00. Pembagian itu hanya benar jika tiket selalu terjual berpasangan satu dewasa dan satu anak, dan hasilnya (130 pasang = 260 lembar) melanggar jumlah total 240 lembar.",
+    "D": "Benar. Misalkan d banyak tiket dewasa sehingga tiket anak = 240 − d. Dari total penerimaan: 50.000d + 30.000(240 − d) = 10.400.000, sehingga 20.000d = 10.400.000 − 7.200.000 = 3.200.000 dan d = 160. Pemeriksaan: 160 × Rp50.000,00 + 80 × Rp30.000,00 = Rp8.000.000,00 + Rp2.400.000,00 = Rp10.400.000,00.",
+    "E": "Salah. 208 diperoleh dengan membagi seluruh penerimaan dengan harga tiket dewasa saja (10.400.000 : 50.000), seolah-olah semua tiket yang terjual adalah tiket dewasa. Padahal sebagian penerimaan berasal dari tiket anak, dan jumlah seluruh tiket pun hanya 240 lembar."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

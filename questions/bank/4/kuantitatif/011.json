@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-011",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 11,
+  "type": "deret_angka",
+  "question_text": "5, 11, 19, 29, 41, 55, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "71, 107"
+    },
+    {
+      "key": "B",
+      "text": "71, 89"
+    },
+    {
+      "key": "C",
+      "text": "73, 107"
+    },
+    {
+      "key": "D",
+      "text": "71, 87"
+    },
+    {
+      "key": "E",
+      "text": "69, 89"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Suku ketujuh sudah tepat, tetapi bilangan kedua 107 diperoleh dengan menambahkan selisih 18 pada suku kedelapan 89, yaitu mengulangi selisih suku ketujuh ke kedelapan alih-alih berhenti pada suku kedelapan.",
+    "B": "Benar. Selisih antarsuku bertambah tetap 2: 6, 8, 10, dan seterusnya. Selisih berikutnya adalah 16, sehingga suku berikutnya 55 + 16 = 71. Dengan pola yang sama, suku kedelapan adalah 89.",
+    "C": "Salah. Suku ketujuh 73 diperoleh dengan menambah selisih dua tingkat sekaligus, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "D": "Salah. Suku ketujuh sudah tepat, tetapi suku kedelapan 87 diperoleh dengan mengulangkan selisih suku ketujuh dan keenam (16), seolah-olah selisih deret ini tetap.",
+    "E": "Salah. Suku ketujuh 69 diperoleh dengan mengulang selisih terakhir (14) dan menganggap selisih itu tetap, sehingga pasangan ini keliru sejak bilangan pertamanya."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

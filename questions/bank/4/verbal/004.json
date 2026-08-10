@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-004",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "PARIPURNA = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Resmi"
+    },
+    {
+      "key": "B",
+      "text": "Agung"
+    },
+    {
+      "key": "C",
+      "text": "Khidmat"
+    },
+    {
+      "key": "D",
+      "text": "Lengkap"
+    },
+    {
+      "key": "E",
+      "text": "Terakhir"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Resmi berarti sah menurut ketentuan; kata ini terasa dekat hanya karena istilah \"rapat paripurna\" identik dengan forum resmi, padahal paripurna tidak bermakna resmi.",
+    "B": "Agung berarti mulia atau besar; paripurna tidak menyatakan kemuliaan.",
+    "C": "Khidmat berarti penuh hormat dan takzim, menggambarkan suasana, bukan kelengkapan.",
+    "D": "Benar. Paripurna berarti lengkap atau penuh; rapat paripurna adalah rapat yang dihadiri segenap (lengkap) anggota.",
+    "E": "Terakhir menyatakan urutan penghabisan; paripurna tidak berkaitan dengan urutan."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-019",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Frasa \"fenomena ini\" pada paragraf pertama bacaan tersebut merujuk pada ...",
+  "image": null,
+  "passage": "Suhu udara di pusat kota besar kerap lebih tinggi beberapa derajat daripada suhu di wilayah pinggiran yang lebih hijau. Fenomena ini dikenal sebagai pulau bahang perkotaan. Penyebab utamanya adalah material bangunan dan perkerasan jalan, seperti beton dan aspal, yang menyerap panas matahari pada siang hari, ditambah minimnya tutupan vegetasi yang seharusnya mendinginkan udara melalui penguapan air dari daun.\n\nDampak pulau bahang tidak berhenti pada rasa gerah. Panas yang tersimpan dalam beton dan aspal dilepaskan secara perlahan setelah matahari terbenam sehingga suhu malam di pusat kota tetap tinggi. Kondisi tersebut memperbesar konsumsi listrik untuk pendingin ruangan dan menambah risiko gangguan kesehatan bagi kelompok rentan, seperti lansia dan penderita penyakit jantung.\n\nSejumlah kota berupaya meredam pulau bahang dengan memperluas taman kota, menanam pohon peneduh di tepi jalan, serta memasang atap berwarna terang yang memantulkan sinar matahari. Pengamatan di berbagai kota menunjukkan kecenderungan yang konsisten: semakin besar perbandingan luas ruang hijau terhadap luas permukaan kedap air di suatu kawasan, semakin kecil selisih suhu kawasan itu terhadap wilayah pinggiran.",
+  "options": [
+    {
+      "key": "A",
+      "text": "lebih tingginya suhu udara di pusat kota daripada suhu di wilayah pinggiran"
+    },
+    {
+      "key": "B",
+      "text": "penyerapan panas matahari oleh beton dan aspal pada siang hari"
+    },
+    {
+      "key": "C",
+      "text": "minimnya tutupan vegetasi di pusat kota besar"
+    },
+    {
+      "key": "D",
+      "text": "penguapan air dari daun yang mendinginkan udara"
+    },
+    {
+      "key": "E",
+      "text": "besarnya konsumsi listrik untuk pendingin ruangan di pusat kota"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Frasa \"fenomena ini\" merujuk pada pernyataan kalimat sebelumnya, yaitu suhu udara pusat kota yang kerap lebih tinggi daripada suhu wilayah pinggiran, yang kemudian dinamai pulau bahang perkotaan.",
+    "B": "Penyerapan panas oleh beton dan aspal disebut sebagai penyebab fenomena itu, bukan hal yang dirujuk frasa tersebut.",
+    "C": "Minimnya tutupan vegetasi juga disebut sebagai penyebab, bukan fenomena yang diberi nama pulau bahang.",
+    "D": "Penguapan air dari daun adalah mekanisme pendinginan yang hilang, bagian dari penjelasan penyebab, bukan rujukan frasa itu.",
+    "E": "Konsumsi listrik untuk pendingin ruangan baru dibahas pada paragraf kedua sebagai dampak, sehingga tidak mungkin menjadi rujukan frasa pada paragraf pertama."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

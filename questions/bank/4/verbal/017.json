@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-017",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nKarena nilai tukar rupiah melemah, maka harga bahan baku impor mengalami kenaikan yang sangat signifikan sekali.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Karena nilai tukar rupiah melemah, maka harga bahan baku impor naik secara signifikan."
+    },
+    {
+      "key": "B",
+      "text": "Nilai tukar rupiah melemah sehingga harga bahan baku impor naik sangat signifikan sekali."
+    },
+    {
+      "key": "C",
+      "text": "Karena nilai tukar rupiah melemah, harga bahan baku impor naik secara signifikan."
+    },
+    {
+      "key": "D",
+      "text": "Dikarenakan nilai tukar rupiah melemah, harga bahan baku impor naik secara signifikan."
+    },
+    {
+      "key": "E",
+      "text": "Karena nilai tukar rupiah yang melemah, harga bahan baku impor naik secara signifikan."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Masih melanggar kepaduan konjungsi: \"karena\" dan \"maka\" dipakai bersamaan sehingga kalimat tidak memiliki induk kalimat.",
+    "B": "Masih melanggar kehematan: \"sangat ... sekali\" adalah pleonasme karena dua penanda tingkat dipakai untuk satu kata sifat.",
+    "C": "Benar. Konjungsi ganda \"karena ... maka\" dihilangkan sehingga induk kalimat jelas, dan pleonasme \"sangat signifikan sekali\" diringkas menjadi \"secara signifikan\".",
+    "D": "Melanggar kebakuan kata: \"dikarenakan\" bukan bentuk baku untuk menyatakan sebab; bentuk bakunya adalah \"karena\".",
+    "E": "Melanggar kehematan dan struktur: kata \"yang\" menjadikan anak kalimat kehilangan predikat karena \"melemah\" berubah menjadi perluasan penjelas, bukan predikat."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

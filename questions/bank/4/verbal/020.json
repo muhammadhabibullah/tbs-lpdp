@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-020",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan tersebut, apabila sebuah kawasan kota mengubah sebagian taman kotanya menjadi pelataran parkir beraspal, kondisi yang paling mungkin terjadi adalah ...",
+  "image": null,
+  "passage": "Suhu udara di pusat kota besar kerap lebih tinggi beberapa derajat daripada suhu di wilayah pinggiran yang lebih hijau. Fenomena ini dikenal sebagai pulau bahang perkotaan. Penyebab utamanya adalah material bangunan dan perkerasan jalan, seperti beton dan aspal, yang menyerap panas matahari pada siang hari, ditambah minimnya tutupan vegetasi yang seharusnya mendinginkan udara melalui penguapan air dari daun.\n\nDampak pulau bahang tidak berhenti pada rasa gerah. Panas yang tersimpan dalam beton dan aspal dilepaskan secara perlahan setelah matahari terbenam sehingga suhu malam di pusat kota tetap tinggi. Kondisi tersebut memperbesar konsumsi listrik untuk pendingin ruangan dan menambah risiko gangguan kesehatan bagi kelompok rentan, seperti lansia dan penderita penyakit jantung.\n\nSejumlah kota berupaya meredam pulau bahang dengan memperluas taman kota, menanam pohon peneduh di tepi jalan, serta memasang atap berwarna terang yang memantulkan sinar matahari. Pengamatan di berbagai kota menunjukkan kecenderungan yang konsisten: semakin besar perbandingan luas ruang hijau terhadap luas permukaan kedap air di suatu kawasan, semakin kecil selisih suhu kawasan itu terhadap wilayah pinggiran.",
+  "options": [
+    {
+      "key": "A",
+      "text": "suhu udara kawasan itu tidak berubah karena luas ruang hijau tidak memengaruhi suhu"
+    },
+    {
+      "key": "B",
+      "text": "konsumsi listrik untuk pendingin ruangan di kawasan itu cenderung menurun"
+    },
+    {
+      "key": "C",
+      "text": "suhu malam di kawasan itu turun lebih cepat karena aspal tidak menyimpan panas"
+    },
+    {
+      "key": "D",
+      "text": "risiko gangguan kesehatan kelompok rentan di kawasan itu cenderung berkurang"
+    },
+    {
+      "key": "E",
+      "text": "selisih suhu kawasan itu terhadap wilayah pinggiran cenderung membesar"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Bertentangan dengan kalimat terakhir bacaan yang menyatakan hubungan konsisten antara perbandingan luas ruang hijau dan selisih suhu.",
+    "B": "Arahnya terbalik: berkurangnya ruang hijau membuat kawasan lebih panas sehingga kebutuhan pendingin ruangan justru cenderung bertambah.",
+    "C": "Bertentangan dengan paragraf kedua: aspal justru menyimpan panas dan melepaskannya perlahan sehingga suhu malam tetap tinggi.",
+    "D": "Arahnya terbalik: kawasan yang makin panas menambah, bukan mengurangi, risiko gangguan kesehatan kelompok rentan.",
+    "E": "Benar. Mengganti taman dengan pelataran beraspal memperkecil perbandingan luas ruang hijau terhadap permukaan kedap air; menurut kalimat terakhir bacaan, semakin kecil perbandingan itu, semakin besar selisih suhu kawasan terhadap wilayah pinggiran."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

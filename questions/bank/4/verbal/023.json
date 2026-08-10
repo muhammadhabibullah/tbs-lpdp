@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-023",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Kata \"viabilitas\" pada paragraf kedua bacaan tersebut bermakna ...",
+  "image": null,
+  "passage": "Bank benih adalah fasilitas penyimpanan yang menjaga keanekaragaman genetik tanaman pangan. Benih dikeringkan hingga kadar airnya sangat rendah, kemudian disimpan dalam ruangan bersuhu jauh di bawah nol derajat agar metabolismenya melambat dan benih dapat bertahan selama puluhan tahun. Koleksi semacam ini menjadi cadangan ketika suatu varietas lokal lenyap dari lahan petani, misalnya karena serangan hama, bencana alam, atau beralihnya petani ke segelintir varietas unggul yang seragam.\n\nMeskipun demikian, penyimpanan beku bukan jaminan yang berlaku selamanya. Viabilitas benih menurun secara bertahap sehingga setiap koleksi harus ditanam ulang secara berkala untuk menghasilkan benih segar sebagai pengganti. Sebagian tumbuhan, seperti banyak jenis buah tropis, menghasilkan benih yang rusak apabila dikeringkan sehingga tidak dapat disimpan dengan cara tersebut. Di samping itu, kegiatan penanaman ulang, pencatatan, dan perawatan ruang pendingin menuntut biaya serta tenaga ahli yang berkesinambungan, padahal pendanaan bank benih di banyak negara belum stabil.",
+  "options": [
+    {
+      "key": "A",
+      "text": "kadar air yang terkandung dalam benih"
+    },
+    {
+      "key": "B",
+      "text": "keragaman genetik yang dibawa benih"
+    },
+    {
+      "key": "C",
+      "text": "kemampuan benih untuk tetap hidup dan berkecambah"
+    },
+    {
+      "key": "D",
+      "text": "ketahanan benih terhadap serangan hama"
+    },
+    {
+      "key": "E",
+      "text": "jumlah benih yang tersimpan dalam setiap koleksi"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Kadar air dibahas pada paragraf pertama sebagai perlakuan sebelum penyimpanan, bukan makna viabilitas.",
+    "B": "Keragaman genetik adalah hal yang dijaga bank benih secara keseluruhan, bukan sifat benih yang menurun selama penyimpanan.",
+    "C": "Benar. Konteksnya menyatakan viabilitas menurun sehingga koleksi harus ditanam ulang untuk menghasilkan benih segar; artinya, viabilitas adalah daya hidup benih, yaitu kemampuannya untuk tetap hidup dan berkecambah.",
+    "D": "Ketahanan terhadap hama tidak berkaitan dengan konteks penanaman ulang untuk memperoleh benih segar.",
+    "E": "Jumlah benih dalam koleksi tidak dinyatakan menurun secara bertahap; yang menurun adalah daya hidupnya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

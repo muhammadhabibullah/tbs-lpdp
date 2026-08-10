@@ -1,0 +1,43 @@
+{
+  "id": "4-kuantitatif-012",
+  "package": 4,
+  "subtest": "kuantitatif",
+  "number": 12,
+  "type": "deret_angka",
+  "question_text": "−145, −147, −144, −36, ..., ..., −5 Dua bilangan yang tepat untuk mengisi titik-titik tersebut berturut-turut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−41, −36"
+    },
+    {
+      "key": "B",
+      "text": "−38, −35"
+    },
+    {
+      "key": "C",
+      "text": "−41, −35"
+    },
+    {
+      "key": "D",
+      "text": "−31, −37"
+    },
+    {
+      "key": "E",
+      "text": "72, 180"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Pasangan ini diperoleh dengan menghitung suku kelima dengan benar, tetapi memakai bilangan 5 lagi untuk suku keenam alih-alih menaikkannya menjadi 6.",
+    "B": "Salah. Pasangan ini diperoleh dengan mengulang bilangan operasi dari awal (2, 3) ketika siklus berulang, padahal bilangan itu terus naik ke 5 dan 6.",
+    "C": "Benar. Operasinya berulang dalam siklus tiga langkah — kurangi, tambah, lalu bagi — sementara bilangan operasinya naik satu setiap langkah dan tidak ikut diulang: −2, +3, :4, −5, +6, :7. Langkah keenam adalah bagi 7, sehingga −35 : 7 = −5. Dua bilangan yang hilang adalah −41 dan −35; suku terakhir yang tercetak (−5) mengonfirmasi pola tersebut.",
+    "D": "Salah. Pasangan ini diperoleh dengan menukar urutan kedua operasi dalam siklus (tambah dulu, baru kurangi).",
+    "E": "Salah. Pasangan ini diperoleh dengan menganggap selisih deret tetap sebesar selisih dua suku tercetak terakhir (108), yang tidak membawa deret sampai ke suku terakhir."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

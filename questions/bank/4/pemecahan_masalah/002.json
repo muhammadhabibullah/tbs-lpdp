@@ -1,0 +1,43 @@
+{
+  "id": "4-pemecahan_masalah-002",
+  "package": 4,
+  "subtest": "pemecahan_masalah",
+  "number": 2,
+  "type": "peluang_kombinatorik",
+  "question_text": "Sebuah panitia beranggotakan 4 orang akan dibentuk dari 5 calon laki-laki dan 4 calon perempuan. Apabila panitia harus memuat tepat 3 orang perempuan, banyak susunan panitia yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "20"
+    },
+    {
+      "key": "B",
+      "text": "120"
+    },
+    {
+      "key": "C",
+      "text": "126"
+    },
+    {
+      "key": "D",
+      "text": "40"
+    },
+    {
+      "key": "E",
+      "text": "9"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Memilih 3 perempuan dari 4 calon dapat dilakukan dengan C(4, 3) = 4 cara, dan memilih 1 laki-laki dari 5 calon dengan C(5, 1) = 5 cara. Keduanya dipilih bersamaan, sehingga banyak susunan adalah 4 × 5 = 20.",
+    "B": "Salah. Nilai 120 diperoleh dengan memperhatikan urutan ketika memilih anggota perempuan, padahal susunan panitia tidak membedakan urutan.",
+    "C": "Salah. Nilai 126 diperoleh dengan menghitung seluruh cara memilih 4 orang dari 9 calon tanpa memperhatikan syarat banyak perempuan.",
+    "D": "Salah. Nilai 40 diperoleh dengan menukar syaratnya menjadi 1 perempuan dan 3 laki-laki.",
+    "E": "Salah. Nilai 9 diperoleh dengan menjumlahkan kedua pilihan, padahal keduanya dilakukan bersamaan sehingga banyak caranya dikalikan."
+  },
+  "difficulty": "medium",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

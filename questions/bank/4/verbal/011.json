@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-011",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "OASE : GURUN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Gurun : Oase"
+    },
+    {
+      "key": "B",
+      "text": "Kaktus : Gurun"
+    },
+    {
+      "key": "C",
+      "text": "Sungai : Muara"
+    },
+    {
+      "key": "D",
+      "text": "Pulau : Lautan"
+    },
+    {
+      "key": "E",
+      "text": "Salju : Kutub"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Pasangan ini hanya membalik urutan pasangan soal sehingga arah hubungannya menjadi terbalik: gurun bukan wilayah kecil yang dikelilingi oase.",
+    "B": "Kaktus adalah makhluk hidup penghuni khas gurun; hubungannya makhluk dan habitat, bukan wilayah kecil yang sifatnya berlawanan dengan wilayah luas di sekelilingnya.",
+    "C": "Muara adalah bagian akhir sungai; hubungannya keseluruhan dan bagian, bukan wilayah yang dikelilingi wilayah lain yang kontras.",
+    "D": "Benar. Oase adalah wilayah berair yang dikelilingi hamparan gurun yang kering, sebagaimana pulau adalah daratan yang dikelilingi lautan: bagian kecil yang sifatnya berlawanan dengan lingkungan luas di sekelilingnya.",
+    "E": "Salju adalah ciri khas yang lazim di kutub, bukan pengecualian yang kontras dengan lingkungan sekelilingnya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

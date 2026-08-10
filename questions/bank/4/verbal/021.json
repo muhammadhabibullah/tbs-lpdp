@@ -1,0 +1,43 @@
+{
+  "id": "4-verbal-021",
+  "package": 4,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Pernyataan berikut yang TIDAK sesuai dengan isi bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Suhu udara di pusat kota besar kerap lebih tinggi beberapa derajat daripada suhu di wilayah pinggiran yang lebih hijau. Fenomena ini dikenal sebagai pulau bahang perkotaan. Penyebab utamanya adalah material bangunan dan perkerasan jalan, seperti beton dan aspal, yang menyerap panas matahari pada siang hari, ditambah minimnya tutupan vegetasi yang seharusnya mendinginkan udara melalui penguapan air dari daun.\n\nDampak pulau bahang tidak berhenti pada rasa gerah. Panas yang tersimpan dalam beton dan aspal dilepaskan secara perlahan setelah matahari terbenam sehingga suhu malam di pusat kota tetap tinggi. Kondisi tersebut memperbesar konsumsi listrik untuk pendingin ruangan dan menambah risiko gangguan kesehatan bagi kelompok rentan, seperti lansia dan penderita penyakit jantung.\n\nSejumlah kota berupaya meredam pulau bahang dengan memperluas taman kota, menanam pohon peneduh di tepi jalan, serta memasang atap berwarna terang yang memantulkan sinar matahari. Pengamatan di berbagai kota menunjukkan kecenderungan yang konsisten: semakin besar perbandingan luas ruang hijau terhadap luas permukaan kedap air di suatu kawasan, semakin kecil selisih suhu kawasan itu terhadap wilayah pinggiran.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Beton dan aspal melepaskan panas yang tersimpan secara perlahan setelah matahari terbenam."
+    },
+    {
+      "key": "B",
+      "text": "Vegetasi mendinginkan udara melalui penguapan air dari daun."
+    },
+    {
+      "key": "C",
+      "text": "Suhu malam yang tetap tinggi memperbesar konsumsi listrik untuk pendingin ruangan."
+    },
+    {
+      "key": "D",
+      "text": "Atap berwarna terang meredam pulau bahang dengan menyerap panas matahari lebih banyak."
+    },
+    {
+      "key": "E",
+      "text": "Lansia termasuk kelompok yang berisiko terganggu kesehatannya akibat pulau bahang."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Sesuai dengan paragraf kedua: panas yang tersimpan dalam beton dan aspal dilepaskan secara perlahan setelah matahari terbenam.",
+    "B": "Sesuai dengan paragraf pertama: vegetasi mendinginkan udara melalui penguapan air dari daun.",
+    "C": "Sesuai dengan paragraf kedua: suhu malam yang tetap tinggi disebut memperbesar konsumsi listrik untuk pendingin ruangan.",
+    "D": "Benar sebagai jawaban karena TIDAK sesuai: menurut paragraf ketiga, atap berwarna terang bekerja dengan memantulkan sinar matahari, bukan menyerap panas lebih banyak.",
+    "E": "Sesuai dengan paragraf kedua: lansia disebut sebagai salah satu kelompok rentan yang berisiko terganggu kesehatannya."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}
