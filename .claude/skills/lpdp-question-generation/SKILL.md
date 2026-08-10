@@ -14,10 +14,18 @@ One package = one full TBS try-out, 60 questions, 90 minutes:
 | Subtest key | Name | Questions | Duration | Type mix (guideline) |
 |-------------|------|-----------|----------|----------------------|
 | `verbal` | Penalaran Verbal | 23 | 30 min | 4 `sinonim`, 4 `antonim`, 5 `analogi`, 3 `silogisme`, 2 `kalimat_efektif`, 5 `reading` (1–2 passages) |
-| `kuantitatif` | Penalaran Kuantitatif | 25 | 40 min | 5 `aritmetika`, 3 `aljabar`, 5 `deret_angka` (1–2 of them two-blank), 4 `perbandingan_kuantitatif`, 2 `kecukupan_data`, 4 `soal_cerita`, 2 `geometri` |
+| `kuantitatif` | Penalaran Kuantitatif | 25 | 40 min | 5 `aritmetika`, 3 `aljabar`, 5 `deret_angka` (≥1 two-blank **and** ≥1 anchored `--interior`), 4 `perbandingan_kuantitatif`, 2 `kecukupan_data`, 4 `soal_cerita`, 2 `geometri` |
 | `pemecahan_masalah` | Pemecahan Masalah | 12 | 20 min | 4 `logika_analitis`, 2 `penalaran_kasus`, 2 `interpretasi_data`, 2 `peluang_kombinatorik`, 1 `analisis_teks`, 1 `soal_cerita` |
 
-Difficulty mix per subtest: ~30% `easy`, ~50% `medium`, ~20% `hard`. Scoring is +5/0, so no trick "no correct answer" items — exactly one correct option, always.
+Difficulty mix per subtest, **from package 4 onwards**: ~15% `easy`, ~45% `medium`, ~40% `hard`. Packages 1–3 were built to an easier ~30/50/20 and are not to be rewritten; every *new* package aims at the harder mix, because the real test is harder than those first three. Scoring is +5/0, so no trick "no correct answer" items — exactly one correct option, always.
+
+Where the extra difficulty comes from — pick the harder variant, never a murkier one. An item is harder because it takes more correct steps, not because it is vaguer:
+
+- **More inference per item.** Prefer stems that hide the rule behind two things at once (an operation cycle *and* a climbing operand), reasoning that needs a case split, or a table whose claim needs two rows combined rather than one read off.
+- **Less evidence, one checkable anchor.** The `--interior` stem is the model: fewer visible terms, but a printed value further along that a correct rule must land on. Difficulty from *withheld* evidence is fair; difficulty from ambiguity is not.
+- **Negative and non-integer intermediates.** Sequences that dip negative, ratios that are fractions, percentages of percentages — arithmetic that punishes sloppiness without needing a calculator.
+- **Distractors that are the near-miss.** The strongest option set is one where each wrong answer is the result of a specific, nameable slip (right rule applied one step too far, operand not carried forward, two operations merged into one). If a distractor is wrong for no describable reason, it is wasted.
+- **Never** by trick wording, hidden assumptions, unstated units, or answers that hinge on a reading of the Indonesian rather than the mathematics.
 
 The mix is a guideline; `validate_bank.py` enforces the per-subtest **totals**, not the split. Package 1 predates this mix and does not match it. Which types a subtest may carry *is* enforced, from `TYPES_BY_SUBTEST` in `questions/generator/common.py` — `soal_cerita` and `peluang_kombinatorik` are deliberately legal in two subtests each.
 
@@ -109,6 +117,7 @@ Eleven of the eighteen types are traditional; these seven were added after compa
 
 - **`silogisme`** (verbal, also legal in `pemecahan_masalah`) — premises then `Simpulan yang tepat adalah ...`. The key must follow *necessarily*; the strongest distractors are conclusions that are merely probable, that reverse the implication, or that over-generalise from "tidak semua"/"sebagian". Include some items whose correct answer is a hedge (`... belum tentu ...`), as in real sets.
 - **`kalimat_efektif`** (verbal) — a flawed sentence, then five rewrites. Exactly one must be correct under standard *kalimat efektif* rules (no redundant words, clear subject and predicate, consistent conjunction, PUEBI spelling). Every distractor must break a **nameable** rule, and the explanation must name it. Do not write items where two rewrites are both defensible — this is the easiest type to get wrong.
+- **`deret_angka`** (kuantitatif) — number sequences. **Script-generated**, and the screening matters as much as the rule: every candidate is tested against rival readings (arithmetic, geometric, second difference, interleaved, alternating, Fibonacci) and thrown away if any of them fits the printed terms but continues differently. Three stem shapes, hardest last: `...` at the end (one blank), `..., ...` at the end (two), and `--interior` — four terms, two blanks, then a further term printed as an **anchor** (`−9, −10, −8, −24, ..., ..., −138`). The anchored shape is where the real test gets hard, so every package from 4 on carries at least one. Rules span the whole list the official sets use: `+`, `−`, `×`, `:` (including a three-step operation cycle whose operand climbs straight through the repeat — `−1, +2, ×3, −4, +5, ×6`), Fibonacci sums, second-difference climbs, and interleaved *loncat angka*. Division-cycles are built backwards from their last term so every step divides exactly.
 - **`aljabar`** (kuantitatif) — linear equations, two-variable systems, evaluating expressions, symmetric identities. **Script-generated.**
 - **`kecukupan_data`** (kuantitatif) — a question, two numbered statements, and the fixed five options (see `OPTIONS` in `kecukupan_data.py`; never re-word them). The key is a claim about three separate facts — (1) alone, (2) alone, both — so it is decided by computation, never by eye. **Script-generated.** Half the templates are geometry items that come with a figure (`--kind geometry`): parallel lines cut by two transversals, a right triangle with a midsegment, two right triangles sharing a base. Real sets lean on these, and they are where candidates go wrong most, because a picture invites you to look and looking is not deciding — each is built around one quantity that looks decisive and is not (AB in a midsegment item determines nothing about DE; the base in the two-triangle item cancels out of the answer entirely).
 - **`peluang_kombinatorik`** (kuantitatif and pemecahan_masalah) — probability and counting. Probabilities print as reduced fractions (`12/95`), never decimals. **Script-generated.**
@@ -119,8 +128,9 @@ Eleven of the eighteen types are traditional; these seven were added after compa
 
 1. **Generate** — run the `question-generator` agent. Computable types MUST come from the deterministic scripts (they write valid files directly and print what they created):
    ```bash
-   python3 questions/generator/deret_angka.py --package 1 --count 4              # next term
+   python3 questions/generator/deret_angka.py --package 1 --count 3              # next term
    python3 questions/generator/deret_angka.py --package 1 --count 1 --blanks 2   # next two terms
+   python3 questions/generator/deret_angka.py --package 1 --count 1 --interior   # hardest: 4 terms, 2 blanks, anchor
    python3 questions/generator/aritmetika.py --package 1 --count 5 --type aritmetika
    python3 questions/generator/aritmetika.py --package 1 --count 4 --type perbandingan_kuantitatif
    python3 questions/generator/aljabar.py --package 1 --count 3

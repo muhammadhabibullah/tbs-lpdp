@@ -22,9 +22,16 @@ the 7th term is granted, so the 8th term is screened against the rival rules a
 second time; its distractors split evenly between pairs whose 7th term is right
 and 8th wrong, and pairs that are already wrong at the 7th.
 
+`--interior` produces the hardest shape — four terms, two blanks, then a further
+term printed as an anchor (``−9, −10, −8, −24, ..., ..., −138``). The rule has to
+be inferred from less evidence, and the anchor is there to be checked against
+rather than continued, which is what separates a near-miss rule from the right
+one. It gets its own screening: a rival reading only makes the item ambiguous if
+it fits the four printed terms *and* lands on the anchor by different middles.
+
 Usage:
-    python3 deret_angka.py --package 1 --count 5 [--blanks 2] [--seed 42]
-                           [--bank-dir PATH]
+    python3 deret_angka.py --package 1 --count 5 [--blanks 2 | --interior]
+                           [--seed 42] [--bank-dir PATH]
 """
 
 from __future__ import annotations
@@ -34,7 +41,7 @@ import random
 from fractions import Fraction
 from pathlib import Path
 
-from common import BANK_DIR, fmt_number, make_question, next_number, write_question
+from common import BANK_DIR, MINUS, fmt_number, make_question, next_number, write_question
 
 SUBTEST = "kuantitatif"
 QTYPE = "deret_angka"
@@ -299,6 +306,124 @@ def gen_alternating_ops(rng: random.Random):
     return terms, answer, answer2, wrongs, expl, "hard"
 
 
+OP_LABEL = {"add": "tambah", "sub": "kurangi", "mul": "kali", "div": "bagi"}
+OP_SYMBOL = {"add": "+", "sub": MINUS, "mul": "×", "div": ":"}
+
+
+def _apply(op: str, value: int, n: int) -> int:
+    """One step of an operation cycle. Division is only ever called where the
+    construction has already guaranteed it comes out whole."""
+    if op == "add":
+        return value + n
+    if op == "sub":
+        return value - n
+    if op == "mul":
+        return value * n
+    assert value % n == 0, "inexact division reached _apply"
+    return value // n
+
+
+def _unapply(op: str, value: int, n: int) -> int:
+    """Inverse of `_apply`, for building a divide-cycle backwards from its end."""
+    return {"add": value - n, "sub": value + n, "div": value * n}[op]
+
+
+def _try(op: str, value: int, n: int):
+    """`_apply` for distractors: None when a division would leave a remainder."""
+    if op == "div" and (n == 0 or value % n != 0):
+        return None
+    return _apply(op, value, n)
+
+
+def gen_cycling_ops(rng: random.Random):
+    """Operations repeat in a three-step cycle while the operand climbs by one.
+
+    `−9, −10, −8, −24, …` is −1, +2, ×3, then −4, +5, ×6: the reader has to see
+    two things at once — that the operations run in a cycle, and that the number
+    they are applied with keeps counting up straight through the repeat. This is
+    the shape the official sets use for their hardest sequence item.
+
+    Each cycle carries two additive steps and one multiplicative one. A ×-cycle
+    is built forwards; a ÷-cycle is built **backwards** from a small final term,
+    because every division going forwards is a multiplication going back — so
+    the sequence divides exactly at every step by construction rather than by
+    luck.
+    """
+    first, second = rng.sample(["sub", "add"], 2)
+    third = rng.choice(["mul", "mul", "div"])
+    ops = (first, second, third)
+    k = rng.choice([1, 2])
+    operands = [k + i for i in range(7)]  # 7 steps → 8 terms
+
+    if third == "mul":
+        terms = [rng.choice([-1, -1, 1]) * rng.randint(4, 15)]
+        for i, n in enumerate(operands):
+            terms.append(_apply(ops[i % 3], terms[-1], n))
+    else:
+        terms = [rng.choice([-1, -1, 1]) * rng.randint(2, 9)]  # the 7th term
+        for i in range(5, -1, -1):
+            terms.insert(0, _unapply(ops[i % 3], terms[0], operands[i]))
+        terms.append(_apply(ops[0], terms[-1], operands[6]))
+
+    answer, answer2 = terms[6], terms[7]
+    shown = terms[:6]
+    step_op, step_n, before = ops[2], operands[5], terms[5]
+
+    wrongs = []
+    for value, reason in (
+        (_try(ops[1], before, step_n),
+         f"menerapkan operasi {OP_LABEL[ops[1]]} {_fmt(step_n)}, padahal langkah ketiga "
+         f"dalam setiap siklus adalah {OP_LABEL[step_op]}"),
+        (_try(step_op, before, step_n - 1),
+         f"memakai bilangan {_fmt(step_n - 1)} lagi, padahal bilangan operasinya naik "
+         f"satu setiap langkah sehingga giliran ini memakai {_fmt(step_n)}"),
+        (_try(ops[0], _try(step_op, before, step_n) or 0, step_n),
+         f"menerapkan dua operasi sekaligus dalam satu langkah "
+         f"({OP_LABEL[step_op]} {_fmt(step_n)} lalu {OP_LABEL[ops[0]]} {_fmt(step_n)})"),
+        (_try(step_op, before, operands[2]),
+         f"mengulang bilangan {_fmt(operands[2])} dari siklus pertama alih-alih "
+         f"melanjutkan hitungan ke {_fmt(step_n)}"),
+    ):
+        if value is not None:
+            wrongs.append((value, reason))
+
+    # The two hidden terms of the interior-blank stem, and the ways a reader
+    # arrives at the wrong pair. Each is a real misreading of *this* rule.
+    t5, t6 = terms[4], terms[5]
+    restart5 = _try(ops[0], terms[3], operands[0])
+    swap5 = _try(ops[1], terms[3], operands[3])
+    keep5 = _try(ops[0], terms[3], operands[3])
+    interior_wrongs = []
+    for pair_values, reason in (
+        ((restart5, restart5 is not None and _try(ops[1], restart5, operands[1])),
+         f"mengulang bilangan operasi dari awal ({_fmt(operands[0])}, {_fmt(operands[1])}) "
+         f"ketika siklus berulang, padahal bilangan itu terus naik ke "
+         f"{_fmt(operands[3])} dan {_fmt(operands[4])}"),
+        ((swap5, swap5 is not None and _try(ops[0], swap5, operands[4])),
+         f"menukar urutan kedua operasi dalam siklus ({OP_LABEL[ops[1]]} dulu, baru "
+         f"{OP_LABEL[ops[0]]})"),
+        ((t5, keep5 is not None and _try(ops[1], t5, operands[3])),
+         f"menghitung suku kelima dengan benar, tetapi memakai bilangan "
+         f"{_fmt(operands[3])} lagi untuk suku keenam alih-alih menaikkannya menjadi "
+         f"{_fmt(operands[4])}"),
+    ):
+        a, b = pair_values
+        if a is not None and b is not None and b is not False:
+            interior_wrongs.append(((a, b), reason))
+
+    cycle = ", ".join(
+        f"{OP_SYMBOL[ops[i % 3]]}{_fmt(operands[i])}" for i in range(6)
+    )
+    expl = (
+        f"Operasinya berulang dalam siklus tiga langkah — {OP_LABEL[ops[0]]}, "
+        f"{OP_LABEL[ops[1]]}, lalu {OP_LABEL[ops[2]]} — sementara bilangan operasinya naik "
+        f"satu setiap langkah dan tidak ikut diulang: {cycle}. "
+        f"Langkah keenam adalah {OP_LABEL[step_op]} {_fmt(step_n)}, sehingga "
+        f"{_fmt(before)} {OP_SYMBOL[step_op]} {_fmt(step_n)} = {_fmt(answer)}."
+    )
+    return shown, answer, answer2, wrongs, expl, "hard", interior_wrongs
+
+
 def gen_fibonacci_like(rng: random.Random):
     a, b = rng.randint(1, 6), rng.randint(2, 9)
     terms = [a, b]
@@ -396,9 +521,23 @@ PATTERN_GROUPS = [
     [gen_alternating_ops],
     [gen_fibonacci_like],
     [gen_doubling_diff],
+    [gen_cycling_ops],
 ]
 
 PATTERNS = [p for group in PATTERN_GROUPS for p in group]
+
+# The families worth putting behind the anchored stem (--interior). Each is a
+# rule a reader can still pin down from four terms: an operation cycle, a
+# Fibonacci sum, a second-difference climb, two interleaved sequences, or
+# differences that double. `gen_geometric` and `gen_squares_offset` are left out
+# — four terms of either is a giveaway, and the anchor adds nothing.
+INTERIOR_GROUPS = [
+    [gen_cycling_ops],
+    [gen_fibonacci_like],
+    [gen_increasing_diff],
+    [gen_two_interleaved],
+    [gen_doubling_diff],
+]
 
 
 def _single_blank(terms, answer, answer2, wrongs, expl_correct):
@@ -470,24 +609,134 @@ def _double_blank(terms, answer, answer2, wrongs, expl_correct):
     return stem, correct, distractors, explanation
 
 
-def build_one(rng: random.Random, package_id: int, number: int, bank_dir: Path,
-              pattern, blanks: int = 1) -> Path:
-    """Draw from `pattern` until a clean, unambiguous item comes out, then write it."""
-    layout = _single_blank if blanks == 1 else _double_blank
-    for _ in range(200):
-        terms, answer, answer2, wrongs, expl_correct, difficulty = pattern(rng)
-        if not is_unambiguous(terms, answer):
-            continue
-        if answer in terms:
-            continue  # an answer already printed in the stem reads as a misprint
-        # a two-blank stem prints one more term of evidence, so the 8th term must
-        # survive the same screening once the 7th is taken as given
-        if blanks == 2 and not is_unambiguous(terms + [answer], answer2):
-            continue
+def interior_unambiguous(terms: list[int], answer: int) -> bool:
+    """Screening for the anchored stem, whose printed evidence is different.
 
-        stem, correct_text, distractors, explanation = layout(
-            terms, answer, answer2, wrongs, expl_correct
-        )
+    Only four consecutive terms are visible, so more rival rules fit them than
+    fit a six-term stem — but a rival only makes the item ambiguous if, run
+    three steps on, it *also* lands on the printed anchor while passing through
+    different hidden terms. That is the whole job the anchor does.
+    """
+    for rule in RIVAL_RULES:
+        seq = terms[:4]
+        for _ in range(3):
+            nxt = rule(seq)
+            if nxt is None:
+                break
+            seq = seq + [nxt]
+        else:
+            if seq[-1] == answer and (seq[4], seq[5]) != (terms[4], terms[5]):
+                return False
+    return True
+
+
+def _interior_blanks(terms, answer, extra_wrongs, expl_correct):
+    """Option set for `−9, −10, −8, −24, ..., ..., −138`.
+
+    Four terms, two blanks, then one more term printed as an anchor. Harder than
+    the tail stems in the way the official sets are hard: the rule has to be
+    inferred from less evidence, and the anchor is there to be *checked against*
+    rather than continued — a reader who never uses it cannot tell a near-miss
+    rule from the right one.
+    """
+    def pair(a, b):
+        return f"{_fmt(a)}, {_fmt(b)}"
+
+    shown, t5, t6 = terms[:4], terms[4], terms[5]
+    correct = pair(t5, t6)
+
+    candidates = [(pair(a, b), reason) for (a, b), reason in extra_wrongs]
+
+    # Generic misreadings, true of any sequence and used to fill the option set
+    # when the pattern supplies fewer than four of its own.
+    d = shown[3] - shown[2]
+    candidates.append((
+        pair(shown[3] + d, shown[3] + 2 * d),
+        f"menganggap selisih deret tetap sebesar selisih dua suku tercetak terakhir "
+        f"({_fmt(d)}), yang tidak membawa deret sampai ke suku terakhir",
+    ))
+    candidates.append((
+        pair(t6, answer),
+        "menggeser jawaban satu suku, sehingga titik-titik diisi dengan suku keenam dan "
+        "suku ketujuh — padahal suku ketujuh sudah tercetak",
+    ))
+    candidates.append((
+        pair(t6, t5),
+        "menemukan kedua bilangan dengan benar tetapi menuliskannya terbalik",
+    ))
+    # the two classic misreadings: a second-difference climb, and two
+    # interleaved sequences — both fit the four printed terms and both miss
+    d1, dd = shown[2] - shown[1], (shown[3] - shown[2]) - (shown[2] - shown[1])
+    candidates.append((
+        pair(shown[3] + d + dd, shown[3] + 2 * d + 3 * dd),
+        f"membaca deret ini sebagai pola tingkat dua, yaitu selisih yang bertambah "
+        f"tetap {_fmt(dd)} setiap langkah",
+    ))
+    candidates.append((
+        pair(shown[2] + (shown[2] - shown[0]), shown[3] + (shown[3] - shown[1])),
+        "membaca deret ini sebagai dua deret berselang-seling, masing-masing dilanjutkan "
+        "dari suku sejenisnya",
+    ))
+    if shown[2] != 0 and Fraction(shown[3], shown[2]).denominator == 1:
+        r = shown[3] // shown[2]
+        candidates.append((
+            pair(shown[3] * r, shown[3] * r * r),
+            f"menganggap deret ini dikalikan tetap dengan {_fmt(r)}, rasio dua suku "
+            f"tercetak terakhir",
+        ))
+
+    seen, distractors = {correct}, []
+    for text, reason in candidates:
+        if text in seen:
+            continue
+        seen.add(text)
+        distractors.append((text, f"Pasangan ini diperoleh dengan {reason}."))
+
+    stem = (", ".join(_fmt(t) for t in shown)
+            + f", ..., ..., {_fmt(answer)} Dua bilangan yang tepat untuk mengisi "
+              "titik-titik tersebut berturut-turut adalah ...")
+    explanation = (
+        f"{expl_correct} Dua bilangan yang hilang adalah {_fmt(t5)} dan {_fmt(t6)}; "
+        f"suku terakhir yang tercetak ({_fmt(answer)}) mengonfirmasi pola tersebut."
+    )
+    return stem, correct, distractors, explanation
+
+
+def build_one(rng: random.Random, package_id: int, number: int, bank_dir: Path,
+              pattern, blanks: int = 1, interior: bool = False) -> Path:
+    """Draw from `pattern` until a clean, unambiguous item comes out, then write it."""
+    for _ in range(200):
+        drawn = pattern(rng)
+        terms, answer, answer2, wrongs, expl_correct, difficulty = drawn[:6]
+        # a pattern may add its own interior-blank misreadings as a 7th element
+        interior_wrongs = drawn[6] if len(drawn) > 6 else []
+
+        if interior:
+            if not interior_unambiguous(terms, answer):
+                continue
+            # two identical hidden terms would make the swapped-order distractor
+            # the same pair as the key
+            if terms[4] == terms[5]:
+                continue
+            stem, correct_text, distractors, explanation = _interior_blanks(
+                terms, answer, interior_wrongs, expl_correct
+            )
+            difficulty = "hard"
+        else:
+            if not is_unambiguous(terms, answer):
+                continue
+            if answer in terms:
+                continue  # an answer already printed in the stem reads as a misprint
+            # a two-blank stem prints one more term of evidence, so the 8th term must
+            # survive the same screening once the 7th is taken as given
+            if blanks == 2 and not is_unambiguous(terms + [answer], answer2):
+                continue
+            layout = _single_blank if blanks == 1 else _double_blank
+            stem, correct_text, distractors, explanation = layout(
+                terms, answer, answer2, wrongs, expl_correct
+            )
+            if blanks == 2:
+                difficulty = "hard"
         if len(distractors) < 4:
             continue
 
@@ -510,7 +759,7 @@ def build_one(rng: random.Random, package_id: int, number: int, bank_dir: Path,
             options=options,
             correct_option=correct_key,
             explanations=explanations,
-            difficulty=difficulty if blanks == 1 else "hard",
+            difficulty=difficulty,
             source="deret_angka.py",
         )
         return write_question(q, bank_dir)
@@ -523,19 +772,23 @@ def main() -> None:
     ap.add_argument("--count", type=int, default=6)
     ap.add_argument("--blanks", type=int, choices=[1, 2], default=1,
                     help="1 = ask for the next term; 2 = ask for the next two")
+    ap.add_argument("--interior", action="store_true",
+                    help="hardest stem: four terms, two blanks, then one more term "
+                         "printed as an anchor to check the rule against")
     ap.add_argument("--seed", type=int, default=None)
     ap.add_argument("--bank-dir", type=Path, default=BANK_DIR)
     args = ap.parse_args()
 
     rng = random.Random(args.seed)
+    groups = INTERIOR_GROUPS if args.interior else PATTERN_GROUPS
     pool: list = []
     for _ in range(args.count):
         if not pool:  # without replacement, and one draw per solving method
-            pool = PATTERN_GROUPS[:]
+            pool = groups[:]
             rng.shuffle(pool)
         number = next_number(args.package, SUBTEST, args.bank_dir)
         path = build_one(rng, args.package, number, args.bank_dir,
-                         rng.choice(pool.pop()), args.blanks)
+                         rng.choice(pool.pop()), args.blanks, args.interior)
         print(f"wrote {path}")
 
 
