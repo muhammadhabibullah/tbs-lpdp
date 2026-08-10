@@ -63,7 +63,7 @@ export default function HomePage() {
   }
 
   return (
-    <AppShell participant="PESERTA ANONIM">
+    <AppShell>
       <div className="card home-hero">
         <h1>Try Out Tes Bakat Skolastik LPDP</h1>
         <p>

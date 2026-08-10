@@ -7,9 +7,10 @@
 -- schema files never undoes it.
 --
 -- Why it exists: the free tier caps the database at 500 MB, and two things grow
--- forever without a sweeper — the append-only event log, and the anonymous
--- auth users that one-per-browser sign-in creates (BE-1). The per-attempt caps
--- (BE-15/BE-16) bound how fast that happens; these jobs bound the total.
+-- forever without a sweeper — attempt data (answers plus the append-only event
+-- log), and the anonymous auth users that one-per-browser sign-in creates
+-- (BE-1). The per-attempt caps (BE-15/BE-16) bound how fast that happens;
+-- these jobs bound the total.
 --
 -- Fully idempotent: cron.schedule() replaces a job of the same name.
 -- =============================================================================
@@ -17,16 +18,24 @@
 -- Enable pg_cron once (Database → Extensions in the dashboard does the same).
 create extension if not exists pg_cron;
 
--- ---------------------------------------------------------- 1. event log ----
--- answer_events is written by the RPCs and read by nobody but the developer
--- (it exists to reconstruct what happened during a section). 30 days is far
--- longer than any dispute about a try-out is going to stay interesting.
+-- ------------------------------------------------------- 1. attempt data ----
+-- 7 days, as the site footer promises. Deleting an attempt cascades to its
+-- section_attempts → answers and answer_events, so this one statement retires
+-- a user's whole history including the Pembahasan they can still open today.
+-- question_reports survive: their attempt_id is `on delete set null`, because a
+-- report is evidence about a question, not about the attempt it came from.
+--
+-- KEEP IN SYNC with the retention line in web/src/components/FeedbackFooter.tsx.
 
 select cron.schedule(
-  'prune-answer-events',
+  'prune-attempts',
   '0 3 * * *',                       -- 03:00 UTC daily
-  $$delete from public.answer_events where created_at < now() - interval '30 days'$$
+  $$delete from public.attempts where started_at < now() - interval '7 days'$$
 );
+
+-- Left over from before the cascade above covered it; unschedule it if this
+-- file was applied in an earlier form (harmless to run when absent).
+--   select cron.unschedule('prune-answer-events');
 
 -- ----------------------------------------------------- 2. anonymous users ----
 -- Every browser that opens the site becomes a permanent auth.users row that
@@ -41,7 +50,7 @@ select cron.schedule(
 
 select cron.schedule(
   'prune-anonymous-users',
-  '30 3 * * *',                      -- 03:30 UTC daily, after the log sweep
+  '30 3 * * *',                      -- 03:30 UTC daily, after the attempt sweep
   $$
   delete from auth.users u
    where u.is_anonymous

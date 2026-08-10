@@ -5,13 +5,11 @@ import FeedbackFooter from './FeedbackFooter'
 /** Blue masthead + light page body, mirroring the PUSMENDIK CBT chrome. */
 export default function AppShell({
   children,
-  participant,
   /** Suppressed while a section is running: a mailto would send the candidate
       out of the app, and the deadline keeps ticking server-side. */
   hideFeedback = false,
 }: {
   children: ReactNode
-  participant?: string
   hideFeedback?: boolean
 }) {
   return (
@@ -33,7 +31,6 @@ export default function AppShell({
             </span>
           </Link>
           <div className="masthead-user">
-            <span className="participant">{participant ?? 'PESERTA'}</span>
             <span className="participant-avatar" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff">
                 <path d="M12 3 1 8l11 5 9-4.09V16h2V8L12 3Z" />

@@ -221,7 +221,7 @@ export default function ExamPage({
 
   if (!question) {
     return (
-      <AppShell participant="PESERTA ANONIM" hideFeedback>
+      <AppShell hideFeedback>
         <div className="card">
           <p className="empty-state">
             Mata uji <strong>{subtest.name}</strong> belum memiliki soal di bank. Jalankan generator soal terlebih
@@ -238,7 +238,7 @@ export default function ExamPage({
   const frameStyle = { '--font-scale': String(FONT_SCALES[fontStep]) } as CSSProperties
 
   return (
-    <AppShell participant="PESERTA ANONIM" hideFeedback>
+    <AppShell hideFeedback>
       <div className="card exam-card" ref={cardRef}>
         <div className="exam-head">
           <div className="exam-title">

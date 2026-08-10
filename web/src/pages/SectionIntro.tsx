@@ -32,7 +32,7 @@ export default function SectionIntro({
   }, [subtest.id])
 
   return (
-    <AppShell participant="PESERTA ANONIM">
+    <AppShell>
       <div className="card intro-card">
         <span className="eyebrow">
           {packageTitle} · Mata uji {position} dari {total}

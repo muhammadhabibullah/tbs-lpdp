@@ -167,7 +167,7 @@ export default function ReviewPage() {
 
   if (review.sections.length === 0) {
     return (
-      <AppShell participant="PESERTA ANONIM">
+      <AppShell>
         <div className="card">
           <p className="empty-state">
             Belum ada mata uji yang diselesaikan pada percobaan ini. Pembahasan terbuka setelah sebuah mata uji
@@ -186,7 +186,7 @@ export default function ReviewPage() {
   const passingTotal = review.sections.reduce((sum, s) => sum + s.subtest.passing_grade, 0)
 
   return (
-    <AppShell participant="PESERTA ANONIM">
+    <AppShell>
       <div className="card">
         <div className="score-hero">
           <div>

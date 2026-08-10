@@ -138,13 +138,6 @@ a {
   color: #fff;
 }
 
-.participant {
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.9;
-}
-
 .participant-avatar {
   display: grid;
   place-items: center;
@@ -180,9 +173,14 @@ a {
   padding: 26px 24px 34px;
 }
 
+/* Single column so every row shares one left edge; the top row is the only
+   thing that splits into two. */
 .site-footer-inner {
   max-width: 1080px;
   margin: 0 auto;
+}
+
+.site-footer-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -216,11 +214,24 @@ a {
   gap: 8px;
 }
 
-.site-footer-note {
-  max-width: 1080px;
-  margin: 14px auto 0;
-  font-size: 12px;
+/* Unmarkered: the fine print sits flush with the heading above it, so the
+   footer reads as one column rather than two indents. */
+.site-footer-notes {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 92ch;
+  font-size: 12.5px;
+  line-height: 1.6;
   color: var(--ink-faint);
+}
+
+.site-footer-notes li + li {
+  margin-top: 6px;
+}
+
+.site-footer-notes strong {
+  color: var(--ink-soft);
 }
 
 .card + .card {
@@ -1457,10 +1468,6 @@ a {
   .brand-text em {
     font-size: 9px;
     letter-spacing: 0.16em;
-  }
-
-  .participant {
-    display: none;
   }
 
   .participant-avatar {

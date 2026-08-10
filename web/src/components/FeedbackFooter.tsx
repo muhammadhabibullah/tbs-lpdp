@@ -40,27 +40,41 @@ export default function FeedbackFooter() {
 
   return (
     <footer className="site-footer">
+      {/* One container for both rows, so the fine print lines up with the
+          heading above it instead of being centred on its own. */}
       <div className="site-footer-inner">
-        <div>
-          <h2>Masukan &amp; Laporan</h2>
-          <p>
-            Menemukan soal yang keliru, pembahasan yang salah, atau kendala teknis? Kirim email ke{' '}
-            <a href={feedbackMailto()}>{FEEDBACK_EMAIL}</a>. Setiap masukan dibaca dan dipakai untuk memperbaiki bank
-            soal.
-          </p>
+        <div className="site-footer-row">
+          <div>
+            <h2>Masukan &amp; Laporan</h2>
+            <p>
+              Menemukan soal yang keliru, pembahasan yang salah, atau kendala teknis? Kirim email ke{' '}
+              <a href={feedbackMailto()}>{FEEDBACK_EMAIL}</a>. Setiap masukan dibaca dan dipakai untuk memperbaiki bank
+              soal.
+            </p>
+          </div>
+          <div className="site-footer-actions">
+            <a className="btn btn-cyan btn-sm" href={feedbackMailto()}>
+              Kirim Masukan
+            </a>
+            <button className="btn btn-ghost btn-sm" type="button" onClick={() => void copyAddress()}>
+              {copied ? '✓ Alamat tersalin' : 'Salin alamat email'}
+            </button>
+          </div>
         </div>
-        <div className="site-footer-actions">
-          <a className="btn btn-cyan btn-sm" href={feedbackMailto()}>
-            Kirim Masukan
-          </a>
-          <button className="btn btn-ghost btn-sm" type="button" onClick={() => void copyAddress()}>
-            {copied ? '✓ Alamat tersalin' : 'Salin alamat email'}
-          </button>
-        </div>
+
+        <ul className="site-footer-notes">
+          <li>
+            Soal dan pembahasan disusun dengan bantuan AI lalu diperiksa ulang secara otomatis. Kekeliruan masih
+            mungkin terjadi — laporan Anda sangat membantu memperbaikinya.
+          </li>
+          {/* Matches the 7-day sweep in supabase/maintenance.sql (NF-10). */}
+          <li>
+            Riwayat pengerjaan beserta pembahasannya tersimpan paling lama <strong>7 hari</strong>, lalu dihapus
+            otomatis. Simpan sendiri hasil yang ingin Anda pertahankan.
+          </li>
+          <li>Try out ini gratis dan dikelola mandiri — bukan produk resmi LPDP maupun PUSMENDIK.</li>
+        </ul>
       </div>
-      <p className="site-footer-note">
-        Try out ini gratis dan dikelola mandiri — bukan produk resmi LPDP maupun PUSMENDIK.
-      </p>
     </footer>
   )
 }

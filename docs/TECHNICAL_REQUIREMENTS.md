@@ -175,7 +175,7 @@ All client access goes through `supabase-js`: anonymous auth + these Postgres fu
 | NF-3 | Timer display accuracy within ±1 s of the server deadline (clock-skew corrected at `start_section` using server time). |
 | NF-4 | The site works on current Chrome/Safari/Firefox/Edge; no browser extensions or lockdown required. |
 | NF-5 | All bank content and DDL are reproducible from git (C-5): a fresh Supabase project is fully set up by `schema.sql` + one push-script run per package. |
-| NF-10 | **Retention** (added for the public launch): `supabase/maintenance.sql` schedules two daily `pg_cron` sweeps — `answer_events` older than 30 days, and anonymous `auth.users` untouched for 60 days that filed no question report. Operational only: nothing in the app reads either, and re-applying the schema files never undoes the jobs. Where BE-15/BE-16 bound how fast the database grows, these bound its total. |
+| NF-10 | **Retention** (added for the public launch): `supabase/maintenance.sql` schedules two daily `pg_cron` sweeps — attempts started more than 7 days ago (cascading to their sections, answers and events), and anonymous `auth.users` untouched for 60 days that filed no question report. The 7-day window is stated to users in the site footer, so the two must stay in sync. Operational only: nothing in the app reads the jobs, and re-applying the schema files never undoes them. Where BE-15/BE-16 bound how fast the database grows, these bound its total. |
 
 ## 10. Repository Layout
 
