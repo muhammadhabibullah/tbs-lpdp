@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-006",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 6,
+  "type": "aljabar",
+  "question_text": "Diketahui x + y = 17 dan xy = 27. Nilai dari x² + y² adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "289"
+    },
+    {
+      "key": "B",
+      "text": "343"
+    },
+    {
+      "key": "C",
+      "text": "262"
+    },
+    {
+      "key": "D",
+      "text": "235"
+    },
+    {
+      "key": "E",
+      "text": "181"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 289 diperoleh dengan menghitung (x + y)² = 289 dan berhenti di situ, tanpa mengurangkan 2xy.",
+    "B": "Salah. Nilai 343 diperoleh dengan menambahkan 2xy, padahal suku itu harus dipindahkan sehingga dikurangkan.",
+    "C": "Salah. Nilai 262 diperoleh dengan mengurangkan xy satu kali, padahal penjabaran (x + y)² memuat 2xy.",
+    "D": "Benar. x² + y² = (x + y)² − 2xy = 17² − 2 × 27 = 289 − 54 = 235.",
+    "E": "Salah. Nilai 181 diperoleh dengan menghitung (x − y)² = (x + y)² − 4xy, yang merupakan besaran lain."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

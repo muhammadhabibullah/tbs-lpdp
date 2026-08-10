@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-024",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Sebuah belah ketupat memiliki panjang diagonal 24 cm dan 10 cm. Berapakah keliling belah ketupat tersebut?",
+  "image": "images/belah-ketupat.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "52 cm"
+    },
+    {
+      "key": "B",
+      "text": "120 cm"
+    },
+    {
+      "key": "C",
+      "text": "104 cm"
+    },
+    {
+      "key": "D",
+      "text": "34 cm"
+    },
+    {
+      "key": "E",
+      "text": "68 cm"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Diagonal-diagonal belah ketupat saling membagi dua sama panjang dan saling tegak lurus, sehingga setiap sisi merupakan sisi miring segitiga siku-siku dengan kaki 24 : 2 = 12 cm dan 10 : 2 = 5 cm. Panjang sisi = √(12² + 5²) = √169 = 13 cm, sehingga keliling = 4 × 13 = 52 cm.",
+    "B": "Salah. Nilai 120 berasal dari rumus luas belah ketupat, yaitu 1/2 × 24 × 10 = 120 cm², padahal yang ditanyakan adalah keliling.",
+    "C": "Salah. Nilai 104 cm muncul jika panjang sisi dihitung dari diagonal utuh, yaitu √(24² + 10²) = 26 cm, lalu dikalikan 4. Sisi belah ketupat dibentuk dari setengah diagonal, bukan dari diagonal utuh.",
+    "D": "Salah. Nilai 34 cm hanyalah jumlah panjang kedua diagonal, yaitu 24 + 10. Diagonal bukan sisi belah ketupat, sehingga penjumlahannya tidak menghasilkan keliling.",
+    "E": "Salah. Nilai 68 cm berasal dari 2 × (24 + 10), yaitu memperlakukan kedua diagonal seperti panjang dan lebar persegi panjang. Keliling belah ketupat dihitung dari panjang sisinya yang keempat-empatnya sama, bukan dari diagonalnya."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

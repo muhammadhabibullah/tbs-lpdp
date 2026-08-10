@@ -1,0 +1,43 @@
+{
+  "id": "3-pemecahan_masalah-010",
+  "package": 3,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan luas panen dan produksi padi lima kecamatan di sebuah kabupaten pada tahun 2024. Produktivitas lahan dihitung sebagai produksi dibagi luas panen.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...",
+  "image": null,
+  "passage": "Kecamatan | Luas Panen (ha) | Produksi (ton)\nMelati | 120 | 660\nKenanga | 150 | 780\nDahlia | 90 | 522\nFlamboyan | 200 | 1.040\nSeruni | 140 | 798\nJumlah | 700 | 3.800",
+  "options": [
+    {
+      "key": "A",
+      "text": "Produktivitas lahan tertinggi dicapai oleh Kecamatan Flamboyan."
+    },
+    {
+      "key": "B",
+      "text": "Selisih antara produktivitas lahan tertinggi dan terendah melebihi 1 ton per hektare."
+    },
+    {
+      "key": "C",
+      "text": "Produksi Kecamatan Seruni mencakup lebih dari seperempat produksi seluruh kecamatan."
+    },
+    {
+      "key": "D",
+      "text": "Produktivitas lahan Kecamatan Dahlia lebih tinggi daripada produktivitas gabungan seluruh kecamatan."
+    },
+    {
+      "key": "E",
+      "text": "Produksi padi Kecamatan Kenanga pada tahun 2024 lebih tinggi daripada produksinya pada tahun 2023."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Kecamatan Flamboyan memang mencatat produksi terbesar, yaitu 1.040 ton, tetapi produktivitas lahannya hanya 1.040 : 200 = 5,2 ton per hektare, terendah bersama Kenanga. Pernyataan ini mempertukarkan produksi total dengan produktivitas.",
+    "B": "Salah. Produktivitas tertinggi adalah 5,8 ton per hektare milik Dahlia dan yang terendah 5,2 ton per hektare milik Kenanga dan Flamboyan. Selisihnya 5,8 − 5,2 = 0,6 ton per hektare, masih di bawah 1 ton per hektare.",
+    "C": "Salah. Seperempat produksi seluruh kecamatan adalah 3.800 : 4 = 950 ton, sedangkan produksi Seruni hanya 798 ton. Angka itu belum mencapai seperempat produksi total.",
+    "D": "Benar. Produktivitas tiap kecamatan adalah Melati 660 : 120 = 5,5; Kenanga 780 : 150 = 5,2; Dahlia 522 : 90 = 5,8; Flamboyan 1.040 : 200 = 5,2; dan Seruni 798 : 140 = 5,7 ton per hektare. Produktivitas gabungan seluruh kecamatan adalah 3.800 : 700 ≈ 5,43 ton per hektare, sehingga produktivitas Dahlia yang sebesar 5,8 ton per hektare memang melampauinya.",
+    "E": "Salah. Tabel hanya memuat data tahun 2024 dan tidak menyediakan angka produksi tahun 2023. Perbandingan antartahun ini tidak tercakup oleh data sehingga tidak dapat dinilai benar berdasarkan tabel."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

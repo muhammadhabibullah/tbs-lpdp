@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-013",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 13,
+  "type": "deret_angka",
+  "question_text": "12, 14, 18, 26, 42, 74, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "138, 202"
+    },
+    {
+      "key": "B",
+      "text": "170, 394"
+    },
+    {
+      "key": "C",
+      "text": "138, 266"
+    },
+    {
+      "key": "D",
+      "text": "106, 266"
+    },
+    {
+      "key": "E",
+      "text": "138, 394"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Suku ketujuh sudah tepat, tetapi suku kedelapan 202 diperoleh dengan mengulangkan selisih suku ketujuh dan keenam (64), seolah-olah selisih deret ini tetap.",
+    "B": "Salah. Suku ketujuh 170 diperoleh dengan mengalikan selisih terakhir dengan 3, bukan dengan 2, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "C": "Benar. Selisih antarsuku berlipat dua setiap langkah: 2, 4, 8, dan seterusnya. Selisih berikutnya adalah 64, sehingga suku berikutnya 74 + 64 = 138. Dengan pola yang sama, suku kedelapan adalah 266.",
+    "D": "Salah. Suku ketujuh 106 diperoleh dengan mengulang selisih terakhir (32) alih-alih menggandakannya, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "E": "Salah. Suku ketujuh sudah tepat, tetapi bilangan kedua 394 diperoleh dengan menambahkan selisih 128 pada suku kedelapan 266, yaitu mengulangi selisih suku ketujuh ke kedelapan alih-alih berhenti pada suku kedelapan."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

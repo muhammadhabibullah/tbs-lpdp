@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-010",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "KEDELAI : TEMPE = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tapai : Singkong"
+    },
+    {
+      "key": "B",
+      "text": "Susu : Sapi"
+    },
+    {
+      "key": "C",
+      "text": "Gandum : Petani"
+    },
+    {
+      "key": "D",
+      "text": "Ragi : Fermentasi"
+    },
+    {
+      "key": "E",
+      "text": "Singkong : Tapai"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Urutannya terbalik: tapai adalah produk olahan dan singkong bahan bakunya, sedangkan soal menempatkan bahan baku lebih dahulu.",
+    "B": "Susu adalah hasil, sedangkan sapi penghasilnya; hubungannya penghasil-hasil yang dibalik, bukan bahan baku dan produk olahannya.",
+    "C": "Petani adalah orang yang menanam gandum; hubungannya bahan dan orang, bukan bahan dan produk olahannya.",
+    "D": "Ragi adalah pemicu proses fermentasi, bukan bahan baku yang diolah menjadi suatu produk.",
+    "E": "Benar. Kedelai difermentasi menjadi tempe, sebagaimana singkong difermentasi menjadi tapai: bahan baku dan produk olahannya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

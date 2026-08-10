@@ -399,6 +399,85 @@ def circular_sector(*, angle_deg: float, radius_u: float, unit: str,
     )
 
 
+def rhombus(*, d1_u: float, d2_u: float, unit: str,
+            target_w: float = 300, target_h: float = 170) -> Drawing:
+    """Rhombus from its two diagonals, drawn dashed and labelled.
+
+    The side length — and with it the perimeter — is what Pythagoras on the
+    half-diagonals is for, so no side is ever dimensioned."""
+    scale = min(target_w / d1_u, target_h / d2_u)
+    w, h = d1_u * scale, d2_u * scale
+    cx, cy = PAD + w / 2, PAD + h / 2
+    L, R = (cx - w / 2, cy), (cx + w / 2, cy)
+    T, B = (cx, cy - h / 2), (cx, cy + h / 2)
+
+    parts = [
+        _polygon([L, T, R, B], FILL),
+        f'<line x1="{_f(L[0])}" y1="{_f(L[1])}" x2="{_f(R[0])}" y2="{_f(R[1])}" '
+        f'stroke="{INK_SOFT}" stroke-width="1.5" stroke-dasharray="5 4"/>',
+        f'<line x1="{_f(T[0])}" y1="{_f(T[1])}" x2="{_f(B[0])}" y2="{_f(B[1])}" '
+        f'stroke="{INK_SOFT}" stroke-width="1.5" stroke-dasharray="5 4"/>',
+        _text(cx + w / 4, cy + CAP + 6, f"{_num(d1_u)} {unit}"),
+        _text(cx + 8, cy - h / 4 + CAP / 2, f"{_num(d2_u)} {unit}", anchor="start"),
+    ]
+    return Drawing(
+        width=R[0] + PAD,
+        height=B[1] + PAD,
+        parts=parts,
+        note=(f"belah ketupat dengan diagonal {_num(d1_u)} dan {_num(d2_u)} {unit}; "
+              f"skala {_f(scale)} px per {unit}. Panjang sisi TIDAK dilabeli."),
+    )
+
+
+def cone(*, radius_u: float, height_u: float, unit: str,
+         target_h: float = 190, target_w: float = 200) -> Drawing:
+    """Cone with its base ellipse, dashed axis, and dimensioned height.
+
+    The slant height is what Pythagoras is for, so it is never drawn as a
+    labelled edge — only the radius and the vertical height are dimensioned."""
+    scale = min(target_h / height_u, target_w / (2 * radius_u))
+    rx = radius_u * scale
+    ry = rx * ELLIPSE_RATIO
+    body_h = height_u * scale
+
+    cx = PAD + rx
+    apex_y = PAD + 6.0
+    base_cy = apex_y + body_h
+    dim_x = cx + rx + 34
+    # The radius label goes below the base with a leader, mirroring how the
+    # cylinder labels its radius above the lid: anywhere inside the ellipse it
+    # would land on the curve for some r/h ratio.
+    leader_x = cx + rx / 2
+
+    parts = [
+        # body: apex, down the left slant, along the front (lower) arc, back up
+        f'<path d="M {_f(cx)} {_f(apex_y)} L {_f(cx - rx)} {_f(base_cy)} '
+        f'A {_f(rx)} {_f(ry)} 0 0 0 {_f(cx + rx)} {_f(base_cy)} Z" '
+        f'fill="{FILL}" stroke="{STROKE}" stroke-width="2"/>',
+        # hidden back half of the base rim
+        f'<path d="M {_f(cx - rx)} {_f(base_cy)} A {_f(rx)} {_f(ry)} 0 0 1 '
+        f'{_f(cx + rx)} {_f(base_cy)}" fill="none" stroke="{HIDDEN}" '
+        f'stroke-width="1.5" stroke-dasharray="5 4"/>',
+        # axis (the height) and the radius it stands on
+        f'<line x1="{_f(cx)}" y1="{_f(apex_y)}" x2="{_f(cx)}" y2="{_f(base_cy)}" '
+        f'stroke="{INK_SOFT}" stroke-width="1.5" stroke-dasharray="5 4"/>',
+        f'<line class="tick" x1="{_f(cx)}" y1="{_f(base_cy)}" x2="{_f(cx + rx)}" '
+        f'y2="{_f(base_cy)}" stroke="{INK}"/>',
+        f'<circle cx="{_f(cx)}" cy="{_f(base_cy)}" r="2.5" fill="{INK}"/>',
+        f'<line class="tick" x1="{_f(leader_x)}" y1="{_f(base_cy + 2)}" '
+        f'x2="{_f(leader_x)}" y2="{_f(base_cy + ry + 8)}"/>',
+        _text(leader_x, base_cy + ry + 22, f"{_num(radius_u)} {unit}"),
+        *_dim_v(apex_y, base_cy, dim_x, f"{_num(height_u)} {unit}", left=False),
+    ]
+    return Drawing(
+        width=dim_x + 34,
+        height=base_cy + ry + 22 + PAD - 8,
+        parts=parts,
+        note=(f"kerucut jari-jari {_num(radius_u)} {unit}, tinggi {_num(height_u)} {unit}; "
+              f"skala {_f(scale)} px per {unit}. Garis pelukis TIDAK dilabeli."),
+    )
+
+
 def _num(v: float) -> str:
     """Format a quantity for a label: 20 not 20.0, 7.5 stays 7.5."""
     return str(int(v)) if float(v).is_integer() else _f(v)
@@ -771,6 +850,10 @@ FIGURES: list[Figure] = [
         length_u=15, width_u=8, height_u=6, unit="cm")),
     Figure("2-kuantitatif-025", "juring.svg", lambda: circular_sector(
         angle_deg=60, radius_u=21, unit="m", label="taman")),
+    Figure("3-kuantitatif-024", "belah-ketupat.svg", lambda: rhombus(
+        d1_u=24, d2_u=10, unit="cm")),
+    Figure("3-kuantitatif-025", "kerucut.svg", lambda: cone(
+        radius_u=7, height_u=24, unit="cm")),
 ]
 
 

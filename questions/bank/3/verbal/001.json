@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-001",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "AUTENTIK = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kuno"
+    },
+    {
+      "key": "B",
+      "text": "Langka"
+    },
+    {
+      "key": "C",
+      "text": "Tiruan"
+    },
+    {
+      "key": "D",
+      "text": "Asli"
+    },
+    {
+      "key": "E",
+      "text": "Terkenal"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Kuno berarti sudah lama atau ketinggalan zaman; sesuatu yang autentik tidak harus berusia tua.",
+    "B": "Langka berarti jarang ditemukan; keaslian tidak berkaitan dengan kelangkaan.",
+    "C": "Tiruan justru merupakan lawan makna autentik, bukan padanannya.",
+    "D": "Benar. Autentik berarti asli atau dapat dipercaya keasliannya.",
+    "E": "Terkenal berkaitan dengan popularitas, bukan dengan keaslian sesuatu."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

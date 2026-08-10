@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-020",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Kata \"disorientasi\" pada paragraf kedua bacaan tersebut bermakna kehilangan ...",
+  "image": null,
+  "passage": "Polusi cahaya adalah pancaran cahaya buatan yang berlebihan sehingga mengubah tingkat terang alami langit malam. Sumbernya beragam, mulai dari lampu jalan tanpa tudung, papan reklame elektronik, hingga lampu sorot gedung yang diarahkan ke langit. Cahaya yang terhambur di atmosfer membentuk kubah terang di atas kota sehingga bintang yang semula tampak menjadi tersamarkan.\n\nDampak polusi cahaya tidak berhenti pada hilangnya pemandangan langit malam. Anak penyu yang baru menetas dapat salah arah karena bergerak menuju lampu permukiman, bukan ke arah laut yang memantulkan cahaya bulan. Burung yang bermigrasi pada malam hari juga kerap mengalami disorientasi ketika melintasi kota yang terang benderang. Pada manusia, paparan cahaya buatan pada malam hari dapat menekan produksi melatonin, hormon yang mengatur ritme tidur.\n\nMeskipun demikian, polusi cahaya termasuk pencemaran yang paling mudah dipulihkan. Memasang tudung yang mengarahkan cahaya lampu ke bawah, membatasi kecerahan papan reklame, dan memadamkan lampu yang tidak diperlukan dapat langsung mengurangi hamburan cahaya. Berbeda dengan pencemaran tanah atau air yang pemulihannya memerlukan waktu bertahun-tahun, langit malam kembali gelap begitu sumber cahayanya dikendalikan.",
+  "options": [
+    {
+      "key": "A",
+      "text": "penglihatan"
+    },
+    {
+      "key": "B",
+      "text": "tenaga"
+    },
+    {
+      "key": "C",
+      "text": "arah"
+    },
+    {
+      "key": "D",
+      "text": "kesadaran"
+    },
+    {
+      "key": "E",
+      "text": "habitat"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Bacaan tidak menggambarkan burung menjadi buta; cahaya kota membuatnya salah arah, bukan kehilangan penglihatan.",
+    "B": "Tidak ada kaitan antara paparan cahaya dan hilangnya tenaga burung dalam bacaan.",
+    "C": "Benar. Disorientasi berarti kekacauan atau kehilangan arah; konteksnya burung migran menjadi salah arah ketika melintasi kota yang terang benderang.",
+    "D": "Kehilangan kesadaran (pingsan) tidak disebut ataupun tersirat dalam bacaan.",
+    "E": "Bacaan tidak membahas rusak atau hilangnya habitat burung migran."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

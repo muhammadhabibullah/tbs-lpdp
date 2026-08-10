@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-005",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "Hasil dari 3/5 − 1/3 × 3/4 + [(2/5 − 1/3) : 1/4] adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−7/12"
+    },
+    {
+      "key": "B",
+      "text": "37/60"
+    },
+    {
+      "key": "C",
+      "text": "1/12"
+    },
+    {
+      "key": "D",
+      "text": "7/15"
+    },
+    {
+      "key": "E",
+      "text": "11/30"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai −7/12 diperoleh dengan mengabaikan tanda kurung sehingga yang dibagi 1/4 hanya 1/3.",
+    "B": "Benar. 1/3 × 3/4 = 1/4; (2/5 − 1/3) : 1/4 = 1/15 × 4 = 4/15; 3/5 − 1/4 + 4/15 = 37/60.",
+    "C": "Salah. Nilai 1/12 diperoleh dengan mengurangkan hasil dalam kurung siku, bukan menambahkannya.",
+    "D": "Salah. Nilai 7/15 diperoleh dengan mengerjakan operasi dari kiri ke kanan, yaitu (3/5 − 1/3) × 3/4, sehingga perkalian tidak didahulukan.",
+    "E": "Salah. Nilai 11/30 diperoleh dengan mengalikan isi kurung dengan 1/4 alih-alih membaginya."
+  },
+  "difficulty": "hard",
+  "source": "aritmetika.py",
+  "verified": true
+}

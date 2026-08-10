@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-021",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Pernyataan berikut yang TIDAK sesuai dengan isi bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Polusi cahaya adalah pancaran cahaya buatan yang berlebihan sehingga mengubah tingkat terang alami langit malam. Sumbernya beragam, mulai dari lampu jalan tanpa tudung, papan reklame elektronik, hingga lampu sorot gedung yang diarahkan ke langit. Cahaya yang terhambur di atmosfer membentuk kubah terang di atas kota sehingga bintang yang semula tampak menjadi tersamarkan.\n\nDampak polusi cahaya tidak berhenti pada hilangnya pemandangan langit malam. Anak penyu yang baru menetas dapat salah arah karena bergerak menuju lampu permukiman, bukan ke arah laut yang memantulkan cahaya bulan. Burung yang bermigrasi pada malam hari juga kerap mengalami disorientasi ketika melintasi kota yang terang benderang. Pada manusia, paparan cahaya buatan pada malam hari dapat menekan produksi melatonin, hormon yang mengatur ritme tidur.\n\nMeskipun demikian, polusi cahaya termasuk pencemaran yang paling mudah dipulihkan. Memasang tudung yang mengarahkan cahaya lampu ke bawah, membatasi kecerahan papan reklame, dan memadamkan lampu yang tidak diperlukan dapat langsung mengurangi hamburan cahaya. Berbeda dengan pencemaran tanah atau air yang pemulihannya memerlukan waktu bertahun-tahun, langit malam kembali gelap begitu sumber cahayanya dikendalikan.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Lampu jalan tanpa tudung merupakan salah satu sumber polusi cahaya."
+    },
+    {
+      "key": "B",
+      "text": "Anak penyu yang baru menetas dapat bergerak menuju lampu permukiman alih-alih ke laut."
+    },
+    {
+      "key": "C",
+      "text": "Paparan cahaya buatan pada malam hari dapat menekan produksi melatonin."
+    },
+    {
+      "key": "D",
+      "text": "Membatasi kecerahan papan reklame dapat mengurangi hamburan cahaya."
+    },
+    {
+      "key": "E",
+      "text": "Langit malam memerlukan waktu bertahun-tahun untuk kembali gelap setelah sumber cahaya dikendalikan."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Sesuai dengan paragraf pertama yang menyebut lampu jalan tanpa tudung sebagai salah satu sumber polusi cahaya.",
+    "B": "Sesuai dengan paragraf kedua: anak penyu dapat salah arah menuju lampu permukiman, bukan ke arah laut.",
+    "C": "Sesuai dengan paragraf kedua: paparan cahaya buatan pada malam hari dapat menekan produksi melatonin.",
+    "D": "Sesuai dengan paragraf ketiga yang menyebut pembatasan kecerahan papan reklame sebagai cara mengurangi hamburan cahaya.",
+    "E": "Benar (tidak sesuai). Paragraf ketiga menyatakan langit malam kembali gelap begitu sumber cahayanya dikendalikan; yang memerlukan waktu bertahun-tahun adalah pemulihan pencemaran tanah atau air."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

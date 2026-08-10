@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-015",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Premis 1: Tidak ada pegawai magang yang memiliki akses ke ruang arsip.\nPremis 2: Sebagian peserta orientasi memiliki akses ke ruang arsip.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tidak ada peserta orientasi yang merupakan pegawai magang."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian pegawai magang adalah peserta orientasi."
+    },
+    {
+      "key": "C",
+      "text": "Semua peserta orientasi memiliki akses ke ruang arsip."
+    },
+    {
+      "key": "D",
+      "text": "Sebagian peserta orientasi bukan pegawai magang."
+    },
+    {
+      "key": "E",
+      "text": "Sebagian pegawai magang memiliki akses ke ruang arsip."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Terlalu kuat; yang dipastikan bukan pegawai magang hanyalah peserta orientasi yang memiliki akses, bukan seluruh peserta orientasi.",
+    "B": "Tidak dapat ditarik; premis tidak memberikan hubungan positif apa pun antara pegawai magang dan peserta orientasi.",
+    "C": "Melebihi premis; Premis 2 hanya menyatakan sebagian peserta orientasi yang memiliki akses.",
+    "D": "Benar. Peserta orientasi yang memiliki akses ke ruang arsip pasti bukan pegawai magang karena tidak ada pegawai magang yang memiliki akses; jadi sebagian peserta orientasi bukan pegawai magang.",
+    "E": "Bertentangan langsung dengan Premis 1 yang menyatakan tidak ada pegawai magang yang memiliki akses."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

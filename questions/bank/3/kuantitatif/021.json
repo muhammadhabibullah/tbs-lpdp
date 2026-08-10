@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-021",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Sebuah bus berangkat dari sebuah terminal pukul 07.00 dengan kecepatan rata-rata 60 km/jam. Pada pukul 07.45, sebuah mobil berangkat dari terminal yang sama dan menempuh rute yang sama dengan kecepatan rata-rata 80 km/jam. Pukul berapa mobil tersebut tepat menyusul bus?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pukul 09.15"
+    },
+    {
+      "key": "B",
+      "text": "Pukul 09.45"
+    },
+    {
+      "key": "C",
+      "text": "Pukul 10.00"
+    },
+    {
+      "key": "D",
+      "text": "Pukul 10.10"
+    },
+    {
+      "key": "E",
+      "text": "Pukul 08.30"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Pukul 09.15 diperoleh jika waktu penyusulan 2,25 jam dihitung sejak keberangkatan bus pukul 07.00. Waktu 2,25 jam itu adalah lama perjalanan mobil, sehingga harus dihitung sejak pukul 07.45.",
+    "B": "Salah. Pukul 09.45 muncul jika dari 2,25 jam hanya bagian bulatnya, yaitu 2 jam, yang ditambahkan pada pukul 07.45. Sisa 0,25 jam = 15 menit tidak boleh dibuang.",
+    "C": "Benar. Saat mobil berangkat pukul 07.45, bus telah berjalan 45 menit = 0,75 jam sehingga unggul 0,75 × 60 = 45 km. Selisih kecepatan = 80 − 60 = 20 km/jam, sehingga mobil memerlukan 45 : 20 = 2,25 jam = 2 jam 15 menit. Mobil menyusul bus pukul 07.45 + 2 jam 15 menit = pukul 10.00. Pemeriksaan: bus menempuh 3 × 60 = 180 km dan mobil menempuh 2,25 × 80 = 180 km.",
+    "D": "Salah. Pukul 10.10 muncul jika 2,25 jam dibaca sebagai 2 jam 25 menit. Angka 0,25 jam berarti seperempat jam, yaitu 15 menit, bukan 25 menit.",
+    "E": "Salah. Pukul 08.30 diperoleh jika selisih waktu keberangkatan 45 menit langsung dianggap sebagai lama penyusulan. Selisih 45 menit itu setara dengan ketertinggalan jarak 45 km yang masih harus dibagi dengan selisih kecepatan 20 km/jam."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-005",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "DEFISIT >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kekurangan"
+    },
+    {
+      "key": "B",
+      "text": "Kerugian"
+    },
+    {
+      "key": "C",
+      "text": "Surplus"
+    },
+    {
+      "key": "D",
+      "text": "Anggaran"
+    },
+    {
+      "key": "E",
+      "text": "Utang"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Kekurangan justru merupakan sinonim defisit, bukan lawan maknanya.",
+    "B": "Kerugian bermakna dekat dengan defisit sehingga bukan lawan maknanya.",
+    "C": "Benar. Defisit berarti kekurangan (pengeluaran melebihi pemasukan); lawannya adalah surplus, yaitu kelebihan.",
+    "D": "Anggaran adalah konteks tempat defisit sering dibicarakan, bukan lawan maknanya.",
+    "E": "Utang adalah akibat yang mungkin timbul dari defisit, bukan lawan maknanya."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

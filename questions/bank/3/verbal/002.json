@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-002",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "KONTRADIKSI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Persamaan"
+    },
+    {
+      "key": "B",
+      "text": "Pertentangan"
+    },
+    {
+      "key": "C",
+      "text": "Perbandingan"
+    },
+    {
+      "key": "D",
+      "text": "Penegasan"
+    },
+    {
+      "key": "E",
+      "text": "Percampuran"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Persamaan justru merupakan lawan makna kontradiksi, bukan padanannya.",
+    "B": "Benar. Kontradiksi berarti pertentangan antara dua hal yang berlawanan.",
+    "C": "Perbandingan adalah kegiatan menyandingkan dua hal; membandingkan tidak sama dengan mempertentangkan.",
+    "D": "Penegasan berarti penguatan suatu pernyataan, bukan pertentangan antarpernyataan.",
+    "E": "Percampuran berarti penggabungan beberapa unsur, tidak berkaitan dengan makna kontradiksi."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

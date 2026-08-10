@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-017",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nDalam rapat koordinasi itu membahas tentang rencana pembangunan perpustakaan daerah yang mana akan dilaksanakan pada tahun depan.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Dalam rapat koordinasi itu membahas rencana pembangunan perpustakaan daerah yang akan dilaksanakan tahun depan."
+    },
+    {
+      "key": "B",
+      "text": "Rapat koordinasi itu membahas tentang rencana pembangunan perpustakaan daerah yang akan dilaksanakan tahun depan."
+    },
+    {
+      "key": "C",
+      "text": "Rapat koordinasi itu membahas rencana pembangunan perpustakaan daerah yang mana akan dilaksanakan tahun depan."
+    },
+    {
+      "key": "D",
+      "text": "Dalam rapat koordinasi itu dibahas mengenai rencana pembangunan perpustakaan daerah yang akan dilaksanakan tahun depan."
+    },
+    {
+      "key": "E",
+      "text": "Rapat koordinasi itu membahas rencana pembangunan perpustakaan daerah yang akan dilaksanakan tahun depan."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Masih melanggar kejelasan subjek: frasa berpreposisi \"dalam rapat koordinasi itu\" tidak dapat menjadi subjek bagi verba aktif \"membahas\", sehingga kalimat tetap tanpa subjek.",
+    "B": "Melanggar kehematan: \"membahas tentang\" pleonasme karena verba transitif \"membahas\" harus langsung diikuti objek tanpa kata depan.",
+    "C": "Melanggar kebakuan kata hubung: \"yang mana\" tidak baku sebagai pengganti pronomina relatif \"yang\" dalam kalimat berita.",
+    "D": "Melanggar kejelasan subjek pada kalimat pasif: kata \"mengenai\" menjadikan \"rencana pembangunan ...\" bukan subjek, sehingga \"dibahas mengenai\" membuat kalimat kehilangan subjek sekaligus pleonasme.",
+    "E": "Benar. Subjek jelas (rapat koordinasi itu), verba transitif langsung diikuti objek tanpa \"tentang\", pronomina relatif baku \"yang\", dan tanpa kata depan mubazir."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

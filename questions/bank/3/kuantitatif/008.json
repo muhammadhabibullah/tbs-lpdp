@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-008",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "aljabar",
+  "question_text": "Jika 8x − 22 = 90, nilai x adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "104"
+    },
+    {
+      "key": "B",
+      "text": "11,25"
+    },
+    {
+      "key": "C",
+      "text": "8,5"
+    },
+    {
+      "key": "D",
+      "text": "14"
+    },
+    {
+      "key": "E",
+      "text": "112"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 104 diperoleh dengan mengurangkan koefisien 8 dari 112, padahal koefisien itu harus dijadikan pembagi.",
+    "B": "Salah. Nilai 11,25 diperoleh dengan membagi 90 dengan 8 tanpa memindahkan −22 lebih dahulu.",
+    "C": "Salah. Nilai 8,5 diperoleh dengan mengurangkan 22 sekali lagi ketika memindahkan ruas, padahal −22 berubah menjadi +22.",
+    "D": "Benar. 8x = 90 + 22 = 112, sehingga x = 112 : 8 = 14.",
+    "E": "Salah. Nilai 112 diperoleh dengan berhenti pada nilai 8x dan belum membaginya dengan 8."
+  },
+  "difficulty": "easy",
+  "source": "aljabar.py",
+  "verified": true
+}

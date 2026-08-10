@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-023",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Sebuah perahu motor menempuh jarak 24 km searah arus sungai, kemudian langsung kembali ke titik keberangkatannya melawan arus melalui lintasan yang sama. Kecepatan arus sungai 2 km/jam dan kecepatan perahu di air tenang selalu tetap. Apabila seluruh perjalanan pulang-pergi itu memerlukan waktu 5 jam, berapakah kecepatan perahu di air tenang?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "9,6 km/jam"
+    },
+    {
+      "key": "B",
+      "text": "10 km/jam"
+    },
+    {
+      "key": "C",
+      "text": "12 km/jam"
+    },
+    {
+      "key": "D",
+      "text": "8 km/jam"
+    },
+    {
+      "key": "E",
+      "text": "4,8 km/jam"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 9,6 km/jam adalah jarak total dibagi waktu total, yaitu 48 : 5, yang mengabaikan pengaruh arus. Kecepatan efektif perahu berbeda saat searah arus dan saat melawan arus, sehingga kecepatan di air tenang tidak dapat diperoleh dari pembagian langsung tersebut.",
+    "B": "Benar. Misalkan kecepatan perahu di air tenang v km/jam. Waktu searah arus = 24/(v + 2) jam dan waktu melawan arus = 24/(v − 2) jam, sehingga 24/(v + 2) + 24/(v − 2) = 5. Persamaan ini setara dengan 5v² − 48v − 20 = 0, yaitu (5v + 2)(v − 10) = 0, sehingga v = 10. Pemeriksaan: 24 : 12 + 24 : 8 = 2 + 3 = 5 jam.",
+    "C": "Salah. Nilai 12 km/jam adalah kecepatan perahu saat bergerak searah arus, yaitu v + 2, bukan kecepatan perahu di air tenang.",
+    "D": "Salah. Nilai 8 km/jam adalah kecepatan perahu saat bergerak melawan arus, yaitu v − 2, bukan kecepatan perahu di air tenang.",
+    "E": "Salah. Nilai 4,8 km/jam muncul jika 24/(v + 2) + 24/(v − 2) disederhanakan secara keliru menjadi 48/(2v), sehingga 48 : (2v) = 5 memberikan v = 4,8. Pecahan berpenyebut berbeda tidak dapat dijumlahkan dengan menjumlahkan penyebutnya; nilai ini juga mustahil karena perahu tidak akan pernah kembali jika kecepatannya hampir sama dengan kecepatan arus."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "3-pemecahan_masalah-011",
+  "package": 3,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Pernyataan berikut yang paling sesuai dengan sikap penulis dalam teks tersebut adalah ...",
+  "image": null,
+  "passage": "Digitalisasi layanan publik kerap dirayakan sebagai lompatan efisiensi. Antrean di kantor kelurahan memendek, berkas tidak lagi menumpuk, dan sebagian izin dapat diurus dari rumah. Namun, efisiensi itu belum dinikmati semua orang. Sebagian warga lanjut usia kesulitan mengoperasikan aplikasi, sementara di sejumlah wilayah jaringan internet belum andal dan gawai masih menjadi barang mewah. Ketika loket tatap muka tergesa-gesa ditutup dengan alasan seluruh layanan telah tersedia dalam aplikasi, warga yang paling membutuhkan justru menjadi pihak pertama yang tersisih. Digitalisasi memang patut dilanjutkan, tetapi keberhasilannya tidak selayaknya diukur dari banyaknya layanan yang dipindahkan ke aplikasi. Selama kesenjangan akses belum teratasi, loket tatap muka wajib dipertahankan sebagai penopang, bukan diperlakukan sebagai sisa masa lalu yang harus segera dihapus.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Antrean di kantor kelurahan memendek setelah sebagian layanan dipindahkan ke aplikasi."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian warga lanjut usia kesulitan mengoperasikan aplikasi layanan publik."
+    },
+    {
+      "key": "C",
+      "text": "Pengembangan aplikasi layanan publik perlu dihentikan sampai jaringan internet merata di seluruh wilayah."
+    },
+    {
+      "key": "D",
+      "text": "Jaringan internet di sejumlah wilayah belum cukup andal untuk mendukung layanan digital."
+    },
+    {
+      "key": "E",
+      "text": "Digitalisasi layak diteruskan, tetapi loket tatap muka harus tetap tersedia selama kesenjangan akses belum teratasi."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Memendeknya antrean memang disebutkan dalam teks, tetapi kedudukannya adalah fakta pendukung yang diakui penulis sebagai capaian digitalisasi, bukan pendirian yang diperjuangkan teks itu.",
+    "B": "Salah. Kesulitan warga lanjut usia hanyalah salah satu bukti adanya kesenjangan akses. Perincian ini menopang argumen penulis, tetapi bukan sikap yang hendak disampaikannya.",
+    "C": "Salah. Penulis justru menyatakan digitalisasi memang patut dilanjutkan. Yang ditolaknya adalah penutupan loket tatap muka secara tergesa-gesa, bukan pengembangan aplikasinya, sehingga tuntutan penghentian ini bertentangan dengan isi teks.",
+    "D": "Salah. Belum andalnya jaringan internet di sejumlah wilayah adalah keterangan kondisi lapangan yang dipakai penulis sebagai alasan, bukan simpulan sikap yang dituju teks tersebut.",
+    "E": "Benar. Dua kalimat penutup teks memuat pendirian penulis secara utuh: digitalisasi patut dilanjutkan, tetapi selama kesenjangan akses belum teratasi, loket tatap muka wajib dipertahankan sebagai penopang. Pernyataan ini merangkum sikap itu dengan tepat."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

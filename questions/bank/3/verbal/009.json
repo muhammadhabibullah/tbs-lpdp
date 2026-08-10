@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-009",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "GITAR : DIPETIK = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Seruling : Digesek"
+    },
+    {
+      "key": "B",
+      "text": "Biola : Ditiup"
+    },
+    {
+      "key": "C",
+      "text": "Gendang : Dipukul"
+    },
+    {
+      "key": "D",
+      "text": "Angklung : Dipetik"
+    },
+    {
+      "key": "E",
+      "text": "Dipukul : Gendang"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Hubungan pada soal adalah alat musik dan cara memainkannya; seruling dimainkan dengan ditiup, bukan digesek.",
+    "B": "Biola dimainkan dengan digesek, bukan ditiup, sehingga pasangan ini tidak sejalan.",
+    "C": "Benar. Gitar dimainkan dengan dipetik, sebagaimana gendang dimainkan dengan dipukul.",
+    "D": "Angklung dimainkan dengan digoyangkan, bukan dipetik.",
+    "E": "Kata-katanya tepat, tetapi urutannya terbalik: cara memainkan mendahului alat musiknya sehingga tidak sejalan dengan urutan soal."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

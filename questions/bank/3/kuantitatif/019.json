@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-019",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 19,
+  "type": "kecukupan_data",
+  "question_text": "Pada gambar di atas, ABD dan ABC adalah segitiga siku-siku dengan AD tegak lurus AB dan BC tegak lurus AB. Titik C dan titik D berada pada sisi yang sama terhadap AB, sedangkan AC dan BD berpotongan di titik E. Berapakah jarak titik E ke AB?\n(1) Panjang AD adalah 8 cm dan panjang BC adalah 17 cm.\n(2) Jumlah panjang AD dan BC adalah 25 cm dan selisih panjang BC dan AD adalah 9 cm.\nPutuskan apakah pernyataan (1) dan (2) yang diberikan cukup untuk menjawab pertanyaan tersebut.",
+  "image": "images/kd-dua-segitiga-siku.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup"
+    },
+    {
+      "key": "B",
+      "text": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup"
+    },
+    {
+      "key": "C",
+      "text": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup untuk menjawab pertanyaan"
+    },
+    {
+      "key": "E",
+      "text": "Pernyataan (1) dan (2) BERSAMA-SAMA tidak cukup untuk menjawab pertanyaan"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Pernyataan (2) menentukan jarak titik E ke AB secara tunggal, yaitu 5,44 cm.",
+    "B": "Salah. Pernyataan (1) menentukan jarak titik E ke AB secara tunggal, yaitu 5,44 cm.",
+    "C": "Salah. Pernyataan (1) menentukan jarak titik E ke AB secara tunggal, yaitu 5,44 cm.",
+    "D": "Benar. Jarak titik E ke AB selalu sama dengan (AD × BC)/(AD + BC), yaitu hanya ditentukan oleh AD dan BC; panjang AB tidak memengaruhinya sama sekali. Pernyataan (1) menentukan jarak titik E ke AB secara tunggal, yaitu 5,44 cm; pernyataan (2) menentukan jarak titik E ke AB secara tunggal, yaitu 5,44 cm.",
+    "E": "Salah. Pernyataan (1) dan (2) bersama-sama menentukan jarak titik E ke AB secara tunggal, yaitu 5,44 cm."
+  },
+  "difficulty": "easy",
+  "source": "kecukupan_data.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "3-pemecahan_masalah-007",
+  "package": 3,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Dinas kesehatan sebuah kota menyelenggarakan kampanye cuci tangan pakai sabun di seluruh sekolah dasar pada awal semester. Sepanjang semester tersebut, jumlah ketidakhadiran siswa karena diare tercatat turun 40 persen dibandingkan dengan semester sebelumnya. Dinas kesehatan menyimpulkan bahwa kampanye itulah yang menurunkan kejadian diare di kalangan siswa sekolah dasar kota itu.\n\nPernyataan berikut yang paling melemahkan simpulan dinas kesehatan tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kampanye serupa yang dijalankan di kota lain juga diikuti penurunan ketidakhadiran siswa karena diare."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian besar guru menilai materi kampanye mudah dipahami oleh siswa sekolah dasar."
+    },
+    {
+      "key": "C",
+      "text": "Biaya penyelenggaraan kampanye lebih rendah daripada anggaran promosi kesehatan tahun sebelumnya."
+    },
+    {
+      "key": "D",
+      "text": "Jumlah ketidakhadiran siswa karena diare dicatat dengan cara yang sama pada kedua semester."
+    },
+    {
+      "key": "E",
+      "text": "Pada awal semester yang sama, perusahaan air minum daerah mulai mengalirkan air perpipaan yang lebih bersih ke sebagian besar rumah di kota itu."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Keberhasilan kampanye serupa di kota lain justru sejalan dengan dugaan bahwa kampanye semacam itu berpengaruh, sehingga informasi ini cenderung memperkuat, bukan melemahkan, simpulan dinas kesehatan.",
+    "B": "Salah. Penilaian guru atas mudahnya materi dipahami hanya menerangkan mutu penyampaian kampanye. Informasi ini tidak menunjukkan adanya sebab lain bagi turunnya kejadian diare sehingga tidak melemahkan simpulan.",
+    "C": "Salah. Perbandingan biaya kampanye dengan anggaran tahun sebelumnya menyangkut kehematan program, bukan hubungan sebab akibat antara kampanye dan turunnya kejadian diare.",
+    "D": "Salah. Kesamaan cara pencatatan pada kedua semester justru menutup kemungkinan bahwa penurunan angka hanyalah akibat perubahan administrasi. Informasi ini memperkuat simpulan, bukan melemahkannya.",
+    "E": "Benar. Beroperasinya jaringan air perpipaan yang lebih bersih pada periode yang sama menghadirkan penjelasan lain yang masuk akal bagi turunnya kejadian diare, sebab diare erat kaitannya dengan mutu air yang dikonsumsi warga. Dengan adanya sebab alternatif yang bekerja bersamaan, klaim bahwa kampanye cuci tanganlah yang menurunkan kejadian diare menjadi jauh lebih lemah."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

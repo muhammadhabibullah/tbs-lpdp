@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-014",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 14,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nP = 3⁴\nQ = 4³\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Jumlah P dan Q kurang daripada 125"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. P = 81 dan Q = 64, sehingga P > Q.",
+    "B": "Salah. P = 81 dan Q = 64, sehingga P > Q; nilai Q tidak melebihi nilai P (64 tidak lebih besar daripada 81).",
+    "C": "Salah. P = 81 dan Q = 64, sehingga P > Q; kedua nilai tidak sama (81 ≠ 64).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 81 dan Q = 64), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 81 dan Q = 64, jumlahnya 145, tidak kurang daripada 125."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

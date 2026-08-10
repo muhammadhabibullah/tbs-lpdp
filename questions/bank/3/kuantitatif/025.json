@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-025",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Sebuah kerucut memiliki jari-jari alas 7 cm dan tinggi 24 cm. Dengan menggunakan π = 22/7, berapakah luas seluruh permukaan kerucut tersebut?",
+  "image": "images/kerucut.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "550 cm²"
+    },
+    {
+      "key": "B",
+      "text": "154 cm²"
+    },
+    {
+      "key": "C",
+      "text": "682 cm²"
+    },
+    {
+      "key": "D",
+      "text": "1.232 cm²"
+    },
+    {
+      "key": "E",
+      "text": "704 cm²"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 550 cm² hanyalah luas selimut kerucut, yaitu πrs = 22/7 × 7 × 25. Luas seluruh permukaan masih harus ditambah luas alas yang berbentuk lingkaran.",
+    "B": "Salah. Nilai 154 cm² hanyalah luas alas kerucut, yaitu πr² = 22/7 × 7 × 7. Luas selimut kerucut belum dihitung sama sekali.",
+    "C": "Salah. Nilai 682 cm² berasal dari πr(r + t) = 22/7 × 7 × (7 + 24), yaitu memakai tinggi 24 cm sebagai pengganti garis pelukis. Garis pelukis harus dihitung lebih dahulu dengan teorema Pythagoras: s = √(7² + 24²) = 25 cm.",
+    "D": "Salah. Nilai 1.232 berasal dari rumus volume kerucut, yaitu 1/3 × πr²t = 1/3 × 22/7 × 7² × 24 = 1.232 cm³. Yang ditanyakan adalah luas permukaan, bukan volume.",
+    "E": "Benar. Garis pelukis s = √(r² + t²) = √(7² + 24²) = √625 = 25 cm. Luas seluruh permukaan kerucut = luas alas + luas selimut = πr² + πrs = πr(r + s) = 22/7 × 7 × (7 + 25) = 22 × 32 = 704 cm²."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

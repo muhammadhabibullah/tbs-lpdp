@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-009",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 9,
+  "type": "deret_angka",
+  "question_text": "3, −9, 27, −81, 243, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "2.187"
+    },
+    {
+      "key": "B",
+      "text": "729"
+    },
+    {
+      "key": "C",
+      "text": "567"
+    },
+    {
+      "key": "D",
+      "text": "−729"
+    },
+    {
+      "key": "E",
+      "text": "−486"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 2.187 diperoleh dengan mengalikan dengan rasio dua kali sehingga melompat satu suku terlalu jauh.",
+    "B": "Salah. Nilai 729 diperoleh dengan menerapkan besar rasio dengan tanda yang keliru.",
+    "C": "Salah. Nilai 567 diperoleh dengan menambahkan selisih dua suku terakhir (324) alih-alih mengalikan dengan rasio −3.",
+    "D": "Benar. Setiap suku diperoleh dengan mengalikan suku sebelumnya dengan −3: 243 × (−3) = −729.",
+    "E": "Salah. Nilai −486 diperoleh dengan menggunakan rasio −2, padahal rasio deret ini −3."
+  },
+  "difficulty": "medium",
+  "source": "deret_angka.py",
+  "verified": true
+}

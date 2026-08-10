@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-013",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "JANTUNG : POMPA = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Paru-paru : Oksigen"
+    },
+    {
+      "key": "B",
+      "text": "Ginjal : Penyaring"
+    },
+    {
+      "key": "C",
+      "text": "Lambung : Makanan"
+    },
+    {
+      "key": "D",
+      "text": "Otak : Kepala"
+    },
+    {
+      "key": "E",
+      "text": "Mata : Kacamata"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Oksigen adalah zat yang diolah paru-paru, bukan alat yang menggambarkan cara kerjanya.",
+    "B": "Benar. Jantung bekerja seperti pompa yang mengalirkan darah, sebagaimana ginjal bekerja seperti penyaring yang membersihkan darah: organ dan alat yang menganalogikan fungsinya.",
+    "C": "Makanan adalah objek yang dicerna lambung, bukan alat yang menganalogikan fungsinya.",
+    "D": "Kepala adalah letak otak, bukan alat yang menggambarkan cara kerja otak.",
+    "E": "Kacamata adalah alat bantu bagi mata, bukan analogi dari fungsi mata itu sendiri."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-011",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "PENJAHIT : PAKAIAN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Koki : Restoran"
+    },
+    {
+      "key": "B",
+      "text": "Penulis : Pena"
+    },
+    {
+      "key": "C",
+      "text": "Petani : Sawah"
+    },
+    {
+      "key": "D",
+      "text": "Pemahat : Patung"
+    },
+    {
+      "key": "E",
+      "text": "Nelayan : Laut"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Restoran adalah tempat koki bekerja, bukan hasil karyanya, sehingga hubungannya tidak sejalan.",
+    "B": "Pena adalah alat yang digunakan penulis, bukan hasil karyanya.",
+    "C": "Sawah adalah tempat petani bekerja, bukan hasil karyanya.",
+    "D": "Benar. Penjahit menghasilkan pakaian, sebagaimana pemahat menghasilkan patung: profesi dan hasil karyanya.",
+    "E": "Laut adalah tempat nelayan mencari nafkah, bukan hasil karyanya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

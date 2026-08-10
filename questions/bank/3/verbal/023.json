@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-023",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Judul yang paling tepat untuk bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Sampah organik perkotaan umumnya berakhir di tempat pembuangan akhir dan menghasilkan gas metana ketika membusuk tanpa oksigen. Salah satu cara mengurangi timbunan itu adalah budi daya larva lalat tentara hitam. Lalat dewasanya tidak makan dan hanya hidup beberapa hari sehingga tidak berperan menularkan penyakit, sementara larvanya mampu melahap sisa makanan hingga dua kali bobot tubuhnya setiap hari.\n\nDalam praktiknya, sisa makanan dari pasar dan rumah tangga dicacah, kemudian ditebarkan ke wadah berisi larva muda. Dalam waktu sekitar dua pekan, larva mengubah sampah menjadi dua produk bernilai: tubuh larva yang kaya protein sebagai bahan pakan ikan dan unggas serta residu urai yang dapat diolah menjadi pupuk.\n\nMeskipun demikian, budi daya larva lalat tentara hitam belum berkembang pesat. Pasokan sampah organik kerap tercampur plastik sehingga menyulitkan pemilahan, sedangkan harga pakan konvensional masih sering lebih murah daripada biaya produksi larva kering. Tanpa pemilahan sampah dari sumbernya, potensi larva ini sulit dimanfaatkan secara luas.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Bahaya Gas Metana bagi Kesehatan Warga Perkotaan"
+    },
+    {
+      "key": "B",
+      "text": "Cara Mengolah Residu Sampah menjadi Pupuk"
+    },
+    {
+      "key": "C",
+      "text": "Siklus Hidup Lalat Tentara Hitam"
+    },
+    {
+      "key": "D",
+      "text": "Larva Lalat Tentara Hitam sebagai Pengurai Sampah Organik"
+    },
+    {
+      "key": "E",
+      "text": "Pentingnya Pemilahan Sampah dari Sumbernya"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Gas metana hanya disebut sekilas pada paragraf pertama dan dampaknya bagi kesehatan warga sama sekali tidak dibahas.",
+    "B": "Pengolahan residu menjadi pupuk hanyalah salah satu produk yang disebut pada paragraf kedua, terlalu sempit untuk menjadi judul.",
+    "C": "Siklus hidup lalat hanya disinggung untuk menjelaskan keamanannya, bukan fokus bacaan.",
+    "D": "Benar. Seluruh bacaan membahas peran larva lalat tentara hitam dalam mengurai sampah organik, mulai dari keunggulannya, prosesnya, hingga hambatannya.",
+    "E": "Pemilahan sampah hanya muncul sebagai kendala pada paragraf ketiga, bukan pokok seluruh bacaan."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

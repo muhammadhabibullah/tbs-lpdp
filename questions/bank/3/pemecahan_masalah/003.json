@@ -1,0 +1,43 @@
+{
+  "id": "3-pemecahan_masalah-003",
+  "package": 3,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Tujuh mahasiswa, yaitu Mira, Naufal, Okta, Putri, Raka, Salsa, dan Tegar, dicalonkan menjadi anggota tim debat yang beranggotakan tepat empat orang. Pemilihan anggota tim tunduk pada ketentuan berikut.\n(1) Naufal dan Putri tidak dipilih dalam tim yang sama.\n(2) Jika Mira dipilih, Raka juga dipilih.\n(3) Salsa dipilih hanya apabila Tegar juga dipilih.\n(4) Okta dan Tegar tidak dipilih dalam tim yang sama.\n\nSusunan tim yang memenuhi seluruh ketentuan tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Naufal, Putri, Raka, dan Tegar"
+    },
+    {
+      "key": "B",
+      "text": "Mira, Naufal, Salsa, dan Tegar"
+    },
+    {
+      "key": "C",
+      "text": "Naufal, Raka, Salsa, dan Tegar"
+    },
+    {
+      "key": "D",
+      "text": "Naufal, Okta, Salsa, dan Tegar"
+    },
+    {
+      "key": "E",
+      "text": "Okta, Putri, Raka, dan Salsa"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Susunan ini memuat Naufal dan Putri sekaligus, padahal ketentuan 1 melarang keduanya dipilih dalam tim yang sama.",
+    "B": "Salah. Susunan ini memuat Mira tanpa menyertakan Raka, padahal ketentuan 2 mengharuskan Raka ikut dipilih setiap kali Mira dipilih.",
+    "C": "Benar. Naufal dipilih tanpa Putri sehingga ketentuan 1 terpenuhi; Mira tidak dipilih sehingga ketentuan 2 tidak menuntut apa pun; Salsa dipilih bersama Tegar sesuai ketentuan 3; dan Okta tidak dipilih sehingga ketentuan 4 tidak dilanggar. Keempat ketentuan terpenuhi seluruhnya.",
+    "D": "Salah. Susunan ini memuat Okta dan Tegar sekaligus, padahal ketentuan 4 melarang keduanya dipilih dalam tim yang sama.",
+    "E": "Salah. Susunan ini memuat Salsa tanpa menyertakan Tegar, padahal ketentuan 3 hanya mengizinkan Salsa dipilih apabila Tegar juga dipilih."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

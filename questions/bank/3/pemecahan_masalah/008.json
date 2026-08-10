@@ -1,0 +1,43 @@
+{
+  "id": "3-pemecahan_masalah-008",
+  "package": 3,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah lembaga bimbingan belajar mengumumkan bahwa 90 persen pesertanya lulus ujian masuk perguruan tinggi negeri, jauh di atas tingkat kelulusan seluruh peserta ujian pada tahun yang sama yang hanya sekitar 20 persen. Berdasarkan perbandingan itu, lembaga tersebut menyimpulkan bahwa mengikuti program bimbingannya meningkatkan peluang seorang calon mahasiswa untuk lulus.\n\nAsumsi yang mendasari simpulan lembaga tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Biaya mengikuti program bimbingan tersebut terjangkau bagi sebagian besar calon mahasiswa."
+    },
+    {
+      "key": "B",
+      "text": "Jumlah peserta program bimbingan tersebut lebih banyak daripada jumlah peserta lembaga bimbingan lain."
+    },
+    {
+      "key": "C",
+      "text": "Kemampuan awal peserta program bimbingan tersebut tidak jauh berbeda dengan kemampuan awal peserta ujian pada umumnya."
+    },
+    {
+      "key": "D",
+      "text": "Tingkat kesulitan soal ujian masuk pada tahun itu tidak lebih rendah daripada tahun-tahun sebelumnya."
+    },
+    {
+      "key": "E",
+      "text": "Seluruh pengajar pada program bimbingan tersebut berpengalaman menyusun soal latihan ujian masuk."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Terjangkau atau tidaknya biaya program menyangkut akses calon peserta, bukan keabsahan penarikan simpulan dari perbandingan angka kelulusan. Simpulan lembaga tetap dapat ditarik atau runtuh tanpa keterangan biaya.",
+    "B": "Salah. Simpulan lembaga tidak membandingkan dirinya dengan lembaga bimbingan lain, melainkan membandingkan pesertanya dengan seluruh peserta ujian. Banyaknya peserta relatif terhadap lembaga lain tidak diperlukan bagi penarikan simpulan itu.",
+    "C": "Benar. Perbandingan 90 persen dengan 20 persen hanya membuktikan pengaruh program apabila kedua kelompok sebanding sejak awal. Apabila lembaga itu menyaring dan hanya menerima calon yang memang sudah unggul, angka 90 persen dapat tercapai tanpa program tersebut menambah peluang siapa pun. Simpulan lembaga karena itu berdiri di atas asumsi bahwa kemampuan awal pesertanya tidak jauh berbeda dengan kemampuan awal peserta ujian pada umumnya.",
+    "D": "Salah. Kedua angka yang dibandingkan berasal dari ujian pada tahun yang sama, sehingga mudah atau sulitnya soal tahun itu berlaku sama bagi peserta bimbingan maupun peserta lain dan tidak perlu diasumsikan.",
+    "E": "Salah. Pengalaman pengajar dapat menjelaskan mengapa program mungkin bermanfaat, tetapi bukan syarat yang diperlukan agar simpulan dari perbandingan angka kelulusan itu sah. Tanpa keterangan ini pun penalaran lembaga tidak berubah."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

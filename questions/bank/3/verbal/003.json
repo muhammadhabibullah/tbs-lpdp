@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-003",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "AFIRMASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Penegasan"
+    },
+    {
+      "key": "B",
+      "text": "Penolakan"
+    },
+    {
+      "key": "C",
+      "text": "Permohonan"
+    },
+    {
+      "key": "D",
+      "text": "Pengulangan"
+    },
+    {
+      "key": "E",
+      "text": "Perbaikan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Afirmasi berarti penetapan yang positif, penegasan, atau peneguhan.",
+    "B": "Penolakan adalah lawan makna afirmasi, bukan sinonimnya.",
+    "C": "Permohonan berarti permintaan; afirmasi tidak mengandung makna meminta.",
+    "D": "Pengulangan tampak dekat karena afirmasi sering diucapkan berulang, tetapi maknanya adalah menegaskan, bukan mengulang.",
+    "E": "Perbaikan berarti pembetulan sesuatu yang salah, tidak berkaitan dengan makna afirmasi."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

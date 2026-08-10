@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-004",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "FRIKSI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Perpaduan"
+    },
+    {
+      "key": "B",
+      "text": "Perlombaan"
+    },
+    {
+      "key": "C",
+      "text": "Pergeseran"
+    },
+    {
+      "key": "D",
+      "text": "Perpindahan"
+    },
+    {
+      "key": "E",
+      "text": "Pergesekan"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Perpaduan berarti penyatuan dua hal; friksi justru menyiratkan benturan, bukan penyatuan.",
+    "B": "Perlombaan berarti kompetisi memperebutkan sesuatu; friksi bukan bentuk perlombaan.",
+    "C": "Pergeseran berarti perubahan posisi secara perlahan; bentuk katanya mirip, tetapi maknanya berbeda dari pergesekan.",
+    "D": "Perpindahan berarti perubahan tempat, tidak memuat makna gesekan atau benturan.",
+    "E": "Benar. Friksi berarti pergesekan; secara kiasan juga berarti percekcokan akibat perbedaan pendapat."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

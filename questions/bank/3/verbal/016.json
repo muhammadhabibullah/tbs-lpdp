@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-016",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Premis 1: Semua produk yang lolos uji mutu diberi label standar.\nPremis 2: Sebagian produk di gudang itu berlabel standar.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sebagian produk di gudang itu pasti lolos uji mutu."
+    },
+    {
+      "key": "B",
+      "text": "Produk berlabel standar di gudang itu belum tentu lolos uji mutu."
+    },
+    {
+      "key": "C",
+      "text": "Semua produk di gudang itu lolos uji mutu."
+    },
+    {
+      "key": "D",
+      "text": "Sebagian produk di gudang itu tidak lolos uji mutu."
+    },
+    {
+      "key": "E",
+      "text": "Produk yang tidak berlabel standar di gudang itu sebagian lolos uji mutu."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah karena mengafirmasi akibat; premis tidak menyatakan bahwa label standar hanya diberikan kepada produk yang lolos uji mutu.",
+    "B": "Benar. Premis hanya menjamin arah \"lolos uji mutu, maka berlabel\", bukan sebaliknya; produk berlabel bisa saja memperoleh label dari jalur lain, sehingga kelulusannya belum tentu.",
+    "C": "Jauh melebihi premis; tidak ada informasi tentang seluruh produk di gudang itu.",
+    "D": "Tidak ada premis yang menjamin adanya produk yang tidak lolos uji mutu di gudang itu.",
+    "E": "Bertentangan dengan Premis 1: semua yang lolos uji mutu pasti berlabel, sehingga produk tanpa label pasti tidak lolos uji mutu."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

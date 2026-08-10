@@ -1,0 +1,43 @@
+{
+  "id": "3-pemecahan_masalah-012",
+  "package": 3,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Rata-rata nilai ujian matematika dari 8 siswa sebuah kelas adalah 76. Setelah dua siswa mengikuti ujian susulan, rata-rata nilai kesepuluh siswa menjadi 78. Rata-rata nilai kedua siswa yang mengikuti ujian susulan tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "86"
+    },
+    {
+      "key": "B",
+      "text": "78"
+    },
+    {
+      "key": "C",
+      "text": "84"
+    },
+    {
+      "key": "D",
+      "text": "77"
+    },
+    {
+      "key": "E",
+      "text": "82"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Jumlah nilai 8 siswa adalah 8 × 76 = 608 dan jumlah nilai 10 siswa adalah 10 × 78 = 780. Jumlah nilai kedua siswa susulan adalah 780 − 608 = 172, sehingga rata-rata keduanya 172 : 2 = 86.",
+    "B": "Salah. Nilai 78 muncul apabila kedua siswa susulan dianggap bernilai sama dengan rata-rata baru. Padahal, untuk menaikkan rata-rata dari 76 menjadi 78, nilai keduanya harus berada jauh di atas 78.",
+    "C": "Salah. Nilai 84 muncul dari 76 + (2 × 8) : 2, yaitu mengalikan kenaikan rata-rata dengan banyaknya siswa lama. Kenaikan 2 poin dialami seluruh 10 siswa, sehingga perhitungan yang benar adalah 76 + (2 × 10) : 2 = 86.",
+    "D": "Salah. Nilai 77 adalah rata-rata dari 76 dan 78 tanpa memperhatikan bobot banyaknya siswa pada masing-masing rata-rata, padahal 76 mewakili 8 siswa dan 78 mewakili 10 siswa.",
+    "E": "Salah. Nilai 82 muncul dari 78 + 2 × 2, yaitu menambahkan selisih rata-rata dikalikan banyaknya siswa susulan pada rata-rata baru. Langkah ini tidak berlandaskan hubungan antara jumlah nilai dan banyaknya siswa."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

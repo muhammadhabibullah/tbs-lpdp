@@ -1,0 +1,43 @@
+{
+  "id": "3-pemecahan_masalah-009",
+  "package": 3,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan banyaknya roti yang terjual di sebuah toko roti menurut varian selama satu minggu.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...",
+  "image": null,
+  "passage": "Varian Roti | Banyak Terjual (buah)\nCokelat | 84\nKeju | 96\nSrikaya | 45\nKelapa | 63\nTawar | 112\nJumlah | 400",
+  "options": [
+    {
+      "key": "A",
+      "text": "Rata-rata banyaknya roti yang terjual per varian lebih dari 85 buah."
+    },
+    {
+      "key": "B",
+      "text": "Banyaknya roti tawar yang terjual melebihi gabungan penjualan varian srikaya dan kelapa."
+    },
+    {
+      "key": "C",
+      "text": "Varian keju merupakan varian dengan penjualan terbanyak."
+    },
+    {
+      "key": "D",
+      "text": "Penjualan varian cokelat mencakup lebih dari seperempat seluruh roti yang terjual."
+    },
+    {
+      "key": "E",
+      "text": "Varian srikaya terjual paling sedikit karena harganya paling mahal di antara kelima varian."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Rata-rata penjualan per varian adalah 400 : 5 = 80 buah. Nilai itu berada di bawah 85 buah, bukan melebihinya.",
+    "B": "Benar. Gabungan penjualan varian srikaya dan kelapa adalah 45 + 63 = 108 buah, sedangkan roti tawar terjual 112 buah. Penjualan roti tawar memang melebihi gabungan kedua varian tersebut.",
+    "C": "Salah. Varian keju terjual 96 buah, masih di bawah roti tawar yang terjual 112 buah. Penjualan terbanyak dipegang varian tawar, bukan keju.",
+    "D": "Salah. Seperempat dari seluruh penjualan adalah 400 : 4 = 100 buah, sedangkan varian cokelat hanya terjual 84 buah. Angka itu belum mencapai seperempat seluruh penjualan.",
+    "E": "Salah. Varian srikaya memang terjual paling sedikit, yaitu 45 buah, tetapi tabel sama sekali tidak memuat keterangan harga. Alasan bahwa harganya paling mahal tidak tercakup oleh data sehingga pernyataan ini tidak dapat dibenarkan berdasarkan tabel."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

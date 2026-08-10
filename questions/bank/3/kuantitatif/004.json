@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-004",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 4,
+  "type": "aritmetika",
+  "question_text": "Diketahui a : b = 3 : 10. Apabila a = 54, berapakah nilai b?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "16,2"
+    },
+    {
+      "key": "B",
+      "text": "18"
+    },
+    {
+      "key": "C",
+      "text": "180"
+    },
+    {
+      "key": "D",
+      "text": "234"
+    },
+    {
+      "key": "E",
+      "text": "540"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 16,2 diperoleh dengan membalik perbandingan sehingga menghitung 54 × 3/10.",
+    "B": "Salah. Nilai 18 diperoleh dengan berhenti pada faktor pengali perbandingan (54 ÷ 3) dan tidak mengalikannya kembali.",
+    "C": "Benar. a : b = 3 : 10, sehingga b = a × 10/3 = 54 × 10/3 = 180.",
+    "D": "Salah. Nilai 234 diperoleh dengan menghitung jumlah a dan b, bukan nilai b saja.",
+    "E": "Salah. Nilai 540 diperoleh dengan mengalikan dengan 10 tanpa membaginya dengan 3."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

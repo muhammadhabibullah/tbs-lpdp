@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-007",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 7,
+  "type": "aljabar",
+  "question_text": "Diketahui x − 3y = −2 dan 5x − 2y = 42. Nilai dari 2x + 2y adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "28"
+    },
+    {
+      "key": "B",
+      "text": "8"
+    },
+    {
+      "key": "C",
+      "text": "12"
+    },
+    {
+      "key": "D",
+      "text": "80"
+    },
+    {
+      "key": "E",
+      "text": "14"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Menyelesaikan kedua persamaan diperoleh x = 10 dan y = 4, sehingga 2x + 2y = 2 × (10 + 4) = 28.",
+    "B": "Salah. Nilai 8 diperoleh dengan hanya menghitung 2y dan mengabaikan suku 2x.",
+    "C": "Salah. Nilai 12 diperoleh dengan menghitung 2x − 2y, yaitu selisihnya, bukan jumlahnya.",
+    "D": "Salah. Nilai 80 diperoleh dengan menjumlahkan kedua persamaan menjadi 40, membaginya dengan jumlah seluruh koefisien (1) sehingga diperoleh 40, lalu mengalikannya dengan 2 — seolah-olah koefisien x dan y sudah sama.",
+    "E": "Salah. Nilai 14 diperoleh dengan berhenti pada x + y dan lupa mengalikannya dengan 2."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

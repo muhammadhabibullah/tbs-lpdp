@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-018",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 18,
+  "type": "kecukupan_data",
+  "question_text": "Sebuah toko menjual pena dan buku tulis dengan harga tetap. Berapakah harga satu pena ditambah satu buku tulis?\n(1) Harga 5 pena dan 2 buku tulis adalah Rp30.500,00.\n(2) Harga 15 pena dan 6 buku tulis adalah Rp91.500,00.\nPutuskan apakah pernyataan (1) dan (2) yang diberikan cukup untuk menjawab pertanyaan tersebut.",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup"
+    },
+    {
+      "key": "B",
+      "text": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup"
+    },
+    {
+      "key": "C",
+      "text": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup untuk menjawab pertanyaan"
+    },
+    {
+      "key": "E",
+      "text": "Pernyataan (1) dan (2) BERSAMA-SAMA tidak cukup untuk menjawab pertanyaan"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [harga satu pena = Rp2.500,00, harga satu buku tulis = Rp9.000,00] dan [harga satu pena = Rp1.500,00, harga satu buku tulis = Rp11.500,00] sama-sama memenuhinya, tetapi memberikan harga satu pena ditambah satu buku tulis sebesar Rp11.500,00 dan Rp13.000,00.",
+    "B": "Salah. Pernyataan (2) saja tidak cukup, sebab keadaan [harga satu pena = Rp2.500,00, harga satu buku tulis = Rp9.000,00] dan [harga satu pena = Rp1.500,00, harga satu buku tulis = Rp11.500,00] sama-sama memenuhinya, tetapi memberikan harga satu pena ditambah satu buku tulis sebesar Rp11.500,00 dan Rp13.000,00.",
+    "C": "Salah. Kedua pernyataan bersama-sama pun tidak cukup, sebab keadaan [harga satu pena = Rp2.500,00, harga satu buku tulis = Rp9.000,00] dan [harga satu pena = Rp1.500,00, harga satu buku tulis = Rp11.500,00] memenuhi keduanya, tetapi memberikan harga satu pena ditambah satu buku tulis sebesar Rp11.500,00 dan Rp13.000,00.",
+    "D": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [harga satu pena = Rp2.500,00, harga satu buku tulis = Rp9.000,00] dan [harga satu pena = Rp1.500,00, harga satu buku tulis = Rp11.500,00] sama-sama memenuhinya, tetapi memberikan harga satu pena ditambah satu buku tulis sebesar Rp11.500,00 dan Rp13.000,00.",
+    "E": "Benar. Kedua pernyataan bersama-sama pun tidak cukup, sebab keadaan [harga satu pena = Rp2.500,00, harga satu buku tulis = Rp9.000,00] dan [harga satu pena = Rp1.500,00, harga satu buku tulis = Rp11.500,00] memenuhi keduanya, tetapi memberikan harga satu pena ditambah satu buku tulis sebesar Rp11.500,00 dan Rp13.000,00."
+  },
+  "difficulty": "medium",
+  "source": "kecukupan_data.py",
+  "verified": true
+}

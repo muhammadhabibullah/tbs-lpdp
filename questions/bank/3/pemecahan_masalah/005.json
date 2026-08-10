@@ -1,0 +1,43 @@
+{
+  "id": "3-pemecahan_masalah-005",
+  "package": 3,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Lima mahasiswa penerima beasiswa, yaitu Iqbal, Vino, Wulan, Yoga, dan Zahra, masing-masing mengambil tepat satu bidang studi yang berbeda di antara Akuntansi, Biologi, Farmasi, Geologi, dan Hukum. Diketahui ketentuan berikut.\n(1) Vino mengambil Farmasi atau Hukum.\n(2) Wulan mengambil Farmasi atau Geologi.\n(3) Iqbal mengambil Geologi atau Hukum.\n(4) Yoga tidak mengambil Biologi.\n(5) Zahra tidak mengambil Akuntansi.\n\nPernyataan yang pasti benar berdasarkan ketentuan tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Wulan mengambil Geologi."
+    },
+    {
+      "key": "B",
+      "text": "Iqbal mengambil Hukum."
+    },
+    {
+      "key": "C",
+      "text": "Vino mengambil Farmasi."
+    },
+    {
+      "key": "D",
+      "text": "Zahra mengambil Biologi."
+    },
+    {
+      "key": "E",
+      "text": "Yoga mengambil Hukum."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Wulan mengambil Geologi hanya pada susunan Vino Farmasi, Wulan Geologi, Iqbal Hukum. Pada susunan sah yang lain, yaitu Vino Hukum, Wulan Farmasi, Iqbal Geologi, Wulan justru mengambil Farmasi, sehingga pernyataan ini mungkin benar tetapi tidak pasti benar.",
+    "B": "Salah. Iqbal mengambil Hukum hanya apabila Vino mengambil Farmasi. Pada susunan sah dengan Vino mengambil Hukum, Iqbal mengambil Geologi, sehingga pernyataan ini tidak pasti benar.",
+    "C": "Salah. Ketentuan 1 masih membuka dua kemungkinan bagi Vino. Susunan Vino Hukum, Wulan Farmasi, Iqbal Geologi memenuhi seluruh ketentuan, sehingga Vino tidak harus mengambil Farmasi.",
+    "D": "Benar. Ketentuan 1 sampai 3 hanya dapat dipenuhi dengan dua cara, yaitu Vino Farmasi, Wulan Geologi, Iqbal Hukum atau Vino Hukum, Wulan Farmasi, Iqbal Geologi; pada keduanya bidang Farmasi, Geologi, dan Hukum habis terpakai. Yoga dan Zahra karena itu berbagi Akuntansi dan Biologi. Ketentuan 4 melarang Yoga mengambil Biologi sehingga Yoga mengambil Akuntansi, dan Zahra pasti mengambil Biologi pada setiap susunan yang sah.",
+    "E": "Salah. Bidang Hukum selalu terpakai oleh Vino atau Iqbal, sedangkan Yoga selalu mengambil Akuntansi karena hanya Akuntansi dan Biologi yang tersisa baginya dan ketentuan 4 melarangnya mengambil Biologi. Pernyataan ini tidak pernah benar."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

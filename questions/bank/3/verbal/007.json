@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-007",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "DEDUKSI >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Reduksi"
+    },
+    {
+      "key": "B",
+      "text": "Induksi"
+    },
+    {
+      "key": "C",
+      "text": "Konduksi"
+    },
+    {
+      "key": "D",
+      "text": "Intuisi"
+    },
+    {
+      "key": "E",
+      "text": "Konklusi"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Reduksi berarti pengurangan; bentuk katanya mirip, tetapi tidak berkaitan dengan arah penalaran.",
+    "B": "Benar. Deduksi adalah penarikan simpulan dari hal umum ke khusus; lawannya induksi, dari hal khusus ke umum.",
+    "C": "Konduksi adalah istilah fisika untuk hantaran panas atau listrik, bukan lawan penalaran deduktif.",
+    "D": "Intuisi adalah pemahaman tanpa melalui penalaran, sehingga bukan pasangan lawan dari deduksi.",
+    "E": "Konklusi berarti kesimpulan, yaitu hasil penalaran, bukan lawan dari cara penalarannya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

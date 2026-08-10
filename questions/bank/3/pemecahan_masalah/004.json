@@ -1,0 +1,43 @@
+{
+  "id": "3-pemecahan_masalah-004",
+  "package": 3,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Tujuh mahasiswa, yaitu Mira, Naufal, Okta, Putri, Raka, Salsa, dan Tegar, dicalonkan menjadi anggota tim debat yang beranggotakan tepat empat orang. Pemilihan anggota tim tunduk pada ketentuan berikut.\n(1) Naufal dan Putri tidak dipilih dalam tim yang sama.\n(2) Jika Mira dipilih, Raka juga dipilih.\n(3) Salsa dipilih hanya apabila Tegar juga dipilih.\n(4) Okta dan Tegar tidak dipilih dalam tim yang sama.\n\nJika Okta dan Putri terpilih dalam tim, pernyataan yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tegar terpilih dalam tim."
+    },
+    {
+      "key": "B",
+      "text": "Mira dan Raka keduanya terpilih dalam tim."
+    },
+    {
+      "key": "C",
+      "text": "Salsa terpilih dalam tim."
+    },
+    {
+      "key": "D",
+      "text": "Naufal terpilih dalam tim."
+    },
+    {
+      "key": "E",
+      "text": "Tepat satu di antara Mira dan Raka yang terpilih dalam tim."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Okta terpilih, sedangkan ketentuan 4 melarang Okta dan Tegar berada dalam tim yang sama. Tegar justru pasti tidak terpilih.",
+    "B": "Benar. Terpilihnya Putri menyingkirkan Naufal menurut ketentuan 1, dan terpilihnya Okta menyingkirkan Tegar menurut ketentuan 4. Tanpa Tegar, Salsa juga tersingkir menurut ketentuan 3. Dari tujuh calon, yang tersisa untuk mengisi dua kursi terakhir hanyalah Mira dan Raka, sehingga keduanya pasti terpilih. Ketentuan 2 pun terpenuhi karena Mira terpilih bersama Raka; satu-satunya susunan yang sah adalah Mira, Okta, Putri, dan Raka.",
+    "C": "Salah. Salsa hanya dapat dipilih apabila Tegar juga dipilih menurut ketentuan 3, sedangkan Tegar tersingkir oleh ketentuan 4 karena Okta terpilih. Salsa karena itu pasti tidak terpilih.",
+    "D": "Salah. Ketentuan 1 melarang Naufal dan Putri berada dalam tim yang sama. Karena Putri terpilih, Naufal pasti tidak terpilih.",
+    "E": "Salah. Setelah Naufal, Tegar, dan Salsa tersingkir, calon yang tersisa untuk dua kursi terakhir hanyalah Mira dan Raka, sehingga keduanya harus terpilih bersama-sama, bukan hanya salah satunya."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

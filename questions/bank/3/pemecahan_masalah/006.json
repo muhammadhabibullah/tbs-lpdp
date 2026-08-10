@@ -1,0 +1,43 @@
+{
+  "id": "3-pemecahan_masalah-006",
+  "package": 3,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Panitia pendidikan dan pelatihan menjadwalkan lima materi, yaitu Anggaran, Humas, Kearsipan, Protokol, dan Tata Naskah, pada hari Senin, Selasa, dan Rabu. Setiap materi disampaikan tepat satu kali dan setiap hari memuat paling banyak dua materi. Penjadwalan tunduk pada ketentuan berikut.\n(1) Kearsipan dan Tata Naskah disampaikan pada hari yang sama.\n(2) Anggaran disampaikan pada hari yang lebih awal daripada hari penyampaian Protokol.\n(3) Humas tidak disampaikan pada hari Senin.\n\nJika Kearsipan disampaikan pada hari Selasa, pernyataan yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Anggaran disampaikan pada hari Senin."
+    },
+    {
+      "key": "B",
+      "text": "Humas disampaikan pada hari Selasa."
+    },
+    {
+      "key": "C",
+      "text": "Protokol disampaikan pada hari Senin."
+    },
+    {
+      "key": "D",
+      "text": "Tata Naskah disampaikan pada hari Rabu."
+    },
+    {
+      "key": "E",
+      "text": "Humas dan Anggaran disampaikan pada hari yang sama."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Kearsipan pada hari Selasa menarik Tata Naskah ke hari Selasa menurut ketentuan 1, sehingga kuota dua materi hari Selasa penuh. Anggaran, Humas, dan Protokol karena itu terbagi pada hari Senin dan Rabu. Ketentuan 3 memaksa Humas ke hari Rabu, dan ketentuan 2 hanya dapat dipenuhi apabila Anggaran disampaikan pada hari Senin dan Protokol pada hari Rabu, sebab tidak ada hari yang lebih lambat daripada Rabu maupun yang lebih awal daripada Senin. Jadwal yang sah hanya satu: Anggaran pada Senin, Kearsipan dan Tata Naskah pada Selasa, serta Humas dan Protokol pada Rabu.",
+    "B": "Salah. Hari Selasa sudah penuh oleh Kearsipan dan Tata Naskah, sedangkan ketentuan 3 melarang Humas pada hari Senin, sehingga Humas pasti disampaikan pada hari Rabu.",
+    "C": "Salah. Apabila Protokol disampaikan pada hari Senin, tidak tersisa hari yang lebih awal bagi Anggaran karena Selasa sudah penuh, sehingga ketentuan 2 tidak mungkin terpenuhi. Protokol pasti disampaikan pada hari Rabu.",
+    "D": "Salah. Ketentuan 1 mengharuskan Tata Naskah disampaikan pada hari yang sama dengan Kearsipan, yaitu hari Selasa, bukan hari Rabu.",
+    "E": "Salah. Anggaran disampaikan pada hari Senin, sedangkan Humas tidak boleh disampaikan pada hari Senin menurut ketentuan 3 dan berakhir pada hari Rabu. Keduanya pasti berada pada hari yang berbeda."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

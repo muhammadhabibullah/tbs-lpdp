@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-022",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Seorang pedagang membeli 50 kg mangga dengan harga Rp12.000,00 per kilogram. Sebanyak 10% dari mangga tersebut busuk dan tidak dapat dijual, sedangkan sisanya habis terjual dengan harga Rp15.000,00 per kilogram. Berapa persen keuntungan yang diperoleh pedagang tersebut terhadap modalnya?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "12,5%"
+    },
+    {
+      "key": "B",
+      "text": "25%"
+    },
+    {
+      "key": "C",
+      "text": "11,1%"
+    },
+    {
+      "key": "D",
+      "text": "15%"
+    },
+    {
+      "key": "E",
+      "text": "20%"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Modal = 50 × 12.000 = Rp600.000,00. Mangga yang terjual = 90% × 50 = 45 kg dengan hasil penjualan 45 × 15.000 = Rp675.000,00. Keuntungan = 675.000 − 600.000 = Rp75.000,00, sehingga persentase keuntungan terhadap modal = 75.000 : 600.000 × 100% = 12,5%.",
+    "B": "Salah. Nilai 25% berasal dari selisih harga per kilogram, yaitu (15.000 − 12.000) : 12.000, seolah-olah seluruh 50 kg terjual. Sebanyak 10% mangga busuk sehingga hanya 45 kg yang menghasilkan uang.",
+    "C": "Salah. Nilai sekitar 11,1% adalah keuntungan dibandingkan dengan hasil penjualan, yaitu 75.000 : 675.000. Persentase keuntungan dihitung terhadap modal, bukan terhadap hasil penjualan.",
+    "D": "Salah. Nilai 15% diperoleh dari 25% − 10%, yaitu margin per kilogram dikurangi persentase mangga busuk secara langsung. Kedua persentase itu memakai dasar yang berbeda sehingga tidak boleh saling dikurangkan; keuntungan harus dihitung dari selisih uang yang sesungguhnya.",
+    "E": "Salah. Nilai 20% berasal dari selisih harga dibandingkan dengan harga jual, yaitu (15.000 − 12.000) : 15.000, sekaligus mengabaikan mangga yang busuk. Dasar perhitungan persentase keuntungan adalah modal."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

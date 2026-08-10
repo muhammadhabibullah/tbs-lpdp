@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-022",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan, budi daya larva lalat tentara hitam belum berkembang pesat karena ...",
+  "image": null,
+  "passage": "Sampah organik perkotaan umumnya berakhir di tempat pembuangan akhir dan menghasilkan gas metana ketika membusuk tanpa oksigen. Salah satu cara mengurangi timbunan itu adalah budi daya larva lalat tentara hitam. Lalat dewasanya tidak makan dan hanya hidup beberapa hari sehingga tidak berperan menularkan penyakit, sementara larvanya mampu melahap sisa makanan hingga dua kali bobot tubuhnya setiap hari.\n\nDalam praktiknya, sisa makanan dari pasar dan rumah tangga dicacah, kemudian ditebarkan ke wadah berisi larva muda. Dalam waktu sekitar dua pekan, larva mengubah sampah menjadi dua produk bernilai: tubuh larva yang kaya protein sebagai bahan pakan ikan dan unggas serta residu urai yang dapat diolah menjadi pupuk.\n\nMeskipun demikian, budi daya larva lalat tentara hitam belum berkembang pesat. Pasokan sampah organik kerap tercampur plastik sehingga menyulitkan pemilahan, sedangkan harga pakan konvensional masih sering lebih murah daripada biaya produksi larva kering. Tanpa pemilahan sampah dari sumbernya, potensi larva ini sulit dimanfaatkan secara luas.",
+  "options": [
+    {
+      "key": "A",
+      "text": "pasokan sampah organik kerap tercampur plastik dan harga pakan konvensional masih sering lebih murah daripada biaya produksi larva kering"
+    },
+    {
+      "key": "B",
+      "text": "lalat dewasanya tidak makan dan hanya hidup beberapa hari sehingga sulit dikembangbiakkan"
+    },
+    {
+      "key": "C",
+      "text": "larva hanya mampu mengurai sisa makanan dalam jumlah yang sangat kecil setiap hari"
+    },
+    {
+      "key": "D",
+      "text": "residu urai yang dihasilkan larva tidak dapat dimanfaatkan sebagai pupuk"
+    },
+    {
+      "key": "E",
+      "text": "gas metana dari tempat pembuangan akhir mengganggu pertumbuhan larva"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Paragraf ketiga menyebut dua hambatan itu: sampah organik tercampur plastik sehingga menyulitkan pemilahan, dan harga pakan konvensional masih sering lebih murah daripada biaya produksi larva kering.",
+    "B": "Umur pendek lalat dewasa disebut sebagai alasan lalat ini tidak menularkan penyakit — sebuah keunggulan, bukan hambatan budi daya.",
+    "C": "Bertentangan dengan bacaan: larva justru mampu melahap sisa makanan hingga dua kali bobot tubuhnya setiap hari.",
+    "D": "Bertentangan dengan paragraf kedua yang menyatakan residu urai dapat diolah menjadi pupuk.",
+    "E": "Gas metana disebut sebagai dampak pembusukan sampah di tempat pembuangan akhir, bukan sebagai pengganggu pertumbuhan larva."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

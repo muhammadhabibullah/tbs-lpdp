@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-012",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 12,
+  "type": "deret_angka",
+  "question_text": "9, 50, 14, 42, 19, 34, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "24, 28"
+    },
+    {
+      "key": "B",
+      "text": "39, 28"
+    },
+    {
+      "key": "C",
+      "text": "26, 26"
+    },
+    {
+      "key": "D",
+      "text": "24, 26"
+    },
+    {
+      "key": "E",
+      "text": "24, 14"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Suku ketujuh sudah tepat, tetapi bilangan kedua 28 diperoleh dengan menambahkan selisih 2 pada suku kedelapan 26, yaitu mengulangi selisih suku ketujuh ke kedelapan alih-alih berhenti pada suku kedelapan.",
+    "B": "Salah. Suku ketujuh 39 diperoleh dengan menambahkan beda deret pertama (5) pada suku terakhir, padahal suku terakhir milik deret kedua, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "C": "Salah. Suku ketujuh 26 diperoleh dengan melanjutkan deret kedua, padahal suku ketujuh adalah giliran deret pertama, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "D": "Benar. Deret ini terdiri atas dua deret berselang-seling. Suku ganjil (9, 14, 19) naik tetap 5, sedangkan suku genap (50, 42, 34) berubah tetap −8. Suku ketujuh melanjutkan deret pertama: 19 + 5 = 24. Dengan pola yang sama, suku kedelapan adalah 26.",
+    "E": "Salah. Suku ketujuh sudah tepat, tetapi suku kedelapan 14 diperoleh dengan mengulangkan selisih suku ketujuh dan keenam (−10), seolah-olah selisih deret ini tetap."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

@@ -242,8 +242,10 @@ def gen_fraction_order_of_ops(rng: random.Random):
     ]
     # Real option lists for this format sit in a tight band — 5/18, 9/10, 1, 10/9,
     # 23/18 — and one value an order of magnitude off is struck out on sight
-    # without any arithmetic, which costs the item a distractor.
-    wrongs = [(v, why) for v, why in wrongs if abs(v - answer) <= 3]
+    # without any arithmetic, which costs the item a distractor. The "sign-flipped
+    # bracket" wrong sits ~2·bracket from the key, so 2 keeps it while cutting the
+    # far outliers a division by a unit fraction can produce.
+    wrongs = [(v, why) for v, why in wrongs if abs(v - answer) <= 2]
     return text, answer, wrongs, work, "hard", fr, _fraction_ok
 
 

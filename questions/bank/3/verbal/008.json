@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-008",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "SANGSI >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Yakin"
+    },
+    {
+      "key": "B",
+      "text": "Hukuman"
+    },
+    {
+      "key": "C",
+      "text": "Ragu"
+    },
+    {
+      "key": "D",
+      "text": "Bimbang"
+    },
+    {
+      "key": "E",
+      "text": "Cemas"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Sangsi berarti bimbang atau ragu-ragu; lawan maknanya adalah yakin.",
+    "B": "Hukuman adalah makna dari kata \"sanksi\"; opsi ini menjebak lewat kemiripan bunyi kedua kata itu.",
+    "C": "Ragu justru merupakan sinonim sangsi, bukan lawan maknanya.",
+    "D": "Bimbang juga bersinonim dengan sangsi sehingga bukan lawan maknanya.",
+    "E": "Cemas berarti khawatir; perasaan itu berbeda dimensi dengan keraguan dan bukan lawan maknanya."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

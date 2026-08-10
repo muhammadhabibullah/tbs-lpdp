@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-001",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 1,
+  "type": "aritmetika",
+  "question_text": "Hasil dari (1/2 + 3/5) × 60 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "18"
+    },
+    {
+      "key": "B",
+      "text": "30,6"
+    },
+    {
+      "key": "C",
+      "text": "66"
+    },
+    {
+      "key": "D",
+      "text": "61,1"
+    },
+    {
+      "key": "E",
+      "text": "36,5"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 18 diperoleh dengan mengalikan kedua pecahan, bukan menjumlahkannya lebih dahulu.",
+    "B": "Salah. Nilai 30,6 diperoleh dengan mengalikan hanya pecahan pertama dengan 60, lalu menambahkan 3/5 yang belum dikalikan.",
+    "C": "Benar. (1/2 + 3/5) × 60 = 11/10 × 60 = 66.",
+    "D": "Salah. Nilai 61,1 diperoleh dengan menambahkan 60 alih-alih mengalikannya.",
+    "E": "Salah. Nilai 36,5 diperoleh dengan mengalikan hanya pecahan kedua dengan 60 sehingga sifat distributif tidak diterapkan."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-014",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Premis 1: Jika curah hujan di hulu tinggi, debit sungai meningkat.\nPremis 2: Jika debit sungai meningkat, pintu air bendungan dibuka lebih lebar.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Jika pintu air bendungan dibuka lebih lebar, curah hujan di hulu tinggi."
+    },
+    {
+      "key": "B",
+      "text": "Jika curah hujan di hulu tidak tinggi, pintu air bendungan tidak dibuka lebih lebar."
+    },
+    {
+      "key": "C",
+      "text": "Jika curah hujan di hulu tinggi, pintu air bendungan dibuka lebih lebar."
+    },
+    {
+      "key": "D",
+      "text": "Debit sungai meningkat hanya jika curah hujan di hulu tinggi."
+    },
+    {
+      "key": "E",
+      "text": "Pintu air bendungan selalu dibuka lebih lebar pada musim hujan."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah karena membalik arah implikasi; pintu air dapat saja dibuka lebih lebar karena sebab lain yang tidak disebut premis.",
+    "B": "Salah karena menegasikan kedua sisi implikasi; debit sungai dapat meningkat karena faktor lain sehingga pintu air tetap mungkin dibuka lebih lebar.",
+    "C": "Benar. Rantai dua implikasi (silogisme hipotetis): curah hujan tinggi menyebabkan debit meningkat, dan debit meningkat menyebabkan pintu air dibuka lebih lebar.",
+    "D": "Salah karena mengubah syarat cukup menjadi syarat perlu; premis tidak menyatakan curah hujan tinggi sebagai satu-satunya penyebab naiknya debit.",
+    "E": "Salah karena menggeneralisasi tentang musim hujan yang sama sekali tidak disebutkan dalam premis."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -134,7 +134,11 @@ def gen_spldv(rng: random.Random):
     for _ in range(50):
         a1, b1 = rng.randint(1, 5), rng.choice([-4, -3, -2, -1, 1, 2, 3, 4])
         a2, b2 = rng.randint(1, 5), rng.choice([-4, -3, -2, -1, 1, 2, 3, 4])
-        if a1 * b2 - a2 * b1:  # a proportional pair has no unique solution
+        # A proportional pair has no unique solution, and an equation parallel
+        # to x + y (a == b) hands over the asked k(x + y) in one division —
+        # worst case the stem prints its own answer (3x + 3y = 24 asked for
+        # 3x + 3y).
+        if a1 * b2 - a2 * b1 and a1 != b1 and a2 != b2:
             break
     else:
         raise RuntimeError("no non-degenerate coefficient pair drawn")

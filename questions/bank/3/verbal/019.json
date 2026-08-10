@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-019",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Tujuan penulis menyampaikan bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Polusi cahaya adalah pancaran cahaya buatan yang berlebihan sehingga mengubah tingkat terang alami langit malam. Sumbernya beragam, mulai dari lampu jalan tanpa tudung, papan reklame elektronik, hingga lampu sorot gedung yang diarahkan ke langit. Cahaya yang terhambur di atmosfer membentuk kubah terang di atas kota sehingga bintang yang semula tampak menjadi tersamarkan.\n\nDampak polusi cahaya tidak berhenti pada hilangnya pemandangan langit malam. Anak penyu yang baru menetas dapat salah arah karena bergerak menuju lampu permukiman, bukan ke arah laut yang memantulkan cahaya bulan. Burung yang bermigrasi pada malam hari juga kerap mengalami disorientasi ketika melintasi kota yang terang benderang. Pada manusia, paparan cahaya buatan pada malam hari dapat menekan produksi melatonin, hormon yang mengatur ritme tidur.\n\nMeskipun demikian, polusi cahaya termasuk pencemaran yang paling mudah dipulihkan. Memasang tudung yang mengarahkan cahaya lampu ke bawah, membatasi kecerahan papan reklame, dan memadamkan lampu yang tidak diperlukan dapat langsung mengurangi hamburan cahaya. Berbeda dengan pencemaran tanah atau air yang pemulihannya memerlukan waktu bertahun-tahun, langit malam kembali gelap begitu sumber cahayanya dikendalikan.",
+  "options": [
+    {
+      "key": "A",
+      "text": "mengajak pembaca memadamkan semua lampu kota pada malam hari"
+    },
+    {
+      "key": "B",
+      "text": "membandingkan bahaya polusi cahaya dengan pencemaran tanah dan air"
+    },
+    {
+      "key": "C",
+      "text": "membuktikan bahwa polusi cahaya merupakan pencemaran yang paling berbahaya"
+    },
+    {
+      "key": "D",
+      "text": "menjelaskan pengertian, dampak, dan cara mengurangi polusi cahaya"
+    },
+    {
+      "key": "E",
+      "text": "menguraikan proses migrasi burung pada malam hari"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Bacaan hanya menyarankan memadamkan lampu yang tidak diperlukan, bukan mengajak memadamkan semua lampu kota.",
+    "B": "Perbandingan dengan pencemaran tanah dan air hanya penutup untuk menegaskan mudahnya pemulihan, bukan tujuan utama bacaan.",
+    "C": "Bacaan justru menyebut polusi cahaya sebagai pencemaran yang paling mudah dipulihkan, bukan yang paling berbahaya.",
+    "D": "Benar. Bacaan berturut-turut memaparkan pengertian dan sumber polusi cahaya, dampaknya bagi hewan dan manusia, lalu cara menguranginya; tujuan penulis bersifat informatif menyeluruh.",
+    "E": "Migrasi burung hanya salah satu contoh dampak pada paragraf kedua, bukan pokok yang hendak diuraikan penulis."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-010",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "deret_angka",
+  "question_text": "14, 66, 18, 61, 22, 56, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "60"
+    },
+    {
+      "key": "B",
+      "text": "30"
+    },
+    {
+      "key": "C",
+      "text": "51"
+    },
+    {
+      "key": "D",
+      "text": "17"
+    },
+    {
+      "key": "E",
+      "text": "26"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 60 diperoleh dengan menambahkan beda deret pertama (4) pada suku terakhir, padahal suku terakhir milik deret kedua.",
+    "B": "Salah. Nilai 30 diperoleh dengan melanjutkan deret pertama dua langkah sekaligus.",
+    "C": "Salah. Nilai 51 diperoleh dengan melanjutkan deret kedua, padahal suku ketujuh adalah giliran deret pertama.",
+    "D": "Salah. Nilai 17 diperoleh dengan menerapkan beda deret kedua pada suku terakhir deret pertama.",
+    "E": "Benar. Deret ini terdiri atas dua deret berselang-seling. Suku ganjil (14, 18, 22) naik tetap 4, sedangkan suku genap (66, 61, 56) berubah tetap −5. Suku ketujuh melanjutkan deret pertama: 22 + 4 = 26."
+  },
+  "difficulty": "medium",
+  "source": "deret_angka.py",
+  "verified": true
+}

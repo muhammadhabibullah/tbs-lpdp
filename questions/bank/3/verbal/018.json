@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-018",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nPara hadirin sekalian dipersilakan untuk memasuki ke dalam ruang seminar sebelum acara dimulai.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Hadirin dipersilakan memasuki ruang seminar sebelum acara dimulai."
+    },
+    {
+      "key": "B",
+      "text": "Para hadirin dipersilakan memasuki ruang seminar sebelum acara dimulai."
+    },
+    {
+      "key": "C",
+      "text": "Hadirin sekalian dipersilakan memasuki ruang seminar sebelum acara dimulai."
+    },
+    {
+      "key": "D",
+      "text": "Hadirin dipersilakan memasuki ke dalam ruang seminar sebelum acara dimulai."
+    },
+    {
+      "key": "E",
+      "text": "Hadirin dipersilakan masuk ke ruang seminar sebelum acara telah dimulai."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Seluruh unsur mubazir dihilangkan: \"hadirin\" sudah bermakna jamak, verba transitif \"memasuki\" langsung diikuti objek, dan tidak ada kata yang berlebihan.",
+    "B": "Melanggar kehematan: \"para hadirin\" pleonasme karena \"hadirin\" sudah bermakna jamak sehingga tidak memerlukan \"para\".",
+    "C": "Melanggar kehematan: \"hadirin sekalian\" adalah penjamakan ganda karena \"hadirin\" sudah bermakna jamak.",
+    "D": "Melanggar kehematan: \"memasuki ke dalam\" pleonasme karena verba transitif \"memasuki\" harus langsung diikuti objek tanpa \"ke dalam\".",
+    "E": "Melanggar kelogisan: kata \"telah\" menyatakan perbuatan selesai sehingga bertentangan dengan konjungsi \"sebelum\"."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

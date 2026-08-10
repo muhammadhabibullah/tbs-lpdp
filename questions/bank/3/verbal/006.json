@@ -1,0 +1,43 @@
+{
+  "id": "3-verbal-006",
+  "package": 3,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "GEGABAH >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Ceroboh"
+    },
+    {
+      "key": "B",
+      "text": "Tergesa-gesa"
+    },
+    {
+      "key": "C",
+      "text": "Berani"
+    },
+    {
+      "key": "D",
+      "text": "Ragu-ragu"
+    },
+    {
+      "key": "E",
+      "text": "Berhati-hati"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Ceroboh justru merupakan sinonim gegabah, bukan lawan maknanya.",
+    "B": "Tergesa-gesa bermakna dekat dengan gegabah (bertindak terburu-buru), bukan lawannya.",
+    "C": "Berani adalah unsur yang terkandung dalam sikap gegabah (terlampau berani), bukan lawan maknanya.",
+    "D": "Ragu-ragu adalah lawan dari yakin atau tegas; yang dilawankan dengan gegabah adalah kecermatan bertindak, bukan kemantapan hati.",
+    "E": "Benar. Gegabah berarti bertindak terlampau berani tanpa pertimbangan; lawannya adalah berhati-hati."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

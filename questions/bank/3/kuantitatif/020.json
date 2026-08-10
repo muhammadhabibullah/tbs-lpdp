@@ -1,0 +1,43 @@
+{
+  "id": "3-kuantitatif-020",
+  "package": 3,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Tarif sebuah taksi terdiri atas tarif awal Rp8.000,00 yang berlaku untuk kilometer pertama dan tarif Rp4.500,00 untuk setiap kilometer berikutnya. Berapakah tarif yang harus dibayar seorang penumpang untuk perjalanan sejauh 13 km?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp54.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp57.500,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp58.500,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp66.500,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp62.000,00"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai Rp54.000,00 berasal dari 12 × Rp4.500,00, yaitu tarif kilometer kedua sampai ketiga belas saja. Tarif awal Rp8.000,00 untuk kilometer pertama belum ditambahkan.",
+    "B": "Salah. Nilai Rp57.500,00 muncul jika kilometer yang dikenai tarif per kilometer dihitung 13 − 2 = 11. Tarif awal hanya mencakup satu kilometer pertama, sehingga yang dikenai tarif Rp4.500,00 adalah 13 − 1 = 12 kilometer.",
+    "C": "Salah. Nilai Rp58.500,00 adalah 13 × Rp4.500,00, yaitu seluruh 13 kilometer dikenai tarif per kilometer dan tarif awal Rp8.000,00 diabaikan sama sekali.",
+    "D": "Salah. Nilai Rp66.500,00 berasal dari 8.000 + 13 × 4.500. Perhitungan ini mengenakan tarif per kilometer pada seluruh 13 kilometer, padahal kilometer pertama sudah tercakup dalam tarif awal sehingga terhitung dua kali.",
+    "E": "Benar. Kilometer pertama dikenai tarif awal Rp8.000,00, sedangkan 13 − 1 = 12 kilometer berikutnya dikenai tarif Rp4.500,00 per kilometer. Tarif seluruhnya = 8.000 + 12 × 4.500 = 8.000 + 54.000 = Rp62.000,00."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}
