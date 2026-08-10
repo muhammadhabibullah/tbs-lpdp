@@ -47,7 +47,7 @@ export default function FeedbackFooter() {
           <div>
             <h2>Masukan &amp; Laporan</h2>
             <p>
-              Menemukan soal yang keliru, pembahasan yang salah, atau kendala teknis? Kirim email ke{' '}
+              Untuk keluhan dan saran, terkhusus jenis soal yang lebih baik dan update, kirim email ke{' '}
               <a href={feedbackMailto()}>{FEEDBACK_EMAIL}</a>. Setiap masukan dibaca dan dipakai untuk memperbaiki bank
               soal.
             </p>
