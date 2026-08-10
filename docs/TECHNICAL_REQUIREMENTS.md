@@ -87,6 +87,7 @@ Subtests are taken **in order** (verbal → kuantitatif → pemecahan_masalah); 
 | QG-5 | A reviewer agent independently re-solves each generated question and rejects any question with zero or multiple defensible correct answers, or with an explanation that contradicts the key. |
 | QG-6 | `questions/generator/push_to_supabase.py` idempotently upserts a package (questions, options, answer keys) to Supabase using the `service_role` key from environment variables (never committed), and uploads images to the `question-images` Storage bucket. Re-running it after edits updates in place (stable IDs from QG-2 paths). |
 | QG-7 | All question content is in Bahasa Indonesia. |
+| QG-8 | Figures are generated, not drawn: `questions/generator/figures.py` derives each `geometri` item's SVG from the numbers its stem states, so `--check` proves the committed images match the bank and a corrected question yields a corrected figure. A figure may label **only** quantities the stem gives — derived values (the trapezoid's height, the sector's arc length) are computed for layout but never drawn, since they are the work being asked for. |
 
 ### 5.2 Frontend (FE) — exambrowser UI mock
 
@@ -202,6 +203,7 @@ tbs-lpdp/
 │       ├── aljabar.py            # algebra generator (computed answers)
 │       ├── kecukupan_data.py     # data-sufficiency generator (rank-decided keys)
 │       ├── peluang_kombinatorik.py # probability/counting generator
+│       ├── figures.py            # SVG figures for geometri items (QG-8)
 │       ├── validate_bank.py      # bank validator, CI-runnable
 │       ├── push_to_supabase.py   # idempotent upsert to Supabase
 │       └── requirements.txt

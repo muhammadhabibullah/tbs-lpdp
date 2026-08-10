@@ -15,7 +15,7 @@ Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pa
 - `questions/schema.json` — JSON Schema every bank question must pass
 - `questions/bank/<package_id>/<subtest_key>/<NNN>.json` — question bank (git = source of truth; Supabase is a derived copy)
 - `questions/sample/` — real LPDP sample items collected from public tip sites; reference for which formats the bank must cover (not schema-valid, and some of their keys are wrong)
-- `questions/generator/` — Python tooling: deterministic generators (`deret_angka.py`, `aritmetika.py`, `aljabar.py`, `kecukupan_data.py`, `peluang_kombinatorik.py`), `validate_bank.py`, `push_to_supabase.py`
+- `questions/generator/` — Python tooling: deterministic generators (`deret_angka.py`, `aritmetika.py`, `aljabar.py`, `kecukupan_data.py`, `peluang_kombinatorik.py`), `figures.py` (SVG figures for `geometri`), `validate_bank.py`, `push_to_supabase.py`
 - `supabase/schema.sql` — full DDL, RLS policies, RPC functions (apply first)
 - `supabase/schema_v2_reports.sql` — v2 question-feedback DDL/RPCs (apply after `schema.sql`; re-apply it whenever `schema.sql` is re-applied)
 - `exambrowser-ui/` — PUSMENDIK CBT screenshots; the UI must mimic these
@@ -37,6 +37,7 @@ pip install -r questions/generator/requirements.txt   # once
 python3 questions/generator/validate_bank.py           # validate whole bank
 python3 questions/generator/deret_angka.py --help      # generate computable questions
 python3 questions/generator/kecukupan_data.py --help   # ... every generator takes --seed / --bank-dir
+python3 questions/generator/figures.py                 # regenerate geometri figures (--check in CI)
 python3 questions/generator/push_to_supabase.py --package 1   # needs env below
 
 cd web && npm install                                  # once
