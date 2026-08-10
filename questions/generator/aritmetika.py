@@ -11,7 +11,9 @@ Design rules enforced here:
   computation twice with different numbers.
 * Operands are constrained to values that render exactly in Indonesian notation
   (denominator dividing 100) — no repeating decimals, no fraction that silently
-  reduces to a whole number.
+  reduces to a whole number. A pattern whose working belongs in fractions rather
+  than decimals overrides that test by returning its own (see
+  `gen_fraction_order_of_ops`, where 23/18 is the right kind of answer).
 * `perbandingan_kuantitatif` includes an indeterminate case, so option D is a
   live answer rather than a permanently wrong one, and its fifth option is a
   substantive claim that has to be computed to be rejected.
@@ -29,7 +31,14 @@ import random
 from fractions import Fraction
 from pathlib import Path
 
-from common import BANK_DIR, fmt_number, make_question, next_number, write_question
+from common import (
+    BANK_DIR,
+    MINUS,
+    fmt_number,
+    make_question,
+    next_number,
+    write_question,
+)
 
 SUBTEST = "kuantitatif"
 
@@ -53,7 +62,8 @@ def _sentence_case(work: str) -> str:
 
 
 # ---------------------------------------------------------------- aritmetika
-# Each pattern returns (text, answer, [(wrong, reason), ...], work, difficulty, fmt).
+# Each pattern returns (text, answer, [(wrong, reason), ...], work, difficulty, fmt),
+# optionally followed by a predicate deciding which values print acceptably.
 
 def gen_percent(rng: random.Random):
     base = rng.choice([120, 150, 200, 240, 300, 360, 400, 480, 500, 600, 750, 800])
@@ -162,6 +172,79 @@ def gen_fraction_ops(rng: random.Random):
         (a * b * k, "mengalikan kedua pecahan, bukan menjumlahkannya lebih dahulu"),
     ]
     return text, answer, wrongs, work, "medium", _fmt
+
+
+def _fraction_text(value) -> str:
+    """A fraction the way an exam paper prints it: 23/18, 1, −5/6.
+
+    Deliberately not `fmt_number`: an order-of-operations item is about precedence,
+    and printing 1,28 in the option list would let a candidate reach for a
+    calculator instead of the rule being tested.
+    """
+    f = Fraction(value)
+    sign = MINUS if f < 0 else ""
+    f = abs(f)
+    return sign + (str(f.numerator) if f.denominator == 1
+                   else f"{f.numerator}/{f.denominator}")
+
+
+def _fraction_ok(value) -> bool:
+    """Whether an option prints as a fraction anyone would write down."""
+    return Fraction(value).denominator <= 60
+
+
+def gen_fraction_order_of_ops(rng: random.Random):
+    """a − b × c + [(d − e) : f] — precedence, a bracket, and dividing by a fraction.
+
+    Four operations, and the arithmetic on each one is easy; what the item tests is
+    the order they are done in and whether `:` by a unit fraction is recognised as
+    multiplication by its reciprocal. Every distractor is one specific rule dropped
+    and then carried through consistently, so the option a candidate lands on names
+    the rule they lost: left-to-right instead of precedence, `:` read as ×, the
+    bracket ignored, the bracket subtracted, the bracket's own sign flipped.
+    """
+    parts = [Fraction(1, 2), Fraction(1, 3), Fraction(2, 3), Fraction(3, 4),
+             Fraction(1, 4), Fraction(2, 5), Fraction(3, 5), Fraction(5, 6)]
+    a = rng.choice(parts)
+    b, c = rng.choice(parts), rng.choice(parts)
+    d, e = sorted(rng.sample(parts, 2), reverse=True)     # d > e keeps the bracket positive
+    # A divisor equal to one of the operands it sits beside turns the "ignored the
+    # bracket" explanation into "yang dibagi 1/3 hanya 1/3", which reads as a typo.
+    f = Fraction(1, rng.choice([k for k in (3, 4, 5, 6, 8)
+                                if Fraction(1, k) not in (d, e)]))
+
+    product, bracket = b * c, (d - e) / f
+    answer = a - product + bracket
+    if answer in (0, a):
+        # a result that lands back on 0 or on the first operand looks like the item
+        # was built to cancel, and invites guessing instead of computing
+        return gen_fraction_order_of_ops(rng)
+    fr = _fraction_text
+    text = (f"Hasil dari {fr(a)} − {fr(b)} × {fr(c)} + [({fr(d)} − {fr(e)}) : {fr(f)}] "
+            f"adalah ...")
+    work = (
+        f"{fr(b)} × {fr(c)} = {fr(product)}; ({fr(d)} − {fr(e)}) : {fr(f)} = "
+        f"{fr(d - e)} × {fr(1 / f)} = {fr(bracket)}; "
+        f"{fr(a)} − {fr(product)} + {fr(bracket)} = {fr(answer)}"
+    )
+    wrongs = [
+        ((a - b) * c + bracket,
+         f"mengerjakan operasi dari kiri ke kanan, yaitu ({fr(a)} − {fr(b)}) × {fr(c)}, "
+         "sehingga perkalian tidak didahulukan"),
+        (a - product + (d - e) * f,
+         f"mengalikan isi kurung dengan {fr(f)} alih-alih membaginya"),
+        (a - product + d - e / f,
+         f"mengabaikan tanda kurung sehingga yang dibagi {fr(f)} hanya {fr(e)}"),
+        (a - product - bracket,
+         "mengurangkan hasil dalam kurung siku, bukan menambahkannya"),
+        (a - product + (d + e) / f,
+         f"menjumlahkan {fr(d)} dan {fr(e)} di dalam kurung, bukan mengurangkannya"),
+    ]
+    # Real option lists for this format sit in a tight band — 5/18, 9/10, 1, 10/9,
+    # 23/18 — and one value an order of magnitude off is struck out on sight
+    # without any arithmetic, which costs the item a distractor.
+    wrongs = [(v, why) for v, why in wrongs if abs(v - answer) <= 3]
+    return text, answer, wrongs, work, "hard", fr, _fraction_ok
 
 
 def gen_mixed_ops(rng: random.Random):
@@ -298,6 +381,7 @@ ARITMETIKA_MULTISTEP = [
     gen_average,
     gen_percent_of_remainder,
     gen_rate_proportion,
+    gen_fraction_order_of_ops,
 ]
 
 ARITMETIKA_SINGLE_STEP = [
@@ -323,10 +407,21 @@ def aritmetika_pool(rng: random.Random, count: int) -> list:
     return pool
 
 
+def _decimal_ok(value) -> bool:
+    """Whether a value prints as a terminating decimal in Indonesian notation."""
+    return 100 % Fraction(value).denominator == 0
+
+
 def build_aritmetika(rng: random.Random, package_id: int, number: int, bank_dir: Path,
                      pattern) -> Path:
     for _ in range(200):
-        text, answer, wrongs, work, difficulty, fmt = pattern(rng)
+        # The last element is optional: a pattern that keeps its working in
+        # fractions says so by supplying its own admissibility test, because the
+        # default one — "must print as a terminating decimal" — would throw away
+        # 23/18, which is exactly the kind of answer such an item is meant to have.
+        drawn = pattern(rng)
+        text, answer, wrongs, work, difficulty, fmt = drawn[:6]
+        acceptable = drawn[6] if len(drawn) > 6 else _decimal_ok
         answer = Fraction(answer)
         scale_limit = 15 * max(abs(answer), 1)
 
@@ -334,12 +429,12 @@ def build_aritmetika(rng: random.Random, package_id: int, number: int, bank_dir:
         for value, reason in wrongs:
             value = Fraction(value)
             if (value in taken                      # duplicate option
-                    or 100 % value.denominator      # would render as a repeating decimal
+                    or not acceptable(value)        # would not print cleanly
                     or abs(value) > scale_limit):   # discardable on magnitude alone
                 continue
             taken.add(value)
             distractors.append((value, reason))
-        if len(distractors) < 4 or 100 % answer.denominator:
+        if len(distractors) < 4 or not acceptable(answer):
             continue
 
         values = [(answer, None)] + distractors[:4]

@@ -39,7 +39,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Callable
 
-from common import BANK_DIR
+from common import BANK_DIR, iter_bank_questions
 
 # ------------------------------------------------------------------ palette --
 # Taken from web/src/styles.css so a figure never looks pasted in from elsewhere.
@@ -404,6 +404,338 @@ def _num(v: float) -> str:
     return str(int(v)) if float(v).is_integer() else _f(v)
 
 
+# ----------------------------------------------- schematic (unscaled) figures --
+# Everything above is a *measured* drawing: it scales with the numbers its stem
+# states, and those numbers are given to the candidate anyway.
+#
+# A `kecukupan_data` figure cannot work that way. Its numbers arrive in the two
+# statements, and the quantity the stem asks about is precisely what a candidate
+# could read off a faithful drawing with a protractor or a ruler — measuring it
+# would replace the reasoning the item exists to test. These figures are therefore
+# schematic: one fixed generic configuration per family, showing which lines are
+# parallel and which angles are right, labelled with names (P, Q, x°) and never
+# with values. Every item of a family shares one file, which is safe exactly
+# because the file contains none of the item's numbers, and each carries the note
+# an exam prints under such a diagram: it is not drawn to scale.
+#
+# One consequence worth stating: a builder here takes no arguments. If a builder
+# ever needs one, the figure has started depending on the item, and the item's
+# answer has started leaking into the picture.
+
+SCHEMATIC_NOTE = "Gambar tidak digambar menurut skala."
+
+NOTE_GAP = 26   # bottom of the drawing -> baseline of that note
+
+
+def _unit(v: tuple[float, float]) -> tuple[float, float]:
+    n = math.hypot(*v) or 1.0
+    return (v[0] / n, v[1] / n)
+
+
+def _walk(p: tuple[float, float], d: tuple[float, float], t: float):
+    return (p[0] + d[0] * t, p[1] + d[1] * t)
+
+
+def _mid(p: tuple[float, float], q: tuple[float, float]):
+    return ((p[0] + q[0]) / 2, (p[1] + q[1]) / 2)
+
+
+def _meet(p, d, q, e) -> tuple[float, float]:
+    """Where the lines p + t·d and q + s·e cross."""
+    det = d[0] * e[1] - d[1] * e[0]
+    if abs(det) < 1e-9:
+        raise ValueError("those lines are parallel and do not meet")
+    s = ((q[0] - p[0]) * d[1] - (q[1] - p[1]) * d[0]) / det
+    return _walk(q, e, s)
+
+
+class _Frame:
+    """Maps a builder's own coordinates (y up, arbitrary units) onto the canvas.
+
+    Builders think in the geometry's terms and hand the frame every point they
+    intend to draw; the frame works out the extent and the offsets. Decorations
+    sized in pixels (angle arcs, right-angle squares, label offsets) stay in
+    pixels — they are screen furniture and must not grow with the figure.
+    """
+
+    def __init__(self, points, *, scale: float, left: float, top: float):
+        xs, ys = [p[0] for p in points], [p[1] for p in points]
+        self.scale, self.left, self.top = scale, left, top
+        self._minx, self._maxy = min(xs), max(ys)
+        self.width = (max(xs) - min(xs)) * scale
+        self.height = (max(ys) - min(ys)) * scale
+
+    def __call__(self, p) -> tuple[float, float]:
+        return (self.left + (p[0] - self._minx) * self.scale,
+                self.top + (self._maxy - p[1]) * self.scale)
+
+    @property
+    def bottom(self) -> float:
+        return self.top + self.height
+
+
+def _seg(fr: _Frame, p, q, *, width: float = 2.0, colour: str = STROKE,
+         dash: str | None = None) -> str:
+    (x1, y1), (x2, y2) = fr(p), fr(q)
+    extra = f' stroke-dasharray="{dash}"' if dash else ""
+    return (f'<line x1="{_f(x1)}" y1="{_f(y1)}" x2="{_f(x2)}" y2="{_f(y2)}" '
+            f'stroke="{colour}" stroke-width="{_f(width)}" stroke-linecap="round"{extra}/>')
+
+
+def _node(fr: _Frame, p, name: str, offset: tuple[float, float]) -> list[str]:
+    """A named point: a dot plus its capital, offset in pixels (y up, as drawn)."""
+    x, y = fr(p)
+    dx, dy = offset
+    return [
+        f'<circle cx="{_f(x)}" cy="{_f(y)}" r="3.2" fill="{INK}"/>',
+        _text(x + dx, y - dy + CAP / 2, name, cls="pt"),
+    ]
+
+
+def _line_tag(fr: _Frame, p, name: str, offset: tuple[float, float]) -> str:
+    x, y = fr(p)
+    return _text(x + offset[0], y - offset[1] + CAP / 2, name, cls="ln")
+
+
+def _angle_mark(fr: _Frame, centre, d1, d2, label: str, *,
+                radius: float = 27.0, gap: float = 15.0) -> list[str]:
+    """Mark the sector swept counter-clockwise from direction `d1` to `d2`.
+
+    Counter-clockwise as the reader sees it, which is why the SVG sweep flag is 0:
+    the canvas y axis points down, so screen-anticlockwise is the negative
+    direction in SVG's own frame.
+    """
+    cx, cy = fr(centre)
+    a1, a2 = math.atan2(d1[1], d1[0]), math.atan2(d2[1], d2[0])
+    span = (a2 - a1) % (2 * math.pi)
+
+    def at(angle: float, r: float) -> tuple[float, float]:
+        return (cx + r * math.cos(angle), cy - r * math.sin(angle))
+
+    (sx, sy), (ex, ey) = at(a1, radius), at(a2, radius)
+    lx, ly = at(a1 + span / 2, radius + gap)
+    return [
+        f'<path d="M {_f(sx)} {_f(sy)} A {_f(radius)} {_f(radius)} 0 '
+        f'{1 if span > math.pi else 0} 0 {_f(ex)} {_f(ey)}" fill="none" '
+        f'stroke="{INK}" stroke-width="1.3"/>',
+        _text(lx, ly + CAP / 2, label),
+    ]
+
+
+def _right_angle(fr: _Frame, corner, d1, d2, *, size: float = 13.0) -> str:
+    """The little square that says 90°, drawn inside the corner it belongs to."""
+    cx, cy = fr(corner)
+    u1, u2 = _unit(d1), _unit(d2)
+
+    def at(v) -> str:
+        return f"{_f(cx + v[0] * size)},{_f(cy - v[1] * size)}"
+
+    pts = " ".join([at(u1), at((u1[0] + u2[0], u1[1] + u2[1])), at(u2)])
+    return (f'<polyline points="{pts}" fill="none" stroke="{INK}" stroke-width="1.4"/>')
+
+
+def _chevron(fr: _Frame, p, d, *, size: float = 10.0) -> str:
+    """A single arrowhead — the mark that says "this side is parallel to that one"."""
+    x, y = fr(p)
+    u = _unit(d)
+    ang = math.atan2(u[1], u[0])
+    wings = []
+    for turn in (math.radians(148), math.radians(-148)):
+        wx = x + size * math.cos(ang + turn)
+        wy = y - size * math.sin(ang + turn)
+        wings.append(f"{_f(wx)},{_f(wy)}")
+    return (f'<polyline points="{wings[0]} {_f(x)},{_f(y)} {wings[1]}" fill="none" '
+            f'stroke="{STROKE}" stroke-width="2" stroke-linecap="round" '
+            f'stroke-linejoin="round"/>')
+
+
+def _schematic(fr: _Frame, parts: list[str], *, right: float, note: str,
+               below: float = 0.0) -> Drawing:
+    """Close off a schematic figure: add the not-to-scale caption and size the canvas.
+
+    `below` is the room needed by labels that hang under the lowest drawn point —
+    a figure whose base sits on the frame's bottom edge (A, B on a horizontal side)
+    labels those points below it, and the caption has to clear them.
+    """
+    width = fr.left + fr.width + right
+    baseline = fr.bottom + below + NOTE_GAP
+    parts = parts + [_text(width / 2, baseline, SCHEMATIC_NOTE, cls="note")]
+    return Drawing(
+        width=width, height=baseline + 12, parts=parts, note=note,
+        # Only these figures name points and lines, so the rules live here rather
+        # than in `render`: adding them globally would rewrite every measured
+        # figure in the bank with CSS it does not use, and `--check` would call
+        # five untouched files stale.
+        extra_style=[
+            f".pt {{ font-size: 15px; font-weight: 700; fill: {INK}; }}",
+            f".ln {{ font-size: 14px; font-style: italic; fill: {INK_SOFT}; }}",
+        ],
+    )
+
+
+def parallel_lines_transversals() -> Drawing:
+    """Two parallel lines cut by two transversals — the angle-chase configuration.
+
+    Line k is horizontal. Lines l and m are parallel and meet k at P and Q; line n
+    falls to the right and meets m at S, k at R and l at T. Reading the corresponding
+    angles at P and Q and then the triangle QSR gives y = x + z − 180, which is the
+    whole item, so x, y and z are drawn at whatever this fixed configuration happens
+    to produce and never at the values a statement supplies.
+    """
+    P, Q, R = (80.0, 0.0), (230.0, 0.0), (560.0, 0.0)
+    dk = (1.0, 0.0)
+    dl = _unit((1.0, 1.4))      # l and m share it — that is what makes them parallel
+    dn = _unit((-1.0, 1.15))    # n, pointing up and to the left from R
+    S, T = _meet(Q, dl, R, dn), _meet(P, dl, R, dn)
+
+    k_ends = ((10.0, 0.0), (650.0, 0.0))
+    l_ends = (_walk(P, dl, -110), _walk(P, dl, 430))
+    m_ends = (_walk(Q, dl, -110), _walk(Q, dl, 300))
+    n_ends = (_walk(R, dn, -110), _walk(R, dn, 445))
+    fr = _Frame([*k_ends, *l_ends, *m_ends, *n_ends], scale=0.62, left=34, top=32)
+
+    parts = [
+        _seg(fr, *k_ends),
+        _seg(fr, *l_ends),
+        _seg(fr, *m_ends),
+        _seg(fr, *n_ends),
+        _chevron(fr, _walk(P, dl, 125), dl),
+        _chevron(fr, _walk(Q, dl, 125), dl),
+        *_angle_mark(fr, P, dl, (-1.0, 0.0), "x°"),
+        *_angle_mark(fr, R, dk, dn, "z°"),
+        *_angle_mark(fr, S, dl, dn, "y°", radius=24, gap=14),
+        *_node(fr, P, "P", (-15, -15)),
+        *_node(fr, Q, "Q", (-15, -15)),
+        *_node(fr, R, "R", (15, -15)),
+        *_node(fr, S, "S", (17, -9)),
+        *_node(fr, T, "T", (0, 19)),
+        _line_tag(fr, k_ends[1], "k", (11, 12)),
+        _line_tag(fr, l_ends[1], "l", (10, 7)),
+        _line_tag(fr, m_ends[1], "m", (12, 5)),
+        _line_tag(fr, n_ends[1], "n", (-13, 7)),
+    ]
+    return _schematic(fr, parts, right=36, note=(
+        "skematis: garis l ∥ m dipotong garis k dan garis n; sudut x, y, z hanya "
+        "diberi nama, TIDAK diberi nilai, dan gambar sengaja tidak berskala."))
+
+
+def right_triangle_midsegment() -> Drawing:
+    """Right triangle ABC (right angle at C) with D on AC and DE ∥ CB.
+
+    D sits at the midpoint of AC because the stem says AC = 2·AD; that E then
+    bisects AB and DE is half of CB is the inference under test, so no segment is
+    dimensioned and the reader is told the drawing is not to scale.
+    """
+    A, B = (30.0, 0.0), (400.0, 0.0)
+    # C anywhere on the circle with diameter AB gives a right angle at C
+    # (Thales); 66° is simply an angle at which no side looks special.
+    centre, radius = _mid(A, B), (B[0] - A[0]) / 2
+    C = (centre[0] + radius * math.cos(math.radians(66.0)),
+         radius * math.sin(math.radians(66.0)))
+    D, E = _mid(A, C), _mid(A, B)
+    along = _unit((B[0] - C[0], B[1] - C[1]))   # DE ∥ CB, so one direction serves both
+
+    fr = _Frame([A, B, C], scale=0.86, left=40, top=34)
+    parts = [
+        _seg(fr, A, B),
+        _seg(fr, B, C),
+        _seg(fr, C, A),
+        _seg(fr, D, E),
+        _chevron(fr, _mid(D, E), along),
+        _chevron(fr, _mid(C, B), along),
+        _right_angle(fr, C, (A[0] - C[0], A[1] - C[1]), (B[0] - C[0], B[1] - C[1])),
+        *_node(fr, A, "A", (-17, -13)),
+        *_node(fr, B, "B", (17, -13)),
+        *_node(fr, C, "C", (11, 16)),
+        *_node(fr, D, "D", (-17, 9)),
+        *_node(fr, E, "E", (0, -19)),
+    ]
+    return _schematic(fr, parts, right=40, below=24, note=(
+        "skematis: segitiga siku-siku ABC dengan siku-siku di C, D titik tengah AC, "
+        "dan DE ∥ CB; tidak ada ukuran yang dilabeli."))
+
+
+def two_right_triangles() -> Drawing:
+    """Right triangles ABD and ABC on a common base, with their diagonals crossing.
+
+    AD ⊥ AB and BC ⊥ AB on the same side of AB; AC and BD cross at E, and the dashed
+    EF is the distance from E to AB. That distance equals AD·BC/(AD + BC) and does
+    not involve AB at all — the trap the item is built on — so AB is drawn as an
+    ordinary side with nothing to draw the eye to it.
+    """
+    A, B = (30.0, 0.0), (390.0, 0.0)
+    D, C = (30.0, 150.0), (390.0, 235.0)
+    E = _meet(A, (C[0] - A[0], C[1] - A[1]), B, (D[0] - B[0], D[1] - B[1]))
+    F = (E[0], 0.0)
+
+    fr = _Frame([A, B, C, D], scale=0.86, left=40, top=32)
+    parts = [
+        _seg(fr, A, B),
+        _seg(fr, A, D),
+        _seg(fr, B, C),
+        _seg(fr, A, C),
+        _seg(fr, B, D),
+        _seg(fr, E, F, width=1.6, colour=HIDDEN, dash="5 4"),
+        _right_angle(fr, A, (1.0, 0.0), (0.0, 1.0)),
+        _right_angle(fr, B, (-1.0, 0.0), (0.0, 1.0)),
+        _right_angle(fr, F, (1.0, 0.0), (0.0, 1.0), size=10),
+        *_node(fr, A, "A", (-17, -13)),
+        *_node(fr, B, "B", (17, -13)),
+        *_node(fr, C, "C", (15, 11)),
+        *_node(fr, D, "D", (-15, 11)),
+        *_node(fr, E, "E", (0, 18)),
+        *_node(fr, F, "F", (2, -19)),
+    ]
+    return _schematic(fr, parts, right=40, below=24, note=(
+        "skematis: segitiga siku-siku ABD dan ABC pada alas AB, AC dan BD "
+        "berpotongan di E, EF ⊥ AB; tidak ada ukuran yang dilabeli."))
+
+
+# Figures shared by every generated item of a family. Keyed by filename because
+# that is what a question's `image` field holds, and one file serves many questions.
+SHARED_FIGURES: dict[str, Callable[[], Drawing]] = {
+    "kd-garis-sejajar.svg": parallel_lines_transversals,
+    "kd-segitiga-garis-tengah.svg": right_triangle_midsegment,
+    "kd-dua-segitiga-siku.svg": two_right_triangles,
+}
+
+
+def shared_image_field(filename: str) -> str:
+    return f"images/{filename}"
+
+
+def ensure_shared_figure(filename: str, package_id: int,
+                         bank_dir: Path = BANK_DIR) -> str:
+    """Put a shared figure in the package's images/ dir and return its `image` value.
+
+    Idempotent, and idempotent byte for byte: the builder takes no arguments, so a
+    second generator writing the same figure into the same package rewrites the
+    identical file rather than racing the first one.
+    """
+    if filename not in SHARED_FIGURES:
+        raise KeyError(f"{filename!r} is not a shared figure")
+    path = bank_dir / str(package_id) / "images" / filename
+    svg = render(SHARED_FIGURES[filename](), question_id=f"paket {package_id}")
+    if not path.is_file() or path.read_text(encoding="utf-8") != svg:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(svg, encoding="utf-8")
+    return shared_image_field(filename)
+
+
+def _shared_usage(bank_dir: Path, only: str | None) -> dict[tuple[int, str], list[str]]:
+    """(package, shared filename) -> the question ids pointing at it."""
+    usage: dict[tuple[int, str], list[str]] = {}
+    for _path, q, err in iter_bank_questions(bank_dir):
+        if err or not q or not q.get("image"):
+            continue
+        if only and q.get("id") != only:
+            continue
+        name = q["image"].split("/")[-1]
+        if name in SHARED_FIGURES:
+            usage.setdefault((q["package"], name), []).append(q["id"])
+    return usage
+
+
 # ------------------------------------------------------------------ registry --
 
 @dataclass(frozen=True)
@@ -458,7 +790,7 @@ def main() -> None:
     figures = FIGURES
     if args.only:
         figures = [f for f in FIGURES if f.question_id == args.only]
-        if not figures:
+        if not figures and not _shared_usage(args.bank_dir, args.only):
             sys.exit(f"no figure registered for {args.only}")
 
     stale, problems = [], []
@@ -496,6 +828,26 @@ def main() -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(svg, encoding="utf-8")
         print(f"wrote   {path.relative_to(args.bank_dir.parent.parent)}")
+
+    # Shared schematic figures are not in FIGURES — a generator wrote them, and
+    # which packages hold them depends on what was generated. Find them by asking
+    # the bank which questions point at one, so `--check` still covers every SVG
+    # in the bank rather than only the hand-registered ones.
+    for (pkg, name), ids in sorted(_shared_usage(args.bank_dir, args.only).items()):
+        svg = render(SHARED_FIGURES[name](), question_id=f"paket {pkg}")
+        path = args.bank_dir / str(pkg) / "images" / name
+        current = path.read_text(encoding="utf-8") if path.is_file() else None
+        label = f"{path.relative_to(args.bank_dir.parent.parent)} ({len(ids)} soal)"
+        if args.check:
+            if current != svg:
+                stale.append(f"{pkg}/{name}")
+            continue
+        if current == svg:
+            print(f"ok      {label}")
+            continue
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(svg, encoding="utf-8")
+        print(f"wrote   {label}")
 
     for p in problems:
         print(f"WARN    {p}", file=sys.stderr)

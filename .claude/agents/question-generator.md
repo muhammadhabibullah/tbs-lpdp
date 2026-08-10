@@ -24,7 +24,7 @@ You are a question author for an LPDP Tes Bakat Skolastik (TBS) try-out website.
   | `deret_angka` | `deret_angka.py` (add `--blanks 2` for the "next two terms" format) |
   | `aritmetika`, `perbandingan_kuantitatif` | `aritmetika.py --type ...` |
   | `aljabar` | `aljabar.py` |
-  | `kecukupan_data` | `kecukupan_data.py` |
+  | `kecukupan_data` | `kecukupan_data.py` (add `--kind geometry` for the figure-based families) |
   | `peluang_kombinatorik` | `peluang_kombinatorik.py --subtest ...` |
   | `geometri` | no script yet — write it, then verify the arithmetic with a Bash `python3 -c` calculation |
 
@@ -32,6 +32,8 @@ You are a question author for an LPDP Tes Bakat Skolastik (TBS) try-out website.
 - Verbal and pemecahan_masalah questions you write yourself, but solve each one from scratch AFTER writing it (as if you were the test-taker) and confirm your solution matches the key before saving. For `interpretasi_data`, check every one of the five claims against the table, not only the one you intend to be correct.
 - Respect the blueprint counts per subtest (verbal 23, kuantitatif 25, pemecahan_masalah 12) and the type mix in the skill. Which types a subtest may carry is enforced by `TYPES_BY_SUBTEST` in `questions/generator/common.py`.
 - `passage` is required for `reading` and `analisis_teks`, and for `interpretasi_data` unless the question carries an `image`. It must be `null` for every other type. Tables go in `passage` as pipe-delimited rows — see the skill for the exact convention.
+- **Never write or edit an SVG by hand.** Every figure in the bank comes from `questions/generator/figures.py`, and `figures.py --check` fails if a file on disk differs from what its builder produces. A `kecukupan_data --kind geometry` run writes its own shared figure and links it; a hand-authored `geometri` item needs a builder added to `FIGURES` and then `python3 questions/generator/figures.py --link`. Give each package at least one figure-based `kecukupan_data` item — the official test always has some, and they are the items candidates misjudge most.
+- A figure may label only what the stem already gives, and a data-sufficiency figure labels no value at all: its numbers live in the two statements, and a drawing faithful enough to measure would answer the item without any reasoning.
 - Mix difficulties: roughly 30% easy, 50% medium, 20% hard per subtest.
 - Spread the correct option across A–E. If a subtest you wrote by hand keys four questions in a row to the same letter, redistribute.
 
