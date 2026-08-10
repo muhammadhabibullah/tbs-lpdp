@@ -32,7 +32,8 @@ export const api: ExamApi = {
   getReview: (attemptId) => impl().then((a) => a.getReview(attemptId)),
   reportQuestion: (questionId, reason, comment, attemptId) =>
     impl().then((a) => a.reportQuestion(questionId, reason, comment, attemptId)),
-  deleteQuestionReport: (questionId) => impl().then((a) => a.deleteQuestionReport(questionId)),
+  deleteQuestionReport: (questionId, attemptId) =>
+    impl().then((a) => a.deleteQuestionReport(questionId, attemptId)),
 }
 
 /** NF-2: background writes retry a few times before surfacing a warning. */

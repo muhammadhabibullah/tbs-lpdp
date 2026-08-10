@@ -1,6 +1,7 @@
 import { ApiError } from './config'
 import { REPORT_COMMENT_MAX, REPORT_REASONS } from './types'
 import type {
+  Attempt,
   AttemptState,
   AttemptSummary,
   ExamApi,
@@ -18,32 +19,29 @@ import type {
   Subtest,
 } from './types'
 
-/**
- * Dev-only in-browser stand-in for Supabase, backed by the git question bank
- * served at /__mock/bank.json by vite/mock-bank-plugin.ts. It reproduces the
- * semantics of supabase/schema.sql (deadline enforcement + grace, idempotent
- * finish, keys revealed only for finished sections) so the UI can be built and
- * demoed before a Supabase project exists. Never reachable in a prod build.
- */
+/** Dev-only Supabase stand-in with v3 immutable release semantics. */
 
 interface BankQuestion extends Question {
   correct_option: OptionKey
   explanations: Record<OptionKey, string>
 }
 
+interface BankPackage extends Package {
+  release_id: string
+}
+
 interface Bank {
-  packages: Package[]
+  packages: BankPackage[]
   questions: Record<string, BankQuestion[]>
 }
 
-interface MockAttempt {
+interface MockRelease {
   id: string
-  package_id: number
-  status: 'active' | 'finished'
-  started_at: string
-  finished_at: string | null
-  total_score: number | null
+  package: Package
+  questions: Record<string, BankQuestion[]>
 }
+
+interface MockAttempt extends Attempt {}
 
 interface MockSection {
   id: string
@@ -56,34 +54,41 @@ interface MockSection {
   score: number | null
 }
 
+interface MockStatistics {
+  attempts_started_total: number
+  attempts_completed_total: number
+  score_sum: number
+  coverage_started_at: string
+}
+
 interface MockState {
   attempts: MockAttempt[]
   sections: MockSection[]
   answers: Record<string, Record<string, { selected_option: OptionKey | null; is_doubtful: boolean }>>
-  /** v2: question_id → report. One mock browser = one anonymous user, so the
-   *  `(user_id, question_id)` unique key of question_reports collapses to this. */
+  /** `${release_id}:${question_id}` -> the report for that immutable revision. */
   reports: Record<string, QuestionReport>
+  releases: Record<string, MockRelease>
+  statistics: Record<string, MockStatistics>
 }
 
-const STORAGE_KEY = 'tbs-lpdp.mock.v1'
-/** Dev switch for the BE-18 "storage full" state; see getServiceStatus. */
+const STORAGE_KEY = 'tbs-lpdp.mock.v3'
 const FULL_KEY = 'tbs-lpdp.mock.full'
 const GRACE_MS = 5_000
 const REPORTS_PER_HOUR = 20
-const EMPTY: MockState = { attempts: [], sections: [], answers: {}, reports: {} }
+const EMPTY: MockState = { attempts: [], sections: [], answers: {}, reports: {}, releases: {}, statistics: {} }
 
 let bankPromise: Promise<Bank> | null = null
 
 async function loadBank(): Promise<Bank> {
   if (!bankPromise) {
     bankPromise = fetch('/__mock/bank.json')
-      .then((res) => {
-        if (!res.ok) throw new ApiError('Bank soal mock tidak tersedia (jalankan `npm run dev`).')
-        return res.json() as Promise<Bank>
+      .then((response) => {
+        if (!response.ok) throw new ApiError('Bank soal mock tidak tersedia (jalankan `npm run dev`).')
+        return response.json() as Promise<Bank>
       })
-      .catch((err) => {
+      .catch((error) => {
         bankPromise = null
-        throw err instanceof ApiError ? err : new ApiError(String(err))
+        throw error instanceof ApiError ? error : new ApiError(String(error))
       })
   }
   return bankPromise
@@ -99,6 +104,8 @@ function readState(): MockState {
       sections: parsed.sections ?? [],
       answers: parsed.answers ?? {},
       reports: parsed.reports ?? {},
+      releases: parsed.releases ?? {},
+      statistics: parsed.statistics ?? {},
     }
   } catch {
     return structuredClone(EMPTY)
@@ -113,95 +120,137 @@ function now(): string {
   return new Date().toISOString()
 }
 
-function subtestsOf(bank: Bank, packageId: number): Subtest[] {
-  const pkg = bank.packages.find((p) => p.id === packageId)
+function findBankPackage(bank: Bank, packageId: number): BankPackage {
+  const pkg = bank.packages.find((item) => item.id === packageId)
   if (!pkg) throw new ApiError('package not found', 'P0002')
-  return [...pkg.subtests].sort((a, b) => a.position - b.position)
+  return pkg
 }
 
-function findSubtest(bank: Bank, subtestId: string): Subtest {
-  for (const pkg of bank.packages) {
-    const found = pkg.subtests.find((s) => s.id === subtestId)
-    if (found) return found
+function ensureStatistics(state: MockState, packageId: number): MockStatistics {
+  return (state.statistics[String(packageId)] ??= {
+    attempts_started_total: 0,
+    attempts_completed_total: 0,
+    score_sum: 0,
+    coverage_started_at: now(),
+  })
+}
+
+function withStatistics(pkg: Package, state: MockState): Package {
+  const stats = ensureStatistics(state, pkg.id)
+  return {
+    ...pkg,
+    completed_attempts_total: stats.attempts_completed_total,
+    mean_score: stats.attempts_completed_total === 0 ? null : stats.score_sum / stats.attempts_completed_total,
+    statistics_coverage_started_at: stats.coverage_started_at,
   }
-  throw new ApiError('subtest not found', 'P0002')
+}
+
+function ensureCurrentRelease(state: MockState, bank: Bank, packageId: number): MockRelease {
+  const current = findBankPackage(bank, packageId)
+  const existing = state.releases[current.release_id]
+  if (existing) return existing
+  const { release_id: id, ...packageData } = current
+  const questions: Record<string, BankQuestion[]> = {}
+  for (const subtest of current.subtests) {
+    questions[subtest.id] = structuredClone(bank.questions[subtest.id] ?? [])
+  }
+  const release: MockRelease = { id, package: structuredClone(packageData), questions }
+  state.releases[id] = release
+  return release
+}
+
+function releaseForAttempt(state: MockState, attempt: MockAttempt): MockRelease {
+  const release = state.releases[attempt.package_release_id]
+  if (!release) throw new ApiError('pinned mock release is no longer available', 'P0002')
+  return release
+}
+
+function findSubtest(release: MockRelease, subtestId: string): Subtest {
+  const subtest = release.package.subtests.find((item) => item.id === subtestId)
+  if (!subtest) throw new ApiError('subtest not found', 'P0002')
+  return subtest
 }
 
 function stripKeys(questions: BankQuestion[]): Question[] {
-  return questions.map(({ correct_option: _c, explanations: _e, ...rest }) => rest)
+  return questions.map(({ correct_option: _correct, explanations: _explanations, ...question }) => question)
 }
 
-/** Mirrors public._grade_section. Idempotent. */
-function gradeSection(state: MockState, bank: Bank, sectionId: string): number {
-  const section = state.sections.find((s) => s.id === sectionId)
+function gradeSection(state: MockState, sectionId: string): number {
+  const section = state.sections.find((item) => item.id === sectionId)
   if (!section) throw new ApiError('section attempt not found', 'P0002')
   if (section.status === 'finished') return section.score ?? 0
-
-  const questions = bank.questions[section.subtest_id] ?? []
+  const attempt = state.attempts.find((item) => item.id === section.attempt_id)
+  if (!attempt) throw new ApiError('attempt not found', 'P0002')
+  const release = releaseForAttempt(state, attempt)
   const answers = state.answers[sectionId] ?? {}
-  const correct = questions.filter((q) => answers[q.id]?.selected_option === q.correct_option).length
+  const correct = (release.questions[section.subtest_id] ?? [])
+    .filter((question) => answers[question.id]?.selected_option === question.correct_option).length
 
   section.status = 'finished'
   section.finished_at = now()
   section.score = correct * 5
 
-  const attempt = state.attempts.find((a) => a.id === section.attempt_id)
-  if (attempt) {
-    const required = subtestsOf(bank, attempt.package_id)
-    const done = required.every((st) =>
-      state.sections.some((s) => s.attempt_id === attempt.id && s.subtest_id === st.id && s.status === 'finished'),
-    )
-    if (done && attempt.status === 'active') {
-      attempt.status = 'finished'
-      attempt.finished_at = now()
-      attempt.total_score = state.sections
-        .filter((s) => s.attempt_id === attempt.id)
-        .reduce((sum, s) => sum + (s.score ?? 0), 0)
-    }
+  const done = release.package.subtests.every((subtest) =>
+    state.sections.some((item) => item.attempt_id === attempt.id && item.subtest_id === subtest.id && item.status === 'finished'),
+  )
+  if (done && attempt.status === 'active') {
+    attempt.status = 'finished'
+    attempt.finished_at = now()
+    attempt.total_score = state.sections
+      .filter((item) => item.attempt_id === attempt.id)
+      .reduce((sum, item) => sum + (item.score ?? 0), 0)
+    const stats = ensureStatistics(state, attempt.package_id)
+    stats.attempts_completed_total += 1
+    stats.score_sum += attempt.total_score
   }
   return section.score
 }
 
-/** Mirrors public._assert_active_section. */
-function assertActiveSection(state: MockState, bank: Bank, sectionId: string): MockSection {
-  const section = state.sections.find((s) => s.id === sectionId)
+function assertActiveSection(state: MockState, sectionId: string): { section: MockSection; release: MockRelease } {
+  const section = state.sections.find((item) => item.id === sectionId)
   if (!section) throw new ApiError('section attempt not found', 'P0002')
   if (section.status === 'finished') throw new ApiError('section already finished', 'P0003')
+  const attempt = state.attempts.find((item) => item.id === section.attempt_id)
+  if (!attempt) throw new ApiError('attempt not found', 'P0002')
+  const release = releaseForAttempt(state, attempt)
   if (Date.now() > Date.parse(section.deadline_at) + GRACE_MS) {
-    gradeSection(state, bank, sectionId)
+    gradeSection(state, sectionId)
     writeState(state)
     throw new ApiError('section deadline passed', 'P0004')
   }
-  return section
+  return { section, release }
 }
 
-/**
- * Mirrors the report gate in public.report_question: the caller must own a
- * FINISHED section containing the question. `attemptId` only narrows it.
- */
-function assertReportable(state: MockState, bank: Bank, questionId: string, attemptId: string): void {
-  const reportable = state.sections.some(
-    (section) =>
-      section.status === 'finished' &&
-      (!attemptId || section.attempt_id === attemptId) &&
-      (bank.questions[section.subtest_id] ?? []).some((q) => q.id === questionId),
+function reportKey(state: MockState, questionId: string, attemptId: string): string {
+  const attempt = state.attempts.find((item) => item.id === attemptId)
+  if (!attempt) throw new ApiError('question not available for reporting', 'P0002')
+  const release = releaseForAttempt(state, attempt)
+  const allowed = state.sections.some((section) =>
+    section.attempt_id === attemptId && section.status === 'finished' &&
+    (release.questions[section.subtest_id] ?? []).some((question) => question.id === questionId),
   )
-  if (!reportable) throw new ApiError('question not available for reporting', 'P0002')
+  if (!allowed) throw new ApiError('question not available for reporting', 'P0002')
+  return `${release.id}:${questionId}`
 }
 
-function summarize(state: MockState, bank: Bank): AttemptSummary[] {
+function summarize(state: MockState): AttemptSummary[] {
   return [...state.attempts]
     .sort((a, b) => b.started_at.localeCompare(a.started_at))
-    .map((attempt) => ({
-      id: attempt.id,
-      package_id: attempt.package_id,
-      package_title: bank.packages.find((p) => p.id === attempt.package_id)?.title ?? `Paket ${attempt.package_id}`,
-      status: attempt.status,
-      started_at: attempt.started_at,
-      total_score: attempt.total_score,
-      finished_sections: state.sections.filter((s) => s.attempt_id === attempt.id && s.status === 'finished').length,
-      total_sections: subtestsOf(bank, attempt.package_id).length,
-    }))
+    .slice(0, 25)
+    .map((attempt) => {
+      const release = releaseForAttempt(state, attempt)
+      return {
+        id: attempt.id,
+        package_id: attempt.package_id,
+        package_title: release.package.title,
+        package_version: release.package.question_version,
+        status: attempt.status,
+        started_at: attempt.started_at,
+        total_score: attempt.total_score,
+        finished_sections: state.sections.filter((item) => item.attempt_id === attempt.id && item.status === 'finished').length,
+        total_sections: release.package.subtests.length,
+      }
+    })
 }
 
 export const mockApi: ExamApi = {
@@ -210,214 +259,181 @@ export const mockApi: ExamApi = {
   },
 
   async getServiceStatus(): Promise<ServiceStatus> {
-    // No storage to run out of here. Set `tbs-lpdp.mock.full` in localStorage to
-    // rehearse the FE-19 full state without filling a real database.
     const full = localStorage.getItem(FULL_KEY) === 'true'
     return { accepting_attempts: !full, usage_percent: full ? 100 : 3, measured_at: now() }
   },
 
   async listPackages(): Promise<Package[]> {
     const bank = await loadBank()
-    return bank.packages
+    const state = readState()
+    const packages = bank.packages.map(({ release_id: _id, ...pkg }) => withStatistics(pkg, state))
+    writeState(state)
+    return packages
   },
 
   async getPackage(packageId: number): Promise<Package> {
-    const bank = await loadBank()
-    const pkg = bank.packages.find((p) => p.id === packageId)
+    const packages = await this.listPackages()
+    const pkg = packages.find((item) => item.id === packageId)
     if (!pkg) throw new ApiError('package not found', 'P0002')
     return pkg
   },
 
   async listAttempts(): Promise<AttemptSummary[]> {
-    const bank = await loadBank()
-    return summarize(readState(), bank)
+    return summarize(readState())
   },
 
   async startAttempt(packageId: number): Promise<StartAttemptResult> {
     const bank = await loadBank()
     const state = readState()
-    subtestsOf(bank, packageId) // validates the package exists
-    let attempt = state.attempts.find((a) => a.package_id === packageId && a.status === 'active')
+    let attempt = state.attempts.find((item) => item.package_id === packageId && item.status === 'active')
     if (!attempt) {
-      // BE-18: mirrors the storage gate — creation only, resuming is untouched.
-      if (localStorage.getItem(FULL_KEY) === 'true') {
-        throw new ApiError('storage capacity reached', 'P0007')
-      }
-      // BE-16: mirrors the hourly cap on *creating* attempts in schema.sql.
+      if (localStorage.getItem(FULL_KEY) === 'true') throw new ApiError('storage capacity reached', 'P0007')
       const hourAgo = Date.now() - 3_600_000
-      if (state.attempts.filter((a) => Date.parse(a.started_at) > hourAgo).length >= 10) {
+      if (state.attempts.filter((item) => Date.parse(item.started_at) > hourAgo).length >= 10) {
         throw new ApiError('too many attempts', 'P0005')
       }
+      const release = ensureCurrentRelease(state, bank, packageId)
       attempt = {
-        id: crypto.randomUUID(),
-        package_id: packageId,
-        status: 'active',
-        started_at: now(),
-        finished_at: null,
-        total_score: null,
+        id: crypto.randomUUID(), package_id: packageId, package_release_id: release.id,
+        status: 'active', started_at: now(), finished_at: null, total_score: null,
       }
       state.attempts.push(attempt)
-      writeState(state)
+      ensureStatistics(state, packageId).attempts_started_total += 1
     }
-    return { attempt, server_time: now() }
+    const release = releaseForAttempt(state, attempt)
+    writeState(state)
+    return { attempt, package: withStatistics(release.package, state), server_time: now() }
   },
 
   async startSection(attemptId: string): Promise<StartSectionResult> {
-    const bank = await loadBank()
     const state = readState()
-    const attempt = state.attempts.find((a) => a.id === attemptId)
+    const attempt = state.attempts.find((item) => item.id === attemptId)
     if (!attempt) throw new ApiError('attempt not found', 'P0002')
-
+    const release = releaseForAttempt(state, attempt)
     for (const section of state.sections) {
-      if (
-        section.attempt_id === attemptId &&
-        section.status === 'active' &&
-        Date.now() > Date.parse(section.deadline_at) + GRACE_MS
-      ) {
-        gradeSection(state, bank, section.id)
-      }
+      if (section.attempt_id === attemptId && section.status === 'active' &&
+          Date.now() > Date.parse(section.deadline_at) + GRACE_MS) gradeSection(state, section.id)
     }
 
-    let section = state.sections.find((s) => s.attempt_id === attemptId && s.status === 'active')
+    let section = state.sections.find((item) => item.attempt_id === attemptId && item.status === 'active')
     if (!section) {
-      const next = subtestsOf(bank, attempt.package_id).find(
-        (st) => !state.sections.some((s) => s.attempt_id === attemptId && s.subtest_id === st.id),
-      )
+      const next = release.package.subtests.find((subtest) =>
+        !state.sections.some((item) => item.attempt_id === attemptId && item.subtest_id === subtest.id))
       if (!next) {
         writeState(state)
         return { done: true, server_time: now() }
       }
       section = {
-        id: crypto.randomUUID(),
-        attempt_id: attemptId,
-        subtest_id: next.id,
-        status: 'active',
-        started_at: now(),
+        id: crypto.randomUUID(), attempt_id: attemptId, subtest_id: next.id,
+        status: 'active', started_at: now(),
         deadline_at: new Date(Date.now() + next.duration_seconds * 1000).toISOString(),
-        finished_at: null,
-        score: null,
+        finished_at: null, score: null,
       }
       state.sections.push(section)
     }
     writeState(state)
-
-    const subtest = findSubtest(bank, section.subtest_id)
     const saved = state.answers[section.id] ?? {}
     return {
       done: false,
       section_attempt: section,
-      subtest,
-      questions: stripKeys(bank.questions[section.subtest_id] ?? []),
+      subtest: findSubtest(release, section.subtest_id),
+      package: withStatistics(release.package, state),
+      questions: stripKeys(release.questions[section.subtest_id] ?? []),
       answers: Object.entries(saved).map(([question_id, value]) => ({ question_id, ...value })),
       server_time: now(),
     }
   },
 
-  async saveAnswer(sectionAttemptId: string, questionId: string, option: OptionKey | null): Promise<void> {
-    const bank = await loadBank()
+  async saveAnswer(sectionId: string, questionId: string, option: OptionKey | null): Promise<void> {
     const state = readState()
-    assertActiveSection(state, bank, sectionAttemptId)
-    const bucket = (state.answers[sectionAttemptId] ??= {})
+    const { section, release } = assertActiveSection(state, sectionId)
+    if (!(release.questions[section.subtest_id] ?? []).some((question) => question.id === questionId)) {
+      throw new ApiError('question not in pinned section', 'P0002')
+    }
+    const bucket = (state.answers[sectionId] ??= {})
     bucket[questionId] = { selected_option: option, is_doubtful: bucket[questionId]?.is_doubtful ?? false }
     writeState(state)
   },
 
-  async toggleDoubt(sectionAttemptId: string, questionId: string, doubtful: boolean): Promise<void> {
-    const bank = await loadBank()
+  async toggleDoubt(sectionId: string, questionId: string, doubtful: boolean): Promise<void> {
     const state = readState()
-    assertActiveSection(state, bank, sectionAttemptId)
-    const bucket = (state.answers[sectionAttemptId] ??= {})
+    const { section, release } = assertActiveSection(state, sectionId)
+    if (!(release.questions[section.subtest_id] ?? []).some((question) => question.id === questionId)) {
+      throw new ApiError('question not in pinned section', 'P0002')
+    }
+    const bucket = (state.answers[sectionId] ??= {})
     bucket[questionId] = { selected_option: bucket[questionId]?.selected_option ?? null, is_doubtful: doubtful }
     writeState(state)
   },
 
-  async finishSection(sectionAttemptId: string): Promise<FinishSectionResult> {
-    const bank = await loadBank()
+  async finishSection(sectionId: string): Promise<FinishSectionResult> {
     const state = readState()
-    const score = gradeSection(state, bank, sectionAttemptId)
+    const score = gradeSection(state, sectionId)
+    const section = state.sections.find((item) => item.id === sectionId)!
+    const attempt = state.attempts.find((item) => item.id === section.attempt_id)!
     writeState(state)
-    const section = state.sections.find((s) => s.id === sectionAttemptId)!
-    const attempt = state.attempts.find((a) => a.id === section.attempt_id)!
     return { score, attempt_status: attempt.status, total_score: attempt.total_score, server_time: now() }
   },
 
   async getAttemptState(attemptId: string): Promise<AttemptState> {
-    const bank = await loadBank()
     const state = readState()
-    const attempt = state.attempts.find((a) => a.id === attemptId)
+    const attempt = state.attempts.find((item) => item.id === attemptId)
     if (!attempt) throw new ApiError('attempt not found', 'P0002')
+    const release = releaseForAttempt(state, attempt)
     return {
       attempt,
+      package: withStatistics(release.package, state),
       server_time: now(),
-      sections: state.sections
-        .filter((s) => s.attempt_id === attemptId)
+      sections: state.sections.filter((item) => item.attempt_id === attemptId)
         .sort((a, b) => a.started_at.localeCompare(b.started_at))
-        .map((section) => ({ section_attempt: section, subtest: findSubtest(bank, section.subtest_id) })),
+        .map((section) => ({ section_attempt: section, subtest: findSubtest(release, section.subtest_id) })),
     }
   },
 
   async getReview(attemptId: string): Promise<Review> {
-    const bank = await loadBank()
     const state = readState()
-    const attempt = state.attempts.find((a) => a.id === attemptId)
+    const attempt = state.attempts.find((item) => item.id === attemptId)
     if (!attempt) throw new ApiError('attempt not found', 'P0002')
-
-    const sections = state.sections
-      .filter((s) => s.attempt_id === attemptId && s.status === 'finished')
+    const release = releaseForAttempt(state, attempt)
+    const sections = state.sections.filter((item) => item.attempt_id === attemptId && item.status === 'finished')
       .map((section) => {
-        const subtest = findSubtest(bank, section.subtest_id)
         const saved = state.answers[section.id] ?? {}
-        const questions: ReviewQuestion[] = (bank.questions[section.subtest_id] ?? []).map((q) => ({
-          ...q,
-          selected_option: saved[q.id]?.selected_option ?? null,
-          is_doubtful: saved[q.id]?.is_doubtful ?? false,
-          my_report: state.reports[q.id] ?? null,
+        const questions: ReviewQuestion[] = (release.questions[section.subtest_id] ?? []).map((question) => ({
+          ...question,
+          selected_option: saved[question.id]?.selected_option ?? null,
+          is_doubtful: saved[question.id]?.is_doubtful ?? false,
+          my_report: state.reports[`${release.id}:${question.id}`] ?? null,
         }))
-        return { subtest, score: section.score ?? 0, questions }
-      })
-      .sort((a, b) => a.subtest.position - b.subtest.position)
-
-    return { attempt, sections }
+        return { subtest: findSubtest(release, section.subtest_id), score: section.score ?? 0, questions }
+      }).sort((a, b) => a.subtest.position - b.subtest.position)
+    return { attempt, package: withStatistics(release.package, state), sections }
   },
 
-  async reportQuestion(
-    questionId: string,
-    reason: ReportReason,
-    comment: string,
-    attemptId: string,
-  ): Promise<QuestionReport> {
-    const bank = await loadBank()
+  async reportQuestion(questionId: string, reason: ReportReason, comment: string, attemptId: string): Promise<QuestionReport> {
     const state = readState()
     const trimmed = comment.trim()
-
     if (!REPORT_REASONS.includes(reason)) throw new ApiError('unknown report reason', 'P0006')
     if (trimmed.length > REPORT_COMMENT_MAX) throw new ApiError('comment too long', 'P0006')
     if (reason === 'other' && trimmed === '') throw new ApiError('comment required for reason other', 'P0006')
-
-    assertReportable(state, bank, questionId, attemptId)
-
+    const key = reportKey(state, questionId, attemptId)
     const cutoff = Date.now() - 3_600_000
-    const recent = Object.values(state.reports).filter((r) => Date.parse(r.updated_at) > cutoff).length
-    if (recent >= REPORTS_PER_HOUR) throw new ApiError('too many reports', 'P0005')
-
-    // Re-reporting edits in place; status is the developer's field, never reset.
-    const existing = state.reports[questionId]
-    const report: QuestionReport = {
-      reason,
-      comment: trimmed,
-      status: existing?.status ?? 'open',
-      created_at: existing?.created_at ?? now(),
-      updated_at: now(),
+    if (Object.values(state.reports).filter((report) => Date.parse(report.updated_at) > cutoff).length >= REPORTS_PER_HOUR) {
+      throw new ApiError('too many reports', 'P0005')
     }
-    state.reports[questionId] = report
+    const existing = state.reports[key]
+    const report: QuestionReport = {
+      reason, comment: trimmed, status: existing?.status ?? 'open',
+      created_at: existing?.created_at ?? now(), updated_at: now(),
+    }
+    state.reports[key] = report
     writeState(state)
     return report
   },
 
-  async deleteQuestionReport(questionId: string): Promise<void> {
+  async deleteQuestionReport(questionId: string, attemptId: string): Promise<void> {
     const state = readState()
-    if (!state.reports[questionId]) return // idempotent, like the RPC
-    delete state.reports[questionId]
+    const key = reportKey(state, questionId, attemptId)
+    delete state.reports[key]
     writeState(state)
   },
 }

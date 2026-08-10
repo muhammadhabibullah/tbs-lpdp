@@ -418,6 +418,45 @@ a {
   color: #2f3743;
 }
 
+.package-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: -5px;
+}
+
+.package-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 3px 9px;
+  border: 1px solid #d9dfeb;
+  border-radius: 999px;
+  background: #f7f8fb;
+  color: #505968;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.package-badge.difficulty-easy {
+  border-color: #bfe4cd;
+  background: #edf9f1;
+  color: #237244;
+}
+
+.package-badge.difficulty-medium {
+  border-color: #f2d19c;
+  background: #fff8eb;
+  color: #986018;
+}
+
+.package-badge.difficulty-hard {
+  border-color: #efbdc2;
+  background: #fff0f1;
+  color: #a23f49;
+}
+
 .package-card p {
   margin: 0;
   color: var(--ink-soft);
@@ -454,6 +493,45 @@ a {
   font-size: 13.5px;
   font-weight: 600;
   padding: 0 12px;
+}
+
+.package-stats {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 10px;
+  padding: 11px 12px;
+  border: 1px solid #e1e6ef;
+  border-radius: 9px;
+  background: #fafbfc;
+}
+
+.package-stats > span {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.package-stats > span + span {
+  padding-left: 10px;
+  border-left: 1px solid #e1e6ef;
+}
+
+.package-stats strong {
+  color: #2f3743;
+  font-size: 13px;
+}
+
+.package-stats small {
+  color: var(--ink-soft);
+  font-size: 10.5px;
+  line-height: 1.35;
+}
+
+.history-version {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink-faint);
+  font-size: 11px;
 }
 
 /* Keeps a wide table inside its card instead of scrolling the whole page. */
@@ -1369,6 +1447,12 @@ a {
 .tag.doubt {
   background: #fdf1dd;
   color: #a96a08;
+}
+
+.tag.revision {
+  background: #f3f0fb;
+  color: #65509a;
+  text-transform: none;
 }
 
 /* ------------------------------------------------ report a question (v2) -- */

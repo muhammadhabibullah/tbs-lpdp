@@ -3,13 +3,14 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import AppShell from '../components/AppShell'
 import { scrollToSection } from '../components/MenuBar'
 import { USE_MOCK, api, errorMessage } from '../lib/api'
-import { formatDateTime, formatMinutes } from '../lib/clock'
+import { formatDate, formatDateTime, formatMinutes } from '../lib/clock'
 import { isSupabaseConfigured } from '../lib/config'
 import type { AttemptSummary, Package, ServiceStatus } from '../lib/types'
 
 const MAX_SCORE = 300
 /** Packages per page. Two full rows of the grid on a desktop. */
 const PAGE_SIZE = 6
+const DIFFICULTY_LABEL = { easy: 'Easy', medium: 'Medium', hard: 'Hard' } as const
 
 /** FE-19: shown wherever a new attempt is refused for lack of storage. */
 const CAPACITY_MESSAGE =
@@ -167,6 +168,15 @@ export default function HomePage() {
               return (
                 <article className="package-card" key={pkg.id}>
                   <h3>{pkg.title}</h3>
+                  <div className="package-meta" aria-label="Metadata paket soal">
+                    <span className={`package-badge difficulty-${pkg.difficulty}`}>
+                      {DIFFICULTY_LABEL[pkg.difficulty]}
+                    </span>
+                    <span className="package-badge">AI: {pkg.ai_model}</span>
+                    <span className="package-badge">
+                      Versi {pkg.question_version} · diperbarui {formatDate(pkg.last_updated_at)}
+                    </span>
+                  </div>
                   <p>{pkg.description}</p>
                   <ul className="subtest-list">
                     {pkg.subtests.map((subtest) => (
@@ -184,6 +194,23 @@ export default function HomePage() {
                     <span>Total</span>
                     <span>
                       {totalQuestions} soal · {formatMinutes(totalSeconds)}
+                    </span>
+                  </div>
+                  <div
+                    className="package-stats"
+                    title={`Statistik semua versi, tercatat sejak ${formatDate(pkg.statistics_coverage_started_at)}`}
+                  >
+                    <span>
+                      <strong>{pkg.completed_attempts_total.toLocaleString('id-ID')}</strong>
+                      <small>percobaan selesai</small>
+                    </span>
+                    <span>
+                      <strong>
+                        {pkg.mean_score == null
+                          ? 'Belum ada hasil'
+                          : `${pkg.mean_score.toLocaleString('id-ID', { maximumFractionDigits: 1 })} / ${MAX_SCORE}`}
+                      </strong>
+                      <small>rata-rata skor · semua versi</small>
                     </span>
                   </div>
                   <button
@@ -250,7 +277,10 @@ export default function HomePage() {
               <tbody>
                 {attempts.map((attempt) => (
                   <tr key={attempt.id}>
-                    <td>{attempt.package_title}</td>
+                    <td>
+                      {attempt.package_title}
+                      <span className="history-version">Versi {attempt.package_version}</span>
+                    </td>
                     <td className="muted">{formatDateTime(attempt.started_at)}</td>
                     <td>
                       <span className={`pill ${attempt.status}`}>

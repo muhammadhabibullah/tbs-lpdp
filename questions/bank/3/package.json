@@ -1,5 +1,7 @@
 {
   "id": 3,
   "title": "TBS LPDP Try Out — Paket 3",
-  "description": "Simulasi lengkap Tes Bakat Skolastik LPDP: Penalaran Verbal (23 soal/30 menit), Penalaran Kuantitatif (25 soal/40 menit), dan Pemecahan Masalah (12 soal/20 menit)."
+  "description": "Simulasi lengkap Tes Bakat Skolastik LPDP: Penalaran Verbal (23 soal/30 menit), Penalaran Kuantitatif (25 soal/40 menit), dan Pemecahan Masalah (12 soal/20 menit).",
+  "difficulty": "medium",
+  "ai_model": "Opus 5"
 }

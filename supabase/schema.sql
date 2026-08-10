@@ -1,16 +1,14 @@
 -- =============================================================================
--- TBS LPDP Try Out — Supabase schema, part 1 of 2 (tables, RLS, RPC)
+-- TBS LPDP Try Out — Supabase base schema (v1 tables, RLS, RPC)
 -- Apply in the Supabase SQL editor (or `supabase db push`), then apply
--- `schema_v2_reports.sql` for the question-feedback feature (v2), then
--- `maintenance.sql` once for the pg_cron retention jobs (NF-10).
+-- `schema_v2_reports.sql`, then `schema_v3.sql`, then `maintenance.sql`.
 -- Prereqs: enable Anonymous sign-in (Auth → Providers), create public bucket
 --          `question-images` (Storage).
 -- Design: docs/TECHNICAL_REQUIREMENTS.md §6–§8. Clients NEVER write tables
 --         directly — all mutations go through the RPCs below. answer_keys has
 --         no client-readable policy (constraint C-4).
--- Re-running this file is safe and idempotent, but it reverts the two things
--- schema_v2_reports.sql changes here (get_review's `my_report` field and the
--- grants on the report RPCs) — so re-run that file afterwards.
+-- Re-running this file is safe and idempotent, but it reverts later RPC/grant
+-- definitions. Re-apply v2 and v3 afterwards; v3 must be last.
 -- =============================================================================
 
 -- ---------------------------------------------------------------- content ---

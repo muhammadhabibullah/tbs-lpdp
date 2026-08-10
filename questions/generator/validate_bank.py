@@ -21,6 +21,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -46,6 +47,33 @@ def validate(bank_dir: Path, strict: bool) -> int:
     # (package, subtest) -> list of numbers seen
     numbers: dict[tuple[str, str], list[int]] = defaultdict(list)
     count = 0
+
+    package_dirs = sorted(
+        (p for p in bank_dir.iterdir() if p.is_dir() and p.name.isdigit()),
+        key=lambda p: int(p.name),
+    ) if bank_dir.is_dir() else []
+    for package_dir in package_dirs:
+        manifest_path = package_dir / "package.json"
+        rel = manifest_path.relative_to(bank_dir)
+        if not manifest_path.is_file():
+            errors.append(f"{rel}: package manifest is required")
+            continue
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            errors.append(f"{rel}: invalid JSON: {exc}")
+            continue
+        package_id = int(package_dir.name)
+        if manifest.get("id") != package_id:
+            errors.append(f"{rel}: id {manifest.get('id')!r} != directory {package_id}")
+        if not isinstance(manifest.get("title"), str) or not manifest["title"].strip():
+            errors.append(f"{rel}: title must be a non-empty string")
+        if not isinstance(manifest.get("description"), str):
+            errors.append(f"{rel}: description must be a string")
+        if manifest.get("difficulty") not in {"easy", "medium", "hard"}:
+            errors.append(f"{rel}: difficulty must be one of easy, medium, hard")
+        if not isinstance(manifest.get("ai_model"), str) or not manifest["ai_model"].strip():
+            errors.append(f"{rel}: ai_model must be a non-empty string")
 
     for path, q, parse_err in iter_bank_questions(bank_dir):
         rel = path.relative_to(bank_dir)
@@ -114,6 +142,13 @@ def validate(bank_dir: Path, strict: bool) -> int:
             errors.append(
                 f"package {pkg}/{subtest}: {len(nums)}/{expected} questions (strict mode)"
             )
+
+    if strict:
+        for package_dir in package_dirs:
+            for subtest in BLUEPRINT:
+                key = (package_dir.name, subtest)
+                if key not in numbers:
+                    errors.append(f"package {package_dir.name}/{subtest}: missing subtest (strict mode)")
 
     for w in warnings:
         print(f"WARN  {w}")

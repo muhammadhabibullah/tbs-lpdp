@@ -49,15 +49,6 @@ async function requireSession(): Promise<void> {
   if (error) fail(error)
 }
 
-/**
- * The published catalogue, fetched once per page load. HomePage asks for it
- * while `listAttempts` asks again for its section counts; caching the *promise*
- * collapses those two into one request even when they overlap in flight. A
- * newly published package appears on the next reload — the catalogue only
- * changes when the developer runs the push script.
- */
-let packagesPromise: Promise<Package[]> | null = null
-
 export const supabaseApi: ExamApi = {
   init: requireSession,
 
@@ -68,72 +59,20 @@ export const supabaseApi: ExamApi = {
 
   async listPackages(): Promise<Package[]> {
     await requireSession()
-    if (!packagesPromise) {
-      const load = (async () => {
-        const { data, error } = await supabase
-          .from('packages')
-          .select('id,title,description,is_published,created_at,subtests(*)')
-          .eq('is_published', true)
-          .order('id')
-        if (error) fail(error)
-        return (data as Package[]).map((pkg) => ({ ...pkg, subtests: sortSubtests(pkg.subtests ?? []) }))
-      })()
-      // Never cache a rejection: a failed load must be retryable.
-      packagesPromise = load.catch((err) => {
-        packagesPromise = null
-        throw err
-      })
-    }
-    return packagesPromise
+    const packages = await rpc<Package[]>('get_package_catalog', {})
+    return packages.map((pkg) => ({ ...pkg, subtests: sortSubtests(pkg.subtests ?? []) }))
   },
 
   async getPackage(packageId: number): Promise<Package> {
-    await requireSession()
-    const { data, error } = await supabase
-      .from('packages')
-      .select('id,title,description,is_published,created_at,subtests(*)')
-      .eq('id', packageId)
-      .single()
-    if (error) fail(error)
-    const pkg = data as Package
-    return { ...pkg, subtests: sortSubtests(pkg.subtests ?? []) }
+    const packages = await supabaseApi.listPackages()
+    const pkg = packages.find((item) => item.id === packageId)
+    if (!pkg) throw new ApiError('Paket tidak ditemukan.', 'P0002')
+    return pkg
   },
 
   async listAttempts(): Promise<AttemptSummary[]> {
     await requireSession()
-    const { data, error } = await supabase
-      .from('attempts')
-      .select('id,package_id,status,started_at,total_score,packages(title),section_attempts(status)')
-      .order('started_at', { ascending: false })
-      .limit(25)
-    if (error) fail(error)
-
-    const packages = await supabaseApi.listPackages()
-    const sectionCount = new Map(packages.map((p) => [p.id, p.subtests.length]))
-
-    type Row = {
-      id: string
-      package_id: number
-      status: 'active' | 'finished'
-      started_at: string
-      total_score: number | null
-      packages: { title: string } | { title: string }[] | null
-      section_attempts: { status: string }[] | null
-    }
-
-    return (data as Row[]).map((row) => {
-      const pkg = Array.isArray(row.packages) ? row.packages[0] : row.packages
-      return {
-        id: row.id,
-        package_id: row.package_id,
-        package_title: pkg?.title ?? `Paket ${row.package_id}`,
-        status: row.status,
-        started_at: row.started_at,
-        total_score: row.total_score,
-        finished_sections: (row.section_attempts ?? []).filter((s) => s.status === 'finished').length,
-        total_sections: sectionCount.get(row.package_id) ?? 3,
-      }
-    })
+    return rpc<AttemptSummary[]>('get_attempt_summaries', {})
   },
 
   async startAttempt(packageId: number): Promise<StartAttemptResult> {
@@ -193,8 +132,8 @@ export const supabaseApi: ExamApi = {
     return result.report
   },
 
-  async deleteQuestionReport(questionId: string): Promise<void> {
+  async deleteQuestionReport(questionId: string, attemptId: string): Promise<void> {
     await requireSession()
-    await rpc('delete_question_report', { p_question_id: questionId })
+    await rpc('delete_question_report', { p_question_id: questionId, p_attempt_id: attemptId })
   },
 }

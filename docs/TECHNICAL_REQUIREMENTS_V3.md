@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | v3.0 — implementation specification; not yet implemented |
+| Status | v3.0 — implemented; production deployment requires the secrets and apply order in §9.3/§11 |
 | Date | 2026-08-11 |
 | Extends | [`TECHNICAL_REQUIREMENTS.md`](TECHNICAL_REQUIREMENTS.md) (v1) and [`TECHNICAL_REQUIREMENTS_V2.md`](TECHNICAL_REQUIREMENTS_V2.md) (v2) |
 | Scope | Daily operator email for question reports; immutable question/package versions; public package metadata; deletion-safe package attempt statistics |
@@ -23,7 +23,7 @@ The implementation decisions that resolve those gaps are:
 - A **package release** is an immutable set of exactly 60 question revisions plus package metadata. An attempt is pinned to one release when `start_attempt` creates it; all three subtests use that release even if a newer one is published mid-attempt.
 - The package card shows editorial package-level difficulty, authoring-model label, package release number/date, completed-attempt count, and arithmetic mean score. Per-question difficulty remains separate and is not exposed during an active exam.
 - Statistics are incremented transactionally when an attempt is created/finished and live independently of attempt rows. The retention cron never decrements them.
-- A Supabase Cron job calls one private Supabase Edge Function daily. The function reads reports with the Supabase secret key and sends the operator a digest through Resend.
+- A Supabase Cron job freezes the report window into a private outbox row and calls one private Supabase Edge Function daily. The function claims that payload with a Supabase secret key and sends the operator's digest through Resend.
 
 ### 1.1 “Average” and “mean”
 
@@ -79,7 +79,7 @@ v3 continues the shared v1/v2 ID space. It starts at `FE-20`, `BE-19`, `QG-9`, `
 | QG-11 | Images upload to `question-images/<package>/<question-id>/<sha256>.<ext>`. Existing objects are never upserted in place. An upload can be skipped when the content-addressed object already exists. Orphan objects from a failed database transaction are harmless and may be cleaned manually. |
 | QG-12 | QG-6 is replaced by one service-role-only `publish_package_release(payload jsonb)` RPC call per package. Direct table upserts are no longer the publish path. The RPC validates the full blueprint, creates/reuses revisions, creates/reuses a release, and atomically changes `packages.current_release_id`. |
 | QG-13 | A payload identical to the current release is idempotent: it does not create a revision, increment the package release, or change `published_at`. A metadata change or deliberate rollback creates a release even when its hash matches an older release. The publisher locks the package row so concurrent pushes cannot allocate the same version. |
-| QG-14 | Git remains the content source of truth (v1 C-5), but database revision numbers and publish timestamps are server-assigned. They must not be hand-written into question JSON. A dry run prints which question revisions and package release would change without writing. |
+| QG-14 | Git remains the content source of truth (v1 C-5), but database revision numbers and publish timestamps are server-assigned. They must not be hand-written into question JSON. An offline dry run validates the complete payload and prints its deterministic content hash/content-addressed paths without writing. The live RPC response reports whether a release was created and how many revisions changed. |
 | QG-15 | `validate_bank.py` still finishes every content change and additionally rejects a manifest without v3 metadata, duplicate/unstable question IDs, noncanonical option order, or a package whose blueprint is not exactly 23/25/12. |
 
 ### 4.1 Canonical content hash
@@ -102,7 +102,7 @@ The Python publisher and the SQL RPC use the same documented canonical JSON shap
 }
 ```
 
-Keys are UTF-8, object keys are sorted, no insignificant whitespace is retained, and the options array is ordered A–E. The server recomputes the hash; it does not trust a hash supplied by the publisher. Including key/explanations is deliberate: a key-only correction must produce a new revision even if the active-exam content is unchanged.
+Keys are UTF-8 and the options array is ordered A–E. The canonical bytes are PostgreSQL's normalized `jsonb::text` representation: object keys use jsonb's UTF-8 byte-length/byte-value ordering and its standard comma/colon spacing. The Python publisher mirrors that representation. The server recomputes the hash and rejects a mismatched diagnostic hash; it does not trust a hash supplied by the publisher. Including key/explanations is deliberate: a key-only correction must produce a new revision even if the active-exam content is unchanged.
 
 The package release hash covers the package title, description, package difficulty, AI-model label, and the ordered list of `(question_id, question_revision_content_hash)` pairs. It does not include timestamps or database UUIDs.
 
@@ -132,7 +132,7 @@ The package release hash covers the package title, description, package difficul
 | BE-26 | **Package catalogue**: authenticated `get_package_catalog()` returns published package/subtest data, current release metadata, `completed_attempts_total`, and `mean_score`. It exposes no revision IDs, report counts, raw sums, or answer-key fields. |
 | BE-27 | **Durable statistics**: `package_statistics` stores started count, completed count, score sum, coverage timestamp, and update timestamp per package. Creation increments started count only after a new attempt row is inserted; returning an existing active attempt does not increment it. |
 | BE-28 | **Exactly-once completion aggregate**: the transaction that changes an attempt from `active` to `finished` also increments completed count and adds the final score. The update is guarded by `attempts.status = 'active'`, so concurrent/idempotent finish calls contribute once. If either write fails, the transaction rolls back. |
-| BE-29 | **Daily digest function**: private Edge Function `question-report-digest` accepts only the named Supabase secret key `automations`, loads one fixed digest run with the admin client, reads new/edited reports in its window, sends the email, and records the provider message ID. Browser sessions and publishable keys receive 401. |
+| BE-29 | **Daily digest function**: private Edge Function `question-report-digest` accepts only the named Supabase secret key `automations`, claims one database-frozen digest payload with the admin client, sends the email, and records the provider message ID. Browser sessions and publishable keys receive 401. |
 | BE-30 | **Digest outbox**: `question_report_digest_runs` stores an immutable `[window_start, window_end)` and frozen email payload plus `pending\|sending\|sent\|failed\|manual_attention`, lease, attempts, provider ID, redacted error, and timestamps. Only one unsent run may exist. A retry sends the exact stored payload with the same run ID/provider idempotency key; it never rebuilds the body from mutable reports. |
 | BE-31 | **Cron schedule**: `pg_cron` + `pg_net` create/invoke the daily run at `01:00 UTC` (`08:00 WIB`; Jakarta has no DST). A second job retries an eligible unsent run every 30 minutes, without creating extra daily emails. The queue reuses an unsent run or creates a window beginning at the last sent cutoff, so an outage produces one catch-up digest rather than losing a day. Automatic ambiguous retries stop before Resend's 24-hour idempotency window expires and become `manual_attention`. |
 | BE-32 | **Digest content**: every daily email is sent, including a zero-report heartbeat. It contains the time window in WIB, new/edited count, open backlog count, and rows grouped by logical question and revision with reason/status/comment. User IDs, attempt IDs, auth data, and answer keys are omitted. Free text is HTML-escaped (or sent as plain text). |
@@ -316,8 +316,8 @@ Postgres `bigint` may exceed JavaScript's safe integer range, so the RPC must ei
        -> reuse pending/failed run, or create [last sent cutoff, now)
        -> pg_net POST /functions/v1/question-report-digest {run_id}
             -> authenticate named `automations` secret
-            -> admin-read fixed run + question_reports + revision metadata
-            -> send through Resend with idempotency key `tbs-report-digest:<run_id>`
+            -> claim the database-frozen payload for that run
+            -> send through Resend with idempotency key `tbs-report-digest/<run_id>`
             -> mark run sent with provider message ID
 ```
 
@@ -339,7 +339,6 @@ Body:
 - new/edited reports in the window and current open backlog count;
 - package, subtest, question number/ID, reported revision, and whether that revision is current;
 - reason, status, selected option, created/updated time, and comment;
-- Supabase SQL-editor triage query or dashboard project link configured as a non-secret constant;
 - zero-report text when applicable, proving that the daily automation still ran.
 
 Comments are untrusted input. Prefer a plain-text body; if an HTML companion is sent, escape `& < > " '` before interpolation. Do not log full comments or the generated email body in Edge Function logs.
@@ -452,7 +451,7 @@ Similarly, the initial durable statistics can include attempts that still exist 
 | `supabase/maintenance.sql` | Enable `pg_net`; schedule daily queue at 01:00 UTC plus 30-minute retry; retain existing jobs |
 | `supabase/functions/question-report-digest/index.ts` | Private revision-aware daily email function with outbox/idempotent delivery |
 | `supabase/config.toml` | Function auth configuration (`verify_jwt = false`; named secret checked in function) |
-| `supabase/functions/question-report-digest/*.test.ts` | Auth, escaping, row-limit, zero-report, retry/idempotency unit tests |
+| `supabase/functions/question-report-digest/render.test.ts` | Escaping, zero-report heartbeat, and revision-detail rendering tests; delivery lifecycle is covered by SQL integration tests and provider idempotency |
 | `questions/bank/1..6/package.json` | Add package `difficulty` and `ai_model` values from §1.2 |
 | `questions/generator/validate_bank.py` | Validate manifest metadata and v3 publish invariants |
 | `questions/generator/push_to_supabase.py` | Canonical hashes, content-addressed uploads, dry-run diff, one transactional publish RPC |
@@ -465,6 +464,10 @@ Similarly, the initial durable statistics can include attempts that still exist 
 | `supabase/tests/v3.sql` | Pinning, grading, RLS, report migration, exact-once stats, retention invariance integration tests |
 
 ## 15. Implementation milestones
+
+M1–M7 are implemented in this repository and locally verified. M8's live
+deployment/observed delivery remains an operator step because it requires the
+production Supabase project, Vault keys, Resend account, and recipient address.
 
 | Milestone | Work | Depends on |
 |-----------|------|------------|

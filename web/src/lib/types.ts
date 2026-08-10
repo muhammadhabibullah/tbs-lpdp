@@ -1,7 +1,8 @@
-// Shapes returned by the RPCs in supabase/schema.sql (docs §6–§7).
+// Shapes returned by the final RPC definitions in supabase/schema_v3.sql.
 
 export type SubtestKey = 'verbal' | 'kuantitatif' | 'pemecahan_masalah'
 export type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E'
+export type PackageDifficulty = 'easy' | 'medium' | 'hard'
 
 export const OPTION_KEYS: OptionKey[] = ['A', 'B', 'C', 'D', 'E']
 
@@ -22,6 +23,14 @@ export interface Package {
   description: string
   is_published: boolean
   created_at: string
+  difficulty: PackageDifficulty
+  ai_model: string
+  /** Immutable package release number currently advertised in the catalogue. */
+  question_version: number
+  last_updated_at: string
+  completed_attempts_total: number
+  mean_score: number | null
+  statistics_coverage_started_at: string
   subtests: Subtest[]
 }
 
@@ -38,6 +47,9 @@ export interface Question {
   question_text: string
   passage: string | null
   image_url: string | null
+  difficulty: PackageDifficulty
+  question_version: number
+  question_updated_at: string
   options: QuestionOption[]
 }
 
@@ -50,6 +62,7 @@ export interface AnswerState {
 export interface Attempt {
   id: string
   package_id: number
+  package_release_id: string
   status: 'active' | 'finished'
   started_at: string
   finished_at: string | null
@@ -69,6 +82,7 @@ export interface SectionAttempt {
 
 export interface StartAttemptResult {
   attempt: Attempt
+  package: Package
   server_time: string
 }
 
@@ -78,6 +92,7 @@ export type StartSectionResult =
       done?: false
       section_attempt: SectionAttempt
       subtest: Subtest
+      package: Package
       questions: Question[]
       answers: AnswerState[]
       server_time: string
@@ -95,6 +110,7 @@ export interface FinishSectionResult {
 
 export interface AttemptState {
   attempt: Attempt
+  package: Package
   server_time: string
   sections: { section_attempt: SectionAttempt; subtest: Subtest }[]
 }
@@ -139,6 +155,7 @@ export interface ReviewSection {
 
 export interface Review {
   attempt: Attempt
+  package: Package
   sections: ReviewSection[]
 }
 
@@ -146,6 +163,7 @@ export interface AttemptSummary {
   id: string
   package_id: number
   package_title: string
+  package_version: number
   status: 'active' | 'finished'
   started_at: string
   total_score: number | null
@@ -188,5 +206,5 @@ export interface ExamApi {
     attemptId: string,
   ): Promise<QuestionReport>
   /** BE-12: withdraw own report. Idempotent — no error if none exists. */
-  deleteQuestionReport(questionId: string): Promise<void>
+  deleteQuestionReport(questionId: string, attemptId: string): Promise<void>
 }
