@@ -132,56 +132,58 @@ export default function HomePage() {
         ) : attempts.length === 0 ? (
           <p className="empty-state">Belum ada riwayat. Mulai try out pertama Anda di atas.</p>
         ) : (
-          <table className="history-table">
-            <thead>
-              <tr>
-                <th>Paket</th>
-                <th>Mulai</th>
-                <th>Status</th>
-                <th>Skor</th>
-                <th />
-              </tr>
-            </thead>
-            <tbody>
-              {attempts.map((attempt) => (
-                <tr key={attempt.id}>
-                  <td>{attempt.package_title}</td>
-                  <td className="muted">{formatDateTime(attempt.started_at)}</td>
-                  <td>
-                    <span className={`pill ${attempt.status}`}>
-                      {attempt.status === 'finished'
-                        ? 'Selesai'
-                        : `Berjalan · ${attempt.finished_sections}/${attempt.total_sections} mata uji`}
-                    </span>
-                  </td>
-                  <td>
-                    {attempt.total_score === null ? (
-                      <span className="muted">—</span>
-                    ) : (
-                      <strong>
-                        {attempt.total_score}
-                        <span className="muted"> / {MAX_SCORE}</span>
-                      </strong>
-                    )}
-                  </td>
-                  <td>
-                    <div className="stack">
-                      {attempt.status === 'active' ? (
-                        <Link className="btn btn-cyan btn-sm" to={`/attempt/${attempt.id}`}>
-                          Lanjutkan
-                        </Link>
-                      ) : null}
-                      {attempt.finished_sections > 0 ? (
-                        <Link className="btn btn-ghost btn-sm" to={`/attempt/${attempt.id}/review`}>
-                          Pembahasan
-                        </Link>
-                      ) : null}
-                    </div>
-                  </td>
+          <div className="table-wrap">
+            <table className="history-table">
+              <thead>
+                <tr>
+                  <th>Paket</th>
+                  <th>Mulai</th>
+                  <th>Status</th>
+                  <th>Skor</th>
+                  <th />
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {attempts.map((attempt) => (
+                  <tr key={attempt.id}>
+                    <td>{attempt.package_title}</td>
+                    <td className="muted">{formatDateTime(attempt.started_at)}</td>
+                    <td>
+                      <span className={`pill ${attempt.status}`}>
+                        {attempt.status === 'finished'
+                          ? 'Selesai'
+                          : `Berjalan · ${attempt.finished_sections}/${attempt.total_sections} mata uji`}
+                      </span>
+                    </td>
+                    <td>
+                      {attempt.total_score === null ? (
+                        <span className="muted">—</span>
+                      ) : (
+                        <strong>
+                          {attempt.total_score}
+                          <span className="muted"> / {MAX_SCORE}</span>
+                        </strong>
+                      )}
+                    </td>
+                    <td>
+                      <div className="stack">
+                        {attempt.status === 'active' ? (
+                          <Link className="btn btn-cyan btn-sm" to={`/attempt/${attempt.id}`}>
+                            Lanjutkan
+                          </Link>
+                        ) : null}
+                        {attempt.finished_sections > 0 ? (
+                          <Link className="btn btn-ghost btn-sm" to={`/attempt/${attempt.id}/review`}>
+                            Pembahasan
+                          </Link>
+                        ) : null}
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
       </div>
     </AppShell>

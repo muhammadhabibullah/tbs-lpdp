@@ -45,6 +45,9 @@ body {
 button {
   font: inherit;
   cursor: pointer;
+  /* No 300 ms double-tap-zoom delay, no grey flash on touch. */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:disabled {
@@ -196,7 +199,8 @@ a {
 .package-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  /* min() keeps the track from overflowing containers narrower than 320px. */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
 }
 
 .package-card {
@@ -250,6 +254,12 @@ a {
   font-size: 13.5px;
   font-weight: 600;
   padding: 0 12px;
+}
+
+/* Keeps a wide table inside its card instead of scrolling the whole page. */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .history-table {
@@ -314,8 +324,11 @@ a {
   transition: filter 0.12s ease, transform 0.12s ease;
 }
 
-.btn:hover:not(:disabled) {
-  filter: brightness(1.06);
+/* Hover-only so a tap doesn't leave the highlight stuck on touch devices. */
+@media (hover: hover) {
+  .btn:hover:not(:disabled) {
+    filter: brightness(1.06);
+  }
 }
 
 .btn:active:not(:disabled) {
@@ -421,6 +434,12 @@ a {
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+/* Transparent on desktop: the two buttons stay inline beside the timer.
+   The phone layout turns it into a real row of its own. */
+.exam-tool-buttons {
+  display: contents;
 }
 
 .timer-box {
@@ -552,8 +571,10 @@ a {
   font-size: inherit;
 }
 
-.option:hover {
-  background: #f6f9fd;
+@media (hover: hover) {
+  .option:hover {
+    background: #f6f9fd;
+  }
 }
 
 .option.selected {
@@ -911,7 +932,7 @@ a {
 .score-cards {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   margin-top: 18px;
 }
 
@@ -992,6 +1013,7 @@ a {
 .review-question header {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
 }
@@ -1218,14 +1240,341 @@ a {
   color: var(--ink-soft);
 }
 
+/* ------------------------------------------------------------ responsive -- */
+
+/* Tablet: only the outer chrome needs to give way. */
+@media (max-width: 1023px) {
+  .masthead-inner,
+  .page {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+/* FE-10 is desktop-first (≥ 768px). Below that the exam screen switches to a
+   phone layout: the question header sticks to the top so the timer is always
+   visible, and the action bar sticks to the bottom so Sebelumnya/Selanjutnya
+   are reachable without scrolling past the question. */
 @media (max-width: 767px) {
-  /* FE-10 is desktop-first (≥768px); below that we keep it merely usable. */
-  .exam-head,
+  body {
+    font-size: 14.5px;
+  }
+
+  /* --- chrome ----------------------------------------------------------- */
+
+  .masthead {
+    padding: 16px 0 60px;
+  }
+
+  .masthead-inner {
+    padding: 0 14px;
+    gap: 10px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-emblem,
+  .brand-emblem svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .brand-text strong {
+    font-size: 17px;
+  }
+
+  .brand-text em {
+    font-size: 9px;
+    letter-spacing: 0.16em;
+  }
+
+  .participant {
+    display: none;
+  }
+
+  .participant-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .page {
+    margin-top: -42px;
+    padding: 0 14px 24px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .card + .card {
+    margin-top: 14px;
+  }
+
+  /* --- exam screen ------------------------------------------------------ */
+
+  .exam-head {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    align-items: center;
+    gap: 7px;
+    /* Bleeds over the card padding so the sticky band spans the full card. */
+    margin: -16px -16px 0;
+    padding: 7px 16px 9px;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    border-radius: 12px 12px 0 0;
+  }
+
+  /* flex-basis 0, so the timer shares this row instead of being wrapped past
+     the title's (much wider) intrinsic width. */
+  .exam-title {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .exam-title h1 {
+    font-size: 18px;
+  }
+
+  .exam-title .package-label {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .package-label-pkg {
+    display: none;
+  }
+
+  /* Timer + button row become direct children of .exam-head, so the buttons
+     can take a full-width second row while the timer stays next to the title. */
+  .exam-tools {
+    display: contents;
+  }
+
+  .timer-box {
+    flex: none;
+    min-width: 0;
+    gap: 7px;
+    padding: 5px 11px;
+    border-width: 1.5px;
+  }
+
+  .timer-box .label {
+    font-size: 11px;
+  }
+
+  .timer-box .value {
+    font-size: 15px;
+  }
+
+  .exam-tool-buttons {
+    display: flex;
+    flex: 1 1 100%;
+    gap: 8px;
+  }
+
+  .exam-tool-buttons .btn {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 7px 10px;
+    font-size: 12px;
+    gap: 7px;
+  }
+
+  .font-control {
+    margin-top: 10px;
+  }
+
+  .exam-divider {
+    margin: 8px 0 14px;
+  }
+
+  /* The card already frames the question; dropping the inner frame buys back
+     ~56px of text width and removes a screenful of empty min-height. */
+  .question-frame {
+    min-height: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .passage {
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+
+  .options {
+    gap: 6px;
+  }
+
+  .option {
+    min-height: 44px;
+    padding: 10px;
+    gap: 11px;
+  }
+
   .action-bar {
-    flex-direction: column;
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    margin: 14px -16px 0;
+    padding: 9px 16px max(9px, env(safe-area-inset-bottom));
+    background: #fff;
+    border-top: 1px solid var(--line);
   }
 
   .action-bar .btn {
+    flex: none;
     width: 100%;
+    min-width: 0;
+    padding: 10px 8px;
+    font-size: 12.5px;
+    line-height: 1.25;
+    gap: 6px;
+  }
+
+  /* Mark/save on the first row, navigation on the second (thumb-closest). */
+  .act-doubt {
+    order: 1;
+  }
+  .act-save {
+    order: 2;
+  }
+  .act-prev {
+    order: 3;
+  }
+  .act-next {
+    order: 4;
+  }
+
+  .exam-card {
+    /* The sticky bar supplies its own bottom spacing. */
+    padding-bottom: 12px;
+  }
+
+  .toast {
+    /* Clear of the sticky action bar. */
+    bottom: 104px;
+    max-width: calc(100% - 28px);
+    text-align: center;
+  }
+
+  /* --- dialogs ---------------------------------------------------------- */
+
+  .modal-backdrop {
+    padding: 12px;
+  }
+
+  .modal {
+    max-height: 92vh;
+  }
+
+  .modal-head {
+    padding: 15px 16px 12px;
+  }
+
+  .modal-head h2 {
+    font-size: 18px;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .modal-foot {
+    padding: 0 16px 16px;
+    /* Reversed: the primary action is last in the DOM but belongs on top. */
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .modal-foot .btn {
+    width: 100%;
+  }
+
+  .daftar-grid {
+    grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+    gap: 13px 8px;
+  }
+
+  .daftar-item {
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .report-reason {
+    padding: 11px 12px;
+  }
+
+  .report-reason input {
+    width: 18px;
+    height: 18px;
+  }
+
+  .report-comment textarea {
+    /* ≥16px stops iOS Safari from zooming in on focus. */
+    font-size: 16px;
+  }
+
+  /* --- home / intro / review -------------------------------------------- */
+
+  .home-hero h1 {
+    font-size: 21px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .history-table {
+    font-size: 13px;
+    min-width: 520px;
+  }
+
+  .intro-card h1 {
+    font-size: 21px;
+  }
+
+  .intro-meta {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .intro-meta .num {
+    font-size: 21px;
+  }
+
+  .intro-instructions {
+    padding: 14px 16px 14px 30px;
+    font-size: 13.5px;
+  }
+
+  .score-total .big {
+    font-size: 38px;
+  }
+
+  .review-question {
+    padding: 14px;
+  }
+
+  .report-slot {
+    /* Drops below the tags instead of squeezing them off the row. */
+    margin-left: 0;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+  }
+
+  .review-option {
+    padding: 10px;
+    gap: 10px;
   }
 }

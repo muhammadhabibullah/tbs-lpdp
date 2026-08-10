@@ -43,6 +43,8 @@ export default function ExamPage({
   const [toast, setToast] = useState<string | null>(null)
   const [finishing, setFinishing] = useState(false)
   const finishedRef = useRef(false)
+  const cardRef = useRef<HTMLDivElement>(null)
+  const mountedRef = useRef(false)
 
   useTick(250)
   const remaining = remainingMs(sectionAttempt.deadline_at)
@@ -61,6 +63,18 @@ export default function ExamPage({
     const id = setTimeout(() => setToast(null), 1800)
     return () => clearTimeout(id)
   }, [toast])
+
+  // On a phone the card is taller than the screen, so moving to another
+  // question would otherwise leave the user parked at the previous answer.
+  useEffect(() => {
+    if (!mountedRef.current) {
+      mountedRef.current = true
+      return
+    }
+    const card = cardRef.current
+    if (!card) return
+    window.scrollTo({ top: Math.max(0, card.getBoundingClientRect().top + window.scrollY) })
+  }, [index])
 
   /** Section is over server-side: leave the screen, the grade is already stored. */
   const leaveSection = useCallback(() => {
@@ -171,12 +185,15 @@ export default function ExamPage({
 
   return (
     <AppShell participant="PESERTA ANONIM">
-      <div className="card">
+      <div className="card exam-card" ref={cardRef}>
         <div className="exam-head">
           <div className="exam-title">
             <h1>Soal nomor {question.number}</h1>
             <span className="package-label">
-              {packageTitle} — {subtest.name}
+              {/* The package name is dropped on phones to keep the sticky
+                  header to two rows; it stays in Informasi Soal. */}
+              <span className="package-label-pkg">{packageTitle} — </span>
+              {subtest.name}
             </span>
           </div>
           <div className="exam-tools">
@@ -184,12 +201,16 @@ export default function ExamPage({
               <span className="label">Sisa Waktu:</span>
               <span className="value">{formatClock(remaining)}</span>
             </div>
-            <button className="btn btn-cyan" onClick={() => setShowInfo(true)}>
-              <span className="btn-badge">i</span> Informasi Soal
-            </button>
-            <button className="btn btn-cyan" onClick={() => setShowDaftar(true)}>
-              <span className="btn-badge">▦</span> Daftar Soal
-            </button>
+            {/* `display: contents` on desktop, so the buttons sit inline next to
+                the timer; on a phone it becomes the header's second row. */}
+            <div className="exam-tool-buttons">
+              <button className="btn btn-cyan" onClick={() => setShowInfo(true)}>
+                <span className="btn-badge">i</span> Informasi Soal
+              </button>
+              <button className="btn btn-cyan" onClick={() => setShowDaftar(true)}>
+                <span className="btn-badge">▦</span> Daftar Soal
+              </button>
+            </div>
           </div>
         </div>
 
@@ -234,23 +255,32 @@ export default function ExamPage({
 
         {warning ? <div className="notice warn">{warning}</div> : null}
 
+        {/* The act-* classes only drive the phone layout, where this bar becomes
+            a sticky 2×2 grid ordered mark/save first, navigation second. */}
         <div className="action-bar">
-          <button className="btn btn-red" onClick={() => setIndex((i) => Math.max(0, i - 1))} disabled={index === 0}>
+          <button
+            className="btn btn-red act-prev"
+            onClick={() => setIndex((i) => Math.max(0, i - 1))}
+            disabled={index === 0}
+          >
             ◀ Soal Sebelumnya
           </button>
-          <button className="btn btn-orange" onClick={toggleDoubt} aria-pressed={Boolean(current?.is_doubtful)}>
+          <button className="btn btn-orange act-doubt" onClick={toggleDoubt} aria-pressed={Boolean(current?.is_doubtful)}>
             <span className="btn-square" style={current?.is_doubtful ? { background: '#8a5b09' } : undefined} />
             Ragu — Ragu
           </button>
-          <button className="btn btn-green" onClick={saveNow}>
+          <button className="btn btn-green act-save" onClick={saveNow}>
             Simpan Jawaban
           </button>
           {isLast ? (
-            <button className="btn btn-navy" onClick={() => setShowConfirm(true)} disabled={finishing}>
+            <button className="btn btn-navy act-next" onClick={() => setShowConfirm(true)} disabled={finishing}>
               Selesai
             </button>
           ) : (
-            <button className="btn btn-cyan" onClick={() => setIndex((i) => Math.min(questions.length - 1, i + 1))}>
+            <button
+              className="btn btn-cyan act-next"
+              onClick={() => setIndex((i) => Math.min(questions.length - 1, i + 1))}
+            >
               Soal Selanjutnya ▶
             </button>
           )}
