@@ -31,14 +31,12 @@ export default function FeedbackFooter() {
           <div>
             <h2>Masukan &amp; Laporan</h2>
             <p>
-              Untuk keluhan dan saran, terkhusus jenis soal yang lebih baik dan update, kirim email ke{' '}
-              <a href={feedbackMailto()}>{FEEDBACK_EMAIL}</a>. Setiap masukan dibaca dan dipakai untuk memperbaiki bank
-              soal.
+              Punya saran atau temukan kesalahan? Kirim email ke{' '}
+              <a href={feedbackMailto()}>{FEEDBACK_EMAIL}</a>.
             </p>
             <p className="site-footer-contact">
-              <strong>Kontak:</strong> Muhammad Habibullah —{' '}
-              <a href={feedbackMailto()}>{FEEDBACK_EMAIL}</a>
-              <span>(Calon Penerima Beasiswa LPDP Jalur Non-LoA)</span>
+              <strong>Kontak:</strong> Muhammad Habibullah
+              <span>Calon Penerima Beasiswa LPDP Jalur Non-LoA</span>
             </p>
           </div>
           <div className="site-footer-actions">
@@ -49,16 +47,9 @@ export default function FeedbackFooter() {
         </div>
 
         <ul className="site-footer-notes">
-          <li>
-            Soal dan pembahasan disusun dengan bantuan AI lalu diperiksa ulang secara otomatis. Kekeliruan masih
-            mungkin terjadi — laporan Anda sangat membantu memperbaikinya.
-          </li>
-          {/* Matches the 7-day sweep in supabase/maintenance.sql (NF-10). */}
-          <li>
-            Riwayat pengerjaan beserta pembahasannya tersimpan paling lama <strong>7 hari</strong>, lalu dihapus
-            otomatis. Simpan sendiri hasil yang ingin Anda pertahankan.
-          </li>
-          <li>Try out ini gratis dan dikelola mandiri — bukan produk resmi LPDP maupun PUSMENDIK.</li>
+          <li>Konten dibuat dengan bantuan AI dan diperiksa otomatis. Laporan Anda membantu perbaikan.</li>
+          <li>Riwayat tersimpan selama <strong>7 hari</strong> kemudian dihapus otomatis.</li>
+          <li>Try out gratis dan mandiri — bukan produk resmi LPDP atau PUSMENDIK.</li>
         </ul>
       </div>
     </footer>
