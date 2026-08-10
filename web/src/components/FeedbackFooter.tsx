@@ -28,25 +28,32 @@ export default function FeedbackFooter() {
           heading above it instead of being centred on its own. */}
       <div className="site-footer-inner">
         <div className="site-footer-row">
-          <div>
+          <div className="site-footer-about">
             <h2>Masukan &amp; Laporan</h2>
             <p>
-              Punya saran atau temukan kesalahan? Kirim email ke{' '}
-              <a href={feedbackMailto()}>{FEEDBACK_EMAIL}</a>.
+              Laporkan bug atau usulkan jenis soal yang seharusnya muncul di test LPDP untuk meningkatkan kualitas Try Out LPDP ini. 
+              Silakan kirimkan masukan Anda ke alamat pada bagian Kontak, atau klik tombol “Kirim Masukan” untuk membuka email baru
+              dengan subjek dan isi yang telah disiapkan.
             </p>
-            <p className="site-footer-contact">
-              <strong>Kontak:</strong> Muhammad Habibullah
-              <span>Calon Penerima Beasiswa LPDP Jalur Non-LoA</span>
-            </p>
-          </div>
-          <div className="site-footer-actions">
+            <br />
             <a className="btn btn-cyan btn-sm" href={feedbackMailto()}>
               Kirim Masukan
             </a>
           </div>
+
+          <div className="site-footer-contact">
+            <h2>Kontak</h2>
+            <p className="contact-email">
+              <span aria-hidden="true">🇮🇩</span>
+              <a href={`mailto:${FEEDBACK_EMAIL}`}>{FEEDBACK_EMAIL}</a>
+            </p>
+            <p className="contact-name">Muhammad Habibullah</p>
+            <p className="contact-role">Calon Penerima Beasiswa LPDP Jalur Non-LoA</p>
+          </div>
         </div>
 
         <ul className="site-footer-notes">
+          <h2>Disclaimer</h2>
           <li>Konten dibuat dengan bantuan AI dan diperiksa otomatis. Laporan Anda membantu perbaikan.</li>
           <li>Riwayat tersimpan selama <strong>7 hari</strong> kemudian dihapus otomatis.</li>
           <li>Try out gratis dan mandiri — bukan produk resmi LPDP atau PUSMENDIK.</li>
