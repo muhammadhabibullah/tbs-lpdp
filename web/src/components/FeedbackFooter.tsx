@@ -48,7 +48,7 @@ export default function FeedbackFooter() {
               <a href={`mailto:${FEEDBACK_EMAIL}`}>{FEEDBACK_EMAIL}</a>
             </p>
             <p className="contact-name">Muhammad Habibullah</p>
-            <p className="contact-role">Calon Penerima Beasiswa LPDP 2026 Batch 1</p>
+            <p className="contact-role">Calon Penerima Beasiswa LPDP Batch 1 Tahun 2026</p>
           </div>
         </div>
 
