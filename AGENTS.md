@@ -2,7 +2,7 @@
 
 Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pages** (React + Vite + TypeScript in `web/`), backend on **Supabase** (Postgres + RLS + RPC, anonymous auth, Storage). No other infrastructure — all trusted logic (timing, grading, answer-key secrecy) lives in `supabase/schema.sql`.
 
-**Read `docs/TECHNICAL_REQUIREMENTS.md` before non-trivial work**, plus `docs/TECHNICAL_REQUIREMENTS_V2.md` for the question-feedback feature (users reporting defective questions from Pembahasan). Requirement IDs (FE-x, BE-x, QG-x, C-x, NF-x) used in issues/commits refer to those documents — v2 continues v1's numbering, so an ID means one thing across both.
+**Read `docs/TECHNICAL_REQUIREMENTS.md` before non-trivial work**, plus `docs/TECHNICAL_REQUIREMENTS_V2.md` for the implemented question-feedback feature (users reporting defective questions from Pembahasan). `docs/TECHNICAL_REQUIREMENTS_V3.md` is the implementation specification for planned question/package versioning, daily report email, package metadata, and deletion-safe statistics. Requirement IDs (FE-x, BE-x, QG-x, C-x, NF-x) continue one shared sequence across all three documents.
 
 ## Exam format (do not change without updating docs)
 
@@ -12,6 +12,7 @@ Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pa
 
 - `docs/TECHNICAL_REQUIREMENTS.md` — the spec; source of truth for behavior
 - `docs/TECHNICAL_REQUIREMENTS_V2.md` — v2: report-a-question feedback captured in `question_reports`
+- `docs/TECHNICAL_REQUIREMENTS_V3.md` — v3 implementation specification (not yet implemented)
 - `questions/schema.json` — JSON Schema every bank question must pass
 - `questions/bank/<package_id>/<subtest_key>/<NNN>.json` — question bank (git = source of truth; Supabase is a derived copy)
 - `questions/sample/` — real LPDP sample items collected from public tip sites; reference for which formats the bank must cover (not schema-valid, and some of their keys are wrong)

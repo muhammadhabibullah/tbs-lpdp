@@ -12,7 +12,7 @@
 
 v1 ships a working try-out and a per-question **Pembahasan** page with the key and five explanations. Questions are LLM-generated; some will be wrong (bad key, ambiguous stem, typo, explanation that contradicts the key). Today a user who spots one has nowhere to say so, and we have no signal about which bank items to fix.
 
-v2 adds a report button on every question in Pembahasan. A report is **captured and stored, nothing more** — no triage UI, no notifications, no automated bank changes. The deliverable of this stage is a trustworthy, queryable `question_reports` table plus the UI that fills it.
+v2 adds a report button on every question in Pembahasan. A report is **captured and stored, nothing more** — no triage UI, no notifications, no automated bank changes. The deliverable of this stage is a trustworthy, queryable `question_reports` table plus the UI that fills it. The planned daily operator digest and immutable report/question revisions are specified separately in [`TECHNICAL_REQUIREMENTS_V3.md`](TECHNICAL_REQUIREMENTS_V3.md).
 
 ### 1.1 Why the Pembahasan page only
 
