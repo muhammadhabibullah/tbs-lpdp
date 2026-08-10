@@ -99,6 +99,7 @@ export default function HomePage() {
     setError(null)
     try {
       const { attempt } = await api.startAttempt(packageId)
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
       navigate(`/attempt/${attempt.id}`)
     } catch (err) {
       setError(startErrorMessage(err))
