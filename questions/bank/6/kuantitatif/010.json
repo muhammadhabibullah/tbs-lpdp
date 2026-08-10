@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-010",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "deret_angka",
+  "question_text": "−23, −16, −9, −2, 5, 12, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "20"
+    },
+    {
+      "key": "B",
+      "text": "33"
+    },
+    {
+      "key": "C",
+      "text": "18"
+    },
+    {
+      "key": "D",
+      "text": "19"
+    },
+    {
+      "key": "E",
+      "text": "24"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 20 diperoleh dengan menggunakan beda 8, padahal beda tetapnya 7.",
+    "B": "Salah. Nilai 33 diperoleh dengan melanjutkan tiga langkah sekaligus sehingga memperoleh suku kesembilan.",
+    "C": "Salah. Nilai 18 diperoleh dengan menggunakan beda 6, satu lebih kecil daripada beda tetap 7.",
+    "D": "Benar. Setiap suku bertambah tetap 7. Suku berikutnya adalah 12 + 7 = 19.",
+    "E": "Salah. Nilai 24 diperoleh dengan menggandakan suku terakhir 12, bukan menambahkan beda tetap 7."
+  },
+  "difficulty": "easy",
+  "source": "deret_angka.py",
+  "verified": true
+}

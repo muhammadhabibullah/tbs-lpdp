@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-023",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Tujuan penulis menyampaikan bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Lokakarya perbaikan komunitas mempertemukan warga dengan sukarelawan yang memiliki keterampilan memperbaiki barang elektronik kecil, pakaian, atau sepeda. Pemilik barang tidak sekadar menyerahkan benda yang rusak, tetapi ikut mengamati dan mencoba proses perbaikannya. Dengan cara itu, kegiatan tersebut memperpanjang daur pakai barang sekaligus menyebarkan keterampilan praktis.\n\nTidak semua barang dapat diselamatkan. Suku cadang mungkin tidak tersedia, kerusakan tertentu dapat membahayakan pengguna, atau rancangan produk memang menyulitkan pembongkaran. Karena itu, keberhasilan kegiatan tidak cukup diukur dari jumlah barang yang selesai diperbaiki. Perubahan kebiasaan warga agar memeriksa kemungkinan perbaikan sebelum membuang barang juga merupakan hasil penting.\n\nMeski bermanfaat, kegiatan komunitas tidak menggantikan tanggung jawab produsen. Petunjuk perbaikan yang dapat diakses, pasokan suku cadang, dan rancangan produk yang mudah dibongkar tetap diperlukan. Upaya warga dan perubahan pada tahap produksi justru perlu berjalan bersama agar jumlah barang yang cepat menjadi sampah dapat berkurang.",
+  "options": [
+    {"key": "A", "text": "membuktikan bahwa semua barang rusak selalu dapat diperbaiki oleh warga"},
+    {"key": "B", "text": "menjelaskan manfaat dan keterbatasan kegiatan perbaikan serta perlunya dukungan produsen"},
+    {"key": "C", "text": "menyatakan bahwa jumlah barang yang diperbaiki adalah satu-satunya ukuran keberhasilan"},
+    {"key": "D", "text": "mengimbau produsen menghentikan seluruh kegiatan perbaikan oleh komunitas"},
+    {"key": "E", "text": "membandingkan harga berbagai jenis suku cadang yang digunakan warga"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Bacaan justru menyebut sejumlah alasan yang membuat tidak semua barang dapat diselamatkan.",
+    "B": "Benar. Penulis memaparkan manfaat lokakarya, batas yang dihadapinya, dan dukungan produsen yang tetap dibutuhkan.",
+    "C": "Penulis menyatakan keberhasilan tidak cukup diukur hanya dari jumlah barang yang selesai diperbaiki.",
+    "D": "Bacaan mendorong upaya komunitas dan perubahan produksi berjalan bersama, bukan saling menghentikan.",
+    "E": "Bacaan tidak menyajikan perbandingan harga suku cadang."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

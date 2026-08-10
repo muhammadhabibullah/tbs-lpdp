@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-011",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 11,
+  "type": "deret_angka",
+  "question_text": "11, 16, 26, 46, 86, 166, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "406"
+    },
+    {
+      "key": "B",
+      "text": "646"
+    },
+    {
+      "key": "C",
+      "text": "246"
+    },
+    {
+      "key": "D",
+      "text": "326"
+    },
+    {
+      "key": "E",
+      "text": "332"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 406 diperoleh dengan mengalikan selisih terakhir dengan 3, bukan dengan 2.",
+    "B": "Salah. Nilai 646 diperoleh dengan melanjutkan deret dua langkah sekaligus.",
+    "C": "Salah. Nilai 246 diperoleh dengan mengulang selisih terakhir (80) alih-alih menggandakannya.",
+    "D": "Benar. Selisih antarsuku berlipat dua setiap langkah: 5, 10, 20, dan seterusnya. Selisih berikutnya adalah 160, sehingga suku berikutnya 166 + 160 = 326.",
+    "E": "Salah. Nilai 332 diperoleh dengan menggandakan suku terakhir, padahal yang berlipat dua adalah selisihnya."
+  },
+  "difficulty": "medium",
+  "source": "deret_angka.py",
+  "verified": true
+}

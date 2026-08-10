@@ -1,0 +1,8 @@
+{
+  "id": "6-verbal-004", "package": 6, "subtest": "verbal", "number": 4, "type": "sinonim",
+  "question_text": "PALIATIF = ...", "image": null, "passage": null,
+  "options": [{"key":"A","text":"Mencegah sejak awal"},{"key":"B","text":"Meringankan tanpa menghilangkan penyebab"},{"key":"C","text":"Menyembuhkan secara tuntas"},{"key":"D","text":"Memperburuk secara bertahap"},{"key":"E","text":"Mendiagnosis dengan pasti"}],
+  "correct_option": "B",
+  "explanations": {"A":"Tindakan pencegahan dilakukan sebelum gangguan muncul, sedangkan paliatif diberikan untuk meringankan keadaan yang sudah ada.","B":"Benar. Paliatif berarti meredakan gejala atau penderitaan tanpa menghilangkan penyebab penyakitnya.","C":"Penyembuhan tuntas bersifat kuratif, bukan paliatif.","D":"Memperburuk keadaan merupakan akibat yang berlawanan dengan tujuan tindakan paliatif.","E":"Diagnosis adalah penentuan jenis penyakit dan tidak sama dengan tindakan paliatif."},
+  "difficulty": "hard", "source": "codex-generated", "verified": true
+}

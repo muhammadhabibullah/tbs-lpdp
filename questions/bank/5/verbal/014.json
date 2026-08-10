@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-014",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Premis 1: Semua arsiparis bekerja secara teliti.\nPremis 2: Nira adalah seorang arsiparis.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Semua orang yang teliti adalah arsiparis."},
+    {"key": "B", "text": "Sebagian arsiparis tidak bekerja secara teliti."},
+    {"key": "C", "text": "Nira bekerja secara teliti."},
+    {"key": "D", "text": "Nira adalah satu-satunya arsiparis yang teliti."},
+    {"key": "E", "text": "Orang yang bukan arsiparis tidak dapat bekerja secara teliti."}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Premis hanya menyatakan arsiparis termasuk orang teliti, bukan semua orang teliti pasti arsiparis.",
+    "B": "Pernyataan ini bertentangan dengan premis bahwa semua arsiparis bekerja secara teliti.",
+    "C": "Benar. Karena Nira arsiparis dan semua arsiparis teliti, Nira pasti bekerja secara teliti.",
+    "D": "Premis tidak menyatakan jumlah arsiparis ataupun bahwa Nira satu-satunya yang teliti.",
+    "E": "Premis tidak membahas ketelitian orang yang bukan arsiparis."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

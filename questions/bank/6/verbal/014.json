@@ -1,0 +1,8 @@
+{
+  "id":"6-verbal-014","package":6,"subtest":"verbal","number":14,"type":"silogisme",
+  "question_text":"Premis 1: Setiap salinan induk arsip merupakan dokumen.\nPremis 2: Semua salinan induk arsip disimpan dalam brankas tahan api.\nPremis 3: Tidak ada dokumen yang disimpan dalam brankas tahan api yang boleh dibawa keluar gedung.\n\nSimpulan yang tepat adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"Tidak ada salinan induk arsip yang boleh dibawa keluar gedung."},{"key":"B","text":"Semua dokumen yang tidak boleh dibawa keluar gedung merupakan salinan induk arsip."},{"key":"C","text":"Sebagian salinan induk arsip boleh dibawa keluar gedung."},{"key":"D","text":"Semua dokumen dalam brankas tahan api merupakan salinan induk arsip."},{"key":"E","text":"Sebagian dokumen yang bukan salinan induk arsip disimpan dalam brankas tahan api."}],
+  "correct_option":"A",
+  "explanations":{"A":"Benar. Menurut premis 1 dan 2, setiap salinan induk merupakan dokumen yang disimpan dalam brankas tahan api; premis 3 melarang setiap dokumen dengan kedua sifat tersebut dibawa keluar gedung.","B":"Premis 3 tidak menyatakan bahwa semua dokumen yang dilarang dibawa keluar merupakan salinan induk, sehingga hubungan itu tidak dapat dibalik.","C":"Simpulan ini bertentangan dengan premis 1–3: salinan induk merupakan dokumen, disimpan dalam brankas, dan karena itu tidak boleh dibawa keluar.","D":"Premis 2 hanya menempatkan semua salinan induk di dalam brankas, bukan menyatakan bahwa seluruh dokumen dalam brankas merupakan salinan induk.","E":"Ketiga premis tidak memastikan adanya dokumen bukan salinan induk yang disimpan dalam brankas."},
+  "difficulty":"medium","source":"codex-generated","verified":true
+}

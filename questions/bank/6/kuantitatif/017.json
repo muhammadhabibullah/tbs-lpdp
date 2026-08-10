@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-017",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 17,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nP = 40% dari 160\nQ = 1/5 dari 160\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Selisih antara P dan Q lebih besar daripada 42"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. P = 64 dan Q = 32, sehingga P > Q.",
+    "B": "Salah. P = 64 dan Q = 32, sehingga P > Q; nilai Q tidak melebihi nilai P (32 tidak lebih besar daripada 64).",
+    "C": "Salah. P = 64 dan Q = 32, sehingga P > Q; kedua nilai tidak sama (64 ≠ 32).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 64 dan Q = 32), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 64 dan Q = 32, selisihnya 32, tidak lebih besar daripada 42."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

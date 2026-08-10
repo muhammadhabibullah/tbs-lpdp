@@ -1,0 +1,8 @@
+{
+  "id": "6-verbal-008", "package": 6, "subtest": "verbal", "number": 8, "type": "antonim",
+  "question_text": "AJEG >< ...", "image": null, "passage": null,
+  "options": [{"key":"A","text":"Berubah-ubah"},{"key":"B","text":"Kukuh"},{"key":"C","text":"Teratur"},{"key":"D","text":"Konsisten"},{"key":"E","text":"Berkesinambungan"}],
+  "correct_option": "A",
+  "explanations": {"A":"Benar. Berubah-ubah berlawanan dengan ajeg yang berarti tetap, teratur, atau konsisten.","B":"Kukuh menunjukkan keadaan mantap sehingga dekat dengan makna ajeg.","C":"Teratur merupakan salah satu nuansa makna ajeg dan bukan lawannya.","D":"Konsisten bersinonim dengan ajeg dalam konteks sikap atau pelaksanaan.","E":"Berkesinambungan menunjukkan kelangsungan yang tetap dan tidak berlawanan dengan ajeg."},
+  "difficulty": "hard", "source": "codex-generated", "verified": true
+}

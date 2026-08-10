@@ -1,0 +1,8 @@
+{
+  "id":"6-kuantitatif-025","package":6,"subtest":"kuantitatif","number":25,"type":"geometri",
+  "question_text":"Segitiga ABC siku-siku di A dengan AB = 24 cm dan AC = 18 cm. Titik D terletak pada AB dengan DB = 8 cm. Melalui D ditarik DE sejajar AC hingga memotong BC di E. Berapakah luas segi empat ACED?","image":"images/segitiga-potongan-sejajar.svg","passage":null,
+  "options":[{"key":"A","text":"168 cm²"},{"key":"B","text":"180 cm²"},{"key":"C","text":"192 cm²"},{"key":"D","text":"184 cm²"},{"key":"E","text":"208 cm²"}],
+  "correct_option":"C",
+  "explanations":{"A":"Nilai 168 cm² diperoleh jika tinggi segitiga kecil BDE keliru dianggap 12 cm, sehingga 216 − 1/2 × 8 × 12 = 168.","B":"Nilai 180 cm² berasal dari mengurangi luas ABC dengan 1/2 × 8 × 9; tinggi 9 cm tidak mengikuti perbandingan sisi segitiga sebangun.","C":"Benar. Segitiga BDE sebangun dengan BAC dengan skala DB/BA = 8/24 = 1/3, sehingga DE = 1/3 × 18 = 6 cm. Luas ACED = 1/2 × 24 × 18 − 1/2 × 8 × 6 = 216 − 24 = 192 cm².","D":"Nilai 184 cm² diperoleh jika DE keliru disamakan dengan DB = 8 cm, sehingga luas BDE dianggap 1/2 × 8 × 8 = 32 cm² dan 216 − 32 = 184 cm².","E":"Nilai 208 cm² hanya mengurangi luas ABC sebesar DB = 8, padahal yang harus dikurangkan adalah luas segitiga BDE."},
+  "difficulty":"hard","source":"codex-generated","verified":true
+}

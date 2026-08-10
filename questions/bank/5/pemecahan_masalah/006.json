@@ -1,0 +1,28 @@
+{
+  "id": "5-pemecahan_masalah-006",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Seorang peserta harus memilih tepat tiga dari lima kelas, yaitu A, B, C, D, dan E. Pemilihan tunduk pada ketentuan berikut.\n(1) Jika memilih A, peserta juga harus memilih B.\n(2) Kelas C dan D tidak dapat dipilih bersama-sama.\n(3) Kelas E hanya dapat dipilih jika kelas D dipilih.\n(4) Sekurang-kurangnya satu dari kelas A atau C harus dipilih.\n\nJika peserta memilih kelas D, dua kelas lain yang harus dipilih adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "B dan E"},
+    {"key": "B", "text": "C dan E"},
+    {"key": "C", "text": "A dan E"},
+    {"key": "D", "text": "A dan B"},
+    {"key": "E", "text": "B dan C"}
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Memilih B, D, dan E tidak memuat A maupun C sehingga melanggar ketentuan keempat.",
+    "B": "C tidak dapat dipilih bersama D sehingga pasangan C dan E tidak mungkin melengkapi D.",
+    "C": "Jika A dipilih, B juga wajib dipilih; memilih A, D, dan E tanpa B melanggar ketentuan pertama.",
+    "D": "Benar. Karena D dipilih, C tidak dapat dipilih. Ketentuan keempat kemudian memaksa A dipilih, dan pemilihan A memaksa B dipilih.",
+    "E": "C tidak dapat dipilih bersama D, dan susunan B-C-D juga tidak memuat A untuk menggantikan C yang gugur."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,8 @@
+{
+  "id":"6-kuantitatif-024","package":6,"subtest":"kuantitatif","number":24,"type":"geometri",
+  "question_text":"Sebuah lintasan berbentuk cincin memiliki diameter luar 28 m dan lebar lintasan 3,5 m. Dengan menggunakan π = 22/7, berapakah luas lintasan tersebut?","image":"images/lintasan-cincin.svg","passage":null,
+  "options":[{"key":"A","text":"231 m²"},{"key":"B","text":"308 m²"},{"key":"C","text":"346,5 m²"},{"key":"D","text":"385 m²"},{"key":"E","text":"269,5 m²"}],
+  "correct_option":"E",
+  "explanations":{"A":"Nilai 231 m² diperoleh dari keliling lingkaran dalam 66 m dikalikan lebar 3,5 m; cara itu mengabaikan pertambahan keliling ke arah luar.","B":"Nilai 308 m² berasal dari keliling luar 88 m dikalikan lebar 3,5 m dan memperlakukan lintasan lengkung sebagai persegi panjang.","C":"Nilai 346,5 m² adalah luas lingkaran dalam, yaitu 22/7 × 10,5², bukan luas daerah lintasan di antara kedua lingkaran.","D":"Nilai 385 m² diperoleh dengan mengurangi luas lingkaran luar 616 m² oleh 231 m², padahal 231 m² adalah hasil keliling dalam × lebar, bukan luas lingkaran dalam.","E":"Benar. Jari-jari luar 14 m dan jari-jari dalam 10,5 m. Luas cincin = 22/7 × (14² − 10,5²) = 269,5 m²."},
+  "difficulty":"hard","source":"codex-generated","verified":true
+}

@@ -1,0 +1,8 @@
+{
+  "id":"6-kuantitatif-023","package":6,"subtest":"kuantitatif","number":23,"type":"soal_cerita",
+  "question_text":"Sebuah bus menempuh perjalanan sejauh 420 km. Sebagian perjalanan ditempuh dengan kecepatan 60 km/jam dan sisanya dengan kecepatan 84 km/jam. Di tengah perjalanan bus berhenti selama 30 menit. Jika kecepatan rata-rata seluruh perjalanan, termasuk waktu berhenti, adalah 60 km/jam, jarak yang ditempuh bus dengan kecepatan 60 km/jam adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"105 km"},{"key":"B","text":"360 km"},{"key":"C","text":"420 km"},{"key":"D","text":"210 km"},{"key":"E","text":"315 km"}],
+  "correct_option":"E",
+  "explanations":{"A":"Jika 105 km ditempuh pada 60 km/jam dan 315 km pada 84 km/jam, waktu totalnya hanya 1,75 + 3,75 + 0,5 = 6 jam, bukan 7 jam.","B":"Jika 360 km ditempuh pada 60 km/jam, waktu totalnya 6 + 60/84 + 1/2, yaitu lebih dari 7 jam.","C":"Jarak 420 km berarti seluruh perjalanan ditempuh pada 60 km/jam; waktu bergeraknya sudah 7 jam sehingga setelah berhenti total menjadi 7,5 jam.","D":"Untuk 210 km pada tiap segmen, waktu totalnya 210/60 + 210/84 + 1/2 = 6,5 jam, sehingga rata-ratanya bukan 60 km/jam.","E":"Benar. Waktu total 420 : 60 = 7 jam. Jika x jarak pada 60 km/jam, maka x/60 + (420 − x)/84 + 1/2 = 7. Penyelesaian persamaan memberi x = 315 km."},
+  "difficulty":"hard","source":"codex-generated","verified":true
+}

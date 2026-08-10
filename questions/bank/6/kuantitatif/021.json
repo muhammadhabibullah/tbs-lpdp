@@ -1,0 +1,8 @@
+{
+  "id":"6-kuantitatif-021","package":6,"subtest":"kuantitatif","number":21,"type":"soal_cerita",
+  "question_text":"Sebuah tangki mula-mula terisi 1/4 bagian. Air dipompa ke dalam tangki dengan laju 18 liter per menit, tetapi pada saat yang sama terjadi kebocoran 3 liter per menit. Setelah 32 menit, tangki terisi 3/4 bagian. Kapasitas tangki tersebut adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"480 liter"},{"key":"B","text":"640 liter"},{"key":"C","text":"900 liter"},{"key":"D","text":"960 liter"},{"key":"E","text":"1.152 liter"}],
+  "correct_option":"D",
+  "explanations":{"A":"Nilai 480 liter hanya merupakan tambahan bersih 15 × 32 dan keliru dianggap sebagai seluruh kapasitas tangki.","B":"Nilai 640 liter diperoleh dengan membagi tambahan 480 liter dengan tingkat akhir 3/4, padahal tangki sudah berisi 1/4 bagian sejak awal.","C":"Nilai 900 liter berasal dari mengalikan selisih laju 15 dengan 30 menit lalu menggandakannya, padahal pompa bekerja 32 menit.","D":"Benar. Laju bersih 18 − 3 = 15 liter per menit, sehingga tambahan air 15 × 32 = 480 liter. Tambahan itu sama dengan 3/4 − 1/4 = 1/2 kapasitas, jadi kapasitasnya 960 liter.","E":"Nilai 1.152 liter diperoleh dari 18 × 32 × 2 dengan menganggap seluruh aliran pompa sebagai kenaikan setengah kapasitas dan mengabaikan kebocoran."},
+  "difficulty":"medium","source":"codex-generated","verified":true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "5-pemecahan_masalah-008",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Pengelola angkutan kota memperpendek selang keberangkatan bus pada satu rute dari 20 menit menjadi 10 menit. Sebulan kemudian, jumlah penumpang rute itu meningkat 18 persen. Pengelola menyimpulkan bahwa waktu tunggu yang lebih pendek menyebabkan peningkatan jumlah penumpang.\n\nInformasi berikut yang paling memperkuat simpulan pengelola adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Cuaca pada bulan setelah perubahan lebih sejuk daripada bulan sebelumnya."},
+    {"key": "B", "text": "Biaya parkir di sekitar tujuan utama rute tersebut turun pada bulan yang sama."},
+    {"key": "C", "text": "Tarif dan lintasan rute tidak berubah, serta sebagian besar penumpang baru menyebut waktu tunggu yang lebih singkat sebagai alasan beralih ke bus."},
+    {"key": "D", "text": "Jumlah penumpang pada rute lain yang masih berselang 20 menit sedikit menurun."},
+    {"key": "E", "text": "Sebagian bus pada rute tersebut diganti dengan kendaraan yang lebih baru pada bulan yang sama."}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Cuaca yang lebih sejuk merupakan faktor lain yang mungkin memengaruhi perjalanan dan tidak secara khusus menguatkan pengaruh waktu tunggu.",
+    "B": "Turunnya biaya parkir dapat mendorong penggunaan kendaraan pribadi sehingga tidak mendukung simpulan tentang waktu tunggu bus.",
+    "C": "Benar. Tidak berubahnya tarif dan lintasan mengurangi penjelasan alternatif, sedangkan alasan penumpang baru langsung menghubungkan perpindahan mereka dengan waktu tunggu.",
+    "D": "Penurunan pada rute lain tidak menjelaskan alasan kenaikan di rute yang diubah karena kondisi kedua rute dapat berbeda.",
+    "E": "Bus yang lebih baru menyediakan penjelasan alternatif bahwa kenyamanan, bukan waktu tunggu, yang menarik penumpang."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

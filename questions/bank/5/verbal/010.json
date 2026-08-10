@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-010",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "AKAR : MENYERAP = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Batang : Tanah"},
+    {"key": "B", "text": "Bunga : Buah"},
+    {"key": "C", "text": "Daun : Berfotosintesis"},
+    {"key": "D", "text": "Benih : Air"},
+    {"key": "E", "text": "Cabang : Pohon"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Batang dan tanah bukan pasangan organ dengan fungsi yang dilakukannya.",
+    "B": "Bunga dapat berkembang menjadi buah, tetapi hubungan itu berupa tahap perkembangan, bukan organ dan fungsi.",
+    "C": "Benar. Akar berfungsi menyerap air dan mineral, sebagaimana daun berfungsi melakukan fotosintesis.",
+    "D": "Benih membutuhkan air untuk berkecambah; air bukan fungsi yang dilakukan benih.",
+    "E": "Cabang merupakan bagian dari pohon, sedangkan stimulus memasangkan bagian tumbuhan dengan fungsinya."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

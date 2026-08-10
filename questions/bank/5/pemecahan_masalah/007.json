@@ -1,0 +1,28 @@
+{
+  "id": "5-pemecahan_masalah-007",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah koperasi pengiriman akan mengganti wadah sekali pakai seharga Rp2.000,00 per pengiriman dengan wadah lipat pakai ulang seharga Rp10.000,00. Setiap wadah lipat diperkirakan dapat digunakan sekurang-kurangnya 20 kali, dengan biaya pembersihan Rp200,00 setiap kali digunakan. Pengelola memperkirakan penggantian tersebut akan menurunkan biaya wadah per pengiriman.\n\nInformasi tambahan yang paling memperkuat perkiraan pengelola adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Sebagian besar wadah lipat benar-benar dapat dipakai sekurang-kurangnya 20 kali tanpa perbaikan besar."},
+    {"key": "B", "text": "Jumlah pengiriman koperasi akan meningkat setiap bulan."},
+    {"key": "C", "text": "Pelanggan lebih menyukai warna wadah lipat daripada warna wadah sekali pakai."},
+    {"key": "D", "text": "Harga wadah sekali pakai akan turun menjadi setengahnya."},
+    {"key": "E", "text": "Biaya pembersihan wadah lipat akan meningkat setelah pemakaian pertama."}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Bukti bahwa wadah benar-benar bertahan sedikitnya 20 pemakaian menguatkan dasar perhitungan biaya rata-rata yang dipakai pengelola.",
+    "B": "Jumlah pengiriman tidak harus meningkat agar biaya per pengiriman menjadi lebih rendah.",
+    "C": "Kesukaan terhadap warna wadah tidak menentukan harga beli, jumlah pemakaian, ataupun biaya pembersihan per pengiriman.",
+    "D": "Penurunan harga wadah sekali pakai justru memperkecil atau dapat menghapus keunggulan biaya wadah lipat.",
+    "E": "Kenaikan biaya pembersihan melemahkan perkiraan penghematan dan bukan asumsi yang mendukungnya."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

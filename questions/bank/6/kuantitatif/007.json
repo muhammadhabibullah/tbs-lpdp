@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-007",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 7,
+  "type": "aljabar",
+  "question_text": "Jika (x + 7) : 2 = 8, nilai x adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "9"
+    },
+    {
+      "key": "B",
+      "text": "23"
+    },
+    {
+      "key": "C",
+      "text": "2"
+    },
+    {
+      "key": "D",
+      "text": "−3"
+    },
+    {
+      "key": "E",
+      "text": "1"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. x + 7 = 8 × 2 = 16, sehingga x = 16 − 7 = 9.",
+    "B": "Salah. Nilai 23 diperoleh dengan menambahkan 7 setelah mengalikan dengan 2, padahal 7 harus dikurangkan.",
+    "C": "Salah. Nilai 2 diperoleh dengan mengurangkan 7 lebih dahulu, baru mengalikan dengan 2; urutannya terbalik.",
+    "D": "Salah. Nilai −3 diperoleh dengan membagi dengan 2, padahal kedua ruas harus dikalikan dengan 2.",
+    "E": "Salah. Nilai 1 diperoleh dengan mengurangkan 7 tanpa lebih dahulu mengalikan kedua ruas dengan 2."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

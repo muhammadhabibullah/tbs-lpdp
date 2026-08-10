@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-005",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "20% dari 120 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "24"
+    },
+    {
+      "key": "B",
+      "text": "100"
+    },
+    {
+      "key": "C",
+      "text": "240"
+    },
+    {
+      "key": "D",
+      "text": "2,4"
+    },
+    {
+      "key": "E",
+      "text": "96"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. 20% × 120 = (20/100) × 120 = 24.",
+    "B": "Salah. Nilai 100 diperoleh dengan mengurangkan 20 dari 120 alih-alih menghitung persentasenya.",
+    "C": "Salah. Nilai 240 diperoleh dengan menggeser koma desimal satu tempat ke kanan.",
+    "D": "Salah. Nilai 2,4 diperoleh dengan menggeser koma desimal satu tempat ke kiri.",
+    "E": "Salah. Nilai 96 diperoleh dengan menghitung sisanya, yaitu bagian 80%."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

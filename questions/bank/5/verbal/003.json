@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-003",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "KOHEREN = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Terputus-putus"},
+    {"key": "B", "text": "Samar"},
+    {"key": "C", "text": "Singkat"},
+    {"key": "D", "text": "Menyimpang"},
+    {"key": "E", "text": "Padu"}
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Terputus-putus menunjukkan bagian yang tidak tersambung, berlawanan dengan sifat koheren.",
+    "B": "Samar berarti kurang jelas, sedangkan koheren berkaitan dengan kepaduan hubungan antarbagiannya.",
+    "C": "Singkat menyatakan panjang penyampaian, bukan keterkaitan yang runtut antargagasan.",
+    "D": "Menyimpang berarti keluar dari arah atau pokok, bukan tersusun secara selaras.",
+    "E": "Benar. Koheren berarti berhubungan secara logis dan tersusun padu atau runtut."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

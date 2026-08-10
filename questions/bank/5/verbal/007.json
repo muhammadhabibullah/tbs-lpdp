@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-007",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "IMPLISIT >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Eksplisit"},
+    {"key": "B", "text": "Ringkas"},
+    {"key": "C", "text": "Meragukan"},
+    {"key": "D", "text": "Kompleks"},
+    {"key": "E", "text": "Metaforis"}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Eksplisit berarti dinyatakan secara terang, sedangkan implisit berarti tersirat.",
+    "B": "Ringkas berkaitan dengan panjang penyampaian, bukan dengan tersurat atau tersiratnya makna.",
+    "C": "Meragukan menyatakan tingkat kepastian dan bukan lawan dari makna yang tersirat.",
+    "D": "Kompleks berarti rumit atau terdiri atas banyak bagian, tidak berantonim dengan implisit.",
+    "E": "Metaforis berarti menggunakan kiasan; suatu ungkapan metaforis dapat bersifat implisit maupun eksplisit."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

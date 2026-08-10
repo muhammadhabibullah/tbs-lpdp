@@ -1,0 +1,8 @@
+{
+  "id":"6-pemecahan_masalah-003","package":6,"subtest":"pemecahan_masalah","number":3,"type":"logika_analitis",
+  "question_text":"Empat wilayah pada sebuah peta, yaitu P, Q, R, dan S, masing-masing diberi satu warna: merah, hijau, atau biru. Wilayah yang berbatasan langsung tidak boleh memiliki warna yang sama. P berbatasan dengan Q dan R; Q berbatasan dengan R dan S; serta R berbatasan dengan S.\n\nPewarnaan yang mungkin adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"P merah, Q merah, R biru, S hijau"},{"key":"B","text":"P merah, Q hijau, R hijau, S biru"},{"key":"C","text":"P merah, Q hijau, R biru, S hijau"},{"key":"D","text":"P merah, Q hijau, R biru, S merah"},{"key":"E","text":"P merah, Q hijau, R biru, S biru"}],
+  "correct_option":"D",
+  "explanations":{"A":"P dan Q sama-sama berwarna merah, padahal kedua wilayah tersebut berbatasan langsung.","B":"Q dan R sama-sama berwarna hijau, padahal kedua wilayah tersebut berbatasan langsung.","C":"Q dan S sama-sama berwarna hijau, padahal kedua wilayah tersebut berbatasan langsung.","D":"Benar. Setiap pasangan wilayah yang berbatasan—P–Q, P–R, Q–R, Q–S, dan R–S—memiliki warna berbeda.","E":"R dan S sama-sama berwarna biru, padahal kedua wilayah tersebut berbatasan langsung."},
+  "difficulty":"easy","source":"codex-generated","verified":true
+}

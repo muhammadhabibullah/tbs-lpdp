@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-008",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "KULMINASI >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Puncak"},
+    {"key": "B", "text": "Klimaks"},
+    {"key": "C", "text": "Nadir"},
+    {"key": "D", "text": "Peralihan"},
+    {"key": "E", "text": "Kesinambungan"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Puncak bersinonim dengan kulminasi karena sama-sama menunjukkan titik tertinggi.",
+    "B": "Klimaks adalah tahap atau keadaan yang mencapai puncak sehingga maknanya searah dengan kulminasi.",
+    "C": "Benar. Nadir berarti titik paling rendah dan merupakan antonim kulminasi yang berarti titik paling tinggi.",
+    "D": "Peralihan berarti pergantian dari satu keadaan ke keadaan lain, bukan titik terendah.",
+    "E": "Kesinambungan berarti keberlanjutan tanpa terputus dan tidak berlawanan langsung dengan kulminasi."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-018",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 18,
+  "type": "kecukupan_data",
+  "question_text": "Pada gambar di atas, garis l sejajar dengan garis m, sedangkan garis k dan garis n memotong keduanya. Berapakah nilai y?\n(1) Jumlah nilai x dan z adalah 235.\n(2) Besar ∠PTR adalah 55°.\nPutuskan apakah pernyataan (1) dan (2) yang diberikan cukup untuk menjawab pertanyaan tersebut.",
+  "image": "images/kd-garis-sejajar.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup"
+    },
+    {
+      "key": "B",
+      "text": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup"
+    },
+    {
+      "key": "C",
+      "text": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup untuk menjawab pertanyaan"
+    },
+    {
+      "key": "E",
+      "text": "Pernyataan (1) dan (2) BERSAMA-SAMA tidak cukup untuk menjawab pertanyaan"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Pernyataan (2) menentukan nilai y secara tunggal, yaitu 55.",
+    "B": "Salah. Pernyataan (1) menentukan nilai y secara tunggal, yaitu 55.",
+    "C": "Salah. Pernyataan (1) menentukan nilai y secara tunggal, yaitu 55.",
+    "D": "Benar. Karena l ∥ m, sudut di P dan sudut di Q sehadap, sehingga pada segitiga QSR berlaku (180 − x) + (180 − z) + y = 180, yaitu y = x + z − 180. Dari (1), y = 235 − 180 = 55, jadi (1) saja cukup. Ketika garis n memotong l dan m, ∠PTR sehadap dengan ∠QSR; ∠QSR bertolak belakang dengan sudut y, sehingga ∠PTR = ∠QSR = y. Dari (2), y = ∠PTR = 55, jadi (2) saja juga cukup.",
+    "E": "Salah. Pernyataan (1) dan (2) bersama-sama menentukan nilai y secara tunggal, yaitu 55."
+  },
+  "difficulty": "easy",
+  "source": "kecukupan_data.py",
+  "verified": true
+}

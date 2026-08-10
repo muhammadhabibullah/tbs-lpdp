@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-018",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 18,
+  "type": "kecukupan_data",
+  "question_text": "Pada gambar di atas, garis l sejajar dengan garis m, sedangkan garis k dan garis n memotong keduanya. Berapakah nilai y?\n(1) Nilai x adalah 120.\n(2) Besar ∠SQR adalah 60°.\nPutuskan apakah pernyataan (1) dan (2) yang diberikan cukup untuk menjawab pertanyaan tersebut.",
+  "image": "images/kd-garis-sejajar.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup"
+    },
+    {
+      "key": "B",
+      "text": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup"
+    },
+    {
+      "key": "C",
+      "text": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup untuk menjawab pertanyaan"
+    },
+    {
+      "key": "E",
+      "text": "Pernyataan (1) dan (2) BERSAMA-SAMA tidak cukup untuk menjawab pertanyaan"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [x = 120, z = 135] dan [x = 120, z = 140] sama-sama memenuhinya, tetapi memberikan nilai y sebesar 75 dan 80.",
+    "B": "Salah. Pernyataan (2) saja tidak cukup, sebab keadaan [x = 120, z = 135] dan [x = 120, z = 140] sama-sama memenuhinya, tetapi memberikan nilai y sebesar 75 dan 80.",
+    "C": "Salah. Kedua pernyataan bersama-sama pun tidak cukup, sebab keadaan [x = 120, z = 135] dan [x = 120, z = 140] memenuhi keduanya, tetapi memberikan nilai y sebesar 75 dan 80.",
+    "D": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [x = 120, z = 135] dan [x = 120, z = 140] sama-sama memenuhinya, tetapi memberikan nilai y sebesar 75 dan 80.",
+    "E": "Benar. Karena l ∥ m, sudut di P dan sudut di Q sehadap, sehingga pada segitiga QSR berlaku (180 − x) + (180 − z) + y = 180, yaitu y = x + z − 180; yang dibutuhkan hanyalah jumlah x dan z. Kedua pernyataan bersama-sama pun tidak cukup, sebab keadaan [x = 120, z = 135] dan [x = 120, z = 140] memenuhi keduanya, tetapi memberikan nilai y sebesar 75 dan 80."
+  },
+  "difficulty": "hard",
+  "source": "kecukupan_data.py",
+  "verified": true
+}

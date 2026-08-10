@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-006",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "TEMPORER >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Sesaat"},
+    {"key": "B", "text": "Permanen"},
+    {"key": "C", "text": "Berkala"},
+    {"key": "D", "text": "Mendadak"},
+    {"key": "E", "text": "Tertunda"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Sesaat bersinonim dengan temporer karena sama-sama menunjukkan waktu yang tidak lama.",
+    "B": "Benar. Permanen berarti tetap untuk waktu lama dan merupakan antonim temporer yang berarti sementara.",
+    "C": "Berkala berarti terjadi pada selang waktu tertentu, bukan berlangsung selamanya.",
+    "D": "Mendadak menerangkan cara atau waktu kemunculan, bukan lamanya keberadaan.",
+    "E": "Tertunda berarti belum dilaksanakan pada waktunya dan tidak berlawanan dengan temporer."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

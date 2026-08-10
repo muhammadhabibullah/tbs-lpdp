@@ -1,0 +1,8 @@
+{
+  "id": "6-verbal-005", "package": 6, "subtest": "verbal", "number": 5, "type": "antonim",
+  "question_text": "FANA >< ...", "image": null, "passage": null,
+  "options": [{"key":"A","text":"Sementara"},{"key":"B","text":"Rapuh"},{"key":"C","text":"Semu"},{"key":"D","text":"Abadi"},{"key":"E","text":"Usang"}],
+  "correct_option": "D",
+  "explanations": {"A":"Sementara searah dengan fana karena sama-sama menunjukkan keadaan yang tidak kekal.","B":"Rapuh berarti mudah rusak, tetapi sesuatu yang rapuh tidak menjadi lawan langsung fana.","C":"Semu berarti tampak seperti nyata padahal tidak; kata ini bukan antonim fana.","D":"Benar. Abadi berarti kekal atau tidak berakhir, berlawanan dengan fana yang tidak kekal.","E":"Usang berarti sudah lama atau aus dan tidak menjadi lawan makna fana."},
+  "difficulty": "easy", "source": "codex-generated", "verified": true
+}

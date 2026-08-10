@@ -1,0 +1,28 @@
+{
+  "id": "5-kuantitatif-022",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Empat tahun yang lalu, perbandingan usia Rina dan Santi adalah 3 : 5. Jumlah usia mereka sekarang adalah 48 tahun. Berapakah selisih usia Rina dan Santi?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "8 tahun"},
+    {"key": "B", "text": "9 tahun"},
+    {"key": "C", "text": "12 tahun"},
+    {"key": "D", "text": "10 tahun"},
+    {"key": "E", "text": "16 tahun"}
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Selisih 8 tahun diperoleh dari 5 − 3 = 2 lalu dikali 4; angka 4 adalah selang waktu, bukan faktor perbandingan usia.",
+    "B": "Selisih 9 tahun tidak memenuhi jumlah usia sekarang; jika selisih dua bagian 9, satu bagian menjadi 4,5 dan jumlah sekarang menjadi 44 tahun.",
+    "C": "Selisih 12 tahun diperoleh jika 48 langsung dibagi 8 lalu dikali 2, tetapi cara itu mengabaikan tambahan total 8 tahun sejak empat tahun lalu.",
+    "D": "Benar. Misalkan usia empat tahun lalu 3k dan 5k. Maka 3k + 4 + 5k + 4 = 48, sehingga k = 5 dan selisih usia = 2k = 10 tahun.",
+    "E": "Selisih 16 tahun diperoleh dengan mengalikan selisih dua bagian dengan total tambahan usia 8 tahun, bukan dengan nilai satu bagian."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -398,6 +398,46 @@ def ds_basket_price(rng: random.Random, want: str):
     }
 
 
+def ds_fleet_total(rng: random.Random, want: str):
+    """A difference plus a ratio determines a two-category fleet total.
+
+    This opt-in architecture is kept outside ``WORD_TEMPLATE_GROUPS``.  It is
+    available for a later package without changing the legacy template order or
+    the output associated with any existing default seed.
+    """
+    scale = rng.choice([8, 9, 11, 12])
+    electric, hybrid = 3 * scale, 2 * scale
+    difference = electric - hybrid
+
+    return {
+        "context": "Sebuah depo mengoperasikan bus listrik dan bus hibrida.",
+        "question": "Berapakah jumlah seluruh bus yang dioperasikan depo tersebut?",
+        "prompt_names": ["banyak bus listrik", "banyak bus hibrida"],
+        "render": _with_unit("bus"),
+        "render_target": _with_unit("bus"),
+        "targets": [[Fraction(1), Fraction(1)]],
+        "target_name": "jumlah seluruh bus",
+        "solution": [Fraction(electric), Fraction(hybrid)],
+        "base": [],
+        "stmt1": (
+            f"Bus listrik berjumlah {difference} lebih banyak daripada bus hibrida.",
+            [_eq([1, -1], difference)],
+        ),
+        "stmt2": (
+            "Perbandingan banyak bus listrik dan bus hibrida adalah 3 : 2.",
+            [_eq([2, -3], 0)],
+        ),
+        "positive_integers": True,
+        "witness_scales": (1, 2, 3),
+        "difficulty": "medium",
+    }
+
+
+EXPLICIT_TEMPLATES = {
+    "fleet_total": (ds_fleet_total, ("C",)),
+}
+
+
 # ------------------------------------------------------- geometry with a figure
 # Real TBS sets put several data-sufficiency items on a diagram, and they are the
 # ones candidates misjudge most: a figure invites you to *look*, and looking is
@@ -851,12 +891,19 @@ def main() -> None:
     ap.add_argument("--kind", choices=sorted(TEMPLATE_KINDS), default="any",
                     help="restrict to the templates that carry a figure "
                          "(geometry) or to those that do not (word)")
+    ap.add_argument("--template", choices=sorted(EXPLICIT_TEMPLATES),
+                    help="opt-in architecture; excluded from legacy default pools")
     ap.add_argument("--seed", type=int, default=None)
     ap.add_argument("--bank-dir", type=Path, default=BANK_DIR)
     args = ap.parse_args()
 
     rng = random.Random(args.seed)
-    groups = TEMPLATE_KINDS[args.kind]
+    if args.template:
+        if args.count != 1 or args.kind == "geometry":
+            ap.error("--template requires --count 1 and a non-geometry kind")
+        groups = [[EXPLICIT_TEMPLATES[args.template]]]
+    else:
+        groups = TEMPLATE_KINDS[args.kind]
     pool: list = []
     used_keys: set[str] = set()
 

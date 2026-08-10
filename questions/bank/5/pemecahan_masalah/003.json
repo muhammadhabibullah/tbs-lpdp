@@ -1,0 +1,28 @@
+{
+  "id": "5-pemecahan_masalah-003",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Empat sampel, yaitu K, L, M, dan N, diproses pada hari Senin sampai Kamis. Setiap hari tepat satu sampel diproses dan setiap sampel diproses tepat satu kali. Urutan pemrosesan tunduk pada ketentuan berikut.\n(1) Sampel K diproses sebelum sampel M.\n(2) Sampel L diproses tepat sehari sebelum sampel N.\n\nJika sampel M diproses pada hari Selasa, sampel yang diproses pada hari Kamis adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Sampel N"},
+    {"key": "B", "text": "Sampel K"},
+    {"key": "C", "text": "Sampel L"},
+    {"key": "D", "text": "Sampel M"},
+    {"key": "E", "text": "Tidak dapat ditentukan"}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. M pada Selasa memaksa K pada Senin. Pasangan L-N kemudian menempati Rabu-Kamis, sehingga N diproses Kamis.",
+    "B": "K harus diproses sebelum M, sehingga ketika M pada Selasa, K berada pada Senin, bukan Kamis.",
+    "C": "L harus tepat sehari sebelum N; pada dua hari tersisa, L berada pada Rabu dan N pada Kamis.",
+    "D": "M sudah ditetapkan pada Selasa sehingga tidak mungkin sekaligus diproses pada Kamis.",
+    "E": "Urutannya dapat ditentukan secara tunggal, yaitu K-M-L-N dari Senin sampai Kamis."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

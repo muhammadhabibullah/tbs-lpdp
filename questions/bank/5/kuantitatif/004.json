@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-004",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 4,
+  "type": "aritmetika",
+  "question_text": "Sebuah mesin fotokopi menghasilkan 96 lembar salinan dalam 8 menit. Apabila kecepatannya tetap, berapa lembar salinan yang dihasilkan mesin itu dalam 30 menit?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "2.880"
+    },
+    {
+      "key": "B",
+      "text": "360"
+    },
+    {
+      "key": "C",
+      "text": "118"
+    },
+    {
+      "key": "D",
+      "text": "264"
+    },
+    {
+      "key": "E",
+      "text": "25,6"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 2.880 diperoleh dengan mengalikan 96 dengan 30 tanpa membaginya dengan 8 lebih dahulu.",
+    "B": "Benar. Kecepatan mesin = 96 ÷ 8 = 12 lembar per menit; dalam 30 menit dihasilkan 12 × 30 = 360 lembar.",
+    "C": "Salah. Nilai 118 diperoleh dengan menambahkan selisih waktu (30 − 8) pada banyaknya salinan.",
+    "D": "Salah. Nilai 264 diperoleh dengan menghitung salinan untuk selisih waktunya saja, yaitu 30 − 8 menit.",
+    "E": "Salah. Nilai 25,6 diperoleh dengan membalik perbandingan menjadi 96 × 8 ÷ 30."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

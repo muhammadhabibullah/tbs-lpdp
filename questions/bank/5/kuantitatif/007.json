@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-007",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 7,
+  "type": "aljabar",
+  "question_text": "Jika (x + 12) : 6 = 6, nilai x adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−6"
+    },
+    {
+      "key": "B",
+      "text": "−11"
+    },
+    {
+      "key": "C",
+      "text": "−36"
+    },
+    {
+      "key": "D",
+      "text": "24"
+    },
+    {
+      "key": "E",
+      "text": "48"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai −6 diperoleh dengan mengurangkan 12 tanpa lebih dahulu mengalikan kedua ruas dengan 6.",
+    "B": "Salah. Nilai −11 diperoleh dengan membagi dengan 6, padahal kedua ruas harus dikalikan dengan 6.",
+    "C": "Salah. Nilai −36 diperoleh dengan mengurangkan 12 lebih dahulu, baru mengalikan dengan 6; urutannya terbalik.",
+    "D": "Benar. x + 12 = 6 × 6 = 36, sehingga x = 36 − 12 = 24.",
+    "E": "Salah. Nilai 48 diperoleh dengan menambahkan 12 setelah mengalikan dengan 6, padahal 12 harus dikurangkan."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

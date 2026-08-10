@@ -1,0 +1,43 @@
+{
+  "id": "6-pemecahan_masalah-002",
+  "package": 6,
+  "subtest": "pemecahan_masalah",
+  "number": 2,
+  "type": "peluang_kombinatorik",
+  "question_text": "Pada kisi koordinat, sebuah robot bergerak dari (0, 0) ke (5, 4). Setiap langkah hanya boleh satu satuan ke kanan atau satu satuan ke atas. Jika robot wajib melalui titik (2, 1), banyak lintasan terpendek yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "60"
+    },
+    {
+      "key": "B",
+      "text": "3"
+    },
+    {
+      "key": "C",
+      "text": "512"
+    },
+    {
+      "key": "D",
+      "text": "126"
+    },
+    {
+      "key": "E",
+      "text": "23"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Dari (0, 0) ke (2, 1) diperlukan 3 langkah dengan 1 langkah ke atas, sehingga ada C(3, 1) = 3 lintasan. Dari titik itu ke (5, 4) diperlukan 6 langkah dengan 3 langkah ke atas, sehingga ada C(6, 3) = 20 lintasan. Kedua bagian ditempuh berurutan, jadi banyak lintasannya 3 × 20 = 60.",
+    "B": "Salah. Nilai 3 diperoleh dengan hanya menghitung lintasan dari titik awal ke titik pemeriksaan dan mengabaikan perjalanan sesudahnya.",
+    "C": "Salah. Nilai 512 diperoleh dengan memberi dua pilihan arah pada setiap langkah tanpa mempertahankan tepat 5 langkah ke kanan dan 4 langkah ke atas.",
+    "D": "Salah. Nilai 126 diperoleh dengan menghitung seluruh C(9, 4) lintasan terpendek tanpa mensyaratkan lintasan melalui titik pemeriksaan.",
+    "E": "Salah. Nilai 23 diperoleh dengan menjumlahkan pilihan lintasan sebelum dan sesudah titik pemeriksaan, padahal satu pilihan dari tiap bagian harus dipasangkan."
+  },
+  "difficulty": "medium",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

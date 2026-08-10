@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-001",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "PRESERVASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Pembaruan"},
+    {"key": "B", "text": "Pemisahan"},
+    {"key": "C", "text": "Pelestarian"},
+    {"key": "D", "text": "Percepatan"},
+    {"key": "E", "text": "Pengurangan"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Pembaruan berarti proses membuat sesuatu menjadi baru, bukan mempertahankan keberadaannya.",
+    "B": "Pemisahan berarti proses memisahkan bagian-bagian, tidak bersinonim dengan preservasi.",
+    "C": "Benar. Preservasi berarti pemeliharaan atau pelestarian sesuatu agar tetap terjaga.",
+    "D": "Percepatan berarti peningkatan kecepatan suatu proses, bukan tindakan menjaga sesuatu.",
+    "E": "Pengurangan berarti menjadikan jumlah lebih sedikit, bukan mempertahankan kondisi."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

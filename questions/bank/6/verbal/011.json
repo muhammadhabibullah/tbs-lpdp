@@ -1,0 +1,8 @@
+{
+  "id":"6-verbal-011","package":6,"subtest":"verbal","number":11,"type":"analogi",
+  "question_text":"INSULIN : GLUKOSA DARAH = ... : ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"Termostat : Suhu ruangan"},{"key":"B","text":"Barometer : Tekanan udara"},{"key":"C","text":"Aki : Arus listrik"},{"key":"D","text":"Filter : Partikel debu"},{"key":"E","text":"Radar : Jarak objek"}],
+  "correct_option":"A",
+  "explanations":{"A":"Benar. Insulin membantu mengatur kadar glukosa darah, sebagaimana termostat mengatur suhu ruangan menuju tingkat tertentu.","B":"Barometer mengukur tekanan udara tetapi tidak mengatur tekanan tersebut.","C":"Aki menyimpan dan memasok energi listrik, bukan mengatur arus menuju suatu kadar sasaran dengan hubungan yang sama.","D":"Filter menahan partikel debu dan tidak mengatur kadarnya melalui mekanisme kendali.","E":"Radar mendeteksi jarak objek, bukan mengatur jarak tersebut."},
+  "difficulty":"medium","source":"codex-generated","verified":true
+}

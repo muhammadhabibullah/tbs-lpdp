@@ -1,0 +1,8 @@
+{
+  "id":"6-pemecahan_masalah-007","package":6,"subtest":"pemecahan_masalah","number":7,"type":"penalaran_kasus",
+  "question_text":"Sebuah pusat pelatihan memberikan lokakarya baru kepada pegawai yang mendaftar secara sukarela. Nilai uji peserta setelah lokakarya rata-rata lebih tinggi daripada nilai mereka sebelum lokakarya. Pengelola menyimpulkan bahwa lokakarya tersebut efektif meningkatkan kemampuan seluruh pegawai.\n\nInformasi yang paling penting untuk menilai simpulan pengelola adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"Apakah ruang lokakarya memiliki kapasitas yang cukup untuk seluruh pendaftar"},{"key":"B","text":"Apakah peserta menyukai materi dan konsumsi yang disediakan"},{"key":"C","text":"Berapa biaya rata-rata yang dikeluarkan untuk setiap peserta"},{"key":"D","text":"Bagaimana perubahan nilai kelompok pegawai sebanding yang tidak mengikuti lokakarya pada periode yang sama"},{"key":"E","text":"Apakah instruktur pernah mengajar lokakarya serupa di lembaga lain"}],
+  "correct_option":"D",
+  "explanations":{"A":"Kapasitas ruangan berkaitan dengan pelaksanaan, bukan dengan apakah kenaikan nilai disebabkan oleh lokakarya.","B":"Kepuasan peserta tidak mengukur peningkatan kemampuan dan tidak mengendalikan pengaruh lain terhadap nilai.","C":"Biaya diperlukan untuk menilai efisiensi, tetapi bukan untuk menguji hubungan sebab akibat dalam simpulan.","D":"Benar. Kelompok pembanding menunjukkan apakah kenaikan juga terjadi tanpa lokakarya, misalnya karena latihan uji atau perubahan umum pada periode tersebut.","E":"Pengalaman instruktur dapat memberi konteks, tetapi tidak memisahkan pengaruh lokakarya dari seleksi sukarela dan faktor waktu."},
+  "difficulty":"medium","source":"codex-generated","verified":true
+}

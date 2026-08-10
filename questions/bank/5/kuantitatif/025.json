@@ -1,0 +1,28 @@
+{
+  "id": "5-kuantitatif-025",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Sebuah limas segiempat tegak memiliki alas berbentuk persegi dengan panjang sisi 10 cm dan tinggi limas 12 cm. Berapakah luas seluruh permukaan limas tersebut?",
+  "image": "images/limas-segiempat.svg",
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "260 cm²"},
+    {"key": "B", "text": "300 cm²"},
+    {"key": "C", "text": "295 cm²"},
+    {"key": "D", "text": "340 cm²"},
+    {"key": "E", "text": "360 cm²"}
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Luas 260 cm² hanya menjumlahkan luas keempat sisi tegak, yaitu 4 × (1/2 × 10 × 13), tanpa luas alas.",
+    "B": "Luas 300 cm² diperoleh dari 100 + 4 × (1/2 × 10 × 10), yaitu keliru memakai sisi alas 10 cm sebagai tinggi setiap sisi tegak.",
+    "C": "Luas 295 cm² diperoleh dari 100 + 3 × (1/2 × 10 × 13), yaitu hanya menghitung tiga sisi tegak yang tampak pada sketsa dan mengabaikan sisi tegak keempat.",
+    "D": "Luas 340 cm² diperoleh jika tinggi sisi tegak dianggap 12 cm, yaitu 100 + 4 × (1/2 × 10 × 12), padahal 12 cm adalah tinggi limas terhadap pusat alas.",
+    "E": "Benar. Tinggi sisi tegak = √(12² + 5²) = 13 cm. Luas permukaan = 10² + 4 × (1/2 × 10 × 13) = 100 + 260 = 360 cm²."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

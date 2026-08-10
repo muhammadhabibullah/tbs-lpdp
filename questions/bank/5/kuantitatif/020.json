@@ -1,0 +1,28 @@
+{
+  "id": "5-kuantitatif-020",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Pada sebuah peta berskala 1 : 250.000, jarak antara Kota P dan Kota Q adalah 7,2 cm. Berapakah jarak sebenarnya antara kedua kota tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "1,8 km"},
+    {"key": "B", "text": "7,2 km"},
+    {"key": "C", "text": "18 km"},
+    {"key": "D", "text": "25 km"},
+    {"key": "E", "text": "180 km"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Jarak 1,8 km diperoleh jika hasil 7,2 × 250.000 cm dibagi 1.000.000, bukan 100.000, saat diubah ke kilometer.",
+    "B": "Jarak 7,2 km mempertahankan angka pada peta tanpa menerapkan faktor skala 250.000 secara benar.",
+    "C": "Benar. Jarak sebenarnya = 7,2 × 250.000 cm = 1.800.000 cm = 18 km.",
+    "D": "Jarak 25 km keliru karena menggunakan angka 250.000 sebagai 25 km tanpa mengalikannya dengan 7,2 cm.",
+    "E": "Jarak 180 km diperoleh jika 1.800.000 cm dibagi 10.000; konversi yang benar dari sentimeter ke kilometer adalah membagi 100.000."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

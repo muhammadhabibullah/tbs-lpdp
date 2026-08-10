@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-004",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "PROLIFERASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Penggabungan"},
+    {"key": "B", "text": "Perkembangbiakan cepat"},
+    {"key": "C", "text": "Penurunan mutu"},
+    {"key": "D", "text": "Pembatasan"},
+    {"key": "E", "text": "Pemindahan"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Penggabungan berarti menyatukan beberapa unsur, bukan bertambah atau berkembang dengan cepat.",
+    "B": "Benar. Proliferasi berarti pertumbuhan, perkembangbiakan, atau pertambahan secara cepat.",
+    "C": "Penurunan mutu adalah kemerosotan kualitas dan tidak berkaitan dengan pertambahan jumlah.",
+    "D": "Pembatasan menahan pertambahan sehingga berlawanan arah dengan proliferasi.",
+    "E": "Pemindahan berarti mengalihkan tempat, bukan memperbanyak atau mengembangkan."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

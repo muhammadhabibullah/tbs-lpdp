@@ -1,0 +1,43 @@
+{
+  "id": "5-pemecahan_masalah-001",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 1,
+  "type": "peluang_kombinatorik",
+  "question_text": "Dari digit 2, 3, 4, 5, 7 akan dibentuk bilangan genap tiga digit tanpa pengulangan digit. Banyak bilangan yang dapat dibentuk adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "40"
+    },
+    {
+      "key": "B",
+      "text": "60"
+    },
+    {
+      "key": "C",
+      "text": "48"
+    },
+    {
+      "key": "D",
+      "text": "8"
+    },
+    {
+      "key": "E",
+      "text": "24"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 40 diperoleh dengan memberi pilihan digit ratusan sebelum menyisihkan digit genap yang dipakai sebagai satuan, sehingga beberapa susunan mengulang digit.",
+    "B": "Salah. Nilai 60 diperoleh dengan menghitung seluruh P(5, 3) susunan tiga digit tanpa mensyaratkan digit satuannya genap.",
+    "C": "Salah. Nilai 48 diperoleh dengan mengalikan hasil dengan 2 untuk pertukaran digit ratusan dan puluhan, padahal kedua urutan itu sudah dihitung terpisah dalam aturan perkalian.",
+    "D": "Salah. Nilai 8 diperoleh dengan mengharuskan ketiga digit semuanya genap dan sekaligus membolehkan pengulangan, padahal hanya digit satuan yang wajib genap.",
+    "E": "Benar. Digit satuan harus genap, sehingga tersedia 2 pilihan. Setelah satuan dipilih, digit ratusan memiliki 4 pilihan dan digit puluhan 3 pilihan. Jadi banyak bilangan adalah 2 × 4 × 3 = 24."
+  },
+  "difficulty": "medium",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

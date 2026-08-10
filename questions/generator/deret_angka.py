@@ -511,6 +511,190 @@ def gen_doubling_diff(rng: random.Random):
     return terms, answer, answer2, wrongs, expl, "medium"
 
 
+# Opt-in patterns for later packages. Keeping these outside PATTERN_GROUPS means
+# all legacy default seeds retain their existing architecture order.
+
+def gen_signed_arithmetic(rng: random.Random):
+    """A constant-difference sequence that crosses zero."""
+    start, step = rng.choice([(-23, 7), (-19, 6), (-28, 9)])
+    terms = [start + i * step for i in range(6)]
+    answer, answer2 = terms[-1] + step, terms[-1] + 2 * step
+    wrongs = [
+        (terms[-1] + step - 1,
+         f"menggunakan beda {_fmt(step - 1)}, satu lebih kecil daripada beda tetap {_fmt(step)}"),
+        (terms[-1] + step + 1,
+         f"menggunakan beda {_fmt(step + 1)}, padahal beda tetapnya {_fmt(step)}"),
+        (terms[-1] + 3 * step,
+         "melanjutkan tiga langkah sekaligus sehingga memperoleh suku kesembilan"),
+        (2 * terms[-1],
+         f"menggandakan suku terakhir {_fmt(terms[-1])}, bukan menambahkan beda tetap {_fmt(step)}"),
+    ]
+    expl = (
+        f"Setiap suku bertambah tetap {_fmt(step)}. Suku berikutnya adalah "
+        f"{_fmt(terms[-1])} + {_fmt(step)} = {_fmt(answer)}."
+    )
+    return terms, answer, answer2, wrongs, expl, "easy"
+
+
+def gen_oblong_numbers(rng: random.Random):
+    """Products of two consecutive integers, shifted by a constant."""
+    offset = rng.choice([-3, 2, 5])
+    terms = [n * (n + 1) + offset for n in range(1, 7)]
+    answer = 7 * 8 + offset
+    answer2 = 8 * 9 + offset
+    wrongs = [
+        (7 * 7 + offset,
+         "mengkuadratkan 7, padahal pola mengalikan dua bilangan berurutan 7 × 8"),
+        (7 * 8,
+         f"menghitung 7 × 8 tetapi melupakan tetapan {_fmt(offset)}"),
+        (terms[-1] + (terms[-1] - terms[-2]),
+         f"mengulang selisih terakhir {_fmt(terms[-1] - terms[-2])}, padahal selisihnya terus bertambah"),
+        (answer2,
+         "melompat ke pola 8 × 9 sehingga memperoleh suku kedelapan"),
+    ]
+    sign = "+" if offset > 0 else MINUS
+    expl = (
+        f"Suku ke-n mengikuti n(n + 1) {sign} {_fmt(abs(offset))}: "
+        f"1 × 2 {sign} {_fmt(abs(offset))} = {_fmt(terms[0])}, "
+        f"2 × 3 {sign} {_fmt(abs(offset))} = {_fmt(terms[1])}, dan seterusnya. "
+        f"Suku ketujuh adalah 7 × 8 {sign} {_fmt(abs(offset))} = {_fmt(answer)}."
+    )
+    return terms, answer, answer2, wrongs, expl, "medium"
+
+
+def gen_alternating_signed_squares(rng: random.Random):
+    """Consecutive squares with alternating signs; opt-in only."""
+    first = rng.choice([1, 2, 3])
+    terms = [((-1) ** i) * (first + i) ** 2 for i in range(6)]
+    next_base = first + 6
+    answer = next_base ** 2
+    answer2 = -(next_base + 1) ** 2
+    previous_positive = terms[4]
+    prior_positive = terms[2]
+    wrongs = [
+        (-answer,
+         f"memperoleh kuadrat {_fmt(next_base)}² tetapi mengulang tanda negatif, "
+         "padahal tanda suku berganti positif dan negatif"),
+        ((next_base + 1) ** 2,
+         f"langsung memakai {_fmt(next_base + 1)}² dan melewati {_fmt(next_base)}²"),
+        (previous_positive + (previous_positive - prior_positive),
+         "mengulang kenaikan terakhir pada barisan suku positif, padahal besar "
+         "sukunya mengikuti kuadrat berurutan"),
+        (abs(terms[-1]) + 1,
+         "hanya menambah 1 pada nilai mutlak suku terakhir, bukan beralih ke "
+         f"kuadrat berikutnya {_fmt(next_base)}²"),
+    ]
+    expl = (
+        "Nilai mutlak suku-sukunya adalah kuadrat berurutan dan tandanya berganti "
+        f"positif-negatif. Setelah {_fmt(abs(terms[-1]))} = {_fmt(next_base - 1)}² "
+        f"bertanda negatif, suku berikutnya adalah {_fmt(next_base)}² = {_fmt(answer)} "
+        "bertanda positif."
+    )
+    return terms, answer, answer2, wrongs, expl, "medium"
+
+
+def gen_square_increments(rng: random.Random):
+    """Successive additions of 1², 2², ...; usable with either tail layout."""
+    start = rng.choice([-8, -5, 2])
+    terms = [start]
+    for n in range(1, 6):
+        terms.append(terms[-1] + n * n)
+    answer = terms[-1] + 6 * 6
+    answer2 = answer + 7 * 7
+    wrongs = [
+        (terms[-1] + 5 * 5,
+         "mengulang kenaikan 5², padahal kenaikan berikutnya harus 6²"),
+        (terms[-1] + 6,
+         "menambahkan 6, bukan kuadratnya 6²"),
+        (terms[-1] + 7 * 7,
+         "melompat langsung ke kenaikan 7² dan melewati kenaikan 6²"),
+        (answer + 7 * 7,
+         "melanjutkan dua langkah sekaligus sehingga memperoleh suku kedelapan"),
+    ]
+    expl = (
+        f"Kenaikan antarsuku adalah kuadrat berurutan: 1², 2², 3², 4², dan 5². "
+        f"Kenaikan berikutnya 6² = 36, sehingga {_fmt(terms[-1])} + 36 = {_fmt(answer)}."
+    )
+    return terms, answer, answer2, wrongs, expl, "medium"
+
+
+def gen_double_minus_primes(rng: random.Random):
+    """Double, then subtract consecutive primes; intrinsically hard."""
+    start = rng.choice([8, 10, 12])
+    primes = [3, 5, 7, 11, 13, 17, 19]
+    terms = [start]
+    for prime in primes[:5]:
+        terms.append(2 * terms[-1] - prime)
+    answer = 2 * terms[-1] - primes[5]
+    answer2 = 2 * answer - primes[6]
+    last_difference = terms[-1] - terms[-2]
+    wrongs = [
+        (2 * terms[-1] - 15,
+         "meneruskan pengurang dengan bilangan ganjil 15, padahal setelah 13 "
+         "bilangan prima berikutnya adalah 17"),
+        (2 * terms[-1] - 13,
+         "mengulang pengurang 13, padahal pengurangnya mengikuti bilangan prima "
+         "berurutan"),
+        (2 * terms[-1],
+         "menggandakan suku terakhir tetapi tidak mengurangkan bilangan prima "
+         "berikutnya, yaitu 17"),
+        (2 * terms[-1] - 19,
+         "melompati bilangan prima 17 dan langsung memakai 19 sebagai pengurang"),
+    ]
+    expl = (
+        "Setiap suku diperoleh dengan menggandakan suku sebelumnya, lalu "
+        "mengurangkan bilangan prima berurutan 3, 5, 7, 11, dan 13. Pengurang "
+        f"berikutnya 17, sehingga 2 × {_fmt(terms[-1])} − 17 = {_fmt(answer)}. "
+        f"Setelah itu pengurangnya 19, sehingga 2 × {_fmt(answer)} − 19 = "
+        f"{_fmt(answer2)}."
+    )
+    # Fully specified two-term alternatives for the opt-in double-blank path.
+    # Each pair follows one rule through both missing positions; the empty 7th
+    # element reserves the legacy interior-distractor slot, and the 8th element
+    # is read only by explicit templates that opt into this representation.
+    constant_first = terms[-1] + last_difference
+    constant_second = constant_first + last_difference
+    no_subtract_first = 2 * terms[-1]
+    no_subtract_second = 2 * no_subtract_first
+    odd_first = 2 * terms[-1] - 15
+    odd_second = 2 * odd_first - 17
+    repeat_first = 2 * terms[-1] - 13
+    repeat_second = 2 * repeat_first - 13
+    pair_wrongs = [
+        ((constant_first, constant_second),
+         f"Pasangan {_fmt(constant_first)}, {_fmt(constant_second)} diperoleh "
+         f"dengan mengulang beda terakhir {_fmt(last_difference)}: "
+         f"{_fmt(terms[-1])} + {_fmt(last_difference)} = {_fmt(constant_first)} "
+         f"dan {_fmt(constant_first)} + {_fmt(last_difference)} = "
+         f"{_fmt(constant_second)}."),
+        ((no_subtract_first, no_subtract_second),
+         f"Pasangan {_fmt(no_subtract_first)}, {_fmt(no_subtract_second)} diperoleh "
+         f"dengan hanya menggandakan dua kali tanpa mengurangkan bilangan prima: "
+         f"2 × {_fmt(terms[-1])} = {_fmt(no_subtract_first)} dan "
+         f"2 × {_fmt(no_subtract_first)} = {_fmt(no_subtract_second)}."),
+        ((odd_first, odd_second),
+         f"Pasangan {_fmt(odd_first)}, {_fmt(odd_second)} diperoleh dengan "
+         "meneruskan pengurang sebagai bilangan ganjil 15 lalu 17, bukan bilangan "
+         f"prima 17 lalu 19: 2 × {_fmt(terms[-1])} − 15 = {_fmt(odd_first)} dan "
+         f"2 × {_fmt(odd_first)} − 17 = {_fmt(odd_second)}."),
+        ((repeat_first, repeat_second),
+         f"Pasangan {_fmt(repeat_first)}, {_fmt(repeat_second)} diperoleh dengan "
+         f"mengulang pengurang 13 pada kedua langkah: 2 × {_fmt(terms[-1])} − 13 = "
+         f"{_fmt(repeat_first)} dan 2 × {_fmt(repeat_first)} − 13 = "
+         f"{_fmt(repeat_second)}."),
+    ]
+    return terms, answer, answer2, wrongs, expl, "hard", [], pair_wrongs
+
+
+EXPLICIT_PATTERNS = {
+    "alternating_signed_squares": gen_alternating_signed_squares,
+    "double_minus_primes": gen_double_minus_primes,
+    "signed_arithmetic": gen_signed_arithmetic,
+    "oblong_numbers": gen_oblong_numbers,
+    "square_increments": gen_square_increments,
+}
+
+
 # Grouped so that one package never draws two sequences solved the same way:
 # `gen_squares_offset` (n² + c) is just a constant-second-difference sequence
 # with step 2, so it shares a group with `gen_increasing_diff`.
@@ -607,6 +791,30 @@ def _double_blank(terms, answer, answer2, wrongs, expl_correct):
     explanation = (f"{expl_correct} Dengan pola yang sama, suku kedelapan adalah "
                    f"{_fmt(answer2)}.")
     return stem, correct, distractors, explanation
+
+
+def _specified_double_blank(terms, answer, answer2, pair_wrongs, expl_correct):
+    """Two-blank layout whose template supplies complete alternative pairs.
+
+    Legacy patterns continue through ``_double_blank`` unchanged.  An opt-in
+    template uses this path only when it returns an eighth tuple element, and
+    every supplied distractor must state one rule that produces both numbers.
+    """
+    def pair(a, b):
+        return f"{_fmt(a)}, {_fmt(b)}"
+
+    correct = pair(answer, answer2)
+    seen, distractors = {correct}, []
+    for (first, second), reason in pair_wrongs:
+        text = pair(first, second)
+        if text in seen:
+            continue
+        seen.add(text)
+        distractors.append((text, reason))
+    stem = (", ".join(_fmt(t) for t in terms)
+            + ", ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut "
+              "adalah ...")
+    return stem, correct, distractors, expl_correct
 
 
 def interior_unambiguous(terms: list[int], answer: int) -> bool:
@@ -710,6 +918,7 @@ def build_one(rng: random.Random, package_id: int, number: int, bank_dir: Path,
         terms, answer, answer2, wrongs, expl_correct, difficulty = drawn[:6]
         # a pattern may add its own interior-blank misreadings as a 7th element
         interior_wrongs = drawn[6] if len(drawn) > 6 else []
+        specified_pair_wrongs = drawn[7] if len(drawn) > 7 else None
 
         if interior:
             if not interior_unambiguous(terms, answer):
@@ -731,10 +940,15 @@ def build_one(rng: random.Random, package_id: int, number: int, bank_dir: Path,
             # survive the same screening once the 7th is taken as given
             if blanks == 2 and not is_unambiguous(terms + [answer], answer2):
                 continue
-            layout = _single_blank if blanks == 1 else _double_blank
-            stem, correct_text, distractors, explanation = layout(
-                terms, answer, answer2, wrongs, expl_correct
-            )
+            if blanks == 2 and specified_pair_wrongs is not None:
+                stem, correct_text, distractors, explanation = _specified_double_blank(
+                    terms, answer, answer2, specified_pair_wrongs, expl_correct
+                )
+            else:
+                layout = _single_blank if blanks == 1 else _double_blank
+                stem, correct_text, distractors, explanation = layout(
+                    terms, answer, answer2, wrongs, expl_correct
+                )
             if blanks == 2:
                 difficulty = "hard"
         if len(distractors) < 4:
@@ -775,11 +989,21 @@ def main() -> None:
     ap.add_argument("--interior", action="store_true",
                     help="hardest stem: four terms, two blanks, then one more term "
                          "printed as an anchor to check the rule against")
+    ap.add_argument("--template", choices=sorted(EXPLICIT_PATTERNS),
+                    help="opt-in architecture; excluded from legacy default pools")
     ap.add_argument("--seed", type=int, default=None)
     ap.add_argument("--bank-dir", type=Path, default=BANK_DIR)
     args = ap.parse_args()
 
     rng = random.Random(args.seed)
+    if args.template:
+        if args.count != 1 or args.interior:
+            ap.error("--template requires --count 1 and cannot be combined with --interior")
+        number = next_number(args.package, SUBTEST, args.bank_dir)
+        path = build_one(rng, args.package, number, args.bank_dir,
+                         EXPLICIT_PATTERNS[args.template], args.blanks, False)
+        print(f"wrote {path}")
+        return
     groups = INTERIOR_GROUPS if args.interior else PATTERN_GROUPS
     pool: list = []
     for _ in range(args.count):

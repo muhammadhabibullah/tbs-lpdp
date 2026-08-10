@@ -1,0 +1,28 @@
+{
+  "id": "5-pemecahan_masalah-004",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Empat sampel, yaitu K, L, M, dan N, diproses pada hari Senin sampai Kamis. Setiap hari tepat satu sampel diproses dan setiap sampel diproses tepat satu kali. Urutan pemrosesan tunduk pada ketentuan berikut.\n(1) Sampel K diproses sebelum sampel M.\n(2) Sampel L diproses tepat sehari sebelum sampel N.\n\nUrutan pemrosesan dari Senin sampai Kamis yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "K - N - L - M"},
+    {"key": "B", "text": "M - K - L - N"},
+    {"key": "C", "text": "L - N - K - M"},
+    {"key": "D", "text": "L - K - N - M"},
+    {"key": "E", "text": "K - N - M - L"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Urutan ini menempatkan N sebelum L, padahal L harus tepat sehari sebelum N.",
+    "B": "Urutan ini menempatkan M sebelum K sehingga melanggar ketentuan pertama.",
+    "C": "Benar. L tepat sehari sebelum N, dan K diproses sebelum M; kedua ketentuan terpenuhi.",
+    "D": "L dan N dipisahkan oleh K sehingga L tidak tepat sehari sebelum N.",
+    "E": "N ditempatkan sebelum L dan keduanya juga tidak berurutan dalam susunan L-N."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

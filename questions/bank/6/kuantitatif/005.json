@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-005",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "Nilai dari 7 × 15 − 5 × 30 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "45"
+    },
+    {
+      "key": "B",
+      "text": "−45"
+    },
+    {
+      "key": "C",
+      "text": "135"
+    },
+    {
+      "key": "D",
+      "text": "255"
+    },
+    {
+      "key": "E",
+      "text": "70"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 45 diperoleh dengan membalik urutan pengurangan sehingga tandanya tertukar.",
+    "B": "Benar. 7 × 15 − 5 × 30 = 105 − 150 = −45.",
+    "C": "Salah. Nilai 135 diperoleh dengan menukar faktor kedua pada masing-masing perkalian, yaitu 7 × 30 − 5 × 15.",
+    "D": "Salah. Nilai 255 diperoleh dengan menjumlahkan kedua hasil kali, bukan mengurangkannya.",
+    "E": "Salah. Nilai 70 diperoleh dengan mengurangkan jumlah 5 dan 30, bukan hasil kalinya."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

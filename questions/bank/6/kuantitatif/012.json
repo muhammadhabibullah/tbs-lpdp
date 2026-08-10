@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-012",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 12,
+  "type": "deret_angka",
+  "question_text": "8, 13, 21, 35, 59, 105, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "151, 197"
+    },
+    {
+      "key": "B",
+      "text": "197, 381"
+    },
+    {
+      "key": "C",
+      "text": "193, 367"
+    },
+    {
+      "key": "D",
+      "text": "195, 373"
+    },
+    {
+      "key": "E",
+      "text": "210, 420"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Pasangan 151, 197 diperoleh dengan mengulang beda terakhir 46: 105 + 46 = 151 dan 151 + 46 = 197.",
+    "B": "Salah. Pasangan 197, 381 diperoleh dengan mengulang pengurang 13 pada kedua langkah: 2 × 105 − 13 = 197 dan 2 × 197 − 13 = 381.",
+    "C": "Benar. Setiap suku diperoleh dengan menggandakan suku sebelumnya, lalu mengurangkan bilangan prima berurutan 3, 5, 7, 11, dan 13. Pengurang berikutnya 17, sehingga 2 × 105 − 17 = 193. Setelah itu pengurangnya 19, sehingga 2 × 193 − 19 = 367.",
+    "D": "Salah. Pasangan 195, 373 diperoleh dengan meneruskan pengurang sebagai bilangan ganjil 15 lalu 17, bukan bilangan prima 17 lalu 19: 2 × 105 − 15 = 195 dan 2 × 195 − 17 = 373.",
+    "E": "Salah. Pasangan 210, 420 diperoleh dengan hanya menggandakan dua kali tanpa mengurangkan bilangan prima: 2 × 105 = 210 dan 2 × 210 = 420."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "5-pemecahan_masalah-010",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan hasil pemeriksaan produk dari lima unit kerja dalam satu hari. Produk lolos adalah produk yang dihasilkan dikurangi produk cacat.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...",
+  "image": null,
+  "passage": "Unit Kerja | Produk Dihasilkan | Produk Cacat\nP | 240 | 12\nQ | 180 | 18\nR | 300 | 15\nS | 210 | 21\nT | 150 | 6",
+  "options": [
+    {"key": "A", "text": "Unit P menghasilkan produk lolos paling banyak."},
+    {"key": "B", "text": "Unit Q dan Unit S menghasilkan jumlah produk lolos yang sama."},
+    {"key": "C", "text": "Persentase produk cacat Unit R lebih tinggi daripada Unit P."},
+    {"key": "D", "text": "Unit T memiliki persentase produk lolos paling tinggi."},
+    {"key": "E", "text": "Jumlah produk cacat dari seluruh unit adalah 70 produk."}
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Produk lolos Unit P adalah 240 − 12 = 228, sedangkan Unit R menghasilkan 300 − 15 = 285 produk lolos.",
+    "B": "Produk lolos Unit Q adalah 162, sedangkan Unit S 189, sehingga jumlahnya tidak sama.",
+    "C": "Persentase cacat Unit R = 15/300 = 5% dan Unit P = 12/240 = 5%; keduanya sama.",
+    "D": "Benar. Persentase lolos Unit T = 144/150 = 96%, lebih tinggi daripada P dan R yang 95% serta Q dan S yang 90%.",
+    "E": "Jumlah produk cacat adalah 12 + 18 + 15 + 21 + 6 = 72 produk, bukan 70."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

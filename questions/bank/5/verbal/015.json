@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-015",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Premis 1: Tidak ada bahan yang dapat didaur ulang yang dibakar di fasilitas itu.\nPremis 2: Sebagian limbah laboratorium dibakar di fasilitas itu.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Semua limbah laboratorium tidak dapat didaur ulang."},
+    {"key": "B", "text": "Tidak ada limbah laboratorium yang dapat didaur ulang."},
+    {"key": "C", "text": "Semua bahan yang tidak dibakar dapat didaur ulang."},
+    {"key": "D", "text": "Sebagian bahan yang dapat didaur ulang merupakan limbah laboratorium."},
+    {"key": "E", "text": "Sebagian limbah laboratorium tidak dapat didaur ulang."}
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Premis hanya menjelaskan sebagian limbah laboratorium yang dibakar, bukan seluruh limbah laboratorium.",
+    "B": "Tidak adanya limbah laboratorium yang dapat didaur ulang terlalu luas; hanya sebagian yang pasti tidak dapat didaur ulang.",
+    "C": "Tidak dibakar tidak berarti dapat didaur ulang karena premis tidak menyatakan kebalikan hubungan tersebut.",
+    "D": "Premis tidak memastikan adanya limbah laboratorium yang dapat didaur ulang.",
+    "E": "Benar. Limbah laboratorium yang dibakar termasuk bahan yang tidak dapat didaur ulang karena bahan yang dapat didaur ulang tidak pernah dibakar."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

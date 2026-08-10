@@ -1,0 +1,9 @@
+{
+  "id":"6-pemecahan_masalah-009","package":6,"subtest":"pemecahan_masalah","number":9,"type":"interpretasi_data",
+  "question_text":"Tabel tersebut menyajikan jumlah berkas yang diperiksa dan dikembalikan untuk perbaikan oleh sebuah unit layanan selama empat bulan.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...","image":null,
+  "passage":"Bulan | Berkas Diperiksa | Dikembalikan untuk Perbaikan\nJanuari | 240 | 30\nFebruari | 280 | 35\nMaret | 260 | 26\nApril | 300 | 45",
+  "options":[{"key":"A","text":"Berkas yang diperiksa pada Januari lebih banyak daripada pada Maret."},{"key":"B","text":"Proporsi berkas yang dikembalikan paling rendah terjadi pada Maret."},{"key":"C","text":"Jumlah seluruh berkas yang dikembalikan selama empat bulan adalah 130."},{"key":"D","text":"Berkas yang dikembalikan pada April tepat dua kali jumlah pada Januari."},{"key":"E","text":"Proporsi pengembalian pada Februari lebih tinggi daripada pada Januari."}],
+  "correct_option":"B",
+  "explanations":{"A":"Januari memeriksa 240 berkas, lebih sedikit daripada Maret yang memeriksa 260 berkas.","B":"Benar. Proporsinya berturut-turut 30/240 = 12,5%, 35/280 = 12,5%, 26/260 = 10%, dan 45/300 = 15%; yang terendah adalah Maret.","C":"Jumlah seluruh berkas yang dikembalikan adalah 30 + 35 + 26 + 45 = 136, bukan 130.","D":"Dua kali jumlah Januari adalah 60, sedangkan pada April hanya 45 berkas.","E":"Proporsi Februari 35/280 = 12,5% sama dengan Januari 30/240 = 12,5%, bukan lebih tinggi."},
+  "difficulty":"easy","source":"codex-generated","verified":true
+}

@@ -1,0 +1,8 @@
+{
+  "id": "6-verbal-001", "package": 6, "subtest": "verbal", "number": 1, "type": "sinonim",
+  "question_text": "KREDIBEL = ...", "image": null, "passage": null,
+  "options": [{"key":"A","text":"Terkenal"},{"key":"B","text":"Diragukan"},{"key":"C","text":"Terpercaya"},{"key":"D","text":"Terperinci"},{"key":"E","text":"Terbatas"}],
+  "correct_option": "C",
+  "explanations": {"A":"Terkenal berarti dikenal luas, tetapi sesuatu yang terkenal belum tentu dapat dipercaya.","B":"Diragukan justru berlawanan dengan kredibel karena menunjukkan rendahnya kepercayaan.","C":"Benar. Kredibel berarti dapat dipercaya karena memiliki dasar atau mutu yang meyakinkan.","D":"Terperinci berarti disajikan sampai bagian-bagian kecil dan tidak bersinonim dengan kredibel.","E":"Terbatas berarti memiliki batas tertentu, bukan memiliki sifat dapat dipercaya."},
+  "difficulty": "easy", "source": "codex-generated", "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-002",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "INSENTIF = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Perangsang"},
+    {"key": "B", "text": "Larangan"},
+    {"key": "C", "text": "Kewajiban"},
+    {"key": "D", "text": "Hambatan"},
+    {"key": "E", "text": "Penangguhan"}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Insentif adalah tambahan atau dorongan yang berfungsi sebagai perangsang untuk meningkatkan kegiatan.",
+    "B": "Larangan membatasi tindakan, sedangkan insentif justru mendorong seseorang bertindak.",
+    "C": "Kewajiban adalah sesuatu yang harus dilakukan, bukan dorongan atau imbalan tambahan.",
+    "D": "Hambatan menghalangi kegiatan sehingga berlawanan fungsi dengan insentif.",
+    "E": "Penangguhan berarti penundaan, tidak memiliki makna dorongan sebagaimana insentif."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

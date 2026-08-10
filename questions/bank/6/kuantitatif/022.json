@@ -1,0 +1,8 @@
+{
+  "id":"6-kuantitatif-022","package":6,"subtest":"kuantitatif","number":22,"type":"soal_cerita",
+  "question_text":"Sebuah pusat arsip akan mendigitalkan seluruh koleksinya. Pada tahap pertama, 2/7 dari seluruh koleksi selesai didigitalkan. Pada tahap kedua, 35% dari koleksi yang masih tersisa selesai didigitalkan. Setelah 156 dokumen diselesaikan pada tahap ketiga, masih tersisa 25% dari seluruh koleksi yang belum didigitalkan. Banyak dokumen dalam seluruh koleksi adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"390 dokumen"},{"key":"B","text":"448 dokumen"},{"key":"C","text":"336 dokumen"},{"key":"D","text":"1.365 dokumen"},{"key":"E","text":"728 dokumen"}],
+  "correct_option":"E",
+  "explanations":{"A":"Nilai 390 diperoleh jika tahap pertama diabaikan dan 35% langsung dibandingkan dengan target 75%, sehingga 156 dianggap sama dengan 40% koleksi.","B":"Nilai 448 diperoleh jika 156 dokumen dianggap sebagai 3/4 dari sisa setelah dua tahap, padahal setelah tahap ketiga sisa akhirnya harus tepat 1/4 dari seluruh koleksi.","C":"Nilai 336 diperoleh dengan menyamakan 156 dokumen dengan seluruh sisa 13/28 setelah dua tahap, bukan dengan bagian sisa yang dikerjakan pada tahap ketiga.","D":"Nilai 1.365 diperoleh jika 35% pada tahap kedua diterapkan pada seluruh koleksi, bukan pada 5/7 koleksi yang tersisa.","E":"Benar. Tahap kedua menyelesaikan 35% × 5/7 = 1/4 koleksi. Setelah dua tahap tersisa 1 − 2/7 − 1/4 = 13/28. Tahap ketiga mengurangi sisa itu menjadi 1/4, jadi 156 = (13/28 − 1/4)T = 3/14 T; diperoleh T = 728."},
+  "difficulty":"hard","source":"codex-generated","verified":true
+}

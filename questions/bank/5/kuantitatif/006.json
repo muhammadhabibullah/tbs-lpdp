@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-006",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 6,
+  "type": "aljabar",
+  "question_text": "Jika y = 5x² − 2x − 7, nilai y untuk x = 3 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "17"
+    },
+    {
+      "key": "B",
+      "text": "32"
+    },
+    {
+      "key": "C",
+      "text": "46"
+    },
+    {
+      "key": "D",
+      "text": "44"
+    },
+    {
+      "key": "E",
+      "text": "212"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 17 diperoleh dengan membaca 5x² sebagai 5 × 2 × x sehingga pangkat dua berubah menjadi perkalian dua.",
+    "B": "Benar. y = 5 × (3)² − 2 × (3) − 7 = 45 − 6 − 7 = 32.",
+    "C": "Salah. Nilai 46 diperoleh dengan salah tanda pada tetapan − 7.",
+    "D": "Salah. Nilai 44 diperoleh dengan salah tanda pada suku − 2x ketika mensubstitusikan x = 3.",
+    "E": "Salah. Nilai 212 diperoleh dengan mengkuadratkan 5x sebagai satu kesatuan, yaitu (5 × 3)², padahal yang dikuadratkan hanya x."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

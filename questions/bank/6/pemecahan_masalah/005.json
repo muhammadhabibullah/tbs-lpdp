@@ -1,0 +1,8 @@
+{
+  "id":"6-pemecahan_masalah-005","package":6,"subtest":"pemecahan_masalah","number":5,"type":"logika_analitis",
+  "question_text":"Tepat satu dari lima analis—Arman, Beni, Citra, Danu, dan Eka—mengunggah berkas yang keliru. Mereka memberikan pernyataan berikut.\n(1) Arman: \"Beni yang mengunggah berkas keliru.\"\n(2) Beni: \"Eka yang mengunggah berkas keliru.\"\n(3) Citra: \"Bukan saya yang mengunggah berkas keliru.\"\n(4) Danu: \"Pernyataan Beni tidak benar.\"\n(5) Eka: \"Danu yang mengunggah berkas keliru.\"\nDiketahui bahwa tepat satu dari kelima pernyataan tersebut benar.\n\nAnalis yang mengunggah berkas keliru adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"Arman"},{"key":"B","text":"Beni"},{"key":"C","text":"Danu"},{"key":"D","text":"Eka"},{"key":"E","text":"Citra"}],
+  "correct_option":"E",
+  "explanations":{"A":"Jika Arman pelakunya, pernyataan Citra dan Danu sama-sama benar, sehingga terdapat dua pernyataan benar.","B":"Jika Beni pelakunya, pernyataan Arman, Citra, dan Danu benar, sehingga terdapat tiga pernyataan benar.","C":"Jika Danu pelakunya, pernyataan Citra, Danu, dan Eka benar, sehingga terdapat tiga pernyataan benar.","D":"Jika Eka pelakunya, pernyataan Beni dan Citra benar, sehingga terdapat dua pernyataan benar.","E":"Benar. Jika Citra pelakunya, pernyataan Arman, Beni, Citra, dan Eka salah; hanya pernyataan Danu bahwa pernyataan Beni tidak benar yang benar."},
+  "difficulty":"medium","source":"codex-generated","verified":true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-010",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "deret_angka",
+  "question_text": "5, 8, 13, 20, 29, 40, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "68"
+    },
+    {
+      "key": "B",
+      "text": "52"
+    },
+    {
+      "key": "C",
+      "text": "53"
+    },
+    {
+      "key": "D",
+      "text": "51"
+    },
+    {
+      "key": "E",
+      "text": "49"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 68 diperoleh dengan melompat ke suku kedelapan (8² + tetapan), bukan suku ketujuh.",
+    "B": "Salah. Nilai 52 diperoleh dengan menambahkan 2 × 6 = 12 dan lupa bahwa selisih berikutnya adalah 2 × 6 + 1 = 13.",
+    "C": "Benar. Suku ke-n adalah n² + 4 (1² + 4 = 5, 2² + 4 = 8, dan seterusnya). Suku ketujuh adalah 7² + 4 = 53.",
+    "D": "Salah. Nilai 51 diperoleh dengan menganggap selisih tetap sebesar 11, padahal selisihnya bertambah dua setiap langkah.",
+    "E": "Salah. Nilai 49 diperoleh dengan menghitung 7² tetapi lupa menambahkan tetapan 4."
+  },
+  "difficulty": "medium",
+  "source": "deret_angka.py",
+  "verified": true
+}

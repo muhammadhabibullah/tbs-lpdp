@@ -1,0 +1,28 @@
+{
+  "id": "5-pemecahan_masalah-011",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Sikap penulis yang paling tepat berdasarkan teks tersebut adalah ...",
+  "image": null,
+  "passage": "Pemerintah kota berencana mengurangi jumlah bangku di trotoar untuk menekan biaya perawatan dan mencegah penyalahgunaan ruang. Rencana itu memandang bangku sekadar sebagai perabot. Bagi warga lanjut usia, ibu hamil, dan orang dengan keterbatasan mobilitas, tempat beristirahat dapat menentukan apakah suatu perjalanan pendek masih dapat ditempuh dengan berjalan kaki. Menghilangkan bangku justru dapat mempersempit jangkauan gerak mereka dan meningkatkan ketergantungan pada kendaraan. Biaya perawatan memang perlu dikendalikan, tetapi caranya bukan dengan meniadakan fungsi dasar ruang publik. Pemilihan bahan yang tahan lama, penempatan yang tepat, dan pelibatan warga dalam pengawasan merupakan pilihan yang lebih seimbang. Kota seharusnya menilai bangku dari sumbangannya terhadap aksesibilitas, bukan semata-mata dari biaya pemeliharaannya.",
+  "options": [
+    {"key": "A", "text": "Bangku tetap perlu disediakan dengan strategi perawatan yang menjaga aksesibilitas ruang publik."},
+    {"key": "B", "text": "Seluruh biaya perawatan bangku sebaiknya dibebankan kepada warga lanjut usia."},
+    {"key": "C", "text": "Pengurangan bangku adalah satu-satunya cara mencegah penyalahgunaan trotoar."},
+    {"key": "D", "text": "Bangku tidak memengaruhi keputusan warga untuk berjalan kaki."},
+    {"key": "E", "text": "Semua trotoar harus diisi bangku tanpa mempertimbangkan penempatan dan bahan."}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Penulis mempertahankan fungsi bangku bagi aksesibilitas sambil menawarkan bahan, penempatan, dan pengawasan untuk mengendalikan perawatan.",
+    "B": "Teks tidak mengusulkan pembebanan biaya kepada kelompok pengguna tertentu.",
+    "C": "Penulis justru menawarkan cara lain selain mengurangi bangku, yaitu bahan tahan lama, penempatan tepat, dan pengawasan warga.",
+    "D": "Teks menyatakan tempat beristirahat dapat menentukan apakah warga tertentu masih mampu berjalan kaki.",
+    "E": "Penulis menganjurkan penempatan yang tepat, bukan pemasangan bangku tanpa pertimbangan."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

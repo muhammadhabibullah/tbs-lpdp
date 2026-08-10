@@ -1,0 +1,8 @@
+{
+  "id":"6-verbal-013","package":6,"subtest":"verbal","number":13,"type":"analogi",
+  "question_text":"FOSIL : KEHIDUPAN PURBA = ... : ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"Peta : Wilayah masa depan"},{"key":"B","text":"Arsip : Peristiwa masa lalu"},{"key":"C","text":"Prakiraan : Cuaca kemarin"},{"key":"D","text":"Rancangan : Bangunan lama"},{"key":"E","text":"Legenda : Fakta terukur"}],
+  "correct_option":"B",
+  "explanations":{"A":"Peta menggambarkan wilayah yang ada, bukan menjadi bukti khusus mengenai wilayah masa depan.","B":"Benar. Fosil menjadi rekaman atau bukti kehidupan purba, sebagaimana arsip merekam peristiwa masa lalu.","C":"Prakiraan ditujukan untuk keadaan yang belum terjadi, bukan merekam cuaca kemarin.","D":"Rancangan mendahului pembangunan; hubungan itu bukan bukti yang tersisa dari keadaan masa lampau.","E":"Legenda merupakan cerita tradisional yang belum tentu berupa fakta terukur, sehingga hubungannya tidak setara dengan fosil dan kehidupan purba."},
+  "difficulty":"hard","source":"codex-generated","verified":true
+}

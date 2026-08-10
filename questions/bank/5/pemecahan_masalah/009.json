@@ -1,0 +1,28 @@
+{
+  "id": "5-pemecahan_masalah-009",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan jumlah buku yang diterima sebuah rumah baca selama dua pekan menurut kategori.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...",
+  "image": null,
+  "passage": "Kategori Buku | Pekan I | Pekan II\nSains | 28 | 32\nSastra | 35 | 25\nSejarah | 22 | 18\nAnak | 40 | 45\nKeterampilan | 30 | 36",
+  "options": [
+    {"key": "A", "text": "Jumlah buku sains pada Pekan II lebih sedikit daripada Pekan I."},
+    {"key": "B", "text": "Kategori anak memiliki jumlah buku terbanyak jika kedua pekan dijumlahkan."},
+    {"key": "C", "text": "Jumlah buku sejarah meningkat 4 buku pada Pekan II."},
+    {"key": "D", "text": "Jumlah buku sastra selama dua pekan adalah 70 buku."},
+    {"key": "E", "text": "Jumlah seluruh buku pada Pekan I lebih banyak daripada Pekan II."}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Buku sains meningkat dari 28 pada Pekan I menjadi 32 pada Pekan II, bukan berkurang.",
+    "B": "Benar. Total kategori anak adalah 40 + 45 = 85 buku, lebih banyak daripada keterampilan 66, sains 60, sastra 60, dan sejarah 40.",
+    "C": "Buku sejarah turun 4, dari 22 menjadi 18, bukan meningkat 4.",
+    "D": "Total buku sastra adalah 35 + 25 = 60 buku, bukan 70 buku.",
+    "E": "Jumlah Pekan I adalah 155 buku, sedangkan Pekan II 156 buku; Pekan I tidak lebih banyak."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

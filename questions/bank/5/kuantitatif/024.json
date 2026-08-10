@@ -1,0 +1,28 @@
+{
+  "id": "5-kuantitatif-024",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Sebuah layang-layang memiliki panjang diagonal 18 cm dan 12 cm. Berapakah luas layang-layang tersebut?",
+  "image": "images/layang-layang.svg",
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "54 cm²"},
+    {"key": "B", "text": "108 cm²"},
+    {"key": "C", "text": "72 cm²"},
+    {"key": "D", "text": "216 cm²"},
+    {"key": "E", "text": "324 cm²"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Luas 54 cm² diperoleh dengan membagi hasil kali diagonal 18 × 12 sebanyak dua kali, padahal rumus hanya memuat satu faktor 1/2.",
+    "B": "Benar. Luas layang-layang = 1/2 × diagonal pertama × diagonal kedua = 1/2 × 18 × 12 = 108 cm².",
+    "C": "Luas 72 cm² diperoleh dari 1/2 × 12 × 12, yaitu keliru menganggap kedua diagonal sama panjang dengan diagonal yang lebih pendek.",
+    "D": "Luas 216 cm² adalah hasil kali 18 × 12 tanpa faktor 1/2 yang diperlukan dalam rumus luas layang-layang.",
+    "E": "Luas 324 cm² adalah 18², yaitu menganggap salah satu diagonal sebagai sisi persegi."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

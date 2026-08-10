@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-003",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 3,
+  "type": "aritmetika",
+  "question_text": "Setelah mendapat potongan harga 25%, sebuah peralatan dijual seharga Rp480.000,00. Berapakah harga peralatan tersebut sebelum mendapat potongan?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp1.920.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp640.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp600.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp384.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp360.000,00"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai Rp1.920.000,00 diperoleh dengan menganggap harga jual merupakan bagian potongan 25%, bukan sisa 75%.",
+    "B": "Benar. Harga jual adalah 75% dari harga awal, sehingga harga awal = Rp480.000,00 : 75/100 = Rp640.000,00.",
+    "C": "Salah. Nilai Rp600.000,00 diperoleh dengan menambahkan 25% dari harga jual, bukan membagi harga jual dengan 75%.",
+    "D": "Salah. Nilai Rp384.000,00 diperoleh dengan memperlakukan harga jual sebagai harga setelah kenaikan 25%.",
+    "E": "Salah. Nilai Rp360.000,00 diperoleh dengan mengurangi harga jual sekali lagi sebesar 25%."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -263,6 +263,169 @@ def gen_dice_sum(rng: random.Random):
     return text, answer, wrongs, work, "medium", _frac
 
 
+def gen_even_three_digit(rng: random.Random):
+    """Three-digit even numbers from five nonzero digits, without repetition."""
+    digits = rng.choice([
+        (1, 2, 3, 4, 5),
+        (2, 3, 4, 5, 7),
+        (1, 3, 4, 6, 7),
+        (1, 2, 5, 6, 7),
+    ])
+    evens = sum(d % 2 == 0 for d in digits)
+    n = len(digits)
+    answer = evens * (n - 1) * (n - 2)
+    digit_text = ", ".join(str(d) for d in digits)
+    text = (
+        f"Dari digit {digit_text} akan dibentuk bilangan genap tiga digit tanpa "
+        "pengulangan digit. Banyak bilangan yang dapat dibentuk adalah ..."
+    )
+    work = (
+        f"Digit satuan harus genap, sehingga tersedia {evens} pilihan. Setelah satuan "
+        f"dipilih, digit ratusan memiliki {n - 1} pilihan dan digit puluhan "
+        f"{n - 2} pilihan. Jadi banyak bilangan adalah {evens} × {n - 1} × "
+        f"{n - 2} = {answer}"
+    )
+    wrongs = [
+        (perm(n, 3),
+         f"menghitung seluruh P({n}, 3) susunan tiga digit tanpa mensyaratkan digit "
+         "satuannya genap"),
+        ((n - 1) * (n - 2),
+         f"memilih digit satuan genap seolah-olah hanya ada satu pilihan, lalu hanya "
+         f"menghitung {n - 1} × {n - 2}"),
+        (n * (n - 1) * evens,
+         "memberi pilihan digit ratusan sebelum menyisihkan digit genap yang dipakai "
+         "sebagai satuan, sehingga beberapa susunan mengulang digit"),
+        (2 * answer,
+         "mengalikan hasil dengan 2 untuk pertukaran digit ratusan dan puluhan, "
+         "padahal kedua urutan itu sudah dihitung terpisah dalam aturan perkalian"),
+        (evens ** 3,
+         "mengharuskan ketiga digit semuanya genap dan sekaligus membolehkan "
+         "pengulangan, padahal hanya digit satuan yang wajib genap"),
+    ]
+    return text, Fraction(answer), wrongs, work, "medium", _fmt
+
+
+def gen_nonadjacent_days(rng: random.Random):
+    """Choose two nonconsecutive days from a consecutive run of days."""
+    n = rng.randint(6, 9)
+    all_pairs = comb(n, 2)
+    adjacent = n - 1
+    answer = all_pairs - adjacent
+    text = (
+        f"Dari {n} hari berturut-turut, sebuah tim harus memilih tepat dua hari untuk "
+        "melakukan pemeriksaan. Kedua hari yang dipilih tidak boleh berurutan. Banyak "
+        "pasangan hari yang dapat dipilih adalah ..."
+    )
+    work = (
+        f"Seluruh pasangan dua hari berjumlah C({n}, 2) = {all_pairs}. Pasangan hari "
+        f"yang berurutan ada {adjacent}, sehingga pasangan yang tidak berurutan "
+        f"berjumlah {all_pairs} − {adjacent} = {answer}"
+    )
+    wrongs = [
+        (all_pairs,
+         f"menghitung seluruh C({n}, 2) pasangan tanpa mengeluarkan pasangan hari "
+         "yang berurutan"),
+        (adjacent,
+         f"menghitung {adjacent} pasangan hari yang justru berurutan"),
+        (n * (n - 1),
+         "menghitung pilihan hari pertama dan kedua dengan memperhatikan urutan serta "
+         "mengabaikan larangan hari berurutan"),
+        (2 * answer,
+         "menghitung setiap pasangan hari tidak berurutan dua kali, yaitu berdasarkan "
+         "urutan hari pertama dan hari kedua"),
+        (comb(n - 2, 2),
+         f"hanya memilih dari {n - 2} hari bagian tengah dan membuang kedua hari ujung, "
+         "padahal hari ujung tetap boleh dipilih"),
+    ]
+    return text, Fraction(answer), wrongs, work, "medium", _fmt
+
+
+def gen_circular_nonadjacent(rng: random.Random):
+    """Circular permutations in which two named people may not sit together."""
+    n = rng.choice([6, 7])
+    total = factorial(n - 1)
+    adjacent = 2 * factorial(n - 2)
+    answer = total - adjacent
+    text = (
+        f"Sebanyak {n} orang, termasuk Nara dan Riko, akan duduk mengelilingi sebuah "
+        "meja bundar. Susunan yang hanya berbeda karena diputar dianggap sama. Jika "
+        "Nara dan Riko tidak boleh duduk berdampingan, banyak susunan tempat duduk "
+        "yang mungkin adalah ..."
+    )
+    work = (
+        f"Seluruh susunan melingkar berjumlah ({n} − 1)! = {total}. Jika Nara dan "
+        f"Riko berdampingan, keduanya dipandang sebagai satu blok yang dapat bertukar "
+        f"urutan, sehingga ada 2 × ({n} − 2)! = {adjacent} susunan. Jadi banyak "
+        f"susunan yang tidak berdampingan adalah {total} − {adjacent} = {answer}"
+    )
+    wrongs = [
+        (total,
+         "menghitung seluruh susunan melingkar tanpa mengeluarkan susunan ketika "
+         "Nara dan Riko berdampingan"),
+        (adjacent,
+         "menghitung susunan ketika Nara dan Riko justru berdampingan"),
+        (factorial(n) - 2 * factorial(n - 1),
+         "memakai susunan berjajar n! dan 2(n − 1)!, sehingga susunan yang hanya "
+         "berbeda karena rotasi terhitung berulang"),
+        (factorial(n - 2),
+         "menggabungkan Nara dan Riko sebagai satu blok tetapi melupakan dua urutan "
+         "di dalam blok, lalu menjawab banyak susunan berdampingan"),
+        (total - factorial(n - 2),
+         "mengurangi susunan berdampingan hanya untuk satu urutan Nara–Riko dan "
+         "melupakan urutan Riko–Nara"),
+    ]
+    return text, Fraction(answer), wrongs, work, "medium", _fmt
+
+
+def gen_lattice_checkpoint(rng: random.Random):
+    """Shortest monotone paths constrained to pass through one checkpoint."""
+    east, north, check_east, check_north = rng.choice([
+        (5, 4, 2, 1),
+        (6, 4, 2, 2),
+        (5, 5, 1, 3),
+    ])
+    first_steps = check_east + check_north
+    second_east, second_north = east - check_east, north - check_north
+    second_steps = second_east + second_north
+    first_ways = comb(first_steps, check_north)
+    second_ways = comb(second_steps, second_north)
+    answer = first_ways * second_ways
+    total = comb(east + north, north)
+    text = (
+        f"Pada kisi koordinat, sebuah robot bergerak dari (0, 0) ke ({east}, {north}). "
+        "Setiap langkah hanya boleh satu satuan ke kanan atau satu satuan ke atas. "
+        f"Jika robot wajib melalui titik ({check_east}, {check_north}), banyak lintasan "
+        "terpendek yang mungkin adalah ..."
+    )
+    work = (
+        f"Dari (0, 0) ke ({check_east}, {check_north}) diperlukan {first_steps} langkah "
+        f"dengan {check_north} langkah ke atas, sehingga ada C({first_steps}, "
+        f"{check_north}) = {first_ways} lintasan. Dari titik itu ke ({east}, {north}) "
+        f"diperlukan {second_steps} langkah dengan {second_north} langkah ke atas, "
+        f"sehingga ada C({second_steps}, {second_north}) = {second_ways} lintasan. "
+        f"Kedua bagian ditempuh berurutan, jadi banyak lintasannya {first_ways} × "
+        f"{second_ways} = {answer}"
+    )
+    wrongs = [
+        (total,
+         f"menghitung seluruh C({east + north}, {north}) lintasan terpendek tanpa "
+         "mensyaratkan lintasan melalui titik pemeriksaan"),
+        (first_ways + second_ways,
+         "menjumlahkan pilihan lintasan sebelum dan sesudah titik pemeriksaan, "
+         "padahal satu pilihan dari tiap bagian harus dipasangkan"),
+        (2 ** (east + north),
+         "memberi dua pilihan arah pada setiap langkah tanpa mempertahankan tepat "
+         f"{east} langkah ke kanan dan {north} langkah ke atas"),
+        (first_ways,
+         "hanya menghitung lintasan dari titik awal ke titik pemeriksaan dan "
+         "mengabaikan perjalanan sesudahnya"),
+        (second_ways,
+         "hanya menghitung lintasan dari titik pemeriksaan ke tujuan dan "
+         "mengabaikan perjalanan sebelumnya"),
+    ]
+    return text, Fraction(answer), wrongs, work, "medium", _fmt
+
+
 # Grouped by the idea being tested, so one package never draws two items that
 # come down to the same manoeuvre.
 PATTERN_GROUPS = [
@@ -273,6 +436,16 @@ PATTERN_GROUPS = [
 ]
 
 PATTERNS = [p for group in PATTERN_GROUPS for p in group]
+
+# Explicit-only templates extend the generator without changing the default pool
+# or its order. Existing package seed commands therefore remain byte-for-byte
+# reproducible, while a package can deliberately request a new reasoning shape.
+EXPLICIT_TEMPLATES = {
+    "circular_nonadjacent": gen_circular_nonadjacent,
+    "even_three_digit": gen_even_three_digit,
+    "lattice_checkpoint": gen_lattice_checkpoint,
+    "nonadjacent_days": gen_nonadjacent_days,
+}
 
 
 def build_one(rng: random.Random, package_id: int, subtest: str, number: int,
@@ -325,6 +498,8 @@ def main() -> None:
     ap.add_argument("--count", type=int, default=2)
     ap.add_argument("--subtest", choices=["kuantitatif", "pemecahan_masalah"],
                     default="kuantitatif")
+    ap.add_argument("--template", choices=sorted(EXPLICIT_TEMPLATES),
+                    help="generate one explicit template without changing the default pool")
     ap.add_argument("--seed", type=int, default=None)
     ap.add_argument("--bank-dir", type=Path, default=BANK_DIR)
     args = ap.parse_args()
@@ -332,12 +507,16 @@ def main() -> None:
     rng = random.Random(args.seed)
     pool: list = []
     for _ in range(args.count):
-        if not pool:  # without replacement, one draw per idea
-            pool = PATTERN_GROUPS[:]
-            rng.shuffle(pool)
+        if args.template:
+            pattern = EXPLICIT_TEMPLATES[args.template]
+        else:
+            if not pool:  # without replacement, one draw per idea
+                pool = PATTERN_GROUPS[:]
+                rng.shuffle(pool)
+            pattern = rng.choice(pool.pop())
         number = next_number(args.package, args.subtest, args.bank_dir)
         path = build_one(rng, args.package, args.subtest, number, args.bank_dir,
-                         rng.choice(pool.pop()))
+                         pattern)
         print(f"wrote {path}")
 
 

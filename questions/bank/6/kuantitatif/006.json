@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-006",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 6,
+  "type": "aljabar",
+  "question_text": "Diketahui 3x + 2y = −3 dan x − 2y = 15. Nilai dari 3x + 3y adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−9"
+    },
+    {
+      "key": "B",
+      "text": "27"
+    },
+    {
+      "key": "C",
+      "text": "−18"
+    },
+    {
+      "key": "D",
+      "text": "9"
+    },
+    {
+      "key": "E",
+      "text": "−3"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Menyelesaikan kedua persamaan diperoleh x = 3 dan y = −6, sehingga 3x + 3y = 3 × (3 + (−6)) = −9.",
+    "B": "Salah. Nilai 27 diperoleh dengan menghitung 3x − 3y, yaitu selisihnya, bukan jumlahnya.",
+    "C": "Salah. Nilai −18 diperoleh dengan hanya menghitung 3y dan mengabaikan suku 3x.",
+    "D": "Salah. Nilai 9 diperoleh dengan hanya menghitung 3x dan mengabaikan suku 3y.",
+    "E": "Salah. Nilai −3 diperoleh dengan berhenti pada x + y dan lupa mengalikannya dengan 3."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

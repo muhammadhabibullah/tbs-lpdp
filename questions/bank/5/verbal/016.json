@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-016",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Premis 1: Semua anggota tim riset menguasai statistik.\nPremis 2: Tidak seorang pun yang menguasai statistik menolak pelatihan data.\nPremis 3: Sebagian peserta seminar menolak pelatihan data.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Semua peserta seminar tidak menguasai statistik."},
+    {"key": "B", "text": "Sebagian peserta seminar bukan anggota tim riset."},
+    {"key": "C", "text": "Sebagian anggota tim riset menolak pelatihan data."},
+    {"key": "D", "text": "Tidak ada peserta seminar yang menjadi anggota tim riset."},
+    {"key": "E", "text": "Semua orang yang menerima pelatihan data adalah anggota tim riset."}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Hanya peserta seminar yang menolak pelatihan yang pasti tidak menguasai statistik, bukan semua peserta seminar.",
+    "B": "Benar. Peserta yang menolak pelatihan tidak menguasai statistik, sedangkan semua anggota tim riset menguasainya; jadi peserta tersebut bukan anggota tim riset.",
+    "C": "Pernyataan ini bertentangan dengan gabungan premis 1 dan 2 karena anggota tim riset menguasai statistik dan tidak menolak pelatihan.",
+    "D": "Sebagian peserta seminar yang menolak pelatihan bukan anggota tim riset, tetapi peserta seminar lainnya masih mungkin menjadi anggota tim riset.",
+    "E": "Menerima pelatihan data tidak dinyatakan sebagai syarat yang cukup untuk menjadi anggota tim riset."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

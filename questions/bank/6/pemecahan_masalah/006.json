@@ -1,0 +1,8 @@
+{
+  "id":"6-pemecahan_masalah-006","package":6,"subtest":"pemecahan_masalah","number":6,"type":"logika_analitis",
+  "question_text":"Enam artefak A, B, C, D, E, dan F ditempatkan pada lemari dengan dua baris dan tiga kolom. Posisi 1–3 adalah baris atas dari kiri ke kanan, sedangkan posisi 4–6 adalah baris bawah dari kiri ke kanan. Penempatan tunduk pada ketentuan berikut.\n(1) A berada tepat di atas D.\n(2) B dan C berdampingan pada baris yang sama.\n(3) E berada pada baris yang berbeda dari A.\n(4) F berada pada salah satu posisi sudut.\n\nApabila F berada pada posisi ke-6, pernyataan yang pasti benar adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"A berada pada posisi ke-1."},{"key":"B","text":"B berada tepat di atas E."},{"key":"C","text":"C berada pada posisi ke-2."},{"key":"D","text":"D berdampingan dengan F."},{"key":"E","text":"E berada tepat di bawah C."}],
+  "correct_option":"A",
+  "explanations":{"A":"Benar. Karena B dan C harus berdampingan, keduanya harus menempati posisi 2 dan 3. Maka pasangan vertikal A–D hanya dapat berada pada posisi 1 dan 4; E mengisi posisi 5 dan F sudah di posisi 6.","B":"B dapat berada di posisi 2 atau 3. Hanya ketika B di posisi 2 ia tepat di atas E pada posisi 5, sehingga pernyataan ini tidak pasti.","C":"B dan C dapat bertukar pada posisi 2 dan 3, jadi C tidak harus berada pada posisi ke-2.","D":"D berada pada posisi 4, sedangkan F pada posisi 6; keduanya dipisahkan oleh E di posisi 5 dan tidak berdampingan.","E":"E berada pada posisi 5. C hanya tepat di atas E jika C berada di posisi 2, padahal C juga dapat berada di posisi 3."},
+  "difficulty":"hard","source":"codex-generated","verified":true
+}

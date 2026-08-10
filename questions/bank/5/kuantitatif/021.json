@@ -1,0 +1,28 @@
+{
+  "id": "5-kuantitatif-021",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Sebuah gudang menerima 15 kardus minuman. Setiap kardus berisi 24 botol. Setelah diperiksa, terdapat 8 botol yang pecah. Berapa botol yang masih dapat dijual?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "336 botol"},
+    {"key": "B", "text": "360 botol"},
+    {"key": "C", "text": "368 botol"},
+    {"key": "D", "text": "240 botol"},
+    {"key": "E", "text": "352 botol"}
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Jumlah 336 botol diperoleh dengan mengurangi satu kardus penuh, yaitu 24 botol, dari 360 botol, bukan mengurangi 8 botol yang pecah.",
+    "B": "Jumlah 360 botol adalah seluruh botol yang diterima, yaitu 15 × 24, sebelum botol yang pecah dikurangkan.",
+    "C": "Jumlah 368 botol diperoleh dengan menambahkan 8 pada 360, padahal botol yang pecah harus dikurangkan.",
+    "D": "Jumlah 240 botol diperoleh dari 15 × (24 − 8), yaitu keliru memperlakukan 8 botol pecah sebagai 8 botol di setiap kardus, padahal 8 adalah jumlah seluruh botol yang pecah.",
+    "E": "Benar. Seluruh botol berjumlah 15 × 24 = 360, sehingga botol yang dapat dijual adalah 360 − 8 = 352."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

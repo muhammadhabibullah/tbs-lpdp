@@ -1,0 +1,8 @@
+{
+  "id": "6-verbal-002", "package": 6, "subtest": "verbal", "number": 2, "type": "sinonim",
+  "question_text": "PRESISI = ...", "image": null, "passage": null,
+  "options": [{"key":"A","text":"Ketepatan"},{"key":"B","text":"Kecepatan"},{"key":"C","text":"Keluwesan"},{"key":"D","text":"Kesepadanan"},{"key":"E","text":"Kerapian"}],
+  "correct_option": "A",
+  "explanations": {"A":"Benar. Presisi bermakna ketepatan atau kecermatan suatu ukuran maupun pelaksanaan.","B":"Kecepatan berkaitan dengan laju, sedangkan presisi berkaitan dengan ketepatan.","C":"Keluwesan adalah kemampuan menyesuaikan diri atau bergerak dengan lentur, bukan ketepatan.","D":"Kesepadanan berarti keadaan sebanding atau setara dan bukan makna presisi.","E":"Kerapian dapat menyertai pekerjaan yang presisi, tetapi kedua kata itu tidak bersinonim."},
+  "difficulty": "medium", "source": "codex-generated", "verified": true
+}

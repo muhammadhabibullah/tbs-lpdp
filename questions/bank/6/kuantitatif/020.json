@@ -1,0 +1,8 @@
+{
+  "id":"6-kuantitatif-020","package":6,"subtest":"kuantitatif","number":20,"type":"soal_cerita",
+  "question_text":"Sebuah drone memiliki baterai berkapasitas 24 kWh. Proses lepas landas menggunakan 2 kWh, dan drone harus mendarat dengan sisa energi 4 kWh. Selama terbang mendatar, drone menempuh 10 km untuk setiap 1 kWh. Jarak terbang mendatar maksimum drone tersebut adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"220 km"},{"key":"B","text":"200 km"},{"key":"C","text":"240 km"},{"key":"D","text":"160 km"},{"key":"E","text":"180 km"}],
+  "correct_option":"E",
+  "explanations":{"A":"Nilai 220 km diperoleh dari (24 − 2) × 10 dengan memperhitungkan energi lepas landas tetapi mengabaikan 4 kWh yang harus tersisa saat mendarat.","B":"Nilai 200 km diperoleh dari (24 − 4) × 10 dengan menyisakan energi pendaratan tetapi mengabaikan 2 kWh untuk lepas landas.","C":"Nilai 240 km diperoleh dari 24 × 10 dengan memakai seluruh kapasitas untuk terbang mendatar dan mengabaikan kedua pengurang.","D":"Nilai 160 km diperoleh dari (24 − 2 × 2 − 4) × 10 dengan mengurangkan energi lepas landas dua kali.","E":"Benar. Energi untuk terbang mendatar adalah 24 − 2 − 4 = 18 kWh, sehingga jarak maksimumnya 18 × 10 = 180 km."},
+  "difficulty":"easy","source":"codex-generated","verified":true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "5-pemecahan_masalah-005",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Lima laporan, yaitu R, S, T, U, dan V, ditempatkan ke dalam Lemari 1 atau Lemari 2. Setiap laporan masuk tepat satu lemari dan setiap lemari memuat sekurang-kurangnya dua laporan. Penempatan tunduk pada ketentuan berikut.\n(1) R dan S berada dalam lemari yang sama.\n(2) T berada dalam lemari yang berbeda dari R.\n(3) U berada dalam Lemari 1.\n(4) V berada dalam Lemari 2.\n\nJika R berada dalam Lemari 1, pasangan laporan yang pasti berada dalam Lemari 2 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "R dan T"},
+    {"key": "B", "text": "T dan V"},
+    {"key": "C", "text": "S dan U"},
+    {"key": "D", "text": "R dan V"},
+    {"key": "E", "text": "U dan V"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "R ditetapkan berada dalam Lemari 1 sehingga pasangan R dan T tidak mungkin sama-sama berada dalam Lemari 2.",
+    "B": "Benar. T harus berbeda lemari dari R sehingga T berada dalam Lemari 2, dan V memang ditetapkan di Lemari 2.",
+    "C": "S mengikuti R ke Lemari 1 dan U juga ditetapkan di Lemari 1, bukan Lemari 2.",
+    "D": "V berada dalam Lemari 2, tetapi R berdasarkan syarat tambahan berada dalam Lemari 1.",
+    "E": "V berada dalam Lemari 2, sedangkan U ditetapkan berada dalam Lemari 1."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-017",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nBagi peserta yang terlambat tidak diperkenankan untuk memasuki ke dalam ruang ujian.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Bagi peserta yang terlambat tidak diperkenankan memasuki ruang ujian."},
+    {"key": "B", "text": "Peserta yang terlambat tidak diperkenankan untuk memasuki ke dalam ruang ujian."},
+    {"key": "C", "text": "Peserta yang terlambat maka tidak diperkenankan memasuki ruang ujian."},
+    {"key": "D", "text": "Peserta yang terlambat tidak diperkenankan memasuki ruang ujian."},
+    {"key": "E", "text": "Peserta terlambat tidak diperkenankan masuk ke dalam di ruang ujian."}
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Preposisi 'bagi' membuat 'peserta yang terlambat' tidak berfungsi jelas sebagai subjek kalimat.",
+    "B": "Frasa 'memasuki ke dalam' boros karena verba 'memasuki' sudah mengandung makna bergerak ke dalam.",
+    "C": "Kata 'maka' tidak memiliki pasangan konjungsi bersyarat dan memutus hubungan subjek dengan predikat.",
+    "D": "Benar. Kalimat memiliki subjek dan predikat yang jelas serta menghilangkan preposisi dan kata yang berlebihan.",
+    "E": "Gabungan preposisi 'ke dalam di' bertumpuk dan tidak sesuai dengan kaidah pemakaian preposisi."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

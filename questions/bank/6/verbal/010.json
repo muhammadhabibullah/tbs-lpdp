@@ -1,0 +1,8 @@
+{
+  "id":"6-verbal-010","package":6,"subtest":"verbal","number":10,"type":"analogi",
+  "question_text":"KLOROFIL : FOTOSINTESIS = ... : ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"Insulin : Pencernaan"},{"key":"B","text":"Keratin : Pernapasan"},{"key":"C","text":"Hemoglobin : Pengangkutan oksigen"},{"key":"D","text":"Adrenalin : Pembekuan darah"},{"key":"E","text":"Kalsium : Ekskresi"}],
+  "correct_option":"C",
+  "explanations":{"A":"Insulin terutama mengatur kadar glukosa darah, bukan menjalankan proses pencernaan.","B":"Keratin membentuk jaringan pelindung seperti rambut dan kuku, bukan berperan utama dalam pernapasan.","C":"Benar. Klorofil berperan penting dalam fotosintesis, sebagaimana hemoglobin berperan penting dalam pengangkutan oksigen.","D":"Adrenalin memicu respons tubuh terhadap tekanan, bukan proses pembekuan darah.","E":"Kalsium berperan antara lain dalam pembentukan tulang dan kontraksi otot, bukan sebagai pelaksana ekskresi."},
+  "difficulty":"medium","source":"codex-generated","verified":true
+}

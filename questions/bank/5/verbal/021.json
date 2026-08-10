@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-021",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Kebijakan pengelolaan habitat yang paling sejalan dengan keseluruhan bacaan adalah ...",
+  "image": null,
+  "passage": "Jalan raya, perkebunan, dan permukiman dapat memecah habitat satwa liar menjadi petak-petak yang terpisah. Populasi yang terkurung di satu petak lebih sulit mencari pasangan, makanan, atau tempat berlindung ketika kondisi lingkungan berubah. Dalam jangka panjang, keterpisahan itu juga dapat mengurangi pertukaran gen antarpopulasi.\n\nKoridor satwa dibangun untuk menghubungkan kembali petak-petak tersebut. Koridor bukan sekadar jalur kosong. Efektivitasnya dipengaruhi oleh lebar jalur, kerapatan vegetasi penutup, jarak dari aktivitas manusia, dan kesesuaiannya dengan perilaku spesies sasaran. Jembatan tajuk, misalnya, dapat membantu satwa yang lebih sering bergerak di pepohonan, sedangkan terowongan bawah jalan cocok bagi sejumlah satwa darat.\n\nKamera otomatis digunakan untuk memantau satwa yang melintas. Jika koridor jarang dipakai, pengelola dapat memperbaiki vegetasi atau meninjau kembali letaknya. Meskipun demikian, koridor tidak dapat menggantikan habitat inti yang luas dan sehat. Koridor terutama berfungsi sebagai penghubung; manfaatnya akan terbatas apabila petak habitat yang dihubungkan terus menyusut.",
+  "options": [
+    {"key": "A", "text": "Mengganti seluruh habitat inti dengan jaringan koridor yang lebih panjang."},
+    {"key": "B", "text": "Membangun satu jenis koridor, lalu membiarkannya tanpa pemantauan lanjutan."},
+    {"key": "C", "text": "Melindungi habitat inti sambil membangun dan mengevaluasi koridor yang sesuai dengan satwa sasaran."},
+    {"key": "D", "text": "Memusatkan perlindungan hanya pada satwa yang mudah terekam kamera otomatis."},
+    {"key": "E", "text": "Mempersempit petak habitat asalkan setiap petak masih terhubung oleh suatu jalur."}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Bacaan menegaskan bahwa koridor tidak dapat menggantikan habitat inti yang luas dan sehat.",
+    "B": "Bentuk koridor harus sesuai dengan spesies sasaran dan pemakaiannya perlu dipantau untuk perbaikan.",
+    "C": "Benar. Pilihan ini menggabungkan perlindungan habitat inti, rancangan koridor yang sesuai, dan evaluasi pemakaiannya.",
+    "D": "Kemudahan terekam kamera bukan dasar untuk membatasi perlindungan hanya pada jenis satwa tertentu.",
+    "E": "Bacaan menyatakan manfaat koridor akan terbatas apabila petak habitat yang dihubungkan terus menyusut."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

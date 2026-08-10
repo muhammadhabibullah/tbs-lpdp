@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-009",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "MIKROSKOP : OBJEK RENIK = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Meter : Kain"},
+    {"key": "B", "text": "Radio : Suara"},
+    {"key": "C", "text": "Kompas : Utara"},
+    {"key": "D", "text": "Stetoskop : Denyut"},
+    {"key": "E", "text": "Teleskop : Benda langit"}
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Meter mengukur panjang kain, sedangkan mikroskop membuat objek renik dapat diamati dengan pembesaran.",
+    "B": "Radio menerima dan menghasilkan suara; radio tidak memperbesar suara sebagai objek pengamatan visual.",
+    "C": "Kompas menunjukkan arah utara, bukan membuat objek yang sulit terlihat menjadi dapat diamati.",
+    "D": "Stetoskop membantu mendengar bunyi tubuh, sedangkan hubungan pada stimulus adalah instrumen optik dengan objek visualnya.",
+    "E": "Benar. Mikroskop membantu mengamati objek renik, sebagaimana teleskop membantu mengamati benda langit yang jauh."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

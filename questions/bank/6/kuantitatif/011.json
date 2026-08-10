@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-011",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 11,
+  "type": "deret_angka",
+  "question_text": "2, 3, 7, 16, 32, 57, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "82"
+    },
+    {
+      "key": "B",
+      "text": "93"
+    },
+    {
+      "key": "C",
+      "text": "106"
+    },
+    {
+      "key": "D",
+      "text": "142"
+    },
+    {
+      "key": "E",
+      "text": "63"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 82 diperoleh dengan mengulang kenaikan 5², padahal kenaikan berikutnya harus 6².",
+    "B": "Benar. Kenaikan antarsuku adalah kuadrat berurutan: 1², 2², 3², 4², dan 5². Kenaikan berikutnya 6² = 36, sehingga 57 + 36 = 93.",
+    "C": "Salah. Nilai 106 diperoleh dengan melompat langsung ke kenaikan 7² dan melewati kenaikan 6².",
+    "D": "Salah. Nilai 142 diperoleh dengan melanjutkan dua langkah sekaligus sehingga memperoleh suku kedelapan.",
+    "E": "Salah. Nilai 63 diperoleh dengan menambahkan 6, bukan kuadratnya 6²."
+  },
+  "difficulty": "medium",
+  "source": "deret_angka.py",
+  "verified": true
+}

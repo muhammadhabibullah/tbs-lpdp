@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-008",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "aljabar",
+  "question_text": "Jika y = 4x² + 5x + 4, nilai y untuk x = −4 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−80"
+    },
+    {
+      "key": "B",
+      "text": "240"
+    },
+    {
+      "key": "C",
+      "text": "48"
+    },
+    {
+      "key": "D",
+      "text": "40"
+    },
+    {
+      "key": "E",
+      "text": "88"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai −80 diperoleh dengan menganggap (−4)² bernilai negatif, padahal kuadrat bilangan negatif selalu positif.",
+    "B": "Salah. Nilai 240 diperoleh dengan mengkuadratkan 4x sebagai satu kesatuan, yaitu (4 × (−4))², padahal yang dikuadratkan hanya x.",
+    "C": "Benar. y = 4 × (−4)² + 5 × (−4) + 4 = 64 − 20 + 4 = 48.",
+    "D": "Salah. Nilai 40 diperoleh dengan salah tanda pada tetapan + 4.",
+    "E": "Salah. Nilai 88 diperoleh dengan salah tanda pada suku + 5x ketika mensubstitusikan x = −4."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

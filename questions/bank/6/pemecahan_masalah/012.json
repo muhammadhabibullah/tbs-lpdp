@@ -1,0 +1,8 @@
+{
+  "id":"6-pemecahan_masalah-012","package":6,"subtest":"pemecahan_masalah","number":12,"type":"soal_cerita",
+  "question_text":"Dua tim inspeksi bergerak dari ujung yang berlawanan pada jalur sepanjang 275 km. Tim A berangkat pukul 08.00 dengan kecepatan 45 km/jam. Tim B berangkat pukul 09.00 dengan kecepatan 60 km/jam. Pada pukul 10.00, Tim A berhenti selama 20 menit, sedangkan Tim B terus bergerak. Jika kecepatan kedua tim tetap, mereka bertemu pada pukul ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"11.20"},{"key":"B","text":"11.00"},{"key":"C","text":"11.10"},{"key":"D","text":"11.30"},{"key":"E","text":"10.40"}],
+  "correct_option":"A",
+  "explanations":{"A":"Benar. Hingga pukul 10.20, Tim A menempuh 2 × 45 = 90 km dan Tim B menempuh 1 jam 20 menit × 60 = 80 km. Sisa jarak 275 − 170 = 105 km ditempuh saling mendekat dengan laju 45 + 60 = 105 km/jam, sehingga perlu satu jam lagi dan bertemu pukul 11.20.","B":"Pada pukul 11.00, Tim A baru menempuh 90 + 40/60 × 45 = 120 km dan Tim B 120 km; jumlah 240 km masih kurang 35 km.","C":"Pada pukul 11.10, total jarak kedua tim 127,5 + 130 = 257,5 km, sehingga keduanya belum bertemu.","D":"Pada pukul 11.30, total jarak kedua tim sudah 142,5 + 150 = 292,5 km, berarti waktu pertemuan telah terlewati.","E":"Pada pukul 10.40, Tim A baru menempuh 105 km dan Tim B 100 km; masih ada jarak 70 km di antara keduanya."},
+  "difficulty":"hard","source":"codex-generated","verified":true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-001",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 1,
+  "type": "aritmetika",
+  "question_text": "Nilai dari 4,25 − 1,75 + 0,45 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "2,95"
+    },
+    {
+      "key": "B",
+      "text": "6,45"
+    },
+    {
+      "key": "C",
+      "text": "2,5"
+    },
+    {
+      "key": "D",
+      "text": "2,05"
+    },
+    {
+      "key": "E",
+      "text": "4,7"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. 4,25 − 1,75 + 0,45 = 2,5 + 0,45 = 2,95.",
+    "B": "Salah. Nilai 6,45 diperoleh dengan menambahkan 1,75, padahal operasi keduanya adalah pengurangan.",
+    "C": "Salah. Nilai 2,5 diperoleh dengan berhenti setelah 4,25 − 1,75 dan mengabaikan + 0,45.",
+    "D": "Salah. Nilai 2,05 diperoleh dengan mengurangkan 0,45 pada langkah terakhir, bukan menambahkannya.",
+    "E": "Salah. Nilai 4,7 diperoleh dengan mengabaikan pengurangan 1,75."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

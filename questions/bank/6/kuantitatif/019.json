@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-019",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 19,
+  "type": "kecukupan_data",
+  "question_text": "Sebuah depo mengoperasikan bus listrik dan bus hibrida. Berapakah jumlah seluruh bus yang dioperasikan depo tersebut?\n(1) Bus listrik berjumlah 11 lebih banyak daripada bus hibrida.\n(2) Perbandingan banyak bus listrik dan bus hibrida adalah 3 : 2.\nPutuskan apakah pernyataan (1) dan (2) yang diberikan cukup untuk menjawab pertanyaan tersebut.",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup"
+    },
+    {
+      "key": "B",
+      "text": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup"
+    },
+    {
+      "key": "C",
+      "text": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup untuk menjawab pertanyaan"
+    },
+    {
+      "key": "E",
+      "text": "Pernyataan (1) dan (2) BERSAMA-SAMA tidak cukup untuk menjawab pertanyaan"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [banyak bus listrik = 33 bus, banyak bus hibrida = 22 bus] dan [banyak bus listrik = 34 bus, banyak bus hibrida = 23 bus] sama-sama memenuhinya, tetapi memberikan jumlah seluruh bus sebesar 55 bus dan 57 bus.",
+    "B": "Salah. Pernyataan (2) saja tidak cukup, sebab keadaan [banyak bus listrik = 33 bus, banyak bus hibrida = 22 bus] dan [banyak bus listrik = 36 bus, banyak bus hibrida = 24 bus] sama-sama memenuhinya, tetapi memberikan jumlah seluruh bus sebesar 55 bus dan 60 bus.",
+    "C": "Benar. Pernyataan (1) dan (2) bersama-sama menentukan jumlah seluruh bus secara tunggal, yaitu 55 bus; pernyataan (1) saja tidak cukup, sebab keadaan [banyak bus listrik = 33 bus, banyak bus hibrida = 22 bus] dan [banyak bus listrik = 34 bus, banyak bus hibrida = 23 bus] sama-sama memenuhinya, tetapi memberikan jumlah seluruh bus sebesar 55 bus dan 57 bus; pernyataan (2) saja tidak cukup, sebab keadaan [banyak bus listrik = 33 bus, banyak bus hibrida = 22 bus] dan [banyak bus listrik = 36 bus, banyak bus hibrida = 24 bus] sama-sama memenuhinya, tetapi memberikan jumlah seluruh bus sebesar 55 bus dan 60 bus.",
+    "D": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [banyak bus listrik = 33 bus, banyak bus hibrida = 22 bus] dan [banyak bus listrik = 34 bus, banyak bus hibrida = 23 bus] sama-sama memenuhinya, tetapi memberikan jumlah seluruh bus sebesar 55 bus dan 57 bus.",
+    "E": "Salah. Pernyataan (1) dan (2) bersama-sama menentukan jumlah seluruh bus secara tunggal, yaitu 55 bus."
+  },
+  "difficulty": "medium",
+  "source": "kecukupan_data.py",
+  "verified": true
+}

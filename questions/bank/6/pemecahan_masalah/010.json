@@ -1,0 +1,9 @@
+{
+  "id":"6-pemecahan_masalah-010","package":6,"subtest":"pemecahan_masalah","number":10,"type":"interpretasi_data",
+  "question_text":"Tabel tersebut menyajikan pergerakan persediaan paket pada lima depot selama satu pekan. Persediaan akhir dihitung dari persediaan awal ditambah paket diterima, kemudian dikurangi paket dikirim dan paket rusak.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...","image":null,
+  "passage":"Depot | Persediaan Awal | Diterima | Dikirim | Rusak\nA | 420 | 180 | 250 | 20\nB | 360 | 240 | 210 | 15\nC | 500 | 150 | 280 | 25\nD | 450 | 210 | 300 | 30\nE | 390 | 270 | 240 | 18",
+  "options":[{"key":"A","text":"Persediaan akhir Depot A lebih banyak daripada Depot C."},{"key":"B","text":"Persediaan akhir Depot B meningkat 25% dari persediaan awalnya."},{"key":"C","text":"Jumlah persediaan akhir kelima depot adalah 1.800 paket."},{"key":"D","text":"Depot yang menerima paket paling banyak juga mencatat paket rusak paling banyak."},{"key":"E","text":"Selisih persediaan akhir terbesar dan terkecil adalah 72 paket."}],
+  "correct_option":"E",
+  "explanations":{"A":"Persediaan akhir A = 420 + 180 − 250 − 20 = 330, sedangkan C = 500 + 150 − 280 − 25 = 345; A tidak lebih banyak.","B":"Persediaan akhir B = 375, hanya 15 lebih banyak dari 360 atau naik sekitar 4,17%, bukan 25%.","C":"Persediaan akhir A–E berturut-turut 330, 375, 345, 330, dan 402; jumlahnya 1.782, bukan 1.800.","D":"Depot E menerima paling banyak, yaitu 270 paket, tetapi paket rusak paling banyak tercatat di Depot D, yaitu 30 paket.","E":"Benar. Persediaan akhir terbesar adalah 402 di Depot E dan terkecil 330 di Depot A serta D, sehingga selisihnya 72 paket."},
+  "difficulty":"hard","source":"codex-generated","verified":true
+}

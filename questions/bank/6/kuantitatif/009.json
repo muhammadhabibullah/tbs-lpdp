@@ -1,0 +1,43 @@
+{
+  "id": "6-kuantitatif-009",
+  "package": 6,
+  "subtest": "kuantitatif",
+  "number": 9,
+  "type": "deret_angka",
+  "question_text": "−6, −4, −7, −28, −23, −29, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−196"
+    },
+    {
+      "key": "B",
+      "text": "−174"
+    },
+    {
+      "key": "C",
+      "text": "−116"
+    },
+    {
+      "key": "D",
+      "text": "−203"
+    },
+    {
+      "key": "E",
+      "text": "−36"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai −196 diperoleh dengan menerapkan dua operasi sekaligus dalam satu langkah (kali 7 lalu tambah 7).",
+    "B": "Salah. Nilai −174 diperoleh dengan memakai bilangan 6 lagi, padahal bilangan operasinya naik satu setiap langkah sehingga giliran ini memakai 7.",
+    "C": "Salah. Nilai −116 diperoleh dengan mengulang bilangan 4 dari siklus pertama alih-alih melanjutkan hitungan ke 7.",
+    "D": "Benar. Operasinya berulang dalam siklus tiga langkah — tambah, kurangi, lalu kali — sementara bilangan operasinya naik satu setiap langkah dan tidak ikut diulang: +2, −3, ×4, +5, −6, ×7. Langkah keenam adalah kali 7, sehingga −29 × 7 = −203.",
+    "E": "Salah. Nilai −36 diperoleh dengan menerapkan operasi kurangi 7, padahal langkah ketiga dalam setiap siklus adalah kali."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

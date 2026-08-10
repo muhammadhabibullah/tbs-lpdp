@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-008",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "aljabar",
+  "question_text": "Diketahui x + y = 20 dan xy = 33. Nilai dari x² + y² adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "334"
+    },
+    {
+      "key": "B",
+      "text": "400"
+    },
+    {
+      "key": "C",
+      "text": "466"
+    },
+    {
+      "key": "D",
+      "text": "268"
+    },
+    {
+      "key": "E",
+      "text": "367"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. x² + y² = (x + y)² − 2xy = 20² − 2 × 33 = 400 − 66 = 334.",
+    "B": "Salah. Nilai 400 diperoleh dengan menghitung (x + y)² = 400 dan berhenti di situ, tanpa mengurangkan 2xy.",
+    "C": "Salah. Nilai 466 diperoleh dengan menambahkan 2xy, padahal suku itu harus dipindahkan sehingga dikurangkan.",
+    "D": "Salah. Nilai 268 diperoleh dengan menghitung (x − y)² = (x + y)² − 4xy, yang merupakan besaran lain.",
+    "E": "Salah. Nilai 367 diperoleh dengan mengurangkan xy satu kali, padahal penjabaran (x + y)² memuat 2xy."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

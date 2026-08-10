@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-016",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 16,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nP = 3⁵\nQ = 5³\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Jumlah P dan Q kurang daripada 363"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. P = 243 dan Q = 125, sehingga P > Q.",
+    "B": "Salah. P = 243 dan Q = 125, sehingga P > Q; nilai Q tidak melebihi nilai P (125 tidak lebih besar daripada 243).",
+    "C": "Salah. P = 243 dan Q = 125, sehingga P > Q; kedua nilai tidak sama (243 ≠ 125).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 243 dan Q = 125), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 243 dan Q = 125, jumlahnya 368, tidak kurang daripada 363."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-005",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "OPTIMISTIS >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Penuh harapan"},
+    {"key": "B", "text": "Percaya diri"},
+    {"key": "C", "text": "Realistis"},
+    {"key": "D", "text": "Pesimistis"},
+    {"key": "E", "text": "Pasti"}
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Penuh harapan searah dengan sikap optimistis, bukan lawan katanya.",
+    "B": "Percaya diri dapat menyertai optimisme dan tidak menyatakan sikap yang berlawanan.",
+    "C": "Realistis berarti berpijak pada kenyataan; sikap ini tidak otomatis berlawanan dengan optimistis.",
+    "D": "Benar. Pesimistis adalah sikap mudah melihat kemungkinan buruk dan merupakan antonim optimistis.",
+    "E": "Pasti menyatakan kepastian, sedangkan optimistis menyatakan harapan positif; keduanya bukan pasangan antonim."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

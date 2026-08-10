@@ -523,6 +523,104 @@ def parallelogram(*, base_u: float, side_u: float, height_u: float, unit: str,
     )
 
 
+def annular_track(*, outer_diameter_u: float, track_width_u: float, unit: str,
+                  target_d: float = 250) -> Drawing:
+    """An annular track from its outer diameter and radial width.
+
+    Both dimensions are stated in the stem. The inner radius and the annulus area
+    are deliberately absent because deriving them is the work of the item.
+    """
+    outer_r_u = outer_diameter_u / 2
+    inner_r_u = outer_r_u - track_width_u
+    if inner_r_u <= 0:
+        raise ValueError("track width must be smaller than the outer radius")
+
+    scale = target_d / outer_diameter_u
+    outer_r, inner_r = outer_r_u * scale, inner_r_u * scale
+    cx, cy = PAD + outer_r, PAD + outer_r
+    diameter_label = f"{str(_num(outer_diameter_u)).replace('.', ',')} {unit}"
+    width_label = f"{str(_num(track_width_u)).replace('.', ',')} {unit}"
+
+    parts = [
+        f'<circle cx="{_f(cx)}" cy="{_f(cy)}" r="{_f(outer_r)}" '
+        f'fill="{FILL}" stroke="{STROKE}" stroke-width="2"/>',
+        f'<circle cx="{_f(cx)}" cy="{_f(cy)}" r="{_f(inner_r)}" '
+        f'fill="white" stroke="{STROKE}" stroke-width="2"/>',
+        # A radial dimension for the stated track width.
+        *_dim_h(cx + inner_r, cx + outer_r, cy, width_label, below=False),
+        # The full outside diameter sits below the shape so it cannot be mistaken
+        # for the inner opening's diameter.
+        *_dim_h(cx - outer_r, cx + outer_r, cy + outer_r + GAP + TICK,
+                diameter_label),
+    ]
+    return Drawing(
+        width=cx + outer_r + PAD,
+        height=cy + outer_r + GAP + TICK + CAP + 6 + PAD - 8,
+        parts=parts,
+        note=(f"lintasan cincin: diameter luar {_num(outer_diameter_u)} {unit}, lebar "
+              f"radial {_num(track_width_u)} {unit}; skala {_f(scale)} px per {unit}. "
+              "Jari-jari dalam dan luas lintasan TIDAK dilabeli."),
+    )
+
+
+def right_triangle_parallel_cut(*, base_u: float, height_u: float,
+                                end_segment_u: float, unit: str,
+                                target_w: float = 290, target_h: float = 210) -> Drawing:
+    """Right triangle with a segment through the base parallel to its height.
+
+    The large legs and the short terminal base segment are given. The parallel
+    segment's length follows by similarity and is never printed in the figure.
+    """
+    if not 0 < end_segment_u < base_u:
+        raise ValueError("end segment must lie strictly inside the triangle base")
+
+    scale = min(target_w / base_u, target_h / height_u)
+    w, h = base_u * scale, height_u * scale
+    left, top = 66.0, PAD
+    base_y = top + h
+    A, B, C = (left, base_y), (left + w, base_y), (left, top)
+    D = (B[0] - end_segment_u * scale, base_y)
+    cut_height_u = height_u * end_segment_u / base_u
+    E = (D[0], base_y - cut_height_u * scale)
+
+    marker_y1 = top + h * 0.44
+    marker_y2 = (D[1] + E[1]) / 2
+    parts = [
+        _polygon([A, C, E, D], FILL),
+        _polygon([D, E, B], FILL_TOP),
+        # Right angle at A.
+        f'<polyline points="{_f(A[0])},{_f(A[1] - 12)} '
+        f'{_f(A[0] + 12)},{_f(A[1] - 12)} {_f(A[0] + 12)},{_f(A[1])}" '
+        f'fill="none" stroke="{INK}" stroke-width="1.4"/>',
+        # Matching parallel marks on AC and DE.
+        f'<line x1="{_f(A[0] - 5)}" y1="{_f(marker_y1 + 5)}" '
+        f'x2="{_f(A[0] + 5)}" y2="{_f(marker_y1 - 5)}" '
+        f'stroke="{INK}" stroke-width="1.5"/>',
+        f'<line x1="{_f(D[0] - 5)}" y1="{_f(marker_y2 + 5)}" '
+        f'x2="{_f(D[0] + 5)}" y2="{_f(marker_y2 - 5)}" '
+        f'stroke="{INK}" stroke-width="1.5"/>',
+        *_dim_h(A[0], B[0], base_y + GAP + TICK,
+                f"{_num(base_u)} {unit}"),
+        *_dim_v(C[1], A[1], A[0] - GAP - TICK,
+                f"{_num(height_u)} {unit}"),
+        _text((D[0] + B[0]) / 2, base_y - 8,
+              f"{_num(end_segment_u)} {unit}"),
+        _text(A[0] - 13, A[1] + 2, "A", anchor="end"),
+        _text(B[0] + 11, B[1] + 2, "B", anchor="start"),
+        _text(C[0] - 10, C[1] + 2, "C", anchor="end"),
+        _text(D[0], D[1] + 20, "D"),
+        _text(E[0] + 10, E[1] - 6, "E", anchor="start"),
+    ]
+    return Drawing(
+        width=B[0] + 46,
+        height=base_y + GAP + TICK + CAP + 6 + PAD - 8,
+        parts=parts,
+        note=(f"segitiga siku-siku ABC: AB {_num(base_u)} {unit}, AC "
+              f"{_num(height_u)} {unit}, DB {_num(end_segment_u)} {unit}, DE sejajar "
+              f"AC; skala {_f(scale)} px per {unit}. DE dan luas ACED TIDAK dilabeli."),
+    )
+
+
 def triangular_prism(*, leg_front_u: float, leg_depth_u: float, height_u: float,
                      unit: str, target_w: float = 160, target_h: float = 190) -> Drawing:
     """Upright prism on a right-triangle base, in oblique projection.
@@ -573,6 +671,94 @@ def triangular_prism(*, leg_front_u: float, leg_depth_u: float, height_u: float,
               f"{_num(leg_depth_u)} {unit}, tinggi {_num(height_u)} {unit}, proyeksi "
               f"miring {_f(DEPTH_ANGLE)}°; skala {_f(scale)} px per {unit}. "
               f"Sisi miring alas TIDAK dilabeli."),
+    )
+
+
+def kite(*, d_vertical_u: float, d_horizontal_u: float, unit: str,
+         target_w: float = 250, target_h: float = 210) -> Drawing:
+    """Kite from its perpendicular diagonals.
+
+    Both diagonals are stated in the stem and therefore labelled. Their product
+    and the resulting area are never printed in the picture.
+    """
+    scale = min(target_w / d_horizontal_u, target_h / d_vertical_u)
+    w, h = d_horizontal_u * scale, d_vertical_u * scale
+    cx, cy = PAD + w / 2, PAD + h * 0.43
+    left, right = (cx - w / 2, cy), (cx + w / 2, cy)
+    top, bottom = (cx, cy - h * 0.43), (cx, cy + h * 0.57)
+
+    parts = [
+        _polygon([top, right, bottom, left], FILL),
+        f'<line x1="{_f(top[0])}" y1="{_f(top[1])}" x2="{_f(bottom[0])}" '
+        f'y2="{_f(bottom[1])}" stroke="{INK_SOFT}" stroke-width="1.5" '
+        f'stroke-dasharray="5 4"/>',
+        f'<line x1="{_f(left[0])}" y1="{_f(left[1])}" x2="{_f(right[0])}" '
+        f'y2="{_f(right[1])}" stroke="{INK_SOFT}" stroke-width="1.5" '
+        f'stroke-dasharray="5 4"/>',
+        _text(cx + 9, top[1] + h * 0.24, f"{_num(d_vertical_u)} {unit}",
+              anchor="start"),
+        _text(cx + w * 0.25, cy - 9, f"{_num(d_horizontal_u)} {unit}"),
+    ]
+    return Drawing(
+        width=right[0] + PAD,
+        height=bottom[1] + PAD,
+        parts=parts,
+        note=(f"layang-layang dengan diagonal {_num(d_vertical_u)} dan "
+              f"{_num(d_horizontal_u)} {unit}; skala {_f(scale)} px per {unit}. "
+              "Luas TIDAK dilabeli."),
+    )
+
+
+def square_pyramid(*, base_u: float, height_u: float, unit: str,
+                   target_base: float = 170, target_h: float = 180) -> Drawing:
+    """Right square pyramid in oblique projection.
+
+    The base side and perpendicular height are given by the stem. The slant
+    height is derived to answer the item, so it is intentionally absent.
+    """
+    scale = min(target_base / base_u, target_h / height_u)
+    side = base_u * scale
+    depth = side * DEPTH_FACTOR
+    dx = depth * math.cos(math.radians(DEPTH_ANGLE))
+    dy = depth * math.sin(math.radians(DEPTH_ANGLE))
+
+    left = 58.0
+    base_top = PAD + height_u * scale + 16
+    back_left = (left + dx, base_top)
+    back_right = (left + side + dx, base_top)
+    front_left = (left, base_top + dy)
+    front_right = (left + side, base_top + dy)
+    centre = ((back_left[0] + front_right[0]) / 2,
+              (back_left[1] + front_right[1]) / 2)
+    apex = (centre[0], centre[1] - height_u * scale)
+    inside = centre
+
+    parts = [
+        _polygon([apex, front_right, front_left], FILL),
+        _polygon([apex, back_right, front_right], FILL_SIDE),
+        f'<line x1="{_f(apex[0])}" y1="{_f(apex[1])}" x2="{_f(back_left[0])}" '
+        f'y2="{_f(back_left[1])}" stroke="{HIDDEN}" stroke-width="1.5" '
+        f'stroke-dasharray="5 4"/>',
+        f'<line x1="{_f(back_left[0])}" y1="{_f(back_left[1])}" '
+        f'x2="{_f(back_right[0])}" y2="{_f(back_right[1])}" stroke="{HIDDEN}" '
+        f'stroke-width="1.5" stroke-dasharray="5 4"/>',
+        f'<line x1="{_f(back_left[0])}" y1="{_f(back_left[1])}" '
+        f'x2="{_f(front_left[0])}" y2="{_f(front_left[1])}" stroke="{HIDDEN}" '
+        f'stroke-width="1.5" stroke-dasharray="5 4"/>',
+        f'<line x1="{_f(apex[0])}" y1="{_f(apex[1])}" x2="{_f(centre[0])}" '
+        f'y2="{_f(centre[1])}" stroke="{INK_SOFT}" stroke-width="1.5" '
+        f'stroke-dasharray="5 4"/>',
+        _text(apex[0] + 9, (apex[1] + centre[1]) / 2 + CAP / 2,
+              f"{_num(height_u)} {unit}", anchor="start"),
+        _label_beside(front_left, front_right, inside, f"{_num(base_u)} {unit}"),
+    ]
+    return Drawing(
+        width=back_right[0] + 48,
+        height=front_right[1] + 38,
+        parts=parts,
+        note=(f"limas segiempat tegak: sisi alas {_num(base_u)} {unit}, tinggi "
+              f"{_num(height_u)} {unit}; skala {_f(scale)} px per {unit}. "
+              "Tinggi sisi tegak TIDAK dilabeli."),
     )
 
 
@@ -956,6 +1142,15 @@ FIGURES: list[Figure] = [
         base_u=25, side_u=17, height_u=15, unit="cm")),
     Figure("4-kuantitatif-025", "prisma-segitiga.svg", lambda: triangular_prism(
         leg_front_u=12, leg_depth_u=9, height_u=20, unit="cm")),
+    Figure("5-kuantitatif-024", "layang-layang.svg", lambda: kite(
+        d_vertical_u=18, d_horizontal_u=12, unit="cm")),
+    Figure("5-kuantitatif-025", "limas-segiempat.svg", lambda: square_pyramid(
+        base_u=10, height_u=12, unit="cm")),
+    Figure("6-kuantitatif-024", "lintasan-cincin.svg", lambda: annular_track(
+        outer_diameter_u=28, track_width_u=3.5, unit="m")),
+    Figure("6-kuantitatif-025", "segitiga-potongan-sejajar.svg",
+           lambda: right_triangle_parallel_cut(
+               base_u=24, height_u=18, end_segment_u=8, unit="cm")),
 ]
 
 

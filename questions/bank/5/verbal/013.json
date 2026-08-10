@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-013",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "REM : LAJU = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Bahan bakar : Jarak"},
+    {"key": "B", "text": "Insulator : Panas"},
+    {"key": "C", "text": "Layar : Angin"},
+    {"key": "D", "text": "Lensa : Cahaya"},
+    {"key": "E", "text": "Pengeras suara : Bunyi"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Bahan bakar memungkinkan kendaraan menempuh jarak, bukan menghambat jarak sebagaimana rem mengurangi laju.",
+    "B": "Benar. Rem menghambat laju kendaraan, sebagaimana insulator menghambat perpindahan panas.",
+    "C": "Layar memanfaatkan angin untuk menggerakkan perahu, bukan terutama menghambat angin.",
+    "D": "Lensa membiaskan atau memusatkan cahaya, sedangkan rem berfungsi menahan besaran yang dipasangkan dengannya.",
+    "E": "Pengeras suara memperkuat bunyi sehingga arahnya berlawanan dengan fungsi rem yang mengurangi laju."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-018",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nPanitia telah menyiapkan ruang, mencetak kartu peserta, dan jadwal dibagikan kepada peserta.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Panitia telah menyiapkan ruang, mencetak kartu peserta, dan membagikan jadwal kepada peserta."},
+    {"key": "B", "text": "Telah disiapkan ruang, mencetak kartu peserta, dan jadwal dibagikan kepada peserta oleh panitia."},
+    {"key": "C", "text": "Panitia telah menyiapkan ruang, pencetakan kartu peserta, dan membagikan jadwal kepada peserta."},
+    {"key": "D", "text": "Panitia telah menyiapkan ruang dan mencetak kartu peserta, tetapi membagikan jadwal kepada peserta."},
+    {"key": "E", "text": "Panitia telah menyiapkan daripada ruang, mencetak kartu peserta, dan membagikan jadwal kepada peserta."}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Ketiga predikat 'menyiapkan', 'mencetak', dan 'membagikan' sejajar serta memiliki subjek yang sama, yaitu panitia.",
+    "B": "Bentuk pasif 'disiapkan' dicampur dengan bentuk aktif 'mencetak' dan 'dibagikan' sehingga unsur perinciannya tidak sejajar.",
+    "C": "Nomina 'pencetakan' tidak sejajar dengan verba 'menyiapkan' dan 'membagikan'.",
+    "D": "Konjungsi 'tetapi' menyatakan pertentangan, padahal pembagian jadwal merupakan kegiatan yang setara dengan dua kegiatan sebelumnya.",
+    "E": "Kata 'daripada' digunakan untuk perbandingan, bukan untuk menghubungkan verba 'menyiapkan' dengan objek 'ruang'."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

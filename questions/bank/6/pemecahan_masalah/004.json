@@ -1,0 +1,8 @@
+{
+  "id":"6-pemecahan_masalah-004","package":6,"subtest":"pemecahan_masalah","number":4,"type":"logika_analitis",
+  "question_text":"Enam buku, yaitu F, G, H, J, K, dan L, disusun pada enam posisi pajang dari kiri ke kanan. Susunan tunduk pada ketentuan berikut.\n(1) G berada sebelum J.\n(2) K berada tepat dua posisi setelah F.\n(3) H berada setelah J tetapi sebelum L.\n\nApabila G berada pada posisi ke-2, pernyataan yang pasti benar adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"H berada pada posisi ke-4."},{"key":"B","text":"J berada pada posisi ke-4."},{"key":"C","text":"K berada pada posisi ke-5."},{"key":"D","text":"L berada pada posisi ke-5."},{"key":"E","text":"F berada pada posisi ke-3."}],
+  "correct_option":"B",
+  "explanations":{"A":"H harus berada setelah J; pada susunan yang memenuhi seluruh syarat H justru menempati posisi ke-5.","B":"Benar. Rantai J–H–L harus mengisi tiga posisi setelah G, yaitu posisi 4–6, sedangkan pasangan F–K dengan selang dua posisi hanya dapat mengisi posisi 1 dan 3. Jadi J pasti di posisi ke-4.","C":"K berada dua posisi setelah F. Setelah posisi 4–6 dipakai J–H–L, F dan K harus berada pada posisi 1 dan 3 sehingga K bukan posisi ke-5.","D":"L harus sesudah H sehingga pada satu-satunya susunan yang mungkin L berada pada posisi ke-6.","E":"F harus mendahului K dengan selang dua posisi; pasangan yang tersedia adalah posisi 1 dan 3, sehingga F berada di posisi ke-1."},
+  "difficulty":"hard","source":"codex-generated","verified":true
+}

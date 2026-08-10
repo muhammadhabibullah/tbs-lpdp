@@ -1,0 +1,8 @@
+{
+  "id":"6-verbal-016","package":6,"subtest":"verbal","number":16,"type":"silogisme",
+  "question_text":"Premis 1: Jika akses darurat diaktifkan, catatan audit terkunci secara otomatis.\nPremis 2: Jika catatan audit terkunci secara otomatis, administrator menerima notifikasi keamanan.\nPremis 3: Administrator tidak menerima notifikasi keamanan.\n\nSimpulan yang tepat adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"Catatan audit terkunci secara otomatis."},{"key":"B","text":"Sistem pengirim notifikasi keamanan mengalami kerusakan."},{"key":"C","text":"Akses darurat tidak diaktifkan."},{"key":"D","text":"Akses darurat diaktifkan tanpa mengunci catatan audit."},{"key":"E","text":"Administrator belum memeriksa catatan audit."}],
+  "correct_option":"C",
+  "explanations":{"A":"Jika catatan audit terkunci, administrator seharusnya menerima notifikasi; premis ketiga meniadakan akibat tersebut.","B":"Premis tidak menyatakan kerusakan sistem, melainkan hanya menyatakan bahwa notifikasi tidak diterima.","C":"Benar. Tidak diterimanya notifikasi berarti catatan audit tidak terkunci; karena pengaktifan akses darurat pasti mengunci catatan audit, akses darurat tidak diaktifkan.","D":"Pilihan ini bertentangan langsung dengan premis pertama yang menyatakan bahwa pengaktifan akses darurat selalu mengunci catatan audit.","E":"Penerimaan notifikasi dan pemeriksaan catatan audit merupakan hal berbeda; premis tidak membahas apakah audit telah diperiksa."},
+  "difficulty":"hard","source":"codex-generated","verified":true
+}

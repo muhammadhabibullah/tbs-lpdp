@@ -1,0 +1,8 @@
+{
+  "id": "6-verbal-006", "package": 6, "subtest": "verbal", "number": 6, "type": "antonim",
+  "question_text": "RESIPROKAL >< ...", "image": null, "passage": null,
+  "options": [{"key":"A","text":"Berbalasan"},{"key":"B","text":"Sepihak"},{"key":"C","text":"Setara"},{"key":"D","text":"Bersamaan"},{"key":"E","text":"Berkelanjutan"}],
+  "correct_option": "B",
+  "explanations": {"A":"Berbalasan merupakan makna resiprokal, yaitu terjadi timbal balik antara dua pihak.","B":"Benar. Sepihak berarti hanya berasal dari satu pihak dan berlawanan dengan resiprokal yang timbal balik.","C":"Setara menyatakan kesamaan tingkat, bukan lawan dari hubungan timbal balik.","D":"Bersamaan berkaitan dengan waktu terjadinya dan tidak meniadakan sifat resiprokal.","E":"Berkelanjutan berkaitan dengan durasi, sedangkan resiprokal berkaitan dengan arah hubungan."},
+  "difficulty": "medium", "source": "codex-generated", "verified": true
+}

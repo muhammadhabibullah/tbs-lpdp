@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-019",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 19,
+  "type": "kecukupan_data",
+  "question_text": "Rata-rata berat badan peserta pria dalam sebuah pelatihan adalah 80 kg, sedangkan rata-rata berat badan peserta wanita adalah 68 kg. Berapakah banyak peserta pria dalam pelatihan tersebut?\n(1) Banyak peserta pria adalah 20 orang.\n(2) Rata-rata berat badan seluruh peserta adalah 76 kg.\nPutuskan apakah pernyataan (1) dan (2) yang diberikan cukup untuk menjawab pertanyaan tersebut.",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup"
+    },
+    {
+      "key": "B",
+      "text": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup"
+    },
+    {
+      "key": "C",
+      "text": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup untuk menjawab pertanyaan"
+    },
+    {
+      "key": "E",
+      "text": "Pernyataan (1) dan (2) BERSAMA-SAMA tidak cukup untuk menjawab pertanyaan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Pernyataan (1) menentukan banyak peserta pria secara tunggal, yaitu 20 orang; pernyataan (2) saja tidak cukup, sebab keadaan [banyak peserta pria = 20 orang, banyak peserta wanita = 10 orang] dan [banyak peserta pria = 22 orang, banyak peserta wanita = 11 orang] sama-sama memenuhinya, tetapi memberikan banyak peserta pria sebesar 20 orang dan 22 orang.",
+    "B": "Salah. Pernyataan (2) saja tidak cukup, sebab keadaan [banyak peserta pria = 20 orang, banyak peserta wanita = 10 orang] dan [banyak peserta pria = 22 orang, banyak peserta wanita = 11 orang] sama-sama memenuhinya, tetapi memberikan banyak peserta pria sebesar 20 orang dan 22 orang.",
+    "C": "Salah. Pernyataan (1) menentukan banyak peserta pria secara tunggal, yaitu 20 orang.",
+    "D": "Salah. Pernyataan (2) saja tidak cukup, sebab keadaan [banyak peserta pria = 20 orang, banyak peserta wanita = 10 orang] dan [banyak peserta pria = 22 orang, banyak peserta wanita = 11 orang] sama-sama memenuhinya, tetapi memberikan banyak peserta pria sebesar 20 orang dan 22 orang.",
+    "E": "Salah. Pernyataan (1) dan (2) bersama-sama menentukan banyak peserta pria secara tunggal, yaitu 20 orang."
+  },
+  "difficulty": "medium",
+  "source": "kecukupan_data.py",
+  "verified": true
+}

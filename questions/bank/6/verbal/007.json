@@ -1,0 +1,8 @@
+{
+  "id": "6-verbal-007", "package": 6, "subtest": "verbal", "number": 7, "type": "antonim",
+  "question_text": "INHEREN >< ...", "image": null, "passage": null,
+  "options": [{"key":"A","text":"Intrinsik"},{"key":"B","text":"Melekat"},{"key":"C","text":"Ekstrinsik"},{"key":"D","text":"Hakiki"},{"key":"E","text":"Integral"}],
+  "correct_option": "C",
+  "explanations": {"A":"Intrinsik berarti berasal dari atau terkandung di dalam, sehingga searah dengan inheren.","B":"Melekat merupakan padanan makna inheren, bukan lawan katanya.","C":"Benar. Ekstrinsik berarti berasal dari luar, berlawanan dengan inheren yang menjadi bagian atau sifat yang melekat dari dalam.","D":"Hakiki mengacu pada sifat yang mendasar atau sesungguhnya, sehingga bukan lawan inheren.","E":"Integral berarti merupakan bagian yang tidak terpisahkan, sehingga dekat dengan makna inheren."},
+  "difficulty": "hard", "source": "codex-generated", "verified": true
+}

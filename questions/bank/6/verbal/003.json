@@ -1,0 +1,8 @@
+{
+  "id": "6-verbal-003", "package": 6, "subtest": "verbal", "number": 3, "type": "sinonim",
+  "question_text": "EKLEKTIK = ...", "image": null, "passage": null,
+  "options": [{"key":"A","text":"Terikat pada satu mazhab"},{"key":"B","text":"Bersifat seragam"},{"key":"C","text":"Mudah berubah tanpa dasar"},{"key":"D","text":"Menolak unsur asing"},{"key":"E","text":"Memilih dan memadukan beragam unsur"}],
+  "correct_option": "E",
+  "explanations": {"A":"Terikat pada satu mazhab bertentangan dengan sifat eklektik yang mengambil unsur dari berbagai sumber.","B":"Seragam berarti sama coraknya, sedangkan eklektik justru memadukan unsur yang beragam.","C":"Eklektik melibatkan pemilihan unsur yang dianggap terbaik, bukan perubahan tanpa dasar.","D":"Menolak unsur asing berlawanan dengan keterbukaan eklektik terhadap beragam sumber.","E":"Benar. Eklektik berarti bersifat memilih yang terbaik dari berbagai sumber lalu memadukannya."},
+  "difficulty": "hard", "source": "codex-generated", "verified": true
+}

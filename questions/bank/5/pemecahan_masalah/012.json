@@ -1,0 +1,28 @@
+{
+  "id": "5-pemecahan_masalah-012",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Sebuah bengkel harus menghasilkan 720 komponen yang lolos pemeriksaan. Mesin A mulai bekerja dengan laju 30 komponen per menit. Lima menit kemudian, Mesin B mulai membantu dengan laju 20 komponen per menit. Mesin B bekerja selama tepat 10 menit lalu berhenti, sedangkan Mesin A terus bekerja. Jika 10% dari seluruh komponen yang dihasilkan gagal pemeriksaan, berapa lama waktu sejak Mesin A mulai bekerja hingga tersedia 720 komponen yang lolos?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "14 menit 24 detik"},
+    {"key": "B", "text": "16 menit"},
+    {"key": "C", "text": "20 menit"},
+    {"key": "D", "text": "24 menit"},
+    {"key": "E", "text": "26 menit 40 detik"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Waktu 14 menit 24 detik diperoleh dari 720 : 50, yaitu mengabaikan 10% kegagalan dan menganggap kedua mesin bekerja bersama sejak awal.",
+    "B": "Waktu 16 menit diperoleh dari 800 : 50; cara ini sudah memperhitungkan 800 komponen kotor, tetapi menganggap kedua mesin bekerja bersama sepanjang waktu.",
+    "C": "Benar. Agar 90% hasil sama dengan 720, perlu 800 komponen. Dalam 15 menit pertama A menghasilkan 450 dan B selama 10 menit menghasilkan 200, total 650. Sisa 150 dibuat A dalam 5 menit, sehingga total waktunya 20 menit.",
+    "D": "Waktu 24 menit diperoleh dari 720 : 30, yaitu mengabaikan komponen gagal dan seluruh kontribusi Mesin B.",
+    "E": "Waktu 26 menit 40 detik diperoleh dari 800 : 30, yaitu memperhitungkan komponen gagal tetapi mengabaikan seluruh kontribusi Mesin B."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

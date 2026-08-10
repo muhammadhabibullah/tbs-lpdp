@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-011",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "EDITOR : NASKAH = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Kurator : Koleksi"},
+    {"key": "B", "text": "Arsip : Arsiparis"},
+    {"key": "C", "text": "Hakim : Terdakwa"},
+    {"key": "D", "text": "Kasir : Pembeli"},
+    {"key": "E", "text": "Penulis : Penerbit"}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Editor menyeleksi dan menata naskah untuk penyajian, sebagaimana kurator menyeleksi dan menata koleksi.",
+    "B": "Arsip adalah objek yang dikelola arsiparis, tetapi urutan pasangan ini terbalik dari profesi lalu objek pada stimulus.",
+    "C": "Hakim memeriksa perkara dan memutus hukum, bukan menata terdakwa sebagai bahan penyajian.",
+    "D": "Kasir melayani transaksi pembeli; pembeli bukan bahan yang diseleksi dan ditata oleh kasir.",
+    "E": "Penulis menghasilkan naskah dan penerbit adalah organisasi yang menerbitkannya, sehingga pasangan ini bukan profesi dengan objek suntingannya."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

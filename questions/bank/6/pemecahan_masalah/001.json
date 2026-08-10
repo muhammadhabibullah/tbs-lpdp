@@ -1,0 +1,43 @@
+{
+  "id": "6-pemecahan_masalah-001",
+  "package": 6,
+  "subtest": "pemecahan_masalah",
+  "number": 1,
+  "type": "peluang_kombinatorik",
+  "question_text": "Sebanyak 6 orang, termasuk Nara dan Riko, akan duduk mengelilingi sebuah meja bundar. Susunan yang hanya berbeda karena diputar dianggap sama. Jika Nara dan Riko tidak boleh duduk berdampingan, banyak susunan tempat duduk yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "120"
+    },
+    {
+      "key": "B",
+      "text": "48"
+    },
+    {
+      "key": "C",
+      "text": "72"
+    },
+    {
+      "key": "D",
+      "text": "24"
+    },
+    {
+      "key": "E",
+      "text": "96"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 120 diperoleh dengan menghitung seluruh susunan melingkar tanpa mengeluarkan susunan ketika Nara dan Riko berdampingan.",
+    "B": "Salah. Nilai 48 diperoleh dengan menghitung susunan ketika Nara dan Riko justru berdampingan.",
+    "C": "Benar. Seluruh susunan melingkar berjumlah (6 − 1)! = 120. Jika Nara dan Riko berdampingan, keduanya dipandang sebagai satu blok yang dapat bertukar urutan, sehingga ada 2 × (6 − 2)! = 48 susunan. Jadi banyak susunan yang tidak berdampingan adalah 120 − 48 = 72.",
+    "D": "Salah. Nilai 24 diperoleh dengan menggabungkan Nara dan Riko sebagai satu blok tetapi melupakan dua urutan di dalam blok, lalu menjawab banyak susunan berdampingan.",
+    "E": "Salah. Nilai 96 diperoleh dengan mengurangi susunan berdampingan hanya untuk satu urutan Nara–Riko dan melupakan urutan Riko–Nara."
+  },
+  "difficulty": "medium",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

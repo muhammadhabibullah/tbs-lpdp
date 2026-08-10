@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-009",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 9,
+  "type": "deret_angka",
+  "question_text": "5, 15, 45, 135, 405, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "1.215"
+    },
+    {
+      "key": "B",
+      "text": "1.620"
+    },
+    {
+      "key": "C",
+      "text": "3.645"
+    },
+    {
+      "key": "D",
+      "text": "415"
+    },
+    {
+      "key": "E",
+      "text": "675"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Setiap suku diperoleh dengan mengalikan suku sebelumnya dengan 3: 405 × 3 = 1.215.",
+    "B": "Salah. Nilai 1.620 diperoleh dengan menggunakan rasio 4, padahal rasio deret ini 3.",
+    "C": "Salah. Nilai 3.645 diperoleh dengan mengalikan dengan rasio dua kali sehingga melompat satu suku terlalu jauh.",
+    "D": "Salah. Nilai 415 diperoleh dengan menambahkan selisih dua suku pertama (10) seolah-olah deret ini deret aritmetika.",
+    "E": "Salah. Nilai 675 diperoleh dengan menambahkan selisih dua suku terakhir (270) alih-alih mengalikan dengan rasio 3."
+  },
+  "difficulty": "easy",
+  "source": "deret_angka.py",
+  "verified": true
+}

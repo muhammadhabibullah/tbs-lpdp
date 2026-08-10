@@ -1,0 +1,28 @@
+{
+  "id": "5-verbal-022",
+  "package": 5,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Frasa \"memperpanjang daur pakai\" pada bacaan tersebut bermakna ...",
+  "image": null,
+  "passage": "Lokakarya perbaikan komunitas mempertemukan warga dengan sukarelawan yang memiliki keterampilan memperbaiki barang elektronik kecil, pakaian, atau sepeda. Pemilik barang tidak sekadar menyerahkan benda yang rusak, tetapi ikut mengamati dan mencoba proses perbaikannya. Dengan cara itu, kegiatan tersebut memperpanjang daur pakai barang sekaligus menyebarkan keterampilan praktis.\n\nTidak semua barang dapat diselamatkan. Suku cadang mungkin tidak tersedia, kerusakan tertentu dapat membahayakan pengguna, atau rancangan produk memang menyulitkan pembongkaran. Karena itu, keberhasilan kegiatan tidak cukup diukur dari jumlah barang yang selesai diperbaiki. Perubahan kebiasaan warga agar memeriksa kemungkinan perbaikan sebelum membuang barang juga merupakan hasil penting.\n\nMeski bermanfaat, kegiatan komunitas tidak menggantikan tanggung jawab produsen. Petunjuk perbaikan yang dapat diakses, pasokan suku cadang, dan rancangan produk yang mudah dibongkar tetap diperlukan. Upaya warga dan perubahan pada tahap produksi justru perlu berjalan bersama agar jumlah barang yang cepat menjadi sampah dapat berkurang.",
+  "options": [
+    {"key": "A", "text": "membuat barang digunakan lebih lama sebelum menjadi sampah"},
+    {"key": "B", "text": "mempercepat pergantian barang lama dengan barang baru"},
+    {"key": "C", "text": "menambah jumlah tahap produksi sebuah barang"},
+    {"key": "D", "text": "menyimpan barang rusak tanpa mencoba memperbaikinya"},
+    {"key": "E", "text": "membatasi pemakaian barang hanya untuk komunitas tertentu"}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Perbaikan memungkinkan barang tetap berfungsi dan dipakai lebih lama sebelum dibuang.",
+    "B": "Pergantian yang lebih cepat justru memendekkan masa pakai barang dan menambah sampah.",
+    "C": "Frasa tersebut membahas lamanya penggunaan oleh pemilik, bukan jumlah tahap produksi.",
+    "D": "Lokakarya mendorong pemeriksaan dan perbaikan, bukan penyimpanan barang rusak tanpa tindakan.",
+    "E": "Tidak ada pembatasan pemakaian barang untuk komunitas tertentu dalam bacaan."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

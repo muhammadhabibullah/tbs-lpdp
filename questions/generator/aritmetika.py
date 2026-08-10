@@ -375,6 +375,99 @@ def gen_power_root(rng: random.Random):
     return text, answer, wrongs, work, difficulty, _fmt
 
 
+# Opt-in templates added for packages that have exhausted the legacy architecture
+# pool. They are deliberately excluded from ARITMETIKA_PATTERNS so every old seed
+# keeps producing byte-for-byte the same default sequence of templates.
+
+def gen_decimal_chain(rng: random.Random):
+    """Three signed decimal operations, with no percentage shortcut."""
+    a, b, c = rng.choice([
+        (Fraction(17, 4), Fraction(7, 4), Fraction(9, 20)),
+        (Fraction(11, 2), Fraction(9, 4), Fraction(3, 4)),
+        (Fraction(19, 4), Fraction(6, 5), Fraction(9, 20)),
+    ])
+    answer = a - b + c
+    text = f"Nilai dari {_fmt(a)} {MINUS} {_fmt(b)} + {_fmt(c)} adalah ..."
+    work = f"{_fmt(a)} {MINUS} {_fmt(b)} + {_fmt(c)} = {_fmt(a - b)} + {_fmt(c)} = {_fmt(answer)}"
+    wrongs = [
+        (a - b - c, f"mengurangkan {_fmt(c)} pada langkah terakhir, bukan menambahkannya"),
+        (a + b + c, f"menambahkan {_fmt(b)}, padahal operasi keduanya adalah pengurangan"),
+        (a - b, f"berhenti setelah {_fmt(a)} {MINUS} {_fmt(b)} dan mengabaikan + {_fmt(c)}"),
+        (a + c, f"mengabaikan pengurangan {_fmt(b)}"),
+    ]
+    return text, answer, wrongs, work, "easy", _fmt
+
+
+def gen_weighted_group_mean(rng: random.Random):
+    """A weighted mean of two intact groups, not an add-one-to-a-mean item."""
+    n1, mean1, n2, mean2 = rng.choice([
+        (15, 72, 25, 84),
+        (16, 78, 24, 84),
+        (18, 74, 12, 83),
+    ])
+    total_score = n1 * mean1 + n2 * mean2
+    total_n = n1 + n2
+    answer = Fraction(total_score, total_n)
+    text = (
+        f"Rata-rata nilai {n1} peserta kelompok P adalah {mean1}, sedangkan rata-rata "
+        f"nilai {n2} peserta kelompok Q adalah {mean2}. Berapakah rata-rata nilai "
+        "seluruh peserta kedua kelompok tersebut?"
+    )
+    work = (
+        f"jumlah nilai kelompok P = {n1} × {mean1} = {_fmt(n1 * mean1)} dan kelompok Q = "
+        f"{n2} × {mean2} = {_fmt(n2 * mean2)}; rata-rata gabungan = "
+        f"({_fmt(n1 * mean1)} + {_fmt(n2 * mean2)}) : {total_n} = {_fmt(answer)}"
+    )
+    wrongs = [
+        (Fraction(mean1 + mean2, 2),
+         "merata-ratakan dua nilai rata-rata tanpa membobotinya dengan banyak peserta"),
+        (Fraction(n1 * mean2 + n2 * mean1, total_n),
+         "menukar banyak peserta yang menjadi bobot kedua kelompok"),
+        (Fraction(total_score, total_n + 2),
+         "menambahkan dua nilai rata-rata sebagai dua peserta baru pada pembagi"),
+        (Fraction(n1 * mean1 + n2 * mean1, total_n),
+         "menggunakan rata-rata kelompok P untuk kedua kelompok"),
+    ]
+    return text, answer, wrongs, work, "medium", _fmt
+
+
+def gen_reverse_discount(rng: random.Random):
+    """Recover an original price from the price after one discount."""
+    original, pct = rng.choice([
+        (450_000, 20),
+        (640_000, 25),
+        (750_000, 40),
+    ])
+    sale = Fraction(original * (100 - pct), 100)
+    answer = Fraction(original)
+    text = (
+        f"Setelah mendapat potongan harga {pct}%, sebuah peralatan dijual seharga "
+        f"{_rupiah(sale)}. Berapakah harga peralatan tersebut sebelum mendapat potongan?"
+    )
+    work = (
+        f"harga jual adalah {100 - pct}% dari harga awal, sehingga harga awal = "
+        f"{_rupiah(sale)} : {100 - pct}/100 = {_rupiah(answer)}"
+    )
+    wrongs = [
+        (sale * Fraction(100 - pct, 100),
+         f"mengurangi harga jual sekali lagi sebesar {pct}%"),
+        (sale * Fraction(100 + pct, 100),
+         f"menambahkan {pct}% dari harga jual, bukan membagi harga jual dengan {100 - pct}%"),
+        (sale / Fraction(100 + pct, 100),
+         f"memperlakukan harga jual sebagai harga setelah kenaikan {pct}%"),
+        (sale / Fraction(pct, 100),
+         f"menganggap harga jual merupakan bagian potongan {pct}%, bukan sisa {100 - pct}%"),
+    ]
+    return text, answer, wrongs, work, "medium", _rupiah
+
+
+ARITMETIKA_EXPLICIT = {
+    "decimal_chain": gen_decimal_chain,
+    "weighted_group_mean": gen_weighted_group_mean,
+    "reverse_discount": gen_reverse_discount,
+}
+
+
 # Single-step items are recall, not reasoning: at a 96-second-per-item budget an
 # LPDP candidate answers them instantly, so at least half of each draw comes from
 # the multi-step pool.
@@ -531,6 +624,35 @@ def pk_indeterminate(rng: random.Random):
             f"Q = {m2}x", None, None, "hard", (m1, c, m2))
 
 
+def pk_composite_proportions(rng: random.Random):
+    """Compare two proportions after a second operation; opt-in only."""
+    p_desc, q_desc, p_val, q_val = rng.choice([
+        ("P = 35% dari 240 ditambah 18", "Q = 3/8 dari 288",
+         Fraction(102), Fraction(108)),
+        ("P = 45% dari 200 dikurangi 6", "Q = 7/20 dari 260",
+         Fraction(84), Fraction(91)),
+        ("P = 5/8 dari 176 dikurangi 14", "Q = 40% dari 250",
+         Fraction(96), Fraction(100)),
+    ])
+    return p_desc, q_desc, p_val, q_val, "medium", ""
+
+
+def pk_mixed_units_equal(rng: random.Random):
+    """An equality hidden behind a kilometre-to-metre conversion; opt-in only."""
+    p_desc, q_desc, value = rng.choice([
+        ("P = 2,4 km dikurangi 350 m", "Q = 2.050 m", Fraction(2_050)),
+        ("P = 3,25 km dikurangi 475 m", "Q = 2.775 m", Fraction(2_775)),
+        ("P = 1,8 km ditambah 650 m", "Q = 2.450 m", Fraction(2_450)),
+    ])
+    return p_desc, q_desc, value, value, "medium", " m"
+
+
+PK_EXPLICIT = {
+    "composite_proportions": pk_composite_proportions,
+    "mixed_units_equal": pk_mixed_units_equal,
+}
+
+
 def _false_claim(rng: random.Random, p_val: Fraction, q_val: Fraction, unit: str):
     """A substantive fifth option that is false but has to be computed to reject.
 
@@ -673,6 +795,9 @@ def main() -> None:
     ap.add_argument("--count", type=int, default=6)
     ap.add_argument("--type", choices=["aritmetika", "perbandingan_kuantitatif"],
                     default="aritmetika")
+    explicit_names = sorted(set(ARITMETIKA_EXPLICIT) | set(PK_EXPLICIT))
+    ap.add_argument("--template", choices=explicit_names,
+                    help="opt-in architecture; excluded from legacy default pools")
     ap.add_argument("--seed", type=int, default=None)
     ap.add_argument("--bank-dir", type=Path, default=BANK_DIR)
     args = ap.parse_args()
@@ -681,7 +806,16 @@ def main() -> None:
     _USED_COEFFICIENTS.clear()
     _USED_CLAIMS.clear()
 
-    if args.type == "aritmetika":
+    if args.template:
+        if args.count != 1:
+            ap.error("--template requires --count 1")
+        if args.type == "aritmetika" and args.template in ARITMETIKA_EXPLICIT:
+            pool, build = [ARITMETIKA_EXPLICIT[args.template]], build_aritmetika
+        elif args.type == "perbandingan_kuantitatif" and args.template in PK_EXPLICIT:
+            pool, build = [PK_EXPLICIT[args.template]], build_perbandingan
+        else:
+            ap.error(f"template {args.template!r} is incompatible with --type {args.type}")
+    elif args.type == "aritmetika":
         pool, build = aritmetika_pool(rng, args.count), build_aritmetika
     else:
         pool, build = PK_KINDS[:], build_perbandingan

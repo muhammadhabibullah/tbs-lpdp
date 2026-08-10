@@ -1,0 +1,8 @@
+{
+  "id":"6-pemecahan_masalah-008","package":6,"subtest":"pemecahan_masalah","number":8,"type":"penalaran_kasus",
+  "question_text":"Setelah sebuah jembatan penyeberangan satwa dibangun di atas jalan raya, jumlah satwa yang tertabrak kendaraan pada ruas tersebut tidak berubah dibandingkan tahun sebelumnya. Seorang pengamat menyimpulkan bahwa jembatan itu tidak efektif.\n\nPernyataan yang paling melemahkan simpulan pengamat adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"Biaya pembangunan jembatan lebih tinggi daripada perkiraan awal."},{"key":"B","text":"Sebagian pengemudi tidak mengetahui bahwa jembatan itu dibuat untuk satwa."},{"key":"C","text":"Pada tahun setelah pembangunan, populasi satwa di sekitar ruas itu dan volume kendaraan meningkat tajam."},{"key":"D","text":"Jembatan tersebut menggunakan bahan yang sama dengan jembatan di wilayah lain."},{"key":"E","text":"Beberapa jenis satwa lebih aktif pada malam hari daripada siang hari."}],
+  "correct_option":"C",
+  "explanations":{"A":"Biaya pembangunan tidak menentukan apakah jembatan mengurangi risiko tabrakan.","B":"Pengetahuan pengemudi tidak diperlukan agar satwa dapat menggunakan jembatan dan tidak menjelaskan pembanding risiko.","C":"Benar. Jika paparan satwa dan kendaraan meningkat tetapi jumlah tabrakan tetap, jembatan mungkin telah menahan kenaikan tabrakan yang seharusnya terjadi.","D":"Kesamaan bahan tidak memberikan informasi mengenai penggunaan atau dampak jembatan.","E":"Aktivitas malam hari dapat memengaruhi pola tabrakan, tetapi tanpa perubahan antartahun informasi ini tidak melemahkan perbandingan pengamat."},
+  "difficulty":"hard","source":"codex-generated","verified":true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "5-kuantitatif-023",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Ari menanamkan modal Rp12.000.000,00 selama 8 bulan, Beni Rp15.000.000,00 selama 6 bulan, dan Candra Rp10.000.000,00 selama 12 bulan. Keuntungan sebesar Rp5.100.000,00 dibagikan sebanding dengan hasil kali modal dan lama penanaman modal. Berapakah bagian keuntungan Candra?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Rp1.500.000,00"},
+    {"key": "B", "text": "Rp1.600.000,00"},
+    {"key": "C", "text": "Rp1.700.000,00"},
+    {"key": "D", "text": "Rp1.200.000,00"},
+    {"key": "E", "text": "Rp2.000.000,00"}
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Rp1.500.000,00 adalah bagian Beni, sebab bobot Beni 15 × 6 = 90 atau 15 dari jumlah 51 bagian sederhana.",
+    "B": "Rp1.600.000,00 adalah bagian Ari, sebab bobot Ari 12 × 8 = 96 atau 16 dari jumlah 51 bagian sederhana.",
+    "C": "Rp1.700.000,00 diperoleh dengan membagi keuntungan sama rata kepada tiga orang, padahal pembagian harus mengikuti bobot modal-waktu.",
+    "D": "Rp1.200.000,00 diperoleh dari 12/51 × Rp5.100.000,00, yaitu memakai lama investasi Candra 12 bulan sebagai bobot dan mengabaikan modalnya; bobot yang benar adalah 10 × 12 = 120 atau 20 bagian sederhana.",
+    "E": "Benar. Bobot Ari, Beni, dan Candra berturut-turut 96 : 90 : 120 = 16 : 15 : 20. Bagian Candra = 20/51 × Rp5.100.000,00 = Rp2.000.000,00."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

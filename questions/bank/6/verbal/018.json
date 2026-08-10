@@ -1,0 +1,8 @@
+{
+  "id":"6-verbal-018","package":6,"subtest":"verbal","number":18,"type":"kalimat_efektif",
+  "question_text":"Cermati kalimat berikut.\n\nSetelah membaca laporan itu, kesalahan pencatatan segera ditemukan oleh auditor.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...","image":null,"passage":null,
+  "options":[{"key":"A","text":"Setelah membaca laporan itu, kesalahan pencatatan segera ditemukan oleh auditor."},{"key":"B","text":"Setelah membaca laporan itu, auditor segera menemukan kesalahan pencatatan."},{"key":"C","text":"Karena setelah membaca laporan itu, auditor segera menemukan kesalahan pencatatan."},{"key":"D","text":"Setelah membaca laporan itu, kesalahan pencatatan segera menemukan auditor."},{"key":"E","text":"Setelah membaca laporan itu, auditor segera menemukan kesalahan pencatatan yang keliru."}],
+  "correct_option":"B",
+  "explanations":{"A":"Keterangan 'setelah membaca laporan itu' menggantung karena subjek gramatikal klausa utama adalah 'kesalahan pencatatan', seolah-olah kesalahan itulah yang membaca laporan.","B":"Benar. Subjek 'auditor' menjadi pelaku yang logis bagi kegiatan membaca laporan dan menemukan kesalahan pencatatan.","C":"Konjungsi subordinatif 'karena' membuat seluruh rangkaian menjadi anak kalimat tanpa klausa utama sehingga kalimat tidak lengkap.","D":"Subjek 'kesalahan pencatatan' tidak logis sebagai pelaku yang menemukan auditor.","E":"Frasa 'kesalahan pencatatan yang keliru' mubazir karena kata 'kesalahan' sudah menyatakan sesuatu yang keliru."},
+  "difficulty":"medium","source":"codex-generated","verified":true
+}

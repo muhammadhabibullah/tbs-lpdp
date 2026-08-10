@@ -1,0 +1,43 @@
+{
+  "id": "5-pemecahan_masalah-002",
+  "package": 5,
+  "subtest": "pemecahan_masalah",
+  "number": 2,
+  "type": "peluang_kombinatorik",
+  "question_text": "Dari 8 hari berturut-turut, sebuah tim harus memilih tepat dua hari untuk melakukan pemeriksaan. Kedua hari yang dipilih tidak boleh berurutan. Banyak pasangan hari yang dapat dipilih adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "15"
+    },
+    {
+      "key": "B",
+      "text": "42"
+    },
+    {
+      "key": "C",
+      "text": "28"
+    },
+    {
+      "key": "D",
+      "text": "7"
+    },
+    {
+      "key": "E",
+      "text": "21"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 15 diperoleh dengan hanya memilih dari 6 hari bagian tengah dan membuang kedua hari ujung, padahal hari ujung tetap boleh dipilih.",
+    "B": "Salah. Nilai 42 diperoleh dengan menghitung setiap pasangan hari tidak berurutan dua kali, yaitu berdasarkan urutan hari pertama dan hari kedua.",
+    "C": "Salah. Nilai 28 diperoleh dengan menghitung seluruh C(8, 2) pasangan tanpa mengeluarkan pasangan hari yang berurutan.",
+    "D": "Salah. Nilai 7 diperoleh dengan menghitung 7 pasangan hari yang justru berurutan.",
+    "E": "Benar. Seluruh pasangan dua hari berjumlah C(8, 2) = 28. Pasangan hari yang berurutan ada 7, sehingga pasangan yang tidak berurutan berjumlah 28 − 7 = 21."
+  },
+  "difficulty": "medium",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

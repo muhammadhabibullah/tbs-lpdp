@@ -1,0 +1,43 @@
+{
+  "id": "5-kuantitatif-003",
+  "package": 5,
+  "subtest": "kuantitatif",
+  "number": 3,
+  "type": "aritmetika",
+  "question_text": "Diketahui a : b = 3 : 10. Apabila a = 18, berapakah nilai b?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "6"
+    },
+    {
+      "key": "B",
+      "text": "180"
+    },
+    {
+      "key": "C",
+      "text": "60"
+    },
+    {
+      "key": "D",
+      "text": "78"
+    },
+    {
+      "key": "E",
+      "text": "5,4"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 6 diperoleh dengan berhenti pada faktor pengali perbandingan (18 ÷ 3) dan tidak mengalikannya kembali.",
+    "B": "Salah. Nilai 180 diperoleh dengan mengalikan dengan 10 tanpa membaginya dengan 3.",
+    "C": "Benar. a : b = 3 : 10, sehingga b = a × 10/3 = 18 × 10/3 = 60.",
+    "D": "Salah. Nilai 78 diperoleh dengan menghitung jumlah a dan b, bukan nilai b saja.",
+    "E": "Salah. Nilai 5,4 diperoleh dengan membalik perbandingan sehingga menghitung 18 × 3/10."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}
