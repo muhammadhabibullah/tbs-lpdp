@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="266" viewBox="0 0 340 266">
+  <!-- 1-kuantitatif-024: tabung tertutup, jari-jari alas 7 cm, tinggi 20 cm.
+       Skala 8 px per cm. Hanya besaran yang DIKETAHUI yang diberi label. -->
+  <style>
+    text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+    .dim  { font-size: 14px; font-weight: 600; fill: #3f4650; }
+    .tick { stroke: #6b7280; stroke-width: 1; }
+  </style>
+
+  <!-- selimut + alas -->
+  <path d="M 94 48 L 94 208 A 56 24 0 0 0 206 208 L 206 48 Z"
+        fill="#d6e4fa" stroke="#1a5fb4" stroke-width="2"/>
+  <!-- tutup -->
+  <ellipse cx="150" cy="48" rx="56" ry="24" fill="#eaf0fb" stroke="#1a5fb4" stroke-width="2"/>
+
+  <!-- jari-jari alas 7 cm: label diletakkan di atas tutup agar tidak menimpa busur -->
+  <line class="tick" x1="150" y1="48" x2="206" y2="48" stroke="#3f4650"/>
+  <circle cx="150" cy="48" r="2.5" fill="#3f4650"/>
+  <line class="tick" x1="178" y1="22" x2="178" y2="46"/>
+  <text class="dim" x="178" y="16" text-anchor="middle">7 cm</text>
+
+  <!-- tinggi 20 cm -->
+  <line class="tick" x1="240" y1="48" x2="240" y2="208"/>
+  <line class="tick" x1="234" y1="48" x2="246" y2="48"/>
+  <line class="tick" x1="234" y1="208" x2="246" y2="208"/>
+  <text class="dim" x="262" y="128" text-anchor="middle" transform="rotate(-90 262 128)">20 cm</text>
+</svg>

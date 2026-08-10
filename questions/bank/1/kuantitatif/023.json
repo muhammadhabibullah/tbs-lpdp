@@ -5,7 +5,7 @@
   "number": 23,
   "type": "geometri",
   "question_text": "Sebuah taman berbentuk persegi panjang dengan panjang 20 m dan lebar 12 m. Di bagian dalam taman dibuat kolam berbentuk persegi dengan panjang sisi 6 m. Seluruh bagian taman di luar kolam ditanami rumput. Berapakah luas bagian taman yang ditanami rumput?",
-  "image": null,
+  "image": "images/taman-kolam.svg",
   "passage": null,
   "options": [
     {

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="250" viewBox="0 0 380 250">
+  <!-- 2-kuantitatif-024: balok 15 cm x 8 cm x 6 cm, proyeksi miring.
+       Sisi depan 13 px per cm (195 x 78); rusuk kedalaman digambar miring. -->
+  <style>
+    text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+    .dim  { font-size: 14px; font-weight: 600; fill: #3f4650; }
+    .tick { stroke: #6b7280; stroke-width: 1; }
+  </style>
+
+  <!-- sisi atas -->
+  <polygon points="60,122 102,88 297,88 255,122" fill="#eaf0fb" stroke="#1a5fb4" stroke-width="2"/>
+  <!-- sisi kanan -->
+  <polygon points="255,122 297,88 297,166 255,200" fill="#c9dcf7" stroke="#1a5fb4" stroke-width="2"/>
+  <!-- sisi depan -->
+  <rect x="60" y="122" width="195" height="78" fill="#d6e4fa" stroke="#1a5fb4" stroke-width="2"/>
+
+  <!-- rusuk tersembunyi -->
+  <g stroke="#9aa1ac" stroke-width="1.5" stroke-dasharray="5 4" fill="none">
+    <line x1="102" y1="166" x2="102" y2="88"/>
+    <line x1="102" y1="166" x2="297" y2="166"/>
+    <line x1="102" y1="166" x2="60" y2="200"/>
+  </g>
+
+  <!-- panjang 15 cm -->
+  <line class="tick" x1="60" y1="216" x2="255" y2="216"/>
+  <line class="tick" x1="60" y1="210" x2="60" y2="222"/>
+  <line class="tick" x1="255" y1="210" x2="255" y2="222"/>
+  <text class="dim" x="157" y="238" text-anchor="middle">15 cm</text>
+
+  <!-- tinggi 6 cm -->
+  <line class="tick" x1="44" y1="122" x2="44" y2="200"/>
+  <line class="tick" x1="38" y1="122" x2="50" y2="122"/>
+  <line class="tick" x1="38" y1="200" x2="50" y2="200"/>
+  <text class="dim" x="28" y="161" text-anchor="middle" transform="rotate(-90 28 161)">6 cm</text>
+
+  <!-- lebar 8 cm (rusuk kedalaman) -->
+  <text class="dim" x="290" y="196" text-anchor="start">8 cm</text>
+</svg>

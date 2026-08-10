@@ -5,7 +5,7 @@
   "number": 25,
   "type": "geometri",
   "question_text": "Sebuah taman berbentuk juring lingkaran dengan sudut pusat 60° dan jari-jari 21 m. Seluruh tepi taman itu, yaitu bagian busur beserta kedua sisi lurusnya, akan dipasangi pagar. Dengan π = 22/7, berapakah panjang pagar yang diperlukan?",
-  "image": null,
+  "image": "images/juring.svg",
   "passage": null,
   "options": [
     {

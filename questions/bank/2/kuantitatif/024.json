@@ -5,7 +5,7 @@
   "number": 24,
   "type": "geometri",
   "question_text": "Sebuah balok memiliki panjang 15 cm, lebar 8 cm, dan tinggi 6 cm. Berapakah luas seluruh permukaan balok tersebut?",
-  "image": null,
+  "image": "images/balok.svg",
   "passage": null,
   "options": [
     {

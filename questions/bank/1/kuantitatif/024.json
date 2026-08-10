@@ -5,7 +5,7 @@
   "number": 24,
   "type": "geometri",
   "question_text": "Sebuah tabung tertutup memiliki jari-jari alas 7 cm dan tinggi 20 cm. Dengan menggunakan π = 22/7, berapakah luas permukaan tabung tersebut?",
-  "image": null,
+  "image": "images/tabung.svg",
   "passage": null,
   "options": [
     {

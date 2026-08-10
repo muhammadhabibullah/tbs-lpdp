@@ -5,7 +5,7 @@
   "number": 25,
   "type": "geometri",
   "question_text": "Sebuah trapesium sama kaki memiliki panjang sisi-sisi sejajar 32 cm dan 20 cm, sedangkan panjang masing-masing kakinya 10 cm. Berapakah luas trapesium tersebut?",
-  "image": null,
+  "image": "images/trapesium.svg",
   "passage": null,
   "options": [
     {
