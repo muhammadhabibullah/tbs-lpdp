@@ -19,6 +19,7 @@ function impl(): Promise<ExamApi> {
 
 export const api: ExamApi = {
   init: () => impl().then((a) => a.init()),
+  getServiceStatus: () => impl().then((a) => a.getServiceStatus()),
   listPackages: () => impl().then((a) => a.listPackages()),
   getPackage: (packageId) => impl().then((a) => a.getPackage(packageId)),
   listAttempts: () => impl().then((a) => a.listAttempts()),
@@ -43,8 +44,16 @@ export async function withRetry<T>(fn: () => Promise<T>, attempts = 3): Promise<
     } catch (err) {
       lastError = err
       const code = (err as { code?: string }).code
-      // Terminal states: retrying cannot help (P0005 rate limit, P0006 bad input).
-      if (code === 'P0002' || code === 'P0003' || code === 'P0004' || code === 'P0005' || code === 'P0006') {
+      // Terminal states: retrying cannot help (P0005 rate limit, P0006 bad
+      // input, P0007 storage capacity — a retry a second later is still full).
+      if (
+        code === 'P0002' ||
+        code === 'P0003' ||
+        code === 'P0004' ||
+        code === 'P0005' ||
+        code === 'P0006' ||
+        code === 'P0007'
+      ) {
         throw err
       }
       await new Promise((resolve) => setTimeout(resolve, 300 * 2 ** i))

@@ -9,7 +9,7 @@
 -- Why it exists: the free tier caps the database at 500 MB, and two things grow
 -- forever without a sweeper — attempt data (answers plus the append-only event
 -- log), and the anonymous auth users that one-per-browser sign-in creates
--- (BE-1). The per-attempt caps (BE-15/BE-16) bound how fast that happens;
+-- (BE-1). The per-attempt caps (BE-16/BE-17) bound how fast that happens;
 -- these jobs bound the total.
 --
 -- Fully idempotent: cron.schedule() replaces a job of the same name.
@@ -37,7 +37,19 @@ select cron.schedule(
 -- file was applied in an earlier form (harmless to run when absent).
 --   select cron.unschedule('prune-answer-events');
 
--- ----------------------------------------------------- 2. anonymous users ----
+-- ------------------------------------------------- 2. capacity snapshot ----
+-- Optional, and only a warm-up: public._capacity() re-measures on read whenever
+-- the snapshot is older than 5 minutes (BE-18), so the guard works with or
+-- without this job. Scheduling it just moves that measurement off the request
+-- that would otherwise pay for it.
+
+select cron.schedule(
+  'refresh-service-capacity',
+  '*/5 * * * *',
+  $$select public._refresh_capacity()$$
+);
+
+-- ----------------------------------------------------- 3. anonymous users ----
 -- Every browser that opens the site becomes a permanent auth.users row that
 -- counts toward the MAU quota. Deleting one cascades to their attempts,
 -- sections, answers, events and reports (all FKs are `on delete cascade`), so

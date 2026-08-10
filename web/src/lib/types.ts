@@ -153,10 +153,23 @@ export interface AttemptSummary {
   total_sections: number
 }
 
+/**
+ * BE-18: whether the project still has room to take on new attempts. Everything
+ * else — resuming, saving, grading, Pembahasan — keeps working at 100%.
+ */
+export interface ServiceStatus {
+  accepting_attempts: boolean
+  /** Storage used against the configured ceiling, 0–100. */
+  usage_percent: number
+  measured_at: string
+}
+
 /** The whole backend surface the UI depends on (Supabase or the dev mock). */
 export interface ExamApi {
   /** Anonymous sign-in (BE-1). Safe to call repeatedly. */
   init(): Promise<void>
+  /** BE-18: capacity gate for the start buttons (FE-19). */
+  getServiceStatus(): Promise<ServiceStatus>
   listPackages(): Promise<Package[]>
   getPackage(packageId: number): Promise<Package>
   listAttempts(): Promise<AttemptSummary[]>

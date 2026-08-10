@@ -12,6 +12,7 @@ import type {
   ReportReason,
   Review,
   ReviewQuestion,
+  ServiceStatus,
   StartAttemptResult,
   StartSectionResult,
   Subtest,
@@ -65,6 +66,8 @@ interface MockState {
 }
 
 const STORAGE_KEY = 'tbs-lpdp.mock.v1'
+/** Dev switch for the BE-18 "storage full" state; see getServiceStatus. */
+const FULL_KEY = 'tbs-lpdp.mock.full'
 const GRACE_MS = 5_000
 const REPORTS_PER_HOUR = 20
 const EMPTY: MockState = { attempts: [], sections: [], answers: {}, reports: {} }
@@ -206,6 +209,13 @@ export const mockApi: ExamApi = {
     await loadBank()
   },
 
+  async getServiceStatus(): Promise<ServiceStatus> {
+    // No storage to run out of here. Set `tbs-lpdp.mock.full` in localStorage to
+    // rehearse the FE-19 full state without filling a real database.
+    const full = localStorage.getItem(FULL_KEY) === 'true'
+    return { accepting_attempts: !full, usage_percent: full ? 100 : 3, measured_at: now() }
+  },
+
   async listPackages(): Promise<Package[]> {
     const bank = await loadBank()
     return bank.packages
@@ -229,7 +239,11 @@ export const mockApi: ExamApi = {
     subtestsOf(bank, packageId) // validates the package exists
     let attempt = state.attempts.find((a) => a.package_id === packageId && a.status === 'active')
     if (!attempt) {
-      // BE-15: mirrors the hourly cap on *creating* attempts in schema.sql.
+      // BE-18: mirrors the storage gate — creation only, resuming is untouched.
+      if (localStorage.getItem(FULL_KEY) === 'true') {
+        throw new ApiError('storage capacity reached', 'P0007')
+      }
+      // BE-16: mirrors the hourly cap on *creating* attempts in schema.sql.
       const hourAgo = Date.now() - 3_600_000
       if (state.attempts.filter((a) => Date.parse(a.started_at) > hourAgo).length >= 10) {
         throw new ApiError('too many attempts', 'P0005')

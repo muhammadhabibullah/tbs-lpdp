@@ -107,6 +107,29 @@ create table if not exists public.answer_events (
 create index if not exists answer_events_section_idx
   on public.answer_events (section_attempt_id, created_at);
 
+-- -------------------------------------------------------------- capacity ----
+-- BE-18: one row, holding how full the project is and where the ceiling sits.
+-- The free tier stops at 500 MB of database; past that Postgres starts refusing
+-- writes, which would corrupt a try-out in progress. Rather than discover that
+-- at 100%, the app stops taking on NEW attempts at the soft limit below and
+-- lets everything already running finish.
+--
+-- The limits are data, not code: raise `limit_bytes` from the SQL editor (no
+-- redeploy) if the plan changes.
+--   update public.service_capacity set limit_bytes = 900 * 1024 * 1024;
+
+create table if not exists public.service_capacity (
+  id                 boolean primary key default true check (id),  -- single row
+  db_bytes           bigint      not null default 0,
+  attempt_rows       bigint      not null default 0,
+  limit_bytes        bigint      not null default 400 * 1024 * 1024,
+  limit_attempt_rows bigint      not null default 2000000,
+  -- 'epoch' so the very first read always measures rather than trusting a zero.
+  measured_at        timestamptz not null default 'epoch'
+);
+
+insert into public.service_capacity (id) values (true) on conflict (id) do nothing;
+
 -- ------------------------------------------------------------------- RLS ----
 
 alter table public.packages         enable row level security;
@@ -118,6 +141,7 @@ alter table public.attempts         enable row level security;
 alter table public.section_attempts enable row level security;
 alter table public.answers          enable row level security;
 alter table public.answer_events    enable row level security;
+alter table public.service_capacity enable row level security;   -- NO policies: read it through get_service_status()
 
 -- Policies are dropped first so the whole file stays re-appliable (NF-9);
 -- Postgres has no `create policy if not exists`.
@@ -216,7 +240,7 @@ begin
 end;
 $$;
 
--- BE-16: append one row to the event log unless this section has already hit
+-- BE-17: append one row to the event log unless this section has already hit
 -- the cap. `answers` is bounded by its primary key, so this log is the only
 -- table a client could grow without limit — capping it bounds an attempt's
 -- total storage, which is what keeps a scripted write loop from filling the
@@ -234,6 +258,55 @@ begin
 
   insert into public.answer_events (section_attempt_id, question_id, event_type, payload)
   values (p_section_attempt_id, p_question_id, p_event_type, coalesce(p_payload, '{}'::jsonb));
+end;
+$$;
+
+-- BE-18: measure the project and stamp the snapshot. `pg_database_size` is a
+-- directory stat (sub-millisecond); the row counts come from the planner's
+-- estimates rather than count(*), so this stays O(1) no matter how big the
+-- tables get. reltuples is -1 on a table that autovacuum has not analysed yet.
+create or replace function public._refresh_capacity()
+returns public.service_capacity
+language plpgsql security definer set search_path = public
+as $$
+declare
+  v_row public.service_capacity;
+begin
+  update public.service_capacity
+     set db_bytes     = pg_database_size(current_database()),
+         attempt_rows = (
+           select coalesce(sum(greatest(c.reltuples, 0)), 0)::bigint
+             from pg_class c
+             join pg_namespace n on n.oid = c.relnamespace
+            where n.nspname = 'public'
+              and c.relkind = 'r'
+              and c.relname in ('attempts','section_attempts','answers','answer_events')),
+         measured_at  = now()
+   where id
+  returning * into v_row;
+  return v_row;
+end;
+$$;
+
+-- The snapshot, re-measured on read when it is older than 5 minutes. Deliberately
+-- self-healing: the pg_cron job in maintenance.sql only keeps it warm, so the
+-- guard still works on a project where cron was never set up.
+create or replace function public._capacity()
+returns public.service_capacity
+language plpgsql security definer set search_path = public
+as $$
+declare
+  v_row public.service_capacity;
+begin
+  select * into v_row from public.service_capacity where id;
+  if v_row.id is null then
+    insert into public.service_capacity (id) values (true) on conflict (id) do nothing;
+    select * into v_row from public.service_capacity where id;
+  end if;
+  if v_row.measured_at < now() - interval '5 minutes' then
+    v_row := public._refresh_capacity();
+  end if;
+  return v_row;
 end;
 $$;
 
@@ -273,6 +346,7 @@ language plpgsql security definer set search_path = public
 as $$
 declare
   v_attempt public.attempts;
+  v_cap public.service_capacity;
 begin
   if (select auth.uid()) is null then
     raise exception 'not authenticated';
@@ -288,10 +362,19 @@ begin
      and package_id = p_package_id and status = 'active'
    order by started_at desc limit 1;
 
+  -- Everything below only gates *creating* an attempt: whatever a user already
+  -- has open stays resumable, gradeable and reviewable no matter how full the
+  -- project is. Refusing someone mid-exam would cost them their answers.
   if v_attempt.id is null then
-    -- BE-15: only *creation* is capped, so resuming an active attempt can never
-    -- be blocked. Bounds the row growth (and the scripted key dump) a loop over
-    -- this RPC would otherwise produce on a free-tier project.
+    -- BE-18: global storage ceiling.
+    v_cap := public._capacity();
+    if v_cap.db_bytes >= v_cap.limit_bytes
+       or v_cap.attempt_rows >= v_cap.limit_attempt_rows then
+      raise exception 'storage capacity reached' using errcode = 'P0007';
+    end if;
+
+    -- BE-16: per-user hourly budget. Bounds the row growth (and the scripted
+    -- key dump) a loop over this RPC would otherwise produce.
     if (select count(*) from public.attempts
          where user_id = (select auth.uid())
            and started_at > now() - interval '1 hour') >= 10 then
@@ -305,6 +388,31 @@ begin
 
   return json_build_object('attempt', row_to_json(v_attempt),
                            'server_time', now());
+end;
+$$;
+
+-- BE-18: what the home page needs to know before it offers the button (FE-19).
+-- Returns a coarse percentage, never the raw byte counts — the client has no
+-- use for them, and a public "how full is the database" gauge is free recon.
+create or replace function public.get_service_status()
+returns json
+language plpgsql security definer set search_path = public
+as $$
+declare
+  v_cap public.service_capacity;
+  v_usage numeric;
+begin
+  v_cap := public._capacity();
+  v_usage := greatest(
+    v_cap.db_bytes::numeric     / nullif(v_cap.limit_bytes, 0),
+    v_cap.attempt_rows::numeric / nullif(v_cap.limit_attempt_rows, 0));
+  v_usage := coalesce(v_usage, 0);
+
+  return json_build_object(
+    'accepting_attempts', v_usage < 1,
+    'usage_percent', least(100, round(v_usage * 100))::integer,
+    'measured_at', v_cap.measured_at,
+    'server_time', now());
 end;
 $$;
 
@@ -571,6 +679,7 @@ revoke all on all tables in schema public from anon;
 revoke all on all functions in schema public from anon, authenticated, public;
 
 grant execute on function
+  public.get_service_status(),
   public.start_attempt(integer),
   public.start_section(uuid),
   public.save_answer(uuid, text, char),

@@ -4,14 +4,21 @@ import AppShell from '../components/AppShell'
 import { USE_MOCK, api, errorMessage } from '../lib/api'
 import { formatDateTime, formatMinutes } from '../lib/clock'
 import { isSupabaseConfigured } from '../lib/config'
-import type { AttemptSummary, Package } from '../lib/types'
+import type { AttemptSummary, Package, ServiceStatus } from '../lib/types'
 
 const MAX_SCORE = 300
+
+/** FE-19: shown wherever a new attempt is refused for lack of storage. */
+const CAPACITY_MESSAGE =
+  'Kuota penyimpanan gratis sedang penuh, jadi try out baru dihentikan sementara. Try out yang sedang berjalan tetap bisa dilanjutkan dan pembahasan lama tetap terbuka. Riwayat lama terhapus otomatis setelah 7 hari, jadi kuota biasanya tersedia lagi dalam beberapa hari.'
 
 /** Server messages are English; the user gets Bahasa Indonesia. */
 function startErrorMessage(err: unknown): string {
   switch ((err as { code?: string }).code) {
-    // BE-15: the hourly cap on creating attempts.
+    // BE-18: capacity ran out between the page load and the click.
+    case 'P0007':
+      return CAPACITY_MESSAGE
+    // BE-16: the hourly cap on creating attempts.
     case 'P0005':
       return 'Terlalu banyak try out dibuka dalam satu jam. Coba lagi nanti, atau lanjutkan try out yang masih berjalan di bawah.'
     case 'P0002':
@@ -28,16 +35,25 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [startingId, setStartingId] = useState<number | null>(null)
+  const [status, setStatus] = useState<ServiceStatus | null>(null)
 
   useEffect(() => {
     let cancelled = false
     async function load() {
       try {
         await api.init()
-        const [pkgs, history] = await Promise.all([api.listPackages(), api.listAttempts()])
+        const [pkgs, history, service] = await Promise.all([
+          api.listPackages(),
+          api.listAttempts(),
+          // Never let the capacity probe take the page down with it: a project
+          // running an older schema has no get_service_status, and "unknown"
+          // has to mean "open" or nobody could start anything.
+          api.getServiceStatus().catch(() => null),
+        ])
         if (cancelled) return
         setPackages(pkgs)
         setAttempts(history)
+        setStatus(service)
       } catch (err) {
         if (!cancelled) setError(errorMessage(err))
       } finally {
@@ -49,6 +65,9 @@ export default function HomePage() {
       cancelled = true
     }
   }, [])
+
+  /** BE-18: null status (probe failed / old schema) is treated as accepting. */
+  const atCapacity = status !== null && !status.accepting_attempts
 
   async function start(packageId: number) {
     setStartingId(packageId)
@@ -85,6 +104,14 @@ export default function HomePage() {
       {error ? (
         <div className="card">
           <div className="notice error">{error}</div>
+        </div>
+      ) : null}
+
+      {/* FE-19: say it once, above the disabled buttons, rather than repeating
+          the explanation on every package card. */}
+      {atCapacity && error !== CAPACITY_MESSAGE ? (
+        <div className="card">
+          <div className="notice warn">{CAPACITY_MESSAGE}</div>
         </div>
       ) : null}
 
@@ -127,9 +154,10 @@ export default function HomePage() {
                   <button
                     className="btn btn-navy btn-block btn-lg"
                     onClick={() => void start(pkg.id)}
-                    disabled={startingId !== null}
+                    disabled={startingId !== null || atCapacity}
+                    title={atCapacity ? CAPACITY_MESSAGE : undefined}
                   >
-                    {startingId === pkg.id ? 'Menyiapkan…' : 'Mulai Try Out'}
+                    {atCapacity ? 'Kuota Penuh' : startingId === pkg.id ? 'Menyiapkan…' : 'Mulai Try Out'}
                   </button>
                 </article>
               )

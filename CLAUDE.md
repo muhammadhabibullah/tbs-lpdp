@@ -19,6 +19,7 @@ Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pa
 - `supabase/schema.sql` — full DDL, RLS policies, RPC functions (apply first)
 - `supabase/schema_v2_reports.sql` — v2 question-feedback DDL/RPCs (apply after `schema.sql`; re-apply it whenever `schema.sql` is re-applied)
 - `supabase/maintenance.sql` — `pg_cron` retention jobs (NF-10); apply last, once. Operational only — re-applying the schema files never undoes it
+- `docs/CAPACITY_GUARD.md` — how the storage ceiling (BE-18/FE-19/NF-11) stops new attempts before the free tier fills
 - `exambrowser-ui/` — PUSMENDIK CBT screenshots; the UI must mimic these
 - `web/` — the SPA (React + Vite + TS, `base: '/tbs-lpdp/'`, hash routing); see `web/README.md`
 - `.github/workflows/deploy-web.yml` — builds `web/` and deploys to GitHub Pages

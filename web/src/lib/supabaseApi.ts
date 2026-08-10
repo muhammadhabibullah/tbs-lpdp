@@ -11,6 +11,7 @@ import type {
   QuestionReport,
   ReportReason,
   Review,
+  ServiceStatus,
   StartAttemptResult,
   StartSectionResult,
   Subtest,
@@ -59,6 +60,11 @@ let packagesPromise: Promise<Package[]> | null = null
 
 export const supabaseApi: ExamApi = {
   init: requireSession,
+
+  async getServiceStatus(): Promise<ServiceStatus> {
+    await requireSession()
+    return rpc<ServiceStatus>('get_service_status', {})
+  },
 
   async listPackages(): Promise<Package[]> {
     await requireSession()
