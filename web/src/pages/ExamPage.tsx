@@ -5,6 +5,7 @@ import DaftarSoal from '../components/DaftarSoal'
 import type { AnswerMap } from '../components/DaftarSoal'
 import InformasiSoal from '../components/InformasiSoal'
 import KonfirmasiTes from '../components/KonfirmasiTes'
+import Passage from '../components/Passage'
 import useTick from '../hooks/useTick'
 import { api, errorMessage, withRetry } from '../lib/api'
 import { formatClock, remainingMs } from '../lib/clock'
@@ -232,7 +233,7 @@ export default function ExamPage({
         <hr className="exam-divider" />
 
         <div className="question-frame" style={frameStyle}>
-          {question.passage ? <div className="passage">{question.passage}</div> : null}
+          {question.passage ? <Passage text={question.passage} /> : null}
           <p className="question-text">{question.question_text}</p>
           {question.image_url ? (
             <img className="question-image" src={question.image_url} alt={`Gambar untuk soal nomor ${question.number}`} />

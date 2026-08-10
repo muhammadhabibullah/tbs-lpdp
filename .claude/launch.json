@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web-mock",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "web",
+      "env": { "VITE_USE_MOCK": "true" },
+      "port": 5173
+    }
+  ]
+}

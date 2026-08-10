@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import AppShell from '../components/AppShell'
 import LaporSoal, { REASON_LABELS } from '../components/LaporSoal'
+import Passage from '../components/Passage'
 import { api, errorMessage, withRetry } from '../lib/api'
 import { OPTION_KEYS } from '../lib/types'
 import type { QuestionReport, ReportReason, Review, ReviewQuestion } from '../lib/types'
@@ -299,7 +300,7 @@ export default function ReviewPage() {
                     </span>
                   </header>
 
-                  {question.passage ? <div className="passage">{question.passage}</div> : null}
+                  {question.passage ? <Passage text={question.passage} /> : null}
                   <p className="question-text">{question.question_text}</p>
                   {question.image_url ? (
                     <img className="question-image" src={question.image_url} alt={`Gambar soal ${question.number}`} />

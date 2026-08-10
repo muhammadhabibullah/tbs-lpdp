@@ -536,6 +536,122 @@ a {
   color: #45505f;
 }
 
+/* Pipe-delimited `interpretasi_data` stimuli render as a real table; the
+   wrapper scrolls on its own so a wide table never widens the question card. */
+.passage-table-wrap {
+  margin: 0 0 18px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.passage-table-wrap:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* A permanent slim scrollbar: on a phone the table is usually wider than the
+   screen, and overlay scrollbars only appear once you already know to swipe. */
+.passage-table-wrap {
+  scrollbar-width: thin;
+  scrollbar-color: #c8d3e0 transparent;
+}
+
+.passage-table-wrap::-webkit-scrollbar {
+  height: 6px;
+}
+
+.passage-table-wrap::-webkit-scrollbar-thumb {
+  background: #c8d3e0;
+  border-radius: 3px;
+}
+
+.passage-table {
+  /* `separate` (not `collapse`) so each cell keeps its own background — the
+     sticky label column below needs one to stay opaque while rows slide under. */
+  border-collapse: separate;
+  border-spacing: 0;
+  width: auto;
+  min-width: min(100%, 260px);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  font-size: inherit;
+  color: #45505f;
+}
+
+/* Corner rounding cell-by-cell: `overflow: hidden` on the table would clip the
+   radius, but it would also make the table its own scrollport and kill sticky. */
+.passage-table thead th:first-child {
+  border-top-left-radius: 9px;
+}
+
+.passage-table thead th:last-child {
+  border-top-right-radius: 9px;
+}
+
+.passage-table tbody tr:last-child th:first-child {
+  border-bottom-left-radius: 9px;
+}
+
+.passage-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 9px;
+}
+
+/* The row label stays put when a wide table is scrolled sideways. */
+.passage-table thead th:first-child,
+.passage-table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  border-right: 1px solid var(--line);
+}
+
+.passage-table th,
+.passage-table td {
+  padding: 9px 18px;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--line);
+}
+
+.passage-table thead th {
+  background: #e9f4fb;
+  color: #17618c;
+  font-weight: 600;
+  border-bottom: 1px solid #cbe4f3;
+}
+
+.passage-table tbody th {
+  /* Opaque: rows scroll underneath this column, not through it. */
+  background: #fff;
+  font-weight: 500;
+  color: #3b434e;
+}
+
+.passage-table tbody tr:nth-child(even) th,
+.passage-table tbody tr:nth-child(even) td {
+  background: #fafbfd;
+}
+
+.passage-table tbody tr:last-child th,
+.passage-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.passage-table tbody tr.is-total th,
+.passage-table tbody tr.is-total td {
+  background: #f2f6fa;
+  border-top: 2px solid #cbd7e4;
+  font-weight: 700;
+  color: #2f3944;
+}
+
+.passage-table .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
 .question-text {
   margin: 0 0 18px;
   white-space: pre-wrap;
@@ -1407,6 +1523,17 @@ a {
   .passage {
     padding: 12px 14px;
     margin-bottom: 14px;
+  }
+
+  .passage-table-wrap {
+    /* Bleed to the card edges so the scrollable table uses the full width. */
+    margin: 0 -16px 14px;
+    padding: 0 16px;
+  }
+
+  .passage-table th,
+  .passage-table td {
+    padding: 8px 12px;
   }
 
   .options {
