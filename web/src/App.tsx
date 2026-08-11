@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import ReviewPage from './pages/ReviewPage'
 import MaintenanceGate from './components/MaintenanceGate'
 import HumanVerificationGate from './components/HumanVerificationGate'
+import RouteMetadata from './components/RouteMetadata'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -24,6 +25,7 @@ export default function App() {
   return (
     <HashRouter>
       <ScrollToTop />
+      <RouteMetadata />
       <MaintenanceGate>
         <HumanVerificationGate>
           <Routes>

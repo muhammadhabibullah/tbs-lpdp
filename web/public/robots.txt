@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /tbs-lpdp/
+
+Sitemap: https://muhammadhabibullah.github.io/tbs-lpdp/sitemap.xml

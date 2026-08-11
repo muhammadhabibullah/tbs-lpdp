@@ -260,6 +260,7 @@ a {
 
 /* The nav sits inside the masthead, so anchors must clear it when scrolled to. */
 #paket,
+#tentang,
 #riwayat,
 #disclaimer {
   scroll-margin-top: 18px;
@@ -917,6 +918,80 @@ button.package-badge {
   color: var(--ink-faint);
   font-size: 14px;
   padding: 18px 0;
+}
+
+/* Search-friendly explanatory content that is also useful to first-time users. */
+.seo-overview > p {
+  max-width: 78ch;
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.seo-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0 24px;
+}
+
+.seo-facts > div {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f7f8fb;
+}
+
+.seo-facts strong,
+.seo-facts span {
+  display: block;
+}
+
+.seo-facts strong {
+  color: #2f3743;
+  font-size: 15px;
+}
+
+.seo-facts span {
+  margin-top: 2px;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+}
+
+.seo-overview h3 {
+  margin: 0 0 10px;
+  color: #2f3743;
+  font-size: 15px;
+}
+
+.seo-faq {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 14px;
+}
+
+.seo-faq details {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+}
+
+.seo-faq summary {
+  padding: 11px 13px;
+  color: #354052;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.seo-faq details[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+
+.seo-faq p {
+  margin: 0;
+  padding: 11px 13px 13px;
+  color: var(--ink-soft);
+  font-size: 13px;
 }
 
 /* ---------------------------------------------------------------- buttons -- */
@@ -2332,6 +2407,11 @@ button.package-badge {
 
   .section-title {
     font-size: 16px;
+  }
+
+  .seo-facts,
+  .seo-faq {
+    grid-template-columns: 1fr;
   }
 
   .history-table {

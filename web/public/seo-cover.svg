@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="background" x1="80" y1="20" x2="1120" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D2280" />
+      <stop offset="1" stop-color="#1B3FB5" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#27B7EF" />
+      <stop offset="1" stop-color="#17A3E0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#background)" />
+  <circle cx="114" cy="84" r="260" fill="#FFFFFF" opacity="0.035" />
+  <circle cx="1120" cy="610" r="330" fill="#FFFFFF" opacity="0.04" />
+  <path d="M810 0h390v630H650c145-123 217-333 160-630Z" fill="#FFFFFF" opacity="0.035" />
+
+  <g transform="translate(76 68)">
+    <rect width="72" height="72" rx="18" fill="#FFFFFF" opacity="0.14" />
+    <path d="M14 31 36 20l22 11-22 11-22-11Z" fill="#FFFFFF" />
+    <path d="M22 38v10c0 4 7 7 14 7s14-3 14-7V38" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+    <text x="92" y="32" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" letter-spacing="2">TBS LPDP</text>
+    <text x="92" y="58" fill="#FFFFFF" opacity="0.72" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" letter-spacing="4">TRY OUT APPLICATION</text>
+  </g>
+
+  <g transform="translate(76 196)">
+    <rect width="188" height="38" rx="19" fill="url(#accent)" />
+    <text x="94" y="25" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">TRY OUT GRATIS</text>
+
+    <text x="0" y="106" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700">Tes Bakat Skolastik</text>
+    <text x="0" y="170" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700">LPDP</text>
+    <text x="2" y="216" fill="#FFFFFF" opacity="0.78" font-family="Arial, Helvetica, sans-serif" font-size="24">Simulasi terukur dengan skor dan pembahasan lengkap</text>
+  </g>
+
+  <g transform="translate(76 520)" font-family="Arial, Helvetica, sans-serif">
+    <g>
+      <circle cx="11" cy="11" r="11" fill="#17A3E0" />
+      <path d="m6.5 11 3 3 6-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="34" y="17" fill="#FFFFFF" font-size="20" font-weight="600">60 soal</text>
+    </g>
+    <g transform="translate(185)">
+      <circle cx="11" cy="11" r="11" fill="#17A3E0" />
+      <path d="M11 5v6l4 2" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" />
+      <text x="34" y="17" fill="#FFFFFF" font-size="20" font-weight="600">90 menit</text>
+    </g>
+    <g transform="translate(382)">
+      <circle cx="11" cy="11" r="11" fill="#17A3E0" />
+      <path d="m6.5 11 3 3 6-7" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="34" y="17" fill="#FFFFFF" font-size="20" font-weight="600">Pembahasan lengkap</text>
+    </g>
+  </g>
+
+  <g transform="translate(895 146)">
+    <rect width="230" height="328" rx="28" fill="#FFFFFF" opacity="0.96" />
+    <rect x="28" y="30" width="100" height="13" rx="6.5" fill="#D9DFEB" />
+    <rect x="28" y="58" width="174" height="18" rx="9" fill="#263142" />
+    <rect x="28" y="94" width="174" height="10" rx="5" fill="#E2E5EA" />
+    <rect x="28" y="113" width="146" height="10" rx="5" fill="#E2E5EA" />
+    <g transform="translate(28 148)">
+      <rect width="174" height="38" rx="9" fill="#F5F7FA" />
+      <circle cx="19" cy="19" r="10" fill="#17A3E0" />
+      <rect x="40" y="14" width="104" height="10" rx="5" fill="#AEBBD0" />
+    </g>
+    <g transform="translate(28 196)">
+      <rect width="174" height="38" rx="9" fill="#F5F7FA" />
+      <circle cx="19" cy="19" r="10" fill="#E2E5EA" />
+      <rect x="40" y="14" width="120" height="10" rx="5" fill="#C8D0DD" />
+    </g>
+    <g transform="translate(28 244)">
+      <rect width="174" height="38" rx="9" fill="#F5F7FA" />
+      <circle cx="19" cy="19" r="10" fill="#E2E5EA" />
+      <rect x="40" y="14" width="90" height="10" rx="5" fill="#C8D0DD" />
+    </g>
+    <rect x="28" y="298" width="174" height="10" rx="5" fill="#1B3FB5" opacity="0.18" />
+  </g>
+</svg>

@@ -323,6 +323,54 @@ export default function HomePage() {
           </div>
         )}
       </div>
+
+      <section className="card seo-overview" id="tentang" aria-labelledby="tentang-title">
+        <h2 className="section-title" id="tentang-title">
+          Tentang Try Out TBS LPDP
+        </h2>
+        <p>
+          Tes Bakat Skolastik (TBS) LPDP menguji tiga kemampuan: penalaran verbal, penalaran kuantitatif, dan
+          pemecahan masalah. Try out gratis ini membantu Anda berlatih dalam alur tes yang terukur sebelum menghadapi
+          seleksi sebenarnya.
+        </p>
+        <div className="seo-facts" aria-label="Ringkasan simulasi TBS LPDP">
+          <div>
+            <strong>60 soal</strong>
+            <span>tiga mata uji berurutan</span>
+          </div>
+          <div>
+            <strong>90 menit</strong>
+            <span>waktu simulasi penuh</span>
+          </div>
+          <div>
+            <strong>Skor &amp; pembahasan</strong>
+            <span>tersedia setelah tes selesai</span>
+          </div>
+        </div>
+
+        <h3>Pertanyaan umum</h3>
+        <div className="seo-faq">
+          <details>
+            <summary>Apa itu TBS LPDP?</summary>
+            <p>
+              TBS LPDP adalah Tes Bakat Skolastik yang mengukur penalaran verbal, penalaran kuantitatif, dan
+              pemecahan masalah.
+            </p>
+          </details>
+          <details>
+            <summary>Apakah try out TBS LPDP ini gratis?</summary>
+            <p>Ya. Seluruh paket try out, skor otomatis, dan pembahasan dapat digunakan tanpa biaya.</p>
+          </details>
+          <details>
+            <summary>Berapa jumlah soal dan durasi try out?</summary>
+            <p>Satu paket berisi 60 soal dalam tiga mata uji berurutan dengan total waktu 90 menit.</p>
+          </details>
+          <details>
+            <summary>Apakah situs ini merupakan layanan resmi LPDP?</summary>
+            <p>Bukan. Situs ini adalah sarana latihan gratis dan mandiri, bukan produk resmi LPDP atau PUSMENDIK.</p>
+          </details>
+        </div>
+      </section>
     </AppShell>
   )
 }

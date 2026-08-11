@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 export const MENU_ITEMS = [
   { id: 'paket', label: 'Paket Try Out' },
   { id: 'riwayat', label: 'Riwayat Pengerjaan' },
+  { id: 'tentang', label: 'Tentang TBS' },
   { id: 'disclaimer', label: 'Disclaimer' },
 ] as const
 

@@ -47,6 +47,20 @@ for safe rollout/rollback order and the limits of scraper deterrence.
 
 Open http://localhost:5173/tbs-lpdp/ (the `base` path matters).
 
+### Search and social metadata
+
+`index.html` defines the canonical GitHub Pages URL, search description, Open
+Graph/Twitter cards, and JSON-LD for the educational app and its visible FAQ.
+`public/sitemap.xml` and `public/robots.txt` are copied into the production
+build. Private hash routes for active attempts and reviews are marked `noindex`
+at runtime by `components/RouteMetadata.tsx`.
+
+If the deployment moves to a custom domain, update the absolute origin in
+`index.html`, `public/sitemap.xml`, and `public/robots.txt` together. Submit the
+sitemap URL to Google Search Console or Bing Webmaster Tools after deployment;
+GitHub project sites cannot place a project-specific robots file at the shared
+`muhammadhabibullah.github.io/robots.txt` host root.
+
 ### Mock mode
 
 `vite/mock-bank-plugin.ts` serves `questions/bank/` at `/__mock/bank.json`, and
