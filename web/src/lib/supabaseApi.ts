@@ -6,6 +6,7 @@ import type {
   AttemptSummary,
   ExamApi,
   FinishSectionResult,
+  MaintenanceStatus,
   OptionKey,
   Package,
   QuestionReport,
@@ -59,6 +60,22 @@ async function requireSession(): Promise<void> {
 let packagesPromise: Promise<Package[]> | null = null
 
 export const supabaseApi: ExamApi = {
+  async getMaintenanceStatus(): Promise<MaintenanceStatus> {
+    // The gate runs before anonymous sign-in and before any route mounts. An
+    // unconfigured local build must still reach HomePage's configuration help.
+    if (!isSupabaseConfigured) {
+      return {
+        enabled: false,
+        starts_at: null,
+        ends_at: null,
+        message: '',
+        phase: 'open',
+        server_time: new Date().toISOString(),
+      }
+    }
+    return rpc<MaintenanceStatus>('get_maintenance_status', {})
+  },
+
   init: requireSession,
 
   async getServiceStatus(): Promise<ServiceStatus> {

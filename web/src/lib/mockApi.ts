@@ -5,6 +5,7 @@ import type {
   AttemptSummary,
   ExamApi,
   FinishSectionResult,
+  MaintenanceStatus,
   OptionKey,
   Package,
   Question,
@@ -68,6 +69,8 @@ interface MockState {
 const STORAGE_KEY = 'tbs-lpdp.mock.v1'
 /** Dev switch for the BE-18 "storage full" state; see getServiceStatus. */
 const FULL_KEY = 'tbs-lpdp.mock.full'
+/** Dev-only schedule override; see web/README.md. */
+const MAINTENANCE_KEY = 'tbs-lpdp.mock.maintenance'
 const GRACE_MS = 5_000
 const REPORTS_PER_HOUR = 20
 const EMPTY: MockState = { attempts: [], sections: [], answers: {}, reports: {} }
@@ -205,6 +208,73 @@ function summarize(state: MockState, bank: Bank): AttemptSummary[] {
 }
 
 export const mockApi: ExamApi = {
+  async getMaintenanceStatus(): Promise<MaintenanceStatus> {
+    const serverTime = now()
+    const fallback: MaintenanceStatus = {
+      enabled: false,
+      starts_at: null,
+      ends_at: null,
+      message: '',
+      phase: 'open',
+      server_time: serverTime,
+    }
+
+    // Fast visual rehearsal without calculating timestamps: restart Vite with
+    // VITE_MOCK_MAINTENANCE_PHASE=warning or =maintenance. This module is
+    // excluded from production builds unless VITE_USE_MOCK=true.
+    const forcedPhase = import.meta.env.VITE_MOCK_MAINTENANCE_PHASE
+    if (forcedPhase === 'warning' || forcedPhase === 'maintenance') {
+      const current = Date.now()
+      // Anchor to the current hour so polling/reloading keeps the same schedule
+      // key and can verify session-scoped banner dismissal.
+      const hour = 60 * 60 * 1000
+      const anchor = Math.floor(current / hour) * hour
+      const startsAt = forcedPhase === 'warning' ? anchor + 2 * hour : anchor - hour
+      const endsAt = startsAt + 3 * 60 * 60 * 1000
+      return {
+        enabled: true,
+        starts_at: new Date(startsAt).toISOString(),
+        ends_at: new Date(endsAt).toISOString(),
+        message: 'Maintenance sistem sedang dilakukan.',
+        phase: forcedPhase,
+        server_time: serverTime,
+      }
+    }
+
+    try {
+      const raw = localStorage.getItem(MAINTENANCE_KEY)
+      if (!raw) return fallback
+      const value = JSON.parse(raw) as Partial<MaintenanceStatus>
+      if (typeof value.starts_at !== 'string' || typeof value.ends_at !== 'string') return fallback
+
+      const current = Date.now()
+      const startsAt = Date.parse(value.starts_at)
+      const endsAt = Date.parse(value.ends_at)
+      if (!value.enabled || Number.isNaN(startsAt) || Number.isNaN(endsAt) || endsAt <= startsAt) return fallback
+
+      const phase =
+        current >= startsAt && current < endsAt
+          ? 'maintenance'
+          : current >= startsAt - 4 * 60 * 60 * 1000 && current < startsAt
+            ? 'warning'
+            : 'open'
+
+      return {
+        enabled: true,
+        starts_at: value.starts_at,
+        ends_at: value.ends_at,
+        message:
+          typeof value.message === 'string' && value.message.trim()
+            ? value.message.trim()
+            : 'Kami sedang melakukan pemeliharaan terjadwal agar layanan tetap andal.',
+        phase,
+        server_time: serverTime,
+      }
+    } catch {
+      return fallback
+    }
+  },
+
   async init(): Promise<void> {
     await loadBank()
   },

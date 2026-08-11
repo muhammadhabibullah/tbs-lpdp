@@ -2,7 +2,7 @@
 
 Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pages** (React + Vite + TypeScript in `web/`), backend on **Supabase** (Postgres + RLS + RPC, anonymous auth, Storage). No other infrastructure — all trusted logic (timing, grading, answer-key secrecy) lives in `supabase/schema.sql`.
 
-**Read `docs/TECHNICAL_REQUIREMENTS.md` before non-trivial work**, plus `docs/TECHNICAL_REQUIREMENTS_V2.md` for the implemented question-feedback feature (users reporting defective questions from Pembahasan). `docs/TECHNICAL_REQUIREMENTS_V3.md` is the implementation specification for planned question/package versioning, daily report email, package metadata, and deletion-safe statistics. Requirement IDs (FE-x, BE-x, QG-x, C-x, NF-x) continue one shared sequence across all three documents.
+**Read `docs/TECHNICAL_REQUIREMENTS.md` before non-trivial work**, plus `docs/TECHNICAL_REQUIREMENTS_V2.md` for the implemented question-feedback feature (users reporting defective questions from Pembahasan). `docs/TECHNICAL_REQUIREMENTS_V3.md` is the implementation specification for planned question/package versioning, daily report email, package metadata, and deletion-safe statistics. `docs/TECHNICAL_REQUIREMENTS_V4.md` specifies the implemented Supabase-scheduled frontend maintenance mode. Requirement IDs (FE-x, BE-x, QG-x, C-x, NF-x) continue one shared sequence across all four documents.
 
 ## Exam format (do not change without updating docs)
 
@@ -19,6 +19,7 @@ Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pa
 - `questions/generator/` — Python tooling: deterministic generators (`deret_angka.py`, `aritmetika.py`, `aljabar.py`, `kecukupan_data.py`, `peluang_kombinatorik.py`), `figures.py` (every SVG in the bank: measured figures for `geometri`, schematic value-free ones shared by the `kecukupan_data` geometry families), `validate_bank.py`, `push_to_supabase.py`
 - `supabase/schema.sql` — full DDL, RLS policies, RPC functions (apply first)
 - `supabase/schema_v2_reports.sql` — v2 question-feedback DDL/RPCs (apply after `schema.sql`; re-apply it whenever `schema.sql` is re-applied)
+- `supabase/schema_v4_maintenance_mode.sql` — scheduled frontend maintenance window + public status RPC (apply after every other application schema)
 - `supabase/maintenance.sql` — `pg_cron` retention jobs (NF-10); apply last, once. Operational only — re-applying the schema files never undoes it
 - `docs/CAPACITY_GUARD.md` — how the storage ceiling (BE-18/FE-19/NF-11) stops new attempts before the free tier fills
 - `exambrowser-ui/` — PUSMENDIK CBT screenshots; the UI must mimic these

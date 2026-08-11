@@ -3,6 +3,7 @@ import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-d
 import AttemptPage from './pages/AttemptPage'
 import HomePage from './pages/HomePage'
 import ReviewPage from './pages/ReviewPage'
+import MaintenanceGate from './components/MaintenanceGate'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -22,12 +23,14 @@ export default function App() {
   return (
     <HashRouter>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/attempt/:attemptId" element={<AttemptPage />} />
-        <Route path="/attempt/:attemptId/review" element={<ReviewPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <MaintenanceGate>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/attempt/:attemptId" element={<AttemptPage />} />
+          <Route path="/attempt/:attemptId/review" element={<ReviewPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </MaintenanceGate>
     </HashRouter>
   )
 }

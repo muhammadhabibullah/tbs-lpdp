@@ -4,7 +4,9 @@ React 18 + Vite + TypeScript. Static build deployed to GitHub Pages under
 `/tbs-lpdp/`; all state lives in Supabase and is reached through the RPCs in
 [`../supabase/schema.sql`](../supabase/schema.sql) and
 [`../supabase/schema_v2_reports.sql`](../supabase/schema_v2_reports.sql) (the
-question-feedback RPCs). There is no server of ours.
+question-feedback RPCs), plus
+[`../supabase/schema_v4_maintenance_mode.sql`](../supabase/schema_v4_maintenance_mode.sql)
+for the global maintenance schedule. There is no server of ours.
 
 ## Run it
 
@@ -33,6 +35,26 @@ grace, idempotent finish, keys only for finished sections) against
 build time, so **neither the mock nor any answer key can reach a production
 bundle** (C-4). Reset a mock run by clearing the `tbs-lpdp.mock.v1` key.
 
+To rehearse the maintenance UI in mock mode, set a window in the browser
+console and reload. ISO timestamps may use `Z` or an explicit offset:
+
+```js
+localStorage.setItem('tbs-lpdp.mock.maintenance', JSON.stringify({
+  enabled: true,
+  starts_at: '2026-08-15T22:00:00+07:00',
+  ends_at: '2026-08-16T01:00:00+07:00',
+  message: 'Maintenance sistem sedang dilakukan.'
+}))
+```
+
+Use a start within the next four hours for the warning banner, or a start in
+the past and end in the future for the blocking screen. Remove the key to turn
+the mock schedule off.
+
+For a faster fixed state, restart the dev server with
+`VITE_MOCK_MAINTENANCE_PHASE=warning` or
+`VITE_MOCK_MAINTENANCE_PHASE=maintenance` alongside `VITE_USE_MOCK=true`.
+
 ## Layout
 
 ```
@@ -44,6 +66,8 @@ src/
 │   ├── mockApi.ts      # dev-only stand-in (see above)
 │   ├── supabase.ts     # client + ApiError + pg error codes
 │   └── clock.ts        # server-time skew, countdown formatting (NF-3)
+├── contexts/
+│   └── MaintenanceContext.ts # global warning/block state
 ├── pages/
 │   ├── HomePage.tsx    # FE-1 packages + attempt history
 │   ├── AttemptPage.tsx # flow controller: intro → exam → next → review
@@ -51,7 +75,7 @@ src/
 │   ├── ExamPage.tsx    # FE-3/4/5/6/7 question screen
 │   └── ReviewPage.tsx  # FE-8 score + explanations, FE-11…16 report a question
 └── components/         # AppShell, Modal, DaftarSoal, InformasiSoal, KonfirmasiTes,
-                        # LaporSoal (v2 report dialog)
+                        # LaporSoal, MaintenanceGate, MaintenanceBanner
 ```
 
 ## Notes
@@ -69,6 +93,9 @@ src/
 - **Writes are optimistic** (NF-2): selecting an option updates the UI at once
   and retries the RPC 3× with backoff; a terminal failure shows a warning strip,
   and a `P0004` (deadline passed) response moves the user on.
+- **Maintenance is frontend-only** (v4 C-18): the global gate probes before
+  routes mount and blocks the official SPA during the configured window, but
+  existing Supabase RPCs deliberately remain callable.
 
 ## Deployment
 

@@ -18,6 +18,7 @@ function impl(): Promise<ExamApi> {
 }
 
 export const api: ExamApi = {
+  getMaintenanceStatus: () => impl().then((a) => a.getMaintenanceStatus()),
   init: () => impl().then((a) => a.init()),
   getServiceStatus: () => impl().then((a) => a.getServiceStatus()),
   listPackages: () => impl().then((a) => a.listPackages()),

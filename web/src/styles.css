@@ -67,6 +67,69 @@ a {
   flex-direction: column;
 }
 
+/* FE-28: global, dismissible warning shown during the four-hour lead window. */
+.maintenance-banner {
+  position: relative;
+  z-index: 10;
+  flex: none;
+  border-bottom: 1px solid #e9c46a;
+  background: #fff3cd;
+  color: #6f4b00;
+}
+
+.maintenance-banner-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 11px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.maintenance-banner-icon {
+  flex: none;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.maintenance-banner-copy {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13.5px;
+}
+
+.maintenance-banner-copy strong {
+  flex: none;
+  color: #5f4000;
+}
+
+.maintenance-banner-close {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #6f4b00;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.maintenance-banner-close:hover {
+  background: rgba(111, 75, 0, 0.08);
+}
+
+.maintenance-banner-close:focus-visible {
+  outline: 2px solid #6f4b00;
+  outline-offset: 1px;
+}
+
 .masthead {
   position: relative;
   overflow: hidden;
@@ -218,6 +281,68 @@ a {
   border-radius: var(--card-radius);
   box-shadow: var(--shadow-card);
   padding: 26px 30px;
+}
+
+/* FE-29: route-level frontend block while the configured window is active. */
+.maintenance-loading {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: var(--ink-soft);
+}
+
+.maintenance-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 42px 48px;
+  text-align: center;
+}
+
+.maintenance-card-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff3cd;
+  font-size: 34px;
+}
+
+.maintenance-eyebrow {
+  margin: 0 0 6px;
+  color: var(--orange-dark);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.maintenance-card h1 {
+  margin: 0;
+  color: #263142;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.maintenance-message {
+  max-width: 56ch;
+  margin: 18px auto 0;
+  font-size: 16px;
+}
+
+.maintenance-until {
+  margin: 18px auto 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #f4f6fa;
+  font-size: 14px;
+}
+
+.maintenance-card .muted {
+  margin: 14px auto 20px;
+  font-size: 13.5px;
 }
 
 /* ----------------------------------------------------------------- footer -- */
@@ -1567,6 +1692,11 @@ a {
     padding-left: 18px;
     padding-right: 18px;
   }
+
+  .maintenance-banner-inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 /* FE-10 is desktop-first (≥ 768px). Below that the exam screen switches to a
@@ -1588,6 +1718,29 @@ a {
 
   .app-nav-inner {
     padding: 0 14px;
+  }
+
+  .maintenance-banner-inner {
+    align-items: flex-start;
+    padding: 10px 14px;
+    gap: 9px;
+  }
+
+  .maintenance-banner-copy {
+    display: block;
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+
+  .maintenance-banner-copy strong {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .maintenance-banner-close {
+    width: 28px;
+    height: 28px;
+    margin-top: -3px;
   }
 
   .app-nav button {
@@ -1636,6 +1789,20 @@ a {
   .card {
     padding: 16px;
     border-radius: 12px;
+  }
+
+  .maintenance-card {
+    padding: 28px 18px;
+  }
+
+  .maintenance-card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 29px;
+  }
+
+  .maintenance-card h1 {
+    font-size: 24px;
   }
 
   .card + .card {

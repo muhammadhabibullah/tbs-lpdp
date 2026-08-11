@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import FeedbackFooter from './FeedbackFooter'
+import MaintenanceBanner from './MaintenanceBanner'
 import MenuBar from './MenuBar'
 
 /** Blue masthead + light page body, mirroring the PUSMENDIK CBT chrome. */
@@ -16,6 +17,7 @@ export default function AppShell({
 }) {
   return (
     <div className="app">
+      <MaintenanceBanner />
       <header className="masthead">
         <div className="masthead-inner">
           <Link to="/" className="brand">
