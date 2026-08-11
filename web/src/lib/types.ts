@@ -182,8 +182,25 @@ export interface ServiceStatus {
   measured_at: string
 }
 
+export type MaintenancePhase = 'open' | 'warning' | 'maintenance'
+
+/**
+ * Public, read-only maintenance window configured in Supabase. `server_time`
+ * keeps the frontend transition aligned with the database clock.
+ */
+export interface MaintenanceStatus {
+  enabled: boolean
+  starts_at: string | null
+  ends_at: string | null
+  message: string
+  phase: MaintenancePhase
+  server_time: string
+}
+
 /** The whole backend surface the UI depends on (Supabase or the dev mock). */
 export interface ExamApi {
+  /** Public pre-auth probe used by the global frontend maintenance gate. */
+  getMaintenanceStatus(): Promise<MaintenanceStatus>
   /** Anonymous sign-in (BE-1). Safe to call repeatedly. */
   init(): Promise<void>
   /** BE-18: capacity gate for the start buttons (FE-19). */
