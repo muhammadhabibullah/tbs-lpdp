@@ -6,13 +6,60 @@ import type { ExamApi } from './types'
  */
 export const USE_MOCK = import.meta.env.VITE_USE_MOCK === 'true'
 
+const CHUNK_RELOAD_GUARD = 'tbs-lpdp:chunk-reload-attempted'
+
 let implPromise: Promise<ExamApi> | null = null
+
+function isChunkLoadError(error: unknown): boolean {
+  const message = error instanceof Error ? `${error.name}: ${error.message}` : String(error)
+  return /failed to fetch dynamically imported module|importing a module script failed|error loading dynamically imported module|load failed for module|chunkloaderror|loading chunk .* failed/i.test(
+    message,
+  )
+}
+
+function reloadForFreshChunks(): boolean {
+  try {
+    if (sessionStorage.getItem(CHUNK_RELOAD_GUARD)) return false
+    sessionStorage.setItem(CHUNK_RELOAD_GUARD, 'true')
+    window.location.reload()
+    return true
+  } catch {
+    // Storage can be unavailable in restrictive browser modes. Without a
+    // durable guard, reloading here could trap the page in a reload loop.
+    return false
+  }
+}
+
+async function loadImpl(): Promise<ExamApi> {
+  try {
+    const implementation = USE_MOCK
+      ? (await import('./mockApi')).mockApi
+      : (await import('./supabaseApi')).supabaseApi
+
+    // A successful import proves the current entry bundle and lazy chunk
+    // belong to the same deployment, so a future deployment may recover too.
+    try {
+      sessionStorage.removeItem(CHUNK_RELOAD_GUARD)
+    } catch {
+      // The API remains usable when session storage is unavailable.
+    }
+    return implementation
+  } catch (error) {
+    // Do not permanently cache a rejected import. This also lets callers retry
+    // an ordinary transient failure when automatic reload is unavailable.
+    implPromise = null
+    if (isChunkLoadError(error) && reloadForFreshChunks()) {
+      // Keep callers pending during navigation instead of briefly rendering the
+      // stale deployment's error state before the browser reloads.
+      return new Promise<ExamApi>(() => undefined)
+    }
+    throw error
+  }
+}
 
 function impl(): Promise<ExamApi> {
   if (!implPromise) {
-    implPromise = USE_MOCK
-      ? import('./mockApi').then((m) => m.mockApi)
-      : import('./supabaseApi').then((m) => m.supabaseApi)
+    implPromise = loadImpl()
   }
   return implPromise
 }

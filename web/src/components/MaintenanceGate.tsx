@@ -118,7 +118,7 @@ export default function MaintenanceGate({ children }: { children: ReactNode }) {
   if (!loaded) {
     return (
       <div className="maintenance-loading" role="status">
-        Memeriksa status layanan…
+        Memuat website…
       </div>
     )
   }
