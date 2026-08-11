@@ -1,7 +1,7 @@
 """Shared helpers for LPDP TBS question generator/validator/push scripts.
 
 The git question bank (questions/bank) is the source of truth; see
-.claude/skills/lpdp-question-generation/SKILL.md for the format contract.
+.agents/skills/lpdp-question-generation/SKILL.md for the format contract.
 """
 
 from __future__ import annotations
@@ -39,6 +39,7 @@ TYPES_BY_SUBTEST = {
         "aritmetika",
         "aljabar",
         "deret_angka",
+        "deret_huruf",
         "perbandingan_kuantitatif",
         "kecukupan_data",
         "peluang_kombinatorik",

@@ -30,7 +30,7 @@ one. It gets its own screening: a rival reading only makes the item ambiguous if
 it fits the four printed terms *and* lands on the anchor by different middles.
 
 Usage:
-    python3 deret_angka.py --package 1 --count 5 [--blanks 2 | --interior]
+    python3 deret_angka.py --package 1 --count 5 [--blanks 2 | --interior | --leading]
                            [--seed 42] [--bank-dir PATH]
 """
 
@@ -99,6 +99,23 @@ def _rule_interleaved_geometric(t):
     return int(nxt) if nxt.denominator == 1 else None
 
 
+def _rule_three_interleaved_arithmetic(t):
+    """Three arithmetic tracks printed in rotation (positions mod 3)."""
+    tracks = [t[offset::3] for offset in range(3)]
+    # Two points always define a track; require three observations per track so
+    # this is evidence of a three-way pattern rather than an arbitrary fit.
+    if any(len(track) < 3 for track in tracks):
+        return None
+    differences = []
+    for track in tracks:
+        ds = {b - a for a, b in zip(track, track[1:])}
+        if len(ds) != 1:
+            return None
+        differences.append(ds.pop())
+    turn = len(t) % 3
+    return tracks[turn][-1] + differences[turn]
+
+
 def _rule_alternating_differences(t):
     """Differences alternate between two constants (+a, +b, +a, +b, ...)."""
     d = [y - x for x, y in zip(t, t[1:])]
@@ -164,6 +181,7 @@ RIVAL_RULES = (
     _rule_second_difference,
     _rule_interleaved_arithmetic,
     _rule_interleaved_geometric,
+    _rule_three_interleaved_arithmetic,
     _rule_alternating_differences,
     _rule_fibonacci,
 )
@@ -686,12 +704,123 @@ def gen_double_minus_primes(rng: random.Random):
     return terms, answer, answer2, wrongs, expl, "hard", [], pair_wrongs
 
 
+def gen_fixed_four_operation_cycle(rng: random.Random):
+    """Repeat ``×m, −k, :m, +k`` with fixed operands.
+
+    This is the architecture behind tutorial sequences such as
+    ``14, 28, 26, 13, 15, 30, ...``.  It is opt-in so adding it does not alter
+    the output of legacy default seeds.  The starting value is chosen as a
+    multiple of ``m`` after the subtraction step, so every division is exact by
+    construction.
+    """
+    for _ in range(100):
+        mul = rng.choice([2, 3])
+        delta = rng.choice([2, 3, 4]) * mul
+        start = rng.randint(5, 16)
+        after_multiply = start * mul
+        after_subtract = after_multiply - delta
+        # The subtraction step must not also look like exact integer division.
+        # Otherwise a rival four-operation cycle can fit every printed term and
+        # predict a different continuation (for example 18 -> 9 as either −9
+        # or :2).  Positivity also keeps the division that follows conventional.
+        if after_subtract > 0 and after_multiply % after_subtract:
+            break
+    else:
+        raise RuntimeError("could not draw an unambiguous fixed four-operation cycle")
+
+    # After ×m then −delta the value must be divisible by m.  Choosing delta as
+    # a multiple of m guarantees that for every integer start.
+    ops = ("mul", "sub", "div", "add")
+    operands = (mul, delta, mul, delta)
+
+    terms = [start]
+    for i in range(7):
+        terms.append(_apply(ops[i % 4], terms[-1], operands[i % 4]))
+    shown, answer, answer2 = terms[:6], terms[6], terms[7]
+    before = shown[-1]
+
+    wrongs = [
+        (before * mul,
+         f"mengulang perkalian dengan {_fmt(mul)}, padahal sesudah perkalian "
+         f"giliran berikutnya adalah mengurangkan {_fmt(delta)}"),
+        (before + delta,
+         f"menerapkan penjumlahan {_fmt(delta)}, padahal giliran berikutnya adalah "
+         "pengurangan"),
+        (before // mul if before % mul == 0 else before + mul,
+         f"langsung membagi dengan {_fmt(mul)} dan melewati langkah pengurangan"),
+        (before - 2 * delta,
+         f"mengurangkan {_fmt(delta)} dua kali dalam satu langkah"),
+        (before - delta // 2,
+         f"mengurangkan setengah dari {_fmt(delta)}, bukan pengurang tetap {_fmt(delta)}"),
+        (before + 2 * delta,
+         f"menambahkan {_fmt(delta)} dua kali, padahal langkah ini adalah satu kali pengurangan"),
+    ]
+    pair_wrongs = [
+        ((before * mul, before * mul - delta),
+         f"Pasangan ini mengulang ×{_fmt(mul)} sebelum −{_fmt(delta)}, padahal "
+         "suku terakhir tercetak sudah diperoleh melalui perkalian."),
+        ((before + delta, (before + delta) * mul),
+         f"Pasangan ini memakai +{_fmt(delta)} lalu ×{_fmt(mul)}, sehingga urutan "
+         "siklus bergeser dua langkah."),
+        ((answer, answer + delta),
+         f"Bilangan pertama sudah tepat, tetapi bilangan kedua menambahkan "
+         f"{_fmt(delta)}; sesudah −{_fmt(delta)} seharusnya dibagi {_fmt(mul)}."),
+        ((before - 2 * delta, (before - 2 * delta) // mul),
+         f"Pasangan ini mengurangkan {_fmt(delta)} dua kali sebelum membagi, "
+         "padahal setiap operasi muncul satu kali per siklus."),
+    ]
+    expl = (
+        f"Operasi berulang dalam siklus ×{_fmt(mul)}, −{_fmt(delta)}, "
+        f":{_fmt(mul)}, +{_fmt(delta)}. Suku terakhir tercetak diperoleh melalui "
+        f"×{_fmt(mul)}, sehingga langkah berikutnya adalah −{_fmt(delta)}: "
+        f"{_fmt(before)} − {_fmt(delta)} = {_fmt(answer)}. Setelah itu deret "
+        f"dibagi {_fmt(mul)}, sehingga {_fmt(answer)} : {_fmt(mul)} = "
+        f"{_fmt(answer2)}."
+    )
+    # This cycle deliberately can return to an earlier printed value (as in the
+    # tutorial's 14, 28, 26, 13, 15, 30, 28).  Repetition is evidence of the
+    # inverse operations, not a dead option, so this template opts out of the
+    # generic repeated-answer rejection.
+    return (shown, answer, answer2, wrongs, expl, "hard", [], pair_wrongs,
+            {"allow_repeated_answer": True})
+
+
+def gen_three_interleaved(rng: random.Random):
+    """Three independent arithmetic tracks, printed in A-B-C rotation."""
+    starts = (rng.randint(2, 9), rng.randint(45, 65), rng.randint(12, 25))
+    steps = (rng.choice([3, 4, 5]), rng.choice([-6, -5, -4]), rng.choice([2, 6, 7]))
+    terms = []
+    for index in range(3):
+        terms.extend(starts[track] + index * steps[track] for track in range(3))
+    answer = starts[0] + 3 * steps[0]
+    answer2 = starts[1] + 3 * steps[1]
+    wrongs = [
+        (starts[2] + 3 * steps[2],
+         "melanjutkan jalur ketiga, padahal suku berikutnya kembali ke jalur pertama"),
+        (terms[-3] + steps[1],
+         "menerapkan beda jalur kedua pada suku terakhir jalur pertama"),
+        (terms[-1] + steps[0],
+         "menambahkan beda jalur pertama pada suku tercetak terakhir yang berasal dari jalur ketiga"),
+        (answer + steps[0],
+         "melanjutkan jalur pertama dua langkah sekaligus"),
+    ]
+    explanation = (
+        "Deret terdiri atas tiga jalur berselang-seling. Jalur pertama "
+        f"bertambah {_fmt(steps[0])}, jalur kedua berubah {_fmt(steps[1])}, dan "
+        f"jalur ketiga bertambah {_fmt(steps[2])}. Dua suku berikutnya adalah "
+        f"{_fmt(answer)} dari jalur pertama dan {_fmt(answer2)} dari jalur kedua."
+    )
+    return terms, answer, answer2, wrongs, explanation, "hard"
+
+
 EXPLICIT_PATTERNS = {
     "alternating_signed_squares": gen_alternating_signed_squares,
     "double_minus_primes": gen_double_minus_primes,
+    "fixed_four_operation_cycle": gen_fixed_four_operation_cycle,
     "signed_arithmetic": gen_signed_arithmetic,
     "oblong_numbers": gen_oblong_numbers,
     "square_increments": gen_square_increments,
+    "three_interleaved": gen_three_interleaved,
 }
 
 
@@ -737,6 +866,72 @@ def _single_blank(terms, answer, answer2, wrongs, expl_correct):
     stem = (", ".join(_fmt(t) for t in terms)
             + ", ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...")
     return stem, _fmt(answer), distractors, expl_correct
+
+
+def _leading_blank(terms, continuation1, continuation2):
+    """Hide the first term of a two-interleaved arithmetic sequence.
+
+    The odd-position track has two later observations in the printed stem, so
+    its preceding value is unique.  This covers the tutorial layout
+    ``..., 25, 21, 29, 14, 33, 7`` without adding a hand-written reverse key.
+    """
+    # Add the next complete pair before hiding the first term.  The printed odd
+    # track then has three observations (two equal intervals), so the missing
+    # predecessor is established rather than extrapolated from one interval.
+    full_terms = [*terms, continuation1, continuation2]
+    answer = full_terms[0]
+    if answer in full_terms[1:]:
+        return None  # a missing value already printed later is a dead option
+    odd_later = full_terms[2::2]
+    even = full_terms[1::2]
+    odd_step = odd_later[1] - odd_later[0]
+    even_step = even[1] - even[0]
+    # Try every plausible first term against the complete rival-rule battery.
+    # A candidate counts only when a rule fitted to all preceding observations
+    # predicts the final printed term as well.
+    candidates_that_fit = {
+        candidate
+        for candidate in range(min(full_terms) - 100, max(full_terms) + 101)
+        if any(
+            rule([candidate, *full_terms[1:-1]]) == full_terms[-1]
+            for rule in RIVAL_RULES
+        )
+    }
+    if candidates_that_fit != {answer}:
+        return None
+
+    wrongs = [
+        (odd_later[0] + odd_step,
+         "melanjutkan jalur ganjil ke depan, padahal yang hilang adalah suku sebelumnya"),
+        (odd_later[0],
+         "menyalin suku ganjil pertama yang tercetak tanpa bergerak satu langkah ke belakang"),
+        (odd_later[0] - even_step,
+         "memundurkan jalur ganjil dengan beda milik jalur genap"),
+        (answer - odd_step,
+         "memundurkan jalur ganjil dua langkah, bukan satu langkah"),
+        (answer + even_step,
+         "mencampurkan nilai awal jalur ganjil dengan beda jalur genap"),
+        (answer + 1,
+         "menemukan arah mundur yang benar tetapi bergeser satu satuan di atas suku pertama"),
+        (answer - 1,
+         "menemukan arah mundur yang benar tetapi bergeser satu satuan di bawah suku pertama"),
+    ]
+    shown = ", ".join(_fmt(value) for value in full_terms[1:])
+    stem = (f"..., {shown} Bilangan yang tepat untuk mengisi titik-titik tersebut "
+            "adalah ...")
+    explanation = (
+        f"Suku ganjil membentuk deret dengan beda {_fmt(odd_step)}, sedangkan suku "
+        f"genap memiliki beda {_fmt(even_step)}. Karena {_fmt(answer)} + "
+        f"{_fmt(odd_step)} = {_fmt(odd_later[0])}, suku pertama yang hilang adalah "
+        f"{_fmt(answer)}."
+    )
+    taken, distractors = {answer, *full_terms[1:]}, []
+    for value, reason in wrongs:
+        if value in taken:
+            continue
+        taken.add(value)
+        distractors.append((_fmt(value), f"Nilai {_fmt(value)} diperoleh dengan {reason}."))
+    return stem, _fmt(answer), distractors, explanation
 
 
 def _double_blank(terms, answer, answer2, wrongs, expl_correct):
@@ -911,7 +1106,8 @@ def _interior_blanks(terms, answer, extra_wrongs, expl_correct):
 
 
 def build_one(rng: random.Random, package_id: int, number: int, bank_dir: Path,
-              pattern, blanks: int = 1, interior: bool = False) -> Path:
+              pattern, blanks: int = 1, interior: bool = False,
+              leading: bool = False) -> Path:
     """Draw from `pattern` until a clean, unambiguous item comes out, then write it."""
     for _ in range(200):
         drawn = pattern(rng)
@@ -919,8 +1115,15 @@ def build_one(rng: random.Random, package_id: int, number: int, bank_dir: Path,
         # a pattern may add its own interior-blank misreadings as a 7th element
         interior_wrongs = drawn[6] if len(drawn) > 6 else []
         specified_pair_wrongs = drawn[7] if len(drawn) > 7 else None
+        metadata = drawn[8] if len(drawn) > 8 else {}
 
-        if interior:
+        if leading:
+            layout = _leading_blank(terms, answer, answer2)
+            if layout is None:
+                continue
+            stem, correct_text, distractors, explanation = layout
+            difficulty = "hard"
+        elif interior:
             if not interior_unambiguous(terms, answer):
                 continue
             # two identical hidden terms would make the swapped-order distractor
@@ -934,7 +1137,7 @@ def build_one(rng: random.Random, package_id: int, number: int, bank_dir: Path,
         else:
             if not is_unambiguous(terms, answer):
                 continue
-            if answer in terms:
+            if answer in terms and not metadata.get("allow_repeated_answer"):
                 continue  # an answer already printed in the stem reads as a misprint
             # a two-blank stem prints one more term of evidence, so the 8th term must
             # survive the same screening once the 7th is taken as given
@@ -989,22 +1192,32 @@ def main() -> None:
     ap.add_argument("--interior", action="store_true",
                     help="hardest stem: four terms, two blanks, then one more term "
                          "printed as an anchor to check the rule against")
+    ap.add_argument("--leading", action="store_true",
+                    help="hide the first term of a two-interleaved sequence")
     ap.add_argument("--template", choices=sorted(EXPLICIT_PATTERNS),
                     help="opt-in architecture; excluded from legacy default pools")
     ap.add_argument("--seed", type=int, default=None)
     ap.add_argument("--bank-dir", type=Path, default=BANK_DIR)
     args = ap.parse_args()
 
+    if args.leading and (args.count != 1 or args.interior or args.blanks != 1
+                         or args.template):
+        ap.error("--leading requires --count 1, --blanks 1, and no --interior/--template")
+
     rng = random.Random(args.seed)
     if args.template:
-        if args.count != 1 or args.interior:
+        if args.count != 1 or args.interior or args.leading:
             ap.error("--template requires --count 1 and cannot be combined with --interior")
         number = next_number(args.package, SUBTEST, args.bank_dir)
         path = build_one(rng, args.package, number, args.bank_dir,
-                         EXPLICIT_PATTERNS[args.template], args.blanks, False)
+                         EXPLICIT_PATTERNS[args.template], args.blanks, False, False)
         print(f"wrote {path}")
         return
-    groups = INTERIOR_GROUPS if args.interior else PATTERN_GROUPS
+    groups = (
+        [[gen_two_interleaved]]
+        if args.leading
+        else (INTERIOR_GROUPS if args.interior else PATTERN_GROUPS)
+    )
     pool: list = []
     for _ in range(args.count):
         if not pool:  # without replacement, and one draw per solving method
@@ -1012,7 +1225,7 @@ def main() -> None:
             rng.shuffle(pool)
         number = next_number(args.package, SUBTEST, args.bank_dir)
         path = build_one(rng, args.package, number, args.bank_dir,
-                         rng.choice(pool.pop()), args.blanks, args.interior)
+                         rng.choice(pool.pop()), args.blanks, args.interior, args.leading)
         print(f"wrote {path}")
 
 

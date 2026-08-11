@@ -17,7 +17,7 @@ Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pa
 - `questions/schema.json` — JSON Schema every bank question must pass
 - `questions/bank/<package_id>/<subtest_key>/<NNN>.json` — question bank (git = source of truth; Supabase is a derived copy)
 - `questions/sample/` — real LPDP sample items collected from public tip sites; reference for which formats the bank must cover (not schema-valid, and some of their keys are wrong)
-- `questions/generator/` — Python tooling: deterministic generators (`deret_angka.py`, `aritmetika.py`, `aljabar.py`, `kecukupan_data.py`, `peluang_kombinatorik.py`), `figures.py` (every SVG in the bank: measured figures for `geometri`, schematic value-free ones shared by the `kecukupan_data` geometry families), `validate_bank.py`, `push_to_supabase.py`
+- `questions/generator/` — Python tooling: deterministic generators (`deret_angka.py`, `deret_huruf.py`, `aritmetika.py`, `aljabar.py`, `kecukupan_data.py`, `kecukupan_data_predikat.py`, `peluang_kombinatorik.py`), `figures.py` (every SVG in the bank: measured figures for `geometri`, schematic value-free ones shared by the `kecukupan_data` geometry families), `validate_bank.py`, `push_to_supabase.py`
 - `supabase/schema.sql` — full DDL, RLS policies, RPC functions (apply first)
 - `supabase/schema_v2_reports.sql` — v2 question-feedback DDL/RPCs (apply after `schema.sql`; re-apply it whenever `schema.sql` is re-applied)
 - `supabase/schema_v3.sql` — v3 release/history/statistics/digest DDL and final RPC definitions (apply after v2; re-apply after either earlier schema)
@@ -35,7 +35,7 @@ Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pa
 For any question generation/editing, follow `.agents/skills/lpdp-question-generation/SKILL.md`. Key rules:
 
 - Use the **question_generator** agent to write or regenerate questions; use the read-only **question_reviewer** agent to verify them before considering the work done. Route every reviewer failure back to `question_generator`.
-- Computable types (`deret_angka`, `aritmetika`, `perbandingan_kuantitatif`, `aljabar`, `kecukupan_data`, `peluang_kombinatorik`) MUST come from the Python generators, never hand-written keys.
+- Computable types (`deret_angka`, `deret_huruf`, `aritmetika`, `perbandingan_kuantitatif`, `aljabar`, `kecukupan_data`, `peluang_kombinatorik`) MUST come from the Python generators, never hand-written keys. Use `kecukupan_data_predikat.py` for yes/no inequality predicates and `kecukupan_data.py` for exact-quantity/geometry items.
 - Always finish with `python3 questions/generator/validate_bank.py` — it must exit 0.
 
 ## Commands
@@ -44,7 +44,9 @@ For any question generation/editing, follow `.agents/skills/lpdp-question-genera
 pip install -r questions/generator/requirements.txt   # once
 python3 questions/generator/validate_bank.py           # validate whole bank
 python3 questions/generator/deret_angka.py --help      # generate computable questions
+python3 questions/generator/deret_huruf.py --help      # screened alphabet-position sequences
 python3 questions/generator/kecukupan_data.py --help   # ... every generator takes --seed / --bank-dir
+python3 questions/generator/kecukupan_data_predikat.py --help  # yes/no inequality sufficiency
 python3 questions/generator/kecukupan_data.py --package 1 --count 1 --kind geometry  # data sufficiency on a figure
 python3 questions/generator/figures.py                 # regenerate every figure (--check in CI)
 python3 questions/generator/push_to_supabase.py --package 1 --dry-run

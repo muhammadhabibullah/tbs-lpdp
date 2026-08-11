@@ -67,7 +67,7 @@ Based on the LPDP TBS blueprint (ruangtes.id, checked 2026-08-09). One try-out *
 **Question types per subtest** (used by the generator; each question is tagged):
 
 - `verbal`: `sinonim`, `antonim`, `analogi`, `silogisme` (deductive conclusions), `kalimat_efektif` (sentence correction), `reading` (reading comprehension with a shared passage)
-- `kuantitatif`: `aritmetika`, `aljabar`, `deret_angka` (number sequences, one or two blanks), `perbandingan_kuantitatif`, `kecukupan_data` (data sufficiency), `peluang_kombinatorik` (probability and counting), `soal_cerita` (word problems), `geometri`
+- `kuantitatif`: `aritmetika`, `aljabar`, `deret_angka` (number sequences with one/two tail blanks, a missing first term, or two anchored interior blanks), `deret_huruf` (letter sequences, package 7 onward), `perbandingan_kuantitatif`, `kecukupan_data` (exact-quantity or yes/no-predicate data sufficiency), `peluang_kombinatorik` (probability and counting), `soal_cerita` (word problems), `geometri`
 - `pemecahan_masalah`: `logika_analitis` (analytical puzzles), `penalaran_kasus` (case reasoning), `interpretasi_data` (table/chart interpretation), `analisis_teks` (argumentative text analysis), plus `silogisme`, `soal_cerita` and `peluang_kombinatorik`
 
 A type may be legal in more than one subtest; the authoritative mapping is `TYPES_BY_SUBTEST` in `questions/generator/common.py`, enforced by `validate_bank.py`.
@@ -82,7 +82,7 @@ Subtests are taken **in order** (verbal → kuantitatif → pemecahan_masalah); 
 |----|-------------|
 | QG-1 | A machine-readable question format is defined by `questions/schema.json` (JSON Schema). Every question has: id, package, subtest, number, type, question text, optional image, exactly five options `A`–`E`, exactly one `correct_option`, and an `explanations` object covering **all five** options (why correct / why wrong). |
 | QG-2 | Questions live in git at `questions/bank/<package_id>/<subtest_key>/<NNN>.json` (one file per question); optional images at `questions/bank/<package_id>/images/`. Each package folder has a `package.json` manifest (title, description, subtest list). |
-| QG-3 | The LLM agent (Claude Code, see §11) generates questions into the bank. For computable types (`deret_angka`, `aritmetika`, `perbandingan_kuantitatif`, `aljabar`, `kecukupan_data`, `peluang_kombinatorik`) the agent MUST use the deterministic Python generators in `questions/generator/` so the correct answer is computed, not guessed. `geometri` has no generator yet and is hand-written with its arithmetic verified in Bash. |
+| QG-3 | The LLM agent (see §11) generates questions into the bank. For computable types (`deret_angka`, `deret_huruf`, `aritmetika`, `perbandingan_kuantitatif`, `aljabar`, `kecukupan_data`, `peluang_kombinatorik`) the agent MUST use the deterministic Python generators in `questions/generator/` so the correct answer is computed, not guessed. Exact-quantity and geometry data sufficiency use `kecukupan_data.py`; yes/no inequality predicates use `kecukupan_data_predikat.py`. `geometri` has no answer generator yet and is hand-written with its arithmetic verified in Bash. |
 | QG-4 | `questions/generator/validate_bank.py` validates the whole bank: schema conformance, unique question numbers per subtest, correct counts per the §4 blueprint, `correct_option` exists among options, explanations present for all options, referenced images exist. CI-runnable (exit code ≠ 0 on failure). |
 | QG-5 | A reviewer agent independently re-solves each generated question and rejects any question with zero or multiple defensible correct answers, or with an explanation that contradicts the key. |
 | QG-6 | `questions/generator/push_to_supabase.py` idempotently upserts a package (questions, options, answer keys) to Supabase using the `service_role` key from environment variables (never committed), and uploads images to the `question-images` Storage bucket. Re-running it after edits updates in place (stable IDs from QG-2 paths). |
@@ -205,6 +205,8 @@ tbs-lpdp/
 │   └── generator/                # Python tooling (QG-3/4/6)
 │       ├── common.py             # shared helpers (load schema, write question files)
 │       ├── deret_angka.py        # number-sequence generator (1 or 2 blanks)
+│       ├── deret_huruf.py        # screened letter-sequence generator
+│       ├── kecukupan_data_predikat.py # yes/no inequality sufficiency
 │       ├── aritmetika.py         # arithmetic/quant generator (computed answers)
 │       ├── aljabar.py            # algebra generator (computed answers)
 │       ├── kecukupan_data.py     # data-sufficiency generator (rank-decided keys)
