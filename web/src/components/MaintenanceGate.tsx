@@ -14,6 +14,10 @@ const POLL_INTERVAL_MS = 60_000
 const PROBE_TIMEOUT_MS = 5_000
 const MAX_TIMEOUT_MS = 2_147_000_000
 const DISMISSED_PREFIX = 'tbs-lpdp.maintenance.dismissed.'
+// Vite hardcodes DEV=false in production builds, so setting the flag in a
+// deployment environment can never disable the production maintenance gate.
+const DEV_BYPASS_MAINTENANCE =
+  import.meta.env.DEV && import.meta.env.VITE_BYPASS_MAINTENANCE === 'true'
 
 function wasDismissed(scheduleKey: string | null): boolean {
   if (!scheduleKey) return false
@@ -29,6 +33,11 @@ function wasDismissed(scheduleKey: string | null): boolean {
  * frontend-only gate: it does not change or protect any exam RPC (v4 scope).
  */
 export default function MaintenanceGate({ children }: { children: ReactNode }) {
+  if (DEV_BYPASS_MAINTENANCE) return <>{children}</>
+  return <EnforcedMaintenanceGate>{children}</EnforcedMaintenanceGate>
+}
+
+function EnforcedMaintenanceGate({ children }: { children: ReactNode }) {
   const [status, setStatus] = useState<MaintenanceStatus | null>(null)
   const [loaded, setLoaded] = useState(false)
   const [refreshing, setRefreshing] = useState(false)

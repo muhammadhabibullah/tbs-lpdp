@@ -2,7 +2,7 @@
 
 Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pages** (React + Vite + TypeScript in `web/`), backend on **Supabase** (Postgres + RLS + RPC, anonymous auth, Storage). No other infrastructure — all trusted logic (timing, grading, answer-key secrecy) lives in `supabase/schema.sql`.
 
-**Read `docs/TECHNICAL_REQUIREMENTS.md` before non-trivial work**, plus `docs/TECHNICAL_REQUIREMENTS_V2.md` for question feedback, `docs/TECHNICAL_REQUIREMENTS_V3.md` for question/package versioning, the daily report digest, package metadata, and deletion-safe statistics, and `docs/TECHNICAL_REQUIREMENTS_V4.md` for the Supabase-scheduled frontend maintenance mode. Requirement IDs (FE-x, BE-x, QG-x, C-x, NF-x) continue one shared sequence across all four documents.
+**Read `docs/TECHNICAL_REQUIREMENTS.md` before non-trivial work**, plus `docs/TECHNICAL_REQUIREMENTS_V2.md` for question feedback, `docs/TECHNICAL_REQUIREMENTS_V3.md` for question/package versioning and the daily report digest, `docs/TECHNICAL_REQUIREMENTS_V3_1.md` for qualified mean/median statistics and package metadata help, and `docs/TECHNICAL_REQUIREMENTS_V4.md` for the Supabase-scheduled frontend maintenance mode. Requirement IDs (FE-x, BE-x, QG-x, C-x, NF-x) continue one shared sequence across all documents.
 
 ## Exam format (do not change without updating docs)
 
@@ -20,6 +20,7 @@ Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pa
 - `supabase/schema.sql` — full DDL, RLS policies, RPC functions (apply first)
 - `supabase/schema_v2_reports.sql` — v2 question-feedback DDL/RPCs (apply after `schema.sql`; re-apply it whenever `schema.sql` is re-applied)
 - `supabase/schema_v3.sql` — v3 release/history/statistics/digest DDL and final RPC definitions (apply after v2; re-apply after either earlier schema)
+- `supabase/backfill_v3_1_statistics.sql` — optional one-time, fail-closed reconstruction of qualified mean/median from complete retained pre-v3.1 attempt detail
 - `supabase/functions/question-report-digest/` — private daily report email Edge Function
 - `supabase/schema_v4_maintenance_mode.sql` — scheduled frontend maintenance window + public status RPC (apply after every other application schema)
 - `supabase/maintenance.sql` — `pg_cron` retention, capacity, and report-digest jobs; apply last. Operational only — re-applying the schema files never undoes it

@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import AppShell from '../components/AppShell'
+import InfoTooltip from '../components/InfoTooltip'
 import { scrollToSection } from '../components/MenuBar'
+import PackageStatisticsPopover from '../components/PackageStatisticsPopover'
 import { USE_MOCK, api, errorMessage } from '../lib/api'
 import { formatDate, formatDateTime, formatMinutes } from '../lib/clock'
 import { isSupabaseConfigured } from '../lib/config'
@@ -11,6 +13,11 @@ const MAX_SCORE = 300
 /** Packages per page. Two full rows of the grid on a desktop. */
 const PAGE_SIZE = 6
 const DIFFICULTY_LABEL = { easy: 'Easy', medium: 'Medium', hard: 'Hard' } as const
+const DIFFICULTY_HELP = {
+  easy: 'Indeks kesulitan paket di bawah 1,90 berdasarkan komposisi 60 soal.',
+  medium: 'Indeks kesulitan paket 1,90–2,19 berdasarkan komposisi 60 soal.',
+  hard: 'Indeks kesulitan paket minimal 2,20 berdasarkan komposisi 60 soal.',
+} as const
 
 /** FE-19: shown wherever a new attempt is refused for lack of storage. */
 const CAPACITY_MESSAGE =
@@ -42,6 +49,7 @@ export default function HomePage() {
   const [startingId, setStartingId] = useState<number | null>(null)
   const [status, setStatus] = useState<ServiceStatus | null>(null)
   const [page, setPage] = useState(1)
+  const [openStatsPackageId, setOpenStatsPackageId] = useState<number | null>(null)
 
   useEffect(() => {
     let cancelled = false
@@ -167,12 +175,24 @@ export default function HomePage() {
               const totalSeconds = pkg.subtests.reduce((sum, s) => sum + s.duration_seconds, 0)
               return (
                 <article className="package-card" key={pkg.id}>
+                  <PackageStatisticsPopover
+                    pkg={pkg}
+                    open={openStatsPackageId === pkg.id}
+                    onOpenChange={(open) => setOpenStatsPackageId(open ? pkg.id : null)}
+                  />
                   <h3>{pkg.title}</h3>
                   <div className="package-meta" aria-label="Metadata paket soal">
-                    <span className={`package-badge difficulty-${pkg.difficulty}`}>
-                      {DIFFICULTY_LABEL[pkg.difficulty]}
-                    </span>
-                    <span className="package-badge">AI: {pkg.ai_model}</span>
+                    <InfoTooltip
+                      className={`difficulty-${pkg.difficulty}`}
+                      label={DIFFICULTY_LABEL[pkg.difficulty]}
+                    >
+                      <strong>{DIFFICULTY_LABEL[pkg.difficulty]}.</strong> {DIFFICULTY_HELP[pkg.difficulty]} Label ini
+                      menggambarkan komposisi paket, bukan prediksi skor setiap peserta.
+                    </InfoTooltip>
+                    <InfoTooltip label={`AI: ${pkg.ai_model}`}>
+                      <strong>Dikembangkan oleh {pkg.ai_company}.</strong> {pkg.ai_model_description} Label model bukan
+                      jaminan tingkat kesulitan; soal tetap divalidasi dan ditinjau sebelum dipublikasikan.
+                    </InfoTooltip>
                     <span className="package-badge">
                       Versi {pkg.question_version} · diperbarui {formatDate(pkg.last_updated_at)}
                     </span>
@@ -194,23 +214,6 @@ export default function HomePage() {
                     <span>Total</span>
                     <span>
                       {totalQuestions} soal · {formatMinutes(totalSeconds)}
-                    </span>
-                  </div>
-                  <div
-                    className="package-stats"
-                    title={`Statistik semua versi, tercatat sejak ${formatDate(pkg.statistics_coverage_started_at)}`}
-                  >
-                    <span>
-                      <strong>{pkg.completed_attempts_total.toLocaleString('id-ID')}</strong>
-                      <small>percobaan selesai</small>
-                    </span>
-                    <span>
-                      <strong>
-                        {pkg.mean_score == null
-                          ? 'Belum ada hasil'
-                          : `${pkg.mean_score.toLocaleString('id-ID', { maximumFractionDigits: 1 })} / ${MAX_SCORE}`}
-                      </strong>
-                      <small>rata-rata skor · semua versi</small>
                     </span>
                   </div>
                   <button

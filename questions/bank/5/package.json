@@ -3,5 +3,7 @@
   "title": "TBS LPDP Try Out — Paket 5",
   "description": "Simulasi lengkap Tes Bakat Skolastik LPDP dengan tingkat kesulitan yang lebih mudah untuk latihan bertahap: Penalaran Verbal (23 soal/30 menit), Penalaran Kuantitatif (25 soal/40 menit), dan Pemecahan Masalah (12 soal/20 menit).",
   "difficulty": "easy",
-  "ai_model": "5.6 Sol"
+  "ai_model": "5.6 Sol",
+  "ai_company": "OpenAI",
+  "ai_model_description": "Model frontier OpenAI untuk pekerjaan profesional kompleks, termasuk pemrograman, riset, sains, computer use, dan desain."
 }

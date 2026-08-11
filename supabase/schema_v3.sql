@@ -8,6 +8,7 @@
 -- and grants. Apply maintenance.sql last.
 --
 -- Design: docs/TECHNICAL_REQUIREMENTS_V3.md
+-- Follow-up: docs/TECHNICAL_REQUIREMENTS_V3_1.md
 -- =============================================================================
 
 create extension if not exists pgcrypto with schema extensions;
@@ -89,6 +90,9 @@ create table if not exists public.package_releases (
   description  text not null default '',
   difficulty   text not null check (difficulty in ('easy','medium','hard')),
   ai_model     text not null check (btrim(ai_model) <> ''),
+  ai_company   text not null check (btrim(ai_company) <> '' and char_length(ai_company) <= 100),
+  ai_model_description text not null check
+                 (btrim(ai_model_description) <> '' and char_length(ai_model_description) <= 300),
   content_hash text not null check (length(content_hash) = 64),
   published_at timestamptz not null default now(),
   unique (package_id, version),
@@ -96,6 +100,53 @@ create table if not exists public.package_releases (
 );
 create index if not exists package_releases_hash_idx
   on public.package_releases (package_id, content_hash);
+
+-- A re-application upgrades pre-v3.1 immutable releases with attribution
+-- metadata once. The trigger is restored below before normal operation.
+drop trigger if exists package_releases_immutable on public.package_releases;
+alter table public.package_releases
+  add column if not exists ai_company text,
+  add column if not exists ai_model_description text;
+update public.package_releases
+   set ai_company = case
+         when ai_model in ('Opus 5', 'Fable-5') then 'Anthropic'
+         when ai_model = '5.6 Sol' then 'OpenAI'
+         else 'Unknown' end,
+       ai_model_description = case
+         when ai_model = 'Opus 5' then
+           'Model Anthropic untuk penalaran mendalam, pemrograman agentik, dan pekerjaan kompleks berdurasi panjang.'
+         when ai_model = 'Fable-5' then
+           'Model Anthropic untuk tugas kompleks dan berdurasi panjang, termasuk pemrograman, pekerjaan pengetahuan, visi, dan riset.'
+         when ai_model = '5.6 Sol' then
+           'Model frontier OpenAI untuk pekerjaan profesional kompleks, termasuk pemrograman, riset, sains, computer use, dan desain.'
+         else 'Perusahaan dan informasi umum model belum dicatat.' end
+ where ai_company is null or btrim(ai_company) = ''
+    or ai_model_description is null or btrim(ai_model_description) = '';
+alter table public.package_releases
+  alter column ai_company set not null,
+  alter column ai_model_description set not null;
+do $$
+begin
+  if not exists (
+    select 1 from pg_constraint
+     where conrelid = 'public.package_releases'::regclass
+       and conname = 'package_releases_ai_company_v31_check'
+  ) then
+    alter table public.package_releases
+      add constraint package_releases_ai_company_v31_check
+      check (btrim(ai_company) <> '' and char_length(ai_company) <= 100);
+  end if;
+  if not exists (
+    select 1 from pg_constraint
+     where conrelid = 'public.package_releases'::regclass
+       and conname = 'package_releases_ai_description_v31_check'
+  ) then
+    alter table public.package_releases
+      add constraint package_releases_ai_description_v31_check
+      check (btrim(ai_model_description) <> '' and char_length(ai_model_description) <= 300);
+  end if;
+end;
+$$;
 
 create table if not exists public.package_release_questions (
   package_release_id   uuid not null,
@@ -138,10 +189,78 @@ create table if not exists public.package_statistics (
   attempts_started_total   bigint not null default 0 check (attempts_started_total >= 0),
   attempts_completed_total bigint not null default 0 check (attempts_completed_total >= 0),
   score_sum                bigint not null default 0 check (score_sum >= 0),
+  statistics_sample_total  bigint not null default 0 check (statistics_sample_total >= 0),
+  statistics_score_sum     bigint not null default 0 check (statistics_score_sum >= 0),
   coverage_started_at      timestamptz not null default now(),
+  score_statistics_coverage_started_at timestamptz not null default now(),
   updated_at               timestamptz not null default now(),
-  check (attempts_completed_total <= attempts_started_total)
+  check (attempts_completed_total <= attempts_started_total),
+  check (statistics_sample_total <= attempts_completed_total)
 );
+
+alter table public.package_statistics
+  add column if not exists statistics_sample_total bigint not null default 0
+    check (statistics_sample_total >= 0),
+  add column if not exists statistics_score_sum bigint not null default 0
+    check (statistics_score_sum >= 0),
+  add column if not exists score_statistics_coverage_started_at timestamptz
+    not null default now();
+do $$
+begin
+  if not exists (
+    select 1 from pg_constraint
+     where conrelid = 'public.package_statistics'::regclass
+       and conname = 'package_statistics_sample_le_completed_check'
+  ) then
+    alter table public.package_statistics
+      add constraint package_statistics_sample_le_completed_check
+      check (statistics_sample_total <= attempts_completed_total);
+  end if;
+end;
+$$;
+
+create table if not exists public.package_score_histogram (
+  package_id    integer not null references public.packages (id),
+  score         smallint not null check (score between 0 and 300 and score % 5 = 0),
+  attempt_count bigint not null check (attempt_count >= 0),
+  primary key (package_id, score)
+);
+
+-- One immutable row records the optional operator backfill from retained
+-- pre-v3.1 attempts. It contains aggregate evidence only, never user/attempt
+-- identifiers, and makes the operation auditable and exactly-once.
+create table if not exists public.package_statistics_backfill_runs (
+  run_key         text primary key,
+  package_summary jsonb not null,
+  applied_at      timestamptz not null default now()
+);
+
+create or replace function public._v3_package_median_score(p_package_id integer)
+returns numeric
+language sql stable security definer
+set search_path = public
+as $$
+  with ranked as (
+    select h.score,
+           sum(h.attempt_count) over (order by h.score) as cumulative_count
+      from public.package_score_histogram h
+     where h.package_id = p_package_id and h.attempt_count > 0
+  ), totals as (
+    select coalesce(sum(h.attempt_count), 0)::bigint as sample_total
+      from public.package_score_histogram h
+     where h.package_id = p_package_id
+  ), targets as (
+    select ((sample_total + 1) / 2)::bigint as wanted_rank from totals
+    union all
+    select ((sample_total + 2) / 2)::bigint as wanted_rank from totals
+  )
+  select case when (select sample_total from totals) = 0 then null
+              else (select avg((select min(r.score)::numeric
+                                  from ranked r
+                                 where r.cumulative_count >= t.wanted_rank))
+                      from targets t)
+         end;
+$$;
 
 -- ---------------------------------------------------------- digest outbox ---
 
@@ -181,6 +300,240 @@ begin
 end;
 $$;
 
+-- Reconstruct v3.1 eligibility for every retained finished attempt and mark
+-- whether it predates the package's score-statistics boundary. This remains
+-- private; the operator backfill below is its sole consumer.
+create or replace function public._v3_1_retained_finished_attempts()
+returns table (
+  attempt_id       uuid,
+  package_id       integer,
+  finished_at      timestamptz,
+  total_score      integer,
+  source_boundary  timestamptz,
+  pre_boundary     boolean,
+  eligible         boolean
+)
+language sql stable security definer
+set search_path = public
+as $$
+  with coverage as (
+    select a.id as attempt_id,
+           a.package_id,
+           a.finished_at,
+           a.total_score,
+           ps.score_statistics_coverage_started_at as source_boundary,
+           count(distinct st.key) filter (
+             where sa.status = 'finished'
+               and st.key in ('verbal', 'kuantitatif', 'pemecahan_masalah')
+           ) as finished_subtests,
+           count(*) filter (where ans.selected_option is not null) as answered_total,
+           count(*) filter (
+             where ans.selected_option is not null and st.key = 'verbal'
+           ) as answered_verbal,
+           count(*) filter (
+             where ans.selected_option is not null and st.key = 'kuantitatif'
+           ) as answered_kuantitatif,
+           count(*) filter (
+             where ans.selected_option is not null and st.key = 'pemecahan_masalah'
+           ) as answered_pemecahan
+      from public.attempts a
+      join public.package_statistics ps on ps.package_id = a.package_id
+      join public.section_attempts sa on sa.attempt_id = a.id
+      join public.subtests st on st.id = sa.subtest_id
+      left join public.answers ans on ans.section_attempt_id = sa.id
+     where a.status = 'finished'
+       and a.finished_at is not null
+     group by a.id, a.package_id, a.finished_at, a.total_score,
+              ps.score_statistics_coverage_started_at
+  )
+  select c.attempt_id,
+         c.package_id,
+         c.finished_at,
+         c.total_score,
+         c.source_boundary,
+         c.finished_at < c.source_boundary as pre_boundary,
+         c.finished_subtests = 3
+           and c.answered_total >= 48
+           and c.answered_verbal >= 12
+           and c.answered_kuantitatif >= 13
+           and c.answered_pemecahan >= 6 as eligible
+    from coverage c;
+$$;
+
+-- Optional one-time operational backfill. It fails closed unless every
+-- durable completed-attempt counter still has a retained finished row, so a
+-- partial seven-day window can never be presented as complete history.
+create or replace function public.backfill_v3_1_retained_statistics()
+returns jsonb
+language plpgsql security definer
+set search_path = public, pg_temp
+as $$
+declare
+  v_run_key constant text := 'v3.1-retained-pre-boundary-v1';
+  v_summary jsonb;
+begin
+  perform pg_advisory_xact_lock(hashtextextended(v_run_key, 0));
+
+  select r.package_summary into v_summary
+    from public.package_statistics_backfill_runs r
+   where r.run_key = v_run_key;
+  if found then
+    return jsonb_build_object(
+      'status', 'already_applied',
+      'run_key', v_run_key,
+      'packages', v_summary
+    );
+  end if;
+
+  -- Normal completion updates package_statistics before the histogram. Taking
+  -- these locks in the same order gives this transaction a consistent cut and
+  -- lets a racing completion continue immediately after commit.
+  lock table public.package_statistics in share row exclusive mode;
+  lock table public.package_score_histogram in share row exclusive mode;
+
+  -- One statement-level snapshot prevents the retention job from changing the
+  -- retained population between the completeness proof and the aggregates.
+  create temporary table _v3_1_retained_finished_snapshot
+    on commit drop
+    as select * from public._v3_1_retained_finished_attempts();
+
+  if exists (
+    select 1
+      from public.package_statistics ps
+      left join (
+        select r.package_id, count(*)::bigint as retained_finished
+          from pg_temp._v3_1_retained_finished_snapshot r
+         group by r.package_id
+      ) r on r.package_id = ps.package_id
+     where coalesce(r.retained_finished, 0) <> ps.attempts_completed_total
+  ) then
+    raise exception
+      'v3.1 statistics backfill aborted: retained finished attempts do not match durable completion totals'
+      using errcode = '55000',
+            hint = 'Retention has removed detail or statistics were adjusted; do not create a partial historical mean/median.';
+  end if;
+
+  if exists (
+    select 1
+      from public.package_statistics ps
+      left join lateral (
+        select coalesce(sum(h.attempt_count), 0)::bigint as sample_total,
+               coalesce(sum(h.score::bigint * h.attempt_count), 0)::bigint as score_sum
+          from public.package_score_histogram h
+         where h.package_id = ps.package_id
+      ) h on true
+     where h.sample_total <> ps.statistics_sample_total
+        or h.score_sum <> ps.statistics_score_sum
+  ) then
+    raise exception 'v3.1 statistics backfill aborted: histogram/statistics invariant failed'
+      using errcode = '55000';
+  end if;
+
+  if exists (
+    select 1 from pg_temp._v3_1_retained_finished_snapshot r
+     where r.pre_boundary
+       and (r.total_score is null
+        or r.total_score < 0
+        or r.total_score > 300
+        or r.total_score % 5 <> 0)
+  ) then
+    raise exception 'v3.1 statistics backfill aborted: retained score is invalid'
+      using errcode = '22000';
+  end if;
+
+  with package_rows as (
+    select r.package_id,
+           min(r.source_boundary) as boundary_before,
+           least(min(r.source_boundary), min(r.finished_at)) as boundary_after,
+           count(*)::bigint as retained_pre_boundary,
+           count(*) filter (where r.eligible)::bigint as eligible_total,
+           coalesce(sum(r.total_score) filter (where r.eligible), 0)::bigint as eligible_score_sum,
+           round(avg(r.total_score) filter (where r.eligible), 1) as mean_score,
+           percentile_cont(0.5) within group (order by r.total_score)
+             filter (where r.eligible) as median_score
+      from pg_temp._v3_1_retained_finished_snapshot r
+     where r.pre_boundary
+     group by r.package_id
+  )
+  select coalesce(
+           jsonb_object_agg(
+             p.package_id::text,
+             jsonb_build_object(
+               'boundary_before', p.boundary_before,
+               'boundary_after', p.boundary_after,
+               'retained_pre_boundary', p.retained_pre_boundary,
+               'eligible_total', p.eligible_total,
+               'eligible_score_sum', p.eligible_score_sum,
+               'mean_score', p.mean_score,
+               'median_score', p.median_score
+             )
+             order by p.package_id
+           ),
+           '{}'::jsonb
+         )
+    into v_summary
+    from package_rows p;
+
+  insert into public.package_score_histogram as h
+    (package_id, score, attempt_count)
+  select r.package_id, r.total_score::smallint, count(*)::bigint
+    from pg_temp._v3_1_retained_finished_snapshot r
+   where r.pre_boundary and r.eligible
+   group by r.package_id, r.total_score
+  on conflict (package_id, score) do update set
+    attempt_count = h.attempt_count + excluded.attempt_count;
+
+  with package_rows as (
+    select r.package_id,
+           min(r.finished_at) as earliest_finished_at,
+           count(*) filter (where r.eligible)::bigint as eligible_total,
+           coalesce(sum(r.total_score) filter (where r.eligible), 0)::bigint as eligible_score_sum
+      from pg_temp._v3_1_retained_finished_snapshot r
+     where r.pre_boundary
+     group by r.package_id
+  )
+  update public.package_statistics ps
+     set statistics_sample_total = ps.statistics_sample_total + p.eligible_total,
+         statistics_score_sum = ps.statistics_score_sum + p.eligible_score_sum,
+         score_statistics_coverage_started_at = least(
+           ps.score_statistics_coverage_started_at,
+           p.earliest_finished_at
+         ),
+         updated_at = now()
+    from package_rows p
+   where p.package_id = ps.package_id;
+
+  if exists (
+    select 1
+      from public.package_statistics ps
+      left join lateral (
+        select coalesce(sum(h.attempt_count), 0)::bigint as sample_total,
+               coalesce(sum(h.score::bigint * h.attempt_count), 0)::bigint as score_sum
+          from public.package_score_histogram h
+         where h.package_id = ps.package_id
+      ) h on true
+     where h.sample_total <> ps.statistics_sample_total
+        or h.score_sum <> ps.statistics_score_sum
+  ) then
+    raise exception 'v3.1 statistics backfill aborted: post-update invariant failed'
+      using errcode = '55000';
+  end if;
+
+  insert into public.package_statistics_backfill_runs (run_key, package_summary)
+  values (v_run_key, v_summary);
+
+  return jsonb_build_object(
+    'status', 'applied',
+    'run_key', v_run_key,
+    'packages', v_summary
+  );
+end;
+$$;
+
+-- Remove the development-era helper name after the backfill function no
+-- longer depends on it. This is harmless on a fresh database.
+drop function if exists public._v3_1_retained_pre_boundary_attempts();
+
 -- ---------------------------------------------------------- JSON helpers ----
 
 create or replace function public._v3_release_package_json(p_release_id uuid)
@@ -196,12 +549,17 @@ as $$
     'created_at', p.created_at,
     'difficulty', pr.difficulty,
     'ai_model', pr.ai_model,
+    'ai_company', pr.ai_company,
+    'ai_model_description', pr.ai_model_description,
     'question_version', pr.version,
     'last_updated_at', pr.published_at,
     'completed_attempts_total', coalesce(ps.attempts_completed_total, 0),
-    'mean_score', case when coalesce(ps.attempts_completed_total, 0) = 0 then null
-                       else round(ps.score_sum::numeric / ps.attempts_completed_total, 1) end,
+    'statistics_sample_total', coalesce(ps.statistics_sample_total, 0),
+    'mean_score', case when coalesce(ps.statistics_sample_total, 0) = 0 then null
+                       else round(ps.statistics_score_sum::numeric / ps.statistics_sample_total, 1) end,
+    'median_score', public._v3_package_median_score(pr.package_id),
     'statistics_coverage_started_at', ps.coverage_started_at,
+    'score_statistics_coverage_started_at', ps.score_statistics_coverage_started_at,
     'subtests', (
       select coalesce(json_agg(row_to_json(st) order by st.position), '[]'::json)
         from public.subtests st where st.package_id = pr.package_id))
@@ -259,6 +617,11 @@ declare
   v_attempt_id uuid;
   v_all_done boolean;
   v_finished_attempt public.attempts;
+  v_answered_total integer := 0;
+  v_answered_verbal integer := 0;
+  v_answered_kuantitatif integer := 0;
+  v_answered_pemecahan integer := 0;
+  v_statistics_eligible boolean := false;
 begin
   select coalesce(count(*) filter (
            where ans.selected_option = qr.correct_option), 0) * 5
@@ -301,13 +664,40 @@ begin
 
     -- Only the transaction that changed active -> finished gets a returned row.
     if v_finished_attempt.id is not null then
+      select count(*) filter (where ans.selected_option is not null),
+             count(*) filter (where ans.selected_option is not null and st.key = 'verbal'),
+             count(*) filter (where ans.selected_option is not null and st.key = 'kuantitatif'),
+             count(*) filter (where ans.selected_option is not null and st.key = 'pemecahan_masalah')
+        into v_answered_total, v_answered_verbal,
+             v_answered_kuantitatif, v_answered_pemecahan
+        from public.answers ans
+        join public.section_attempts sa on sa.id = ans.section_attempt_id
+        join public.subtests st on st.id = sa.subtest_id
+       where sa.attempt_id = v_finished_attempt.id;
+      v_statistics_eligible := v_answered_total >= 48
+        and v_answered_verbal >= 12
+        and v_answered_kuantitatif >= 13
+        and v_answered_pemecahan >= 6;
+
       insert into public.package_statistics as ps
-        (package_id, attempts_started_total, attempts_completed_total, score_sum)
-      values (v_finished_attempt.package_id, 1, 1, v_finished_attempt.total_score)
+        (package_id, attempts_started_total, attempts_completed_total, score_sum,
+         statistics_sample_total, statistics_score_sum)
+      values (v_finished_attempt.package_id, 1, 1, v_finished_attempt.total_score,
+              case when v_statistics_eligible then 1 else 0 end,
+              case when v_statistics_eligible then v_finished_attempt.total_score else 0 end)
       on conflict (package_id) do update set
         attempts_completed_total = ps.attempts_completed_total + 1,
         score_sum = ps.score_sum + excluded.score_sum,
+        statistics_sample_total = ps.statistics_sample_total + excluded.statistics_sample_total,
+        statistics_score_sum = ps.statistics_score_sum + excluded.statistics_score_sum,
         updated_at = now();
+
+      if v_statistics_eligible then
+        insert into public.package_score_histogram as h (package_id, score, attempt_count)
+        values (v_finished_attempt.package_id, v_finished_attempt.total_score, 1)
+        on conflict (package_id, score) do update set
+          attempt_count = h.attempt_count + 1;
+      end if;
     end if;
   end if;
   return v_score;
@@ -558,6 +948,11 @@ drop trigger if exists package_release_questions_immutable on public.package_rel
 create trigger package_release_questions_immutable
   before update or delete on public.package_release_questions
   for each row execute function public._v3_reject_immutable_change();
+drop trigger if exists package_statistics_backfill_runs_immutable
+  on public.package_statistics_backfill_runs;
+create trigger package_statistics_backfill_runs_immutable
+  before update or delete on public.package_statistics_backfill_runs
+  for each row execute function public._v3_reject_immutable_change();
 
 -- --------------------------------------------------------------- RLS --------
 
@@ -566,6 +961,8 @@ alter table public.question_revision_options   enable row level security;
 alter table public.package_releases            enable row level security;
 alter table public.package_release_questions   enable row level security;
 alter table public.package_statistics          enable row level security;
+alter table public.package_score_histogram     enable row level security;
+alter table public.package_statistics_backfill_runs enable row level security;
 alter table public.question_report_digest_runs enable row level security;
 
 -- No policies: all projections come through narrowly granted RPCs. This is
@@ -575,6 +972,8 @@ revoke all on public.question_revisions,
               public.package_releases,
               public.package_release_questions,
               public.package_statistics,
+              public.package_score_histogram,
+              public.package_statistics_backfill_runs,
               public.question_report_digest_runs
 from anon, authenticated;
 
@@ -630,6 +1029,8 @@ declare
   v_release_id uuid;
   v_difficulty text;
   v_ai_model text;
+  v_ai_company text;
+  v_ai_model_description text;
   v_hash text;
 begin
   for v_package in select * from public.packages order by id loop
@@ -675,6 +1076,18 @@ begin
       when v_package.id = 4 then 'Fable-5'
       when v_package.id between 5 and 6 then '5.6 Sol'
       else 'Unknown' end;
+    v_ai_company := case
+      when v_package.id between 1 and 4 then 'Anthropic'
+      when v_package.id between 5 and 6 then 'OpenAI'
+      else 'Unknown' end;
+    v_ai_model_description := case
+      when v_package.id between 1 and 3 then
+        'Model Anthropic untuk penalaran mendalam, pemrograman agentik, dan pekerjaan kompleks berdurasi panjang.'
+      when v_package.id = 4 then
+        'Model Anthropic untuk tugas kompleks dan berdurasi panjang, termasuk pemrograman, pekerjaan pengetahuan, visi, dan riset.'
+      when v_package.id between 5 and 6 then
+        'Model frontier OpenAI untuk pekerjaan profesional kompleks, termasuk pemrograman, riset, sains, computer use, dan desain.'
+      else 'Perusahaan dan informasi umum model belum dicatat.' end;
 
     select public._v3_hash_jsonb(jsonb_build_object(
              'id', v_package.id,
@@ -682,6 +1095,8 @@ begin
              'description', v_package.description,
              'difficulty', v_difficulty,
              'ai_model', v_ai_model,
+             'ai_company', v_ai_company,
+             'ai_model_description', v_ai_model_description,
              'questions', jsonb_agg(jsonb_build_array(q.id, qr.content_hash) order by q.id)))
       into v_hash
       from public.questions q
@@ -693,10 +1108,11 @@ begin
      where st.package_id = v_package.id;
 
     insert into public.package_releases
-      (package_id, version, title, description, difficulty, ai_model, content_hash)
+      (package_id, version, title, description, difficulty, ai_model,
+       ai_company, ai_model_description, content_hash)
     values
       (v_package.id, 1, v_package.title, v_package.description,
-       v_difficulty, v_ai_model, v_hash)
+       v_difficulty, v_ai_model, v_ai_company, v_ai_model_description, v_hash)
     returning id into v_release_id;
 
     insert into public.package_release_questions
@@ -779,6 +1195,8 @@ declare
   v_description text;
   v_difficulty text;
   v_ai_model text;
+  v_ai_company text;
+  v_ai_model_description text;
   v_publish boolean;
   v_current_release public.package_releases;
   v_question jsonb;
@@ -803,6 +1221,11 @@ declare
   v_expected_duration integer;
   v_expected_passing integer;
   v_expected_name text;
+  v_easy_count integer := 0;
+  v_medium_count integer := 0;
+  v_hard_count integer := 0;
+  v_weighted_difficulty integer;
+  v_calculated_difficulty text;
 begin
   if jsonb_typeof(v_package_json) <> 'object'
      or jsonb_typeof(v_subtests) <> 'array'
@@ -815,9 +1238,13 @@ begin
   v_description := coalesce(v_package_json ->> 'description', '');
   v_difficulty := v_package_json ->> 'difficulty';
   v_ai_model := btrim(coalesce(v_package_json ->> 'ai_model', ''));
+  v_ai_company := btrim(coalesce(v_package_json ->> 'ai_company', ''));
+  v_ai_model_description := btrim(coalesce(v_package_json ->> 'ai_model_description', ''));
   v_publish := case when jsonb_typeof(v_package_json -> 'is_published') = 'boolean'
                     then (v_package_json ->> 'is_published')::boolean else null end;
   if v_package_id is null or v_package_id < 1 or v_title = '' or v_ai_model = ''
+     or v_ai_company = '' or char_length(v_ai_company) > 100
+     or v_ai_model_description = '' or char_length(v_ai_model_description) > 300
      or v_difficulty not in ('easy','medium','hard') then
     raise exception 'invalid package metadata' using errcode = 'P0006';
   end if;
@@ -907,6 +1334,11 @@ begin
       raise exception 'invalid question identity/metadata: %', v_question ->> 'id'
         using errcode = 'P0006';
     end if;
+    case v_question ->> 'difficulty'
+      when 'easy' then v_easy_count := v_easy_count + 1;
+      when 'medium' then v_medium_count := v_medium_count + 1;
+      when 'hard' then v_hard_count := v_hard_count + 1;
+    end case;
     v_options := v_question -> 'options';
     v_explanations := v_question -> 'explanations';
     if jsonb_typeof(v_options) <> 'array' or jsonb_array_length(v_options) <> 5
@@ -1003,9 +1435,22 @@ begin
     raise exception 'release question counts must be 23/25/12' using errcode = 'P0006';
   end if;
 
+  v_weighted_difficulty := v_easy_count + 2 * v_medium_count + 3 * v_hard_count;
+  v_calculated_difficulty := case
+    when v_weighted_difficulty < 114 then 'easy'
+    when v_weighted_difficulty < 132 then 'medium'
+    else 'hard' end;
+  if v_difficulty <> v_calculated_difficulty then
+    raise exception
+      'package difficulty % does not match calculated % (easy %, medium %, hard %)',
+      v_difficulty, v_calculated_difficulty, v_easy_count, v_medium_count, v_hard_count
+      using errcode = 'P0006';
+  end if;
+
   v_package_hash := public._v3_hash_jsonb(jsonb_build_object(
     'id', v_package_id, 'title', v_title, 'description', v_description,
     'difficulty', v_difficulty, 'ai_model', v_ai_model,
+    'ai_company', v_ai_company, 'ai_model_description', v_ai_model_description,
     'questions', v_hash_pairs));
   if nullif(v_package_json ->> 'client_content_hash', '') is not null
      and v_package_json ->> 'client_content_hash' <> v_package_hash then
@@ -1024,10 +1469,11 @@ begin
   select coalesce(max(version), 0) + 1 into v_release_version
     from public.package_releases where package_id = v_package_id;
   insert into public.package_releases
-    (package_id, version, title, description, difficulty, ai_model, content_hash)
+    (package_id, version, title, description, difficulty, ai_model,
+     ai_company, ai_model_description, content_hash)
   values
     (v_package_id, v_release_version, v_title, v_description,
-     v_difficulty, v_ai_model, v_package_hash)
+     v_difficulty, v_ai_model, v_ai_company, v_ai_model_description, v_package_hash)
   returning id into v_release_id;
 
   for v_mapping in select value from jsonb_array_elements(v_mappings) loop
@@ -1397,6 +1843,9 @@ $$;
 
 revoke all on function public._v3_hash_jsonb(jsonb),
   public._v3_question_hash(text,text,integer,text,text,text,text,text,jsonb,char,jsonb),
+  public._v3_package_median_score(integer),
+  public._v3_1_retained_finished_attempts(),
+  public.backfill_v3_1_retained_statistics(),
   public._v3_release_package_json(uuid),
   public.publish_package_release(jsonb),
   public._prepare_question_report_digest_run(timestamptz,timestamptz),

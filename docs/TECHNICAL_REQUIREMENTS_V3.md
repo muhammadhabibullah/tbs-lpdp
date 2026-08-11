@@ -5,6 +5,7 @@
 | Status | v3.0 — implemented; production deployment requires the secrets and apply order in §9.3/§11 |
 | Date | 2026-08-11 |
 | Extends | [`TECHNICAL_REQUIREMENTS.md`](TECHNICAL_REQUIREMENTS.md) (v1) and [`TECHNICAL_REQUIREMENTS_V2.md`](TECHNICAL_REQUIREMENTS_V2.md) (v2) |
+| Implemented follow-up | [`TECHNICAL_REQUIREMENTS_V3_1.md`](TECHNICAL_REQUIREMENTS_V3_1.md) — on-demand statistics, qualified mean/median, and metadata help |
 | Scope | Daily operator email for question reports; immutable question/package versions; public package metadata; deletion-safe package attempt statistics |
 | Stack | GitHub Pages + Supabase Postgres/RLS/RPC/Cron/Edge Functions; Resend is the email transport only |
 

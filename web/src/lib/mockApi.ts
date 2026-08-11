@@ -59,7 +59,11 @@ interface MockStatistics {
   attempts_started_total: number
   attempts_completed_total: number
   score_sum: number
+  statistics_sample_total: number
+  statistics_score_sum: number
+  score_histogram: Record<string, number>
   coverage_started_at: string
+  score_statistics_coverage_started_at: string
 }
 
 interface MockState {
@@ -130,12 +134,44 @@ function findBankPackage(bank: Bank, packageId: number): BankPackage {
 }
 
 function ensureStatistics(state: MockState, packageId: number): MockStatistics {
-  return (state.statistics[String(packageId)] ??= {
+  const stats = (state.statistics[String(packageId)] ??= {
     attempts_started_total: 0,
     attempts_completed_total: 0,
     score_sum: 0,
+    statistics_sample_total: 0,
+    statistics_score_sum: 0,
+    score_histogram: {},
     coverage_started_at: now(),
+    score_statistics_coverage_started_at: now(),
   })
+  // Upgrade existing tbs-lpdp.mock.v3 state without pretending its historical
+  // all-completion sum satisfies the stricter v3.1 eligibility rule.
+  stats.statistics_sample_total ??= 0
+  stats.statistics_score_sum ??= 0
+  stats.score_histogram ??= {}
+  stats.score_statistics_coverage_started_at ??= now()
+  return stats
+}
+
+function medianScore(stats: MockStatistics): number | null {
+  if (stats.statistics_sample_total === 0) return null
+  const lowerRank = Math.floor((stats.statistics_sample_total + 1) / 2)
+  const upperRank = Math.floor((stats.statistics_sample_total + 2) / 2)
+  const entries = Object.entries(stats.score_histogram)
+    .map(([score, count]) => [Number(score), count] as const)
+    .sort((a, b) => a[0] - b[0])
+  let cumulative = 0
+  let lower: number | null = null
+  let upper: number | null = null
+  for (const [score, count] of entries) {
+    cumulative += count
+    if (lower == null && cumulative >= lowerRank) lower = score
+    if (upper == null && cumulative >= upperRank) {
+      upper = score
+      break
+    }
+  }
+  return lower == null || upper == null ? null : (lower + upper) / 2
 }
 
 function withStatistics(pkg: Package, state: MockState): Package {
@@ -143,8 +179,13 @@ function withStatistics(pkg: Package, state: MockState): Package {
   return {
     ...pkg,
     completed_attempts_total: stats.attempts_completed_total,
-    mean_score: stats.attempts_completed_total === 0 ? null : stats.score_sum / stats.attempts_completed_total,
+    statistics_sample_total: stats.statistics_sample_total,
+    mean_score: stats.statistics_sample_total === 0
+      ? null
+      : stats.statistics_score_sum / stats.statistics_sample_total,
+    median_score: medianScore(stats),
     statistics_coverage_started_at: stats.coverage_started_at,
+    score_statistics_coverage_started_at: stats.score_statistics_coverage_started_at,
   }
 }
 
@@ -205,6 +246,24 @@ function gradeSection(state: MockState, sectionId: string): number {
     const stats = ensureStatistics(state, attempt.package_id)
     stats.attempts_completed_total += 1
     stats.score_sum += attempt.total_score
+    const answeredBySubtest = release.package.subtests.map((subtest) => {
+      const completedSection = state.sections.find(
+        (item) => item.attempt_id === attempt.id && item.subtest_id === subtest.id,
+      )
+      const saved = completedSection ? state.answers[completedSection.id] ?? {} : {}
+      return Object.values(saved).filter((answer) => answer.selected_option !== null).length
+    })
+    const answeredTotal = answeredBySubtest.reduce((sum, count) => sum + count, 0)
+    const eligible = answeredTotal >= 48
+      && (answeredBySubtest[0] ?? 0) >= 12
+      && (answeredBySubtest[1] ?? 0) >= 13
+      && (answeredBySubtest[2] ?? 0) >= 6
+    if (eligible) {
+      stats.statistics_sample_total += 1
+      stats.statistics_score_sum += attempt.total_score
+      const scoreKey = String(attempt.total_score)
+      stats.score_histogram[scoreKey] = (stats.score_histogram[scoreKey] ?? 0) + 1
+    }
   }
   return section.score
 }

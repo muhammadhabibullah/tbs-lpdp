@@ -22,6 +22,9 @@ VITE_USE_MOCK=true npm run dev
 cp .env.example .env.local   # fill VITE_SUPABASE_URL + VITE_SUPABASE_PUBLISHABLE_KEY
 npm run dev
 
+# C. Against Supabase while its maintenance window is active (dev only):
+VITE_USE_MOCK=false VITE_BYPASS_MAINTENANCE=true npm run dev
+
 npm run build       # tsc --noEmit && vite build → dist/
 npm run typecheck
 ```
@@ -102,6 +105,11 @@ src/
 - **Maintenance is frontend-only** (v4 C-18): the global gate probes before
   routes mount and blocks the official SPA during the configured window, but
   existing Supabase RPCs deliberately remain callable.
+- **Local maintenance bypass is development-only.** Set
+  `VITE_BYPASS_MAINTENANCE=true` when running `npm run dev` against Supabase.
+  The bypass also requires Vite's built-in `import.meta.env.DEV`, which is
+  always `false` in a production build; configuring the flag in GitHub Actions
+  cannot bypass maintenance on the deployed site.
 
 ## Deployment
 

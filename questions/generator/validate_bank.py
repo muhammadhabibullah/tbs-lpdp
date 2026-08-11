@@ -37,6 +37,7 @@ from common import (
     TYPES_BY_SUBTEST,
     iter_bank_questions,
     load_schema,
+    package_difficulty,
 )
 
 
@@ -46,6 +47,8 @@ def validate(bank_dir: Path, strict: bool) -> int:
     warnings: list[str] = []
     # (package, subtest) -> list of numbers seen
     numbers: dict[tuple[str, str], list[int]] = defaultdict(list)
+    manifests: dict[str, dict] = {}
+    difficulty_counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
     count = 0
 
     package_dirs = sorted(
@@ -74,6 +77,21 @@ def validate(bank_dir: Path, strict: bool) -> int:
             errors.append(f"{rel}: difficulty must be one of easy, medium, hard")
         if not isinstance(manifest.get("ai_model"), str) or not manifest["ai_model"].strip():
             errors.append(f"{rel}: ai_model must be a non-empty string")
+        if (
+            not isinstance(manifest.get("ai_company"), str)
+            or not manifest["ai_company"].strip()
+            or len(manifest["ai_company"].strip()) > 100
+        ):
+            errors.append(f"{rel}: ai_company must be a non-empty string of at most 100 characters")
+        if (
+            not isinstance(manifest.get("ai_model_description"), str)
+            or not manifest["ai_model_description"].strip()
+            or len(manifest["ai_model_description"].strip()) > 300
+        ):
+            errors.append(
+                f"{rel}: ai_model_description must be a non-empty string of at most 300 characters"
+            )
+        manifests[package_dir.name] = manifest
 
     for path, q, parse_err in iter_bank_questions(bank_dir):
         rel = path.relative_to(bank_dir)
@@ -126,6 +144,7 @@ def validate(bank_dir: Path, strict: bool) -> int:
                 errors.append(f"{rel}: referenced image {q['image']!r} not found")
 
         numbers[(pkg, subtest)].append(expected_number)
+        difficulty_counts[pkg][q["difficulty"]] += 1
 
     for (pkg, subtest), nums in sorted(numbers.items()):
         dupes = {n for n in nums if nums.count(n) > 1}
@@ -149,6 +168,21 @@ def validate(bank_dir: Path, strict: bool) -> int:
                 key = (package_dir.name, subtest)
                 if key not in numbers:
                     errors.append(f"package {package_dir.name}/{subtest}: missing subtest (strict mode)")
+
+    expected_package_total = sum(details[2] for details in BLUEPRINT.values())
+    for pkg, manifest in sorted(manifests.items(), key=lambda item: int(item[0])):
+        counts = difficulty_counts[pkg]
+        total = sum(counts.values())
+        if total != expected_package_total:
+            continue  # strict/count checks report incomplete packages separately
+        calculated, index = package_difficulty(counts)
+        if manifest.get("difficulty") != calculated:
+            errors.append(
+                f"package {pkg}/package.json: difficulty {manifest.get('difficulty')!r} "
+                f"does not match calculated {calculated!r} "
+                f"(index {float(index):.2f}; easy={counts['easy']}, "
+                f"medium={counts['medium']}, hard={counts['hard']})"
+            )
 
     for w in warnings:
         print(f"WARN  {w}")

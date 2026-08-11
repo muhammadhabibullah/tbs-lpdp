@@ -29,7 +29,7 @@ from typing import Any, Optional
 
 import requests
 
-from common import BANK_DIR, BLUEPRINT, iter_bank_questions
+from common import BANK_DIR, BLUEPRINT, iter_bank_questions, package_difficulty
 
 BUCKET = "question-images"
 DIFFICULTIES = {"easy", "medium", "hard"}
@@ -133,9 +133,13 @@ def load_package(bank_dir: Path, package_id: int) -> tuple[dict[str, Any], list[
         sys.exit(f"{manifest_path}: id must be {package_id}")
     if manifest.get("difficulty") not in DIFFICULTIES:
         sys.exit(f"{manifest_path}: difficulty must be easy, medium, or hard")
-    for field in ("title", "description", "ai_model"):
+    for field in ("title", "description", "ai_model", "ai_company", "ai_model_description"):
         if not isinstance(manifest.get(field), str) or (field != "description" and not manifest[field].strip()):
             sys.exit(f"{manifest_path}: {field} must be a valid string")
+    if len(manifest["ai_company"].strip()) > 100:
+        sys.exit(f"{manifest_path}: ai_company must be at most 100 characters")
+    if len(manifest["ai_model_description"].strip()) > 300:
+        sys.exit(f"{manifest_path}: ai_model_description must be at most 300 characters")
 
     questions: list[dict[str, Any]] = []
     for path, question, error in iter_bank_questions(bank_dir):
@@ -152,6 +156,12 @@ def load_package(bank_dir: Path, package_id: int) -> tuple[dict[str, Any], list[
     for key, (_, _, expected, _, _) in BLUEPRINT.items():
         if counts[key] != expected:
             sys.exit(f"package {package_id}/{key}: expected {expected}, found {counts[key]}")
+    calculated, index = package_difficulty(Counter(q["difficulty"] for q in questions))
+    if manifest["difficulty"] != calculated:
+        sys.exit(
+            f"{manifest_path}: difficulty {manifest['difficulty']!r} does not match "
+            f"calculated {calculated!r} (index {float(index):.2f})"
+        )
     return manifest, questions
 
 
@@ -255,6 +265,8 @@ def main() -> None:
         "description": manifest["description"],
         "difficulty": manifest["difficulty"],
         "ai_model": manifest["ai_model"],
+        "ai_company": manifest["ai_company"],
+        "ai_model_description": manifest["ai_model_description"],
         "questions": hash_pairs,
     })
     payload = {
@@ -264,6 +276,8 @@ def main() -> None:
             "description": manifest["description"],
             "difficulty": manifest["difficulty"],
             "ai_model": manifest["ai_model"],
+            "ai_company": manifest["ai_company"],
+            "ai_model_description": manifest["ai_model_description"],
             # null preserves the current publication state; true publishes.
             "is_published": True if args.publish else None,
             "client_content_hash": package_hash,
@@ -274,7 +288,8 @@ def main() -> None:
 
     print(
         f"package {args.package}: {len(questions)} questions, "
-        f"difficulty={manifest['difficulty']}, model={manifest['ai_model']}"
+        f"difficulty={manifest['difficulty']}, model={manifest['ai_model']} "
+        f"({manifest['ai_company']})"
     )
     print(f"  local package hash {package_hash}")
     if args.dry_run:

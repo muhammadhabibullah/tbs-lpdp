@@ -36,6 +36,10 @@ appears, and a caller that bypasses the SPA can still call permitted RPCs.
   unavailable or not-yet-applied maintenance RPC taking down the static site.
   This limitation is unavoidable without backend enforcement, which is
   outside the requested scope.
+- Local development may explicitly bypass the gate to test the SPA against a
+  maintenance-active Supabase project. The bypass requires both
+  `import.meta.env.DEV` and `VITE_BYPASS_MAINTENANCE=true`; production builds
+  ignore the flag and still enforce the gate.
 
 ## 3. Requirements
 
@@ -54,6 +58,7 @@ appears, and a caller that bypasses the SPA can still call permitted RPCs.
 | FE-28 | From four hours before `starts_at` until `starts_at`, every page—including an active exam page whose normal navigation/footer are hidden—shows a warning banner above the masthead. It displays the window in WIB, the operator message, and an accessible close button. |
 | FE-29 | From `starts_at` inclusive until `ends_at` exclusive, normal routes are unmounted and replaced by a Bahasa Indonesia maintenance screen showing the expected end time and a **Periksa lagi** action. At the end boundary, the requested route becomes available again automatically. |
 | FE-30 | The SPA refreshes configuration every 60 seconds, changes phase at exact schedule boundaries using the server-clock offset, remembers dismissal per schedule for the browser session, and provides a local-storage schedule override in mock mode. |
+| FE-38 | A Vite development server may skip the status probe and maintenance UI when `VITE_BYPASS_MAINTENANCE=true`. The bypass must additionally require `import.meta.env.DEV`, so it is unreachable in production builds even if the variable is accidentally configured during deployment. |
 
 ### 3.3 Backend
 
@@ -157,3 +162,5 @@ Cancel it with `enabled = false`. Do not delete the singleton row.
 | A-8 | Status RPC is missing/unreachable | Site fails open; an already-known schedule is retained until its own end |
 | A-9 | Direct table select/update as `anon`/`authenticated` | Rejected; `get_maintenance_status()` remains callable before sign-in |
 | A-10 | `cd web && npm run build` | Typecheck and production build exit 0 |
+| A-11 | Run `VITE_BYPASS_MAINTENANCE=true npm run dev` against an active window | Local routes render and no maintenance status probe is started |
+| A-12 | Build/deploy with `VITE_BYPASS_MAINTENANCE=true` | Production still probes and enforces maintenance because `import.meta.env.DEV` is false |

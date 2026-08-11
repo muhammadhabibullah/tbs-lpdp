@@ -25,12 +25,17 @@ export interface Package {
   created_at: string
   difficulty: PackageDifficulty
   ai_model: string
+  ai_company: string
+  ai_model_description: string
   /** Immutable package release number currently advertised in the catalogue. */
   question_version: number
   last_updated_at: string
   completed_attempts_total: number
+  statistics_sample_total: number
   mean_score: number | null
+  median_score: number | null
   statistics_coverage_started_at: string
+  score_statistics_coverage_started_at: string
   subtests: Subtest[]
 }
 

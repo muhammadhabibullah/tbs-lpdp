@@ -67,9 +67,32 @@ PASSAGE_OR_IMAGE_TYPES = {"interpretasi_data"}
 PASSAGE_ALLOWED_TYPES = PASSAGE_REQUIRED_TYPES | PASSAGE_OR_IMAGE_TYPES
 
 OPTION_KEYS = ("A", "B", "C", "D", "E")
+DIFFICULTY_WEIGHTS = {"easy": 1, "medium": 2, "hard": 3}
 
 
 MINUS = "−"  # typographic minus, matches the one used in question stems
+
+
+def package_difficulty(difficulty_counts: dict[str, int]) -> tuple[str, Fraction]:
+    """Return the deterministic v3.1 package band and its exact index.
+
+    Easy is below 1.90, Medium is 1.90–2.19, and Hard starts at 2.20.
+    Integer cross-multiplication keeps boundary decisions deterministic.
+    """
+    total = sum(difficulty_counts.get(key, 0) for key in DIFFICULTY_WEIGHTS)
+    if total <= 0:
+        raise ValueError("cannot calculate package difficulty without questions")
+    weighted = sum(
+        difficulty_counts.get(key, 0) * weight
+        for key, weight in DIFFICULTY_WEIGHTS.items()
+    )
+    if 10 * weighted < 19 * total:
+        label = "easy"
+    elif 10 * weighted < 22 * total:
+        label = "medium"
+    else:
+        label = "hard"
+    return label, Fraction(weighted, total)
 
 
 def fmt_number(x) -> str:
