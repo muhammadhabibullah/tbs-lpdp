@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-010",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "deret_angka",
+  "question_text": "6, 50, 15, 11, 44, 17, 16, 38, 19, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "21, 23"
+    },
+    {
+      "key": "B",
+      "text": "10, 43"
+    },
+    {
+      "key": "C",
+      "text": "21, 32"
+    },
+    {
+      "key": "D",
+      "text": "21, 43"
+    },
+    {
+      "key": "E",
+      "text": "24, 21"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Suku kesepuluh sudah tepat, tetapi suku kesebelas 23 diperoleh dengan mengulangkan selisih suku kesepuluh dan kesembilan (2), seolah-olah selisih deret ini tetap.",
+    "B": "Salah. Suku kesepuluh 10 diperoleh dengan menerapkan beda jalur kedua pada suku terakhir jalur pertama, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "C": "Benar. Deret terdiri atas tiga jalur berselang-seling. Jalur pertama bertambah 5, jalur kedua berubah −6, dan jalur ketiga bertambah 2. Suku berikutnya melanjutkan jalur pertama: 16 + 5 = 21. Dengan pola yang sama, suku kesebelas adalah 32.",
+    "D": "Salah. Suku kesepuluh sudah tepat, tetapi bilangan kedua 43 diperoleh dengan menambahkan selisih 11 pada suku kesebelas 32, yaitu mengulangi selisih suku kesepuluh ke kesebelas alih-alih berhenti pada suku kesebelas.",
+    "E": "Salah. Suku kesepuluh 24 diperoleh dengan menambahkan beda jalur pertama pada suku tercetak terakhir yang berasal dari jalur ketiga, sehingga pasangan ini keliru sejak bilangan pertamanya."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

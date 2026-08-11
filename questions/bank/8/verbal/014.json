@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-014",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Premis 1: Tidak ada dokumen yang belum ditandatangani direktur yang dapat diproses ke tahap pencairan dana.\nPremis 2: Semua proposal dari divisi baru belum ditandatangani direktur.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sebagian proposal dari divisi baru dapat diproses ke tahap pencairan dana."
+    },
+    {
+      "key": "B",
+      "text": "Semua dokumen yang dapat diproses ke tahap pencairan dana berasal dari divisi baru."
+    },
+    {
+      "key": "C",
+      "text": "Proposal dari divisi baru akan dapat diproses setelah ditandatangani direktur."
+    },
+    {
+      "key": "D",
+      "text": "Semua proposal dari divisi baru tidak dapat diproses ke tahap pencairan dana."
+    },
+    {
+      "key": "E",
+      "text": "Tidak ada dokumen yang ditandatangani direktur yang berasal dari divisi baru."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Simpulan ini bertentangan dengan premis; karena seluruh proposal divisi baru belum ditandatangani direktur, premis pertama justru memastikan tidak satu pun dari proposal tersebut dapat diproses.",
+    "B": "Premis tidak memberikan informasi apa pun tentang asal dokumen yang dapat diproses; simpulan ini menyimpulkan sesuatu yang tidak dinyatakan kedua premis.",
+    "C": "Premis pertama hanya menyatakan dokumen yang belum ditandatangani tidak dapat diproses; premis ini tidak menyatakan bahwa penandatanganan otomatis membuat dokumen dapat diproses, sehingga simpulan ini menambahkan syarat yang tidak ada dalam premis.",
+    "D": "Benar. Karena tidak ada dokumen yang belum ditandatangani direktur yang dapat diproses, dan semua proposal divisi baru belum ditandatangani direktur, maka semua proposal divisi baru pasti tidak dapat diproses ke tahap pencairan dana.",
+    "E": "Premis kedua hanya menyatakan status tanda tangan proposal divisi baru saat ini; premis ini tidak menyatakan apa pun tentang dokumen bertanda tangan direktur secara umum, sehingga simpulan ini tidak didukung."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

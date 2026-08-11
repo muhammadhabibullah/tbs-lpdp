@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-008",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "aljabar",
+  "question_text": "Diketahui x + y = 14 dan xy = 25. Nilai dari x² + y² adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "246"
+    },
+    {
+      "key": "B",
+      "text": "146"
+    },
+    {
+      "key": "C",
+      "text": "196"
+    },
+    {
+      "key": "D",
+      "text": "171"
+    },
+    {
+      "key": "E",
+      "text": "96"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 246 diperoleh dengan menambahkan 2xy, padahal suku itu harus dipindahkan sehingga dikurangkan.",
+    "B": "Benar. x² + y² = (x + y)² − 2xy = 14² − 2 × 25 = 196 − 50 = 146.",
+    "C": "Salah. Nilai 196 diperoleh dengan menghitung (x + y)² = 196 dan berhenti di situ, tanpa mengurangkan 2xy.",
+    "D": "Salah. Nilai 171 diperoleh dengan mengurangkan xy satu kali, padahal penjabaran (x + y)² memuat 2xy.",
+    "E": "Salah. Nilai 96 diperoleh dengan menghitung (x − y)² = (x + y)² − 4xy, yang merupakan besaran lain."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

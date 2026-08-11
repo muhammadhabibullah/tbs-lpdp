@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-022",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Seorang pengendara motor menempuh perjalanan dari Kota P ke Kota Q sejauh 180 km dengan kecepatan rata-rata 60 km/jam. Dalam perjalanan pulang dari Kota Q ke Kota P melalui rute yang sama, karena hujan ia hanya mampu menempuhnya dengan kecepatan rata-rata 45 km/jam. Berapakah kecepatan rata-rata pengendara tersebut untuk keseluruhan perjalanan pergi-pulang?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "60 km/jam"
+    },
+    {
+      "key": "B",
+      "text": "52,5 km/jam"
+    },
+    {
+      "key": "C",
+      "text": "53,57 km/jam"
+    },
+    {
+      "key": "D",
+      "text": "25,71 km/jam"
+    },
+    {
+      "key": "E",
+      "text": "51,43 km/jam"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. 60 km/jam adalah kecepatan saat perjalanan berangkat saja. Kecepatan rata-rata keseluruhan harus memperhitungkan bahwa perjalanan pulang ditempuh lebih lambat (45 km/jam), sehingga kecepatan rata-rata totalnya pasti lebih kecil daripada 60 km/jam.",
+    "B": "Salah. 52,5 km/jam adalah rata-rata hitung sederhana dari 60 km/jam dan 45 km/jam, yaitu (60 + 45) : 2. Kecepatan rata-rata untuk jarak tempuh yang sama pada kedua arah bukan rata-rata hitung dari kedua kecepatan, melainkan total jarak dibagi total waktu, yang harus memperhitungkan bahwa waktu tempuh pada kecepatan yang lebih rendah lebih lama.",
+    "C": "Salah. 53,57 km/jam diperoleh dengan menimbang kecepatan menggunakan waktu tempuh yang tertukar, yaitu (60 × 4 + 45 × 3) : 7. Padahal waktu 4 jam adalah waktu tempuh pada kecepatan 45 km/jam (pulang) dan waktu 3 jam adalah waktu tempuh pada kecepatan 60 km/jam (berangkat); pertukaran bobot ini membuat kecepatan yang lebih lambat justru diberi bobot waktu yang lebih kecil.",
+    "D": "Salah. 25,71 km/jam diperoleh dengan membagi jarak satu arah saja (180 km) dengan total waktu perjalanan pergi-pulang (7 jam). Padahal total jarak yang ditempuh selama 7 jam itu adalah 360 km (180 km berangkat ditambah 180 km pulang), bukan 180 km.",
+    "E": "Benar. Waktu tempuh berangkat = 180 : 60 = 3 jam, dan waktu tempuh pulang = 180 : 45 = 4 jam, sehingga total waktu = 7 jam untuk total jarak 360 km (180 km berangkat ditambah 180 km pulang). Kecepatan rata-rata = 360 : 7 = 51,43 km/jam (dibulatkan dua desimal)."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

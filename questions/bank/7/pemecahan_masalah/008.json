@@ -1,0 +1,43 @@
+{
+  "id": "7-pemecahan_masalah-008",
+  "package": 7,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah gerai ritel menaikkan pencahayaan lampu di lorong utama toko. Sebulan kemudian, penjualan pada lorong tersebut meningkat 12 persen dibandingkan bulan sebelumnya. Manajer gerai menyimpulkan bahwa peningkatan pencahayaan tersebut menyebabkan kenaikan penjualan.\n\nPernyataan yang paling memperkuat simpulan manajer adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Lorong-lorong lain di gerai yang sama, yang pencahayaannya tidak diubah, tidak mengalami kenaikan penjualan yang berarti pada periode yang sama"
+    },
+    {
+      "key": "B",
+      "text": "Biaya pemasangan lampu baru lebih rendah daripada anggaran yang direncanakan"
+    },
+    {
+      "key": "C",
+      "text": "Pada bulan yang sama, gerai tersebut juga menjalankan promosi diskon khusus di lorong utama"
+    },
+    {
+      "key": "D",
+      "text": "Survei menunjukkan sebagian besar pelanggan menyukai pencahayaan yang lebih terang"
+    },
+    {
+      "key": "E",
+      "text": "Toko pesaing terdekat tutup sementara karena renovasi pada bulan yang sama"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Lorong lain menjadi kelompok pembanding di gerai yang sama pada periode yang sama; jika hanya lorong yang pencahayaannya diubah yang penjualannya naik, kenaikan itu lebih meyakinkan berasal dari perubahan pencahayaan, bukan dari tren umum toko.",
+    "B": "Salah. Biaya pemasangan lampu tidak berkaitan dengan apakah pencahayaan tersebut yang menyebabkan kenaikan penjualan.",
+    "C": "Salah. Promosi diskon pada periode yang sama merupakan penjelasan alternatif yang dapat menyebabkan kenaikan penjualan, sehingga pernyataan ini justru melemahkan, bukan memperkuat, simpulan bahwa pencahayaan adalah penyebabnya.",
+    "D": "Salah. Kesukaan pelanggan terhadap pencahayaan yang lebih terang tidak secara langsung menunjukkan bahwa preferensi itu meningkatkan transaksi penjualan.",
+    "E": "Salah. Tutupnya toko pesaing merupakan penjelasan alternatif atas kenaikan penjualan, misalnya karena pelanggan berpindah toko, sehingga pernyataan ini melemahkan, bukan memperkuat, simpulan manajer."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

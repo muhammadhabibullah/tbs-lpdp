@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-006",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "OTONOM >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Bergantung"
+    },
+    {
+      "key": "B",
+      "text": "Independen"
+    },
+    {
+      "key": "C",
+      "text": "Berdaulat"
+    },
+    {
+      "key": "D",
+      "text": "Mandiri"
+    },
+    {
+      "key": "E",
+      "text": "Bebas"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Bergantung berarti memerlukan pihak lain untuk mengatur atau menjalankan dirinya, berlawanan dengan otonom yang mengatur diri sendiri.",
+    "B": "Independen bersinonim dengan otonom karena sama-sama menunjukkan kemampuan mengatur diri tanpa campur tangan pihak lain.",
+    "C": "Berdaulat menunjukkan kekuasaan penuh untuk mengatur diri sendiri, sejalan dengan makna otonom, bukan lawannya.",
+    "D": "Mandiri bersinonim dengan otonom dalam konteks kemampuan mengurus diri sendiri.",
+    "E": "Bebas menggambarkan ketiadaan keterikatan yang searah dengan makna otonom, bukan lawannya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

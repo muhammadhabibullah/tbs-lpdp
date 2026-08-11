@@ -1,0 +1,43 @@
+{
+  "id": "7-kuantitatif-020",
+  "package": 7,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Seorang pedagang membeli 50 pasang sepatu dengan harga total Rp4.000.000,00. Seluruh sepatu tersebut kemudian dijual dengan harga Rp100.000,00 per pasang. Berapa persentase keuntungan yang diperoleh pedagang tersebut terhadap harga beli?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "25%"
+    },
+    {
+      "key": "B",
+      "text": "20%"
+    },
+    {
+      "key": "C",
+      "text": "80%"
+    },
+    {
+      "key": "D",
+      "text": "125%"
+    },
+    {
+      "key": "E",
+      "text": "0,25%"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Harga beli per pasang = 4.000.000 : 50 = Rp80.000,00. Keuntungan per pasang = 100.000 − 80.000 = Rp20.000,00. Persentase keuntungan terhadap harga beli = 20.000 : 80.000 × 100% = 25%.",
+    "B": "Salah. Nilai 20% diperoleh dari 20.000 : 100.000 × 100%, yaitu keuntungan dibandingkan dengan harga jual. Soal meminta persentase keuntungan terhadap harga beli, bukan terhadap harga jual.",
+    "C": "Salah. Nilai 80% diperoleh dari 80.000 : 100.000 × 100%, yaitu harga beli dibandingkan dengan harga jual, bukan keuntungan dibandingkan dengan harga beli.",
+    "D": "Salah. Nilai 125% diperoleh dari 100.000 : 80.000 × 100%, yaitu membandingkan harga jual langsung terhadap harga beli tanpa mengurangkan harga beli terlebih dahulu untuk mendapatkan besar keuntungan.",
+    "E": "Salah. Nilai 0,25% muncul jika hasil bagi 20.000 : 80.000 = 0,25 langsung ditulis sebagai persen tanpa dikalikan 100 terlebih dahulu."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-006",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "KONSERVATIF >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tradisional"
+    },
+    {
+      "key": "B",
+      "text": "Kolot"
+    },
+    {
+      "key": "C",
+      "text": "Kuno"
+    },
+    {
+      "key": "D",
+      "text": "Otoriter"
+    },
+    {
+      "key": "E",
+      "text": "Progresif"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Tradisional bersinonim dengan konservatif, yang cenderung mempertahankan kebiasaan lama, bukan lawan katanya.",
+    "B": "Kolot juga bersinonim dengan konservatif dalam konteks keengganan menerima perubahan, bukan lawan katanya.",
+    "C": "Kuno juga bersinonim dengan konservatif dalam konteks mempertahankan cara lama, bukan lawan katanya.",
+    "D": "Otoriter berkaitan dengan sikap memaksakan kekuasaan, dimensi yang berbeda dari keterbukaan terhadap perubahan, sehingga bukan lawan kata konservatif.",
+    "E": "Benar. Progresif berarti mendukung perubahan dan pembaruan, berlawanan dengan konservatif yang mempertahankan cara dan nilai lama."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

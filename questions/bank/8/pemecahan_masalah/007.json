@@ -1,0 +1,43 @@
+{
+  "id": "8-pemecahan_masalah-007",
+  "package": 8,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah perusahaan rintisan menerapkan kebijakan kerja empat hari per pekan sebagai uji coba selama tiga bulan. Setelah masa uji coba tersebut, tingkat kehadiran karyawan pada hari kerja meningkat dan jumlah proyek yang diselesaikan tepat waktu juga meningkat. Manajemen menyimpulkan bahwa kebijakan kerja empat hari tersebut menyebabkan naiknya produktivitas karyawan.\n\nPernyataan yang paling melemahkan simpulan manajemen adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pada periode yang sama, jumlah proyek baru yang diterima perusahaan berkurang sehingga beban kerja setiap karyawan menjadi lebih ringan."
+    },
+    {
+      "key": "B",
+      "text": "Karyawan menyatakan tingkat kepuasan kerja yang tinggi terhadap kebijakan tersebut."
+    },
+    {
+      "key": "C",
+      "text": "Biaya operasional kantor menurun karena berkurangnya hari operasional kantor."
+    },
+    {
+      "key": "D",
+      "text": "Rapat evaluasi mingguan tetap dilaksanakan pada hari yang sama seperti sebelum masa uji coba."
+    },
+    {
+      "key": "E",
+      "text": "Sebagian besar karyawan telah bekerja di perusahaan tersebut selama lebih dari dua tahun."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Jika beban kerja per karyawan berkurang karena lebih sedikit proyek yang diterima, peningkatan penyelesaian tepat waktu dapat disebabkan oleh berkurangnya beban kerja, bukan oleh kebijakan empat hari kerja itu sendiri, sehingga simpulan manajemen menjadi lemah.",
+    "B": "Salah. Kepuasan kerja tidak menjelaskan apakah kenaikan kehadiran dan penyelesaian proyek disebabkan oleh kebijakan tersebut atau oleh faktor lain, sehingga tidak melemahkan simpulan.",
+    "C": "Salah. Penurunan biaya operasional berkaitan dengan pengeluaran kantor, bukan dengan penjelasan sebab-akibat antara kebijakan kerja empat hari dan produktivitas karyawan.",
+    "D": "Salah. Jadwal rapat evaluasi yang tidak berubah tidak memberikan informasi mengenai penyebab kenaikan kehadiran maupun penyelesaian proyek.",
+    "E": "Salah. Masa kerja karyawan yang sudah lama tidak berkaitan langsung dengan perubahan yang terjadi setelah kebijakan baru diterapkan dan tidak menawarkan penjelasan alternatif atas kenaikan produktivitas."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

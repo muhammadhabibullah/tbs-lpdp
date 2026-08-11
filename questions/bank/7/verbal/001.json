@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-001",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "AKURAT = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Cepat"
+    },
+    {
+      "key": "B",
+      "text": "Lengkap"
+    },
+    {
+      "key": "C",
+      "text": "Tepat"
+    },
+    {
+      "key": "D",
+      "text": "Rapi"
+    },
+    {
+      "key": "E",
+      "text": "Jelas"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Cepat berkaitan dengan kecepatan waktu, sedangkan akurat berkaitan dengan ketepatan hasil, bukan kecepatannya.",
+    "B": "Lengkap berarti mencakup semua bagian, sedangkan akurat menekankan ketepatan, bukan kelengkapan.",
+    "C": "Benar. Akurat berarti tepat atau cermat, sesuai dengan fakta atau ukuran yang sebenarnya.",
+    "D": "Rapi menggambarkan keteraturan tampilan, bukan ketepatan terhadap fakta atau ukuran sebenarnya.",
+    "E": "Jelas berkaitan dengan kemudahan dipahami, bukan dengan ketepatan terhadap fakta atau ukuran."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-011",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "GESEKAN : PANAS = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Arus pendek : Kebakaran"
+    },
+    {
+      "key": "B",
+      "text": "Kebakaran : Arus pendek"
+    },
+    {
+      "key": "C",
+      "text": "Api : Korek api"
+    },
+    {
+      "key": "D",
+      "text": "Petir : Hujan"
+    },
+    {
+      "key": "E",
+      "text": "Hujan : Payung"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Arus pendek merupakan sebab yang secara langsung dapat menimbulkan akibat berupa kebakaran, sebagaimana gesekan menimbulkan panas.",
+    "B": "Urutannya terbalik: arus pendek adalah sebab dan kebakaran adalah akibat, bukan sebaliknya seperti pada pasangan ini.",
+    "C": "Korek api adalah alat pemicu api, sedangkan hubungan yang diminta adalah antara suatu peristiwa fisik dan akibat langsungnya, bukan antara alat dan hasil penggunaannya.",
+    "D": "Petir dan hujan merupakan fenomena cuaca yang dapat muncul bersamaan, tetapi bukan hubungan sebab yang secara langsung menimbulkan akibat sebagaimana gesekan menimbulkan panas.",
+    "E": "Hujan mendorong penggunaan payung sebagai respons, bukan menimbulkan akibat fisik langsung sebagaimana gesekan menimbulkan panas."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "7-pemecahan_masalah-002",
+  "package": 7,
+  "subtest": "pemecahan_masalah",
+  "number": 2,
+  "type": "peluang_kombinatorik",
+  "question_text": "Sebanyak 6 orang peserta akan duduk berjajar pada 6 kursi. Apabila dua orang di antaranya harus selalu duduk berdampingan, banyak susunan tempat duduk yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "240"
+    },
+    {
+      "key": "B",
+      "text": "480"
+    },
+    {
+      "key": "C",
+      "text": "720"
+    },
+    {
+      "key": "D",
+      "text": "120"
+    },
+    {
+      "key": "E",
+      "text": "1.440"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Kedua orang yang harus berdampingan dipandang sebagai satu blok, sehingga tersisa 5 objek yang dapat disusun dalam 5! = 120 cara. Di dalam blok, kedua orang itu dapat bertukar tempat dalam 2 cara, sehingga seluruhnya 2 × 120 = 240.",
+    "B": "Salah. Nilai 480 diperoleh dengan menghitung banyak susunan ketika kedua orang itu justru tidak berdampingan.",
+    "C": "Salah. Nilai 720 diperoleh dengan menghitung seluruh susunan 6 orang tanpa syarat kedua orang itu berdampingan.",
+    "D": "Salah. Nilai 120 diperoleh dengan memandang kedua orang itu sebagai satu blok tetapi lupa bahwa di dalam blok keduanya masih dapat bertukar tempat.",
+    "E": "Salah. Nilai 1.440 diperoleh dengan mengalikan seluruh susunan 6 orang dengan 2, padahal penggabungan menjadi satu blok lebih dahulu mengurangi banyak objek menjadi 5."
+  },
+  "difficulty": "medium",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

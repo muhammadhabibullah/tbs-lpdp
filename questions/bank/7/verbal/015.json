@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-015",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Premis 1: Jika sensor cahaya mendeteksi kondisi gelap, lampu jalan menyala otomatis.\nPremis 2: Jika lampu jalan menyala otomatis, sistem mencatat waktu penyalaan pada log listrik.\nPremis 3: Sensor cahaya pada ruas Jalan Melati mendeteksi kondisi gelap malam ini.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Lampu jalan pada ruas Jalan Melati tidak menyala otomatis malam ini."
+    },
+    {
+      "key": "B",
+      "text": "Jika log listrik tidak mencatat waktu penyalaan, sensor cahaya pasti rusak."
+    },
+    {
+      "key": "C",
+      "text": "Sistem mencatat waktu penyalaan pada log listrik untuk ruas Jalan Melati malam ini."
+    },
+    {
+      "key": "D",
+      "text": "Semua ruas jalan yang lampunya menyala otomatis pasti berada di kawasan gelap."
+    },
+    {
+      "key": "E",
+      "text": "Sensor cahaya pada ruas jalan lain juga mendeteksi kondisi gelap malam ini."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Premis ketiga memenuhi syarat premis pertama sehingga lampu jalan seharusnya menyala otomatis, bukan sebaliknya.",
+    "B": "Premis tidak membahas penyebab kegagalan log mencatat; ketidakhadiran catatan tidak secara otomatis berarti sensor rusak.",
+    "C": "Benar. Kondisi gelap terdeteksi memenuhi premis pertama sehingga lampu menyala otomatis, dan penyalaan otomatis memenuhi premis kedua sehingga sistem mencatat waktu penyalaan pada log listrik.",
+    "D": "Premis pertama hanya menyatakan bahwa kondisi gelap membuat lampu menyala, bukan bahwa setiap lampu yang menyala otomatis pasti berada di kawasan gelap; hubungan itu tidak dapat dibalik.",
+    "E": "Premis hanya membahas ruas Jalan Melati; tidak ada informasi mengenai kondisi ruas jalan lain."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

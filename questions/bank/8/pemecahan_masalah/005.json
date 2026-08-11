@@ -1,0 +1,43 @@
+{
+  "id": "8-pemecahan_masalah-005",
+  "package": 8,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Sebuah instansi akan menugaskan tepat 4 dari 7 pegawai, yaitu P, Q, R, S, T, U, dan V, ke sebuah proyek di luar kota. Penugasan tunduk pada ketentuan berikut.\n(1) Jika P ditugaskan, maka Q juga ditugaskan.\n(2) R dan S tidak boleh ditugaskan bersama-sama.\n(3) Jika T tidak ditugaskan, maka U ditugaskan.\n(4) Paling banyak satu di antara U dan V yang ditugaskan.\n(5) Jika Q ditugaskan, maka R ditugaskan.\n\nApabila P ditugaskan, susunan tim yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P, Q, R, dan V"
+    },
+    {
+      "key": "B",
+      "text": "P, Q, R, dan T"
+    },
+    {
+      "key": "C",
+      "text": "P, R, T, dan V"
+    },
+    {
+      "key": "D",
+      "text": "P, Q, T, dan V"
+    },
+    {
+      "key": "E",
+      "text": "P, Q, U, dan V"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Tim ini tidak memuat T maupun U, sehingga melanggar ketentuan (3): jika T tidak ditugaskan, U harus ditugaskan.",
+    "B": "Benar. P ditugaskan sehingga Q wajib ikut (ketentuan 1); Q ditugaskan sehingga R wajib ikut (ketentuan 5); R ditugaskan sehingga S tidak boleh ikut (ketentuan 2), dan slot terakhir diisi T sehingga ketentuan (3) otomatis terpenuhi karena T sudah ditugaskan. U dan V sama-sama tidak ditugaskan sehingga ketentuan (4) juga terpenuhi. Seluruh ketentuan terpenuhi sekaligus.",
+    "C": "Salah. Tim ini memuat P tanpa Q, sehingga melanggar ketentuan (1): jika P ditugaskan, Q juga harus ditugaskan.",
+    "D": "Salah. Tim ini memuat Q tanpa R, sehingga melanggar ketentuan (5): jika Q ditugaskan, R juga harus ditugaskan.",
+    "E": "Salah. Tim ini memuat U dan V sekaligus, melanggar ketentuan (4) yang membatasi paling banyak satu di antara keduanya; tim ini juga memuat Q tanpa R, melanggar ketentuan (5)."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

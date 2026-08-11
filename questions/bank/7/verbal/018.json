@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-018",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nBagi peserta yang belum mengunggah berkas, diharapkan agar segera menghubungi panitia sebelum batas waktu berakhir.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Bagi peserta yang belum mengunggah berkas, diharapkan agar segera menghubungi panitia sebelum batas waktu berakhir."
+    },
+    {
+      "key": "B",
+      "text": "Peserta yang belum mengunggah berkas diharapkan segera menghubungi panitia sebelum batas waktu berakhir."
+    },
+    {
+      "key": "C",
+      "text": "Bagi peserta yang belum mengunggah berkas, segera menghubungi panitia sebelum batas waktu berakhir."
+    },
+    {
+      "key": "D",
+      "text": "Peserta yang belum mengunggah berkas agar diharapkan segera menghubungi panitia sebelum batas waktu berakhir."
+    },
+    {
+      "key": "E",
+      "text": "Berkas yang belum diunggah peserta diharapkan segera dihubungi panitia sebelum batas waktu berakhir."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Kata depan 'bagi' di awal kalimat menghilangkan subjek yang jelas bagi predikat 'diharapkan', dan gabungan 'diharapkan agar' berlebihan karena kedua kata sama-sama menyatakan harapan.",
+    "B": "Benar. 'Peserta' berfungsi sebagai subjek yang jelas bagi predikat 'diharapkan segera menghubungi', tanpa kata depan yang menghilangkan subjek maupun pengulangan makna.",
+    "C": "Kata depan 'bagi' tetap menghilangkan subjek yang jelas, sehingga predikat 'segera menghubungi' tidak memiliki pelaku yang eksplisit.",
+    "D": "Susunan 'agar diharapkan' membalik urutan yang wajar dan menimbulkan pengulangan makna harapan yang janggal.",
+    "E": "Subjek 'berkas' tidak logis sebagai pihak yang diharapkan menghubungi panitia; berkas adalah benda, bukan pelaku yang dapat berharap atau menghubungi."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-017",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 17,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nP = 3²\nQ = 2³\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "P bernilai lebih dari dua kali Q"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. P = 9 dan Q = 8, sehingga P > Q.",
+    "B": "Salah. P = 9 dan Q = 8, sehingga P > Q; nilai Q tidak melebihi nilai P (8 tidak lebih besar daripada 9).",
+    "C": "Salah. P = 9 dan Q = 8, sehingga P > Q; kedua nilai tidak sama (9 ≠ 8).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 9 dan Q = 8), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 9 dan Q = 8, dua kali Q adalah 16, sedangkan P hanya 9."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

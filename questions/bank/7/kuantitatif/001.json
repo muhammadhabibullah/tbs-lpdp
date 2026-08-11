@@ -1,0 +1,43 @@
+{
+  "id": "7-kuantitatif-001",
+  "package": 7,
+  "subtest": "kuantitatif",
+  "number": 1,
+  "type": "aritmetika",
+  "question_text": "Hasil dari (4/5 + 3/4) × 20 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "12"
+    },
+    {
+      "key": "B",
+      "text": "16,75"
+    },
+    {
+      "key": "C",
+      "text": "31"
+    },
+    {
+      "key": "D",
+      "text": "15,8"
+    },
+    {
+      "key": "E",
+      "text": "21,55"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 12 diperoleh dengan mengalikan kedua pecahan, bukan menjumlahkannya lebih dahulu.",
+    "B": "Salah. Nilai 16,75 diperoleh dengan mengalikan hanya pecahan pertama dengan 20, lalu menambahkan 3/4 yang belum dikalikan.",
+    "C": "Benar. (4/5 + 3/4) × 20 = 31/20 × 20 = 31.",
+    "D": "Salah. Nilai 15,8 diperoleh dengan mengalikan hanya pecahan kedua dengan 20 sehingga sifat distributif tidak diterapkan.",
+    "E": "Salah. Nilai 21,55 diperoleh dengan menambahkan 20 alih-alih mengalikannya."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

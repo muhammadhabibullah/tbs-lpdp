@@ -1,0 +1,43 @@
+{
+  "id": "7-pemecahan_masalah-006",
+  "package": 7,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Enam ruang kerja, yaitu G, H, I, J, K, dan L, akan ditempatkan pada lantai 1 sampai lantai 6 sebuah gedung, satu ruang per lantai. Penempatan tunduk pada ketentuan berikut.\n(1) I ditempatkan tiga lantai di atas G.\n(2) H ditempatkan tepat satu lantai di bawah J.\n(3) K ditempatkan di lantai yang lebih tinggi daripada L.\n(4) J tidak ditempatkan di lantai teratas maupun lantai terbawah.\n\nApabila G ditempatkan di lantai 2, ruang yang pasti berada di lantai 6 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "G"
+    },
+    {
+      "key": "B",
+      "text": "H"
+    },
+    {
+      "key": "C",
+      "text": "I"
+    },
+    {
+      "key": "D",
+      "text": "L"
+    },
+    {
+      "key": "E",
+      "text": "K"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Menurut soal, G ditempatkan di lantai 2, bukan lantai 6.",
+    "B": "Salah. Karena lantai 2 dan 5 sudah terisi G dan I, pasangan H-J (dengan H tepat satu lantai di bawah J) hanya mungkin mengisi dua lantai berurutan dari sisa lantai 1, 3, 4, dan 6, yaitu lantai 3 dan 4, sehingga H berada di lantai 3, bukan lantai 6.",
+    "C": "Salah. Ketentuan (1) menetapkan I tiga lantai di atas G, yaitu lantai 2 + 3 = 5, bukan lantai 6.",
+    "D": "Salah. Setelah H dan J menempati lantai 3 dan 4, sisa lantai 1 dan 6 diisi K dan L. Karena K harus lebih tinggi daripada L (ketentuan 3), L menempati lantai 1, bukan lantai 6.",
+    "E": "Benar. G di lantai 2 membuat I berada di lantai 5 (ketentuan 1). Dari sisa lantai 1, 3, 4, dan 6, satu-satunya pasangan lantai berurutan untuk H-J adalah 3 dan 4, sehingga H = 3 dan J = 4 (ketentuan 2); ini konsisten dengan ketentuan (4) karena J tidak berada di lantai teratas atau terbawah. Sisa lantai 1 dan 6 diisi K dan L, dan karena K harus lebih tinggi daripada L (ketentuan 3), K pasti menempati lantai 6."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

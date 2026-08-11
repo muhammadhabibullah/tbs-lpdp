@@ -1,0 +1,43 @@
+{
+  "id": "7-kuantitatif-006",
+  "package": 7,
+  "subtest": "kuantitatif",
+  "number": 6,
+  "type": "aljabar",
+  "question_text": "Jika y = 5x² − 6x − 3, nilai y untuk x = −2 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "35"
+    },
+    {
+      "key": "B",
+      "text": "5"
+    },
+    {
+      "key": "C",
+      "text": "109"
+    },
+    {
+      "key": "D",
+      "text": "29"
+    },
+    {
+      "key": "E",
+      "text": "−11"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 35 diperoleh dengan salah tanda pada tetapan − 3.",
+    "B": "Salah. Nilai 5 diperoleh dengan salah tanda pada suku − 6x ketika mensubstitusikan x = −2.",
+    "C": "Salah. Nilai 109 diperoleh dengan mengkuadratkan 5x sebagai satu kesatuan, yaitu (5 × (−2))², padahal yang dikuadratkan hanya x.",
+    "D": "Benar. y = 5 × (−2)² − 6 × (−2) − 3 = 20 + 12 − 3 = 29.",
+    "E": "Salah. Nilai −11 diperoleh dengan membaca 5x² sebagai 5 × 2 × x sehingga pangkat dua berubah menjadi perkalian dua."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

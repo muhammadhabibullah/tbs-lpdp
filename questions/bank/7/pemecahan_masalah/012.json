@@ -1,0 +1,43 @@
+{
+  "id": "7-pemecahan_masalah-012",
+  "package": 7,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Seorang pedagang mencampur kopi jenis A seharga Rp80.000,00 per kg dengan kopi jenis B seharga Rp120.000,00 per kg untuk mendapatkan 25 kg campuran kopi seharga Rp96.000,00 per kg. Banyak kopi jenis B yang digunakan adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "5 kg"
+    },
+    {
+      "key": "B",
+      "text": "20 kg"
+    },
+    {
+      "key": "C",
+      "text": "10 kg"
+    },
+    {
+      "key": "D",
+      "text": "15 kg"
+    },
+    {
+      "key": "E",
+      "text": "12,5 kg"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Jika kopi jenis B sebanyak 5 kg, maka kopi jenis A sebanyak 20 kg, sehingga harga rata-rata campuran = (20 × 80.000 + 5 × 120.000) : 25 = Rp88.000,00, bukan Rp96.000,00.",
+    "B": "Salah. Jika kopi jenis B sebanyak 20 kg, maka kopi jenis A sebanyak 5 kg, sehingga harga rata-rata campuran = (5 × 80.000 + 20 × 120.000) : 25 = Rp112.000,00, bukan Rp96.000,00.",
+    "C": "Benar. Misalkan kopi jenis B sebanyak b kg dan kopi jenis A sebanyak (25 − b) kg. Persamaan 80.000(25 − b) + 120.000b = 96.000 × 25 menghasilkan 2.000.000 + 40.000b = 2.400.000, sehingga b = 10. Dengan b = 10 kg, harga rata-rata = (15 × 80.000 + 10 × 120.000) : 25 = Rp96.000,00, sesuai yang diminta.",
+    "D": "Salah. Jika kopi jenis B sebanyak 15 kg, maka kopi jenis A sebanyak 10 kg, sehingga harga rata-rata campuran = (10 × 80.000 + 15 × 120.000) : 25 = Rp104.000,00, bukan Rp96.000,00. Nilai ini justru merupakan banyak kopi jenis A yang seharusnya digunakan, bukan kopi jenis B.",
+    "E": "Salah. Jika kopi jenis B sebanyak 12,5 kg (asumsi campuran dibagi rata), maka harga rata-rata = (12,5 × 80.000 + 12,5 × 120.000) : 25 = Rp100.000,00, bukan Rp96.000,00."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

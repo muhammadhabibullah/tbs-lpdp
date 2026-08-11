@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-010",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "SERANGGA : KUPU-KUPU = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Ikan : Paus"
+    },
+    {
+      "key": "B",
+      "text": "Reptil : Katak"
+    },
+    {
+      "key": "C",
+      "text": "Mamalia : Paus"
+    },
+    {
+      "key": "D",
+      "text": "Burung : Kelelawar"
+    },
+    {
+      "key": "E",
+      "text": "Amfibi : Ular"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Paus sering dikira ikan karena hidup di laut, tetapi secara biologis paus tergolong mamalia, bukan ikan.",
+    "B": "Katak tergolong amfibi, bukan reptil, sehingga pasangan kategori dan anggotanya tidak tepat.",
+    "C": "Benar. Kupu-kupu adalah salah satu anggota kelompok serangga, sebagaimana paus adalah salah satu anggota kelompok mamalia meskipun hidup di laut.",
+    "D": "Kelelawar sering dikira burung karena dapat terbang, tetapi secara biologis kelelawar tergolong mamalia, bukan burung.",
+    "E": "Ular tergolong reptil, bukan amfibi, sehingga pasangan kategori dan anggotanya tidak tepat."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

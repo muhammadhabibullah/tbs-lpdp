@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-015",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Premis 1: Setiap pengajuan cuti yang diajukan kurang dari tujuh hari sebelum tanggal mulai memerlukan persetujuan langsung dari kepala divisi.\nPremis 2: Pengajuan cuti yang memerlukan persetujuan langsung dari kepala divisi diproses paling cepat tiga hari kerja.\nPremis 3: Seluruh pengajuan cuti staf magang minggu ini diajukan tepat tujuh hari sebelum tanggal mulai.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Seluruh pengajuan cuti staf magang minggu ini memerlukan persetujuan langsung dari kepala divisi."
+    },
+    {
+      "key": "B",
+      "text": "Pengajuan cuti staf magang minggu ini belum tentu memerlukan persetujuan langsung dari kepala divisi."
+    },
+    {
+      "key": "C",
+      "text": "Seluruh pengajuan cuti staf magang minggu ini diproses paling cepat tiga hari kerja."
+    },
+    {
+      "key": "D",
+      "text": "Tidak ada pengajuan cuti staf magang minggu ini yang memerlukan persetujuan langsung dari kepala divisi."
+    },
+    {
+      "key": "E",
+      "text": "Pengajuan cuti yang memerlukan persetujuan langsung dari kepala divisi pasti diajukan kurang dari tujuh hari sebelum tanggal mulai."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Premis pertama hanya berlaku untuk pengajuan yang diajukan kurang dari tujuh hari sebelum tanggal mulai, sedangkan pengajuan staf magang diajukan tepat tujuh hari, yaitu kondisi yang tidak memenuhi syarat 'kurang dari tujuh hari' tersebut.",
+    "B": "Benar. Karena tepat tujuh hari bukan 'kurang dari tujuh hari', premis pertama tidak berlaku bagi pengajuan cuti staf magang, sehingga tidak dapat dipastikan apakah pengajuan tersebut memerlukan persetujuan langsung kepala divisi atau tidak.",
+    "C": "Simpulan ini bergantung pada syarat persetujuan langsung kepala divisi yang belum tentu berlaku bagi pengajuan staf magang, sehingga simpulan ini dibangun di atas premis yang belum tentu benar.",
+    "D": "Tidak berlakunya premis pertama bagi pengajuan staf magang hanya berarti hasilnya tidak dapat dipastikan, bukan berarti dapat dipastikan bahwa persetujuan langsung pasti tidak diperlukan.",
+    "E": "Premis pertama hanya menyatakan bahwa pengajuan kurang dari tujuh hari memerlukan persetujuan langsung; premis ini tidak menyatakan bahwa seluruh pengajuan yang memerlukan persetujuan langsung pasti diajukan kurang dari tujuh hari, karena bisa saja ada alasan lain yang mewajibkan persetujuan tersebut."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

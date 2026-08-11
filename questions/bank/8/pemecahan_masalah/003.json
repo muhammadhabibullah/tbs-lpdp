@@ -1,0 +1,43 @@
+{
+  "id": "8-pemecahan_masalah-003",
+  "package": 8,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Lima siswa, yaitu Adi, Bayu, Cinta, Dewi, dan Eko, masing-masing mengikuti satu ekstrakurikuler yang berbeda: Basket, Catur, Debat, Lukis, dan Musik. Ketentuan berikut diketahui.\n(1) Cinta mengikuti Debat.\n(2) Dewi mengikuti Lukis.\n(3) Adi tidak mengikuti Basket.\n(4) Eko tidak mengikuti Musik.\n(5) Bayu mengikuti Catur.\n\nEkstrakurikuler yang diikuti oleh Adi adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Basket"
+    },
+    {
+      "key": "B",
+      "text": "Catur"
+    },
+    {
+      "key": "C",
+      "text": "Debat"
+    },
+    {
+      "key": "D",
+      "text": "Lukis"
+    },
+    {
+      "key": "E",
+      "text": "Musik"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Ketentuan (3) menyatakan Adi tidak mengikuti Basket; ekstrakurikuler Basket justru diikuti oleh Eko, satu-satunya siswa yang tersisa setelah Cinta, Dewi, Bayu, dan Adi mendapatkan ekstrakurikulernya masing-masing.",
+    "B": "Salah. Ketentuan (5) secara langsung menyatakan Catur diikuti oleh Bayu, bukan Adi.",
+    "C": "Salah. Ketentuan (1) secara langsung menyatakan Debat diikuti oleh Cinta, bukan Adi.",
+    "D": "Salah. Ketentuan (2) secara langsung menyatakan Lukis diikuti oleh Dewi, bukan Adi.",
+    "E": "Benar. Cinta, Dewi, dan Bayu sudah dipastikan mengikuti Debat, Lukis, dan Catur berturut-turut melalui ketentuan (1), (2), dan (5), sehingga tersisa Basket dan Musik untuk Adi dan Eko. Ketentuan (3) melarang Adi mengikuti Basket, sehingga Adi pasti mengikuti Musik dan Eko mengikuti Basket, sekaligus konsisten dengan ketentuan (4) yang melarang Eko mengikuti Musik."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

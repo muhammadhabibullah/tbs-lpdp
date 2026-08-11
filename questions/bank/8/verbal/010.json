@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-010",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "PARU-PARU : PERNAPASAN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Jantung : Pencernaan"
+    },
+    {
+      "key": "B",
+      "text": "Lambung : Pernapasan"
+    },
+    {
+      "key": "C",
+      "text": "Hati : Pernapasan"
+    },
+    {
+      "key": "D",
+      "text": "Otot : Peredaran Darah"
+    },
+    {
+      "key": "E",
+      "text": "Ginjal : Penyaringan Darah"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Fungsi utama jantung adalah memompa darah dalam sistem peredaran darah, bukan pencernaan.",
+    "B": "Fungsi utama lambung adalah pencernaan, bukan pernapasan.",
+    "C": "Fungsi utama hati adalah metabolisme dan detoksifikasi, bukan pernapasan.",
+    "D": "Fungsi utama otot adalah pergerakan tubuh, bukan peredaran darah.",
+    "E": "Benar. Paru-paru adalah organ dengan fungsi utama pernapasan, sebagaimana ginjal adalah organ dengan fungsi utama penyaringan darah."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

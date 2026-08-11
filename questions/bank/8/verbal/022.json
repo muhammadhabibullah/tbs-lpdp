@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-022",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Penulis kemungkinan besar menyampaikan bacaan tersebut untuk ...",
+  "image": null,
+  "passage": "Sebuah perguruan tinggi vokasi mengevaluasi program magang bersertifikat yang mewajibkan mahasiswa tingkat akhir menjalani praktik kerja selama satu semester penuh di mitra industri. Evaluasi dilakukan dengan membandingkan nilai kompetensi mahasiswa peserta program dengan mahasiswa yang menempuh mata kuliah praktikum reguler di kampus tanpa magang industri.\n\nHasil awal menunjukkan mahasiswa peserta magang memperoleh nilai kompetensi teknis yang lebih tinggi, khususnya pada keterampilan yang langsung dipakai di tempat magang mereka. Namun, pada aspek kompetensi yang tidak diajarkan secara eksplisit oleh mitra industri, seperti pemecahan masalah pada kasus di luar bidang kerja rutin mereka, nilai kedua kelompok mahasiswa relatif setara. Tim evaluasi menduga hal ini terjadi karena mahasiswa magang cenderung berulang kali mengerjakan tugas yang serupa sesuai kebutuhan operasional mitra, sehingga paparan mereka terhadap ragam kasus lebih sempit dibandingkan mahasiswa yang mengikuti praktikum dengan variasi studi kasus yang sengaja dirancang kampus.\n\nBerdasarkan temuan tersebut, kampus mulai mendorong mitra industri untuk memberi mahasiswa magang rotasi tugas yang lebih beragam, alih-alih hanya menempatkan mereka pada satu jenis pekerjaan sepanjang semester.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Meyakinkan pembaca bahwa magang industri tidak memberikan manfaat apa pun bagi mahasiswa"
+    },
+    {
+      "key": "B",
+      "text": "Mendorong seluruh perguruan tinggi vokasi untuk menghapus mata kuliah praktikum reguler"
+    },
+    {
+      "key": "C",
+      "text": "Membandingkan biaya penyelenggaraan magang industri dengan praktikum reguler di kampus"
+    },
+    {
+      "key": "D",
+      "text": "Menunjukkan bahwa manfaat magang industri terhadap kompetensi mahasiswa bergantung pada jenis kompetensi yang diukur"
+    },
+    {
+      "key": "E",
+      "text": "Membuktikan bahwa mitra industri tidak mampu melatih mahasiswa secara memadai"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Bacaan menyatakan mahasiswa magang memperoleh nilai kompetensi teknis yang lebih tinggi, sehingga bacaan tidak mendukung klaim bahwa magang sama sekali tidak bermanfaat.",
+    "B": "Bacaan tidak menyarankan penghapusan praktikum reguler; praktikum reguler justru menjadi pembanding yang menunjukkan keunggulannya sendiri pada aspek pemecahan masalah di luar bidang rutin.",
+    "C": "Bacaan tidak membahas biaya penyelenggaraan magang maupun praktikum sama sekali.",
+    "D": "Benar. Bacaan menunjukkan magang unggul pada kompetensi teknis yang langsung dipakai tetapi setara dengan praktikum reguler pada kompetensi pemecahan masalah di luar bidang rutin, sehingga manfaatnya bergantung pada jenis kompetensi yang diukur.",
+    "E": "Bacaan hanya menyatakan paparan mahasiswa magang terhadap ragam kasus lebih sempit, bukan bahwa mitra industri tidak mampu melatih mahasiswa secara memadai."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

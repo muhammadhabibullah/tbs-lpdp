@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-021",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Andi dapat menyelesaikan suatu pekerjaan dalam 8 hari jika bekerja sendirian, sedangkan Budi dapat menyelesaikan pekerjaan yang sama dalam 12 hari jika bekerja sendirian. Keduanya bekerja bersama-sama selama 2 hari, kemudian Andi berhenti karena harus mengerjakan tugas lain, dan sisa pekerjaan diselesaikan oleh Budi sendirian. Berapa hari total waktu yang diperlukan untuk menyelesaikan seluruh pekerjaan itu, dihitung sejak hari pertama?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "9 hari"
+    },
+    {
+      "key": "B",
+      "text": "7 hari"
+    },
+    {
+      "key": "C",
+      "text": "14 hari"
+    },
+    {
+      "key": "D",
+      "text": "10 hari"
+    },
+    {
+      "key": "E",
+      "text": "4,8 hari"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Laju Andi = 1/8 bagian/hari dan laju Budi = 1/12 bagian/hari, sehingga laju gabungan = 1/8 + 1/12 = 5/24 bagian/hari. Dalam 2 hari pertama, pekerjaan yang selesai = 2 × 5/24 = 5/12 bagian, sehingga sisa pekerjaan = 7/12 bagian. Sisa ini dikerjakan Budi sendirian dengan laju 1/12 bagian/hari, sehingga waktunya = (7/12) ÷ (1/12) = 7 hari. Total waktu = 2 + 7 = 9 hari.",
+    "B": "Salah. 7 hari hanyalah lama waktu yang dibutuhkan Budi untuk menyelesaikan sisa pekerjaan setelah Andi berhenti. Nilai ini belum ditambah dengan 2 hari pertama saat keduanya bekerja bersama, padahal pertanyaan meminta total waktu sejak hari pertama.",
+    "C": "Salah. 14 hari diperoleh dari 2 + 12, yaitu menganggap Budi masih memerlukan waktu 12 hari penuh untuk sisa pekerjaan, seolah-olah tidak ada kemajuan yang dicapai selama 2 hari pertama. Padahal 5/12 bagian pekerjaan sudah selesai sebelum Andi berhenti, sehingga sisa pekerjaan Budi lebih sedikit daripada mengerjakan seluruh pekerjaan sendirian.",
+    "D": "Salah. 10 hari adalah rata-rata sederhana dari 8 hari dan 12 hari, yaitu (8 + 12) : 2. Rata-rata semacam ini tidak berlaku di sini karena laju kerja harus dijumlahkan sebagai pecahan bagian pekerjaan per hari, bukan dirata-ratakan langsung dari lama pengerjaan masing-masing orang.",
+    "E": "Salah. 4,8 hari diperoleh dengan tetap memakai laju gabungan Andi dan Budi (5/24 bagian/hari) untuk menyelesaikan sisa pekerjaan setelah Andi berhenti, seolah-olah Andi masih ikut bekerja: (7/12) ÷ (5/24) = 2,8 hari, sehingga totalnya dihitung 2 + 2,8 = 4,8 hari. Padahal setelah Andi berhenti, sisa pekerjaan hanya dikerjakan Budi sendirian dengan laju 1/12 bagian/hari."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

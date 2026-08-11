@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-016",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Premis 1: Semua modul pelatihan daring yang disertifikasi memiliki uji kompetensi di akhir sesi.\nPremis 2: Jika sebuah modul memiliki uji kompetensi di akhir sesi, peserta memperoleh sertifikat elektronik setelah lulus.\nPremis 3: Modul \"Analisis Data Lanjutan\" adalah modul pelatihan daring yang disertifikasi.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Peserta yang lulus modul \"Analisis Data Lanjutan\" memperoleh sertifikat elektronik."
+    },
+    {
+      "key": "B",
+      "text": "Semua modul pelatihan daring memiliki uji kompetensi di akhir sesi."
+    },
+    {
+      "key": "C",
+      "text": "Modul \"Analisis Data Lanjutan\" pasti diikuti oleh seluruh peserta pelatihan."
+    },
+    {
+      "key": "D",
+      "text": "Setiap peserta yang memperoleh sertifikat elektronik telah lulus modul \"Analisis Data Lanjutan\"."
+    },
+    {
+      "key": "E",
+      "text": "Modul \"Analisis Data Lanjutan\" tidak memerlukan uji kompetensi karena sudah disertifikasi sejak awal."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Karena modul \"Analisis Data Lanjutan\" disertifikasi, premis pertama memastikan modul ini memiliki uji kompetensi di akhir sesi; dan karena memiliki uji kompetensi, premis kedua memastikan peserta yang lulus memperoleh sertifikat elektronik.",
+    "B": "Premis pertama hanya berlaku untuk modul yang disertifikasi, bukan seluruh modul pelatihan daring; simpulan ini menghilangkan syarat sertifikasi yang ada pada premis.",
+    "C": "Tidak ada premis yang menyatakan jumlah atau kewajiban peserta untuk mengikuti modul tersebut; simpulan ini menyimpulkan sesuatu yang tidak dinyatakan.",
+    "D": "Premis kedua hanya menyatakan modul dengan uji kompetensi menghasilkan sertifikat elektronik bagi yang lulus; premis ini tidak menyatakan bahwa sertifikat elektronik hanya berasal dari modul \"Analisis Data Lanjutan\", karena modul disertifikasi lain juga dapat menghasilkannya.",
+    "E": "Simpulan ini bertentangan langsung dengan premis pertama, yang menyatakan modul bersertifikasi justru memiliki uji kompetensi di akhir sesi, bukan dibebaskan darinya."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

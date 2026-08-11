@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-025",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Alas sebuah prisma tegak berbentuk segitiga siku-siku dengan panjang sisi siku-siku 8 cm dan 15 cm. Tinggi prisma tersebut adalah 10 cm. Seluruh permukaan prisma itu akan dilapisi stiker dengan biaya Rp750,00 per cm². Berapakah total biaya pelapisan stiker untuk seluruh permukaan prisma tersebut?",
+  "image": "images/prisma-segitiga.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp262.500,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp345.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp435.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp450.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp390.000,00"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Rp262.500,00 diperoleh dengan melupakan sisi tegak yang berdiri di atas sisi miring alas (17 cm), sehingga hanya dua sisi tegak yang dihitung: luas permukaan dianggap 2 × (½ × 8 × 15) + (8 + 15) × 10 = 120 + 230 = 350 cm², lalu dikalikan Rp750,00 menjadi Rp262.500,00. Padahal prisma segitiga memiliki TIGA sisi tegak, sesuai tiga sisi segitiga alasnya, termasuk sisi tegak di atas sisi miring.",
+    "B": "Salah. Rp345.000,00 diperoleh dengan hanya menghitung satu bidang segitiga (bukan dua) sebagai alas dan tutup: luas dianggap (½ × 8 × 15) + (8 + 15 + 17) × 10 = 60 + 400 = 460 cm², lalu dikalikan Rp750,00. Padahal prisma memiliki dua bidang segitiga yang kongruen (alas dan tutup), sehingga luas segitiga itu harus dihitung dua kali.",
+    "C": "Salah. Rp435.000,00 diperoleh dengan menghitung panjang sisi miring alas sebagai jumlah kedua sisi siku-siku (8 + 15 = 23 cm) tanpa menggunakan teorema Pythagoras, sehingga keliling alas dianggap 8 + 15 + 23 = 46 cm dan luas permukaan dianggap 120 + 46 × 10 = 580 cm², lalu dikalikan Rp750,00. Sisi miring yang benar adalah √(8² + 15²) = 17 cm, bukan 23 cm.",
+    "D": "Salah. Rp450.000,00 diperoleh dengan menghitung volume prisma (luas alas × tinggi = 60 × 10 = 600 cm³) lalu mengalikannya dengan biaya per cm², seolah-olah volume itu adalah luas permukaan. Volume dan luas permukaan adalah besaran yang berbeda.",
+    "E": "Benar. Sisi miring alas = √(8² + 15²) = √289 = 17 cm. Luas kedua bidang segitiga = 2 × (½ × 8 × 15) = 120 cm². Keliling alas = 8 + 15 + 17 = 40 cm, sehingga luas seluruh sisi tegak = 40 × 10 = 400 cm². Luas permukaan total = 120 + 400 = 520 cm². Biaya total = 520 × Rp750,00 = Rp390.000,00."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

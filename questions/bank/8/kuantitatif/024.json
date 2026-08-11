@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-024",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Sebuah balok memiliki panjang 16 cm, lebar 9 cm, dan tinggi 7 cm. Berapakah luas permukaan balok tersebut?",
+  "image": "images/balok.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "288 cm²"
+    },
+    {
+      "key": "B",
+      "text": "350 cm²"
+    },
+    {
+      "key": "C",
+      "text": "512 cm²"
+    },
+    {
+      "key": "D",
+      "text": "638 cm²"
+    },
+    {
+      "key": "E",
+      "text": "1.008 cm²"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. 288 cm² diperoleh dari 2 × (16 × 9), yaitu hanya menghitung luas alas dan tutup balok (dua kali luas panjang × lebar), tanpa menyertakan luas keempat sisi tegaknya.",
+    "B": "Salah. 350 cm² diperoleh dari 2 × 7 × (16 + 9), yaitu hanya menghitung luas keempat sisi tegak balok (selubungnya), tanpa menyertakan luas alas dan tutupnya.",
+    "C": "Salah. 512 cm² diperoleh dari 2 × [(16 × 9) + (16 × 7)], yaitu menghitung dua dari tiga pasang sisi balok tetapi melewatkan pasangan sisi lebar × tinggi (9 × 7).",
+    "D": "Benar. Luas permukaan balok = 2 × [(p × l) + (p × t) + (l × t)] = 2 × [(16 × 9) + (16 × 7) + (9 × 7)] = 2 × (144 + 112 + 63) = 2 × 319 = 638 cm².",
+    "E": "Salah. 1.008 adalah hasil 16 × 9 × 7, yaitu volume balok dalam cm³ (panjang × lebar × tinggi), bukan luas permukaannya. Volume dan luas permukaan adalah besaran yang berbeda."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

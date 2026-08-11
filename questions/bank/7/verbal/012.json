@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-012",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 12,
+  "type": "analogi",
+  "question_text": "TERMOMETER : SUHU = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Termostat : Suhu"
+    },
+    {
+      "key": "B",
+      "text": "Barometer : Awan"
+    },
+    {
+      "key": "C",
+      "text": "Kompas : Utara"
+    },
+    {
+      "key": "D",
+      "text": "Higrometer : Kelembapan"
+    },
+    {
+      "key": "E",
+      "text": "Jam : Kalender"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Termostat berfungsi mengendalikan suhu menuju nilai tertentu, bukan sekadar mengukurnya sebagaimana termometer.",
+    "B": "Barometer mengukur tekanan udara, bukan awan, sehingga pasangan besaran yang diukur tidak tepat.",
+    "C": "Kompas menunjukkan arah mata angin, bukan mengukur besaran bernilai seperti suhu yang diukur termometer.",
+    "D": "Benar. Higrometer adalah alat untuk mengukur kelembapan, sebagaimana termometer adalah alat untuk mengukur suhu.",
+    "E": "Jam dan kalender adalah dua objek yang sama-sama berkaitan dengan waktu, bukan hubungan antara alat ukur dan besaran yang diukurnya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-013",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "VAKSINASI : KEKEBALAN KELOMPOK = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kekebalan Kelompok : Vaksinasi"
+    },
+    {
+      "key": "B",
+      "text": "Vaksinasi : Kekebalan Individu"
+    },
+    {
+      "key": "C",
+      "text": "Daur Ulang : Pengurangan Sampah di Tempat Pembuangan Akhir"
+    },
+    {
+      "key": "D",
+      "text": "Edukasi Kesehatan : Vaksinasi"
+    },
+    {
+      "key": "E",
+      "text": "Penyuluhan Daur Ulang : Sampah Berkurang di Satu Rumah"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Urutan pasangan ini terbalik; vaksinasi adalah tindakan individu yang menghasilkan kekebalan kelompok, bukan sebaliknya.",
+    "B": "Kekebalan individu berhenti pada level orang-perorang dan belum mencapai efek terkumpul berskala kelompok seperti yang dimaksud pada kekebalan kelompok.",
+    "C": "Benar. Vaksinasi adalah tindakan pencegahan individu yang, jika dilakukan banyak orang, terkumpul menjadi kekebalan kelompok berskala luas; sebagaimana daur ulang adalah tindakan individu yang, jika dilakukan banyak orang, terkumpul menjadi pengurangan sampah di tempat pembuangan akhir berskala luas.",
+    "D": "Edukasi kesehatan adalah langkah yang mendahului vaksinasi, sehingga hubungan ini adalah urutan antartindakan individu, bukan akumulasi tindakan individu menjadi efek berskala kelompok.",
+    "E": "Sampah berkurang di satu rumah masih berhenti pada level satu unit rumah tangga dan belum mencapai efek terkumpul berskala luas seperti yang dimaksud pada pengurangan sampah di tempat pembuangan akhir."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

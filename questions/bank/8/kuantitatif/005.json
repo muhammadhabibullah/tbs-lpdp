@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-005",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "Rata-rata 4 bilangan adalah 18. Apabila bilangan 23 ditambahkan ke dalam kelompok tersebut, berapakah rata-rata 5 bilangan itu?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "18"
+    },
+    {
+      "key": "B",
+      "text": "14,4"
+    },
+    {
+      "key": "C",
+      "text": "23,75"
+    },
+    {
+      "key": "D",
+      "text": "20,5"
+    },
+    {
+      "key": "E",
+      "text": "19"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 18 diperoleh dengan menganggap rata-rata tidak berubah oleh penambahan satu bilangan.",
+    "B": "Salah. Nilai 14,4 diperoleh dengan membagi jumlah semula dengan 5 tanpa menambahkan bilangan baru.",
+    "C": "Salah. Nilai 23,75 diperoleh dengan membagi jumlah baru dengan 4, yaitu banyaknya bilangan semula.",
+    "D": "Salah. Nilai 20,5 diperoleh dengan merata-ratakan rata-rata lama dengan bilangan baru seolah-olah keduanya berbobot sama.",
+    "E": "Benar. Jumlah semula = 4 × 18 = 72; jumlah baru = 72 + 23 = 95; rata-rata baru = 95 ÷ 5 = 19."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

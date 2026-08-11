@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-017",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nWalaupun anggaran tahun ini terbatas, namun panitia tetap berhasil menyelenggarakan pelatihan tersebut.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Walaupun anggaran tahun ini terbatas, namun panitia tetap berhasil menyelenggarakan pelatihan tersebut."
+    },
+    {
+      "key": "B",
+      "text": "Walaupun anggaran tahun ini terbatas, panitia tetap berhasil menyelenggarakan pelatihan tersebut."
+    },
+    {
+      "key": "C",
+      "text": "Karena anggaran tahun ini terbatas, namun panitia tetap berhasil menyelenggarakan pelatihan tersebut."
+    },
+    {
+      "key": "D",
+      "text": "Anggaran tahun ini terbatas, namun walaupun begitu panitia tetap berhasil menyelenggarakan pelatihan tersebut."
+    },
+    {
+      "key": "E",
+      "text": "Walaupun anggaran tahun ini sangat sangat terbatas, namun panitia tetap berhasil menyelenggarakan pelatihan tersebut."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Kalimat ini masih memakai konjungsi ganda 'walaupun ... namun' untuk menandai satu hubungan pertentangan yang sama, padahal cukup satu konjungsi saja.",
+    "B": "Benar. Konjungsi 'namun' yang berlebih dihilangkan karena 'walaupun' sudah cukup menandai hubungan pertentangan, sehingga kalimat menjadi efektif dan tidak boros kata.",
+    "C": "Konjungsi 'karena' menandai hubungan sebab-akibat, bukan pertentangan, sehingga tidak logis dipasangkan dengan 'namun'; kalimat ini juga masih menyisakan konjungsi ganda.",
+    "D": "Kalimat ini menambah konjungsi 'namun walaupun begitu' yang justru semakin boros dan berlebihan dibandingkan kalimat aslinya.",
+    "E": "Kalimat ini menambahkan reduplikasi tidak perlu 'sangat sangat' dan tetap menyisakan konjungsi ganda 'walaupun ... namun'."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

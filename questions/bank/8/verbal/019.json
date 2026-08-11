@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-019",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Frasa \"penyesuaian tersebut\" pada paragraf ketiga bacaan tersebut merujuk pada ...",
+  "image": null,
+  "passage": "Sejumlah kelompok tani di kawasan dataran tinggi mulai menerapkan sistem irigasi tetes yang terhubung dengan sensor kelembapan tanah. Sensor tersebut ditanam pada beberapa titik di lahan dan mengirimkan data kelembapan ke unit pengendali setiap tiga puluh menit. Ketika kelembapan tanah turun di bawah ambang yang ditentukan, unit pengendali secara otomatis membuka katup sehingga air menetes langsung ke area perakaran tanaman.\n\nPada musim tanam pertama, sejumlah petak lahan justru mengalami genangan pada beberapa titik meski sensor menunjukkan kelembapan rendah di titik lain pada lahan yang sama. Setelah diperiksa, penyebabnya adalah jarak antar sensor yang terlalu jauh sehingga variasi tekstur tanah antar titik tidak terbaca secara memadai; tanah liat pada satu sisi lahan menahan air lebih lama daripada tanah berpasir di sisi lainnya, padahal katup mengikuti pembacaan sensor terdekat saja. Tim pendamping kemudian menambah jumlah sensor dan mengelompokkan katup berdasarkan jenis tekstur tanah, bukan sekadar jarak antar titik.\n\nSetelah penyesuaian tersebut, distribusi air menjadi lebih merata dan penggunaan air per musim tanam menurun dibandingkan metode penyiraman manual sebelumnya. Kelompok tani tetap mencatat pembacaan sensor secara berkala karena karakteristik tanah dapat berubah setelah pengolahan lahan atau penambahan bahan organik.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Penambahan jumlah sensor dan pengelompokan katup berdasarkan jenis tekstur tanah"
+    },
+    {
+      "key": "B",
+      "text": "Penurunan penggunaan air dibandingkan metode penyiraman manual"
+    },
+    {
+      "key": "C",
+      "text": "Pemeriksaan penyebab genangan pada musim tanam pertama"
+    },
+    {
+      "key": "D",
+      "text": "Pencatatan pembacaan sensor secara berkala oleh kelompok tani"
+    },
+    {
+      "key": "E",
+      "text": "Pemasangan sistem irigasi tetes pada lahan kelompok tani"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Paragraf kedua menyebutkan tim pendamping menambah jumlah sensor dan mengelompokkan katup berdasarkan jenis tekstur tanah; itulah tindakan yang dimaksud sebagai 'penyesuaian tersebut' pada paragraf ketiga.",
+    "B": "Penurunan penggunaan air merupakan hasil dari penyesuaian tersebut menurut bacaan, bukan penyesuaian itu sendiri.",
+    "C": "Pemeriksaan penyebab genangan adalah langkah yang mengungkap masalah dan dilakukan sebelum penyesuaian, bukan penyesuaian itu sendiri.",
+    "D": "Pencatatan pembacaan sensor secara berkala disebutkan sebagai kebiasaan yang tetap dilakukan setelah penyesuaian, bukan penyesuaian itu sendiri.",
+    "E": "Pemasangan sistem irigasi tetes adalah kondisi awal yang dijelaskan pada paragraf pertama, bukan penyesuaian yang dilakukan setelah masalah ditemukan."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

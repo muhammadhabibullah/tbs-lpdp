@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-005",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "STATIS >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tetap"
+    },
+    {
+      "key": "B",
+      "text": "Dinamis"
+    },
+    {
+      "key": "C",
+      "text": "Konstan"
+    },
+    {
+      "key": "D",
+      "text": "Kaku"
+    },
+    {
+      "key": "E",
+      "text": "Terbatas"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Tetap justru bersinonim dengan statis, yang berarti berada dalam keadaan tidak berubah, bukan lawan katanya.",
+    "B": "Benar. Dinamis berarti aktif bergerak dan terus berubah, berlawanan dengan statis yang berarti tetap dan tidak berubah.",
+    "C": "Konstan juga bersinonim dengan statis dalam arti tidak berubah, sehingga bukan lawan kata yang tepat.",
+    "D": "Kaku berkaitan dengan ketidakluwesan sikap atau bentuk, bukan lawan kata dari statis yang berkaitan dengan ada tidaknya perubahan keadaan.",
+    "E": "Terbatas berkaitan dengan cakupan atau jumlah, bukan dengan ada tidaknya perubahan keadaan, sehingga bukan lawan kata statis."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

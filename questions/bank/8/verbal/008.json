@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-008",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "LUGAS >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tegas"
+    },
+    {
+      "key": "B",
+      "text": "Jelas"
+    },
+    {
+      "key": "C",
+      "text": "Berbelit-belit"
+    },
+    {
+      "key": "D",
+      "text": "Langsung ke pokok persoalan"
+    },
+    {
+      "key": "E",
+      "text": "Blak-blakan"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Tegas sejalan dengan sifat lugas yang mengungkapkan sesuatu secara langsung dan pasti, bukan lawan katanya.",
+    "B": "Jelas juga sejalan dengan makna lugas, bukan lawan katanya.",
+    "C": "Benar. Berbelit-belit berarti tidak langsung dan berputar-putar dalam menyampaikan sesuatu, berlawanan dengan lugas yang berarti tegas dan tidak berbelit-belit.",
+    "D": "Langsung ke pokok persoalan justru menggambarkan makna lugas itu sendiri, bukan lawan katanya.",
+    "E": "Blak-blakan juga sejalan dengan sifat terus terang pada kata lugas, bukan lawan katanya."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

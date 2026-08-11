@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-020",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan, penyebab genangan muncul di sebagian titik lahan sementara sensor di titik lain pada lahan yang sama tetap menunjukkan kelembapan rendah adalah ...",
+  "image": null,
+  "passage": "Sejumlah kelompok tani di kawasan dataran tinggi mulai menerapkan sistem irigasi tetes yang terhubung dengan sensor kelembapan tanah. Sensor tersebut ditanam pada beberapa titik di lahan dan mengirimkan data kelembapan ke unit pengendali setiap tiga puluh menit. Ketika kelembapan tanah turun di bawah ambang yang ditentukan, unit pengendali secara otomatis membuka katup sehingga air menetes langsung ke area perakaran tanaman.\n\nPada musim tanam pertama, sejumlah petak lahan justru mengalami genangan pada beberapa titik meski sensor menunjukkan kelembapan rendah di titik lain pada lahan yang sama. Setelah diperiksa, penyebabnya adalah jarak antar sensor yang terlalu jauh sehingga variasi tekstur tanah antar titik tidak terbaca secara memadai; tanah liat pada satu sisi lahan menahan air lebih lama daripada tanah berpasir di sisi lainnya, padahal katup mengikuti pembacaan sensor terdekat saja. Tim pendamping kemudian menambah jumlah sensor dan mengelompokkan katup berdasarkan jenis tekstur tanah, bukan sekadar jarak antar titik.\n\nSetelah penyesuaian tersebut, distribusi air menjadi lebih merata dan penggunaan air per musim tanam menurun dibandingkan metode penyiraman manual sebelumnya. Kelompok tani tetap mencatat pembacaan sensor secara berkala karena karakteristik tanah dapat berubah setelah pengolahan lahan atau penambahan bahan organik.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Unit pengendali membuka katup pada seluruh titik lahan secara bersamaan tanpa mempertimbangkan pembacaan sensor"
+    },
+    {
+      "key": "B",
+      "text": "Sensor kelembapan tanah rusak pada titik yang mengalami genangan sehingga tidak dapat mengirimkan data"
+    },
+    {
+      "key": "C",
+      "text": "Petak lahan yang mengalami genangan menerima jumlah air lebih banyak daripada yang ditetapkan ambang kelembapannya"
+    },
+    {
+      "key": "D",
+      "text": "Jarak antar sensor yang terlalu jauh membuat variasi tekstur tanah antar titik tidak terbaca secara memadai, sehingga katup pada titik bertanah liat tetap mengikuti pembacaan sensor terdekat yang menunjukkan kelembapan rendah dari titik lain"
+    },
+    {
+      "key": "E",
+      "text": "Petani mengurangi jumlah sensor pada musim tanam pertama sehingga cakupan pembacaan kelembapan berkurang"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Bacaan menyatakan katup mengikuti pembacaan sensor terdekat, bukan membuka seluruh titik secara bersamaan tanpa mempertimbangkan sensor.",
+    "B": "Bacaan tidak menyebutkan kerusakan sensor; penyebab yang disebutkan adalah jarak antar sensor yang terlalu jauh dan variasi tekstur tanah yang tidak terbaca.",
+    "C": "Bacaan tidak menyebutkan adanya jumlah air yang ditetapkan sebagai ambang; ambang yang disebutkan adalah ambang kelembapan untuk membuka katup, bukan jumlah air yang diterima lahan.",
+    "D": "Benar. Bacaan menyatakan jarak antar sensor yang terlalu jauh membuat variasi tekstur tanah tidak terbaca, sehingga tanah liat yang menahan air lebih lama tetap mendapat aliran air karena katup mengikuti pembacaan sensor terdekat yang justru menunjukkan kelembapan rendah dari titik lain.",
+    "E": "Bacaan menyatakan tim pendamping menambah, bukan mengurangi, jumlah sensor, dan penambahan itu dilakukan setelah musim tanam pertama, bukan selama musim tanam pertama."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

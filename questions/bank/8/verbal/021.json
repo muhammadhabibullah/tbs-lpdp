@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-021",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Jika tim pendamping tidak menambah jumlah sensor maupun mengelompokkan katup berdasarkan tekstur tanah, kondisi yang paling mungkin masih terjadi pada musim tanam berikutnya adalah ...",
+  "image": null,
+  "passage": "Sejumlah kelompok tani di kawasan dataran tinggi mulai menerapkan sistem irigasi tetes yang terhubung dengan sensor kelembapan tanah. Sensor tersebut ditanam pada beberapa titik di lahan dan mengirimkan data kelembapan ke unit pengendali setiap tiga puluh menit. Ketika kelembapan tanah turun di bawah ambang yang ditentukan, unit pengendali secara otomatis membuka katup sehingga air menetes langsung ke area perakaran tanaman.\n\nPada musim tanam pertama, sejumlah petak lahan justru mengalami genangan pada beberapa titik meski sensor menunjukkan kelembapan rendah di titik lain pada lahan yang sama. Setelah diperiksa, penyebabnya adalah jarak antar sensor yang terlalu jauh sehingga variasi tekstur tanah antar titik tidak terbaca secara memadai; tanah liat pada satu sisi lahan menahan air lebih lama daripada tanah berpasir di sisi lainnya, padahal katup mengikuti pembacaan sensor terdekat saja. Tim pendamping kemudian menambah jumlah sensor dan mengelompokkan katup berdasarkan jenis tekstur tanah, bukan sekadar jarak antar titik.\n\nSetelah penyesuaian tersebut, distribusi air menjadi lebih merata dan penggunaan air per musim tanam menurun dibandingkan metode penyiraman manual sebelumnya. Kelompok tani tetap mencatat pembacaan sensor secara berkala karena karakteristik tanah dapat berubah setelah pengolahan lahan atau penambahan bahan organik.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Penggunaan air per musim tanam akan menurun tanpa perlu penyesuaian lebih lanjut"
+    },
+    {
+      "key": "B",
+      "text": "Sensor kelembapan tanah akan berhenti mengirimkan data ke unit pengendali"
+    },
+    {
+      "key": "C",
+      "text": "Kelompok tani akan sepenuhnya beralih ke metode penyiraman manual"
+    },
+    {
+      "key": "D",
+      "text": "Kelembapan tanah pada seluruh titik lahan akan terbaca secara akurat oleh sensor yang ada"
+    },
+    {
+      "key": "E",
+      "text": "Distribusi air pada lahan kemungkinan besar tetap tidak merata seperti pada musim tanam pertama"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Bacaan menyatakan penurunan penggunaan air terjadi setelah penyesuaian dilakukan; tanpa penyesuaian tersebut, penurunan itu tidak memiliki dasar untuk terjadi.",
+    "B": "Bacaan tidak menyebutkan sensor berhenti mengirimkan data; masalah yang dijelaskan adalah jarak antar sensor, bukan kegagalan pengiriman data.",
+    "C": "Bacaan tidak menyebutkan rencana beralih sepenuhnya ke penyiraman manual; kelompok tani dalam bacaan justru menyesuaikan sistem sensor yang ada.",
+    "D": "Tanpa penambahan sensor, jarak antar sensor tetap terlalu jauh sehingga variasi tekstur tanah tetap tidak terbaca secara memadai, bertentangan dengan pernyataan ini.",
+    "E": "Benar. Karena penyebab genangan dan kelembapan yang salah terbaca adalah jarak antar sensor dan pengelompokan katup yang tidak mempertimbangkan tekstur tanah, tanpa perbaikan tersebut kondisi distribusi air yang tidak merata kemungkinan besar masih berlanjut."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

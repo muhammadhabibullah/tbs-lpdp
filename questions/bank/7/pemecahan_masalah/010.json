@@ -1,0 +1,43 @@
+{
+  "id": "7-pemecahan_masalah-010",
+  "package": 7,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan pergerakan stok satu jenis semen pada lima gudang milik sebuah toko material selama satu bulan. Stok akhir dihitung dari stok awal ditambah pasokan masuk, kemudian dikurangi jumlah terjual dan susut (rusak atau hilang).\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...",
+  "image": null,
+  "passage": "Gudang | Stok Awal | Pasokan Masuk | Terjual | Susut\nG1 | 340 | 260 | 380 | 15\nG2 | 410 | 300 | 420 | 20\nG3 | 280 | 350 | 390 | 10\nG4 | 500 | 180 | 430 | 25\nG5 | 360 | 240 | 350 | 18",
+  "options": [
+    {
+      "key": "A",
+      "text": "Stok akhir G1 lebih banyak daripada stok akhir G3"
+    },
+    {
+      "key": "B",
+      "text": "Jumlah seluruh stok akhir kelima gudang adalah 1.150 sak"
+    },
+    {
+      "key": "C",
+      "text": "Gudang dengan pasokan masuk paling banyak juga mencatat susut paling banyak"
+    },
+    {
+      "key": "D",
+      "text": "Selisih stok akhir terbesar dan terkecil di antara kelima gudang adalah 65 sak"
+    },
+    {
+      "key": "E",
+      "text": "Persentase penurunan stok dari stok awal ke stok akhir paling besar terjadi pada Gudang G2"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Stok akhir G1 = 340 + 260 − 380 − 15 = 205 sak, sedangkan stok akhir G3 = 280 + 350 − 390 − 10 = 230 sak; G1 justru lebih sedikit daripada G3.",
+    "B": "Salah. Stok akhir kelima gudang berturut-turut 205, 270, 230, 225, dan 232 sak, sehingga jumlahnya 1.162 sak, bukan 1.150.",
+    "C": "Salah. Pasokan masuk paling banyak diterima Gudang G3 (350 sak), sedangkan susut paling banyak tercatat di Gudang G4 (25 sak); keduanya bukan gudang yang sama.",
+    "D": "Benar. Stok akhir kelima gudang berturut-turut G1 = 205, G2 = 270, G3 = 230, G4 = 225, dan G5 = 232 sak. Stok akhir terbesar adalah G2 (270) dan terkecil adalah G1 (205), sehingga selisihnya 270 − 205 = 65 sak.",
+    "E": "Salah. Persentase penurunan G2 adalah (410 − 270) : 410 = 34,15%, sedangkan penurunan terbesar terjadi pada G4, yaitu (500 − 225) : 500 = 55%."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "8-pemecahan_masalah-010",
+  "package": 8,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan luas panen dan produksi padi serta jagung pada lima kecamatan selama satu musim tanam.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...",
+  "image": null,
+  "passage": "Kecamatan | Luas Panen Padi (ha) | Produksi Padi (ton) | Luas Panen Jagung (ha) | Produksi Jagung (ton)\nA | 200 | 800 | 150 | 525\nB | 250 | 1.125 | 100 | 380\nC | 180 | 630 | 200 | 900\nD | 200 | 860 | 120 | 432\nE | 150 | 525 | 180 | 720",
+  "options": [
+    {
+      "key": "A",
+      "text": "Kecamatan dengan total produksi padi dan jagung (dalam ton) terbesar adalah Kecamatan B."
+    },
+    {
+      "key": "B",
+      "text": "Kecamatan dengan total produksi padi dan jagung (dalam ton) terbesar adalah Kecamatan C."
+    },
+    {
+      "key": "C",
+      "text": "Produktivitas padi (ton per hektare) Kecamatan D lebih tinggi daripada produktivitas padi Kecamatan B."
+    },
+    {
+      "key": "D",
+      "text": "Total produksi jagung pada seluruh kecamatan lebih besar daripada total produksi padi pada seluruh kecamatan."
+    },
+    {
+      "key": "E",
+      "text": "Kecamatan dengan produktivitas jagung tertinggi adalah kecamatan dengan luas panen padi terluas."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Total produksi Kecamatan B adalah 1.125 + 380 = 1.505 ton, sedangkan Kecamatan C mencapai 630 + 900 = 1.530 ton; Kecamatan B bukan yang terbesar.",
+    "B": "Benar. Total produksi padi dan jagung tiap kecamatan berturut-turut adalah A = 800 + 525 = 1.325 ton, B = 1.125 + 380 = 1.505 ton, C = 630 + 900 = 1.530 ton, D = 860 + 432 = 1.292 ton, dan E = 525 + 720 = 1.245 ton. Nilai tertinggi, yaitu 1.530 ton, terdapat pada Kecamatan C.",
+    "C": "Salah. Produktivitas padi Kecamatan D adalah 860 : 200 = 4,3 ton/ha, sedangkan Kecamatan B adalah 1.125 : 250 = 4,5 ton/ha; Kecamatan D justru lebih rendah.",
+    "D": "Salah. Total produksi jagung seluruh kecamatan adalah 525 + 380 + 900 + 432 + 720 = 2.957 ton, sedangkan total produksi padi adalah 800 + 1.125 + 630 + 860 + 525 = 3.940 ton; produksi jagung justru lebih kecil.",
+    "E": "Salah. Produktivitas jagung tertinggi terdapat pada Kecamatan C (900 : 200 = 4,5 ton/ha), tetapi luas panen padi terluas terdapat pada Kecamatan B (250 ha), bukan Kecamatan C (180 ha)."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

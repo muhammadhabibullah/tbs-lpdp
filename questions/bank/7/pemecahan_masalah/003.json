@@ -1,0 +1,43 @@
+{
+  "id": "7-pemecahan_masalah-003",
+  "package": 7,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Lima peserta seminar, yaitu P, Q, R, S, dan T, akan menyampaikan presentasi secara berurutan pada sesi siang, masing-masing pada satu dari lima slot waktu yang berurutan. Urutan penyampaian tunduk pada ketentuan berikut.\n(1) R tampil tepat setelah P.\n(2) Q tampil sebelum S.\n(3) T tampil pada slot pertama.\n\nUrutan presentasi yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "T, R, P, Q, S"
+    },
+    {
+      "key": "B",
+      "text": "T, P, R, Q, S"
+    },
+    {
+      "key": "C",
+      "text": "T, P, R, S, Q"
+    },
+    {
+      "key": "D",
+      "text": "P, T, R, Q, S"
+    },
+    {
+      "key": "E",
+      "text": "T, Q, P, S, R"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Pada urutan ini R berada di slot ke-2 dan P di slot ke-3, sehingga R justru tampil sebelum P, bukan tepat setelah P seperti disyaratkan ketentuan (1).",
+    "B": "Benar. T berada pada slot pertama sesuai ketentuan (3); R (slot ke-3) tampil tepat setelah P (slot ke-2) sesuai ketentuan (1); dan Q (slot ke-4) tampil sebelum S (slot ke-5) sesuai ketentuan (2). Ketiga ketentuan terpenuhi sekaligus.",
+    "C": "Salah. Pada urutan ini S berada di slot ke-4 dan Q di slot ke-5, sehingga Q tampil setelah S, bukan sebelum S seperti disyaratkan ketentuan (2).",
+    "D": "Salah. P menempati slot pertama sehingga T tidak berada pada slot pertama, melanggar ketentuan (3). Susunan ini juga melanggar ketentuan (1) karena R (slot ke-3) tidak tepat berada satu slot setelah P (slot ke-1).",
+    "E": "Salah. P berada pada slot ke-3 dan R pada slot ke-5, dengan S berada di antara keduanya, sehingga R tidak tampil tepat setelah P seperti disyaratkan ketentuan (1)."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

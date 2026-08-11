@@ -1,0 +1,43 @@
+{
+  "id": "7-kuantitatif-003",
+  "package": 7,
+  "subtest": "kuantitatif",
+  "number": 3,
+  "type": "aritmetika",
+  "question_text": "40% dari 120 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "480"
+    },
+    {
+      "key": "B",
+      "text": "4,8"
+    },
+    {
+      "key": "C",
+      "text": "72"
+    },
+    {
+      "key": "D",
+      "text": "80"
+    },
+    {
+      "key": "E",
+      "text": "48"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 480 diperoleh dengan menggeser koma desimal satu tempat ke kanan.",
+    "B": "Salah. Nilai 4,8 diperoleh dengan menggeser koma desimal satu tempat ke kiri.",
+    "C": "Salah. Nilai 72 diperoleh dengan menghitung sisanya, yaitu bagian 60%.",
+    "D": "Salah. Nilai 80 diperoleh dengan mengurangkan 40 dari 120 alih-alih menghitung persentasenya.",
+    "E": "Benar. 40% × 120 = (40/100) × 120 = 48."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-001",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "OPTIMAL = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Paling banyak atau maksimal jumlahnya"
+    },
+    {
+      "key": "B",
+      "text": "Paling murah biayanya"
+    },
+    {
+      "key": "C",
+      "text": "Paling cepat prosesnya"
+    },
+    {
+      "key": "D",
+      "text": "Paling baik atau paling menguntungkan dalam suatu kondisi"
+    },
+    {
+      "key": "E",
+      "text": "Paling mudah dilaksanakan"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Optimal sering dikira sama dengan maksimal (jumlah terbanyak), padahal optimal menekankan hasil terbaik pada suatu kondisi, bukan semata-mata jumlah terbesar.",
+    "B": "Optimal tidak selalu berarti termurah; biaya terendah hanyalah salah satu faktor yang mungkin dipertimbangkan, bukan makna inti kata ini.",
+    "C": "Optimal tidak selalu berarti tercepat; kecepatan proses hanyalah salah satu aspek yang mungkin relevan, bukan makna inti kata ini.",
+    "D": "Benar. Optimal berarti paling baik atau paling menguntungkan yang dapat dicapai dalam suatu kondisi tertentu.",
+    "E": "Optimal tidak selalu berarti termudah; kemudahan pelaksanaan hanyalah salah satu aspek yang mungkin dipertimbangkan, bukan makna inti kata ini."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-013",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "GERIMIS : HUJAN LEBAT = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Panas : Dingin"
+    },
+    {
+      "key": "B",
+      "text": "Angin sepoi-sepoi : Angin kencang"
+    },
+    {
+      "key": "C",
+      "text": "Mendung : Cerah"
+    },
+    {
+      "key": "D",
+      "text": "Petir : Guntur"
+    },
+    {
+      "key": "E",
+      "text": "Kemarau : Hujan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Panas dan dingin merupakan pasangan makna yang berlawanan, bukan dua tingkat intensitas dari satu jenis fenomena yang sama seperti gerimis dan hujan lebat.",
+    "B": "Benar. Angin sepoi-sepoi dan angin kencang merupakan dua tingkat intensitas dari fenomena yang sama, sebagaimana gerimis dan hujan lebat merupakan dua tingkat intensitas hujan.",
+    "C": "Mendung dan cerah merupakan dua keadaan langit yang berbeda, bukan dua tingkat intensitas dari satu fenomena yang sama.",
+    "D": "Petir dan guntur adalah dua fenomena yang muncul bersamaan akibat sebab yang sama, bukan dua tingkat intensitas dari satu fenomena.",
+    "E": "Kemarau dan hujan merupakan dua musim yang berlawanan, bukan dua tingkat intensitas dari satu fenomena yang sama."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

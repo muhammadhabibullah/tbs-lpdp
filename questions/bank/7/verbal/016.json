@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-016",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Premis 1: Sebagian peneliti yang mengajukan proposal hibah memperoleh pendanaan tahun ini.\nPremis 2: Semua peneliti yang memperoleh pendanaan tahun ini wajib mengikuti pelatihan pelaporan keuangan.\nPremis 3: Sebagian peneliti yang mengajukan proposal hibah berasal dari perguruan tinggi swasta.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Peneliti dari perguruan tinggi swasta yang mengajukan proposal hibah belum tentu memperoleh pendanaan tahun ini."
+    },
+    {
+      "key": "B",
+      "text": "Semua peneliti dari perguruan tinggi swasta memperoleh pendanaan tahun ini."
+    },
+    {
+      "key": "C",
+      "text": "Semua peneliti yang memperoleh pendanaan tahun ini berasal dari perguruan tinggi swasta."
+    },
+    {
+      "key": "D",
+      "text": "Tidak ada peneliti dari perguruan tinggi swasta yang wajib mengikuti pelatihan pelaporan keuangan."
+    },
+    {
+      "key": "E",
+      "text": "Sebagian peneliti dari perguruan tinggi swasta pasti mengikuti pelatihan pelaporan keuangan."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Premis hanya menyatakan dua kelompok 'sebagian' peneliti pengaju proposal (yang didanai dan yang berasal dari perguruan tinggi swasta) tanpa memastikan keduanya beririsan, sehingga status pendanaan peneliti dari perguruan tinggi swasta tidak dapat dipastikan.",
+    "B": "Premis ketiga hanya menyatakan sebagian peneliti pengaju berasal dari perguruan tinggi swasta, dan premis pertama hanya menyatakan sebagian yang didanai; tidak ada dasar untuk menyimpulkan seluruh peneliti dari perguruan tinggi swasta memperoleh pendanaan.",
+    "C": "Premis tidak menyatakan bahwa seluruh peneliti yang didanai berasal dari perguruan tinggi swasta; hubungan pada premis pertama tidak dapat dibalik menjadi simpulan universal semacam ini.",
+    "D": "Simpulan ini terlalu jauh karena premis tidak menyangkal kemungkinan adanya peneliti dari perguruan tinggi swasta yang didanai dan karena itu wajib mengikuti pelatihan.",
+    "E": "Kata 'pasti' berlebihan karena premis tidak memastikan peneliti dari perguruan tinggi swasta termasuk kelompok yang memperoleh pendanaan, sehingga kewajiban pelatihan bagi mereka tidak dapat dipastikan pula."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

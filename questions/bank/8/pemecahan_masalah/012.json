@@ -1,0 +1,43 @@
+{
+  "id": "8-pemecahan_masalah-012",
+  "package": 8,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Sebuah proyek dapat diselesaikan oleh 8 pekerja dalam 15 hari apabila bekerja dengan laju yang sama sepanjang waktu. Setelah proyek berjalan 6 hari dengan 8 pekerja, perusahaan menambah 4 pekerja baru dengan laju kerja yang sama sehingga total terdapat 12 pekerja. Jika laju kerja setiap pekerja tetap sama, proyek tersebut akan selesai dalam waktu total ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "10 hari"
+    },
+    {
+      "key": "B",
+      "text": "15 hari"
+    },
+    {
+      "key": "C",
+      "text": "6 hari"
+    },
+    {
+      "key": "D",
+      "text": "13 hari"
+    },
+    {
+      "key": "E",
+      "text": "12 hari"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai ini diperoleh dengan menganggap seluruh proyek (120 pekerja-hari) langsung dikerjakan oleh 12 pekerja sejak awal, yaitu 120 : 12 = 10 hari, padahal 6 hari pertama hanya dikerjakan oleh 8 pekerja.",
+    "B": "Salah. Nilai ini adalah lama pengerjaan semula tanpa penambahan pekerja (120 : 8 = 15 hari), seolah-olah penambahan 4 pekerja baru tidak memberikan pengaruh apa pun.",
+    "C": "Salah. Nilai ini adalah sisa hari yang dibutuhkan setelah penambahan pekerja (72 : 12 = 6 hari), tetapi belum ditambah dengan 6 hari yang telah berlalu sejak awal proyek.",
+    "D": "Salah. Nilai ini diperoleh dengan keliru menghitung hari yang telah berlalu sebagai 7 hari, bukan 6 hari, sehingga total menjadi 7 + 6 = 13 hari.",
+    "E": "Benar. Total pekerjaan adalah 8 × 15 = 120 pekerja-hari. Dalam 6 hari pertama, 8 pekerja menyelesaikan 8 × 6 = 48 pekerja-hari, menyisakan 120 − 48 = 72 pekerja-hari. Dengan 12 pekerja, sisa pekerjaan itu selesai dalam 72 : 12 = 6 hari, sehingga total waktu pengerjaan adalah 6 + 6 = 12 hari."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

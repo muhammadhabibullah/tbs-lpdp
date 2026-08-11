@@ -1,0 +1,43 @@
+{
+  "id": "7-kuantitatif-021",
+  "package": 7,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Andi dapat menyelesaikan sebuah laporan dalam 12 hari jika bekerja sendiri, sedangkan Bela dapat menyelesaikan laporan yang sama dalam 8 hari jika bekerja sendiri. Jika mereka bekerja bersama-sama sejak awal dengan kecepatan kerja masing-masing tetap, dalam berapa hari laporan tersebut akan selesai?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "20 hari"
+    },
+    {
+      "key": "B",
+      "text": "4,8 hari"
+    },
+    {
+      "key": "C",
+      "text": "10 hari"
+    },
+    {
+      "key": "D",
+      "text": "4 hari"
+    },
+    {
+      "key": "E",
+      "text": "96 hari"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 20 hari diperoleh dengan menjumlahkan langsung kedua lama pengerjaan (12 + 8), padahal yang harus dijumlahkan adalah laju kerja per hari (1/12 dan 1/8), bukan lama waktunya.",
+    "B": "Benar. Laju kerja Andi = 1/12 laporan per hari, laju kerja Bela = 1/8 laporan per hari. Laju gabungan = 1/12 + 1/8 = 2/24 + 3/24 = 5/24 laporan per hari, sehingga waktu penyelesaian = 24/5 = 4,8 hari.",
+    "C": "Salah. Nilai 10 hari adalah rata-rata dari 12 dan 8 hari. Menggabungkan dua orang bekerja bersama justru mempercepat pekerjaan, sehingga hasilnya harus lebih kecil daripada waktu tercepat perorangan (8 hari), bukan berada di antara keduanya.",
+    "D": "Salah. Nilai 4 hari diperoleh dari selisih 12 − 8, yang tidak memiliki makna dalam konteks penggabungan laju kerja dua orang.",
+    "E": "Salah. Nilai 96 hari diperoleh dengan mengalikan 12 × 8, sebuah operasi yang tidak sesuai untuk menggabungkan laju kerja; hasil kali dua lama waktu tidak mencerminkan kecepatan kerja bersama."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

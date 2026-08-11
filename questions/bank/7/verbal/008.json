@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-008",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "KONVERGEN >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sentral"
+    },
+    {
+      "key": "B",
+      "text": "Divergen"
+    },
+    {
+      "key": "C",
+      "text": "Terpusat"
+    },
+    {
+      "key": "D",
+      "text": "Selaras"
+    },
+    {
+      "key": "E",
+      "text": "Sejalan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Sentral menggambarkan sesuatu yang berada di pusat atau menjadi titik tuju, justru sejalan dengan konvergen, bukan lawannya.",
+    "B": "Benar. Divergen berarti menyebar atau mengarah ke berbagai arah, berlawanan dengan konvergen yang menuju satu titik.",
+    "C": "Terpusat menggambarkan keadaan berkumpul pada satu titik, sejalan dengan makna konvergen, bukan lawannya.",
+    "D": "Selaras menunjukkan keadaan serasi atau seirama, dekat dengan gagasan bertemunya beberapa hal seperti konvergen, bukan lawannya.",
+    "E": "Sejalan menunjukkan arah yang sama, dekat dengan makna konvergen yang menuju satu titik, bukan lawannya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

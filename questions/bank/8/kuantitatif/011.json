@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-011",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 11,
+  "type": "deret_angka",
+  "question_text": "..., 51, 23, 47, 29, 43, 35, 39 Bilangan yang tepat untuk mengisi titik-titik tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "27"
+    },
+    {
+      "key": "B",
+      "text": "17"
+    },
+    {
+      "key": "C",
+      "text": "13"
+    },
+    {
+      "key": "D",
+      "text": "18"
+    },
+    {
+      "key": "E",
+      "text": "11"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 27 diperoleh dengan memundurkan jalur ganjil dengan beda milik jalur genap.",
+    "B": "Benar. Suku ganjil membentuk deret dengan beda 6, sedangkan suku genap memiliki beda −4. Karena 17 + 6 = 23, suku pertama yang hilang adalah 17.",
+    "C": "Salah. Nilai 13 diperoleh dengan mencampurkan nilai awal jalur ganjil dengan beda jalur genap.",
+    "D": "Salah. Nilai 18 diperoleh dengan menemukan arah mundur yang benar tetapi bergeser satu satuan di atas suku pertama.",
+    "E": "Salah. Nilai 11 diperoleh dengan memundurkan jalur ganjil dua langkah, bukan satu langkah."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

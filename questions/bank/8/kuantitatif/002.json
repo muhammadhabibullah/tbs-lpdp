@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-002",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 2,
+  "type": "aritmetika",
+  "question_text": "20% dari 360 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "72"
+    },
+    {
+      "key": "B",
+      "text": "7,2"
+    },
+    {
+      "key": "C",
+      "text": "720"
+    },
+    {
+      "key": "D",
+      "text": "340"
+    },
+    {
+      "key": "E",
+      "text": "288"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. 20% × 360 = (20/100) × 360 = 72.",
+    "B": "Salah. Nilai 7,2 diperoleh dengan menggeser koma desimal satu tempat ke kiri.",
+    "C": "Salah. Nilai 720 diperoleh dengan menggeser koma desimal satu tempat ke kanan.",
+    "D": "Salah. Nilai 340 diperoleh dengan mengurangkan 20 dari 360 alih-alih menghitung persentasenya.",
+    "E": "Salah. Nilai 288 diperoleh dengan menghitung sisanya, yaitu bagian 80%."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

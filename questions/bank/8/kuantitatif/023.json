@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-023",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Harga sebuah barang elektronik dinaikkan 15% oleh distributor. Toko kemudian menjual barang tersebut dengan memberikan diskon 20% dari harga yang telah dinaikkan itu, sehingga harga jualnya menjadi Rp276.000,00. Berapakah harga barang tersebut sebelum dinaikkan oleh distributor?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp240.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp253.920,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp300.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp345.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp290.526,00"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Rp240.000,00 diperoleh dengan hanya membalik kenaikan 15% (Rp276.000,00 ÷ 1,15), tanpa memperhitungkan bahwa harga Rp276.000,00 itu sendiri sudah merupakan hasil setelah diskon 20%. Diskon itu harus dibalik terlebih dahulu, baru kenaikannya, sesuai urutan kebalikan dari urutan kejadiannya.",
+    "B": "Salah. Rp253.920,00 diperoleh dengan mengalikan harga jual dengan faktor gabungan 0,92 (Rp276.000,00 × 0,92), padahal untuk mencari harga sebelum kedua perubahan itu terjadi, harga jual seharusnya DIBAGI dengan faktor gabungan tersebut, bukan dikalikan.",
+    "C": "Benar. Kenaikan 15% dan diskon 20% berturut-turut mengubah harga awal x menjadi x × 1,15 × 0,8 = 0,92x. Karena harga akhir adalah Rp276.000,00, maka 0,92x = 276.000, sehingga x = 276.000 : 0,92 = Rp300.000,00. Pemeriksaan: Rp300.000,00 × 1,15 = Rp345.000,00, kemudian Rp345.000,00 × 0,8 = Rp276.000,00.",
+    "D": "Salah. Rp345.000,00 diperoleh dengan hanya membalik diskon 20% (Rp276.000,00 ÷ 0,8), tanpa membalik kenaikan 15%. Nilai ini sebenarnya adalah harga SETELAH kenaikan 15% namun SEBELUM diskon diterapkan, bukan harga awal sebelum kenaikan.",
+    "E": "Salah. Rp290.526,00 diperoleh dengan menjumlahkan langsung kedua persentase menjadi penurunan bersih 5% (15% − 20%) dan membagi harga jual dengan 0,95. Padahal kedua perubahan harga itu berlaku berturut-turut secara berlipat (dikalikan), bukan dijumlahkan sebagai satu potongan tunggal, sehingga faktor gabungan yang benar adalah 0,92, bukan 0,95."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

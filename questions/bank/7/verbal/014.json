@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-014",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Premis 1: Semua buku digital di perpustakaan ini memiliki nomor pengenal unik.\nPremis 2: Sebagian buku digital di perpustakaan ini termasuk koleksi langka.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua buku dengan nomor pengenal unik termasuk koleksi langka."
+    },
+    {
+      "key": "B",
+      "text": "Semua koleksi langka merupakan buku digital."
+    },
+    {
+      "key": "C",
+      "text": "Tidak ada koleksi langka yang memiliki nomor pengenal unik."
+    },
+    {
+      "key": "D",
+      "text": "Sebagian koleksi langka bukan buku digital."
+    },
+    {
+      "key": "E",
+      "text": "Sebagian buku dengan nomor pengenal unik termasuk koleksi langka."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Premis kedua hanya menyatakan sebagian buku digital termasuk koleksi langka, sehingga tidak dapat digeneralisasi menjadi semua buku bernomor pengenal unik.",
+    "B": "Premis tidak menyatakan bahwa seluruh koleksi langka berbentuk digital; hubungan itu tidak dapat dibalik menjadi simpulan universal.",
+    "C": "Simpulan ini bertentangan dengan premis kedua yang justru menyatakan sebagian buku digital termasuk koleksi langka, dan seluruh buku digital memiliki nomor pengenal unik.",
+    "D": "Premis tidak memberikan informasi mengenai koleksi langka yang bukan buku digital, sehingga simpulan ini tidak dapat dipastikan.",
+    "E": "Benar. Karena semua buku digital memiliki nomor pengenal unik dan sebagian buku digital termasuk koleksi langka, buku-buku itu sekaligus memiliki nomor pengenal unik dan termasuk koleksi langka."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

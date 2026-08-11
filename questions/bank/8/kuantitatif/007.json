@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-007",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 7,
+  "type": "aljabar",
+  "question_text": "Jika y = 2x² + 3x − 7, nilai y untuk x = 3 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "34"
+    },
+    {
+      "key": "B",
+      "text": "38"
+    },
+    {
+      "key": "C",
+      "text": "14"
+    },
+    {
+      "key": "D",
+      "text": "2"
+    },
+    {
+      "key": "E",
+      "text": "20"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 34 diperoleh dengan salah tanda pada tetapan − 7.",
+    "B": "Salah. Nilai 38 diperoleh dengan mengkuadratkan 2x sebagai satu kesatuan, yaitu (2 × 3)², padahal yang dikuadratkan hanya x.",
+    "C": "Salah. Nilai 14 diperoleh dengan membaca 2x² sebagai 2 × 2 × x sehingga pangkat dua berubah menjadi perkalian dua.",
+    "D": "Salah. Nilai 2 diperoleh dengan salah tanda pada suku + 3x ketika mensubstitusikan x = 3.",
+    "E": "Benar. y = 2 × (3)² + 3 × (3) − 7 = 18 + 9 − 7 = 20."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

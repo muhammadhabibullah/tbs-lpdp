@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-023",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Menurut bacaan, langkah yang diambil kampus setelah memperoleh temuan evaluasi tersebut adalah ...",
+  "image": null,
+  "passage": "Sebuah perguruan tinggi vokasi mengevaluasi program magang bersertifikat yang mewajibkan mahasiswa tingkat akhir menjalani praktik kerja selama satu semester penuh di mitra industri. Evaluasi dilakukan dengan membandingkan nilai kompetensi mahasiswa peserta program dengan mahasiswa yang menempuh mata kuliah praktikum reguler di kampus tanpa magang industri.\n\nHasil awal menunjukkan mahasiswa peserta magang memperoleh nilai kompetensi teknis yang lebih tinggi, khususnya pada keterampilan yang langsung dipakai di tempat magang mereka. Namun, pada aspek kompetensi yang tidak diajarkan secara eksplisit oleh mitra industri, seperti pemecahan masalah pada kasus di luar bidang kerja rutin mereka, nilai kedua kelompok mahasiswa relatif setara. Tim evaluasi menduga hal ini terjadi karena mahasiswa magang cenderung berulang kali mengerjakan tugas yang serupa sesuai kebutuhan operasional mitra, sehingga paparan mereka terhadap ragam kasus lebih sempit dibandingkan mahasiswa yang mengikuti praktikum dengan variasi studi kasus yang sengaja dirancang kampus.\n\nBerdasarkan temuan tersebut, kampus mulai mendorong mitra industri untuk memberi mahasiswa magang rotasi tugas yang lebih beragam, alih-alih hanya menempatkan mereka pada satu jenis pekerjaan sepanjang semester.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Menghentikan kerja sama dengan seluruh mitra industri yang dinilai kurang mendidik"
+    },
+    {
+      "key": "B",
+      "text": "Mewajibkan mahasiswa magang mengikuti praktikum reguler tambahan di kampus"
+    },
+    {
+      "key": "C",
+      "text": "Memperpanjang durasi magang mahasiswa menjadi dua semester penuh"
+    },
+    {
+      "key": "D",
+      "text": "Menghapus program magang bersertifikat dan menggantinya dengan praktikum reguler"
+    },
+    {
+      "key": "E",
+      "text": "Mendorong mitra industri memberi mahasiswa magang rotasi tugas yang lebih beragam"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Bacaan tidak menyebutkan penghentian kerja sama dengan mitra industri mana pun.",
+    "B": "Bacaan tidak menyebutkan kewajiban mengikuti praktikum reguler tambahan bagi mahasiswa magang.",
+    "C": "Bacaan tidak menyebutkan perpanjangan durasi magang; langkah yang disebutkan berkaitan dengan rotasi tugas, bukan durasi magang.",
+    "D": "Bacaan tidak menyebutkan penghapusan program magang bersertifikat; program tersebut tetap berjalan dengan penyesuaian pada penugasan mitra industri.",
+    "E": "Benar. Bacaan menyatakan kampus mulai mendorong mitra industri memberi mahasiswa magang rotasi tugas yang lebih beragam, bukan hanya menempatkan mereka pada satu jenis pekerjaan sepanjang semester."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

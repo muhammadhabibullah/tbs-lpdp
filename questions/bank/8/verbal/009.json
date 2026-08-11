@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-009",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "MESIN : MOBIL = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Mobil : Mesin"
+    },
+    {
+      "key": "B",
+      "text": "Roda : Mobil"
+    },
+    {
+      "key": "C",
+      "text": "Kulit : Tubuh Manusia"
+    },
+    {
+      "key": "D",
+      "text": "Jantung : Tubuh Manusia"
+    },
+    {
+      "key": "E",
+      "text": "Ban : Sepeda Motor"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Urutan pasangan ini terbalik; mesin adalah komponen penggerak dari mobil, bukan sebaliknya.",
+    "B": "Roda adalah bagian mobil yang digerakkan, tetapi bukan komponen yang menjadi sumber tenaga penggerak seperti hubungan mesin dengan mobil.",
+    "C": "Kulit adalah bagian pelindung tubuh, bukan organ yang menjadi sumber tenaga penggerak seperti hubungan mesin dengan mobil.",
+    "D": "Benar. Mesin adalah komponen inti yang menggerakkan mobil, sebagaimana jantung adalah organ inti yang memompa darah dan menggerakkan sistem tubuh manusia.",
+    "E": "Ban adalah bagian yang bersentuhan dengan jalan agar sepeda motor dapat bergerak, tetapi bukan sumber tenaga penggerak seperti hubungan mesin dengan mobil."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

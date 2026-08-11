@@ -1,0 +1,43 @@
+{
+  "id": "7-pemecahan_masalah-007",
+  "package": 7,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah rumah sakit mencatat bahwa pasien yang mengikuti program edukasi gizi sebelum operasi memiliki rerata masa rawat inap pascaoperasi lebih pendek daripada pasien yang tidak mengikuti program tersebut. Direktur rumah sakit menyimpulkan bahwa program edukasi gizi mempercepat pemulihan seluruh pasien pascaoperasi.\n\nInformasi yang paling penting untuk menilai simpulan direktur adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Apakah biaya penyelenggaraan program edukasi gizi tersebut terjangkau bagi rumah sakit"
+    },
+    {
+      "key": "B",
+      "text": "Apakah pasien menyukai materi edukasi gizi yang diberikan"
+    },
+    {
+      "key": "C",
+      "text": "Apakah tingkat keparahan kondisi kesehatan awal pasien yang mengikuti program sebanding dengan yang tidak mengikuti program"
+    },
+    {
+      "key": "D",
+      "text": "Apakah rumah sakit memiliki cukup tenaga edukator gizi untuk melayani seluruh pasien"
+    },
+    {
+      "key": "E",
+      "text": "Apakah edukasi gizi serupa pernah diterapkan di rumah sakit lain"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Biaya penyelenggaraan berkaitan dengan kelayakan pelaksanaan program, bukan dengan apakah program tersebut benar-benar menyebabkan masa rawat inap lebih pendek.",
+    "B": "Salah. Kesukaan pasien terhadap materi tidak mengukur dampak program terhadap kecepatan pemulihan fisik pasien.",
+    "C": "Benar. Program ini kemungkinan diikuti secara sukarela, sehingga pasien dengan kondisi awal yang lebih baik dapat lebih memilih mengikutinya. Jika kedua kelompok tidak sebanding sejak awal, perbedaan masa rawat inap bisa disebabkan oleh perbedaan kondisi awal, bukan oleh program edukasi gizi itu sendiri.",
+    "D": "Salah. Ketersediaan tenaga edukator berkaitan dengan kapasitas pelaksanaan program, bukan dengan apakah program tersebut menjadi penyebab pemulihan yang lebih cepat.",
+    "E": "Salah. Penerapan program serupa di rumah sakit lain tidak membuktikan hubungan sebab akibat pada rumah sakit yang diamati dalam simpulan direktur."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

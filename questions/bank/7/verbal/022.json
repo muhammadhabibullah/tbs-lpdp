@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-022",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Simpulan yang paling tepat berdasarkan bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Di beberapa kawasan pesisir, kerusakan terumbu karang akibat gelombang panas dan aktivitas manusia mendorong penerapan restorasi menggunakan struktur buatan. Fragmen karang yang sehat dipotong dari koloni donor, kemudian diikatkan pada rangka logam atau beton berbentuk meja maupun kubah yang ditempatkan di dasar laut. Struktur ini dirancang agar arus air tetap mengalir di sekitar fragmen sehingga oksigen dan nutrisi tercukupi.\n\nTim penyelam memantau tingkat kelangsungan hidup fragmen setiap tiga bulan. Pada tahun pertama, sebagian lokasi menunjukkan pertumbuhan yang baik, sedangkan lokasi lain mengalami kematian fragmen yang tinggi. Setelah dibandingkan, lokasi dengan kematian tinggi umumnya berada di perairan yang lebih dangkal dan lebih sering terkena suhu permukaan yang ekstrem, serta memiliki sedimentasi yang lebih tebal akibat aktivitas pembangunan di daratan terdekat.\n\nTemuan ini mendorong tim untuk memilih lokasi penempatan struktur secara lebih selektif, mengutamakan perairan yang lebih dalam dengan sedimentasi rendah. Struktur buatan sendiri tidak menjamin keberhasilan restorasi tanpa mempertimbangkan kondisi lingkungan tempat struktur itu dipasang.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Keberhasilan restorasi terumbu karang bergantung pada pemilihan lokasi penempatan struktur, bukan semata-mata pada penggunaan struktur itu sendiri"
+    },
+    {
+      "key": "B",
+      "text": "Struktur buatan berbentuk kubah menghasilkan tingkat kelangsungan hidup fragmen yang lebih tinggi daripada struktur berbentuk meja"
+    },
+    {
+      "key": "C",
+      "text": "Penempatan struktur buatan di perairan dangkal selalu menghasilkan kematian fragmen karang secara total"
+    },
+    {
+      "key": "D",
+      "text": "Pemantauan oleh tim penyelam tidak diperlukan setelah struktur buatan dipasang"
+    },
+    {
+      "key": "E",
+      "text": "Fragmen karang yang dipotong dari koloni donor tidak dapat bertahan hidup di struktur buatan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Bacaan menyimpulkan bahwa struktur buatan tidak menjamin keberhasilan restorasi tanpa mempertimbangkan kondisi lingkungan tempat struktur dipasang, sehingga pemilihan lokasi menjadi penentu penting.",
+    "B": "Bacaan tidak membandingkan tingkat kelangsungan hidup antara struktur berbentuk kubah dan meja.",
+    "C": "Kata 'selalu' dan 'total' berlebihan; bacaan hanya menyatakan lokasi dangkal umumnya mengalami kematian fragmen yang tinggi, bukan kematian total di setiap kasus.",
+    "D": "Bacaan justru menyatakan tim penyelam memantau tingkat kelangsungan hidup fragmen setiap tiga bulan setelah struktur dipasang.",
+    "E": "Bacaan menyatakan sebagian lokasi menunjukkan pertumbuhan fragmen yang baik, sehingga fragmen terbukti dapat bertahan hidup di sejumlah lokasi."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

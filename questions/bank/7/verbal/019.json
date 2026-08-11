@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-019",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Gagasan utama paragraf kedua bacaan tersebut adalah ...",
+  "image": null,
+  "passage": "Sejumlah kelurahan di kota ini menjalankan program kompos komunitas untuk mengolah sampah dapur warga menjadi pupuk. Setiap rumah tangga peserta memilah sisa sayuran dan buah ke dalam wadah terpisah, lalu petugas mengangkutnya ke titik pengomposan setiap dua hari. Pengelola menambahkan sekam padi dan menjaga kelembapan tumpukan agar proses penguraian berjalan optimal.\n\nPada bulan-bulan awal, sebagian tumpukan kompos justru berbau menyengat dan menarik lalat. Setelah ditelusuri, penyebabnya adalah sampah yang tercampur bahan bukan organik, seperti plastik pembungkus dan sisa minyak goreng, yang menghambat penguraian dan memicu pembusukan tidak merata. Pengelola kemudian mengadakan sesi pelatihan pemilahan bagi warga serta memasang label pada wadah agar jenis sampah yang diterima lebih jelas.\n\nSetelah perbaikan tersebut, kualitas kompos yang dihasilkan meningkat dan keluhan bau berkurang. Namun, pengelola tetap memantau kadar kontaminasi setiap bulan karena kebiasaan memilah sampah baru terbentuk secara bertahap. Warga yang aktif memilah sampah dengan benar mendapat prioritas menerima kompos jadi untuk kebun rumah mereka, sebuah insentif yang mendorong partisipasi berkelanjutan.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Warga secara rutin mengangkut sampah dapur ke titik pengomposan."
+    },
+    {
+      "key": "B",
+      "text": "Kualitas kompos meningkat setelah warga terbiasa memilah sampah dengan baik."
+    },
+    {
+      "key": "C",
+      "text": "Warga yang memilah sampah dengan benar memperoleh kompos jadi sebagai insentif."
+    },
+    {
+      "key": "D",
+      "text": "Sekam padi ditambahkan untuk menjaga kelembapan tumpukan kompos."
+    },
+    {
+      "key": "E",
+      "text": "Kontaminasi sampah bukan organik menyebabkan masalah bau pada awal program, sehingga pengelola mengadakan pelatihan pemilahan dan pelabelan wadah."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Pernyataan ini merupakan isi paragraf pertama tentang pengangkutan sampah, bukan gagasan utama paragraf kedua yang membahas penyebab bau dan tindakan perbaikannya.",
+    "B": "Pernyataan ini merupakan isi paragraf ketiga tentang hasil setelah perbaikan, bukan gagasan utama paragraf kedua.",
+    "C": "Pernyataan ini merupakan isi paragraf ketiga tentang insentif, bukan gagasan utama paragraf kedua.",
+    "D": "Pernyataan ini merupakan isi paragraf pertama tentang cara menjaga kelembapan, bukan gagasan utama paragraf kedua.",
+    "E": "Benar. Paragraf kedua membahas penyebab bau menyengat akibat kontaminasi sampah bukan organik serta langkah pelatihan dan pelabelan yang diambil pengelola."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

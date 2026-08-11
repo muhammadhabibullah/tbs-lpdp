@@ -1,0 +1,43 @@
+{
+  "id": "7-kuantitatif-025",
+  "package": 7,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar belah ketupat berikut. Keliling belah ketupat tersebut adalah ...",
+  "image": "images/belah-ketupat.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "40 cm"
+    },
+    {
+      "key": "B",
+      "text": "80 cm"
+    },
+    {
+      "key": "C",
+      "text": "56 cm"
+    },
+    {
+      "key": "D",
+      "text": "96 cm"
+    },
+    {
+      "key": "E",
+      "text": "10 cm"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Kedua diagonal belah ketupat saling tegak lurus dan berpotongan di tengah, sehingga membentuk setengah diagonal 8 cm dan 6 cm sebagai kaki-kaki segitiga siku-siku dengan sisi belah ketupat sebagai sisi miringnya: sisi = √(8² + 6²) = √(64 + 36) = √100 = 10 cm. Keliling = 4 × 10 = 40 cm.",
+    "B": "Salah. Nilai 80 cm diperoleh dari 4 × √(16² + 12²) = 4 × 20, yaitu memakai panjang diagonal penuh (16 cm dan 12 cm) langsung sebagai kaki-kaki segitiga siku-siku, padahal yang menjadi kaki-kaki segitiga adalah setengah dari setiap diagonal.",
+    "C": "Salah. Nilai 56 cm diperoleh dari 2 × (16 + 12), seolah-olah belah ketupat memakai rumus keliling persegi panjang dengan panjang dan lebar sama dengan kedua diagonalnya. Keliling belah ketupat dihitung dari panjang sisinya, bukan dari diagonalnya secara langsung.",
+    "D": "Salah. Nilai 96 cm sebenarnya adalah luas belah ketupat tersebut, yaitu ½ × d1 × d2 = ½ × 16 × 12 = 96 cm², bukan kelilingnya; satuannya pun seharusnya cm², bukan cm.",
+    "E": "Salah. Nilai 10 cm adalah panjang satu sisi belah ketupat, bukan kelilingnya. Keliling diperoleh dengan mengalikan panjang sisi tersebut dengan 4."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

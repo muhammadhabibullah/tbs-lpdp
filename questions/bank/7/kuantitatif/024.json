@@ -1,0 +1,43 @@
+{
+  "id": "7-kuantitatif-024",
+  "package": 7,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar tabung berikut. Jika π = 22/7, volume tabung tersebut adalah ...",
+  "image": "images/tabung.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "660 cm³"
+    },
+    {
+      "key": "B",
+      "text": "3.080 cm³"
+    },
+    {
+      "key": "C",
+      "text": "36.960 cm³"
+    },
+    {
+      "key": "D",
+      "text": "2.552 cm²"
+    },
+    {
+      "key": "E",
+      "text": "9.240 cm³"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 660 cm³ diperoleh dari π × r × h = 22/7 × 14 × 15 tanpa mengkuadratkan jari-jari terlebih dahulu, padahal rumus volume tabung memerlukan r².",
+    "B": "Salah. Nilai 3.080 cm³ diperoleh dengan memakai rumus volume kerucut, ⅓ × π × r² × h, bukan rumus volume tabung yang tidak memakai faktor ⅓.",
+    "C": "Salah. Nilai 36.960 cm³ diperoleh jika diameter alas (28 cm) dipakai sebagai jari-jari dalam rumus π × r² × h, padahal jari-jari yang diberikan pada gambar adalah 14 cm.",
+    "D": "Salah. Nilai 2.552 cm² adalah luas permukaan tabung tersebut (2 × π × r × (r + h) = 2.552 cm²), bukan volumenya; satuannya pun berupa satuan luas (cm²), bukan satuan volume (cm³).",
+    "E": "Benar. Volume tabung = π × r² × h = 22/7 × 14² × 15 = 22/7 × 196 × 15 = 22 × 28 × 15 = 9.240 cm³."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

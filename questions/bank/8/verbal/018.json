@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-018",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nKegiatan orientasi mahasiswa baru meliputi pengenalan lingkungan kampus, pembagian kelompok belajar, dan mendaftarkan diri ke unit kegiatan mahasiswa.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kegiatan orientasi mahasiswa baru meliputi pengenalan lingkungan kampus, pembagian kelompok belajar, dan mendaftarkan diri ke unit kegiatan mahasiswa."
+    },
+    {
+      "key": "B",
+      "text": "Kegiatan orientasi mahasiswa baru yang meliputi pengenalan lingkungan kampus, pembagian kelompok belajar, dan pendaftaran diri ke unit kegiatan mahasiswa."
+    },
+    {
+      "key": "C",
+      "text": "Kegiatan orientasi mahasiswa baru meliputi pengenalan lingkungan kampus, pembagian kelompok belajar, dan pendaftaran diri ke unit kegiatan mahasiswa."
+    },
+    {
+      "key": "D",
+      "text": "Kegiatan orientasi bagi mahasiswa-mahasiswa baru meliputi pengenalan lingkungan kampus, pembagian kelompok belajar, dan pendaftaran diri ke unit kegiatan mahasiswa."
+    },
+    {
+      "key": "E",
+      "text": "Kegiatan orientasi mahasiswa baru meliputi tentang pengenalan lingkungan kampus, pembagian kelompok belajar, dan pendaftaran diri ke unit kegiatan mahasiswa."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Unsur perincian dalam kalimat ini tidak sejajar: 'pengenalan' dan 'pembagian' berbentuk nomina, sedangkan 'mendaftarkan diri' berbentuk verba.",
+    "B": "Penambahan kata 'yang' setelah 'mahasiswa baru' membuat kalimat kehilangan predikat utama sehingga hanya menjadi frasa panjang, bukan kalimat lengkap.",
+    "C": "Benar. Ketiga unsur perincian kini sejajar sebagai nomina, yaitu 'pengenalan', 'pembagian', dan 'pendaftaran diri', sehingga kalimat menjadi efektif.",
+    "D": "Bentuk 'mahasiswa-mahasiswa' merupakan reduplikasi yang tidak perlu karena kata 'baru' pada frasa ini sudah cukup menjelaskan kelompok yang dimaksud tanpa perlu penanda jamak ganda.",
+    "E": "Penambahan kata depan 'tentang' setelah 'meliputi' tidak diperlukan karena 'meliputi' sudah bersifat transitif langsung, sehingga penambahan ini merupakan pemborosan kata."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

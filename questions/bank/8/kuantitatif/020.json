@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-020",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Sebuah toko memberikan diskon 25% untuk sebuah tas yang berharga Rp360.000,00. Setelah diskon, pembeli masih dikenai pajak sebesar 10% dari harga yang telah didiskon tersebut. Berapa jumlah yang harus dibayar pembeli untuk tas itu?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp270.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp306.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp324.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp297.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp279.000,00"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Rp270.000,00 adalah harga setelah diskon 25% saja (Rp360.000,00 × 75% = Rp270.000,00), tanpa memperhitungkan pajak 10% yang masih harus ditambahkan pada harga tersebut.",
+    "B": "Salah. Rp306.000,00 diperoleh dengan menghitung pajak 10% dari harga awal (10% × Rp360.000,00 = Rp36.000,00), lalu menambahkannya pada harga setelah diskon (Rp270.000,00 + Rp36.000,00). Padahal pajak seharusnya dihitung dari harga yang telah didiskon, bukan dari harga awal.",
+    "C": "Salah. Rp324.000,00 diperoleh dengan hanya mengurangkan 10% dari harga awal (Rp360.000,00 × 90%), seolah-olah persentase itu adalah diskonnya. Diskon yang berlaku sebenarnya 25%, dan pajak 10% seharusnya menambah harga setelah diskon, bukan menggantikan perhitungan diskon.",
+    "D": "Benar. Harga setelah diskon = Rp360.000,00 × 75% = Rp270.000,00. Pajak 10% dihitung dari harga setelah diskon tersebut: Rp270.000,00 × 10% = Rp27.000,00. Jumlah yang harus dibayar = Rp270.000,00 + Rp27.000,00 = Rp297.000,00.",
+    "E": "Salah. Rp279.000,00 diperoleh dengan menghitung pajak 10% dari besarnya diskon (10% × Rp90.000,00 = Rp9.000,00), lalu menambahkannya pada harga setelah diskon. Padahal pajak dikenakan atas harga yang dibayar pembeli (harga setelah diskon), bukan atas nilai potongan diskonnya."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

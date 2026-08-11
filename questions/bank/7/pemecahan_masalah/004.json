@@ -1,0 +1,43 @@
+{
+  "id": "7-pemecahan_masalah-004",
+  "package": 7,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Empat manajer, yaitu K, L, M, dan N, masing-masing memimpin satu proyek yang berbeda: Anggaran, Distribusi, Logistik, dan Pemasaran. Informasi berikut diketahui.\n(1) K tidak memimpin proyek Anggaran maupun Distribusi.\n(2) Proyek Logistik dipimpin oleh L atau N.\n(3) M memimpin proyek Anggaran.\n(4) N tidak memimpin proyek Logistik.\n\nProyek yang dipimpin oleh K adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Anggaran"
+    },
+    {
+      "key": "B",
+      "text": "Distribusi"
+    },
+    {
+      "key": "C",
+      "text": "Logistik"
+    },
+    {
+      "key": "D",
+      "text": "Pemasaran"
+    },
+    {
+      "key": "E",
+      "text": "Tidak dapat ditentukan dari informasi tersebut"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Ketentuan (3) menyatakan bahwa M yang memimpin proyek Anggaran, bukan K.",
+    "B": "Salah. Ketentuan (1) secara eksplisit menyatakan K tidak memimpin proyek Distribusi.",
+    "C": "Salah. Ketentuan (2) menyatakan proyek Logistik dipimpin oleh L atau N, sehingga K tidak mungkin memimpinnya.",
+    "D": "Benar. M memimpin Anggaran (ketentuan 3). K tidak memimpin Anggaran maupun Distribusi (ketentuan 1), dan K juga bukan pemimpin Logistik karena Logistik hanya mungkin dipimpin L atau N (ketentuan 2). Satu-satunya proyek yang tersisa untuk K adalah Pemasaran. Sebagai pelengkap, karena N tidak memimpin Logistik (ketentuan 4), Logistik pasti dipimpin L, sehingga N memimpin Distribusi.",
+    "E": "Salah. Keempat ketentuan bersama-sama menentukan penugasan setiap manajer secara tunggal, termasuk K, sehingga informasi yang diberikan sudah cukup untuk menyimpulkan proyek K."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

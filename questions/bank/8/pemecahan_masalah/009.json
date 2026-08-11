@@ -1,0 +1,43 @@
+{
+  "id": "8-pemecahan_masalah-009",
+  "package": 8,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan jumlah peserta terdaftar, lulus, dan tidak lulus pada lima angkatan pelatihan yang diselenggarakan sebuah lembaga.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...",
+  "image": null,
+  "passage": "Angkatan | Peserta Terdaftar | Peserta Lulus | Peserta Tidak Lulus\nAngkatan 1 | 40 | 34 | 6\nAngkatan 2 | 35 | 28 | 7\nAngkatan 3 | 50 | 47 | 3\nAngkatan 4 | 30 | 21 | 9\nAngkatan 5 | 45 | 38 | 7",
+  "options": [
+    {
+      "key": "A",
+      "text": "Angkatan 3 memiliki persentase kelulusan tertinggi di antara kelima angkatan."
+    },
+    {
+      "key": "B",
+      "text": "Jumlah peserta tidak lulus pada Angkatan 4 sama dengan jumlah peserta tidak lulus pada Angkatan 2."
+    },
+    {
+      "key": "C",
+      "text": "Total peserta terdaftar pada seluruh angkatan adalah 210 orang."
+    },
+    {
+      "key": "D",
+      "text": "Angkatan 1 memiliki jumlah peserta lulus lebih banyak daripada Angkatan 5."
+    },
+    {
+      "key": "E",
+      "text": "Persentase kelulusan Angkatan 2 lebih tinggi daripada persentase kelulusan Angkatan 5."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Persentase kelulusan tiap angkatan berturut-turut adalah 34/40 = 85%, 28/35 = 80%, 47/50 = 94%, 21/30 = 70%, dan 38/45 ≈ 84,4%. Angka tertinggi, yaitu 94%, dimiliki Angkatan 3.",
+    "B": "Salah. Peserta tidak lulus Angkatan 4 berjumlah 9 orang, sedangkan Angkatan 2 berjumlah 7 orang; keduanya tidak sama.",
+    "C": "Salah. Total peserta terdaftar adalah 40 + 35 + 50 + 30 + 45 = 200 orang, bukan 210.",
+    "D": "Salah. Peserta lulus Angkatan 1 berjumlah 34 orang, sedangkan Angkatan 5 berjumlah 38 orang; Angkatan 1 justru lebih sedikit.",
+    "E": "Salah. Persentase kelulusan Angkatan 2 adalah 80%, sedangkan Angkatan 5 sekitar 84,4%; Angkatan 2 justru lebih rendah."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

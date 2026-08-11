@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-023",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan, faktor-faktor yang paling berkaitan dengan tingginya kematian fragmen karang di sejumlah lokasi adalah ...",
+  "image": null,
+  "passage": "Di beberapa kawasan pesisir, kerusakan terumbu karang akibat gelombang panas dan aktivitas manusia mendorong penerapan restorasi menggunakan struktur buatan. Fragmen karang yang sehat dipotong dari koloni donor, kemudian diikatkan pada rangka logam atau beton berbentuk meja maupun kubah yang ditempatkan di dasar laut. Struktur ini dirancang agar arus air tetap mengalir di sekitar fragmen sehingga oksigen dan nutrisi tercukupi.\n\nTim penyelam memantau tingkat kelangsungan hidup fragmen setiap tiga bulan. Pada tahun pertama, sebagian lokasi menunjukkan pertumbuhan yang baik, sedangkan lokasi lain mengalami kematian fragmen yang tinggi. Setelah dibandingkan, lokasi dengan kematian tinggi umumnya berada di perairan yang lebih dangkal dan lebih sering terkena suhu permukaan yang ekstrem, serta memiliki sedimentasi yang lebih tebal akibat aktivitas pembangunan di daratan terdekat.\n\nTemuan ini mendorong tim untuk memilih lokasi penempatan struktur secara lebih selektif, mengutamakan perairan yang lebih dalam dengan sedimentasi rendah. Struktur buatan sendiri tidak menjamin keberhasilan restorasi tanpa mempertimbangkan kondisi lingkungan tempat struktur itu dipasang.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Bentuk rangka struktur dan jadwal pemantauan oleh tim penyelam"
+    },
+    {
+      "key": "B",
+      "text": "Suhu permukaan yang ekstrem dan sedimentasi tebal akibat pembangunan di daratan terdekat"
+    },
+    {
+      "key": "C",
+      "text": "Kedalaman perairan yang berlebihan dan minimnya fragmen donor yang tersedia"
+    },
+    {
+      "key": "D",
+      "text": "Jenis bahan rangka logam dan kurangnya arus air di sekitar fragmen"
+    },
+    {
+      "key": "E",
+      "text": "Frekuensi pemotongan fragmen donor dan jarak lokasi dari pusat kota"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Bacaan tidak mengaitkan bentuk rangka atau jadwal pemantauan penyelam dengan tingginya kematian fragmen karang.",
+    "B": "Benar. Bacaan menyatakan lokasi dengan kematian tinggi umumnya lebih sering terkena suhu permukaan ekstrem dan memiliki sedimentasi tebal akibat pembangunan di daratan terdekat.",
+    "C": "Bacaan menyatakan lokasi bermasalah justru berada di perairan yang lebih dangkal, bukan lebih dalam, dan tidak menyebutkan minimnya fragmen donor sebagai penyebab kematian.",
+    "D": "Bacaan menyatakan struktur dirancang agar arus air tetap mengalir di sekitar fragmen, sehingga bukan kekurangan arus air yang disebut sebagai penyebab kematian.",
+    "E": "Bacaan tidak menyebutkan frekuensi pemotongan fragmen donor maupun jarak lokasi dari pusat kota sebagai faktor penyebab kematian fragmen."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

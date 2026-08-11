@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-019",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 19,
+  "type": "kecukupan_data",
+  "question_text": "Sebuah taman berbentuk persegi panjang. Berapakah keliling taman tersebut?\n(1) Selisih panjang dan lebar taman itu adalah 6 m.\n(2) Panjang taman itu adalah 15 m.\nPutuskan apakah pernyataan (1) dan (2) yang diberikan cukup untuk menjawab pertanyaan tersebut.",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup"
+    },
+    {
+      "key": "B",
+      "text": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup"
+    },
+    {
+      "key": "C",
+      "text": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup untuk menjawab pertanyaan"
+    },
+    {
+      "key": "E",
+      "text": "Pernyataan (1) dan (2) BERSAMA-SAMA tidak cukup untuk menjawab pertanyaan"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [panjang = 15 m, lebar = 9 m] dan [panjang = 16 m, lebar = 10 m] sama-sama memenuhinya, tetapi memberikan keliling taman sebesar 48 m dan 52 m.",
+    "B": "Salah. Pernyataan (2) saja tidak cukup, sebab keadaan [panjang = 15 m, lebar = 9 m] dan [panjang = 15 m, lebar = 10 m] sama-sama memenuhinya, tetapi memberikan keliling taman sebesar 48 m dan 50 m.",
+    "C": "Benar. Pernyataan (1) dan (2) bersama-sama menentukan keliling taman secara tunggal, yaitu 48 m; pernyataan (1) saja tidak cukup, sebab keadaan [panjang = 15 m, lebar = 9 m] dan [panjang = 16 m, lebar = 10 m] sama-sama memenuhinya, tetapi memberikan keliling taman sebesar 48 m dan 52 m; pernyataan (2) saja tidak cukup, sebab keadaan [panjang = 15 m, lebar = 9 m] dan [panjang = 15 m, lebar = 10 m] sama-sama memenuhinya, tetapi memberikan keliling taman sebesar 48 m dan 50 m.",
+    "D": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [panjang = 15 m, lebar = 9 m] dan [panjang = 16 m, lebar = 10 m] sama-sama memenuhinya, tetapi memberikan keliling taman sebesar 48 m dan 52 m.",
+    "E": "Salah. Pernyataan (1) dan (2) bersama-sama menentukan keliling taman secara tunggal, yaitu 48 m."
+  },
+  "difficulty": "medium",
+  "source": "kecukupan_data.py",
+  "verified": true
+}

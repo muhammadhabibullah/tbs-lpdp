@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-002",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "KOMPREHENSIF = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Ringkas dan padat"
+    },
+    {
+      "key": "B",
+      "text": "Menyeluruh dan mencakup semua aspek"
+    },
+    {
+      "key": "C",
+      "text": "Rumit dan sulit dipahami"
+    },
+    {
+      "key": "D",
+      "text": "Terperinci pada satu aspek saja"
+    },
+    {
+      "key": "E",
+      "text": "Bersifat sementara"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Ringkas dan padat justru berlawanan dengan sifat komprehensif yang menekankan cakupan luas, bukan keringkasan.",
+    "B": "Benar. Komprehensif berarti bersifat menyeluruh dan mencakup ruang lingkup yang luas dan lengkap.",
+    "C": "Komprehensif tidak berarti rumit; sesuatu yang komprehensif dapat tetap disampaikan dengan jelas meskipun mencakup banyak aspek.",
+    "D": "Ini bertentangan dengan makna komprehensif; komprehensif justru menekankan cakupan luas pada banyak aspek, bukan mendalam pada satu aspek saja.",
+    "E": "Komprehensif berkaitan dengan luas cakupan, bukan dengan jangka waktu berlakunya sesuatu."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

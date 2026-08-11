@@ -1,0 +1,43 @@
+{
+  "id": "7-kuantitatif-022",
+  "package": 7,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Kota P dan kota Q berjarak 315 km. Sebuah bus berangkat dari kota P menuju kota Q pukul 07.00 dengan kecepatan rata-rata 60 km/jam. Pada saat yang sama, sebuah mobil berangkat dari kota Q menuju kota P dengan kecepatan rata-rata 45 km/jam melalui rute yang sama. Pukul berapa kedua kendaraan tersebut akan berpapasan?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pukul 12.15"
+    },
+    {
+      "key": "B",
+      "text": "Pukul 14.00"
+    },
+    {
+      "key": "C",
+      "text": "Pukul 10.00"
+    },
+    {
+      "key": "D",
+      "text": "Pukul 13.00"
+    },
+    {
+      "key": "E",
+      "text": "Pukul 10.30"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Pukul 12.15 muncul jika seluruh jarak 315 km dianggap ditempuh sendiri oleh bus, yaitu 315 : 60 = 5,25 jam sejak pukul 07.00. Padahal mobil dari arah berlawanan juga bergerak mendekat, sehingga jarak yang harus ditempuh sebelum berpapasan lebih pendek dari 315 km untuk bus saja.",
+    "B": "Salah. Pukul 14.00 muncul jika seluruh jarak 315 km dianggap ditempuh sendiri oleh mobil, yaitu 315 : 45 = 7 jam sejak pukul 07.00, dengan kecepatan bus diabaikan sama sekali.",
+    "C": "Benar. Karena kedua kendaraan bergerak saling mendekat, kecepatan gabungannya dijumlahkan: 60 + 45 = 105 km/jam. Waktu hingga berpapasan = 315 : 105 = 3 jam, sehingga keduanya berpapasan pukul 07.00 + 3 jam = pukul 10.00.",
+    "D": "Salah. Pukul 13.00 muncul jika dipakai kecepatan rata-rata (60 + 45) : 2 = 52,5 km/jam, bukan jumlah kedua kecepatan, sehingga waktu tempuh yang dihitung menjadi 315 : 52,5 = 6 jam.",
+    "E": "Salah. Pukul 10.30 muncul jika hasil bagi 315 : 105 dibulatkan menjadi 3,5 jam, padahal 315 habis dibagi 105 sehingga hasilnya tepat 3 jam."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

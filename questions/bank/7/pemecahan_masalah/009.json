@@ -1,0 +1,43 @@
+{
+  "id": "7-pemecahan_masalah-009",
+  "package": 7,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Tabel tersebut menyajikan jumlah pengunjung dan pendapatan tiket sebuah pameran seni selama lima hari.\n\nPernyataan yang sesuai dengan data pada tabel tersebut adalah ...",
+  "image": null,
+  "passage": "Hari | Pengunjung | Pendapatan Tiket (Rp)\nSenin | 180 | 4.500.000\nSelasa | 220 | 6.600.000\nRabu | 150 | 3.000.000\nKamis | 260 | 7.280.000\nJumat | 300 | 6.600.000",
+  "options": [
+    {
+      "key": "A",
+      "text": "Harga rata-rata tiket per pengunjung paling tinggi terjadi pada hari Jumat"
+    },
+    {
+      "key": "B",
+      "text": "Jumlah pengunjung selama lima hari tersebut adalah 1.150 orang"
+    },
+    {
+      "key": "C",
+      "text": "Pengunjung pada hari Kamis lebih banyak daripada hari Jumat"
+    },
+    {
+      "key": "D",
+      "text": "Pendapatan tiket pada hari Rabu lebih dari setengah pendapatan tiket pada hari Kamis"
+    },
+    {
+      "key": "E",
+      "text": "Harga rata-rata tiket per pengunjung paling tinggi terjadi pada hari Selasa, yaitu Rp30.000,00"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Harga rata-rata tiket pada Jumat adalah 6.600.000 : 300 = Rp22.000,00, lebih rendah daripada Selasa yang mencapai Rp30.000,00.",
+    "B": "Salah. Jumlah pengunjung sebenarnya adalah 180 + 220 + 150 + 260 + 300 = 1.110 orang, bukan 1.150.",
+    "C": "Salah. Pengunjung pada Kamis berjumlah 260 orang, lebih sedikit daripada Jumat yang berjumlah 300 orang.",
+    "D": "Salah. Setengah pendapatan Kamis adalah 7.280.000 : 2 = Rp3.640.000,00, sedangkan pendapatan Rabu hanya Rp3.000.000,00, yang berarti kurang dari setengahnya.",
+    "E": "Benar. Harga rata-rata tiket per pengunjung setiap hari berturut-turut adalah Rp25.000,00 (Senin), Rp30.000,00 (Selasa), Rp20.000,00 (Rabu), Rp28.000,00 (Kamis), dan Rp22.000,00 (Jumat); nilai tertinggi terjadi pada hari Selasa."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

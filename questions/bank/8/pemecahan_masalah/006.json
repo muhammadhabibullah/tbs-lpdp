@@ -1,0 +1,43 @@
+{
+  "id": "8-pemecahan_masalah-006",
+  "package": 8,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Empat pelatih olahraga, yaitu J, K, L, dan M, masing-masing melatih satu cabang olahraga yang berbeda (Bulu Tangkis, Panahan, Renang, dan Voli) dan bertugas pada satu dari empat hari yang berbeda (Senin, Selasa, Rabu, dan Kamis). Ketentuan berikut diketahui.\n(1) Pelatih yang melatih Panahan bertugas pada hari Rabu.\n(2) J melatih Voli.\n(3) K bertugas pada hari Senin.\n(4) Pelatih yang bertugas pada hari Selasa melatih Renang.\n(5) L tidak bertugas pada hari Kamis.\n(6) M tidak melatih Renang.\n\nHari tugas pelatih yang melatih Bulu Tangkis adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rabu"
+    },
+    {
+      "key": "B",
+      "text": "Kamis"
+    },
+    {
+      "key": "C",
+      "text": "Selasa"
+    },
+    {
+      "key": "D",
+      "text": "Senin"
+    },
+    {
+      "key": "E",
+      "text": "Tidak dapat ditentukan dari informasi tersebut"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Ketentuan (1) menetapkan hari Rabu sebagai hari tugas pelatih Panahan, bukan Bulu Tangkis.",
+    "B": "Salah. Hari Kamis adalah hari tugas J yang melatih Voli. Voli dan Bulu Tangkis berbagi dua hari tersisa (Senin dan Kamis) setelah Rabu terisi Panahan dan Selasa terisi Renang, dan J tidak mungkin bertugas Senin karena hari itu sudah menjadi milik K (ketentuan 3). Bulu Tangkis karena itu jatuh pada Senin, bukan Kamis.",
+    "C": "Salah. Ketentuan (4) menetapkan bahwa pelatih yang bertugas hari Selasa melatih Renang, bukan Bulu Tangkis.",
+    "D": "Benar. Ketentuan (1) memastikan hari Rabu adalah hari Panahan. Ketentuan (4) memastikan hari Selasa adalah hari Renang, sebab jika pelatih Renang bertugas pada hari lain, pelatih yang justru bertugas hari Selasa harus tetap melatih Renang menurut ketentuan (4), padahal setiap cabang hanya dilatih satu orang; kontradiksi ini hanya hilang jika Renang memang bertugas hari Selasa. Tersisa Senin dan Kamis untuk Voli dan Bulu Tangkis. J melatih Voli (ketentuan 2) dan K bertugas Senin (ketentuan 3); jika Voli bertugas Senin maka J harus sama dengan K, padahal keduanya pelatih berbeda, sehingga Voli pasti bertugas Kamis dan Bulu Tangkis bertugas Senin. Karena K bertugas Senin, K adalah pelatih Bulu Tangkis, sehingga hari tugasnya Senin.",
+    "E": "Salah. Keenam ketentuan bersama-sama menentukan hari tugas setiap pelatih secara tunggal, termasuk pelatih Bulu Tangkis, sehingga informasi yang diberikan sudah cukup untuk menyimpulkan harinya."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

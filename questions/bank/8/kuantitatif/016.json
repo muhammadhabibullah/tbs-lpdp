@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-016",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 16,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nDiketahui x = 8.\nP = 4x − 3\nQ = 3x + 10\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Selisih antara P dan Q lebih besar daripada 10"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. P = 29 dan Q = 34, sehingga Q > P; nilai P tidak melebihi nilai Q (29 tidak lebih besar daripada 34).",
+    "B": "Benar. P = 29 dan Q = 34, sehingga Q > P.",
+    "C": "Salah. P = 29 dan Q = 34, sehingga Q > P; kedua nilai tidak sama (29 ≠ 34).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 29 dan Q = 34), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 29 dan Q = 34, selisihnya 5, tidak lebih besar daripada 10."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "7-pemecahan_masalah-011",
+  "package": 7,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Masalah utama yang diangkat dalam teks tersebut adalah ...",
+  "image": null,
+  "passage": "Sejumlah instansi di beberapa negara melaporkan bahwa pemadatan jam kerja menjadi empat hari membuat pegawai lebih fokus dan mengurangi ketidakhadiran karena sakit. Temuan itu mendorong sebagian pihak mengusulkan agar kebijakan serupa segera diterapkan secara nasional pada instansi pemerintah.\n\nNamun, sebagian besar laporan tersebut berasal dari organisasi yang mendaftar secara sukarela dan telah lebih dahulu memiliki proses kerja yang efisien. Instansi dengan beban layanan publik harian, seperti loket kependudukan atau unit gawat darurat, belum tentu dapat memadatkan jam kerja tanpa mengurangi jam layanan bagi masyarakat. Oleh karena itu, sebelum diperluas, kebijakan ini perlu diujicobakan lebih dahulu pada instansi dengan karakteristik beban kerja yang beragam, disertai evaluasi terhadap kualitas layanan publik, bukan hanya terhadap kepuasan pegawai.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Pemadatan jam kerja terbukti meningkatkan kepuasan pegawai di seluruh jenis instansi"
+    },
+    {
+      "key": "B",
+      "text": "Kebijakan empat hari kerja belum tentu dapat diterapkan merata pada instansi dengan beban layanan publik yang berbeda-beda tanpa uji coba dan evaluasi lebih dahulu"
+    },
+    {
+      "key": "C",
+      "text": "Instansi dengan proses kerja yang belum efisien tidak akan pernah mampu menerapkan pemadatan jam kerja"
+    },
+    {
+      "key": "D",
+      "text": "Loket kependudukan dan unit gawat darurat harus dihapuskan agar pemadatan jam kerja dapat diterapkan"
+    },
+    {
+      "key": "E",
+      "text": "Ketidakhadiran pegawai karena sakit hanya dapat dikurangi melalui pemadatan jam kerja"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Teks justru menekankan bahwa temuan tersebut berasal dari organisasi yang sudah efisien dan mendaftar secara sukarela, sehingga belum tentu berlaku untuk seluruh jenis instansi.",
+    "B": "Benar. Paragraf kedua menunjukkan bahwa manfaat pemadatan jam kerja yang dilaporkan berasal dari kondisi khusus (sukarela, sudah efisien), sedangkan instansi dengan beban layanan publik harian berisiko berbeda, sehingga teks mengangkat masalah perlunya uji coba dan evaluasi sebelum kebijakan diperluas secara merata.",
+    "C": "Salah. Teks hanya menyatakan instansi tersebut 'belum tentu' dapat memadatkan jam kerja, bukan menyatakan secara mutlak tidak akan pernah mampu melakukannya.",
+    "D": "Salah. Teks tidak mengusulkan penghapusan loket kependudukan atau unit gawat darurat; keduanya hanya disebut sebagai contoh instansi dengan beban layanan harian yang berisiko jika jam layanan berkurang.",
+    "E": "Salah. Teks menyebut berkurangnya ketidakhadiran sebagai salah satu temuan yang dilaporkan, bukan menyatakan bahwa itu satu-satunya cara mengurangi ketidakhadiran pegawai."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

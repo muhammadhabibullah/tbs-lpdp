@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-017",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Cermati kalimat berikut.\n\nDemi untuk meningkatkan mutu layanan, pihak rumah sakit akan menambah para tenaga-tenaga perawat baru.\n\nPerbaikan kalimat tersebut agar menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Demi untuk meningkatkan mutu layanan, pihak rumah sakit akan menambah para tenaga-tenaga perawat baru."
+    },
+    {
+      "key": "B",
+      "text": "Demi meningkatkan mutu layanan, pihak rumah sakit akan menambah para tenaga-tenaga perawat baru."
+    },
+    {
+      "key": "C",
+      "text": "Demi untuk meningkatkan mutu layanan, pihak rumah sakit akan menambah tenaga perawat baru."
+    },
+    {
+      "key": "D",
+      "text": "Untuk meningkatkan mutu layanan, pihak rumah sakit akan menambah tenaga perawat baru."
+    },
+    {
+      "key": "E",
+      "text": "Untuk meningkatkan mutu layanan, pihak rumah sakit akan menambah para-para tenaga perawat baru."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Kalimat ini mengandung dua kesalahan sekaligus: 'demi untuk' adalah penggunaan dua kata depan bermakna sama secara berlebihan, dan 'para tenaga-tenaga' adalah bentuk jamak ganda karena 'para' dan pengulangan kata sama-sama menyatakan jamak.",
+    "B": "Bentuk 'para tenaga-tenaga' masih berupa jamak ganda meskipun kesalahan 'demi untuk' telah diperbaiki.",
+    "C": "Frasa 'demi untuk' masih berlebihan karena menggabungkan dua kata depan yang bermakna sama, meskipun bentuk jamak gandanya telah diperbaiki.",
+    "D": "Benar. Kalimat ini hanya menggunakan satu kata depan tujuan ('untuk') dan bentuk jamak tunggal ('tenaga perawat'), sehingga efektif dan tidak berlebihan.",
+    "E": "Bentuk 'para-para' merupakan pengulangan kata penunjuk jamak yang berlebihan, kesalahan baru yang menggantikan kesalahan jamak ganda sebelumnya."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

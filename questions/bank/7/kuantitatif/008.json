@@ -1,0 +1,43 @@
+{
+  "id": "7-kuantitatif-008",
+  "package": 7,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "aljabar",
+  "question_text": "Diketahui 3x − 3y = −15 dan 4x − 2y = −14. Nilai dari 2x + 2y adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "1"
+    },
+    {
+      "key": "B",
+      "text": "−4"
+    },
+    {
+      "key": "C",
+      "text": "6"
+    },
+    {
+      "key": "D",
+      "text": "2"
+    },
+    {
+      "key": "E",
+      "text": "−29"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 1 diperoleh dengan berhenti pada x + y dan lupa mengalikannya dengan 2.",
+    "B": "Salah. Nilai −4 diperoleh dengan hanya menghitung 2x dan mengabaikan suku 2y.",
+    "C": "Salah. Nilai 6 diperoleh dengan hanya menghitung 2y dan mengabaikan suku 2x.",
+    "D": "Benar. Menyelesaikan kedua persamaan diperoleh x = −2 dan y = 3, sehingga 2x + 2y = 2 × ((−2) + 3) = 2.",
+    "E": "Salah. Nilai −29 diperoleh dengan menjumlahkan kedua persamaan menjadi −29, membaginya dengan jumlah seluruh koefisien (2) sehingga diperoleh −14,5, lalu mengalikannya dengan 2 — seolah-olah koefisien x dan y sudah sama."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

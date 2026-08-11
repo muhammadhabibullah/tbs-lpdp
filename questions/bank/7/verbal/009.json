@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-009",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "PENJAHIT : GUNTING = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Dokter : Stetoskop"
+    },
+    {
+      "key": "B",
+      "text": "Petani : Sawah"
+    },
+    {
+      "key": "C",
+      "text": "Nelayan : Perahu"
+    },
+    {
+      "key": "D",
+      "text": "Tukang kayu : Paku"
+    },
+    {
+      "key": "E",
+      "text": "Tukang kayu : Gergaji"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Stetoskop digunakan dokter untuk mendengarkan, bukan untuk memotong atau membentuk bahan kerja sebagaimana gunting bagi penjahit.",
+    "B": "Sawah adalah tempat petani bekerja, bukan alat yang digunakan secara langsung untuk mengerjakan bahan seperti gunting bagi penjahit.",
+    "C": "Perahu adalah sarana untuk melaut, bukan alat khusus yang digunakan nelayan untuk mengerjakan hasil tangkapan.",
+    "D": "Paku adalah bahan pelengkap dalam konstruksi, bukan alat utama yang digunakan tukang kayu untuk memotong atau membentuk kayu.",
+    "E": "Benar. Gergaji adalah alat utama tukang kayu untuk memotong kayu, sebagaimana gunting adalah alat utama penjahit untuk memotong kain."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

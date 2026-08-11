@@ -1,0 +1,43 @@
+{
+  "id": "7-pemecahan_masalah-005",
+  "package": 7,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Sebuah panitia forum diskusi akan memilih tepat tiga dari lima calon narasumber, yaitu Bayu, Citra, Dimas, Eka, dan Fira. Pemilihan tunduk pada ketentuan berikut.\n(1) Jika Bayu dipilih, maka Citra juga harus dipilih.\n(2) Dimas dan Eka tidak boleh dipilih bersama-sama.\n(3) Jika Fira tidak dipilih, maka Eka harus dipilih.\n\nSusunan narasumber yang mungkin dipilih adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Citra, Eka, dan Fira"
+    },
+    {
+      "key": "B",
+      "text": "Bayu, Citra, dan Dimas"
+    },
+    {
+      "key": "C",
+      "text": "Bayu, Dimas, dan Eka"
+    },
+    {
+      "key": "D",
+      "text": "Dimas, Eka, dan Fira"
+    },
+    {
+      "key": "E",
+      "text": "Bayu, Dimas, dan Fira"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Susunan ini tidak menyertakan Bayu sehingga ketentuan (1) otomatis terpenuhi; hanya Eka (tanpa Dimas) yang dipilih sehingga ketentuan (2) terpenuhi; dan karena Fira dipilih, ketentuan (3) juga terpenuhi tanpa syarat tambahan.",
+    "B": "Salah. Fira tidak dipilih dan Eka juga tidak dipilih, padahal ketentuan (3) mensyaratkan bahwa jika Fira tidak dipilih maka Eka harus dipilih.",
+    "C": "Salah. Bayu dipilih tanpa Citra, melanggar ketentuan (1). Susunan ini juga melanggar ketentuan (2) karena Dimas dan Eka dipilih bersama-sama.",
+    "D": "Salah. Dimas dan Eka dipilih bersama-sama, melanggar ketentuan (2) yang melarang keduanya dipilih sekaligus.",
+    "E": "Salah. Bayu dipilih tanpa Citra, melanggar ketentuan (1) yang mensyaratkan Citra ikut dipilih apabila Bayu dipilih."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

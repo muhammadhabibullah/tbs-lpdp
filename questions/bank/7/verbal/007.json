@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-007",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "EKSPANSIF >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Progresif"
+    },
+    {
+      "key": "B",
+      "text": "Agresif"
+    },
+    {
+      "key": "C",
+      "text": "Dominan"
+    },
+    {
+      "key": "D",
+      "text": "Restriktif"
+    },
+    {
+      "key": "E",
+      "text": "Produktif"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Progresif menunjukkan sikap ingin maju atau berkembang, dan tidak berlawanan langsung dengan kecenderungan memperluas seperti ekspansif.",
+    "B": "Agresif berkaitan dengan sikap menyerang atau memaksakan diri, bukan lawan kata dari kecenderungan memperluas cakupan.",
+    "C": "Dominan berkaitan dengan keunggulan atau pengaruh besar, bukan dengan pembatasan cakupan seperti lawan kata ekspansif.",
+    "D": "Benar. Restriktif berarti membatasi, berlawanan dengan ekspansif yang cenderung memperluas cakupan atau jangkauan.",
+    "E": "Produktif berkaitan dengan tingkat hasil, bukan dengan pembatasan cakupan sebagai lawan kata ekspansif."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

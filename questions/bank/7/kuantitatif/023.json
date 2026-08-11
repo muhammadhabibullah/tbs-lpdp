@@ -1,0 +1,43 @@
+{
+  "id": "7-kuantitatif-023",
+  "package": 7,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Amir dan Budi mendirikan usaha bersama. Amir menanamkan modal sebesar Rp45.000.000,00 sejak usaha itu mulai berjalan. Budi baru bergabung setelah usaha berjalan 4 bulan, dengan modal sebesar Rp60.000.000,00. Pada akhir tahun pertama, yaitu 12 bulan sejak usaha dimulai, usaha tersebut membukukan keuntungan sebesar Rp11.900.000,00 yang dibagi berdasarkan perbandingan hasil kali antara besar modal dan lama waktu penanaman modal masing-masing. Berapa bagian keuntungan yang diterima Budi?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp4.760.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp6.800.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp5.950.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp5.600.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp6.300.000,00"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai Rp4.760.000,00 diperoleh jika pembagian hanya memakai perbandingan lama waktu penanaman modal (Amir 12 bulan : Budi 8 bulan = 3 : 2) tanpa memperhitungkan besar modal masing-masing, yaitu 2/5 × 11.900.000.",
+    "B": "Salah. Nilai Rp6.800.000,00 diperoleh jika pembagian hanya memakai perbandingan besar modal (Amir Rp45.000.000,00 : Budi Rp60.000.000,00 = 3 : 4) tanpa memperhitungkan lama waktu penanaman modal, yaitu 4/7 × 11.900.000.",
+    "C": "Salah. Nilai Rp5.950.000,00 diperoleh jika keuntungan dibagi rata dua bagian, yaitu 11.900.000 : 2, tanpa memperhitungkan perbedaan besar modal maupun lama waktu penanamannya.",
+    "D": "Benar. Amir menanamkan modal 12 bulan penuh sehingga hasil kali modal dan waktu = 45.000.000 × 12 = 540.000.000, sedangkan Budi menanam modal selama 12 − 4 = 8 bulan sehingga hasil kalinya = 60.000.000 × 8 = 480.000.000. Perbandingan Amir : Budi = 540.000.000 : 480.000.000 = 9 : 8. Bagian Budi = 8/17 × 11.900.000 = Rp5.600.000,00.",
+    "E": "Salah. Nilai Rp6.300.000,00 adalah bagian keuntungan Amir (9/17 × 11.900.000), bukan bagian Budi yang ditanyakan pada soal; perbandingan hasil kali modal dan waktu yang dipakai sudah benar, tetapi bagian yang diambil tertukar."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

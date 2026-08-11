@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-007",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "INTERMITEN >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Berkesinambungan"
+    },
+    {
+      "key": "B",
+      "text": "Berselang-seling"
+    },
+    {
+      "key": "C",
+      "text": "Terputus-putus"
+    },
+    {
+      "key": "D",
+      "text": "Sesekali"
+    },
+    {
+      "key": "E",
+      "text": "Singkat"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Berkesinambungan berarti berlangsung terus-menerus tanpa jeda, berlawanan dengan intermiten yang berarti berselang-seling atau timbul tenggelam.",
+    "B": "Berselang-seling justru merupakan sinonim dari intermiten, bukan lawan katanya.",
+    "C": "Terputus-putus juga merupakan sinonim dari intermiten, bukan lawan katanya.",
+    "D": "Sesekali menggambarkan pola kemunculan yang serupa dengan intermiten, bukan lawan katanya.",
+    "E": "Singkat berkaitan dengan durasi, bukan dengan pola keteraturan kemunculan, sehingga bukan lawan kata intermiten."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-004",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 4,
+  "type": "aritmetika",
+  "question_text": "Diketahui a : b = 2 : 5. Apabila a = 12, berapakah nilai b?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "6"
+    },
+    {
+      "key": "B",
+      "text": "60"
+    },
+    {
+      "key": "C",
+      "text": "30"
+    },
+    {
+      "key": "D",
+      "text": "4,8"
+    },
+    {
+      "key": "E",
+      "text": "42"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 6 diperoleh dengan berhenti pada faktor pengali perbandingan (12 ÷ 2) dan tidak mengalikannya kembali.",
+    "B": "Salah. Nilai 60 diperoleh dengan mengalikan dengan 5 tanpa membaginya dengan 2.",
+    "C": "Benar. a : b = 2 : 5, sehingga b = a × 5/2 = 12 × 5/2 = 30.",
+    "D": "Salah. Nilai 4,8 diperoleh dengan membalik perbandingan sehingga menghitung 12 × 2/5.",
+    "E": "Salah. Nilai 42 diperoleh dengan menghitung jumlah a dan b, bukan nilai b saja."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

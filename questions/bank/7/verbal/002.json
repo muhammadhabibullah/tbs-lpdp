@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-002",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "AMBIGU = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Bermakna ganda"
+    },
+    {
+      "key": "B",
+      "text": "Samar-samar"
+    },
+    {
+      "key": "C",
+      "text": "Tidak lengkap"
+    },
+    {
+      "key": "D",
+      "text": "Sulit dipahami"
+    },
+    {
+      "key": "E",
+      "text": "Tidak konsisten"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Ambigu berarti bermakna ganda atau dapat ditafsirkan lebih dari satu cara.",
+    "B": "Samar-samar menunjukkan sesuatu yang tidak jelas wujudnya, tetapi belum tentu memiliki lebih dari satu makna sebagaimana ambigu.",
+    "C": "Tidak lengkap berkaitan dengan kekurangan bagian, bukan dengan banyaknya kemungkinan makna.",
+    "D": "Sulit dipahami dapat menjadi akibat dari sesuatu yang ambigu, tetapi bukan pengertian dari kata ambigu itu sendiri.",
+    "E": "Tidak konsisten berkaitan dengan ketidaksesuaian antarbagian, bukan dengan banyaknya makna yang mungkin."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

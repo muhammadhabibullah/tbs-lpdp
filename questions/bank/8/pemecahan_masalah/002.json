@@ -1,0 +1,43 @@
+{
+  "id": "8-pemecahan_masalah-002",
+  "package": 8,
+  "subtest": "pemecahan_masalah",
+  "number": 2,
+  "type": "peluang_kombinatorik",
+  "question_text": "Sebuah panitia beranggotakan 3 orang akan dibentuk dari 8 calon laki-laki dan 5 calon perempuan. Apabila panitia harus memuat tepat 2 orang perempuan, banyak susunan panitia yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "286"
+    },
+    {
+      "key": "B",
+      "text": "80"
+    },
+    {
+      "key": "C",
+      "text": "160"
+    },
+    {
+      "key": "D",
+      "text": "18"
+    },
+    {
+      "key": "E",
+      "text": "140"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 286 diperoleh dengan menghitung seluruh cara memilih 3 orang dari 13 calon tanpa memperhatikan syarat banyak perempuan.",
+    "B": "Benar. Memilih 2 perempuan dari 5 calon dapat dilakukan dengan C(5, 2) = 10 cara, dan memilih 1 laki-laki dari 8 calon dengan C(8, 1) = 8 cara. Keduanya dipilih bersamaan, sehingga banyak susunan adalah 10 × 8 = 80.",
+    "C": "Salah. Nilai 160 diperoleh dengan memperhatikan urutan ketika memilih anggota perempuan, padahal susunan panitia tidak membedakan urutan.",
+    "D": "Salah. Nilai 18 diperoleh dengan menjumlahkan kedua pilihan, padahal keduanya dilakukan bersamaan sehingga banyak caranya dikalikan.",
+    "E": "Salah. Nilai 140 diperoleh dengan menukar syaratnya menjadi 1 perempuan dan 2 laki-laki."
+  },
+  "difficulty": "medium",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

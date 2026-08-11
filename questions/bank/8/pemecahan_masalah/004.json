@@ -1,0 +1,43 @@
+{
+  "id": "8-pemecahan_masalah-004",
+  "package": 8,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Lima pelari, yaitu G, H, I, J, dan K, mengikuti lomba lari dan finis pada lima posisi berbeda, dari posisi pertama sampai posisi kelima, tanpa hasil imbang. Ketentuan berikut diketahui.\n(1) H finis tepat setelah G.\n(2) J finis sebelum I.\n(3) I finis pada posisi pertama atau posisi kedua.\n(4) G tidak finis pada posisi pertama.\n(5) K tidak finis pada posisi pertama maupun posisi kelima.\n\nPosisi finis K adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pertama"
+    },
+    {
+      "key": "B",
+      "text": "Kedua"
+    },
+    {
+      "key": "C",
+      "text": "Ketiga"
+    },
+    {
+      "key": "D",
+      "text": "Keempat"
+    },
+    {
+      "key": "E",
+      "text": "Kelima"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Posisi pertama sudah dipastikan ditempati J (lihat pembahasan opsi C); ketentuan (5) juga melarang K berada di posisi pertama.",
+    "B": "Salah. Ketentuan (2) dan (3) bersama-sama memastikan posisi kedua ditempati I: karena I harus berada di posisi pertama atau kedua sementara J finis sebelum I, posisi pertama tidak mungkin milik I (tidak ada posisi sebelum posisi pertama untuk J), sehingga I menempati posisi kedua dan J posisi pertama.",
+    "C": "Benar. Ketentuan (3) menempatkan I di posisi pertama atau kedua. Jika I di posisi pertama, ketentuan (2) menuntut J finis sebelum posisi pertama, yang mustahil, sehingga I pasti di posisi kedua dan J di posisi pertama. Posisi 3, 4, dan 5 tersisa untuk G, H, dan K dengan H tepat setelah G (ketentuan 1). Pasangan berurutan yang mungkin hanyalah G=3, H=4 (menyisakan K=5) atau G=4, H=5 (menyisakan K=3). Ketentuan (5) melarang K di posisi kelima, sehingga pilihan G=3, H=4 gugur. Dengan demikian G=4, H=5, dan K menempati posisi ketiga.",
+    "D": "Salah. Posisi keempat sudah dipastikan ditempati G, sebab satu-satunya pasangan G-H berurutan yang tersisa dan konsisten dengan ketentuan (5) adalah G=4 dan H=5 (lihat pembahasan opsi C).",
+    "E": "Salah. Posisi kelima sudah dipastikan ditempati H; ketentuan (5) juga secara eksplisit melarang K berada di posisi kelima."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

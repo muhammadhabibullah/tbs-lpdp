@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-003",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "SPORADIS = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Berkala"
+    },
+    {
+      "key": "B",
+      "text": "Terus-menerus"
+    },
+    {
+      "key": "C",
+      "text": "Mendadak"
+    },
+    {
+      "key": "D",
+      "text": "Berkelanjutan"
+    },
+    {
+      "key": "E",
+      "text": "Jarang dan tidak menentu"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Berkala berarti terjadi pada selang waktu yang teratur, sedangkan sporadis justru tidak teratur.",
+    "B": "Terus-menerus menunjukkan kejadian yang berlangsung tanpa jeda, berlawanan dengan sporadis yang jarang terjadi.",
+    "C": "Mendadak menekankan ketiba-tibaan suatu kejadian, sedangkan sporadis menekankan kejarangan dan ketidakteraturannya.",
+    "D": "Berkelanjutan menunjukkan kesinambungan yang terus berlangsung, berlawanan dengan sifat sporadis yang jarang muncul.",
+    "E": "Benar. Sporadis berarti terjadi sewaktu-waktu, jarang, dan tidak menentu."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

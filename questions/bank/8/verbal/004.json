@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-004",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "PROKRASTINASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kebiasaan menunda-nunda penyelesaian tugas"
+    },
+    {
+      "key": "B",
+      "text": "Kebiasaan bekerja tanpa istirahat"
+    },
+    {
+      "key": "C",
+      "text": "Sikap terburu-buru dalam bertindak"
+    },
+    {
+      "key": "D",
+      "text": "Kecenderungan mengulang kesalahan yang sama"
+    },
+    {
+      "key": "E",
+      "text": "Kebiasaan menyelesaikan tugas lebih awal"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Prokrastinasi berarti kebiasaan atau tindakan menunda-nunda penyelesaian suatu pekerjaan atau tugas.",
+    "B": "Bekerja tanpa istirahat justru berlawanan arah dengan prokrastinasi, yang berkaitan dengan penundaan, bukan intensitas bekerja.",
+    "C": "Sikap terburu-buru adalah kebalikan dari menunda; prokrastinasi justru menunda tindakan, bukan mempercepatnya secara gegabah.",
+    "D": "Prokrastinasi berkaitan dengan penundaan waktu pengerjaan, bukan dengan pengulangan kesalahan.",
+    "E": "Ini adalah kebalikan dari prokrastinasi; prokrastinasi berarti menunda, bukan menyelesaikan lebih awal."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

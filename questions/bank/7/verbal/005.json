@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-005",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "GERSANG >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tandus"
+    },
+    {
+      "key": "B",
+      "text": "Kering"
+    },
+    {
+      "key": "C",
+      "text": "Panas"
+    },
+    {
+      "key": "D",
+      "text": "Subur"
+    },
+    {
+      "key": "E",
+      "text": "Gundul"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Tandus bersinonim dengan gersang karena sama-sama menggambarkan tanah yang tidak produktif.",
+    "B": "Kering menggambarkan kondisi tanah yang kekurangan air, sejalan dengan makna gersang, bukan lawannya.",
+    "C": "Panas berkaitan dengan suhu, sedangkan gersang berkaitan dengan kesuburan tanah, sehingga panas bukan lawan kata yang tepat.",
+    "D": "Benar. Subur berarti tanah dapat menumbuhkan tanaman dengan baik, berlawanan dengan gersang yang tandus dan tidak produktif.",
+    "E": "Gundul menggambarkan tidak adanya tumbuhan atau vegetasi, sedangkan gersang berkaitan dengan kesuburan tanah, sehingga keduanya tidak selalu berlawanan."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

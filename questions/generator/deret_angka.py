@@ -807,8 +807,8 @@ def gen_three_interleaved(rng: random.Random):
     explanation = (
         "Deret terdiri atas tiga jalur berselang-seling. Jalur pertama "
         f"bertambah {_fmt(steps[0])}, jalur kedua berubah {_fmt(steps[1])}, dan "
-        f"jalur ketiga bertambah {_fmt(steps[2])}. Dua suku berikutnya adalah "
-        f"{_fmt(answer)} dari jalur pertama dan {_fmt(answer2)} dari jalur kedua."
+        f"jalur ketiga bertambah {_fmt(steps[2])}. Suku berikutnya melanjutkan "
+        f"jalur pertama: {_fmt(terms[-3])} + {_fmt(steps[0])} = {_fmt(answer)}."
     )
     return terms, answer, answer2, wrongs, explanation, "hard"
 
@@ -934,43 +934,61 @@ def _leading_blank(terms, continuation1, continuation2):
     return stem, _fmt(answer), distractors, explanation
 
 
+_ORDINAL_WORDS = {
+    1: "pertama", 2: "kedua", 3: "ketiga", 4: "keempat", 5: "kelima",
+    6: "keenam", 7: "ketujuh", 8: "kedelapan", 9: "kesembilan",
+    10: "kesepuluh", 11: "kesebelas", 12: "kedua belas", 13: "ketiga belas",
+}
+
+
+def _ordinal(n: int) -> str:
+    """Indonesian ordinal word for position `n` (1-based)."""
+    if n in _ORDINAL_WORDS:
+        return _ORDINAL_WORDS[n]
+    return f"ke-{n}"
+
+
 def _double_blank(terms, answer, answer2, wrongs, expl_correct):
     """Option set for the two-blank stem, as in `6, 3, 18, 9, 54, 27, 162, ..., ...`.
 
     A pair is wrong as soon as either component is, so the distractors split into
-    two honest families: the 7th term is right but the 8th continues it by the
-    wrong rule, or the 7th term is already wrong (and the reason for it carries
-    over unchanged from the one-blank mistakes).
+    two honest families: the next term is right but the one after it continues by
+    the wrong rule, or the next term is already wrong (and the reason for it
+    carries over unchanged from the one-blank mistakes). Ordinal words are
+    derived from `len(terms)` rather than hardcoded, since opt-in architectures
+    (e.g. `three_interleaved`) print more than six terms before the blanks.
     """
     def pair(a, b):
         return f"{_fmt(a)}, {_fmt(b)}"
 
+    pos1, pos2 = _ordinal(len(terms) + 1), _ordinal(len(terms) + 2)
+    pos_prev = _ordinal(len(terms))
     correct = pair(answer, answer2)
     repeat_diff = answer + (answer - terms[-1])
     overshoot = answer2 + (answer2 - answer)
 
     candidates = [
         (pair(answer, repeat_diff),
-         f"Suku ketujuh sudah tepat, tetapi suku kedelapan {_fmt(repeat_diff)} "
-         f"diperoleh dengan mengulangkan selisih suku ketujuh dan keenam "
+         f"Suku {pos1} sudah tepat, tetapi suku {pos2} {_fmt(repeat_diff)} "
+         f"diperoleh dengan mengulangkan selisih suku {pos1} dan {pos_prev} "
          f"({_fmt(answer - terms[-1])}), seolah-olah selisih deret ini tetap."),
-        # NB: this value is NOT the ninth term (the pattern's next difference is
-        # generally larger), so the reason must describe the arithmetic that
-        # produces it rather than claim a position in the sequence
+        # NB: this value is NOT the term after that (the pattern's next
+        # difference is generally larger), so the reason must describe the
+        # arithmetic that produces it rather than claim a position in the sequence
         (pair(answer, overshoot),
-         f"Suku ketujuh sudah tepat, tetapi bilangan kedua {_fmt(overshoot)} "
+         f"Suku {pos1} sudah tepat, tetapi bilangan kedua {_fmt(overshoot)} "
          f"diperoleh dengan menambahkan selisih {_fmt(answer2 - answer)} pada suku "
-         f"kedelapan {_fmt(answer2)}, yaitu mengulangi selisih suku ketujuh ke "
-         f"kedelapan alih-alih berhenti pada suku kedelapan."),
+         f"{pos2} {_fmt(answer2)}, yaitu mengulangi selisih suku {pos1} ke "
+         f"{pos2} alih-alih berhenti pada suku {pos2}."),
     ]
-    # the 7th term already fails, so the reason for it settles the pair
+    # the first blank already fails, so the reason for it settles the pair
     seconds = [answer2, answer2 + (answer2 - answer), answer2 - (answer2 - answer)]
     for i, (value, reason) in enumerate(wrongs):
         if value in terms or value in weak_predictions(terms) or value == answer:
             continue
         candidates.append((
             pair(value, seconds[i % len(seconds)]),
-            f"Suku ketujuh {_fmt(value)} diperoleh dengan {reason}, sehingga "
+            f"Suku {pos1} {_fmt(value)} diperoleh dengan {reason}, sehingga "
             f"pasangan ini keliru sejak bilangan pertamanya.",
         ))
 
@@ -983,7 +1001,7 @@ def _double_blank(terms, answer, answer2, wrongs, expl_correct):
     stem = (", ".join(_fmt(t) for t in terms)
             + ", ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut "
               "adalah ...")
-    explanation = (f"{expl_correct} Dengan pola yang sama, suku kedelapan adalah "
+    explanation = (f"{expl_correct} Dengan pola yang sama, suku {pos2} adalah "
                    f"{_fmt(answer2)}.")
     return stem, correct, distractors, explanation
 

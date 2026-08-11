@@ -1,0 +1,43 @@
+{
+  "id": "8-pemecahan_masalah-008",
+  "package": 8,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah pemerintah kota mempertimbangkan dua opsi untuk mengurangi kemacetan pada jam sibuk: menambah armada bus rapid transit (BRT) atau menerapkan tarif jalan berbayar elektronik (electronic road pricing/ERP) pada ruas jalan utama. Kajian awal menunjukkan bahwa opsi BRT membutuhkan investasi yang jauh lebih besar, tetapi manfaatnya dirasakan oleh seluruh lapisan masyarakat, termasuk warga yang tidak mampu membeli kendaraan pribadi. Adapun opsi ERP dapat diterapkan lebih cepat dengan biaya yang jauh lebih rendah, tetapi berisiko mengalihkan sebagian kemacetan ke jalan-jalan alternatif yang tidak dikenai tarif.\n\nPertimbangan yang paling tepat digunakan pemerintah kota sebelum memutuskan salah satu opsi tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Memilih ERP karena biayanya lebih rendah dan dapat diterapkan lebih cepat."
+    },
+    {
+      "key": "B",
+      "text": "Memilih BRT karena manfaatnya dirasakan lebih merata oleh masyarakat."
+    },
+    {
+      "key": "C",
+      "text": "Membandingkan efektivitas kedua opsi dalam mengurangi kemacetan secara keseluruhan serta dampak pemerataannya terhadap kelompok yang tidak mampu membeli kendaraan pribadi, sebelum menimbang kecepatan dan biaya penerapan."
+    },
+    {
+      "key": "D",
+      "text": "Menerapkan kedua opsi sekaligus agar target pengurangan kemacetan tercapai lebih cepat."
+    },
+    {
+      "key": "E",
+      "text": "Menunda kedua opsi hingga anggaran pemerintah kota mencukupi untuk opsi BRT."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Pertimbangan ini hanya memperhitungkan biaya dan kecepatan penerapan ERP, tanpa menimbang risiko pengalihan kemacetan maupun pemerataan manfaat yang justru menjadi kelebihan opsi BRT.",
+    "B": "Salah. Pertimbangan ini hanya memperhitungkan pemerataan manfaat BRT, tanpa menimbang biaya, kecepatan penerapan, maupun efektivitas keseluruhan kedua opsi.",
+    "C": "Benar. Sebelum memutuskan, pemerintah kota perlu membandingkan seberapa efektif kedua opsi mengurangi kemacetan secara menyeluruh (termasuk risiko ERP mengalihkan kemacetan) dan seberapa merata manfaatnya dirasakan, baru kemudian menimbang kecepatan dan biaya penerapan sebagai pertimbangan tambahan, bukan sebagai dasar tunggal.",
+    "D": "Salah. Menerapkan kedua opsi sekaligus mengabaikan kajian trade-off itu sendiri dan menimbulkan beban biaya serta kompleksitas pelaksanaan yang tidak dibahas dalam kajian awal.",
+    "E": "Salah. Menunda kedua opsi mengabaikan kelebihan opsi ERP yang dapat diterapkan lebih cepat dan tidak menjawab kebutuhan mengurangi kemacetan dalam waktu dekat."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

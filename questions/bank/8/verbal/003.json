@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-003",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "DISKREPANSI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kesepakatan penuh antara dua pihak"
+    },
+    {
+      "key": "B",
+      "text": "Perbedaan besar dalam ukuran fisik"
+    },
+    {
+      "key": "C",
+      "text": "Ketidaksesuaian antara data atau catatan yang seharusnya sama"
+    },
+    {
+      "key": "D",
+      "text": "Proses penggabungan dua data menjadi satu"
+    },
+    {
+      "key": "E",
+      "text": "Kesalahan kecil yang tidak berarti"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Ini adalah kebalikan dari diskrepansi; diskrepansi justru menunjukkan adanya ketidakcocokan, bukan kesepakatan penuh.",
+    "B": "Diskrepansi tidak khusus mengacu pada ukuran fisik; kata ini mengacu pada ketidaksesuaian antara data, catatan, atau pernyataan.",
+    "C": "Benar. Diskrepansi berarti ketidaksesuaian atau perbedaan antara dua data, catatan, atau pernyataan yang seharusnya sejalan.",
+    "D": "Ini justru kebalikan konseptual dari diskrepansi; diskrepansi menunjukkan perbedaan, bukan penggabungan menjadi satu.",
+    "E": "Diskrepansi tidak mengacu pada tingkat keparahan kesalahan; kata ini berarti adanya perbedaan yang tidak seharusnya ada, tanpa menyiratkan seberapa kecil perbedaan tersebut."
+  },
+  "difficulty": "hard",
+  "source": "claude-generated",
+  "verified": true
+}

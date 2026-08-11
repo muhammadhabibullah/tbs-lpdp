@@ -1,0 +1,43 @@
+{
+  "id": "7-verbal-004",
+  "package": 7,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "INTEGRITAS = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kecerdasan"
+    },
+    {
+      "key": "B",
+      "text": "Konsistensi antara ucapan dan tindakan"
+    },
+    {
+      "key": "C",
+      "text": "Kepatuhan pada atasan"
+    },
+    {
+      "key": "D",
+      "text": "Keberanian mengambil risiko"
+    },
+    {
+      "key": "E",
+      "text": "Kemampuan bekerja sama"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Kecerdasan berkaitan dengan kemampuan berpikir, bukan dengan konsistensi sikap dan tindakan seseorang.",
+    "B": "Benar. Integritas berarti mutu atau sifat yang menunjukkan kesatuan utuh antara nilai, ucapan, dan tindakan seseorang.",
+    "C": "Kepatuhan pada atasan hanya menyangkut hubungan dengan pihak tertentu, sedangkan integritas berlaku lebih luas pada konsistensi sikap secara umum.",
+    "D": "Keberanian mengambil risiko adalah sifat tersendiri yang tidak sama dengan konsistensi antara ucapan dan tindakan.",
+    "E": "Kemampuan bekerja sama berkaitan dengan relasi antarindividu, bukan dengan konsistensi sikap seseorang terhadap nilai yang dipegangnya."
+  },
+  "difficulty": "easy",
+  "source": "claude-generated",
+  "verified": true
+}

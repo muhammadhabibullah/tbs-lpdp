@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-009",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 9,
+  "type": "deret_angka",
+  "question_text": "14, 42, 36, 12, 18, 54, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "162"
+    },
+    {
+      "key": "B",
+      "text": "48"
+    },
+    {
+      "key": "C",
+      "text": "60"
+    },
+    {
+      "key": "D",
+      "text": "66"
+    },
+    {
+      "key": "E",
+      "text": "51"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 162 diperoleh dengan mengulang perkalian dengan 3, padahal sesudah perkalian giliran berikutnya adalah mengurangkan 6.",
+    "B": "Benar. Operasi berulang dalam siklus ×3, −6, :3, +6. Suku terakhir tercetak diperoleh melalui ×3, sehingga langkah berikutnya adalah −6: 54 − 6 = 48. Setelah itu deret dibagi 3, sehingga 48 : 3 = 16.",
+    "C": "Salah. Nilai 60 diperoleh dengan menerapkan penjumlahan 6, padahal giliran berikutnya adalah pengurangan.",
+    "D": "Salah. Nilai 66 diperoleh dengan menambahkan 6 dua kali, padahal langkah ini adalah satu kali pengurangan.",
+    "E": "Salah. Nilai 51 diperoleh dengan mengurangkan setengah dari 6, bukan pengurang tetap 6."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

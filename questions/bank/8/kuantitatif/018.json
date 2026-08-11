@@ -1,0 +1,43 @@
+{
+  "id": "8-kuantitatif-018",
+  "package": 8,
+  "subtest": "kuantitatif",
+  "number": 18,
+  "type": "kecukupan_data",
+  "question_text": "Pada gambar di atas, ABC adalah segitiga siku-siku dengan sudut siku-siku di C. Titik D terletak pada AC sehingga AC = 2 × AD, sedangkan DE sejajar CB dengan titik E pada AB. Berapakah panjang DE?\n(1) Panjang AB adalah 16 cm.\n(2) Panjang BC adalah 10 cm.\nPutuskan apakah pernyataan (1) dan (2) yang diberikan cukup untuk menjawab pertanyaan tersebut.",
+  "image": "images/kd-segitiga-garis-tengah.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup"
+    },
+    {
+      "key": "B",
+      "text": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup"
+    },
+    {
+      "key": "C",
+      "text": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup untuk menjawab pertanyaan"
+    },
+    {
+      "key": "E",
+      "text": "Pernyataan (1) dan (2) BERSAMA-SAMA tidak cukup untuk menjawab pertanyaan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [DE = 5 cm, AB = 16 cm] dan [DE = 6 cm, AB = 16 cm] sama-sama memenuhinya, tetapi memberikan panjang DE sebesar 5 cm dan 6 cm.",
+    "B": "Benar. Karena D titik tengah AC dan DE ∥ CB, DE adalah garis tengah segitiga ABC, sehingga DE = ½ × CB dan AE = ½ × AB; panjang AB sendiri tidak menentukan DE. Pernyataan (2) menentukan panjang DE secara tunggal, yaitu 5 cm; pernyataan (1) saja tidak cukup, sebab keadaan [DE = 5 cm, AB = 16 cm] dan [DE = 6 cm, AB = 16 cm] sama-sama memenuhinya, tetapi memberikan panjang DE sebesar 5 cm dan 6 cm.",
+    "C": "Salah. Pernyataan (2) menentukan panjang DE secara tunggal, yaitu 5 cm.",
+    "D": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [DE = 5 cm, AB = 16 cm] dan [DE = 6 cm, AB = 16 cm] sama-sama memenuhinya, tetapi memberikan panjang DE sebesar 5 cm dan 6 cm.",
+    "E": "Salah. Pernyataan (1) dan (2) bersama-sama menentukan panjang DE secara tunggal, yaitu 5 cm."
+  },
+  "difficulty": "medium",
+  "source": "kecukupan_data.py",
+  "verified": true
+}

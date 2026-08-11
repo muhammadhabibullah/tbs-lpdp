@@ -1,0 +1,43 @@
+{
+  "id": "8-verbal-011",
+  "package": 8,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "PENULIS : NOVEL = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Novel : Penulis"
+    },
+    {
+      "key": "B",
+      "text": "Arsitek : Gedung"
+    },
+    {
+      "key": "C",
+      "text": "Pelukis : Kuas"
+    },
+    {
+      "key": "D",
+      "text": "Komponis : Patung"
+    },
+    {
+      "key": "E",
+      "text": "Pematung : Lukisan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Urutan pasangan ini terbalik; penulis menciptakan novel, bukan sebaliknya.",
+    "B": "Benar. Penulis menciptakan novel sebagai karyanya, sebagaimana arsitek menciptakan gedung sebagai karyanya.",
+    "C": "Kuas adalah alat yang digunakan pelukis, bukan karya yang dihasilkannya; hubungan ini berbeda dari hubungan pencipta dengan karyanya seperti pada penulis dan novel.",
+    "D": "Karya khas seorang komponis adalah komposisi musik, bukan patung; pasangan ini menukar jenis karya antarprofesi yang berbeda.",
+    "E": "Karya khas seorang pematung adalah patung, bukan lukisan; pasangan ini menukar jenis karya antarprofesi yang berbeda."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}

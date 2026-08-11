@@ -1,0 +1,43 @@
+{
+  "id": "8-pemecahan_masalah-011",
+  "package": 8,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Tujuan utama penulis menulis teks tersebut adalah ...",
+  "image": null,
+  "passage": "Banyak usaha mikro, kecil, dan menengah (UMKM) mulai memasarkan produknya melalui platform digital, tetapi tidak sedikit yang mengabaikan keamanan data pelanggan. Sebagian pelaku usaha menyimpan nomor telepon dan alamat pembeli pada berkas yang dapat diakses siapa pun, atau menggunakan kata sandi yang sama untuk seluruh akun bisnisnya. Ketika kebocoran data terjadi, kerugian tidak hanya berupa hilangnya kepercayaan pelanggan, tetapi juga potensi penyalahgunaan data untuk penipuan.\n\nOleh karena itu, pelatihan pemasaran digital bagi UMKM semestinya tidak hanya mengajarkan cara membuat konten atau mengelola toko daring, tetapi juga membekali pelaku usaha dengan praktik dasar keamanan data, seperti penggunaan kata sandi unik dan pembatasan akses berkas pelanggan. Tanpa unsur tersebut, peningkatan penjualan yang dicapai melalui digitalisasi dapat dibayangi risiko yang sebanding besarnya.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Menjelaskan bahwa kebocoran data pelanggan UMKM hanya menyebabkan hilangnya kepercayaan konsumen."
+    },
+    {
+      "key": "B",
+      "text": "Menyarankan agar pelaku UMKM berhenti memasarkan produknya secara daring."
+    },
+    {
+      "key": "C",
+      "text": "Menyarankan agar setiap UMKM mengganti kata sandi akun bisnisnya secara berkala."
+    },
+    {
+      "key": "D",
+      "text": "Mendorong agar pelatihan pemasaran digital bagi UMKM turut membekali pelaku usaha dengan praktik dasar keamanan data pelanggan, tidak hanya teknik pemasaran."
+    },
+    {
+      "key": "E",
+      "text": "Menguraikan cara membuat konten pemasaran digital yang efektif bagi UMKM."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Teks menyebutkan dua dampak kebocoran data, yaitu hilangnya kepercayaan pelanggan dan potensi penyalahgunaan data untuk penipuan, sehingga pernyataan yang menyebutnya sebagai satu-satunya dampak tidak sesuai dengan isi teks dan bukan tujuan penulis.",
+    "B": "Salah. Teks tidak menyarankan UMKM berhenti memasarkan produk secara daring; teks justru membahas cara agar digitalisasi pemasaran berjalan lebih aman.",
+    "C": "Salah. Teks memang menyebut penggunaan kata sandi unik sebagai salah satu praktik keamanan, tetapi tidak menyebutkan anjuran mengganti kata sandi secara berkala; pernyataan ini juga hanya detail pendukung, bukan tujuan utama teks.",
+    "D": "Benar. Paragraf kedua secara eksplisit menyatakan bahwa pelatihan pemasaran digital semestinya turut membekali pelaku usaha dengan praktik dasar keamanan data, tidak hanya teknik pemasaran semata; inilah gagasan yang ingin disampaikan penulis.",
+    "E": "Salah. Teks justru menegaskan bahwa pelatihan pemasaran digital semestinya tidak hanya mengajarkan cara membuat konten, sehingga menguraikan cara membuat konten bukan tujuan penulis, melainkan hal yang menurut penulis tidak cukup dengan sendirinya."
+  },
+  "difficulty": "medium",
+  "source": "claude-generated",
+  "verified": true
+}
