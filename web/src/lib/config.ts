@@ -18,6 +18,12 @@ export const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL
 export const SUPABASE_PUBLIC_KEY =
   import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY
 
+/**
+ * Public Cloudflare Turnstile site key. The matching secret belongs in
+ * Supabase Auth's CAPTCHA settings and must never be added to this repository.
+ */
+export const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY?.trim() || undefined
+
 /** False until the developer supplies the project URL + public key (C-1). */
 export const isSupabaseConfigured = Boolean(SUPABASE_URL && SUPABASE_PUBLIC_KEY)
 
@@ -34,3 +40,6 @@ export class ApiError extends Error {
 export const DEADLINE_PASSED = 'P0004'
 /** Section already finished; writes are rejected. */
 export const ALREADY_FINISHED = 'P0003'
+
+/** A new anonymous identity needs a server-verified CAPTCHA token. */
+export const HUMAN_VERIFICATION_REQUIRED = 'HUMAN_VERIFICATION_REQUIRED'

@@ -206,8 +206,8 @@ export interface MaintenanceStatus {
 export interface ExamApi {
   /** Public pre-auth probe used by the global frontend maintenance gate. */
   getMaintenanceStatus(): Promise<MaintenanceStatus>
-  /** Anonymous sign-in (BE-1). Safe to call repeatedly. */
-  init(): Promise<void>
+  /** Anonymous sign-in (BE-1/BE-46). Safe to call repeatedly. */
+  init(captchaToken?: string): Promise<void>
   /** BE-18: capacity gate for the start buttons (FE-19). */
   getServiceStatus(): Promise<ServiceStatus>
   listPackages(): Promise<Package[]>

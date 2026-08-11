@@ -2,7 +2,7 @@
 
 Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pages** (React + Vite + TypeScript in `web/`), backend on **Supabase** (Postgres + RLS + RPC, anonymous auth, Storage). No other infrastructure — all trusted logic (timing, grading, answer-key secrecy) lives in `supabase/schema.sql`.
 
-**Read `docs/TECHNICAL_REQUIREMENTS.md` before non-trivial work**, plus `docs/TECHNICAL_REQUIREMENTS_V2.md` for question feedback, `docs/TECHNICAL_REQUIREMENTS_V3.md` for question/package versioning and the daily report digest, `docs/TECHNICAL_REQUIREMENTS_V3_1.md` for qualified mean/median statistics and package metadata help, and `docs/TECHNICAL_REQUIREMENTS_V4.md` for the Supabase-scheduled frontend maintenance mode. Requirement IDs (FE-x, BE-x, QG-x, C-x, NF-x) continue one shared sequence across all documents.
+**Read `docs/TECHNICAL_REQUIREMENTS.md` before non-trivial work**, plus `docs/TECHNICAL_REQUIREMENTS_V2.md` for question feedback, `docs/TECHNICAL_REQUIREMENTS_V3.md` for question/package versioning and the daily report digest, `docs/TECHNICAL_REQUIREMENTS_V3_1.md` for qualified mean/median statistics and package metadata help, `docs/TECHNICAL_REQUIREMENTS_V4.md` for the Supabase-scheduled frontend maintenance mode, and `docs/TECHNICAL_REQUIREMENTS_V5.md` for robot and AI-scraper deterrence. Requirement IDs (FE-x, BE-x, QG-x, C-x, NF-x) continue one shared sequence across all documents.
 
 ## Exam format (do not change without updating docs)
 
@@ -13,6 +13,7 @@ Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pa
 - `docs/TECHNICAL_REQUIREMENTS.md` — the spec; source of truth for behavior
 - `docs/TECHNICAL_REQUIREMENTS_V2.md` — v2: report-a-question feedback captured in `question_reports`
 - `docs/TECHNICAL_REQUIREMENTS_V3.md` — v3: immutable releases, daily report email, package metadata/statistics
+- `docs/TECHNICAL_REQUIREMENTS_V5.md` — v5: Turnstile-protected anonymous sign-in and scraper-deterrence boundaries
 - `questions/schema.json` — JSON Schema every bank question must pass
 - `questions/bank/<package_id>/<subtest_key>/<NNN>.json` — question bank (git = source of truth; Supabase is a derived copy)
 - `questions/sample/` — real LPDP sample items collected from public tip sites; reference for which formats the bank must cover (not schema-valid, and some of their keys are wrong)

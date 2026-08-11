@@ -17,6 +17,7 @@ Free, browser-based practice tests for the LPDP **Tes Bakat Skolastik (TBS)**. T
 - Question reporting from the review page, with revision-aware operator digests.
 - Package difficulty, authoring-model metadata, and deletion-safe aggregate mean/median statistics.
 - Capacity controls, rate limits, data-retention jobs, and a Supabase-scheduled maintenance screen.
+- Server-verified Turnstile protection for creation of new anonymous identities.
 - A development-only mock backend that runs directly from the Git question bank without Supabase.
 
 ## Exam format
@@ -91,9 +92,17 @@ Set these public client values in `web/.env.local`:
 ```dotenv
 VITE_SUPABASE_URL=https://<project-ref>.supabase.co
 VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_<...>
+VITE_TURNSTILE_SITE_KEY=<public Turnstile site key>
 ```
 
 A legacy `VITE_SUPABASE_ANON_KEY` also works. Never put a Supabase secret or `service_role` key in `web/`; anything in the frontend bundle is public.
+
+For production robot protection, also enable Cloudflare Turnstile under
+**Supabase Authentication → Bot and Abuse Protection** using the private
+Turnstile secret. The site key is public; the secret belongs only in Supabase.
+Deploy the site-key-enabled frontend before enabling the Supabase switch. See
+[`docs/TECHNICAL_REQUIREMENTS_V5.md`](docs/TECHNICAL_REQUIREMENTS_V5.md) for the
+safe rollout order and the limits of AI-scraper deterrence.
 
 ### 3. Validate and publish question packages
 
@@ -159,6 +168,7 @@ More detail is available in [`questions/generator/README.md`](questions/generato
 - [`docs/TECHNICAL_REQUIREMENTS_V3.md`](docs/TECHNICAL_REQUIREMENTS_V3.md) — immutable releases, statistics, and the report digest.
 - [`docs/TECHNICAL_REQUIREMENTS_V3_1.md`](docs/TECHNICAL_REQUIREMENTS_V3_1.md) — qualified mean/median statistics and metadata help.
 - [`docs/TECHNICAL_REQUIREMENTS_V4.md`](docs/TECHNICAL_REQUIREMENTS_V4.md) — scheduled frontend maintenance mode.
+- [`docs/TECHNICAL_REQUIREMENTS_V5.md`](docs/TECHNICAL_REQUIREMENTS_V5.md) — Turnstile-protected anonymous sign-in and AI-scraper deterrence.
 - [`docs/CAPACITY_GUARD.md`](docs/CAPACITY_GUARD.md) — free-tier capacity protection and retention strategy.
 
 ## Deployment
@@ -167,5 +177,6 @@ Pushes to `master` that change `web/` trigger [the GitHub Pages workflow](.githu
 
 - `VITE_SUPABASE_URL`
 - `VITE_SUPABASE_PUBLISHABLE_KEY` (or the legacy `VITE_SUPABASE_ANON_KEY`)
+- `VITE_TURNSTILE_SITE_KEY`
 
 The workflow installs locked dependencies, type-checks the SPA, builds it with the `/tbs-lpdp/` base path, and deploys `web/dist` to GitHub Pages. Backend migrations and question publication are deliberate operator steps and are not run by the Pages workflow.

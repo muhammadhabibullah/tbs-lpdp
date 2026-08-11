@@ -66,7 +66,7 @@ function impl(): Promise<ExamApi> {
 
 export const api: ExamApi = {
   getMaintenanceStatus: () => impl().then((a) => a.getMaintenanceStatus()),
-  init: () => impl().then((a) => a.init()),
+  init: (captchaToken) => impl().then((a) => a.init(captchaToken)),
   getServiceStatus: () => impl().then((a) => a.getServiceStatus()),
   listPackages: () => impl().then((a) => a.listPackages()),
   getPackage: (packageId) => impl().then((a) => a.getPackage(packageId)),

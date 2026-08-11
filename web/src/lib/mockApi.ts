@@ -383,7 +383,7 @@ export const mockApi: ExamApi = {
     }
   },
 
-  async init(): Promise<void> {
+  async init(_captchaToken?: string): Promise<void> {
     await loadBank()
   },
 

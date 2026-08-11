@@ -1,5 +1,10 @@
 import { syncServerTime } from './clock'
-import { ApiError, isSupabaseConfigured } from './config'
+import {
+  ApiError,
+  HUMAN_VERIFICATION_REQUIRED,
+  TURNSTILE_SITE_KEY,
+  isSupabaseConfigured,
+} from './config'
 import { supabase } from './supabase'
 import type {
   AttemptState,
@@ -37,7 +42,7 @@ function sortSubtests(subtests: Subtest[]): Subtest[] {
   return [...subtests].sort((a, b) => a.position - b.position)
 }
 
-async function requireSession(): Promise<void> {
+async function requireSession(captchaToken?: string): Promise<void> {
   if (!isSupabaseConfigured) {
     throw new ApiError(
       'Supabase belum dikonfigurasi. Isi VITE_SUPABASE_URL dan VITE_SUPABASE_PUBLISHABLE_KEY (atau jalankan mode mock).',
@@ -45,8 +50,16 @@ async function requireSession(): Promise<void> {
   }
   const { data } = await supabase.auth.getSession()
   if (data.session) return
-  // BE-1: transparent anonymous identity, one per browser.
-  const { error } = await supabase.auth.signInAnonymously()
+  // A configured production build must not even attempt account creation
+  // until Turnstile has produced a token. Supabase Auth verifies that token;
+  // the browser never receives the CAPTCHA secret (BE-46).
+  if (TURNSTILE_SITE_KEY && !captchaToken) {
+    throw new ApiError('Verifikasi manusia diperlukan.', HUMAN_VERIFICATION_REQUIRED)
+  }
+  // BE-1: one persistent anonymous identity per browser.
+  const { error } = await supabase.auth.signInAnonymously(
+    captchaToken ? { options: { captchaToken } } : undefined,
+  )
   if (error) fail(error)
 }
 

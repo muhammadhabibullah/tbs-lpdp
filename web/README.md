@@ -29,6 +29,22 @@ npm run build       # tsc --noEmit && vite build → dist/
 npm run typecheck
 ```
 
+### Robot protection
+
+Production can require Cloudflare Turnstile before Supabase creates a new
+anonymous user. Existing browser sessions pass silently, and mock mode never
+loads the challenge. Configure both halves; the browser widget by itself is not
+a security boundary:
+
+1. Create a Turnstile widget for the site and set its public site key as
+   `VITE_TURNSTILE_SITE_KEY`.
+2. In Supabase Dashboard, open **Authentication → Bot and Abuse Protection**,
+   select Cloudflare Turnstile, enter the private secret, and enable CAPTCHA.
+
+The secret must exist only in Supabase. See
+[`../docs/TECHNICAL_REQUIREMENTS_V5.md`](../docs/TECHNICAL_REQUIREMENTS_V5.md)
+for safe rollout/rollback order and the limits of scraper deterrence.
+
 Open http://localhost:5173/tbs-lpdp/ (the `base` path matters).
 
 ### Mock mode
@@ -81,7 +97,7 @@ src/
 │   ├── ExamPage.tsx    # FE-3/4/5/6/7 question screen
 │   └── ReviewPage.tsx  # FE-8 score + explanations, FE-11…16 report a question
 └── components/         # AppShell, Modal, DaftarSoal, InformasiSoal, KonfirmasiTes,
-                        # LaporSoal, MaintenanceGate, MaintenanceBanner
+                        # LaporSoal, MaintenanceGate, HumanVerificationGate
 ```
 
 ## Notes
@@ -115,8 +131,9 @@ src/
 
 `.github/workflows/deploy-web.yml` builds on pushes to `master` that touch
 `web/`. Set repo **variables** (Settings → Secrets and variables → Actions →
-Variables) `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`. Both are
-public values; the secret / `service_role` key must never appear here.
+Variables) `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, and
+`VITE_TURNSTILE_SITE_KEY`. All are public values; the Supabase privileged key
+and Turnstile secret must never appear here.
 
 ### Which key?
 
