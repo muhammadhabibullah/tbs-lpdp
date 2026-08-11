@@ -1,0 +1,4 @@
+project_id = "tbs-lpdp"
+
+[functions.question-report-digest]
+verify_jwt = false

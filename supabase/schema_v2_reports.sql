@@ -1,10 +1,9 @@
 -- =============================================================================
 -- TBS LPDP Try Out — Supabase schema, part 2 of 2: question feedback (v2)
 --
--- Apply AFTER schema.sql, in the Supabase SQL editor. Self-contained and fully
--- idempotent: run it as many times as you like. Re-run it any time schema.sql
--- is re-applied, because that file's `create or replace get_review` and its
--- blanket `revoke all on all functions` undo two things this file sets up.
+-- Apply AFTER schema.sql and BEFORE schema_v3.sql. This file remains
+-- idempotent, but v3 owns the final revision-aware report/review definitions;
+-- always re-apply schema_v3.sql after this file.
 --
 -- Design: docs/TECHNICAL_REQUIREMENTS_V2.md §6–§8. Users report defective
 -- questions from the Pembahasan screen; reports are captured and nothing more.
@@ -22,8 +21,8 @@
 -- =============================================================================
 
 -- ------------------------------------------------------------------ 1. table -
--- `content_hash` pins the question text the report was filed against, because
--- push_to_supabase.py rewrites questions in place under stable ids.
+-- In v2, `content_hash` pinned the text while questions were rewritten in
+-- place. schema_v3.sql migrates matching rows onto immutable revisions.
 
 create table if not exists public.question_reports (
   id                 uuid primary key default gen_random_uuid(),

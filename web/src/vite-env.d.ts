@@ -7,6 +7,8 @@ interface ImportMetaEnv {
   /** Legacy public key (anon JWT). Used only if the publishable key is unset. */
   readonly VITE_SUPABASE_ANON_KEY?: string
   readonly VITE_USE_MOCK?: string
+  /** Development server only; ignored by production builds. */
+  readonly VITE_BYPASS_MAINTENANCE?: string
 }
 
 interface ImportMeta {

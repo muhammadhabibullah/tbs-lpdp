@@ -4,7 +4,7 @@ import AppShell from '../components/AppShell'
 import LaporSoal, { REASON_LABELS } from '../components/LaporSoal'
 import Passage from '../components/Passage'
 import { api, errorMessage, withRetry } from '../lib/api'
-import { formatDateTime } from '../lib/clock'
+import { formatDate, formatDateTime } from '../lib/clock'
 import { OPTION_KEYS } from '../lib/types'
 import type { QuestionReport, ReportReason, Review, ReviewQuestion } from '../lib/types'
 
@@ -74,14 +74,7 @@ export default function ReviewPage() {
         if (cancelled) return
         setReview(data)
         setActiveSubtest(data.sections[0]?.subtest.id ?? null)
-        // Only for the heading and the PDF filename, so a failure is ignored;
-        // listPackages is cached per page load, so this is usually free.
-        api
-          .listPackages()
-          .then((pkgs) => {
-            if (!cancelled) setPackageTitle(pkgs.find((p) => p.id === data.attempt.package_id)?.title ?? '')
-          })
-          .catch(() => undefined)
+        setPackageTitle(data.package.title)
       } catch (err) {
         if (!cancelled) setError(errorMessage(err))
       } finally {
@@ -171,7 +164,7 @@ export default function ReviewPage() {
     setReportBusy(true)
     setReportError(null)
     try {
-      await withRetry(() => api.deleteQuestionReport(reportingId))
+      await withRetry(() => api.deleteQuestionReport(reportingId, attemptId))
       patchReport(reportingId, null)
       setReportingId(null)
     } catch (err) {
@@ -362,6 +355,9 @@ export default function ReviewPage() {
                       {blank ? 'Tidak dijawab' : correct ? 'Benar +5' : 'Salah 0'}
                     </span>
                     <span className="tag">{question.qtype.replace(/_/g, ' ')}</span>
+                    <span className="tag revision" title="Versi soal yang digunakan pada percobaan ini">
+                      Versi soal {question.question_version} · diperbarui {formatDate(question.question_updated_at)}
+                    </span>
                     {question.is_doubtful ? <span className="tag doubt">Ragu-ragu</span> : null}
 
                     {/* FE-11/FE-13: the only report entry point in the app. */}

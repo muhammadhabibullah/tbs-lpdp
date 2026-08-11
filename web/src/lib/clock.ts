@@ -45,10 +45,20 @@ export function formatMinutes(durationSeconds: number): string {
 
 export function formatDateTime(iso: string): string {
   return new Date(iso).toLocaleString('id-ID', {
+    timeZone: 'Asia/Jakarta',
     day: 'numeric',
     month: 'short',
     year: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
+  })
+}
+
+export function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString('id-ID', {
+    timeZone: 'Asia/Jakarta',
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
   })
 }

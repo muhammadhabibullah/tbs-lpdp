@@ -3,10 +3,12 @@
 React 18 + Vite + TypeScript. Static build deployed to GitHub Pages under
 `/tbs-lpdp/`; all state lives in Supabase and is reached through the RPCs in
 [`../supabase/schema.sql`](../supabase/schema.sql) and
-[`../supabase/schema_v2_reports.sql`](../supabase/schema_v2_reports.sql) (the
-question-feedback RPCs), plus
+[`../supabase/schema_v2_reports.sql`](../supabase/schema_v2_reports.sql), with
+the final versioned RPC contracts in
+[`../supabase/schema_v3.sql`](../supabase/schema_v3.sql), plus
 [`../supabase/schema_v4_maintenance_mode.sql`](../supabase/schema_v4_maintenance_mode.sql)
-for the global maintenance schedule. There is no server of ours.
+for the global maintenance schedule. There is no custom application server;
+the v3 report digest is a private Supabase Edge Function.
 
 ## Run it
 
@@ -20,6 +22,9 @@ VITE_USE_MOCK=true npm run dev
 cp .env.example .env.local   # fill VITE_SUPABASE_URL + VITE_SUPABASE_PUBLISHABLE_KEY
 npm run dev
 
+# C. Against Supabase while its maintenance window is active (dev only):
+VITE_USE_MOCK=false VITE_BYPASS_MAINTENANCE=true npm run dev
+
 npm run build       # tsc --noEmit && vite build → dist/
 npm run typecheck
 ```
@@ -29,11 +34,12 @@ Open http://localhost:5173/tbs-lpdp/ (the `base` path matters).
 ### Mock mode
 
 `vite/mock-bank-plugin.ts` serves `questions/bank/` at `/__mock/bank.json`, and
-`src/lib/mockApi.ts` reimplements the RPC semantics (server deadline + 5 s
-grace, idempotent finish, keys only for finished sections) against
+`src/lib/mockApi.ts` reimplements the RPC semantics (immutable release
+snapshots, attempt pinning, server deadline + 5 s grace, idempotent finish,
+keys only for finished sections, and monotonic package statistics) against
 `localStorage`. The plugin is `apply: 'serve'`, and `VITE_USE_MOCK` is inlined at
 build time, so **neither the mock nor any answer key can reach a production
-bundle** (C-4). Reset a mock run by clearing the `tbs-lpdp.mock.v1` key.
+bundle** (C-4/C-11). Reset a mock run by clearing the `tbs-lpdp.mock.v3` key.
 
 To rehearse the maintenance UI in mock mode, set a window in the browser
 console and reload. ISO timestamps may use `Z` or an explicit offset:
@@ -62,7 +68,7 @@ src/
 ├── lib/
 │   ├── types.ts        # RPC payload shapes + the ExamApi interface
 │   ├── api.ts          # lazy backend pick (supabase | mock) + retry helper
-│   ├── supabaseApi.ts  # supabase-js: anonymous auth + the 9 RPCs
+│   ├── supabaseApi.ts  # supabase-js: anonymous auth + v3 RPCs
 │   ├── mockApi.ts      # dev-only stand-in (see above)
 │   ├── supabase.ts     # client + ApiError + pg error codes
 │   └── clock.ts        # server-time skew, countdown formatting (NF-3)
@@ -90,12 +96,20 @@ src/
 - **Reporting a question is only possible from Pembahasan** (v2 §1.1): the RPC
   itself refuses any question whose section the caller has not finished, so the
   report surface can never leak which answer is right mid-exam.
+- **Attempts are pinned to a package release.** Active questions, grading,
+  history, review, and reports resolve through that immutable release even
+  after a corrected package is published.
 - **Writes are optimistic** (NF-2): selecting an option updates the UI at once
   and retries the RPC 3× with backoff; a terminal failure shows a warning strip,
   and a `P0004` (deadline passed) response moves the user on.
 - **Maintenance is frontend-only** (v4 C-18): the global gate probes before
   routes mount and blocks the official SPA during the configured window, but
   existing Supabase RPCs deliberately remain callable.
+- **Local maintenance bypass is development-only.** Set
+  `VITE_BYPASS_MAINTENANCE=true` when running `npm run dev` against Supabase.
+  The bypass also requires Vite's built-in `import.meta.env.DEV`, which is
+  always `false` in a production build; configuring the flag in GitHub Actions
+  cannot bypass maintenance on the deployed site.
 
 ## Deployment
 

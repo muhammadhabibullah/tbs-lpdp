@@ -529,6 +529,7 @@ a {
 }
 
 .package-card {
+  position: relative;
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 18px 20px;
@@ -539,8 +540,117 @@ a {
 
 .package-card h3 {
   margin: 0;
+  padding-right: 38px;
   font-size: 17px;
   color: #2f3743;
+}
+
+.package-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: -5px;
+}
+
+.package-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 3px 9px;
+  border: 1px solid #d9dfeb;
+  border-radius: 999px;
+  background: #f7f8fb;
+  color: #505968;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+button.package-badge {
+  appearance: none;
+  cursor: help;
+  font-family: inherit;
+}
+
+.info-tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+.info-tooltip-trigger {
+  gap: 5px;
+}
+
+.info-tooltip-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.72;
+}
+
+.info-tooltip-content {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 7px);
+  left: 0;
+  width: min(240px, calc(100vw - 32px));
+  padding: 10px 12px;
+  border: 1px solid #d5dce8;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgb(36 45 62 / 16%);
+  color: #444e5d;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3px);
+  transition: opacity 120ms ease, transform 120ms ease, visibility 120ms;
+  pointer-events: none;
+}
+
+.package-meta .info-tooltip:nth-of-type(2) .info-tooltip-content {
+  right: 0;
+  left: auto;
+}
+
+.info-tooltip:hover .info-tooltip-content,
+.info-tooltip:focus-within .info-tooltip-content,
+.info-tooltip.is-open .info-tooltip-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.info-tooltip-trigger:focus-visible,
+.package-statistics-trigger:focus-visible {
+  outline: 3px solid rgb(36 104 184 / 24%);
+  outline-offset: 2px;
+}
+
+.package-badge.difficulty-easy {
+  border-color: #bfe4cd;
+  background: #edf9f1;
+  color: #237244;
+}
+
+.package-badge.difficulty-medium {
+  border-color: #f2d19c;
+  background: #fff8eb;
+  color: #986018;
+}
+
+.package-badge.difficulty-hard {
+  border-color: #efbdc2;
+  background: #fff0f1;
+  color: #a23f49;
 }
 
 .package-card p {
@@ -579,6 +689,108 @@ a {
   font-size: 13.5px;
   font-weight: 600;
   padding: 0 12px;
+}
+
+.package-statistics-control {
+  position: absolute;
+  z-index: 20;
+  top: 13px;
+  right: 14px;
+}
+
+.package-statistics-trigger {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid #d9dfeb;
+  border-radius: 9px;
+  background: #f8f9fb;
+  color: #536174;
+  cursor: pointer;
+}
+
+.package-statistics-trigger:hover,
+.package-statistics-trigger[aria-expanded='true'] {
+  border-color: #aebbd0;
+  background: #eef3fa;
+  color: var(--navy);
+}
+
+.package-statistics-trigger svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.package-statistics-popover {
+  position: absolute;
+  top: calc(100% + 7px);
+  right: 0;
+  width: min(320px, calc(100vw - 32px));
+  padding: 14px;
+  border: 1px solid #d5dce8;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgb(36 45 62 / 18%);
+}
+
+.package-statistics-popover h4 {
+  margin: 0 0 11px;
+  color: #2f3743;
+  font-size: 14px;
+}
+
+.package-statistics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0;
+}
+
+.package-statistics-grid > div {
+  min-width: 0;
+  padding: 9px 10px;
+  border-radius: 8px;
+  background: #f5f7fa;
+}
+
+.package-statistics-grid dt {
+  color: var(--ink-soft);
+  font-size: 10.5px;
+  line-height: 1.25;
+}
+
+.package-statistics-grid dd {
+  margin: 3px 0 0;
+  color: #2f3743;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.package-statistics-popover .package-statistics-rule,
+.package-statistics-popover .package-statistics-coverage {
+  margin: 10px 0 0;
+  font-size: 10.5px;
+  line-height: 1.4;
+}
+
+.package-statistics-popover .package-statistics-rule {
+  color: #4d5868;
+}
+
+.package-statistics-popover .package-statistics-coverage {
+  color: var(--ink-faint);
+}
+
+.history-version {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink-faint);
+  font-size: 11px;
 }
 
 /* Keeps a wide table inside its card instead of scrolling the whole page. */
@@ -1494,6 +1706,12 @@ a {
 .tag.doubt {
   background: #fdf1dd;
   color: #a96a08;
+}
+
+.tag.revision {
+  background: #f3f0fb;
+  color: #65509a;
+  text-transform: none;
 }
 
 /* ------------------------------------------------ report a question (v2) -- */

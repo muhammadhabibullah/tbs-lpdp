@@ -14,7 +14,7 @@ Setup: `pip install -r requirements.txt`
 | `peluang_kombinatorik.py` | Probability and counting (`--subtest kuantitatif\|pemecahan_masalah`) |
 | `figures.py` | Every SVG in the bank (`--check` in CI, `--link` to point questions at their file). Measured figures for hand-authored `geometri`; schematic ones, shared per family and carrying no values at all, for generated `kecukupan_data` |
 | `validate_bank.py` | Validate the whole bank; `--strict` also enforces blueprint counts. Must exit 0 before review/push |
-| `push_to_supabase.py` | Idempotent upsert of a package to Supabase (`--package 1 [--publish]`); needs `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` env vars |
+| `push_to_supabase.py` | Validate/hash a complete package, upload content-addressed images, and atomically publish an immutable release (`--package 1 --dry-run` or `--package 1 --publish`); live runs need `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` |
 
 All generators accept `--seed` (reproducible output) and `--bank-dir` (write to a scratch directory instead of `questions/bank`). They refuse to overwrite an existing question file.
 

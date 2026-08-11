@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { createHash } from 'node:crypto'
 import type { Plugin } from 'vite'
 
 /**
@@ -24,6 +25,10 @@ const MIME: Record<string, string> = {
   '.webp': 'image/webp',
 }
 
+const releaseHistory = new Map<number, { hash: string; version: number; updatedAt: string }>()
+const questionHistory = new Map<string, { hash: string; version: number; updatedAt: string }>()
+const imageCache = new Map<string, { bytes: Buffer; mime: string }>()
+
 function readBank(bankDir: string) {
   const packages: unknown[] = []
   const questions: Record<string, unknown[]> = {}
@@ -39,6 +44,7 @@ function readBank(bankDir: string) {
     const manifestPath = path.join(bankDir, dir.name, 'package.json')
     if (!fs.existsSync(manifestPath)) continue
     const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'))
+    const releaseDigest = createHash('sha256').update(JSON.stringify(manifest))
 
     const subtests: unknown[] = []
     for (const key of Object.keys(BLUEPRINT)) {
@@ -53,17 +59,49 @@ function readBank(bankDir: string) {
 
       const subtestId = `${packageId}-${key}`
       questions[subtestId] = files.map((file) => {
-        const q = JSON.parse(fs.readFileSync(path.join(subtestDir, file), 'utf8'))
+        const raw = fs.readFileSync(path.join(subtestDir, file), 'utf8')
+        const q = JSON.parse(raw)
+        const normalizedQuestion = JSON.stringify(q)
+        releaseDigest.update(normalizedQuestion)
+        const questionDigest = createHash('sha256').update(normalizedQuestion)
+        let imageUrl: string | null = null
+        if (q.image) {
+          const imagePath = path.join(bankDir, dir.name, q.image)
+          const bytes = fs.readFileSync(imagePath)
+          const imageSha = createHash('sha256').update(bytes).digest('hex')
+          const imageName = path.basename(q.image)
+          const cacheKey = `${packageId}/${imageSha}/${imageName}`
+          imageCache.set(cacheKey, {
+            bytes,
+            mime: MIME[path.extname(imagePath).toLowerCase()] ?? 'application/octet-stream',
+          })
+          imageUrl = `/__mock/image/${cacheKey}`
+          releaseDigest.update(imageSha)
+          questionDigest.update(imageSha)
+        }
+        const questionHash = questionDigest.digest('hex')
+        const previousQuestion = questionHistory.get(q.id)
+        const revision = previousQuestion?.hash === questionHash
+          ? previousQuestion
+          : {
+              hash: questionHash,
+              version: (previousQuestion?.version ?? 0) + 1,
+              updatedAt: new Date().toISOString(),
+            }
+        questionHistory.set(q.id, revision)
         return {
           id: q.id,
           number: q.number,
           qtype: q.type,
           question_text: q.question_text,
           passage: q.passage ?? null,
-          image_url: q.image ? `/__mock/image/${packageId}/${path.basename(q.image)}` : null,
+          image_url: imageUrl,
+          difficulty: q.difficulty,
           options: q.options,
           correct_option: q.correct_option,
           explanations: q.explanations,
+          question_version: revision.version,
+          question_updated_at: revision.updatedAt,
         }
       })
       questions[subtestId].sort((a, b) => (a as { number: number }).number - (b as { number: number }).number)
@@ -83,12 +121,31 @@ function readBank(bankDir: string) {
     }
 
     if (subtests.length === 0) continue
+    const hash = releaseDigest.digest('hex')
+    const previous = releaseHistory.get(packageId)
+    const release = previous?.hash === hash
+      ? previous
+      : { hash, version: (previous?.version ?? 0) + 1, updatedAt: new Date().toISOString() }
+    releaseHistory.set(packageId, release)
     packages.push({
       id: packageId,
       title: manifest.title ?? `Paket ${packageId}`,
       description: manifest.description ?? '',
       is_published: true,
       created_at: new Date(0).toISOString(),
+      difficulty: manifest.difficulty,
+      ai_model: manifest.ai_model,
+      ai_company: manifest.ai_company,
+      ai_model_description: manifest.ai_model_description,
+      question_version: release.version,
+      last_updated_at: release.updatedAt,
+      completed_attempts_total: 0,
+      statistics_sample_total: 0,
+      mean_score: null,
+      median_score: null,
+      statistics_coverage_started_at: release.updatedAt,
+      score_statistics_coverage_started_at: release.updatedAt,
+      release_id: `${packageId}:${release.hash}`,
       subtests,
     })
   }
@@ -113,13 +170,15 @@ export function mockBankPlugin(bankDir: string): Plugin {
       })
 
       server.middlewares.use('/__mock/image/', (req, res, next) => {
-        // req.url here is the path after the mount point: /<package>/<file>
-        const match = /^\/(\d+)\/([\w.-]+)$/.exec((req.url ?? '').split('?')[0])
+        // req.url: /<package>/<sha256>/<file>; bytes stay in memory by hash so
+        // an already-pinned mock attempt survives an edited image.
+        const match = /^\/(\d+)\/([0-9a-f]{64})\/([\w.-]+)$/.exec((req.url ?? '').split('?')[0])
         if (!match) return next()
-        const file = path.join(bankDir, match[1], 'images', match[2])
-        if (!file.startsWith(path.join(bankDir, match[1])) || !fs.existsSync(file)) return next()
-        res.setHeader('Content-Type', MIME[path.extname(file).toLowerCase()] ?? 'application/octet-stream')
-        res.end(fs.readFileSync(file))
+        const cached = imageCache.get(`${match[1]}/${match[2]}/${match[3]}`)
+        if (!cached) return next()
+        res.setHeader('Content-Type', cached.mime)
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable')
+        res.end(cached.bytes)
       })
     },
   }

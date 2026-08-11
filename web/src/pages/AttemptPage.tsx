@@ -32,7 +32,7 @@ export default function AttemptPage() {
     bootstrapping.current = true
     try {
       const state = await api.getAttemptState(attemptId)
-      const pkg = await api.getPackage(state.attempt.package_id)
+      const pkg = state.package
       setPackageTitle(pkg.title)
 
       const active = state.sections.find((s) => s.section_attempt.status === 'active')
