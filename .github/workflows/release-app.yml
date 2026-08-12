@@ -56,6 +56,7 @@ jobs:
           fi
 
   desktop:
+    if: false # v6 AP-8. The Android job uploads into the same release, so the desktop matrix owns it.
     needs: guard
     strategy:
       fail-fast: false
