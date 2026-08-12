@@ -332,6 +332,8 @@ export default function ReviewPage() {
         <LaporSoal
           key={reportingQuestion.id}
           questionNumber={reportingQuestion.number}
+          questionId={reportingQuestion.id}
+          packageTitle={packageTitle}
           existing={reportingQuestion.my_report}
           initialConfirmDelete={reportConfirmDelete}
           submitting={reportBusy}

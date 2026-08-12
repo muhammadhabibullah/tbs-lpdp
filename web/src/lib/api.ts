@@ -1,10 +1,15 @@
 import type { ExamApi } from './types'
 
 /**
- * Picks the backend once, lazily. `import.meta.env.VITE_USE_MOCK` is inlined at
- * build time, so a production bundle drops the mock branch entirely.
+ * Picks the backend once, lazily. Both selectors are inlined by Vite at build
+ * time, so each of the three flavors (v6 §2) bundles only its own backend: a
+ * web production build drops the local engine — and every answer key with it —
+ * while the offline app drops `@supabase/supabase-js` entirely (C-29, C-31).
  */
 export const USE_MOCK = import.meta.env.VITE_USE_MOCK === 'true'
+
+/** Both flavors that grade locally instead of calling Supabase. */
+export const USE_LOCAL_ENGINE = USE_MOCK || import.meta.env.VITE_OFFLINE === 'true'
 
 const CHUNK_RELOAD_GUARD = 'tbs-lpdp:chunk-reload-attempted'
 
@@ -32,9 +37,14 @@ function reloadForFreshChunks(): boolean {
 
 async function loadImpl(): Promise<ExamApi> {
   try {
-    const implementation = USE_MOCK
-      ? (await import('./mockApi')).mockApi
-      : (await import('./supabaseApi')).supabaseApi
+    // Written out from `import.meta.env` rather than through `USE_LOCAL_ENGINE`
+    // on purpose: only a literal comparison folds to a constant *inside this
+    // module*, which is what makes Rollup drop the other branch's chunk — and
+    // with it either the answer keys or the Supabase client (C-29, C-31).
+    const implementation =
+      import.meta.env.VITE_USE_MOCK === 'true' || import.meta.env.VITE_OFFLINE === 'true'
+        ? (await import('./localApi')).localApi
+        : (await import('./supabaseApi')).supabaseApi
 
     // A successful import proves the current entry bundle and lazy chunk
     // belong to the same deployment, so a future deployment may recover too.

@@ -1,9 +1,13 @@
+import { bankSource } from './bankSource'
 import { ApiError } from './config'
 import { REPORT_COMMENT_MAX, REPORT_REASONS } from './types'
 import type {
   Attempt,
   AttemptState,
   AttemptSummary,
+  Bank,
+  BankPackage,
+  BankQuestion,
   ExamApi,
   FinishSectionResult,
   MaintenanceStatus,
@@ -20,21 +24,16 @@ import type {
   Subtest,
 } from './types'
 
-/** Dev-only Supabase stand-in with v3 immutable release semantics. */
-
-interface BankQuestion extends Question {
-  correct_option: OptionKey
-  explanations: Record<OptionKey, string>
-}
-
-interface BankPackage extends Package {
-  release_id: string
-}
-
-interface Bank {
-  packages: BankPackage[]
-  questions: Record<string, BankQuestion[]>
-}
+/**
+ * The local exam engine: a full reimplementation of the Supabase RPC semantics
+ * (immutable release snapshots, attempt pinning, server deadline + 5 s grace,
+ * idempotent finish, keys only for finished sections, monotonic statistics)
+ * against `localStorage`, with the question bank injected by `bankSource`.
+ *
+ * Two flavors run it — the dev mock and the offline app (v6 §2). It is the only
+ * place answer keys are graded on the client, which is exactly why it can never
+ * reach the web production bundle (C-4/C-29).
+ */
 
 interface MockRelease {
   id: string
@@ -84,21 +83,13 @@ const GRACE_MS = 5_000
 const REPORTS_PER_HOUR = 20
 const EMPTY: MockState = { attempts: [], sections: [], answers: {}, reports: {}, releases: {}, statistics: {} }
 
-let bankPromise: Promise<Bank> | null = null
-
-async function loadBank(): Promise<Bank> {
-  if (!bankPromise) {
-    bankPromise = fetch('/__mock/bank.json')
-      .then((response) => {
-        if (!response.ok) throw new ApiError('Bank soal mock tidak tersedia (jalankan `npm run dev`).')
-        return response.json() as Promise<Bank>
-      })
-      .catch((error) => {
-        bankPromise = null
-        throw error instanceof ApiError ? error : new ApiError(String(error))
-      })
-  }
-  return bankPromise
+/**
+ * The bank can be hot-swapped underneath us (AP-4). That is safe because every
+ * attempt reads through the release snapshot it was pinned to, which lives in
+ * `state.releases` from the moment the attempt starts.
+ */
+function loadBank(): Promise<Bank> {
+  return bankSource.load()
 }
 
 function readState(): MockState {
@@ -315,7 +306,7 @@ function summarize(state: MockState): AttemptSummary[] {
     })
 }
 
-export const mockApi: ExamApi = {
+export const localApi: ExamApi = {
   async getMaintenanceStatus(): Promise<MaintenanceStatus> {
     const serverTime = now()
     const fallback: MaintenanceStatus = {

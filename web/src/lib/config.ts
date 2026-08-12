@@ -8,21 +8,36 @@
  * chunk (see lib/api.ts).
  */
 
-export const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL
+/**
+ * The offline app (v6): Tauri shell, local exam engine, no account and no
+ * network needed to take a try-out. Inlined by Vite, so the branches it guards
+ * are eliminated from the other two flavors and vice versa.
+ */
+export const IS_OFFLINE_APP = import.meta.env.VITE_OFFLINE === 'true'
+
+/**
+ * C-31: the app talks to no backend at all, so its bundle must not carry a
+ * project URL or key even if one happens to sit in the build environment.
+ */
+export const SUPABASE_URL = IS_OFFLINE_APP ? undefined : import.meta.env.VITE_SUPABASE_URL
 
 /**
  * The public client key. Supabase's newer projects issue a *publishable* key
  * (`sb_publishable_…`); older ones issue the legacy *anon* JWT. They play the
  * same role — public, RLS-bound, safe in the bundle — so either is accepted.
  */
-export const SUPABASE_PUBLIC_KEY =
-  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY
+export const SUPABASE_PUBLIC_KEY = IS_OFFLINE_APP
+  ? undefined
+  : import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY
 
 /**
  * Public Cloudflare Turnstile site key. The matching secret belongs in
  * Supabase Auth's CAPTCHA settings and must never be added to this repository.
+ * There is no anonymous sign-up in the app, so there is nothing to protect.
  */
-export const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY?.trim() || undefined
+export const TURNSTILE_SITE_KEY = IS_OFFLINE_APP
+  ? undefined
+  : import.meta.env.VITE_TURNSTILE_SITE_KEY?.trim() || undefined
 
 /** False until the developer supplies the project URL + public key (C-1). */
 export const isSupabaseConfigured = Boolean(SUPABASE_URL && SUPABASE_PUBLIC_KEY)
@@ -43,3 +58,10 @@ export const ALREADY_FINISHED = 'P0003'
 
 /** A new anonymous identity needs a server-verified CAPTCHA token. */
 export const HUMAN_VERIFICATION_REQUIRED = 'HUMAN_VERIFICATION_REQUIRED'
+
+/**
+ * Fired on `window` after the offline app hot-swaps a newer question bank
+ * (AP-4). A DOM event rather than a shared store so pages can listen without
+ * importing the bank machinery into the web bundle.
+ */
+export const BANK_UPDATED_EVENT = 'tbs-lpdp:bank-updated'

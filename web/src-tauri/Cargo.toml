@@ -1,0 +1,41 @@
+[package]
+name = "tbs-lpdp-app"
+version = "0.1.0"
+description = "Try out Tes Bakat Skolastik LPDP — offline desktop and Android app"
+authors = ["Muhammad Habibullah"]
+license = "MIT"
+repository = "https://github.com/muhammadhabibullah/tbs-lpdp"
+edition = "2021"
+rust-version = "1.77.2"
+
+[lib]
+# `staticlib`/`cdylib` are what the mobile targets link against; `rlib` keeps
+# `main.rs` able to call into the shared entry point.
+name = "tbs_lpdp_app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+serde_json = "1"
+serde = { version = "1", features = ["derive"] }
+log = "0.4"
+tauri = { version = "2", features = [] }
+tauri-plugin-log = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-fs = "2"
+tauri-plugin-opener = "2"
+tauri-plugin-process = "2"
+
+# AP-6/AP-7: the updater plugin has no Android/iOS implementation, so the app
+# compares versions itself there and opens the APK download in a browser.
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-updater = "2"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true

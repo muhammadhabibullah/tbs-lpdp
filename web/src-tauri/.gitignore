@@ -1,0 +1,13 @@
+# Cargo build output
+/target/
+
+# `tauri android init` / `tauri ios init` output and the generated ACL schemas.
+# The Android Gradle project is regenerated on every CI run and re-patched by
+# scripts/patch-android-signing.ts, so nothing under gen/ belongs in git.
+/gen/
+
+# C-30: signing material never enters the repository.
+/gen/android/release.jks
+keystore.properties
+*.jks
+*.keystore

@@ -1,0 +1,231 @@
+name: Release offline app
+
+# v6 AP-8. Tag the release with the version already committed in
+# web/src-tauri/tauri.conf.json:
+#
+#   git tag app-v0.1.0 && git push origin app-v0.1.0
+#
+# The desktop matrix creates one DRAFT GitHub Release holding every installer,
+# its minisign signature, and latest.json; the Android job signs an APK and
+# uploads it into the same draft. Review, then publish the release by hand.
+on:
+  push:
+    tags: ['app-v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-app-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  # Fail in ten seconds rather than after a 40-minute matrix.
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.check.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: check
+        name: Tag must match tauri.conf.json, updater key must be configured
+        env:
+          # Through the environment, so the secret never becomes script text.
+          SIGNING_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          VERSION=$(node -p "require('./web/src-tauri/tauri.conf.json').version")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+          TAG="${GITHUB_REF_NAME}"
+          if [ "${GITHUB_REF_TYPE}" = "tag" ] && [ "$TAG" != "app-v$VERSION" ]; then
+            echo "::error::tag '$TAG' does not match tauri.conf.json version '$VERSION' (expected app-v$VERSION)"
+            exit 1
+          fi
+
+          PUBKEY=$(node -p "require('./web/src-tauri/tauri.conf.json').plugins.updater.pubkey")
+          if [ -z "$PUBKEY" ] || [ "${PUBKEY#REPLACE_WITH}" != "$PUBKEY" ]; then
+            echo "::error::plugins.updater.pubkey is still a placeholder — run the one-time setup in docs/TECHNICAL_REQUIREMENTS_V6.md §5"
+            exit 1
+          fi
+          if [ -z "${SIGNING_KEY:-}" ]; then
+            echo "::error::secret TAURI_SIGNING_PRIVATE_KEY is not set (C-30)"
+            exit 1
+          fi
+
+  desktop:
+    needs: guard
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos-latest
+            rust-target: aarch64-apple-darwin
+            args: --target aarch64-apple-darwin
+          - platform: macos-latest
+            rust-target: x86_64-apple-darwin
+            args: --target x86_64-apple-darwin
+          # 22.04 links against an older glibc, so the AppImage runs on more
+          # distributions than one built on the newest runner would.
+          - platform: ubuntu-22.04
+            rust-target: x86_64-unknown-linux-gnu
+            args: ''
+          - platform: windows-latest
+            rust-target: x86_64-pc-windows-msvc
+            args: ''
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # NF-32: question versions come from commit history, so the bank
+          # snapshot compiled into the installer needs the full log.
+          fetch-depth: 0
+
+      - name: Install Linux build dependencies
+        if: matrix.platform == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf \
+            libgtk-3-dev build-essential curl wget file libssl-dev libayatana-appindicator3-dev
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.rust-target }}
+
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: web/src-tauri -> target
+          key: ${{ matrix.rust-target }}
+
+      - run: npm ci
+        working-directory: web
+
+      - uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # C-30: signing material exists only here.
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        with:
+          projectPath: web
+          tagName: app-v${{ needs.guard.outputs.version }}
+          releaseName: TBS LPDP Try Out v${{ needs.guard.outputs.version }}
+          releaseBody: |
+            Aplikasi try out TBS LPDP yang berjalan sepenuhnya offline.
+
+            Pilih berkas sesuai perangkat Anda; petunjuk pemasangan langkah demi
+            langkah tersedia di https://muhammadhabibullah.github.io/tbs-lpdp/#/
+            pada bagian **Unduh Aplikasi Offline**.
+
+            Aplikasi belum bertanda tangan digital berbayar, sehingga Windows
+            SmartScreen dan macOS Gatekeeper akan menampilkan peringatan —
+            petunjuk di halaman tersebut menjelaskan cara melanjutkan.
+          releaseDraft: true
+          prerelease: false
+          # AP-6: publishes latest.json alongside the signed installers.
+          includeUpdaterJson: true
+          args: ${{ matrix.args }}
+
+  android:
+    # The desktop matrix owns the release; this job only adds the APK to it.
+    needs: [guard, desktop]
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools platforms;android-34 build-tools;34.0.0 ndk;27.2.12479018'
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-linux-android
+
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: web/src-tauri -> target
+          key: android
+
+      - run: npm ci
+        working-directory: web
+
+      # `gen/android` is generated output and is not committed, so the Gradle
+      # project — including the signing patch below — is rebuilt every run.
+      - name: Initialise the Android project
+        working-directory: web
+        env:
+          NDK_HOME: ${{ env.ANDROID_HOME }}/ndk/27.2.12479018
+        run: npx tauri android init --ci
+
+      - name: Configure release signing (C-30)
+        working-directory: web
+        env:
+          ANDROID_KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          if [ -z "${ANDROID_KEYSTORE_B64}" ]; then
+            echo "::error::secret ANDROID_KEYSTORE_B64 is not set (v6 §5 step 2)"
+            exit 1
+          fi
+          echo "$ANDROID_KEYSTORE_B64" | base64 -d > src-tauri/gen/android/release.jks
+          cat > src-tauri/gen/android/keystore.properties <<EOF
+          storeFile=release.jks
+          storePassword=${ANDROID_KEYSTORE_PASSWORD}
+          keyAlias=${ANDROID_KEY_ALIAS}
+          password=${ANDROID_KEY_PASSWORD}
+          EOF
+          node scripts/patch-android-signing.ts
+
+      - name: Build the APK
+        working-directory: web
+        env:
+          NDK_HOME: ${{ env.ANDROID_HOME }}/ndk/27.2.12479018
+        run: npx tauri android build --apk --target aarch64
+
+      - name: Verify the signature and rename the artifact
+        id: apk
+        working-directory: web
+        run: |
+          set -euo pipefail
+          APK=$(find src-tauri/gen/android/app/build/outputs/apk -name '*-release.apk' ! -name '*unsigned*' | head -n 1)
+          if [ -z "$APK" ]; then
+            echo "::error::no signed release APK was produced"
+            find src-tauri/gen/android/app/build/outputs/apk -name '*.apk' || true
+            exit 1
+          fi
+          # AP-7: an unsigned or differently-signed APK cannot install over the
+          # previous version, which would silently break every upgrade.
+          "$ANDROID_HOME"/build-tools/34.0.0/apksigner verify --print-certs "$APK"
+          OUT="tbs-lpdp-try-out_${{ needs.guard.outputs.version }}_arm64.apk"
+          cp "$APK" "$OUT"
+          echo "path=web/$OUT" >> "$GITHUB_OUTPUT"
+
+      - name: Upload the APK into the same release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload "app-v${{ needs.guard.outputs.version }}" "${{ steps.apk.outputs.path }}" --clobber

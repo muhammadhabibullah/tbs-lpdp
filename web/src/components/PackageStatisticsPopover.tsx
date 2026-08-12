@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef } from 'react'
 import { formatDate } from '../lib/clock'
+import { IS_OFFLINE_APP } from '../lib/config'
 import type { Package } from '../lib/types'
 
 const MAX_SCORE = 300
@@ -48,7 +49,7 @@ export default function PackageStatisticsPopover({
         ref={triggerRef}
         type="button"
         className="package-statistics-trigger"
-        aria-label={`Lihat statistik ${pkg.title}`}
+        aria-label={`Lihat statistik ${IS_OFFLINE_APP ? 'lokal ' : ''}${pkg.title}`}
         aria-expanded={open}
         aria-controls={popoverId}
         aria-haspopup="dialog"
@@ -65,7 +66,10 @@ export default function PackageStatisticsPopover({
           role="dialog"
           aria-labelledby={headingId}
         >
-          <h4 id={headingId}>Statistik semua versi</h4>
+          {/* AP-9: nothing is aggregated across users offline — these numbers
+              come from this device's own attempts, and saying otherwise would
+              read as a national percentile. */}
+          <h4 id={headingId}>{IS_OFFLINE_APP ? 'Statistik lokal (perangkat ini)' : 'Statistik semua versi'}</h4>
           <dl className="package-statistics-grid">
             <div>
               <dt>Percobaan selesai</dt>
@@ -89,8 +93,9 @@ export default function PackageStatisticsPopover({
             minimal separuh soal di setiap mata uji.
           </p>
           <p className="package-statistics-coverage">
-            Percobaan tercatat sejak {formatDate(pkg.statistics_coverage_started_at)}. Statistik skor tercatat sejak{' '}
-            {formatDate(pkg.score_statistics_coverage_started_at)}.
+            {IS_OFFLINE_APP
+              ? 'Angka di atas hanya menghitung try out yang Anda kerjakan di perangkat ini — bukan rata-rata seluruh peserta.'
+              : `Percobaan tercatat sejak ${formatDate(pkg.statistics_coverage_started_at)}. Statistik skor tercatat sejak ${formatDate(pkg.score_statistics_coverage_started_at)}.`}
           </p>
         </section>
       ) : null}

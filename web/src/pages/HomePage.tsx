@@ -1,12 +1,14 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import AppShell from '../components/AppShell'
+import DownloadApp from '../components/DownloadApp'
 import InfoTooltip from '../components/InfoTooltip'
 import { scrollToSection } from '../components/MenuBar'
 import PackageStatisticsPopover from '../components/PackageStatisticsPopover'
+import UpdateControls from '../components/UpdateControls'
 import { USE_MOCK, api, errorMessage } from '../lib/api'
 import { formatDate, formatDateTime, formatMinutes } from '../lib/clock'
-import { isSupabaseConfigured } from '../lib/config'
+import { BANK_UPDATED_EVENT, IS_OFFLINE_APP, isSupabaseConfigured } from '../lib/config'
 import type { AttemptSummary, Package, ServiceStatus } from '../lib/types'
 
 const MAX_SCORE = 300
@@ -50,6 +52,15 @@ export default function HomePage() {
   const [status, setStatus] = useState<ServiceStatus | null>(null)
   const [page, setPage] = useState(1)
   const [openStatsPackageId, setOpenStatsPackageId] = useState<number | null>(null)
+  /** AP-4: bumped when the app hot-swaps a newer bank, to re-read the catalogue. */
+  const [bankRevision, setBankRevision] = useState(0)
+
+  useEffect(() => {
+    if (!IS_OFFLINE_APP) return
+    const onBankUpdated = () => setBankRevision((value) => value + 1)
+    window.addEventListener(BANK_UPDATED_EVENT, onBankUpdated)
+    return () => window.removeEventListener(BANK_UPDATED_EVENT, onBankUpdated)
+  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -78,7 +89,7 @@ export default function HomePage() {
     return () => {
       cancelled = true
     }
-  }, [])
+  }, [bankRevision])
 
   // The menu bar routes here with the wanted anchor in the location state; the
   // sections only exist once the fetch has resolved, hence the `loading` gate.
@@ -125,7 +136,7 @@ export default function HomePage() {
         </p>
       </div>
 
-      {!USE_MOCK && !isSupabaseConfigured ? (
+      {!USE_MOCK && !IS_OFFLINE_APP && !isSupabaseConfigured ? (
         <div className="card">
           <div className="notice error">
             Backend belum dikonfigurasi. Set <code>VITE_SUPABASE_URL</code> dan{' '}
@@ -165,8 +176,17 @@ export default function HomePage() {
           <div className="loading">Memuat paket…</div>
         ) : packages.length === 0 ? (
           <p className="empty-state">
-            Belum ada paket yang dipublikasikan. Jalankan <code>push_to_supabase.py --package 1 --publish</code> setelah
-            bank soal siap.
+            {IS_OFFLINE_APP ? (
+              <>
+                Bank soal belum tersedia di aplikasi ini. Sambungkan perangkat ke internet, lalu tekan{' '}
+                <strong>Perbarui Bank Soal</strong> di bagian Versi &amp; Pembaruan.
+              </>
+            ) : (
+              <>
+                Belum ada paket yang dipublikasikan. Jalankan <code>push_to_supabase.py --package 1 --publish</code>{' '}
+                setelah bank soal siap.
+              </>
+            )}
           </p>
         ) : (
           <div className="package-grid">
@@ -323,6 +343,9 @@ export default function HomePage() {
           </div>
         )}
       </div>
+
+      {/* FE-42 on the web, AP-10 in the app — never both. */}
+      {IS_OFFLINE_APP ? <UpdateControls /> : <DownloadApp />}
 
       <section className="card seo-overview" id="tentang" aria-labelledby="tentang-title">
         <h2 className="section-title" id="tentang-title">

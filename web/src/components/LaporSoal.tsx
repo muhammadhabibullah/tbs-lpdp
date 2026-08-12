@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Modal from './Modal'
+import { externalLinkProps, feedbackMailto } from './FeedbackFooter'
+import { IS_OFFLINE_APP } from '../lib/config'
 import { REPORT_COMMENT_MAX, REPORT_REASONS } from '../lib/types'
 import type { QuestionReport, ReportReason } from '../lib/types'
 
@@ -27,6 +29,8 @@ const REASON_HINTS: Partial<Record<ReportReason, string>> = {
  */
 export default function LaporSoal({
   questionNumber,
+  questionId,
+  packageTitle,
   existing,
   initialConfirmDelete = false,
   submitting,
@@ -36,6 +40,9 @@ export default function LaporSoal({
   onDelete,
 }: {
   questionNumber: number
+  /** Identifies the exact bank file in an emailed report (AP-9). */
+  questionId: string
+  packageTitle: string
   existing: QuestionReport | null
   /** Opens straight into the withdraw confirmation (FE-15). */
   initialConfirmDelete?: boolean
@@ -95,7 +102,9 @@ export default function LaporSoal({
         ) : (
           <>
             <p className="muted" style={{ marginTop: 0 }}>
-              Laporan Anda tersimpan untuk ditinjau penulis soal. Laporan tidak mengubah skor try out Anda.
+              {IS_OFFLINE_APP
+                ? 'Laporan tersimpan di perangkat ini sebagai penanda pribadi dan tidak mengubah skor try out Anda. Aplikasi offline tidak mengirim apa pun ke server — gunakan tombol “Kirim via Email” agar laporan sampai ke penulis soal.'
+                : 'Laporan Anda tersimpan untuk ditinjau penulis soal. Laporan tidak mengubah skor try out Anda.'}
             </p>
 
             <fieldset className="report-reasons">
@@ -133,6 +142,24 @@ export default function LaporSoal({
                 onChange={(e) => setComment(e.target.value)}
               />
             </label>
+
+            {/* AP-9: the app has no backend to receive this, so the maintainer
+                is reachable the one way that still works offline-first. */}
+            {IS_OFFLINE_APP ? (
+              <a
+                className="btn btn-cyan btn-sm report-email"
+                {...externalLinkProps(
+                  feedbackMailto(`Laporan soal ${questionId} — TBS LPDP Try Out`, [
+                    `Paket: ${packageTitle}`,
+                    `Soal: nomor ${questionNumber} (id ${questionId})`,
+                    `Alasan: ${REASON_LABELS[reason]}`,
+                    `Catatan: ${trimmed || '-'}`,
+                  ]),
+                )}
+              >
+                Kirim via Email
+              </a>
+            ) : null}
 
             {existing ? (
               <button
