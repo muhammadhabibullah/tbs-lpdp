@@ -1,0 +1,3 @@
+- Version numbers are treated as immutable single-source-of-truth values stored in multiple manifests and updated atomically via a single Python script rather than edited by hand.
+- Technical specs evolve through numbered successor documents (`TECHNICAL_REQUIREMENTS_V2.md` … `V6.md`) instead of editing a single file, preserving historical decisions.
+- Operational limits (e.g. database capacity thresholds) are kept as data rows in `public.service_capacity` and adjusted via SQL, not hard-coded constants.

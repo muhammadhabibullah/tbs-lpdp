@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: question_bank/sample_and_schema
+title: LPDP TBS Question Bank Samples & Schema
+scope:
+    - questions/sample/
+    - questions/schema.json
+source_files: []
+depends_on: []
+related_to:
+    - path: agents_config

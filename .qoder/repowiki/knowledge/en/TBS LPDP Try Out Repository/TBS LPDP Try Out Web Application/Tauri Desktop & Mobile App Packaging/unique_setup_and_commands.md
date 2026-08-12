@@ -1,0 +1,1 @@
+Desktop dev runs `npm run dev:app` before launching the Tauri dev server (configured via `build.beforeDevCommand`); production bundles are produced with `npm run build:app` then `cargo tauri build`, which emits `app`, `dmg`, `nsis`, `appimage`, `deb`, and `rpm` targets per `bundle.targets`. Android artifacts are built through the generated Gradle project under `gen/android/`.

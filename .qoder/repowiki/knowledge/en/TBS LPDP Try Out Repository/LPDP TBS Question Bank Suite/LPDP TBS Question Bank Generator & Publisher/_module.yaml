@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: question_bank/generator_tool
+title: LPDP TBS Question Bank Generator & Publisher
+scope:
+    - questions/generator/
+source_files: []
+depends_on: []
+related_to:
+    - path: supabase_backend

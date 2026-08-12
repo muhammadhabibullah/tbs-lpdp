@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: question_bank
+title: LPDP TBS Question Bank Suite
+scope:
+    - questions/
+source_files: []
+depends_on: []
+related_to: []

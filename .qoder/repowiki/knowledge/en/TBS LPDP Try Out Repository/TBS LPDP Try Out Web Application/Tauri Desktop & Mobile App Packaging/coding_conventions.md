@@ -1,0 +1,4 @@
+- Platform-specific features are gated with `#[cfg(desktop)]` / `#[cfg(not(desktop))]` and conditional `cfg_attr(mobile, tauri::mobile_entry_point)` rather than runtime checks.
+- Plugin registration follows a builder pattern where optional plugins (e.g. updater) are added only when their `cfg` feature is enabled, keeping mobile builds free of unsupported code paths.
+- Capabilities are scoped narrowly to required paths/URLs using permission identifiers with explicit allow lists (e.g. `$APPDATA/bank` for fs ops, `https://github.com/*` and `mailto:*` for opener) instead of granting broad defaults.
+- The Rust shell stays intentionally thin: no business logic lives here — only Tauri plugin setup and the single native command `print_page` that the SPA calls into.

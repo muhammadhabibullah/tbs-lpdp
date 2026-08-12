@@ -1,0 +1,1 @@
+Pure Python 3 with `jsonschema` Draft202012Validator for schema validation, `requests` for Supabase REST + Storage v1 API, and `fractions.Fraction` for deterministic arithmetic across all generators. No external ML or web frameworks are used.

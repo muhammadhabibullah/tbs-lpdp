@@ -1,0 +1,1 @@
+No build or test commands are required; packages are consumed by loading their `package.json` and iterating the `verbal`, `kuantitatif`, and `pemecahan_masalah` directories to read `NNN.json` question files in order.

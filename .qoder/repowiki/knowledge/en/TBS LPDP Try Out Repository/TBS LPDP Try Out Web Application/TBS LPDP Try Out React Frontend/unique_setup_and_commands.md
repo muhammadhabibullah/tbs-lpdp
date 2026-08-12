@@ -1,0 +1,1 @@
+Build flavor is controlled by Vite env: set `VITE_OFFLINE=true` to produce the offline Tauri app (no network, local question bank), `VITE_USE_MOCK=true` for a fully local mock backend, otherwise supply `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` (or legacy anon key) plus `VITE_TURNSTILE_SITE_KEY` for the hosted web build served from GitHub Pages under `/tbs-lpdp/`.

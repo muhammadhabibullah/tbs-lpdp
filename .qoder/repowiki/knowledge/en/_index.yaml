@@ -1,0 +1,149 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: en-US
+branch: master
+nodes_managed: true
+exported_at: "2026-08-12T15:51:25Z"
+modules:
+    "":
+        dir_name: TBS LPDP Try Out Repository
+        title: TBS LPDP Try Out Repository
+        scope:
+            - README.md
+            - CONTRIBUTING.md
+            - AGENTS.md
+            - CLAUDE.md
+            - .gitignore
+            - LICENSE
+        source_files: []
+        children:
+            - agents_config
+            - docs_and_scripts
+            - question_bank
+            - supabase_backend
+            - web_app
+        depends_on: []
+        related_to: []
+    agents_config:
+        dir_name: Agent & Skill Configuration for TBS LPDP
+        title: Agent & Skill Configuration for TBS LPDP
+        scope:
+            - .agents/
+            - .claude/
+            - .codex/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: question_bank/sample_and_schema
+    docs_and_scripts:
+        dir_name: Documentation, Version Bump Script & Exambrowser UI References
+        title: Documentation, Version Bump Script & Exambrowser UI References
+        scope:
+            - docs/
+            - scripts/
+            - exambrowser-ui/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    question_bank:
+        dir_name: LPDP TBS Question Bank Suite
+        title: LPDP TBS Question Bank Suite
+        scope:
+            - questions/
+        source_files: []
+        children:
+            - question_bank/generator_tool
+            - question_bank/question_bank_data
+            - question_bank/sample_and_schema
+        depends_on: []
+        related_to: []
+    question_bank/generator_tool:
+        dir_name: LPDP TBS Question Bank Generator & Publisher
+        title: LPDP TBS Question Bank Generator & Publisher
+        scope:
+            - questions/generator/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: supabase_backend
+    question_bank/question_bank_data:
+        dir_name: LPDP Try-Out Question Bank (Packages 1–12)
+        title: LPDP Try-Out Question Bank (Packages 1–12)
+        scope:
+            - questions/bank/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: web_app/vite_build_plugins
+    question_bank/sample_and_schema:
+        dir_name: LPDP TBS Question Bank Samples & Schema
+        title: LPDP TBS Question Bank Samples & Schema
+        scope:
+            - questions/sample/
+            - questions/schema.json
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: agents_config
+    supabase_backend:
+        dir_name: Supabase Backend (Database Schema, RLS & Edge Functions)
+        title: Supabase Backend (Database Schema, RLS & Edge Functions)
+        scope:
+            - supabase/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: question_bank/generator_tool
+    web_app:
+        dir_name: TBS LPDP Try Out Web Application
+        title: TBS LPDP Try Out Web Application
+        scope:
+            - web/
+        source_files: []
+        children:
+            - web_app/react_frontend
+            - web_app/tauri_packaging
+            - web_app/vite_build_plugins
+        depends_on: []
+        related_to: []
+    web_app/react_frontend:
+        dir_name: TBS LPDP Try Out React Frontend
+        title: TBS LPDP Try Out React Frontend
+        scope:
+            - web/src/
+            - web/public/
+            - web/index.html
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: web_app/vite_build_plugins
+    web_app/tauri_packaging:
+        dir_name: Tauri Desktop & Mobile App Packaging
+        title: Tauri Desktop & Mobile App Packaging
+        scope:
+            - web/src-tauri/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: web_app/vite_build_plugins
+    web_app/vite_build_plugins:
+        dir_name: Question Bank Build & Vite Plugins
+        title: Question Bank Build & Vite Plugins
+        scope:
+            - web/vite/
+            - web/scripts/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: question_bank/question_bank_data
+            - path: web_app/react_frontend
+            - path: web_app/tauri_packaging

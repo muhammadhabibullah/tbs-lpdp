@@ -1,0 +1,1 @@
+PostgreSQL with PL/pgSQL functions, Supabase Auth + Storage, Deno-based Edge Functions using `@supabase/supabase-js` v2, and the Resend email API for outbound delivery.

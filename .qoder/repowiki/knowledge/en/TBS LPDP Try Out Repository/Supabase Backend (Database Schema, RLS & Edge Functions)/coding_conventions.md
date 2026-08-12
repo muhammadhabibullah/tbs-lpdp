@@ -1,0 +1,5 @@
+- Database changes are versioned as separate SQL files (`schema_v*.sql`, `maintenance.sql`) applied sequentially rather than edited in place.
+- All client-facing mutations go through stored procedures/RPCs; tables are created with RLS enabled but no per-table policies except for read-only access patterns.
+- Edge function handlers validate every input (method, JSON body, UUID format, required secrets) and return structured JSON responses with explicit HTTP status codes instead of throwing.
+- Secrets are resolved from a combined source: a parsed `SUPABASE_SECRET_KEYS` JSON object falls back to individual environment variables, with errors returned when configuration is missing.
+- Idempotent operations use Supabase RPCs that claim a run before processing and record completion/failure via dedicated RPCs keyed by `run_id`, allowing safe retries.

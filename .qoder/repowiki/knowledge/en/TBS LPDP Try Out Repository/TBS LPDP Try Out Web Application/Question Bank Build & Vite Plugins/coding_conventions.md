@@ -1,0 +1,5 @@
+- Git history is preferred for versioning but gracefully falls back to filesystem mtimes when unavailable, exposing a `versionsFromGit` flag so callers can enforce reproducibility requirements.
+- Published artifacts are content-addressed: SHA-256 digests are computed over serialized JSON (and image bytes) to derive stable filenames like `bank-<12-hex-chars>.json`.
+- Vite plugins are scoped to specific environments using `apply: 'serve'` for dev-only fixtures and `generateBundle()` / `configureServer()` hooks for asset emission and dev serving respectively.
+- Image handling is mode-switchable via an `ImageMode` option — `'url'` for dev middleware references and `'inline'` for self-contained data URIs in the published bank.
+- CLI scripts use `node:util.parseArgs` for typed argument parsing and exit non-zero with descriptive messages on validation or environment failures rather than throwing uncaught exceptions.

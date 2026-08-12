@@ -1,0 +1,4 @@
+- Each question is a single JSON file named with a zero-padded sequence (e.g. `001.json`) inside one of the three fixed subtest folders: `verbal`, `kuantitatif`, `pemecahan_masalah`.
+- Every question file validates against the shared `schema.json` schema, which enforces fields like id, difficulty, options, explanation, and answer.
+- Generated questions use deterministic seeds so repeated runs reproduce identical question sets across all 12 packages.
+- Geometry-related questions reference SVG assets from the sibling `images/` directory using relative paths rather than embedding markup inline.

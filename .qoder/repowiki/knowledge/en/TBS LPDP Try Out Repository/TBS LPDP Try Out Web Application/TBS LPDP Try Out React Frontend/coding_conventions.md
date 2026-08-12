@@ -1,0 +1,6 @@
+- Build-time behavior is gated through `import.meta.env.*` booleans (`IS_OFFLINE_APP`, `USE_MOCK`, `USE_LOCAL_ENGINE`) so Rollup tree-shaking eliminates entire branches (Supabase client, answer keys, Turnstile) per flavor.
+- Backend access goes exclusively through the lazy-loaded `api` proxy in `lib/api.ts`, which dynamically imports either `localApi` or `supabaseApi` once and caches the implementation.
+- Pages wrap their content in `AppShell` with `hideChrome={true}` during active attempts to strip navigation and footer while the server-side deadline ticks.
+- User-facing error messages are translated from backend codes (e.g. `P0007`, `P0005`, `P0002`) into Bahasa Indonesia strings inside page components rather than at the API layer.
+- Cross-component signals use DOM events (e.g. `BANK_UPDATED_EVENT = 'tbs-lpdp:bank-updated'`) instead of shared stores so the offline-only event machinery stays out of the web bundle.
+- Reusable UI pieces are extracted as small presentational components under `components/` (Modal, InfoTooltip, Passage, SisaWaktu, etc.) and composed by pages rather than inline.

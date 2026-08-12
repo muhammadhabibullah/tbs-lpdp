@@ -1,0 +1,4 @@
+- Each subtest folder under `sample/` contains numbered `.txt` files where every question ends with a `Jawaban : <A-E>` line declaring the correct option.
+- Questions are presented with exactly five multiple-choice options labeled A through E, matching the schema's `options` array constraint.
+- Subtest organization follows a fixed three-folder layout (`verbal`, `kuantitatif`, `pemecahan_masalah`) corresponding to the schema's `subtest` enum.
+- Question IDs follow the `<package>-<subtest>-<NNN>` pattern enforced by the schema's regex on the `id` field.

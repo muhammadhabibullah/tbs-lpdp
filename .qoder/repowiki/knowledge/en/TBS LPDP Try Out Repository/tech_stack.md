@@ -1,0 +1,1 @@
+React + TypeScript + Vite (with Rollup constant folding), Tauri 2 for offline packaging, Python generators with JSON Schema validation, Supabase Postgres with Row Level Security and RPCs, Deno Edge Functions with Resend for email digests, GitHub Actions for Pages deployment and signed app releases.

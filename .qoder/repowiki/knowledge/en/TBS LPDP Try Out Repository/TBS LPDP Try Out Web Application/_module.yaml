@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: web_app
+title: TBS LPDP Try Out Web Application
+scope:
+    - web/
+source_files: []
+depends_on: []
+related_to: []

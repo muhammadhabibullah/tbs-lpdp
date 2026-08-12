@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: ""
+title: TBS LPDP Try Out Repository
+scope:
+    - README.md
+    - CONTRIBUTING.md
+    - AGENTS.md
+    - CLAUDE.md
+    - .gitignore
+    - LICENSE
+source_files: []
+depends_on: []
+related_to: []

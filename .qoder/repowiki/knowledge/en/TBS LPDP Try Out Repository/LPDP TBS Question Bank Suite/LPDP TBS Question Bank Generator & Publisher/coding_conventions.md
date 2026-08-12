@@ -1,0 +1,6 @@
+- Each generator script declares a fixed `SUBTEST` and `QTYPE` constant at the top and constructs questions exclusively through `common.make_question`, never by hand-building dicts.
+- Generators compute the answer key deterministically from the constructed stem and then screen candidates against a battery of rival rules before accepting them, so ambiguous stems are rejected rather than guessed.
+- Distractors are produced as `(value, reason)` tuples that travel together through de-duplication and shuffling, guaranteeing every wrong option carries a specific explanation tied to that value.
+- All numeric output goes through `common.fmt_number`, which formats using Indonesian conventions (comma decimal, dot thousands, typographic minus) and falls back to exact fraction notation when the denominator does not divide 100.
+- CLI entry points use `argparse` with mutually exclusive groups for required flags (e.g. `--package` vs `--all`) and expose `--bank-dir` on every script so tools can operate on scratch directories during development.
+- SVG figures are built declaratively via builders returning a `Drawing` dataclass and registered in a central list; figures may only label quantities explicitly given in the stem, with derived values computed internally but never emitted as labels.

@@ -1,0 +1,1 @@
+JSON Schema draft 2020-12 for validation; plain-text Indonesian question bank files.

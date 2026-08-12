@@ -1,0 +1,1 @@
+Python toolchain that deterministically generates, validates, and publishes LPDP TBS question packages (number/letter sequences, algebra, probability, data sufficiency, geometry figures) to a Supabase-backed question bank.

@@ -1,0 +1,1 @@
+Holds project documentation (capacity guard and technical requirements), a Python script to bump the Tauri app version across config files, and Indonesian-language UI screenshots for the exambrowser frontend.

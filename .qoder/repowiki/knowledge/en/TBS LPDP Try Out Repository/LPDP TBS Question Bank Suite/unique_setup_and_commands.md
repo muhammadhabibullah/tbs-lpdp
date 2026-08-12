@@ -1,0 +1,1 @@
+Run `python -m pytest` or the generator scripts under `questions/generator/` to regenerate all packages, then commit the resulting `questions/bank/<n>/` directories; `validate_bank.py` checks consistency against `schema.json` before publishing via `push_to_supabase.py`.

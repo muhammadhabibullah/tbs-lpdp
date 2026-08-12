@@ -1,0 +1,6 @@
+- Build flavor selection uses Vite `define` literals so dead branches are folded out at compile time and enforced by CI assertions.
+- Question file IDs are derived from their path (`<package>-<subtest>-<NNN>`) and must not be renamed after being pushed to Supabase.
+- Figures are generated via `figures.py` rather than hand-drawn, and computable question types must come from the Python generators, never hand-written keys.
+- Client code never writes tables directly; all trusted grading/timing logic resides in Supabase RPCs defined in `schema_v3.sql`.
+- UI copy is in Bahasa Indonesia while code, comments, and documentation are written in English.
+- Schema evolution is additive: `schema.sql` is applied first, followed by `schema_v2_reports.sql`, then `schema_v3.sql`, with `maintenance.sql` applied last.

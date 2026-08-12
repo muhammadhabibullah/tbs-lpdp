@@ -1,0 +1,4 @@
+- Each agent role is defined twice per IDE tree — both `snake_case` and `kebab-case` filenames (e.g. `question_generator.md` and `question-generator.md`) — so Claude and Codex resolve either naming style.
+- The `question_generator` and `question_reviewer` roles are always paired: generators produce or regenerate items via the Python tools, and reviewers verify them before work is considered done, with failures routed back to the generator.
+- Shared behavioral rules live once in `skills/lpdp-question-generation/SKILL.md` and are referenced by every agent definition rather than duplicated inside each agent file.
+- Security-sensitive instructions (never commit service-role keys, never expose answer keys to clients, signing material lives only in GitHub Actions secrets) are repeated verbatim in AGENTS.md and echoed into agent prompts as hard constraints.

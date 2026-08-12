@@ -1,0 +1,1 @@
+Claude Code, Codex, and generic agent frameworks; VS Code launch configuration for the Vite-based SPA mock server.

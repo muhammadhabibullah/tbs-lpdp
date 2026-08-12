@@ -1,0 +1,1 @@
+Tauri v2 with Rust 1.77.2; plugins: `tauri-plugin-dialog`, `tauri-plugin-fs`, `tauri-plugin-opener`, `tauri-plugin-process`, `tauri-plugin-log` (debug only), `tauri-plugin-updater` (desktop-only); Android build via Gradle/Kotlin generated under `gen/android/`; updater signed via minisign public key hosted on GitHub Releases.

@@ -1,0 +1,1 @@
+Node.js native modules (`fs`, `crypto`, `child_process`) with TypeScript type stripping; relies on `git log` for deterministic versioning and calls out to `python3 validate_bank.py` for schema validation.

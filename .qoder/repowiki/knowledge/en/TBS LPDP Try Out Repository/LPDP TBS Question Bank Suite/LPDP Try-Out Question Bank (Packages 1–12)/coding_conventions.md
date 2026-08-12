@@ -1,0 +1,6 @@
+- Each package directory contains a `package.json` that declares the package's `id`, `title`, `difficulty`, and AI generation metadata, serving as the package manifest.
+- Question files are named with zero-padded three-digit numbers (`001.json` … `025.json` for kuantitatif, `001.json` … `023.json` for verbal, `001.json` … `012.json` for pemecahan_masalah) to preserve sort order.
+- Every question JSON includes the canonical fields `id`, `package`, `subtest`, `number`, `type`, `question_text`, `options` (A–E), `correct_option`, `explanations`, `difficulty`, `source`, and `verified`.
+- Options use uppercase letter keys (`A` through `E`) and `correct_option` stores the matching key string rather than an index.
+- Per-option explanations are provided via an `explanations` object keyed by option letter, with each entry explaining why that specific choice is right or wrong.
+- Optional media references use `image` and `passage` fields set to `null` when absent, keeping the schema consistent across all question types.

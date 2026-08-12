@@ -1,0 +1,1 @@
+React 18 + TypeScript + Vite, routing via react-router-dom HashRouter, Supabase JS client (lazy-loaded into its own chunk), Cloudflare Turnstile CAPTCHA for anonymous sign-up, and optional Tauri desktop packaging for an offline mode.

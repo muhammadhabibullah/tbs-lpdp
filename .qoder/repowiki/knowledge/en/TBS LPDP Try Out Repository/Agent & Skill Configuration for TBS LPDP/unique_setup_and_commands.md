@@ -1,0 +1,1 @@
+Agents must run `python3 questions/generator/validate_bank.py` (exit 0) after any question change and follow the `lpdp-question-generation` skill's rule that computable question types come from the Python generators rather than hand-written keys. Development uses the `web-mock` launch config which sets `VITE_USE_MOCK=true` to serve the question bank locally without Supabase.

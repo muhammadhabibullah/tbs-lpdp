@@ -1,0 +1,1 @@
+Monorepo that composes a React/Vite SPA, a Python question-bank generator, and a Supabase backend into one deployable web app and offline Tauri desktop/Android app.

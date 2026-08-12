@@ -1,0 +1,1 @@
+Compiles the git-backed question bank into a content-addressed artifact and exposes it via Vite dev plugins for both web and offline app builds, plus scripts to publish the artifact and patch Android signing.

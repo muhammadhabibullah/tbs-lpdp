@@ -1,0 +1,1 @@
+Plain JSON files for all content; SVG images for diagrams; Node.js `package.json` used only as a metadata manifest per package (no dependencies or scripts).

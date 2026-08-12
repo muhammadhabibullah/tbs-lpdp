@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: web_app/react_frontend
+title: TBS LPDP Try Out React Frontend
+scope:
+    - web/src/
+    - web/public/
+    - web/index.html
+source_files: []
+depends_on: []
+related_to:
+    - path: web_app/vite_build_plugins

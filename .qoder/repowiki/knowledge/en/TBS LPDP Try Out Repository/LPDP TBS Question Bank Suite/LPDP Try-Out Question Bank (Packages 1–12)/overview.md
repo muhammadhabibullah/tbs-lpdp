@@ -1,0 +1,1 @@
+Static JSON-based question bank for the LPDP Scholastic Aptitude Test, organized into 12 numbered packages each containing verbal, quantitative, and problem-solving subtests with per-question metadata.

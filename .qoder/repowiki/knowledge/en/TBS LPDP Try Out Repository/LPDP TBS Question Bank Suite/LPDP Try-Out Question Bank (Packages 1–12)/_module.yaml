@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: question_bank/question_bank_data
+title: LPDP Try-Out Question Bank (Packages 1–12)
+scope:
+    - questions/bank/
+source_files: []
+depends_on: []
+related_to:
+    - path: web_app/vite_build_plugins
