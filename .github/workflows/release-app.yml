@@ -56,7 +56,6 @@ jobs:
           fi
 
   desktop:
-    if: false # --- IGNORE --- The Android job owns the release; this job only adds the desktop installers to it.
     needs: guard
     strategy:
       fail-fast: false
