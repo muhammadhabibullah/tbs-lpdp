@@ -34,3 +34,6 @@ dist/
 build/
 target/
 ```
+
+# VS Code
+*.code-workspace
