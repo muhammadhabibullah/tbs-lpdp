@@ -4,6 +4,7 @@ import AppShell from '../components/AppShell'
 import LaporSoal, { REASON_LABELS } from '../components/LaporSoal'
 import Passage from '../components/Passage'
 import { api, errorMessage, withRetry } from '../lib/api'
+import { canPrint, printPage } from '../lib/appRuntime'
 import { formatDate, formatDateTime } from '../lib/clock'
 import { OPTION_KEYS } from '../lib/types'
 import type { QuestionReport, ReportReason, Review, ReviewQuestion } from '../lib/types'
@@ -62,8 +63,6 @@ export default function ReviewPage() {
   const [reportBusy, setReportBusy] = useState(false)
   const [reportError, setReportError] = useState<string | null>(null)
   const [packageTitle, setPackageTitle] = useState('')
-  /** True for the one render that feeds the print dialog. */
-  const [printing, setPrinting] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -88,27 +87,19 @@ export default function ReviewPage() {
   }, [attemptId])
 
   /**
-   * FE-20: hand the whole Pembahasan to the browser's own print dialog, which
-   * is where "Save as PDF" lives. No new dependency and no server: the print
-   * stylesheet does the work, and the expanded render below makes sure the PDF
-   * carries every subtest and every question rather than whatever tab and
-   * filter happened to be open.
+   * FE-20: hand the whole Pembahasan to the platform print dialog, which is
+   * where "Save as PDF" lives. No new dependency and no server — the print
+   * stylesheet does the work.
+   *
+   * Every print dialog seeds its filename from the document title, and it does
+   * so the moment it opens, so the title is set for as long as the page is on
+   * screen rather than juggled around the call. `RouteMetadata` has already
+   * set a generic one by now; this is the same page named more usefully.
    */
   useEffect(() => {
-    if (!printing) return
-    const previousTitle = document.title
-    // Chrome seeds the PDF filename from the document title.
-    document.title = `Pembahasan — ${packageTitle || `Paket ${review?.attempt.package_id ?? ''}`}`
-    const done = () => setPrinting(false)
-    window.addEventListener('afterprint', done)
-    // one frame, so the expanded DOM is committed before the dialog blocks
-    const timer = window.setTimeout(() => window.print(), 60)
-    return () => {
-      window.clearTimeout(timer)
-      window.removeEventListener('afterprint', done)
-      document.title = previousTitle
-    }
-  }, [printing, packageTitle, review])
+    if (!review) return
+    document.title = `Pembahasan — ${packageTitle || `Paket ${review.attempt.package_id}`}`
+  }, [packageTitle, review])
 
   const section = useMemo(
     () => review?.sections.find((s) => s.subtest.id === activeSubtest) ?? review?.sections[0] ?? null,
@@ -277,14 +268,16 @@ export default function ReviewPage() {
           <h2 className="section-title" style={{ margin: 0 }}>
             Pembahasan
           </h2>
-          <button
-            className="btn btn-ghost btn-sm no-print"
-            onClick={() => setPrinting(true)}
-            disabled={printing}
-            title="Membuka dialog cetak — pilih “Save as PDF” untuk mengunduh"
-          >
-            {printing ? 'Menyiapkan…' : '⤓ Unduh PDF'}
-          </button>
+          {/* Hidden on Android, where no print dialog can be opened at all. */}
+          {canPrint() ? (
+            <button
+              className="btn btn-ghost btn-sm no-print"
+              onClick={() => void printPage()}
+              title="Membuka dialog cetak — pilih “Save as PDF” untuk mengunduh"
+            >
+              ⤓ Unduh PDF
+            </button>
+          ) : null}
         </div>
 
         <div className="review-filters" style={{ marginBottom: 12 }}>
@@ -308,23 +301,29 @@ export default function ReviewPage() {
           ))}
         </div>
 
-        <div style={{ marginTop: 16 }}>
-          {printing ? (
-            // The PDF carries the whole attempt, not the tab and filter that
-            // happen to be open — nobody prints a subset on purpose.
-            review.sections.map((s) => (
-              <section className="print-section" key={s.subtest.id}>
-                <h3 className="print-subtest">
-                  {s.subtest.name} — {s.score} poin
-                </h3>
-                {s.questions.map(renderQuestion)}
-              </section>
-            ))
-          ) : visible.length === 0 ? (
+        <div className="no-print" style={{ marginTop: 16 }}>
+          {visible.length === 0 ? (
             <p className="empty-state">Tidak ada soal pada filter ini.</p>
           ) : (
             visible.map(renderQuestion)
           )}
+        </div>
+
+        {/* The PDF carries the whole attempt, not the tab and filter that happen
+            to be open — nobody prints a subset on purpose. Kept in the document
+            and hidden, rather than swapped in when the button is pressed: the
+            native dialog the app shell opens never reports back, so there would
+            be no moment at which it was safe to swap out again. It also means
+            the browser's own Ctrl-P produces the same complete document. */}
+        <div className="print-body">
+          {review.sections.map((s) => (
+            <section className="print-section" key={s.subtest.id}>
+              <h3 className="print-subtest">
+                {s.subtest.name} — {s.score} poin
+              </h3>
+              {s.questions.map(renderQuestion)}
+            </section>
+          ))}
         </div>
       </div>
 

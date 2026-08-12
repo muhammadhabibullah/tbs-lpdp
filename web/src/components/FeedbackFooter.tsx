@@ -57,21 +57,31 @@ export function externalLinkProps(url: string): {
 export default function FeedbackFooter() {
   return (
     <footer className="site-footer" id="disclaimer">
-      {/* One container for both rows, so the fine print lines up with the
-          heading above it instead of being centred on its own. */}
+      {/* Two columns, each carrying a heading block and then a divided one:
+          Masukan → Disclaimer on the left, Kontak → Open Source Code on the
+          right. Keeping the fine print in the left column is what closes the
+          gap the taller right column used to leave under the button. */}
       <div className="site-footer-inner">
         <div className="site-footer-row">
           <div className="site-footer-about">
             <h2>Masukan &amp; Laporan</h2>
             <p>
-              Laporkan bug atau usulkan jenis soal yang seharusnya muncul di test LPDP untuk meningkatkan kualitas Try Out LPDP ini. 
+              Laporkan bug atau usulkan jenis soal yang seharusnya muncul di test LPDP untuk meningkatkan kualitas Try Out LPDP ini.
               Silakan kirimkan masukan Anda ke alamat pada bagian Kontak, atau klik tombol “Kirim Masukan” untuk membuka email baru
               dengan subjek dan isi yang telah disiapkan.
             </p>
-            <br />
-            <a className="btn btn-cyan btn-sm" {...externalLinkProps(feedbackMailto())}>
+            <a className="btn btn-cyan btn-sm site-footer-cta" {...externalLinkProps(feedbackMailto())}>
               Kirim Masukan
             </a>
+
+            <div className="site-footer-notes">
+              <h2>Disclaimer</h2>
+              <ul>
+                <li>Konten dibuat dengan bantuan AI dan diperiksa otomatis. Laporan Anda membantu perbaikan.</li>
+                <li>Riwayat tersimpan selama <strong>7 hari</strong> kemudian dihapus otomatis.</li>
+                <li>Try out gratis dan mandiri — bukan produk resmi LPDP atau PUSMENDIK.</li>
+              </ul>
+            </div>
           </div>
 
           <div className="site-footer-contact">
@@ -96,13 +106,6 @@ export default function FeedbackFooter() {
             </div>
           </div>
         </div>
-
-        <ul className="site-footer-notes">
-          <h2>Disclaimer</h2>
-          <li>Konten dibuat dengan bantuan AI dan diperiksa otomatis. Laporan Anda membantu perbaikan.</li>
-          <li>Riwayat tersimpan selama <strong>7 hari</strong> kemudian dihapus otomatis.</li>
-          <li>Try out gratis dan mandiri — bukan produk resmi LPDP atau PUSMENDIK.</li>
-        </ul>
       </div>
     </footer>
   )

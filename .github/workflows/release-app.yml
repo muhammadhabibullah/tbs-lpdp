@@ -124,16 +124,55 @@ jobs:
           projectPath: web
           tagName: app-v${{ needs.guard.outputs.version }}
           releaseName: TBS LPDP Try Out v${{ needs.guard.outputs.version }}
+          # FE-42: the install steps live here rather than on the home page.
+          # They are read only by someone who has already downloaded a file,
+          # and here they are versioned with the installers they describe.
+          #
+          # GitHub renders release notes with hard line breaks on, so each
+          # paragraph and each list item is one source line however long —
+          # wrapping it here would wrap it on the page too.
           releaseBody: |
-            Aplikasi try out TBS LPDP yang berjalan sepenuhnya offline.
+            Aplikasi try out TBS LPDP yang berjalan **sepenuhnya offline** — seluruh bank soal ada di dalam aplikasi, tanpa akun dan tanpa iklan. Saat perangkat terhubung ke internet, aplikasi memeriksa paket soal baru secara otomatis.
 
-            Pilih berkas sesuai perangkat Anda; petunjuk pemasangan langkah demi
-            langkah tersedia di https://muhammadhabibullah.github.io/tbs-lpdp/#/
-            pada bagian **Unduh Aplikasi Offline**.
+            Unduh berkas yang sesuai dari daftar **Assets** di bawah, lalu ikuti petunjuk pemasangan untuk sistem operasi Anda.
 
-            Aplikasi belum bertanda tangan digital berbayar, sehingga Windows
-            SmartScreen dan macOS Gatekeeper akan menampilkan peringatan —
-            petunjuk di halaman tersebut menjelaskan cara melanjutkan.
+            > Aplikasi ini **belum bertanda tangan digital berbayar** karena merupakan proyek gratis dan terbuka, sehingga Windows dan macOS menampilkan peringatan saat pertama dipasang. Itu bukan tanda bahwa aplikasi berbahaya — kode sumbernya terbuka dan dapat Anda periksa sendiri. Pastikan Anda hanya mengunduh dari repositori ini.
+
+            ## 🪟 Windows 10 / 11 (64-bit)
+
+            1. Unduh berkas `…-setup.exe`, lalu klik dua kali berkas hasil unduhan.
+            2. Jika muncul layar biru **"Windows protected your PC"**, klik **More info** lalu **Run anyway**.
+            3. Ikuti langkah pemasang sampai selesai.
+            4. Aplikasi muncul di **Start Menu** dengan nama **TBS LPDP Try Out**.
+
+            ## 🍎 macOS (Apple Silicon & Intel)
+
+            1. Unduh berkas `.dmg` sesuai jenis prosesor Mac Anda —  → **About This Mac**. Chip **Apple M1/M2/M3** memakai berkas `aarch64`, prosesor **Intel** memakai `x64`.
+            2. Buka berkas tersebut, lalu seret ikon aplikasi ke folder **Applications**.
+            3. Saat pertama dibuka, macOS menahan aplikasi yang tidak bersertifikat berbayar Apple. Buka **System Settings → Privacy & Security**, gulir ke bawah, lalu klik **Open Anyway**. Pada macOS 14 ke bawah, klik kanan ikon aplikasi → **Open** juga bisa.
+            4. Jika muncul pesan **"… is damaged and can't be opened"**, itu penanda karantina unduhan — berkasnya tidak rusak. Buka **Terminal**, jalankan perintah berikut, lalu buka lagi aplikasinya:
+
+               ```
+               xattr -cr "/Applications/TBS LPDP Try Out.app"
+               ```
+
+            ## 🐧 Linux (x86-64)
+
+            1. Unduh berkas `.AppImage`.
+            2. Klik kanan berkas → **Properties** → centang **Executable**, atau jalankan `chmod +x nama-berkas.AppImage` di terminal.
+            3. Klik dua kali berkas tersebut untuk menjalankan aplikasi.
+            4. Pengguna Debian/Ubuntu dapat memakai berkas `.deb`, dan Fedora `.rpm`. Perlu dicatat: **pembaruan otomatis hanya tersedia pada AppImage**; paket `.deb`/`.rpm` harus diperbarui manual.
+
+            ## 🤖 Android 7.0 ke atas (arm64)
+
+            1. Unduh berkas `.apk` langsung di perangkat Android Anda.
+            2. Buka berkas hasil unduhan — dari notifikasi unduhan atau aplikasi **Files**.
+            3. Saat diminta, izinkan **"Install unknown apps"** / **"Instal dari sumber tidak dikenal"** untuk browser yang Anda pakai, lalu kembali dan tekan **Install**.
+            4. Pembaruan cukup dengan memasang APK versi baru di atas yang lama — riwayat dan jawaban Anda tetap tersimpan.
+
+            ---
+
+            Versi web: https://muhammadhabibullah.github.io/tbs-lpdp/ · Laporan bug dan masukan: <muhammadhabibullah.id@gmail.com>
           releaseDraft: true
           prerelease: false
           # AP-6: publishes latest.json alongside the signed installers.

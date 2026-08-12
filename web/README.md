@@ -150,7 +150,7 @@ vite/
 scripts/
 ├── build-bank.ts             # CLI: publishable bank artifact
 └── patch-android-signing.ts  # release signing for the generated Gradle project
-src-tauri/                    # Tauri 2 shell: config, Rust entry, capabilities
+src-tauri/                    # Tauri 2 shell: config, Rust entry (print_page), capabilities
 ```
 
 ## Notes
@@ -174,6 +174,13 @@ src-tauri/                    # Tauri 2 shell: config, Rust entry, capabilities
 - **Maintenance is frontend-only** (v4 C-18): the global gate probes before
   routes mount and blocks the official SPA during the configured window, but
   existing Supabase RPCs deliberately remain callable.
+- **"Unduh PDF" is the platform print dialog** (FE-20), and the copy it prints
+  is always in the DOM: `ReviewPage` renders `.print-body` — the whole attempt —
+  hidden outside `@media print`, while the on-screen list sits in `.no-print`.
+  In the app the call goes through the shell's `print_page` command, because the
+  macOS WKWebView treats `window.print()` as a no-op. Neither dialog reports
+  back when it closes, which is why nothing about the page is swapped for the
+  duration of a print. The button is hidden on Android, which has no dialog.
 - **Local maintenance bypass is development-only.** Set
   `VITE_BYPASS_MAINTENANCE=true` when running `npm run dev` against Supabase.
   The bypass also requires Vite's built-in `import.meta.env.DEV`, which is
@@ -224,8 +231,10 @@ than a policy decision. The ad-hoc signature costs nothing and needs no Apple
 account; it turns that into the ordinary unidentified-developer prompt, which
 **System Settings → Privacy & Security → Open Anyway** clears. It is *not*
 notarization — swap `"-"` for a real Developer ID if a membership is ever
-obtained. Windows still shows SmartScreen; both are documented for users on the
-download page (FE-42).
+obtained. Windows still shows SmartScreen; both are documented for users in the
+release notes (`releaseBody` in `release-app.yml`), which the download section
+links to (FE-42). Keep those notes and this paragraph in step — they are the
+only place a user is told what to do about the warning.
 
 ### One-time operator setup (v6 §5)
 

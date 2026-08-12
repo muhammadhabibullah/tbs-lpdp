@@ -93,7 +93,7 @@ when code or the bank *schema* changes (AP-5 gates that case).
 
 | ID | Requirement |
 |----|-------------|
-| FE-42 | The web app gains a menu item **"Unduh Aplikasi Offline"** (in `MENU_ITEMS`, web flavor only) anchoring a new home-page section. The section lists one card per platform (Windows, macOS, Linux, Android) whose download links point at the latest GitHub Release — resolved at runtime from `api.github.com/repos/muhammadhabibullah/tbs-lpdp/releases/latest` (CORS-open, unauthenticated) with a plain link to the releases page as fallback if the API call fails or is rate-limited. Each card includes **step-by-step install instructions for non-technical users in Bahasa Indonesia**, including the unsigned-app warnings: Windows SmartScreen ("More info → Run anyway"), macOS Gatekeeper (right-click → Open, or `xattr -cr` for newer macOS), Linux AppImage (`chmod +x` / make executable), Android ("izinkan instal dari sumber tidak dikenal"). Section 6 below is the content source for these instructions. |
+| FE-42 | The web app gains a menu item **"Unduh Aplikasi Offline"** (in `MENU_ITEMS`, web flavor only) anchoring a new home-page section. The section lists one card per platform (Windows, macOS, Linux, Android) whose download links point at the latest GitHub Release — resolved at runtime from `api.github.com/repos/muhammadhabibullah/tbs-lpdp/releases/latest` (CORS-open, unauthenticated) with a plain link to the releases page as fallback if the API call fails or is rate-limited. Each card carries a one-line warning of what its OS will say the first time; the **step-by-step install instructions for non-technical users in Bahasa Indonesia** are the release notes (`releaseBody` in `release-app.yml`), which every card and the section footnote link to. Section 6 below is the content source for those instructions. |
 | FE-43 | The site footer gains a block titled **"Open Source Code"** placed below the *Kontak* block in `FeedbackFooter.tsx`, linking to `https://github.com/muhammadhabibullah/tbs-lpdp` (opens in a new tab). Shown in both web and app flavors. |
 
 ### 3.4 Non-functional
@@ -155,9 +155,15 @@ Notes:
 3. First release: bump `web/src-tauri/tauri.conf.json` version, tag
    `app-v0.1.0`, push the tag; verify the drafted release, then publish it.
 
-## 6. Download-page install instructions (FE-42 content)
+## 6. Install instructions (FE-42 content)
 
-To be rendered per-platform, in Bahasa Indonesia, roughly:
+Rendered per-platform, in Bahasa Indonesia, in the **GitHub Release notes** —
+not on the home page. Only someone who has already downloaded a file needs
+them, they belong with the installers they describe, and four step-lists inline
+turned the download section into a manual. The home page keeps one line per
+platform naming the warning that OS shows, and links here.
+
+Roughly:
 
 - **Windows:** Unduh `...-setup.exe` → jalankan → jika muncul layar biru
   "Windows protected your PC", klik **More info** lalu **Run anyway** (aplikasi
@@ -175,9 +181,13 @@ To be rendered per-platform, in Bahasa Indonesia, roughly:
   *Install unknown apps* untuk browser Anda saat diminta → Install. Pembaruan
   cukup memasang APK versi baru di atasnya (data tersimpan aman).
 
-Each card ends with the same disclaimer: the app is unsigned because it is a
-free open-source project; verify you downloaded from
-`github.com/muhammadhabibullah/tbs-lpdp` only.
+The notes open with the same disclaimer the download section repeats once: the
+app is unsigned because it is a free open-source project; verify you downloaded
+from `github.com/muhammadhabibullah/tbs-lpdp` only.
+
+GitHub renders release notes with hard line breaks enabled, so each paragraph
+and list item in `releaseBody` is one source line however long — wrapping the
+YAML wraps the rendered page too.
 
 ## 7. Planned file changes
 
@@ -190,7 +200,7 @@ free open-source project; verify you downloaded from
 | `web/vite/bank-reader.ts` | Bank compilation extracted from `mock-bank-plugin.ts`; git-derived versions (AP-3, NF-32) |
 | `web/scripts/build-bank.ts` | CLI: emit `bank-<digest>.json` + `manifest.json` (validates via `validate_bank.py` first) |
 | `web/vite.config.ts` | Conditional `base` for Tauri builds (AP-1) |
-| `web/src/components/MenuBar.tsx`, `pages/HomePage.tsx` | "Unduh Aplikasi Offline" menu + section with runtime latest-release links and install steps (FE-42) |
+| `web/src/components/MenuBar.tsx`, `pages/HomePage.tsx` | "Unduh Aplikasi Offline" menu + section with runtime latest-release links (FE-42); install steps live in the release notes |
 | `web/src/components/FeedbackFooter.tsx` | "Open Source Code" block below Kontak (FE-43) |
 | `web/src/components/UpdateControls.tsx` | App-flavor: version display, bank refresh, app update check (AP-4, AP-6, AP-10) |
 | `.github/workflows/release-app.yml` | New: tag-triggered desktop matrix + Android build → GitHub Release (AP-8) |
@@ -210,9 +220,10 @@ free open-source project; verify you downloaded from
 | A-7 | Manifest with `bank_schema_version` above the app's | Bank not downloaded; "update the app" prompt shown; current bank keeps working |
 | A-8 | Inspect app bundle | No Supabase URL/key, no Turnstile key (C-31); updater pubkey present |
 | A-9 | Inspect Pages web bundle after deploy | No local engine, no answer keys (C-29); `bank/manifest.json` served with valid digest |
-| A-10 | Web home page | "Unduh Aplikasi Offline" menu scrolls to platform cards with working latest-release links and install steps; footer shows "Open Source Code" below Kontak |
+| A-10 | Web home page | "Unduh Aplikasi Offline" menu scrolls to platform cards with working latest-release links; per-platform install steps reachable from there in the release notes; footer shows "Open Source Code" below Kontak |
 | A-11 | Offline app UI | No download-app menu, no maintenance/CAPTCHA gates; local-statistics label; version line + both update actions visible |
 | A-12 | Two consecutive bank publishes with no content change | Identical `bank_version` (NF-32); apps report "sudah terbaru" |
+| A-13 | "Unduh PDF" on the review screen, desktop app | Native print dialog opens with the whole attempt — all three subtests, every question — and "Save as PDF" writes it. Button absent on Android |
 
 ## 9. Phased rollout
 
@@ -268,6 +279,26 @@ substitute for a Developer ID: §1's honest limit still holds, and Gatekeeper
 still requires **System Settings → Privacy & Security → Open Anyway**. Replacing
 `"-"` with a real identity is the only change needed if a membership is ever
 obtained.
+
+**"Unduh PDF" goes through the shell, and the print copy is always in the DOM.**
+The macOS WKWebView implements `window.print()` as a no-op, so FE-20's button
+did nothing in the app. The shell exposes one command, `print_page`, which calls
+`WebviewWindow::print` — `NSPrintOperation` on macOS, the GTK dialog on Linux,
+and `window.print()` on Windows, where it works. It is the app's own command,
+not a plugin's, so it needs no capability entry; only plugin commands and remote
+origins are ACL-gated. `WebviewWindow::print` is desktop-only and wry's Android
+implementation does nothing, so the command reports `false` there and
+`canPrint()` hides the button rather than leave it dead.
+
+That native dialog never reports back — no `afterprint`, and
+`runOperationModalForWindow` returns as soon as the sheet is up — so ReviewPage
+no longer swaps the full attempt into the DOM for the duration of a print. It
+renders `.print-body` up front, hidden outside `@media print`, and the on-screen
+list (one subtest, one filter) sits in a `.no-print` wrapper. Nothing to reset,
+nothing to get stuck; the browser's own Ctrl-P gets the same complete document,
+which it previously did not. The document title is set for the page's lifetime
+rather than around the call, because every print dialog reads the PDF filename
+from it at the moment it opens.
 
 **Reachable network endpoints are pinned twice** (C-31): by the CSP
 `connect-src` in `tauri.conf.json`, and by the opener scope in

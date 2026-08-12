@@ -428,15 +428,15 @@ a {
   padding: 26px 24px 34px;
 }
 
-/* Single column so every row shares one left edge; the top row is the only
-   thing that splits into two. */
 .site-footer-inner {
   max-width: 1080px;
   margin: 0 auto;
 }
 
 /* Text on the left, a contact card on the right — the right column is sized to
-   its content so the address never wraps mid-word. */
+   its content so the address never wraps mid-word. Each column runs its own
+   sub-block below the fold (Disclaimer / Open Source Code), which is what keeps
+   the two sides roughly level instead of leaving a hole under the shorter one. */
 .site-footer-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
@@ -505,7 +505,8 @@ a {
   color: var(--ink-faint) !important;
 }
 
-.site-footer-contact .btn {
+.site-footer-contact .btn,
+.site-footer-cta {
   margin-top: 14px;
 }
 
@@ -552,13 +553,20 @@ a {
   }
 }
 
+/* Same divider as `.site-footer-source` opposite it, so the two columns read
+   as one row of four blocks rather than four unrelated ones. */
+.site-footer-notes {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
 /* Unmarkered: the fine print sits flush with the heading above it, so the
    footer reads as one column rather than two indents. */
-.site-footer-notes {
-  margin: 16px 0 0;
+.site-footer-notes ul {
+  margin: 0;
   padding: 0;
   list-style: none;
-  max-width: 92ch;
   font-size: 12.5px;
   line-height: 1.6;
   color: var(--ink-faint);
@@ -2063,19 +2071,14 @@ button.package-badge {
   font-size: 13px;
 }
 
-/* Four platforms in a fixed 2×2: the install steps are prose, and an auto-fit
-   grid drops them into columns too narrow to read (and leaves an orphan card). */
+/* Four platforms across one row. The cards now hold links rather than prose —
+   the install steps live in the release notes — so they take a narrow column
+   happily, and the section stays one screenful. */
 .download-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
   gap: 16px;
   margin-top: 18px;
-}
-
-@media (max-width: 767px) {
-  .download-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .download-card {
@@ -2091,15 +2094,6 @@ button.package-badge {
   margin: 0;
   font-size: 16px;
   color: var(--navy-700, #0d2280);
-}
-
-.download-card h4 {
-  margin: 16px 0 6px;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #2f3743;
 }
 
 .download-subtitle {
@@ -2118,26 +2112,9 @@ button.package-badge {
   opacity: 0.75;
 }
 
-.download-steps {
-  margin: 0;
-  padding-left: 20px;
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--ink-soft);
-}
-
-.download-steps li + li {
-  margin-top: 7px;
-}
-
-.download-steps code {
-  font-size: 12px;
-  word-break: break-word;
-}
-
-/* Pinned to the bottom of the card so the four disclaimers line up even when
-   the step lists differ in length. */
-.download-disclaimer {
+/* Pinned to the bottom so the four notes line up even when a card carries
+   three download buttons and its neighbour carries one. */
+.download-note {
   margin-top: auto;
   padding-top: 12px;
   font-size: 12px;
@@ -2145,6 +2122,17 @@ button.package-badge {
   color: var(--ink-faint);
 }
 
+/* One disclaimer for the whole section, not four — it said the same thing in
+   every card. Two classes, to outrank `.download-app > p`'s size and colour. */
+.download-app > .download-footnote {
+  margin: 16px 0 0;
+  max-width: 78ch;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--ink-faint);
+}
+
+.download-footnote a,
 .download-card p a {
   color: var(--navy-600);
   font-weight: 600;
@@ -2620,12 +2608,14 @@ button.package-badge {
 }
 
 /* ------------------------------------------------------------------ print -- */
-/* FE-20: "Unduh PDF" is the browser's own print dialog with Save as PDF, so the
-   PDF is whatever this stylesheet says. The page is rebuilt as a document:
-   navigation, filters and every control disappear, and the review expands to
-   the whole attempt (ReviewPage renders all sections while `printing`). */
+/* FE-20: "Unduh PDF" is the platform print dialog with Save as PDF, so the PDF
+   is whatever this stylesheet says. The page is rebuilt as a document:
+   navigation, filters and every control disappear, and the on-screen review —
+   one subtest, one filter — gives way to `.print-body`, which ReviewPage keeps
+   in the document holding the whole attempt. */
 
-.print-header {
+.print-header,
+.print-body {
   display: none;
 }
 
@@ -2675,6 +2665,10 @@ button.package-badge {
 
   .card + .card {
     margin-top: 10mm;
+  }
+
+  .print-body {
+    display: block;
   }
 
   .print-header {

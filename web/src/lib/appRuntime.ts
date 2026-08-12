@@ -37,6 +37,29 @@ export async function openExternal(url: string): Promise<void> {
   window.open(url, '_blank', 'noopener,noreferrer')
 }
 
+/**
+ * True where FE-20's "Unduh PDF" can actually open a print dialog. The Android
+ * WebView has no print path Tauri can reach, so the button is hidden there
+ * rather than left to do nothing.
+ */
+export function canPrint(): boolean {
+  return !isAndroidApp()
+}
+
+/**
+ * FE-20: opens the platform print dialog, whose "Save as PDF" is the download.
+ * In the app this has to go through the shell — the macOS WKWebView implements
+ * `window.print()` as a no-op, which is why the button appeared dead there.
+ */
+export async function printPage(): Promise<void> {
+  if (!isTauri()) {
+    window.print()
+    return
+  }
+  const { invoke } = await import('@tauri-apps/api/core')
+  await invoke<boolean>('print_page')
+}
+
 /** The installed app's semver (AP-10). Null outside the app shell. */
 export async function getAppVersion(): Promise<string | null> {
   if (!isTauri()) return null

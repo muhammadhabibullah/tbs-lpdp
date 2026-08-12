@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react'
-import type { ReactNode } from 'react'
 import { LATEST_RELEASE_API, RELEASES_URL, REPO_URL } from '../lib/appRuntime'
 import { externalLinkProps } from './FeedbackFooter'
 
@@ -9,9 +8,10 @@ import { externalLinkProps } from './FeedbackFooter'
  * release needs no site rebuild. If the call fails or is rate-limited, every
  * card falls back to the releases page, which is never wrong, only slower.
  *
- * v6 §6 is the source for the install steps: they exist because the installers
- * are unsigned, and a non-technical user meeting Gatekeeper or SmartScreen with
- * no explanation simply gives up.
+ * The per-platform install steps (v6 §6) live in the release notes, not here:
+ * they are only read by someone who has already downloaded a file, they are
+ * versioned with the installers they describe, and four step-lists inline turn
+ * the home page into a manual. Each card links to them instead.
  */
 
 interface ReleaseAsset {
@@ -43,7 +43,8 @@ interface PlatformCard {
   subtitle: string
   /** Primary download, plus any secondary formats worth offering. */
   find: (assets: ReleaseAsset[]) => { label: string; asset: ReleaseAsset | null }[]
-  steps: ReactNode[]
+  /** One line on what the OS will say the first time — the rest is in the notes. */
+  note: string
 }
 
 const PLATFORMS: PlatformCard[] = [
@@ -53,20 +54,7 @@ const PLATFORMS: PlatformCard[] = [
     title: 'Windows',
     subtitle: 'Windows 10 atau 11, 64-bit',
     find: (assets) => [{ label: 'Unduh pemasang (.exe)', asset: pick(assets, (n) => n.endsWith('.exe')) }],
-    steps: [
-      <>
-        Unduh berkas <code>…-setup.exe</code>, lalu klik dua kali berkas hasil unduhan.
-      </>,
-      <>
-        Jika muncul layar biru <strong>“Windows protected your PC”</strong>, klik <strong>More info</strong> lalu{' '}
-        <strong>Run anyway</strong>. Aplikasi ini belum memiliki sertifikat berbayar dari Microsoft — bukan berarti
-        berbahaya; kode sumbernya terbuka dan dapat Anda periksa sendiri.
-      </>,
-      <>Ikuti langkah pemasang sampai selesai.</>,
-      <>
-        Aplikasi muncul di <strong>Start Menu</strong> dengan nama <strong>TBS LPDP Try Out</strong>.
-      </>,
-    ],
+    note: 'Windows menampilkan layar biru “Windows protected your PC” pada pemasangan pertama.',
   },
   {
     id: 'macos',
@@ -83,25 +71,7 @@ const PLATFORMS: PlatformCard[] = [
         asset: pick(assets, (n) => n.endsWith('.dmg') && (n.includes('x64') || n.includes('x86_64'))),
       },
     ],
-    steps: [
-      <>
-        Unduh berkas <code>.dmg</code> sesuai jenis prosesor Mac Anda (menu  → About This Mac).
-      </>,
-      <>
-        Buka berkas tersebut, lalu seret ikon aplikasi ke folder <strong>Applications</strong>.
-      </>,
-      <>
-        Saat pertama dibuka, macOS menahan aplikasi yang tidak bersertifikat berbayar Apple. Buka{' '}
-        <strong>System Settings → Privacy &amp; Security</strong>, gulir ke bawah, lalu klik{' '}
-        <strong>Open Anyway</strong>. Pada macOS 14 ke bawah, klik kanan ikon aplikasi →{' '}
-        <strong>Open</strong> juga bisa.
-      </>,
-      <>
-        Jika muncul pesan <strong>“… is damaged and can’t be opened”</strong>, itu penanda karantina
-        unduhan — berkasnya tidak rusak. Buka <strong>Terminal</strong>, jalankan{' '}
-        <code>xattr -cr &quot;/Applications/TBS LPDP Try Out.app&quot;</code>, lalu buka lagi aplikasinya.
-      </>,
-    ],
+    note: 'macOS menahan aplikasi tanpa tanda tangan Apple pada pembukaan pertama, kadang dengan pesan “is damaged”.',
   },
   {
     id: 'linux',
@@ -113,20 +83,7 @@ const PLATFORMS: PlatformCard[] = [
       { label: 'Unduh .deb (Debian/Ubuntu)', asset: pick(assets, (n) => n.endsWith('.deb')) },
       { label: 'Unduh .rpm (Fedora)', asset: pick(assets, (n) => n.endsWith('.rpm')) },
     ],
-    steps: [
-      <>
-        Unduh berkas <code>.AppImage</code>.
-      </>,
-      <>
-        Klik kanan berkas → <strong>Properties</strong> → centang <strong>Executable</strong> (atau jalankan{' '}
-        <code>chmod +x nama-berkas.AppImage</code> di terminal).
-      </>,
-      <>Klik dua kali berkas tersebut untuk menjalankan aplikasi.</>,
-      <>
-        Pengguna Debian/Ubuntu dapat memakai berkas <code>.deb</code>, dan Fedora <code>.rpm</code>. Perlu dicatat:{' '}
-        <strong>pembaruan otomatis hanya tersedia pada AppImage</strong>; paket .deb/.rpm harus diperbarui manual.
-      </>,
-    ],
+    note: 'AppImage perlu ditandai executable, dan hanya AppImage yang menerima pembaruan otomatis.',
   },
   {
     id: 'android',
@@ -134,19 +91,7 @@ const PLATFORMS: PlatformCard[] = [
     title: 'Android',
     subtitle: 'Android 7.0 ke atas, 64-bit (arm64)',
     find: (assets) => [{ label: 'Unduh .apk', asset: pick(assets, (n) => n.endsWith('.apk')) }],
-    steps: [
-      <>
-        Unduh berkas <code>.apk</code> langsung di perangkat Android Anda.
-      </>,
-      <>Buka berkas hasil unduhan (dari notifikasi unduhan atau aplikasi Files).</>,
-      <>
-        Saat diminta, izinkan <strong>“Install unknown apps”</strong> / <strong>“Instal dari sumber tidak dikenal”</strong>{' '}
-        untuk browser yang Anda pakai, lalu kembali dan tekan <strong>Install</strong>.
-      </>,
-      <>
-        Pembaruan cukup dengan memasang APK versi baru di atas yang lama — riwayat dan jawaban Anda tetap tersimpan.
-      </>,
-    ],
+    note: 'Android meminta izin “Instal dari sumber tidak dikenal” untuk browser yang Anda pakai.',
   },
 ]
 
@@ -258,22 +203,19 @@ export default function DownloadApp() {
                 )}
               </div>
 
-              <h4>Cara memasang</h4>
-              <ol className="download-steps">
-                {platform.steps.map((step, index) => (
-                  <li key={index}>{step}</li>
-                ))}
-              </ol>
-
-              <p className="download-disclaimer">
-                Aplikasi ini <strong>belum bertanda tangan digital berbayar</strong> karena merupakan proyek gratis dan
-                terbuka, sehingga sistem operasi dapat menampilkan peringatan. Pastikan Anda hanya mengunduh dari{' '}
-                <a {...externalLinkProps(REPO_URL)}>github.com/muhammadhabibullah/tbs-lpdp</a>.
-              </p>
+              <p className="download-note">{platform.note}</p>
             </article>
           )
         })}
       </div>
+
+      <p className="download-footnote">
+        Aplikasi ini <strong>belum bertanda tangan digital berbayar</strong> karena merupakan proyek gratis dan terbuka,
+        sehingga sistem operasi menampilkan peringatan saat pertama dipasang — bukan berarti berbahaya.{' '}
+        <a {...externalLinkProps(release?.page ?? RELEASES_URL)}>Petunjuk pemasangan langkah demi langkah</a> tersedia
+        di catatan rilis, lengkap untuk keempat sistem operasi. Pastikan Anda hanya mengunduh dari{' '}
+        <a {...externalLinkProps(REPO_URL)}>github.com/muhammadhabibullah/tbs-lpdp</a>.
+      </p>
     </section>
   )
 }
