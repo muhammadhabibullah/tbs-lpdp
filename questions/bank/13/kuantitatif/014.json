@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-014",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 14,
+  "type": "deret_angka",
+  "question_text": "6, 8, 13, 21, ..., ..., 63 Dua bilangan yang tepat untuk mengisi titik-titik tersebut berturut-turut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "29, 37"
+    },
+    {
+      "key": "B",
+      "text": "20, 34"
+    },
+    {
+      "key": "C",
+      "text": "46, 32"
+    },
+    {
+      "key": "D",
+      "text": "46, 63"
+    },
+    {
+      "key": "E",
+      "text": "32, 46"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Pasangan ini diperoleh dengan menganggap selisih deret tetap sebesar selisih dua suku tercetak terakhir (8), yang tidak membawa deret sampai ke suku terakhir.",
+    "B": "Salah. Pasangan ini diperoleh dengan membaca deret ini sebagai dua deret berselang-seling, masing-masing dilanjutkan dari suku sejenisnya.",
+    "C": "Salah. Pasangan ini diperoleh dengan menemukan kedua bilangan dengan benar tetapi menuliskannya terbalik.",
+    "D": "Salah. Pasangan ini diperoleh dengan menggeser jawaban satu suku, sehingga titik-titik diisi dengan suku keenam dan suku ketujuh — padahal suku ketujuh sudah tercetak.",
+    "E": "Benar. Selisih antarsuku bertambah tetap 3: 2, 5, 8, dan seterusnya. Selisih berikutnya adalah 17, sehingga suku berikutnya 46 + 17 = 63. Dua bilangan yang hilang adalah 32 dan 46; suku terakhir yang tercetak (63) mengonfirmasi pola tersebut."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

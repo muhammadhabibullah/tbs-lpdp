@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-006",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 6,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nDiketahui x = 5.\nP = 2x\nQ = 6x + 3\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Jumlah P dan Q kurang daripada 38"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. P = 10 dan Q = 33, sehingga Q > P; nilai P tidak melebihi nilai Q (10 tidak lebih besar daripada 33).",
+    "B": "Benar. P = 10 dan Q = 33, sehingga Q > P.",
+    "C": "Salah. P = 10 dan Q = 33, sehingga Q > P; kedua nilai tidak sama (10 ≠ 33).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 10 dan Q = 33), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 10 dan Q = 33, jumlahnya 43, tidak kurang daripada 38."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

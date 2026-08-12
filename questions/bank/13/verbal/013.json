@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-013",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "PREMIS : SIMPULAN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Fakta : Opini"
+    },
+    {
+      "key": "B",
+      "text": "Data : Grafik"
+    },
+    {
+      "key": "C",
+      "text": "Bukti : Sanggahan"
+    },
+    {
+      "key": "D",
+      "text": "Pertanyaan : Diskusi"
+    },
+    {
+      "key": "E",
+      "text": "Hipotesis : Teori"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Opini tidak selalu diturunkan dari fakta melalui proses penalaran yang terstruktur.",
+    "B": "Grafik hanyalah bentuk penyajian data, bukan hasil penalaran dari data.",
+    "C": "Sanggahan justru menentang bukti, bukan hasil yang diturunkan dari bukti.",
+    "D": "Diskusi dapat dipicu oleh pertanyaan, tetapi bukan simpulan yang diturunkan secara logis.",
+    "E": "Benar. Simpulan diturunkan dari premis melalui penalaran, sebagaimana teori diturunkan dari hipotesis yang telah diuji; keduanya menyatakan hubungan dasar penalaran dan hasil yang diturunkan."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

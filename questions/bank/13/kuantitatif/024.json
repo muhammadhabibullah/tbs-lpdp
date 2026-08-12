@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-024",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar juring lingkaran di atas. Sebuah taman berbentuk juring lingkaran dengan jari-jari 35 m dan sudut pusat 72°. Luas taman tersebut adalah ... (π = 22/7)",
+  "image": "images/juring.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "44 m²"
+    },
+    {
+      "key": "B",
+      "text": "385 m²"
+    },
+    {
+      "key": "C",
+      "text": "770 m²"
+    },
+    {
+      "key": "D",
+      "text": "1.540 m²"
+    },
+    {
+      "key": "E",
+      "text": "3.850 m²"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. 44 adalah panjang busur juring (72/360 × 2 × 22/7 × 35 = 44 m), bukan luasnya.",
+    "B": "Salah. 385 m² diperoleh bila sudut pusat dihitung 36° (setengah dari 72°): 36/360 × 22/7 × 35 × 35 = 385.",
+    "C": "Benar. Luas juring = 72/360 × π × r² = 1/5 × 22/7 × 35 × 35 = 1/5 × 3.850 = 770 m².",
+    "D": "Salah. 1.540 m² diperoleh bila sudut pusat digandakan menjadi 144°: 144/360 × 3.850 = 1.540.",
+    "E": "Salah. 3.850 m² adalah luas lingkaran penuh (22/7 × 35 × 35), tanpa memperhitungkan bagian juring."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

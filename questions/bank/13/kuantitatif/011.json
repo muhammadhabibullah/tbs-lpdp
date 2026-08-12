@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-011",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 11,
+  "type": "aljabar",
+  "question_text": "Diketahui 3x − 3y = 12 dan 3x + y = 16. Nilai dari 3x + 3y adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "15"
+    },
+    {
+      "key": "B",
+      "text": "18"
+    },
+    {
+      "key": "C",
+      "text": "3"
+    },
+    {
+      "key": "D",
+      "text": "12"
+    },
+    {
+      "key": "E",
+      "text": "6"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 15 diperoleh dengan hanya menghitung 3x dan mengabaikan suku 3y.",
+    "B": "Benar. Menyelesaikan kedua persamaan diperoleh x = 5 dan y = 1, sehingga 3x + 3y = 3 × (5 + 1) = 18.",
+    "C": "Salah. Nilai 3 diperoleh dengan hanya menghitung 3y dan mengabaikan suku 3x.",
+    "D": "Salah. Nilai 12 diperoleh dengan menghitung 3x − 3y, yaitu selisihnya, bukan jumlahnya.",
+    "E": "Salah. Nilai 6 diperoleh dengan berhenti pada x + y dan lupa mengalikannya dengan 3."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

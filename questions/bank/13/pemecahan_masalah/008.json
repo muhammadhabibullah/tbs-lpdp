@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-008",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah pusat layanan pelanggan menetapkan standar operasional berikut: (1) keluhan gangguan layanan total wajib ditangani terlebih dahulu sebelum seluruh keluhan jenis lain; (2) dalam jenis keluhan yang sama, keluhan ditangani berdasarkan waktu masuk paling awal; (3) keluhan pelanggan premium diprioritaskan hanya di dalam jenis keluhan yang sama; (4) keluhan kesalahan tagihan ditangani sebelum permintaan fitur. Pada pukul 08.00 terdapat empat keluhan yang menunggu: W masuk pukul 07.50 dari pelanggan premium berupa kesalahan tagihan; X masuk pukul 07.55 dari pelanggan reguler berupa gangguan layanan total; Y masuk pukul 07.40 dari pelanggan reguler berupa gangguan layanan total; dan Z masuk pukul 08.00 dari pelanggan premium berupa permintaan fitur. Keluhan yang ditangani pada urutan ketiga adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Y"
+    },
+    {
+      "key": "B",
+      "text": "X"
+    },
+    {
+      "key": "C",
+      "text": "W"
+    },
+    {
+      "key": "D",
+      "text": "Z"
+    },
+    {
+      "key": "E",
+      "text": "X atau W, bergantung pada status keanggotaan pelanggan"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Y memang ditangani pertama (gangguan layanan total dengan waktu masuk paling awal sesuai aturan 1 dan 2), tetapi soal menanyakan urutan ketiga.",
+    "B": "X ditangani pada urutan kedua: termasuk kelompok gangguan layanan total (aturan 1) dan masuk setelah Y (aturan 2). Menganggap X urutan ketiga berarti keliru menerapkan aturan 2 mendahului aturan 1.",
+    "C": "Benar. Aturan (1) diterapkan paling dulu sehingga kelompok gangguan layanan total {Y, X} diselesaikan lebih dahulu dengan urutan Y lalu X menurut aturan (2); status premium tidak mengubah urutan karena aturan (3) hanya berlaku dalam jenis yang sama. Sisa {W, Z} berbeda jenis, dan aturan (4) menempatkan W (kesalahan tagihan) sebelum Z (permintaan fitur). Urutan lengkap: Y, X, W, Z, sehingga urutan ketiga adalah W.",
+    "D": "Z ditangani paling akhir karena permintaan fitur menempati prioritas terakhir menurut aturan (4).",
+    "E": "Salah. Aturan (3) hanya berlaku di dalam jenis keluhan yang sama, sedangkan W dan Z berbeda jenis sehingga urutan keduanya murni ditentukan aturan (4), tanpa bergantung pada status keanggotaan."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

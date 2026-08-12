@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-020",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Pernyataan berikut yang tidak sesuai dengan isi bacaan adalah ...",
+  "image": null,
+  "passage": "Kemampuan literasi digital kini mulai diperkenalkan sejak jenjang sekolah dasar. Melalui literasi digital, siswa tidak hanya diajarkan cara menggunakan perangkat teknologi, tetapi juga cara menilai informasi yang mereka temui di internet. Langkah ini dinilai penting karena anak-anak semakin cepat bersentuhan dengan gawai dan berbagai layanan digital. Guru membimbing siswa untuk membedakan informasi yang benar dari berita bohong, serta mengajarkan etika berkomunikasi di ruang digital.\n\nPenerapan literasi digital di sekolah dasar menghadapi sejumlah tantangan. Keterbatasan perangkat dan akses internet yang belum merata membuat sebagian sekolah harus berbagi perangkat dalam satu kelas. Selain itu, belum semua guru mendapatkan pelatihan khusus tentang pendampingan digital. Meskipun demikian, berbagai kajian menunjukkan bahwa pengenalan literasi digital sejak dini membantu siswa lebih kritis dalam menerima informasi dan lebih bijak dalam menggunakan media sosial di kemudian hari.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Siswa diajarkan cara menilai informasi yang ditemui di internet."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian sekolah harus berbagi perangkat karena keterbatasan."
+    },
+    {
+      "key": "C",
+      "text": "Belum semua guru memperoleh pelatihan khusus pendampingan digital."
+    },
+    {
+      "key": "D",
+      "text": "Seluruh guru sekolah dasar telah mengikuti pelatihan pendampingan digital."
+    },
+    {
+      "key": "E",
+      "text": "Pengenalan literasi digital sejak dini membantu siswa lebih kritis."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Pernyataan ini sesuai karena paragraf pertama menyebut siswa diajarkan cara menilai informasi di internet.",
+    "B": "Pernyataan ini sesuai karena paragraf kedua menyebut sebagian sekolah harus berbagi perangkat dalam satu kelas.",
+    "C": "Pernyataan ini sesuai karena paragraf kedua menyatakan belum semua guru mendapatkan pelatihan khusus.",
+    "D": "Benar. Pernyataan ini tidak sesuai karena bacaan justru menyatakan belum semua guru mendapatkan pelatihan khusus pendampingan digital.",
+    "E": "Pernyataan ini sesuai karena paragraf kedua menyebut siswa menjadi lebih kritis dalam menerima informasi."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

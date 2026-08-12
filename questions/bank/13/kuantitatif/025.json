@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-025",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar limas segiempat di atas. Alas limas berbentuk persegi dengan panjang sisi 12 cm dan tinggi limas 8 cm. Luas permukaan limas tersebut adalah ...",
+  "image": "images/limas-segiempat.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "192 cm²"
+    },
+    {
+      "key": "B",
+      "text": "240 cm²"
+    },
+    {
+      "key": "C",
+      "text": "336 cm²"
+    },
+    {
+      "key": "D",
+      "text": "384 cm²"
+    },
+    {
+      "key": "E",
+      "text": "432 cm²"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. 4 × 1/2 × 12 × 8 = 192 cm² diperoleh bila tinggi limas dipakai langsung sebagai tinggi sisi tegak dan alas tidak ditambahkan.",
+    "B": "Salah. 240 cm² hanya luas selimut (4 × 1/2 × 12 × 10), tanpa luas alas 12 × 12 = 144 cm².",
+    "C": "Salah. 192 + 144 = 336 cm² muncul bila tinggi limas 8 cm dipakai sebagai tinggi sisi tegak, padahal tinggi sisi tegak adalah √(8² + 6²) = 10 cm.",
+    "D": "Benar. Tinggi sisi tegak = √(8² + 6²) = 10 cm, sehingga luas selimut = 4 × 1/2 × 12 × 10 = 240 cm² dan luas permukaan = 240 + 12 × 12 = 384 cm².",
+    "E": "Salah. 288 + 144 = 432 cm² muncul bila panjang sisi alas 12 cm dipakai sebagai tinggi sisi tegak: 4 × 1/2 × 12 × 12 = 288 cm²."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-017",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat yang paling efektif dan sesuai dengan kaidah bahasa Indonesia adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Para ibu-ibu sekalian mengikuti penyuluhan kesehatan di balai desa."
+    },
+    {
+      "key": "B",
+      "text": "Laporan keuangan tahunan itu telah diaudit oleh akuntan publik."
+    },
+    {
+      "key": "C",
+      "text": "Dalam musyawarah desa memutuskan untuk membangun irigasi baru."
+    },
+    {
+      "key": "D",
+      "text": "Bagi para siswa-siswa diharapkan segera berkumpul di lapangan."
+    },
+    {
+      "key": "E",
+      "text": "Ia masuk ke dalam ruangan itu lalu kemudian duduk di barisan paling depan."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Kalimat ini tidak hemat karena menggunakan tiga penanda jamak sekaligus, yaitu para, ibu-ibu, dan sekalian.",
+    "B": "Benar. Kalimat ini memiliki subjek dan predikat yang jelas, hemat kata, dan penulisannya sesuai PUEBI.",
+    "C": "Kalimat ini kehilangan subjek karena frasa keterangan Dalam musyawarah desa ditempatkan di depan predikat tanpa subjek yang jelas.",
+    "D": "Kalimat ini tidak bersubjek karena kata Bagi mengaburkan pelaku, dan para siswa-siswa merupakan pemborosan kata.",
+    "E": "Kalimat ini boros kata karena masuk ke dalam cukup ditulis masuk dan lalu kemudian cukup salah satu."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-021",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Sebuah kereta berangkat dari stasiun A pukul 07.15 dan tiba di stasiun B pukul 10.45. Jika kecepatan rata-rata kereta tersebut 80 km/jam, jarak stasiun A ke stasiun B adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "220 km"
+    },
+    {
+      "key": "B",
+      "text": "240 km"
+    },
+    {
+      "key": "C",
+      "text": "260 km"
+    },
+    {
+      "key": "D",
+      "text": "280 km"
+    },
+    {
+      "key": "E",
+      "text": "320 km"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. 80 × 2,75 = 220 km diperoleh bila lama perjalanan dihitung 2 jam 45 menit, misalnya karena waktu berangkat dibulatkan menjadi pukul 08.00.",
+    "B": "Salah. 80 × 3 = 240 km diperoleh bila lama perjalanan dibulatkan menjadi 3 jam.",
+    "C": "Salah. 80 × 3,25 = 260 km diperoleh bila lama perjalanan dihitung 3 jam 15 menit, yaitu memakai 15 menit dari waktu berangkat dan bukan selisih 45 − 15 = 30 menit.",
+    "D": "Benar. Lama perjalanan 07.15 sampai 10.45 adalah 3 jam 30 menit = 3,5 jam, sehingga jarak = 80 × 3,5 = 280 km.",
+    "E": "Salah. 80 × 4 = 320 km diperoleh bila lama perjalanan dihitung sampai pukul 11.15."
+  },
+  "difficulty": "easy",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

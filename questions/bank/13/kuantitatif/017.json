@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-017",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 17,
+  "type": "deret_huruf",
+  "question_text": "Y, P, I, ..., A Huruf yang tepat untuk mengisi titik-titik tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "D"
+    },
+    {
+      "key": "B",
+      "text": "F"
+    },
+    {
+      "key": "C",
+      "text": "C"
+    },
+    {
+      "key": "D",
+      "text": "B"
+    },
+    {
+      "key": "E",
+      "text": "E"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Posisi huruf mengikuti kuadrat menurun: Y=25=5², P=16=4², I=9=3², D=4=2², dan A=1=1². Jadi huruf yang hilang adalah D.",
+    "B": "Salah. Mengurangi posisi I sebesar 3, padahal pola kuadrat memerlukan langkah I(9) − 5 = D(4).",
+    "C": "Salah. Menggunakan 2² − 1 dan bergeser satu posisi dari D.",
+    "D": "Salah. Langsung memilih posisi 2, bukan kuadratnya 2².",
+    "E": "Salah. Mengurangi posisi I sebanyak 4 tetapi tidak memakai posisi 2²."
+  },
+  "difficulty": "hard",
+  "source": "deret_huruf.py",
+  "verified": true
+}

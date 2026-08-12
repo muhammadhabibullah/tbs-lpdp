@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-010",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "aljabar",
+  "question_text": "Jika y = 3x² − 3x − 5, nilai y untuk x = −3 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−23"
+    },
+    {
+      "key": "B",
+      "text": "41"
+    },
+    {
+      "key": "C",
+      "text": "−14"
+    },
+    {
+      "key": "D",
+      "text": "13"
+    },
+    {
+      "key": "E",
+      "text": "31"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai −23 diperoleh dengan menganggap (−3)² bernilai negatif, padahal kuadrat bilangan negatif selalu positif.",
+    "B": "Salah. Nilai 41 diperoleh dengan salah tanda pada tetapan − 5.",
+    "C": "Salah. Nilai −14 diperoleh dengan membaca 3x² sebagai 3 × 2 × x sehingga pangkat dua berubah menjadi perkalian dua.",
+    "D": "Salah. Nilai 13 diperoleh dengan salah tanda pada suku − 3x ketika mensubstitusikan x = −3.",
+    "E": "Benar. y = 3 × (−3)² − 3 × (−3) − 5 = 27 + 9 − 5 = 31."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

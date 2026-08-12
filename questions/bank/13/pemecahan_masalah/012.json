@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-012",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Sebuah pekerjaan perbaikan jalan dapat diselesaikan oleh Tim A sendirian dalam 24 hari, atau oleh Tim B sendirian dalam 36 hari. Kedua tim bekerja bersama-sama selama 6 hari, kemudian Tim B dipindahkan ke proyek lain sehingga pekerjaan dilanjutkan oleh Tim A sendirian sampai selesai. Waktu total yang dibutuhkan untuk menyelesaikan seluruh pekerjaan tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "14,4 hari"
+    },
+    {
+      "key": "B",
+      "text": "24 hari"
+    },
+    {
+      "key": "C",
+      "text": "27 hari"
+    },
+    {
+      "key": "D",
+      "text": "20 hari"
+    },
+    {
+      "key": "E",
+      "text": "25,2 hari"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 72 : 5 = 14,4 hari diperoleh jika kedua tim dianggap bekerja bersama sampai selesai; padahal setelah 6 hari Tim B berhenti sehingga sisa pekerjaan hanya dikerjakan Tim A.",
+    "B": "Salah. Nilai 24 hari muncul jika kontribusi Tim B selama 6 hari pertama diabaikan (dianggap hanya Tim A yang bekerja, sehingga baru 6 : 24 = 1/4 bagian selesai), lalu sisa 3/4 dikerjakan Tim A selama 18 hari; seharusnya 6 hari pertama dikerjakan kedua tim.",
+    "C": "Salah. Nilai 27 hari muncul jika sisa pekerjaan dianggap dilanjutkan oleh Tim B sendirian: sisa 7/12 bagian dikerjakan Tim B selama 7/12 × 36 = 21 hari, sehingga 6 + 21 = 27 hari; soal menyatakan yang melanjutkan adalah Tim A.",
+    "D": "Benar. Kecepatan Tim A = 1/24 dan Tim B = 1/36 bagian per hari, sehingga bersama-sama 1/24 + 1/36 = 5/72 bagian per hari. Dalam 6 hari selesai 6 × 5/72 = 5/12 bagian; sisa 1 − 5/12 = 7/12 bagian dikerjakan Tim A selama 7/12 : 1/24 = 14 hari. Waktu total 6 + 14 = 20 hari.",
+    "E": "Salah. Nilai 25,2 hari muncul jika laju gabungan dihitung keliru dengan menjumlahkan penyebut, 1/24 + 1/36 dianggap 1/30; hasil yang benar adalah 5/72 bagian per hari."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

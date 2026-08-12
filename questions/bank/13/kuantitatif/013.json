@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-013",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 13,
+  "type": "deret_angka",
+  "question_text": "15, 45, 36, 12, 21, 63, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "54, 63"
+    },
+    {
+      "key": "B",
+      "text": "54, 18"
+    },
+    {
+      "key": "C",
+      "text": "72, 216"
+    },
+    {
+      "key": "D",
+      "text": "45, 15"
+    },
+    {
+      "key": "E",
+      "text": "189, 180"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Bilangan pertama sudah tepat, tetapi bilangan kedua menambahkan 9; sesudah −9 seharusnya dibagi 3.",
+    "B": "Benar. Operasi berulang dalam siklus ×3, −9, :3, +9. Suku terakhir tercetak diperoleh melalui ×3, sehingga langkah berikutnya adalah −9: 63 − 9 = 54. Setelah itu deret dibagi 3, sehingga 54 : 3 = 18.",
+    "C": "Salah. Pasangan ini memakai +9 lalu ×3, sehingga urutan siklus bergeser dua langkah.",
+    "D": "Salah. Pasangan ini mengurangkan 9 dua kali sebelum membagi, padahal setiap operasi muncul satu kali per siklus.",
+    "E": "Salah. Pasangan ini mengulang ×3 sebelum −9, padahal suku terakhir tercetak sudah diperoleh melalui perkalian."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

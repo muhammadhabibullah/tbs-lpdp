@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-005",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "Hasil dari (1/2 + 2/5) × 20 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "8,5"
+    },
+    {
+      "key": "B",
+      "text": "10,4"
+    },
+    {
+      "key": "C",
+      "text": "20,9"
+    },
+    {
+      "key": "D",
+      "text": "18"
+    },
+    {
+      "key": "E",
+      "text": "4"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 8,5 diperoleh dengan mengalikan hanya pecahan kedua dengan 20 sehingga sifat distributif tidak diterapkan.",
+    "B": "Salah. Nilai 10,4 diperoleh dengan mengalikan hanya pecahan pertama dengan 20, lalu menambahkan 2/5 yang belum dikalikan.",
+    "C": "Salah. Nilai 20,9 diperoleh dengan menambahkan 20 alih-alih mengalikannya.",
+    "D": "Benar. (1/2 + 2/5) × 20 = 9/10 × 20 = 18.",
+    "E": "Salah. Nilai 4 diperoleh dengan mengalikan kedua pecahan, bukan menjumlahkannya lebih dahulu."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

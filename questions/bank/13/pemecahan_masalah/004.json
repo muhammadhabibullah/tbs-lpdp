@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-004",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Lima tugas pemeliharaan (M, N, O, P, Q) masing-masing dikerjakan tepat pada satu hari kerja, dari Senin sampai Jumat. Diketahui: (1) M dikerjakan pada hari Rabu, (2) N dikerjakan satu hari sebelum M, (3) Q dikerjakan sebelum P, dan (4) O tidak dikerjakan pada hari Senin. Pernyataan yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Q dikerjakan pada hari Senin"
+    },
+    {
+      "key": "B",
+      "text": "O dikerjakan pada hari Kamis"
+    },
+    {
+      "key": "C",
+      "text": "P dikerjakan pada hari Jumat"
+    },
+    {
+      "key": "D",
+      "text": "N dikerjakan pada hari Rabu"
+    },
+    {
+      "key": "E",
+      "text": "M dikerjakan setelah P"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. M=Rabu (kendala 1) sehingga N=Selasa (kendala 2). Tersisa Senin, Kamis, dan Jumat untuk O, P, Q. Karena O tidak pada hari Senin (kendala 4), hari Senin harus diisi P atau Q; dan karena Q sebelum P (kendala 3), satu-satunya kemungkinan adalah Q pada hari Senin.",
+    "B": "Tidak pasti benar. O dapat dikerjakan pada hari Kamis (jika P Jumat) atau pada hari Jumat (jika P Kamis); keduanya memenuhi semua kendala.",
+    "C": "Tidak pasti benar. P dapat dikerjakan pada hari Kamis (jika O Jumat) atau pada hari Jumat (jika O Kamis).",
+    "D": "Salah. Karena M pada hari Rabu dan N dikerjakan satu hari sebelumnya, N pasti dikerjakan pada hari Selasa.",
+    "E": "Salah. M dikerjakan pada hari Rabu, sedangkan P dikerjakan setelah Q yang menempati hari Senin, sehingga P jatuh pada hari Kamis atau Jumat; M selalu sebelum P."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

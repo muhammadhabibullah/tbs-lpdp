@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-009",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Tabel di atas menyajikan data fiktif peserta seleksi pelatihan di beberapa kota. Berdasarkan tabel tersebut, kota manakah yang memiliki jumlah peserta paling banyak?",
+  "image": null,
+  "passage": "Kota | Jumlah Peserta | Lulus\nBandung | 320 | 208\nSurabaya | 410 | 262\nMedan | 180 | 95\nMakassar | 240 | 150\nSemarang | 275 | 168\nDenpasar | 150 | 88",
+  "options": [
+    {
+      "key": "A",
+      "text": "Surabaya"
+    },
+    {
+      "key": "B",
+      "text": "Bandung"
+    },
+    {
+      "key": "C",
+      "text": "Semarang"
+    },
+    {
+      "key": "D",
+      "text": "Makassar"
+    },
+    {
+      "key": "E",
+      "text": "Medan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Pada kolom Jumlah Peserta, Surabaya tercatat memiliki 410 peserta, lebih banyak daripada seluruh kota lain pada tabel (Bandung 320, Semarang 275, Makassar 240, Medan 180, Denpasar 150).",
+    "B": "Bandung memiliki 320 peserta, masih di bawah Surabaya yang memiliki 410 peserta.",
+    "C": "Semarang memiliki 275 peserta, bukan yang terbanyak pada tabel.",
+    "D": "Makassar memiliki 240 peserta, berada di bawah Surabaya, Bandung, dan Semarang.",
+    "E": "Medan memiliki 180 peserta, hanya lebih banyak daripada Denpasar."
+  },
+  "difficulty": "easy",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

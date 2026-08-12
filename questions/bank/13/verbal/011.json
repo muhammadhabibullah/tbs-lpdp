@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-011",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "MARAH : MURKA = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Gembira : Girang"
+    },
+    {
+      "key": "B",
+      "text": "Sedih : Murung"
+    },
+    {
+      "key": "C",
+      "text": "Takut : Waspada"
+    },
+    {
+      "key": "D",
+      "text": "Lapar : Makan"
+    },
+    {
+      "key": "E",
+      "text": "Lelah : Istirahat"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Murka berarti sangat marah, sebagaimana girang berarti sangat gembira; keduanya menyatakan hubungan derajat intensitas.",
+    "B": "Murung bermakna sedih dan kecewa, bukan tingkat kesedihan yang lebih tinggi dari sedih.",
+    "C": "Waspada bermakna berhati-hati, bukan bentuk takut yang lebih kuat.",
+    "D": "Lapar mendorong orang makan, yaitu hubungan dorongan dan tindakan, bukan derajat intensitas.",
+    "E": "Lelah mendorong istirahat, juga hubungan dorongan dan tindakan, bukan derajat intensitas."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

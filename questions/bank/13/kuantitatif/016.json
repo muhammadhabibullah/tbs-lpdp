@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-016",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 16,
+  "type": "deret_angka",
+  "question_text": "7, 65, 21, 10, 60, 23, 13, 55, 25, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "16"
+    },
+    {
+      "key": "B",
+      "text": "28"
+    },
+    {
+      "key": "C",
+      "text": "8"
+    },
+    {
+      "key": "D",
+      "text": "27"
+    },
+    {
+      "key": "E",
+      "text": "19"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Deret terdiri atas tiga jalur berselang-seling. Jalur pertama bertambah 3, jalur kedua berubah −5, dan jalur ketiga bertambah 2. Suku berikutnya melanjutkan jalur pertama: 13 + 3 = 16.",
+    "B": "Salah. Nilai 28 diperoleh dengan menambahkan beda jalur pertama pada suku tercetak terakhir yang berasal dari jalur ketiga.",
+    "C": "Salah. Nilai 8 diperoleh dengan menerapkan beda jalur kedua pada suku terakhir jalur pertama.",
+    "D": "Salah. Nilai 27 diperoleh dengan melanjutkan jalur ketiga, padahal suku berikutnya kembali ke jalur pertama.",
+    "E": "Salah. Nilai 19 diperoleh dengan melanjutkan jalur pertama dua langkah sekaligus."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

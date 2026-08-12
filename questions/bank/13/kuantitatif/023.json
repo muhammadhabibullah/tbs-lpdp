@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-023",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Rata-rata nilai ulangan matematika 8 siswa adalah 72. Setelah dua siswa lainnya mengikuti ulangan susulan, rata-rata nilai 10 siswa menjadi 75. Rata-rata nilai kedua siswa yang mengikuti ulangan susulan adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "75"
+    },
+    {
+      "key": "B",
+      "text": "78"
+    },
+    {
+      "key": "C",
+      "text": "84"
+    },
+    {
+      "key": "D",
+      "text": "87"
+    },
+    {
+      "key": "E",
+      "text": "90"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. 75 mengasumsikan nilai kedua siswa sama dengan rata-rata baru, padahal keduanya juga harus menutup kekurangan nilai 8 siswa sebelumnya.",
+    "B": "Salah. 75 + 3 = 78 diperoleh bila selisih rata-rata langsung ditambahkan ke rata-rata baru tanpa memperhitungkan jumlah siswa.",
+    "C": "Salah. 84 muncul bila jumlah nilai 8 siswa dihitung keliru sebagai 72 × 8 = 582, sehingga (750 − 582) : 2 = 84.",
+    "D": "Benar. Jumlah nilai 8 siswa = 8 × 72 = 576 dan jumlah nilai 10 siswa = 10 × 75 = 750, sehingga jumlah nilai kedua siswa = 750 − 576 = 174 dan rata-ratanya 174 : 2 = 87.",
+    "E": "Salah. 90 muncul bila seluruh kenaikan rata-rata 3 × 10 = 30 dibebankan hanya kepada dua siswa: 75 + 30 : 2 = 90, tanpa menghitung dari jumlah nilai."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

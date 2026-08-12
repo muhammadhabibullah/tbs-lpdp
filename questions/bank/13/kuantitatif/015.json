@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-015",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 15,
+  "type": "deret_angka",
+  "question_text": "..., 38, 12, 34, 18, 30, 24, 26 Bilangan yang tepat untuk mengisi titik-titik tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "16"
+    },
+    {
+      "key": "B",
+      "text": "2"
+    },
+    {
+      "key": "C",
+      "text": "7"
+    },
+    {
+      "key": "D",
+      "text": "0"
+    },
+    {
+      "key": "E",
+      "text": "6"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 16 diperoleh dengan memundurkan jalur ganjil dengan beda milik jalur genap.",
+    "B": "Salah. Nilai 2 diperoleh dengan mencampurkan nilai awal jalur ganjil dengan beda jalur genap.",
+    "C": "Salah. Nilai 7 diperoleh dengan menemukan arah mundur yang benar tetapi bergeser satu satuan di atas suku pertama.",
+    "D": "Salah. Nilai 0 diperoleh dengan memundurkan jalur ganjil dua langkah, bukan satu langkah.",
+    "E": "Benar. Suku ganjil membentuk deret dengan beda 6, sedangkan suku genap memiliki beda −4. Karena 6 + 6 = 12, suku pertama yang hilang adalah 6."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

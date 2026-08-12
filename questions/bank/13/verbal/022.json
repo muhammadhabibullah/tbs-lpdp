@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-022",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Tujuan penulis dalam bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Indonesia memiliki potensi energi panas bumi yang besar karena berada di kawasan cincin api Pasifik. Aktivitas vulkanik di sepanjang kawasan tersebut menghasilkan sumber panas bumi yang tersebar di berbagai pulau. Sejumlah pembangkit listrik tenaga panas bumi pun telah beroperasi di beberapa wilayah Indonesia. Energi panas bumi dimanfaatkan dengan cara mengubah uap panas dari dalam bumi menjadi tenaga penggerak turbin yang menghasilkan listrik.\n\nPemanfaatan energi panas bumi dinilai memiliki sejumlah keunggulan dibandingkan pembangkit berbahan bakar fosil. Pembangkit listrik tenaga panas bumi menghasilkan emisi gas rumah kaca yang jauh lebih rendah dan dapat beroperasi sepanjang waktu tanpa bergantung pada cuaca. Namun, pengembangannya memerlukan biaya eksplorasi yang besar dan waktu pembangunan yang relatif lama. Karena itu, peningkatan investasi dan penyederhanaan perizinan dianggap penting agar potensi panas bumi Indonesia dapat dimanfaatkan secara lebih optimal.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Memaparkan potensi, pemanfaatan, keunggulan, dan tantangan energi panas bumi di Indonesia."
+    },
+    {
+      "key": "B",
+      "text": "Menolak pemanfaatan energi panas bumi karena biayanya terlalu besar."
+    },
+    {
+      "key": "C",
+      "text": "Membuktikan bahwa panas bumi adalah satu-satunya sumber energi masa depan."
+    },
+    {
+      "key": "D",
+      "text": "Mengkritik pihak berwenang karena tidak membangun pembangkit panas bumi."
+    },
+    {
+      "key": "E",
+      "text": "Membandingkan panas bumi Indonesia dengan milik negara lain secara terperinci."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Paragraf pertama memaparkan potensi dan cara pemanfaatan, sedangkan paragraf kedua menguraikan keunggulan serta tantangannya; keseluruhan bersifat informatif.",
+    "B": "Penulis tidak menolak; biaya besar hanya disajikan sebagai salah satu tantangan.",
+    "C": "Bacaan tidak pernah menyebut panas bumi sebagai satu-satunya sumber energi masa depan.",
+    "D": "Tidak ada kritik terhadap pihak tertentu; nada bacaan bersifat memaparkan informasi.",
+    "E": "Bacaan tidak membandingkan potensi panas bumi Indonesia dengan negara lain."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

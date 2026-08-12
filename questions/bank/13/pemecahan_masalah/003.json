@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-003",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Lima warga (P, Q, R, S, T) mengantre di loket pelayanan dengan urutan posisi 1 sampai 5 dari depan. Diketahui: (1) P berada pada posisi kedua, (2) R mengantre tepat di belakang P, (3) T berada pada posisi terakhir, dan (4) Q mengantre lebih dulu daripada S. Siapakah yang berada pada posisi keempat?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P"
+    },
+    {
+      "key": "B",
+      "text": "Q"
+    },
+    {
+      "key": "C",
+      "text": "S"
+    },
+    {
+      "key": "D",
+      "text": "R"
+    },
+    {
+      "key": "E",
+      "text": "T"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Sesuai kendala (1), P berada pada posisi kedua, bukan posisi keempat.",
+    "B": "Karena P, R, dan T telah menempati posisi 2, 3, dan 5, posisi tersisa untuk Q dan S adalah 1 dan 4. Kendala (4) menyatakan Q lebih dulu daripada S, sehingga Q menempati posisi pertama, bukan keempat.",
+    "C": "Benar. P=2 (kendala 1), R=3 karena tepat di belakang P (kendala 2), dan T=5 (kendala 3). Tersisa posisi 1 dan 4 untuk Q dan S; karena Q lebih dulu daripada S (kendala 4), maka Q=1 dan S=4.",
+    "D": "Sesuai kendala (2), R berada tepat di belakang P sehingga menempati posisi ketiga, bukan keempat.",
+    "E": "Sesuai kendala (3), T berada pada posisi terakhir (kelima), bukan keempat."
+  },
+  "difficulty": "easy",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

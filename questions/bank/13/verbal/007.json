@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-007",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "LANGKA >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Jarang"
+    },
+    {
+      "key": "B",
+      "text": "Melimpah"
+    },
+    {
+      "key": "C",
+      "text": "Sedikit"
+    },
+    {
+      "key": "D",
+      "text": "Mahal"
+    },
+    {
+      "key": "E",
+      "text": "Unik"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Jarang justru dekat maknanya dengan langka, sehingga bukan lawan kata.",
+    "B": "Benar. Langka berarti sukar ditemukan karena jarang ada, sehingga lawan kata yang tepat adalah melimpah.",
+    "C": "Sedikit menunjuk jumlah, sejalan dengan kesan langka, bukan lawannya.",
+    "D": "Mahal adalah dampak dari kelangkaan, bukan lawan kata langka.",
+    "E": "Unik bermakna khas dan tersendiri, tidak berlawanan dengan langka."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

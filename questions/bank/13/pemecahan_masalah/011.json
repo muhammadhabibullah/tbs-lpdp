@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-011",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Pernyataan yang paling tepat menggambarkan sikap penulis dalam teks tersebut adalah ...",
+  "image": null,
+  "passage": "Kemacetan di pusat kota tidak akan terurai selama jumlah kendaraan pribadi terus bertambah. Pelebaran jalan yang selama ini diandalkan justru mengundang lebih banyak kendaraan untuk masuk ke kawasan tersebut. Karena itu, pembatasan kendaraan pribadi di pusat kota perlu segera diterapkan, misalnya melalui kebijakan ganjil genap dan kenaikan tarif parkir. Kebijakan ini memang tidak populer bagi sebagian pengguna kendaraan, tetapi angkutan umum harus dibenahi terlebih dahulu agar pembatasan tersebut adil dan dapat diterima. Tanpa pembenahan angkutan umum, pembatasan hanya akan memindahkan kemacetan ke kawasan lain.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Penulis menilai pelebaran jalan masih menjadi solusi paling efektif untuk mengurai kemacetan"
+    },
+    {
+      "key": "B",
+      "text": "Penulis mendukung pembatasan kendaraan pribadi dengan syarat angkutan umum dibenahi terlebih dahulu"
+    },
+    {
+      "key": "C",
+      "text": "Penulis menekankan bahwa kebijakan ganjil genap dan kenaikan tarif parkir tidak populer bagi pengguna kendaraan"
+    },
+    {
+      "key": "D",
+      "text": "Penulis mengingatkan bahwa kenaikan tarif parkir akan memindahkan kemacetan ke kawasan lain"
+    },
+    {
+      "key": "E",
+      "text": "Penulis menyatakan bahwa pemerintah telah selesai membenahi angkutan umum di pusat kota"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Penulis justru menyatakan pelebaran jalan mengundang lebih banyak kendaraan masuk ke pusat kota, sehingga bukan solusi yang dibela penulis.",
+    "B": "Benar. Penulis menegaskan pembatasan kendaraan pribadi perlu segera diterapkan, namun mensyaratkan pembenahan angkutan umum terlebih dahulu agar kebijakan itu adil dan tidak sekadar memindahkan kemacetan; inilah sikap utama penulis yang menyatukan seluruh argumen.",
+    "C": "Salah. Ketidakpopuleran kebijakan memang disebut dalam teks, tetapi hanya sebagai rincian pendukung yang segera diimbangi penulis dengan syarat pembenahan angkutan umum, bukan sikap utamanya.",
+    "D": "Salah. Teks menyatakan pembatasan tanpa pembenahan angkutan umum yang akan memindahkan kemacetan, bukan kenaikan tarif parkir secara tersendiri.",
+    "E": "Salah. Teks tidak pernah menyatakan pembenahan angkutan umum telah selesai; sebaliknya, pembenahan itu justru dituntut sebagai syarat."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

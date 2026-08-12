@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-005",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "HULU >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Hilir"
+    },
+    {
+      "key": "B",
+      "text": "Muara"
+    },
+    {
+      "key": "C",
+      "text": "Tepian"
+    },
+    {
+      "key": "D",
+      "text": "Dasar"
+    },
+    {
+      "key": "E",
+      "text": "Sumber"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Hulu adalah bagian sungai yang jauh dari muara (bagian atas), sehingga lawan katanya adalah hilir, yaitu bagian sungai sebelah bawah.",
+    "B": "Muara adalah tempat sungai berakhir di laut; hilir tetap lawan kata yang lebih tepat untuk hulu.",
+    "C": "Tepian berarti pinggir sungai, bukan lawan kata hulu.",
+    "D": "Dasar menunjuk bagian bawah badan sungai, bukan arah alirannya.",
+    "E": "Sumber justru dekat maknanya dengan hulu, sehingga bukan lawan kata."
+  },
+  "difficulty": "easy",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

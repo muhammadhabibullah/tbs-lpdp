@@ -1175,6 +1175,10 @@ FIGURES: list[Figure] = [
         long_u=28, short_u=18, leg_u=13, unit="cm")),
     Figure("12-kuantitatif-025", "tabung.svg", lambda: cylinder(
         radius_u=10, height_u=18, unit="cm")),
+    Figure("13-kuantitatif-024", "juring.svg", lambda: circular_sector(
+        angle_deg=72, radius_u=35, unit="m", label="taman")),
+    Figure("13-kuantitatif-025", "limas-segiempat.svg", lambda: square_pyramid(
+        base_u=12, height_u=8, unit="cm")),
 ]
 
 

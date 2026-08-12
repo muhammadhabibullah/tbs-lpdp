@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-023",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan di atas, pertanyaan berikut yang dapat dijawab adalah ...",
+  "image": null,
+  "passage": "Indonesia memiliki potensi energi panas bumi yang besar karena berada di kawasan cincin api Pasifik. Aktivitas vulkanik di sepanjang kawasan tersebut menghasilkan sumber panas bumi yang tersebar di berbagai pulau. Sejumlah pembangkit listrik tenaga panas bumi pun telah beroperasi di beberapa wilayah Indonesia. Energi panas bumi dimanfaatkan dengan cara mengubah uap panas dari dalam bumi menjadi tenaga penggerak turbin yang menghasilkan listrik.\n\nPemanfaatan energi panas bumi dinilai memiliki sejumlah keunggulan dibandingkan pembangkit berbahan bakar fosil. Pembangkit listrik tenaga panas bumi menghasilkan emisi gas rumah kaca yang jauh lebih rendah dan dapat beroperasi sepanjang waktu tanpa bergantung pada cuaca. Namun, pengembangannya memerlukan biaya eksplorasi yang besar dan waktu pembangunan yang relatif lama. Karena itu, peningkatan investasi dan penyederhanaan perizinan dianggap penting agar potensi panas bumi Indonesia dapat dimanfaatkan secara lebih optimal.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Berapa jumlah turbin yang beroperasi di seluruh pembangkit panas bumi Indonesia?"
+    },
+    {
+      "key": "B",
+      "text": "Negara mana yang memiliki potensi panas bumi terbesar di dunia?"
+    },
+    {
+      "key": "C",
+      "text": "Perusahaan mana yang membangun pembangkit listrik tenaga panas bumi di Indonesia?"
+    },
+    {
+      "key": "D",
+      "text": "Mengapa energi panas bumi lebih murah daripada batu bara?"
+    },
+    {
+      "key": "E",
+      "text": "Mengapa Indonesia memiliki potensi energi panas bumi yang besar?"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Bacaan tidak menyajikan data jumlah turbin di pembangkit panas bumi.",
+    "B": "Bacaan hanya menyebut potensi Indonesia, bukan perbandingan dengan negara lain.",
+    "C": "Bacaan tidak menyebut perusahaan mana pun yang membangun pembangkit.",
+    "D": "Bacaan tidak membandingkan harga energi panas bumi dengan batu bara.",
+    "E": "Benar. Paragraf pertama menjawabnya secara langsung: Indonesia berpotensial besar karena berada di kawasan cincin api Pasifik dengan aktivitas vulkanik."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-018",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat yang paling efektif dan sesuai dengan kaidah bahasa Indonesia adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kegiatan itu meliputi penyusunan rencana, pelaksanaan program, dan mengevaluasi hasil."
+    },
+    {
+      "key": "B",
+      "text": "Meskipun sedang hujan, tetapi para petani tetap berangkat ke sawah."
+    },
+    {
+      "key": "C",
+      "text": "Karena disiplin tinggi dan bekerja keras, sehingga proyek itu selesai tepat waktu."
+    },
+    {
+      "key": "D",
+      "text": "Peningkatan kualitas sumber daya manusia memerlukan pendidikan yang bermutu dan pelatihan yang berkelanjutan."
+    },
+    {
+      "key": "E",
+      "text": "Aktifitas olahraga rutin dapat menurunkan resiko penyakit jantung."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Kalimat ini tidak paralel karena perincian mencampurkan bentuk nomina, yaitu penyusunan dan pelaksanaan, dengan verba mengevaluasi.",
+    "B": "Kalimat ini menggunakan konjungsi ganda meskipun dan tetapi sekaligus; seharusnya dipilih salah satu.",
+    "C": "Kalimat ini memakai pasangan konjungsi yang tidak sejajar, yaitu karena dan sehingga, sehingga kehilangan subjek.",
+    "D": "Benar. Kalimat ini paralel karena kedua objeknya berupa frasa nomina, bersubjek dan berpredikat jelas, serta penulisannya sesuai PUEBI.",
+    "E": "Kalimat ini tidak sesuai PUEBI karena aktifitas seharusnya aktivitas dan resiko seharusnya risiko."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

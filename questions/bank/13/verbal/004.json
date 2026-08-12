@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-004",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "ANASIR = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pengaruh"
+    },
+    {
+      "key": "B",
+      "text": "Unsur"
+    },
+    {
+      "key": "C",
+      "text": "Akibat"
+    },
+    {
+      "key": "D",
+      "text": "Gangguan"
+    },
+    {
+      "key": "E",
+      "text": "Penyebab"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Pengaruh adalah dampak dari sesuatu, bukan makna anasir.",
+    "B": "Benar. Menurut KBBI, anasir berarti unsur atau bagian dari sesuatu; kata ini sering disalahartikan sebagai hal negatif.",
+    "C": "Akibat adalah hasil dari suatu peristiwa, bukan makna anasir.",
+    "D": "Gangguan bermakna halangan; makna negatif ini justru kekeliruan umum dalam memahami anasir.",
+    "E": "Penyebab adalah hal yang menimbulkan akibat, bukan makna anasir."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

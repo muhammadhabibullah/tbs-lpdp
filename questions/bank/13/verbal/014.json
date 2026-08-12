@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-014",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Jika curah hujan tinggi, maka debit sungai meningkat.\nJika debit sungai meningkat, maka pintu air bendungan dibuka.\nPintu air bendungan saat ini tidak dibuka.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Curah hujan saat ini tidak tinggi."
+    },
+    {
+      "key": "B",
+      "text": "Debit sungai meningkat, tetapi pintu air bendungan rusak."
+    },
+    {
+      "key": "C",
+      "text": "Curah hujan tinggi, tetapi bendungan sedang diperbaiki."
+    },
+    {
+      "key": "D",
+      "text": "Sebagian pintu air bendungan tetap dibuka."
+    },
+    {
+      "key": "E",
+      "text": "Curah hujan kemungkinan segera menurun."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Dengan modus tolens berantai, pintu air tidak dibuka berarti debit sungai tidak meningkat, dan debit tidak meningkat berarti curah hujan tidak tinggi; simpulan ini sah dan pasti.",
+    "B": "Pernyataan ini justru bertentangan dengan premis karena debit sungai pasti tidak meningkat; alasan pintu air rusak tidak pernah disebut.",
+    "C": "Curah hujan tinggi pasti menaikkan debit dan membuka pintu air, sehingga pernyataan ini bertentangan dengan premis.",
+    "D": "Premis menyatakan pintu air tidak dibuka, sehingga sebagian pun tidak dibuka.",
+    "E": "Perkiraan cuaca tidak dibahas dalam premis, sehingga simpulan ini hanya bersifat mungkin."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

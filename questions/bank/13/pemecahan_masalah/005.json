@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-005",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Enam pemakalah (F, G, H, J, K, L) tampil mempresentasikan hasil riset pada urutan 1 sampai 6. Diketahui: (1) F tampil sebelum G tetapi setelah H, (2) J tampil tepat setelah K, dan (3) L tidak tampil pada urutan pertama maupun terakhir. Pernyataan yang TIDAK mungkin benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "F tampil pada urutan ketiga"
+    },
+    {
+      "key": "B",
+      "text": "H tampil pada urutan keempat"
+    },
+    {
+      "key": "C",
+      "text": "L tampil pada urutan kedua"
+    },
+    {
+      "key": "D",
+      "text": "G tampil pada urutan kelima"
+    },
+    {
+      "key": "E",
+      "text": "K tampil pada urutan pertama"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Mungkin benar. Contoh susunan yang memenuhi semua kendala: H, L, F, K, J, G (F pada urutan ketiga).",
+    "B": "Mungkin benar. Contoh susunan: K, J, L, H, F, G (H pada urutan keempat dan F=5, G=6 memenuhi kendala 1).",
+    "C": "Mungkin benar. Contoh susunan: H, L, F, K, J, G (L pada urutan kedua, bukan pertama maupun terakhir).",
+    "D": "Benar, pernyataan ini tidak mungkin benar. Jika G pada urutan kelima, urutan keenam harus diisi salah satu dari H, F, K, J, L. Kendala 1 menuntut H dan F berada sebelum G, kendala 2 menuntut K dan J berurutan (K lalu J), dan kendala 3 melarang L di urutan terakhir. Jika urutan keenam diisi K atau J, kendala 2 rusak; jika diisi L, kendala 3 dilanggar; H dan F tidak mungkin karena harus sebelum G. Dengan demikian G tidak mungkin tampil pada urutan kelima.",
+    "E": "Mungkin benar. Contoh susunan: K, J, H, F, L, G (K pada urutan pertama dan semua kendala terpenuhi)."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

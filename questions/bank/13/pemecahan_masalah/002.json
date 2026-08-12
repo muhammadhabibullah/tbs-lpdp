@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-002",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 2,
+  "type": "peluang_kombinatorik",
+  "question_text": "Rani memiliki 4 jenis permen yang berbeda dan akan membagikan seluruhnya kepada dua orang temannya. Apabila setiap teman harus menerima 2 permen, banyak cara pembagian yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "16"
+    },
+    {
+      "key": "B",
+      "text": "12"
+    },
+    {
+      "key": "C",
+      "text": "6"
+    },
+    {
+      "key": "D",
+      "text": "3"
+    },
+    {
+      "key": "E",
+      "text": "24"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 16 diperoleh dengan menganggap setiap permen bebas diberikan kepada salah satu dari dua teman, tanpa syarat masing-masing menerima 2 permen.",
+    "B": "Salah. Nilai 12 diperoleh dengan memperhatikan urutan ketika memilih 2 permen untuk teman pertama, padahal permen yang diterima tidak berurutan.",
+    "C": "Benar. Cukup memilih 2 permen untuk teman pertama; sisanya otomatis menjadi bagian teman kedua. Banyak caranya adalah C(4, 2) = 6.",
+    "D": "Salah. Nilai 3 diperoleh dengan membagi hasilnya dengan 2 seolah-olah kedua teman tidak dibedakan, padahal keduanya orang yang berbeda.",
+    "E": "Salah. Nilai 24 diperoleh dengan menghitung seluruh urutan 4 permen, bukan pembagiannya menjadi dua kelompok."
+  },
+  "difficulty": "medium",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

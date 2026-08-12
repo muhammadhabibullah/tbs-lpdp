@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-004",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 4,
+  "type": "aritmetika",
+  "question_text": "Dari 500 pelamar sebuah program beasiswa, 60% dinyatakan lulus seleksi administrasi. Dari pelamar yang lulus seleksi administrasi tersebut, 20% dinyatakan lulus seleksi wawancara. Berapa banyak pelamar yang lulus kedua tahap seleksi itu?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "400"
+    },
+    {
+      "key": "B",
+      "text": "300"
+    },
+    {
+      "key": "C",
+      "text": "100"
+    },
+    {
+      "key": "D",
+      "text": "60"
+    },
+    {
+      "key": "E",
+      "text": "240"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 400 diperoleh dengan menjumlahkan kedua persentase menjadi 80% lalu menerapkannya sekaligus.",
+    "B": "Salah. Nilai 300 diperoleh dengan berhenti pada tahap pertama dan tidak menerapkan seleksi kedua.",
+    "C": "Salah. Nilai 100 diperoleh dengan menerapkan 20% pada seluruh pelamar, bukan pada pelamar yang lulus seleksi administrasi.",
+    "D": "Benar. Lulus administrasi = 60% × 500 = 300; lulus wawancara = 20% × 300 = 60.",
+    "E": "Salah. Nilai 240 diperoleh dengan menghitung pelamar yang gugur pada seleksi wawancara, bukan yang lulus."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

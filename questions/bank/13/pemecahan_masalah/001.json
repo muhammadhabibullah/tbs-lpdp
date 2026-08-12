@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-001",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 1,
+  "type": "peluang_kombinatorik",
+  "question_text": "Sebanyak 7 orang peserta akan duduk berjajar pada 7 kursi. Apabila dua orang di antaranya harus selalu duduk berdampingan, banyak susunan tempat duduk yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "720"
+    },
+    {
+      "key": "B",
+      "text": "5.040"
+    },
+    {
+      "key": "C",
+      "text": "10.080"
+    },
+    {
+      "key": "D",
+      "text": "1.440"
+    },
+    {
+      "key": "E",
+      "text": "3.600"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 720 diperoleh dengan memandang kedua orang itu sebagai satu blok tetapi lupa bahwa di dalam blok keduanya masih dapat bertukar tempat.",
+    "B": "Salah. Nilai 5.040 diperoleh dengan menghitung seluruh susunan 7 orang tanpa syarat kedua orang itu berdampingan.",
+    "C": "Salah. Nilai 10.080 diperoleh dengan mengalikan seluruh susunan 7 orang dengan 2, padahal penggabungan menjadi satu blok lebih dahulu mengurangi banyak objek menjadi 6.",
+    "D": "Benar. Kedua orang yang harus berdampingan dipandang sebagai satu blok, sehingga tersisa 6 objek yang dapat disusun dalam 6! = 720 cara. Di dalam blok, kedua orang itu dapat bertukar tempat dalam 2 cara, sehingga seluruhnya 2 × 720 = 1440.",
+    "E": "Salah. Nilai 3.600 diperoleh dengan menghitung banyak susunan ketika kedua orang itu justru tidak berdampingan."
+  },
+  "difficulty": "medium",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

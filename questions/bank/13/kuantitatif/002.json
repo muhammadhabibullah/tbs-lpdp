@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-002",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 2,
+  "type": "aritmetika",
+  "question_text": "Nilai dari 4³ − √100 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "14"
+    },
+    {
+      "key": "B",
+      "text": "54"
+    },
+    {
+      "key": "C",
+      "text": "2"
+    },
+    {
+      "key": "D",
+      "text": "6"
+    },
+    {
+      "key": "E",
+      "text": "74"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 14 diperoleh dengan menghitung akar kuadrat sebagai setengah dari 100.",
+    "B": "Benar. 4³ = 64 dan √100 = 10, sehingga 64 − 10 = 54.",
+    "C": "Salah. Nilai 2 diperoleh dengan menghitung 4³ sebagai 4 × 3 = 12.",
+    "D": "Salah. Nilai 6 diperoleh dengan menghitung pangkat tiga sebagai pangkat dua (4² = 16).",
+    "E": "Salah. Nilai 74 diperoleh dengan menjumlahkan kedua nilai alih-alih mengurangkannya."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

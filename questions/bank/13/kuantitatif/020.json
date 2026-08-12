@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-020",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Pak Rudi membeli 5 buku tulis dengan harga sama di sebuah toko. Ia membayar dengan dua lembar uang Rp50.000,00 dan menerima kembalian Rp13.500,00. Harga satu buku tulis adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp6.500,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp17.300,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp20.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp22.700,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp86.500,00"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Rp20.000,00 − Rp13.500,00 = Rp6.500,00 diperoleh bila kembalian tidak ikut dibagi lima.",
+    "B": "Benar. Total harga 5 buku = Rp100.000,00 − Rp13.500,00 = Rp86.500,00, sehingga harga satu buku = Rp86.500,00 : 5 = Rp17.300,00.",
+    "C": "Salah. Rp100.000,00 : 5 = Rp20.000,00 diperoleh bila kembalian tidak dikurangkan dari uang yang dibayarkan.",
+    "D": "Salah. (Rp100.000,00 + Rp13.500,00) : 5 = Rp22.700,00 diperoleh bila kembalian justru ditambahkan.",
+    "E": "Salah. Rp86.500,00 adalah harga keseluruhan 5 buku, bukan harga satu buku."
+  },
+  "difficulty": "easy",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-009",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "GELAS : MINUM = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sendok : Garpu"
+    },
+    {
+      "key": "B",
+      "text": "Dapur : Memasak"
+    },
+    {
+      "key": "C",
+      "text": "Air : Haus"
+    },
+    {
+      "key": "D",
+      "text": "Piring : Makan"
+    },
+    {
+      "key": "E",
+      "text": "Makan : Kenyang"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Sendok dan garpu adalah dua alat makan yang setara, bukan pasangan benda dan fungsinya.",
+    "B": "Dapur adalah tempat kegiatan memasak berlangsung, sehingga hubungannya tempat–kegiatan, bukan benda dan fungsinya.",
+    "C": "Air adalah benda yang menghilangkan rasa haus, bukan pasangan benda dan fungsinya.",
+    "D": "Benar. Gelas berfungsi untuk minum, sebagaimana piring berfungsi untuk makan; keduanya menyatakan hubungan benda dan fungsinya.",
+    "E": "Makan menghasilkan rasa kenyang, yaitu hubungan sebab-akibat, bukan benda dan fungsi."
+  },
+  "difficulty": "easy",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

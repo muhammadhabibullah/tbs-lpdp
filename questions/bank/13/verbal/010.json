@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-010",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "KAPAS : KAIN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Gandum : Roti"
+    },
+    {
+      "key": "B",
+      "text": "Kain : Kapas"
+    },
+    {
+      "key": "C",
+      "text": "Roti : Gandum"
+    },
+    {
+      "key": "D",
+      "text": "Beras : Sawah"
+    },
+    {
+      "key": "E",
+      "text": "Susu : Sapi"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Kapas adalah bahan baku pembuatan kain, sebagaimana gandum adalah bahan baku pembuatan roti; keduanya menyatakan hubungan bahan dan produk.",
+    "B": "Kain : kapas membalik urutan pasangan rangsang; urutan bahan lalu produk harus dipertahankan.",
+    "C": "Roti : gandum juga membalik urutan, menempatkan produk lebih dahulu daripada bahan bakunya.",
+    "D": "Beras tumbuh di sawah, yaitu hubungan hasil dan tempat, bukan bahan dan produk.",
+    "E": "Susu : sapi menempatkan produk lebih dahulu lalu sumbernya; urutannya terbalik dan tidak melalui pengolahan."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

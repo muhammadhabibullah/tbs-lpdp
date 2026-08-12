@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-012",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 12,
+  "type": "aljabar",
+  "question_text": "Jika 5x − 30 = −5, nilai x adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "20"
+    },
+    {
+      "key": "B",
+      "text": "25"
+    },
+    {
+      "key": "C",
+      "text": "−1"
+    },
+    {
+      "key": "D",
+      "text": "5"
+    },
+    {
+      "key": "E",
+      "text": "−7"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 20 diperoleh dengan mengurangkan koefisien 5 dari 25, padahal koefisien itu harus dijadikan pembagi.",
+    "B": "Salah. Nilai 25 diperoleh dengan berhenti pada nilai 5x dan belum membaginya dengan 5.",
+    "C": "Salah. Nilai −1 diperoleh dengan membagi −5 dengan 5 tanpa memindahkan −30 lebih dahulu.",
+    "D": "Benar. 5x = −5 + 30 = 25, sehingga x = 25 : 5 = 5.",
+    "E": "Salah. Nilai −7 diperoleh dengan mengurangkan 30 sekali lagi ketika memindahkan ruas, padahal −30 berubah menjadi +30."
+  },
+  "difficulty": "easy",
+  "source": "aljabar.py",
+  "verified": true
+}

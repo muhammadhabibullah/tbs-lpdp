@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-007",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Pada pukul 07.30, Andi harus memilih moda transportasi untuk menghadiri rapat di kantor klien yang dimulai pukul 09.00. Tersedia tiga pilihan: ojek dengan waktu tempuh 40 menit dan biaya Rp35.000,00; bus kota dengan waktu tempuh 70 menit dan biaya Rp8.000,00, dengan halte yang berjarak 10 menit berjalan kaki dari rumah Andi; serta mobil daring dengan waktu tempuh 45 menit dan biaya Rp60.000,00. Anggaran transportasi Andi paling banyak Rp40.000,00. Berdasarkan aturan pilih moda termurah yang tetap menjamin kedatangan sebelum rapat dimulai, keputusan yang paling tepat bagi Andi adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "menggunakan ojek karena waktu tempuhnya paling singkat"
+    },
+    {
+      "key": "B",
+      "text": "menggunakan bus kota karena paling murah dan tetap memenuhi batas waktu kedatangan"
+    },
+    {
+      "key": "C",
+      "text": "menggunakan mobil daring karena lebih nyaman meskipun melebihi anggaran"
+    },
+    {
+      "key": "D",
+      "text": "menggunakan bus kota dan mobil daring sama-sama baik sehingga keduanya dapat dipilih"
+    },
+    {
+      "key": "E",
+      "text": "tidak memilih moda mana pun karena tidak ada yang memenuhi kedua syarat"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Ojek memang memenuhi batas waktu (tiba pukul 08.10), tetapi aturannya memilih moda termurah yang memenuhi syarat, dan bus kota lebih murah daripada ojek.",
+    "B": "Benar. Berangkat pukul 07.30, berjalan kaki 10 menit lalu naik bus 70 menit, Andi tiba pukul 08.50, masih sebelum rapat pukul 09.00, dengan biaya Rp8.000,00 yang berada di bawah anggaran Rp40.000,00. Bus kota adalah pilihan termurah yang memenuhi kedua syarat.",
+    "C": "Mobil daring tiba pukul 08.15, tetapi biayanya Rp60.000,00 melebihi anggaran Rp40.000,00 sehingga tidak memenuhi syarat biaya.",
+    "D": "Kedua moda memang memenuhi batas waktu, tetapi aturan menuntut memilih yang termurah, yaitu bus kota, sehingga keduanya tidak dapat dianggap sama-sama tepat.",
+    "E": "Salah karena setidaknya bus kota memenuhi syarat waktu (tiba 08.50) maupun syarat biaya (Rp8.000,00)."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

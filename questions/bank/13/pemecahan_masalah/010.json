@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-010",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Tabel di atas menyajikan data fiktif lima program pelatihan kerja. Berdasarkan tabel tersebut, pernyataan yang benar adalah ...",
+  "image": null,
+  "passage": "Program | Jumlah Peserta | Lulus | Terserap Kerja\nAlpha | 200 | 160 | 96\nBeta | 250 | 225 | 135\nGamma | 180 | 126 | 84\nDelta | 300 | 240 | 168\nEpsilon | 150 | 126 | 84",
+  "options": [
+    {
+      "key": "A",
+      "text": "Program Beta memiliki jumlah peserta paling banyak"
+    },
+    {
+      "key": "B",
+      "text": "Program Gamma memiliki persentase kelulusan paling tinggi"
+    },
+    {
+      "key": "C",
+      "text": "Program Delta dilaksanakan di lebih banyak wilayah daripada program lain"
+    },
+    {
+      "key": "D",
+      "text": "Persentase kelulusan program Epsilon kurang dari 80 persen"
+    },
+    {
+      "key": "E",
+      "text": "Persentase lulusan program Beta yang terserap kerja adalah 60 persen"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Program Beta memiliki 250 peserta, sedangkan program Delta memiliki 300 peserta, terbanyak pada tabel.",
+    "B": "Salah. Persentase kelulusan Gamma adalah 126 dari 180 peserta, yaitu 70 persen, dan merupakan yang terendah; yang tertinggi adalah Beta dengan 225 dari 250 peserta (90 persen).",
+    "C": "Salah. Tabel hanya memuat jumlah peserta, kelulusan, dan penyerapan kerja; tidak ada data mengenai jumlah wilayah pelaksanaan, sehingga pernyataan ini tidak dapat diverifikasi dari tabel.",
+    "D": "Salah. Persentase kelulusan Epsilon adalah 126 dari 150 peserta, yaitu 84 persen, sehingga tidak kurang dari 80 persen.",
+    "E": "Benar. Lulusan program Beta yang terserap kerja adalah 135 dari 225 lulusan, yaitu 135 : 225 = 0,6 atau 60 persen."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

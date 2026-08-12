@@ -1,0 +1,43 @@
+{
+  "id": "13-kuantitatif-022",
+  "package": 13,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Pak Darmawan membagikan 120 buku tulis kepada tiga kelompok belajar dengan perbandingan 2 : 3 : 5. Selisih banyak buku yang diterima kelompok terbanyak dan kelompok tersedikit adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "12 buku"
+    },
+    {
+      "key": "B",
+      "text": "24 buku"
+    },
+    {
+      "key": "C",
+      "text": "36 buku"
+    },
+    {
+      "key": "D",
+      "text": "48 buku"
+    },
+    {
+      "key": "E",
+      "text": "60 buku"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. 12 buku adalah nilai satu bagian perbandingan, bukan selisih kelompok terbanyak dan tersedikit.",
+    "B": "Salah. (5 − 3) × 12 = 24 buku adalah selisih kelompok terbanyak dengan kelompok tengah.",
+    "C": "Benar. Jumlah bagian = 2 + 3 + 5 = 10, sehingga satu bagian = 120 : 10 = 12 buku. Kelompok terbanyak menerima 5 × 12 = 60 buku dan tersedikit 2 × 12 = 24 buku, selisihnya 60 − 24 = 36 buku.",
+    "D": "Salah. 48 buku muncul bila selisih dihitung sebagai 4 bagian (5 − 1), padahal bagian terkecil adalah 2.",
+    "E": "Salah. 60 buku adalah jumlah yang diterima kelompok terbanyak, bukan selisihnya."
+  },
+  "difficulty": "easy",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

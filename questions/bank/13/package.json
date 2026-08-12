@@ -1,0 +1,9 @@
+{
+  "id": 13,
+  "title": "TBS LPDP Try Out — Paket 13",
+  "description": "Simulasi lengkap Tes Bakat Skolastik LPDP dengan tingkat kesulitan tinggi (Hard Difficulty): Penalaran Verbal (23 soal/30 menit), Penalaran Kuantitatif (25 soal/40 menit), dan Pemecahan Masalah (12 soal/20 menit).",
+  "difficulty": "hard",
+  "ai_model": "Qwen3.8-Max",
+  "ai_company": "Alibaba Cloud",
+  "ai_model_description": "Qwen3.8-Max adalah model bahasa unggulan Alibaba Cloud dengan kemampuan penalaran logis, verbal, dan matematis yang kuat untuk menghasilkan soal TBS berkualitas tinggi."
+}

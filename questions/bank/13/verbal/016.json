@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-016",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Semua guru di sekolah itu telah mengikuti pelatihan kurikulum baru.\nBeberapa peserta rapat komite adalah guru.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua peserta rapat komite telah mengikuti pelatihan kurikulum baru."
+    },
+    {
+      "key": "B",
+      "text": "Beberapa peserta rapat komite telah mengikuti pelatihan kurikulum baru."
+    },
+    {
+      "key": "C",
+      "text": "Semua guru telah mengikuti pelatihan kurikulum baru."
+    },
+    {
+      "key": "D",
+      "text": "Beberapa peserta rapat komite belum tentu telah mengikuti pelatihan kurikulum baru."
+    },
+    {
+      "key": "E",
+      "text": "Tidak ada peserta rapat komite yang mengikuti pelatihan kurikulum baru."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Pelatihan hanya dijamin bagi guru di sekolah itu, padahal asal peserta rapat komite tidak disebutkan.",
+    "B": "Simpulan ini tampak meyakinkan, tetapi guru yang hadir belum tentu mengajar di sekolah itu, sehingga tidak pasti benar.",
+    "C": "Premis hanya berlaku bagi guru di sekolah itu, bukan semua guru secara umum.",
+    "D": "Benar. Guru yang menjadi peserta rapat belum tentu mengajar di sekolah itu, sehingga keikutsertaan mereka dalam pelatihan belum tentu benar; simpulan kehati-hatian inilah yang sah ditarik.",
+    "E": "Simpulan ini terlalu ekstrem; sebagian peserta tetap mungkin telah mengikuti pelatihan."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

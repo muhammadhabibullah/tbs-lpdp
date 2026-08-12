@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-001",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "ITERASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Penolakan"
+    },
+    {
+      "key": "B",
+      "text": "Penggabungan"
+    },
+    {
+      "key": "C",
+      "text": "Pengulangan"
+    },
+    {
+      "key": "D",
+      "text": "Pengurutan"
+    },
+    {
+      "key": "E",
+      "text": "Pengurangan"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Penolakan bermakna tidak menerima, tidak berkaitan dengan makna iterasi.",
+    "B": "Penggabungan bermakna menyatukan beberapa hal, bukan makna iterasi.",
+    "C": "Benar. Dalam KBBI, iterasi berarti pengulangan, sehingga sinonim yang tepat adalah pengulangan.",
+    "D": "Pengurutan bermakna menyusun secara berurutan, bukan mengulang.",
+    "E": "Pengurangan bermakna membuat menjadi berkurang, bertolak belakang dengan pengulangan."
+  },
+  "difficulty": "easy",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

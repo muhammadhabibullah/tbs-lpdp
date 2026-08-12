@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-002",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "NIRLABA = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Merugi terus-menerus"
+    },
+    {
+      "key": "B",
+      "text": "Tidak mengambil untung"
+    },
+    {
+      "key": "C",
+      "text": "Tanpa modal awal"
+    },
+    {
+      "key": "D",
+      "text": "Bersifat kekeluargaan"
+    },
+    {
+      "key": "E",
+      "text": "Mandiri dalam pembiayaan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Merugi terus-menerus menggambarkan kerugian, padahal lembaga nirlaba belum tentu merugi.",
+    "B": "Benar. Menurut KBBI, nirlaba berarti tidak mencari untung, sehingga padanan yang tepat adalah tidak mengambil untung.",
+    "C": "Tanpa modal awal tidak berkaitan dengan makna nirlaba; lembaga nirlaba tetap dapat memiliki modal.",
+    "D": "Bersifat kekeluargaan menggambarkan suasana organisasi, bukan orientasi keuangannya.",
+    "E": "Mandiri dalam pembiayaan tidak sama dengan tidak mencari untung; lembaga nirlaba dapat menerima dana dari berbagai sumber."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

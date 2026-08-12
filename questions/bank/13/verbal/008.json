@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-008",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "TAKZIM >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Hormat"
+    },
+    {
+      "key": "B",
+      "text": "Segan"
+    },
+    {
+      "key": "C",
+      "text": "Patuh"
+    },
+    {
+      "key": "D",
+      "text": "Takluk"
+    },
+    {
+      "key": "E",
+      "text": "Lancang"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Hormat justru merupakan makna takzim, sehingga opsi ini adalah pengecoh jebakan, bukan lawan kata.",
+    "B": "Segan bermakna hormat dan hati-hati, sejalan dengan takzim, bukan lawannya.",
+    "C": "Patuh bermakna menuruti, tidak berlawanan langsung dengan sikap takzim.",
+    "D": "Takluk bermakna menyerah, tidak berkaitan dengan sikap sopan santun.",
+    "E": "Benar. Takzim berarti hormat dan sopan, sehingga lawan kata yang tepat adalah lancang, yaitu kurang sopan atau kurang ajar."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

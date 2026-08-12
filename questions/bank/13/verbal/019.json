@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-019",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Judul yang paling tepat untuk bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Kemampuan literasi digital kini mulai diperkenalkan sejak jenjang sekolah dasar. Melalui literasi digital, siswa tidak hanya diajarkan cara menggunakan perangkat teknologi, tetapi juga cara menilai informasi yang mereka temui di internet. Langkah ini dinilai penting karena anak-anak semakin cepat bersentuhan dengan gawai dan berbagai layanan digital. Guru membimbing siswa untuk membedakan informasi yang benar dari berita bohong, serta mengajarkan etika berkomunikasi di ruang digital.\n\nPenerapan literasi digital di sekolah dasar menghadapi sejumlah tantangan. Keterbatasan perangkat dan akses internet yang belum merata membuat sebagian sekolah harus berbagi perangkat dalam satu kelas. Selain itu, belum semua guru mendapatkan pelatihan khusus tentang pendampingan digital. Meskipun demikian, berbagai kajian menunjukkan bahwa pengenalan literasi digital sejak dini membantu siswa lebih kritis dalam menerima informasi dan lebih bijak dalam menggunakan media sosial di kemudian hari.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Etika Berkomunikasi di Ruang Digital bagi Guru"
+    },
+    {
+      "key": "B",
+      "text": "Keterbatasan Perangkat Teknologi di Sekolah Dasar"
+    },
+    {
+      "key": "C",
+      "text": "Pengenalan Literasi Digital Sejak Sekolah Dasar"
+    },
+    {
+      "key": "D",
+      "text": "Cara Siswa Menilai Informasi di Internet"
+    },
+    {
+      "key": "E",
+      "text": "Pelatihan Guru dalam Menggunakan Media Sosial"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Etika berkomunikasi hanya salah satu rincian pada paragraf pertama, bukan inti seluruh bacaan.",
+    "B": "Keterbatasan perangkat hanya bagian dari tantangan pada paragraf kedua, bukan gagasan keseluruhan bacaan.",
+    "C": "Benar. Kedua paragraf membahas pengenalan literasi digital di sekolah dasar beserta penerapan dan tantangannya, sehingga judul ini merangkum keseluruhan isi.",
+    "D": "Cara menilai informasi hanyalah salah satu materi literasi digital yang disebut sekilas.",
+    "E": "Pelatihan guru hanya disebut sebagai salah satu tantangan, bukan pokok bahasan bacaan."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

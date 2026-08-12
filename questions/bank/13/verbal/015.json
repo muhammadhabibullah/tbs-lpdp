@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-015",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Semua penerima beasiswa telah lulus seleksi administrasi.\nBeberapa penerima beasiswa adalah atlet daerah.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua atlet daerah telah lulus seleksi administrasi."
+    },
+    {
+      "key": "B",
+      "text": "Semua yang lulus seleksi administrasi adalah atlet daerah."
+    },
+    {
+      "key": "C",
+      "text": "Beberapa atlet daerah telah lulus seleksi administrasi."
+    },
+    {
+      "key": "D",
+      "text": "Beberapa penerima beasiswa bukan atlet daerah."
+    },
+    {
+      "key": "E",
+      "text": "Semua atlet daerah menerima beasiswa."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Yang terjamin hanya atlet yang menjadi penerima beasiswa; atlet daerah di luar program beasiswa tidak dibahas.",
+    "B": "Simpulan ini membalik arah premis pertama; kelulusan seleksi administrasi tidak berarti seseorang atlet daerah.",
+    "C": "Benar. Sebagian atlet daerah termasuk penerima beasiswa, dan semua penerima beasiswa telah lulus seleksi administrasi, sehingga beberapa atlet daerah pasti telah lulus seleksi administrasi.",
+    "D": "Premis hanya menyatakan beberapa penerima beasiswa adalah atlet; belum tentu ada penerima beasiswa yang bukan atlet.",
+    "E": "Premis kedua hanya menyebut sebagian atlet daerah, sehingga tidak sah digeneralisasi menjadi semua."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

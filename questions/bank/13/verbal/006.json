@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-006",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "MONOTON >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Berulang"
+    },
+    {
+      "key": "B",
+      "text": "Tetap"
+    },
+    {
+      "key": "C",
+      "text": "Bervariasi"
+    },
+    {
+      "key": "D",
+      "text": "Ajek"
+    },
+    {
+      "key": "E",
+      "text": "Membosankan"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Berulang justru dekat maknanya dengan monoton, sehingga bukan lawan kata.",
+    "B": "Tetap bermakna tidak berubah, sejalan dengan monoton, bukan lawannya.",
+    "C": "Benar. Monoton berarti selalu sama dan tidak berubah-ubah, sehingga lawan kata yang tepat adalah bervariasi.",
+    "D": "Ajek bermakna tetap dan teratur, sejalan dengan monoton, bukan lawannya.",
+    "E": "Membosankan adalah kesan terhadap sesuatu yang monoton, bukan lawan katanya."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

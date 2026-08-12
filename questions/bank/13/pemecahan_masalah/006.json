@@ -1,0 +1,43 @@
+{
+  "id": "13-pemecahan_masalah-006",
+  "package": 13,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Enam delegasi (A, B, C, D, E, F) duduk dalam dua baris yang saling berhadapan, masing-masing baris berisi tiga kursi, sehingga setiap delegasi berhadapan dengan tepat satu delegasi di baris lainnya. Diketahui: (1) A duduk di kursi tengah baris depan, (2) B duduk berhadapan dengan A, (3) C duduk tepat di sebelah B, (4) D duduk berhadapan dengan C, (5) E tidak duduk di sebelah C, dan (6) F duduk di sebelah A. Pernyataan yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "C berhadapan dengan A"
+    },
+    {
+      "key": "B",
+      "text": "D duduk di sebelah F"
+    },
+    {
+      "key": "C",
+      "text": "D berhadapan dengan B"
+    },
+    {
+      "key": "D",
+      "text": "C duduk di sebelah E"
+    },
+    {
+      "key": "E",
+      "text": "E berhadapan dengan F"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. A berhadapan dengan B (kendala 2); berdasarkan kendala (3) dan (4), C selalu berhadapan dengan D pada kedua susunan yang mungkin.",
+    "B": "Salah. Pada kedua susunan yang mungkin, D dan F menempati dua kursi ujung baris depan yang dipisahkan oleh A, sehingga tidak pernah duduk bersebelahan.",
+    "C": "Salah. B berhadapan dengan A (kendala 2), sedangkan D berhadapan dengan C (kendala 4), sehingga D tidak mungkin berhadapan dengan B.",
+    "D": "Salah. Kendala (5) melarang E duduk di sebelah C; pada kedua susunan, C dan E justru menempati dua kursi ujung baris belakang.",
+    "E": "Benar. Dari kendala (1) dan (2), A di kursi tengah depan dan B di kursi tengah belakang. Kendala (3) menempatkan C di salah satu kursi ujung baris belakang; kendala (4) memaksa D berhadapan dengannya, yaitu kursi ujung baris depan pada sisi yang sama. Kendala (5) membuat E harus menempati kursi ujung baris belakang yang berseberangan sisi dengan C, dan kendala (6) menempatkan F pada kursi ujung baris depan yang tersisa. Hasilnya hanya dua susunan cermin, dan pada keduanya E selalu berhadapan dengan F. Jawaban ini menuntut penggabungan kendala (3), (4), (5), dan (6) sekaligus."
+  },
+  "difficulty": "hard",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}

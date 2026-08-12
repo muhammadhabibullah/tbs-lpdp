@@ -1,0 +1,43 @@
+{
+  "id": "13-verbal-003",
+  "package": 13,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "AFINITAS = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Perbedaan"
+    },
+    {
+      "key": "B",
+      "text": "Pertentangan"
+    },
+    {
+      "key": "C",
+      "text": "Persamaan"
+    },
+    {
+      "key": "D",
+      "text": "Keberagaman"
+    },
+    {
+      "key": "E",
+      "text": "Kedekatan"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Perbedaan justru berlawanan dengan makna afinitas yang menunjukkan hubungan dekat.",
+    "B": "Pertentangan bermakna berlawanan, bukan makna afinitas.",
+    "C": "Persamaan hanya mencakup satu aspek hubungan; afinitas lebih merujuk pada kedekatan hubungan.",
+    "D": "Keberagaman bermakna bermacam-macam, tidak berkaitan dengan afinitas.",
+    "E": "Benar. Menurut KBBI, afinitas berarti kedekatan atau kekerabatan, sehingga padanan yang tepat adalah kedekatan."
+  },
+  "difficulty": "medium",
+  "source": "Qwen3.8-Max-generated",
+  "verified": true
+}
