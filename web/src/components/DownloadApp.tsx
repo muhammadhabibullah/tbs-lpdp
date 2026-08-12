@@ -3,15 +3,19 @@ import { LATEST_RELEASE_API, RELEASES_URL, REPO_URL } from '../lib/appRuntime'
 import { externalLinkProps } from './FeedbackFooter'
 
 /**
- * FE-42: the download section of the web home page. Links resolve at runtime
- * from the GitHub Releases API — CORS-open and unauthenticated — so a new
- * release needs no site rebuild. If the call fails or is rate-limited, every
- * card falls back to the releases page, which is never wrong, only slower.
+ * FE-42: the download section of the web home page — one button, aimed at the
+ * device asking. Links resolve at runtime from the GitHub Releases API —
+ * CORS-open and unauthenticated — so a new release needs no site rebuild. If
+ * the call fails or is rate-limited, the button falls back to the releases
+ * page, which is never wrong, only slower.
  *
- * The per-platform install steps (v6 §6) live in the release notes, not here:
- * they are only read by someone who has already downloaded a file, they are
- * versioned with the installers they describe, and four step-lists inline turn
- * the home page into a manual. Each card links to them instead.
+ * The source is the Releases API and *not* the updater's `latest.json`: that
+ * manifest carries only `{url, signature}` per platform, and its URLs are the
+ * update payloads (`.app.tar.gz`, `-setup.nsis.zip`), not the installers a
+ * person should double-click. It also has no Android entry and no file sizes.
+ *
+ * Per-platform install steps live in the release notes, which the footnote
+ * links to; four step-lists inline turned this section into a manual.
  */
 
 interface ReleaseAsset {
@@ -36,64 +40,103 @@ function pick(assets: ReleaseAsset[], test: (name: string) => boolean): ReleaseA
   return assets.find((asset) => isUserFacing(asset.name) && test(asset.name.toLowerCase())) ?? null
 }
 
-interface PlatformCard {
-  id: string
-  icon: string
-  title: string
-  subtitle: string
-  /** Primary download, plus any secondary formats worth offering. */
-  find: (assets: ReleaseAsset[]) => { label: string; asset: ReleaseAsset | null }[]
-  /** One line on what the OS will say the first time — the rest is in the notes. */
-  note: string
-}
-
-const PLATFORMS: PlatformCard[] = [
+/** Every installer we publish, in the order the "other devices" list shows them. */
+const OPTIONS = [
   {
     id: 'windows',
     icon: '🪟',
-    title: 'Windows',
-    subtitle: 'Windows 10 atau 11, 64-bit',
-    find: (assets) => [{ label: 'Unduh pemasang (.exe)', asset: pick(assets, (n) => n.endsWith('.exe')) }],
-    note: 'Windows menampilkan layar biru “Windows protected your PC” pada pemasangan pertama.',
+    /** What the button says once this is the detected device. */
+    action: 'Unduh untuk Windows',
+    /** What the list says when it is one row among several. */
+    label: 'Windows 10/11 (64-bit)',
+    find: (assets: ReleaseAsset[]) => pick(assets, (n) => n.endsWith('.exe')),
   },
   {
-    id: 'macos',
+    id: 'macos-arm',
     icon: '🍎',
-    title: 'macOS',
-    subtitle: 'Apple Silicon (M1 ke atas) dan Intel',
-    find: (assets) => [
-      {
-        label: 'Unduh .dmg (Apple Silicon)',
-        asset: pick(assets, (n) => n.endsWith('.dmg') && (n.includes('aarch64') || n.includes('arm64'))),
-      },
-      {
-        label: 'Unduh .dmg (Intel)',
-        asset: pick(assets, (n) => n.endsWith('.dmg') && (n.includes('x64') || n.includes('x86_64'))),
-      },
-    ],
-    note: 'macOS menahan aplikasi tanpa tanda tangan Apple pada pembukaan pertama, kadang dengan pesan “is damaged”.',
+    action: 'Unduh untuk Mac (Apple Silicon)',
+    label: 'macOS — Apple Silicon (M1 ke atas)',
+    find: (assets: ReleaseAsset[]) =>
+      pick(assets, (n) => n.endsWith('.dmg') && (n.includes('aarch64') || n.includes('arm64'))),
   },
   {
-    id: 'linux',
+    id: 'macos-intel',
+    icon: '🍎',
+    action: 'Unduh untuk Mac (Intel)',
+    label: 'macOS — Intel',
+    find: (assets: ReleaseAsset[]) =>
+      pick(assets, (n) => n.endsWith('.dmg') && (n.includes('x64') || n.includes('x86_64'))),
+  },
+  {
+    id: 'linux-appimage',
     icon: '🐧',
-    title: 'Linux',
-    subtitle: 'x86-64 — AppImage, Debian/Ubuntu, atau Fedora',
-    find: (assets) => [
-      { label: 'Unduh .AppImage', asset: pick(assets, (n) => n.endsWith('.appimage')) },
-      { label: 'Unduh .deb (Debian/Ubuntu)', asset: pick(assets, (n) => n.endsWith('.deb')) },
-      { label: 'Unduh .rpm (Fedora)', asset: pick(assets, (n) => n.endsWith('.rpm')) },
-    ],
-    note: 'AppImage perlu ditandai executable, dan hanya AppImage yang menerima pembaruan otomatis.',
+    action: 'Unduh untuk Linux (AppImage)',
+    label: 'Linux — AppImage (x86-64)',
+    find: (assets: ReleaseAsset[]) => pick(assets, (n) => n.endsWith('.appimage')),
+  },
+  {
+    id: 'linux-deb',
+    icon: '🐧',
+    action: 'Unduh untuk Linux (.deb)',
+    label: 'Linux — Debian/Ubuntu (.deb)',
+    find: (assets: ReleaseAsset[]) => pick(assets, (n) => n.endsWith('.deb')),
+  },
+  {
+    id: 'linux-rpm',
+    icon: '🐧',
+    action: 'Unduh untuk Linux (.rpm)',
+    label: 'Linux — Fedora (.rpm)',
+    find: (assets: ReleaseAsset[]) => pick(assets, (n) => n.endsWith('.rpm')),
   },
   {
     id: 'android',
     icon: '🤖',
-    title: 'Android',
-    subtitle: 'Android 7.0 ke atas, 64-bit (arm64)',
-    find: (assets) => [{ label: 'Unduh .apk', asset: pick(assets, (n) => n.endsWith('.apk')) }],
-    note: 'Android meminta izin “Instal dari sumber tidak dikenal” untuk browser yang Anda pakai.',
+    action: 'Unduh untuk Android',
+    label: 'Android 7.0 ke atas (arm64)',
+    find: (assets: ReleaseAsset[]) => pick(assets, (n) => n.endsWith('.apk')),
   },
-]
+] as const
+
+type OptionId = (typeof OPTIONS)[number]['id']
+
+type Os = 'windows' | 'macos' | 'linux' | 'android' | 'ios' | 'unknown'
+
+/**
+ * Order matters: Android's user agent also says "Linux", and an iPad since
+ * iPadOS 13 claims to be a Mac — only the touch-point count gives it away.
+ */
+function detectOs(): Os {
+  if (typeof navigator === 'undefined') return 'unknown'
+  const ua = navigator.userAgent
+  if (/android/i.test(ua)) return 'android'
+  if (/iphone|ipod/i.test(ua)) return 'ios'
+  if (/mac/i.test(ua)) return navigator.maxTouchPoints > 1 ? 'ios' : 'macos'
+  if (/windows|win32|win64/i.test(ua)) return 'windows'
+  if (/linux|x11|cros/i.test(ua)) return 'linux'
+  return 'unknown'
+}
+
+/**
+ * Which Mac to offer. Chromium answers this exactly; Safari and Firefox expose
+ * nothing usable, and every Mac sold since late 2020 is Apple Silicon, so that
+ * is the default — with the Intel build kept one visible click away rather than
+ * buried in the list, because guessing wrong hands someone a build that will
+ * not launch.
+ */
+interface UserAgentData {
+  getHighEntropyValues?: (hints: string[]) => Promise<{ architecture?: string }>
+}
+
+async function detectMacArch(): Promise<'arm' | 'intel'> {
+  const uaData = (navigator as Navigator & { userAgentData?: UserAgentData }).userAgentData
+  try {
+    const values = await uaData?.getHighEntropyValues?.(['architecture'])
+    if (values?.architecture) return values.architecture === 'arm' ? 'arm' : 'intel'
+  } catch {
+    // Chromium can reject the request; fall through to the default.
+  }
+  return 'arm'
+}
 
 function formatSize(bytes: number): string {
   return `${(bytes / 1024 / 1024).toFixed(1)} MB`
@@ -102,6 +145,9 @@ function formatSize(bytes: number): string {
 export default function DownloadApp() {
   const [release, setRelease] = useState<Release | null>(null)
   const [failed, setFailed] = useState(false)
+  const [os] = useState<Os>(detectOs)
+  const [macArch, setMacArch] = useState<'arm' | 'intel'>('arm')
+  const [showAll, setShowAll] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -142,7 +188,51 @@ export default function DownloadApp() {
     }
   }, [])
 
+  useEffect(() => {
+    if (os !== 'macos') return
+    let cancelled = false
+    void detectMacArch().then((arch) => {
+      if (!cancelled) setMacArch(arch)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [os])
+
   const version = useMemo(() => release?.tag.replace(/^app-v/, '') ?? null, [release])
+
+  /** The one the button offers. `null` on iOS and anything unrecognised. */
+  const primaryId: OptionId | null = useMemo(() => {
+    switch (os) {
+      case 'windows':
+        return 'windows'
+      case 'macos':
+        return macArch === 'intel' ? 'macos-intel' : 'macos-arm'
+      case 'linux':
+        return 'linux-appimage'
+      case 'android':
+        return 'android'
+      default:
+        return null
+    }
+  }, [os, macArch])
+
+  const primary = OPTIONS.find((option) => option.id === primaryId) ?? null
+  const primaryAsset = primary && release ? primary.find(release.assets) : null
+  /** Offered beside the button, because a wrong guess here does not launch. */
+  const macAlternative = os === 'macos' ? OPTIONS.find((o) => o.id === (macArch === 'intel' ? 'macos-arm' : 'macos-intel')) : null
+  const macAlternativeAsset = macAlternative && release ? macAlternative.find(release.assets) : null
+
+  const others = useMemo(
+    () =>
+      release
+        ? OPTIONS.filter((option) => option.id !== primaryId).map((option) => ({
+            ...option,
+            asset: option.find(release.assets),
+          }))
+        : [],
+    [release, primaryId],
+  )
 
   return (
     <section className="card download-app" id="unduh" aria-labelledby="unduh-title">
@@ -154,59 +244,74 @@ export default function DownloadApp() {
         dikerjakan <strong>tanpa koneksi internet</strong> — tanpa akun dan tanpa iklan. Saat perangkat terhubung,
         aplikasi memeriksa paket soal baru secara otomatis.
       </p>
-      <p className="muted download-status">
-        {version ? (
-          <>
-            Versi terbaru: <strong>v{version}</strong>
-            {release?.publishedAt ? ` · dirilis ${new Date(release.publishedAt).toLocaleDateString('id-ID')}` : ''}
-          </>
-        ) : failed ? (
-          <>
-            Daftar unduhan tidak dapat dimuat saat ini. Buka{' '}
-            <a {...externalLinkProps(RELEASES_URL)}>halaman rilis di GitHub</a> untuk mengunduh langsung.
-          </>
+
+      <div className="download-cta">
+        {primary && primaryAsset ? (
+          <a className="btn btn-navy btn-lg download-primary" {...externalLinkProps(primaryAsset.url)} download>
+            <span aria-hidden="true">{primary.icon}</span> {primary.action}
+            {primaryAsset.size ? <span className="download-size"> · {formatSize(primaryAsset.size)}</span> : null}
+          </a>
         ) : (
-          'Memuat daftar unduhan…'
+          <a className="btn btn-navy btn-lg download-primary" {...externalLinkProps(release?.page ?? RELEASES_URL)}>
+            Buka halaman rilis di GitHub
+          </a>
         )}
-      </p>
 
-      <div className="download-grid">
-        {PLATFORMS.map((platform) => {
-          const downloads = release ? platform.find(release.assets) : []
-          const available = downloads.filter((download) => download.asset)
-          return (
-            <article className="download-card" key={platform.id}>
-              <h3>
-                <span aria-hidden="true">{platform.icon}</span> {platform.title}
-              </h3>
-              <p className="muted download-subtitle">{platform.subtitle}</p>
+        <p className="muted download-status">
+          {failed ? (
+            'Daftar unduhan tidak dapat dimuat saat ini — halaman rilis memuat seluruh berkasnya.'
+          ) : !release ? (
+            'Memuat daftar unduhan…'
+          ) : (
+            <>
+              {version ? (
+                <>
+                  Versi <strong>v{version}</strong>
+                  {release.publishedAt ? ` · ${new Date(release.publishedAt).toLocaleDateString('id-ID')}` : ''}
+                </>
+              ) : null}
+              {os === 'ios' ? ' · Belum tersedia untuk iPhone dan iPad — gunakan versi web.' : null}
+              {os === 'unknown' ? ' · Perangkat Anda tidak dikenali; pilih berkas secara manual.' : null}
+            </>
+          )}
+        </p>
 
-              <div className="download-links">
-                {available.length > 0 ? (
-                  available.map((download, index) => (
-                    <a
-                      key={download.asset!.name}
-                      className={`btn btn-block btn-sm ${index === 0 ? 'btn-navy' : 'btn-ghost'}`}
-                      {...externalLinkProps(download.asset!.url)}
-                      download
-                    >
-                      {download.label}
-                      {download.asset!.size ? (
-                        <span className="download-size"> · {formatSize(download.asset!.size)}</span>
-                      ) : null}
-                    </a>
-                  ))
-                ) : (
-                  <a className="btn btn-ghost btn-block btn-sm" {...externalLinkProps(release?.page ?? RELEASES_URL)}>
-                    Buka halaman rilis
+        <p className="download-alternatives">
+          {macAlternativeAsset ? (
+            <>
+              <a {...externalLinkProps(macAlternativeAsset.url)} download>
+                {macArch === 'intel' ? 'Mac dengan chip Apple Silicon?' : 'Mac dengan prosesor Intel?'}
+              </a>
+              <span aria-hidden="true"> · </span>
+            </>
+          ) : null}
+          <button type="button" className="btn btn-link" aria-expanded={showAll} onClick={() => setShowAll((v) => !v)}>
+            {showAll ? 'Sembunyikan unduhan lain' : 'Unduhan untuk perangkat lain'}
+          </button>
+        </p>
+
+        {showAll ? (
+          <ul className="download-others">
+            {others.map((option) => (
+              <li key={option.id}>
+                <span aria-hidden="true">{option.icon}</span>{' '}
+                {option.asset ? (
+                  <a {...externalLinkProps(option.asset.url)} download>
+                    {option.label}
                   </a>
+                ) : (
+                  <span className="muted">{option.label}</span>
                 )}
-              </div>
-
-              <p className="download-note">{platform.note}</p>
-            </article>
-          )
-        })}
+                {option.asset?.size ? <span className="download-size"> · {formatSize(option.asset.size)}</span> : null}
+              </li>
+            ))}
+            {others.length === 0 ? (
+              <li>
+                <a {...externalLinkProps(release?.page ?? RELEASES_URL)}>Lihat seluruh berkas di halaman rilis</a>
+              </li>
+            ) : null}
+          </ul>
+        ) : null}
       </div>
 
       <p className="download-footnote">

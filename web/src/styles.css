@@ -2066,45 +2066,69 @@ button.package-badge {
   font-size: 14px;
 }
 
-.download-status {
-  margin-top: 8px;
+/* One button for the device that is asking, centred, with everything else a
+   line of links beneath it. Four platform cards asked the reader to work out
+   which file was theirs; the page already knows. */
+.download-cta {
+  margin-top: 18px;
+  padding: 22px 18px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fbfcfe;
+  text-align: center;
+}
+
+/* Not `.btn`'s inline-flex: on a phone the label wraps to two lines, and as
+   flex children the icon and the file size would strand themselves either side
+   of it. As inline text the whole thing reflows as one centred block. */
+.download-primary {
+  display: inline-block;
+  max-width: 100%;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.download-primary .download-size {
+  white-space: nowrap;
+}
+
+.download-app .download-status {
+  margin: 10px 0 0;
+  max-width: none;
   font-size: 13px;
 }
 
-/* Four platforms across one row. The cards now hold links rather than prose —
-   the install steps live in the release notes — so they take a narrow column
-   happily, and the section stays one screenful. */
-.download-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
-  gap: 16px;
-  margin-top: 18px;
+.download-alternatives {
+  margin: 4px 0 0 !important;
+  font-size: 13px;
 }
 
-.download-card {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 16px 18px 14px;
-  background: #fbfcfe;
-  display: flex;
-  flex-direction: column;
+/* The link-styled toggle has to sit on the text baseline beside real links. */
+.download-alternatives .btn-link {
+  padding: 0;
+  font-size: inherit;
+  vertical-align: baseline;
 }
 
-.download-card h3 {
-  margin: 0;
-  font-size: 16px;
-  color: var(--navy-700, #0d2280);
+.download-app .download-alternatives a,
+.download-others a {
+  color: var(--navy-600);
+  font-weight: 600;
 }
 
-.download-subtitle {
-  margin: 2px 0 12px;
-  font-size: 12.5px;
+.download-others {
+  margin: 14px auto 0;
+  padding: 14px 0 0;
+  max-width: 420px;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
 }
 
-.download-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.download-others li + li {
+  margin-top: 8px;
 }
 
 .download-size {
@@ -2112,18 +2136,7 @@ button.package-badge {
   opacity: 0.75;
 }
 
-/* Pinned to the bottom so the four notes line up even when a card carries
-   three download buttons and its neighbour carries one. */
-.download-note {
-  margin-top: auto;
-  padding-top: 12px;
-  font-size: 12px;
-  line-height: 1.55;
-  color: var(--ink-faint);
-}
-
-/* One disclaimer for the whole section, not four — it said the same thing in
-   every card. Two classes, to outrank `.download-app > p`'s size and colour. */
+/* Two classes, to outrank `.download-app > p`'s size and colour. */
 .download-app > .download-footnote {
   margin: 16px 0 0;
   max-width: 78ch;
@@ -2132,8 +2145,7 @@ button.package-badge {
   color: var(--ink-faint);
 }
 
-.download-footnote a,
-.download-card p a {
+.download-footnote a {
   color: var(--navy-600);
   font-weight: 600;
   word-break: break-word;

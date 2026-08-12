@@ -93,7 +93,7 @@ when code or the bank *schema* changes (AP-5 gates that case).
 
 | ID | Requirement |
 |----|-------------|
-| FE-42 | The web app gains a menu item **"Unduh Aplikasi Offline"** (in `MENU_ITEMS`, web flavor only) anchoring a new home-page section. The section lists one card per platform (Windows, macOS, Linux, Android) whose download links point at the latest GitHub Release — resolved at runtime from `api.github.com/repos/muhammadhabibullah/tbs-lpdp/releases/latest` (CORS-open, unauthenticated) with a plain link to the releases page as fallback if the API call fails or is rate-limited. Each card carries a one-line warning of what its OS will say the first time; the **step-by-step install instructions for non-technical users in Bahasa Indonesia** are the release notes (`releaseBody` in `release-app.yml`), which every card and the section footnote link to. Section 6 below is the content source for those instructions. |
+| FE-42 | The web app gains a menu item **"Unduh Aplikasi Offline"** (in `MENU_ITEMS`, web flavor only) anchoring a new home-page section. The section offers **one button**, carrying the installer for the visitor's own device with its file size: OS from the user agent, and on macOS the CPU from `userAgentData.getHighEntropyValues(['architecture'])`, defaulting to Apple Silicon where the browser will not say. The other Mac is a visible link beside the button (guessing wrong yields a build that cannot launch); every other installer sits behind one **"Unduhan untuk perangkat lain"** toggle. Assets resolve at runtime from `api.github.com/repos/muhammadhabibullah/tbs-lpdp/releases/latest` (CORS-open, unauthenticated), filtered to user-facing files — `.sig`, `.json`, `.tar.gz` and `.nsis.zip` are updater plumbing. If the API call fails, is rate-limited, or the newest release is still a draft, the button becomes a plain link to the releases page, which is never wrong, only slower. The **step-by-step install instructions for non-technical users in Bahasa Indonesia** are the release notes (`releaseBody` in `release-app.yml`), which the section footnote links to. Section 6 below is the content source for those instructions. |
 | FE-43 | The site footer gains a block titled **"Open Source Code"** placed below the *Kontak* block in `FeedbackFooter.tsx`, linking to `https://github.com/muhammadhabibullah/tbs-lpdp` (opens in a new tab). Shown in both web and app flavors. |
 
 ### 3.4 Non-functional
@@ -200,7 +200,7 @@ YAML wraps the rendered page too.
 | `web/vite/bank-reader.ts` | Bank compilation extracted from `mock-bank-plugin.ts`; git-derived versions (AP-3, NF-32) |
 | `web/scripts/build-bank.ts` | CLI: emit `bank-<digest>.json` + `manifest.json` (validates via `validate_bank.py` first) |
 | `web/vite.config.ts` | Conditional `base` for Tauri builds (AP-1) |
-| `web/src/components/MenuBar.tsx`, `pages/HomePage.tsx` | "Unduh Aplikasi Offline" menu + section with runtime latest-release links (FE-42); install steps live in the release notes |
+| `web/src/components/MenuBar.tsx`, `pages/HomePage.tsx` | "Unduh Aplikasi Offline" menu + one-button section resolving the visitor's installer from the latest release (FE-42); install steps live in the release notes |
 | `web/src/components/FeedbackFooter.tsx` | "Open Source Code" block below Kontak (FE-43) |
 | `web/src/components/UpdateControls.tsx` | App-flavor: version display, bank refresh, app update check (AP-4, AP-6, AP-10) |
 | `.github/workflows/release-app.yml` | New: tag-triggered desktop matrix + Android build → GitHub Release (AP-8) |
@@ -220,7 +220,7 @@ YAML wraps the rendered page too.
 | A-7 | Manifest with `bank_schema_version` above the app's | Bank not downloaded; "update the app" prompt shown; current bank keeps working |
 | A-8 | Inspect app bundle | No Supabase URL/key, no Turnstile key (C-31); updater pubkey present |
 | A-9 | Inspect Pages web bundle after deploy | No local engine, no answer keys (C-29); `bank/manifest.json` served with valid digest |
-| A-10 | Web home page | "Unduh Aplikasi Offline" menu scrolls to platform cards with working latest-release links; per-platform install steps reachable from there in the release notes; footer shows "Open Source Code" below Kontak |
+| A-10 | Web home page, on each of Windows/macOS/Linux/Android | "Unduh Aplikasi Offline" menu scrolls to a single button already carrying that device's installer and size; the toggle lists the rest; install steps reachable in the release notes; footer shows "Open Source Code" below Kontak |
 | A-11 | Offline app UI | No download-app menu, no maintenance/CAPTCHA gates; local-statistics label; version line + both update actions visible |
 | A-12 | Two consecutive bank publishes with no content change | Identical `bank_version` (NF-32); apps report "sudah terbaru" |
 | A-13 | "Unduh PDF" on the review screen, desktop app | Native print dialog opens with the whole attempt — all three subtests, every question — and "Save as PDF" writes it. Button absent on Android |
@@ -279,6 +279,21 @@ substitute for a Developer ID: §1's honest limit still holds, and Gatekeeper
 still requires **System Settings → Privacy & Security → Open Anyway**. Replacing
 `"-"` with a real identity is the only change needed if a membership is ever
 obtained.
+
+**The download button reads the Releases API, not `latest.json`.** The updater
+manifest looks like the natural index — it is one file listing every platform —
+but it is the wrong one. `ReleaseManifestPlatform` carries `{url, signature}`
+and nothing else, and each `url` is the *update payload*: `.app.tar.gz` on
+macOS, `-setup.nsis.zip` on Windows. Handing those to a person instead of the
+`.dmg` or `.exe` gives them a file their OS will not install. It also has no
+Android key, since `tauri-plugin-updater` has no Android implementation (AP-7),
+and no file sizes. The Releases API has all of it, is equally CORS-open, and is
+one request either way.
+
+Two consequences worth knowing: `releases/latest` skips **drafts**, so the
+button stays on its releases-page fallback until a release is actually
+published; and while the repository is private, both the API and the asset URLs
+404 for anonymous visitors, so the fallback is all a stranger would see.
 
 **"Unduh PDF" goes through the shell, and the print copy is always in the DOM.**
 The macOS WKWebView implements `window.print()` as a no-op, so FE-20's button
