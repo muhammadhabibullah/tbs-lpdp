@@ -7,7 +7,8 @@ name: Release offline app
 #
 # The desktop matrix creates one DRAFT GitHub Release holding every installer,
 # its minisign signature, and latest.json; the Android job signs an APK and
-# uploads it into the same draft. Review, then publish the release by hand.
+# uploads it into the same draft. Once both jobs complete, the publish job
+# automatically publishes the release.
 on:
   push:
     tags: ['app-v*']
@@ -27,7 +28,7 @@ jobs:
     outputs:
       version: ${{ steps.check.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - id: check
         name: Tag must match tauri.conf.json, updater key must be configured
@@ -77,7 +78,7 @@ jobs:
             args: ''
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           # NF-32: question versions come from commit history, so the bank
           # snapshot compiled into the installer needs the full log.
@@ -96,7 +97,7 @@ jobs:
             libgtk-3-dev libxdo-dev libssl-dev patchelf \
             build-essential curl wget file
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -184,17 +185,17 @@ jobs:
     needs: [guard]
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
           cache-dependency-path: web/package-lock.json
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 17
@@ -293,3 +294,16 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload "app-v${{ needs.guard.outputs.version }}" "${{ steps.apk.outputs.path }}" --clobber
+
+  publish:
+    # Automatically publish the release once all desktop installers and the Android APK are uploaded.
+    needs: [guard, desktop, android]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh release edit "app-v${{ needs.guard.outputs.version }}" --draft=false
+
