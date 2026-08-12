@@ -1,4 +1,4 @@
-# CLAUDE.md — TBS LPDP Try Out Website
+# AGENTS.md — TBS LPDP Try Out Website
 
 Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pages** (React + Vite + TypeScript in `web/`), backend on **Supabase** (Postgres + RLS + RPC, anonymous auth, Storage). No other infrastructure — all trusted logic (timing, grading, answer-key secrecy) lives in `supabase/schema.sql`.
 
@@ -48,9 +48,9 @@ Both selectors are `define`d as literals in `web/vite.config.ts` so the dead bra
 
 ## Question work — use the skill and agents
 
-For any question generation/editing, follow `.agents/skills/lpdp-question-generation/SKILL.md` or `.claude/skills/lpdp-question-generation/SKILL.md`. Key rules:
+For any question generation/editing, follow `.agents/skills/lpdp-question-generation/SKILL.md`. Key rules:
 
-- Use the **question_generator** / **question-generator** agent to write or regenerate questions; use the read-only **question_reviewer** / **question-reviewer** agent to verify them before considering the work done. Route every reviewer failure back to `question_generator`.
+- Use the **question_generator** agent to write or regenerate questions; use the read-only **question_reviewer** agent to verify them before considering the work done. Route every reviewer failure back to `question_generator`.
 - Computable types (`deret_angka`, `deret_huruf`, `aritmetika`, `perbandingan_kuantitatif`, `aljabar`, `kecukupan_data`, `peluang_kombinatorik`) MUST come from the Python generators, never hand-written keys. Use `kecukupan_data_predikat.py` for yes/no inequality predicates and `kecukupan_data.py` for exact-quantity/geometry items.
 - Always finish with `python3 questions/generator/validate_bank.py` — it must exit 0.
 

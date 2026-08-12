@@ -14,7 +14,7 @@ One package = one full TBS try-out, 60 questions, 90 minutes:
 | Subtest key | Name | Questions | Duration | Type mix (guideline) |
 |-------------|------|-----------|----------|----------------------|
 | `verbal` | Penalaran Verbal | 23 | 30 min | 4 `sinonim`, 4 `antonim`, 5 `analogi`, 3 `silogisme`, 2 `kalimat_efektif`, 5 `reading` (1–2 passages) |
-| `kuantitatif` | Penalaran Kuantitatif | 25 | 40 min | 5 `aritmetika`, 3 `aljabar`, 5 `deret_angka` (≥1 two-blank **and** ≥1 anchored `--interior`), 4 `perbandingan_kuantitatif`, 2 `kecukupan_data`, 4 `soal_cerita`, 2 `geometri` |
+| `kuantitatif` | Penalaran Kuantitatif | 25 | 40 min | 5 `aritmetika`, 3 `aljabar`, 4 `deret_angka`, 1 `deret_huruf`, 4 `perbandingan_kuantitatif`, 2 `kecukupan_data`, 4 `soal_cerita`, 2 `geometri` |
 | `pemecahan_masalah` | Pemecahan Masalah | 12 | 20 min | 4 `logika_analitis`, 2 `penalaran_kasus`, 2 `interpretasi_data`, 2 `peluang_kombinatorik`, 1 `analisis_teks`, 1 `soal_cerita` |
 
 Difficulty mix per subtest, **from package 4 onwards**: ~15% `easy`, ~45% `medium`, ~40% `hard`. Packages 1–3 were built to an easier ~30/50/20 and are not to be rewritten; every *new* package aims at the harder mix, because the real test is harder than those first three. Scoring is +5/0, so no trick "no correct answer" items — exactly one correct option, always.
@@ -27,7 +27,7 @@ Where the extra difficulty comes from — pick the harder variant, never a murki
 - **Distractors that are the near-miss.** The strongest option set is one where each wrong answer is the result of a specific, nameable slip (right rule applied one step too far, operand not carried forward, two operations merged into one). If a distractor is wrong for no describable reason, it is wasted.
 - **Never** by trick wording, hidden assumptions, unstated units, or answers that hinge on a reading of the Indonesian rather than the mathematics.
 
-The mix is a guideline; `validate_bank.py` enforces the per-subtest **totals**, not the split. Package 1 predates this mix and does not match it. Which types a subtest may carry *is* enforced, from `TYPES_BY_SUBTEST` in `questions/generator/common.py` — `soal_cerita` and `peluang_kombinatorik` are deliberately legal in two subtests each.
+The mix is a guideline; `validate_bank.py` enforces the per-subtest **totals**, not the split. Package 1 predates this mix and does not match it. Packages 1–6 use five `deret_angka`; **package 7 onward replaces one with `deret_huruf`**. Across the remaining four number sequences, include at least one two-blank item, one anchored `--interior` item, and the opt-in `fixed_four_operation_cycle` architecture. For package 7 specifically, make that fixed cycle the two-blank item, then use one `--leading`, one `--interior`, and one `--template three_interleaved` item; later packages must rotate architectures again. Of the two `kecukupan_data` items, use at least one geometry item and, from package 7 onward, prefer the predicate script for the other. Which types a subtest may carry *is* enforced from `TYPES_BY_SUBTEST` in `questions/generator/common.py` — `soal_cerita` and `peluang_kombinatorik` are deliberately legal in two subtests each.
 
 ## Directory layout
 
@@ -71,12 +71,12 @@ Authoritative schema: `questions/schema.json` (validate against it, don't trust 
     "E": "Batang otak adalah struktur berbeda yang menghubungkan otak dan sumsum."
   },
   "difficulty": "easy",
-  "source": "claude-generated",
+  "source": "codex-generated",
   "verified": false
 }
 ```
 
-Notes: `image` is a path relative to the package dir (`"images/geo-001.png"`) or `null`; `passage` carries the shared stimulus (see below); `verified` flips to `true` only after question-reviewer PASSes it.
+Notes: `image` is a path relative to the package dir (`"images/geo-001.png"`) or `null`; `passage` carries the shared stimulus (see below); `verified` flips to `true` only after question_reviewer PASSes it.
 
 `passage` is rendered above the stem with `white-space: pre-wrap`, so line breaks survive but column alignment by spaces does not (the font is proportional). Rules by type:
 
@@ -113,29 +113,37 @@ Spesialis          | 3
 
 ## The question types
 
-Eleven of the eighteen types are traditional; these seven were added after comparing the bank with real LPDP sample items in `questions/sample/`. Each has a format contract that has to be followed exactly, because candidates recognise these formats on sight.
+The bank recognises nineteen types. Nine have especially strict format contracts because candidates recognise them on sight; `deret_huruf` is the newest, added after the tutorial-screenshot coverage audit.
 
 - **`silogisme`** (verbal, also legal in `pemecahan_masalah`) — premises then `Simpulan yang tepat adalah ...`. The key must follow *necessarily*; the strongest distractors are conclusions that are merely probable, that reverse the implication, or that over-generalise from "tidak semua"/"sebagian". Include some items whose correct answer is a hedge (`... belum tentu ...`), as in real sets.
 - **`kalimat_efektif`** (verbal) — a flawed sentence, then five rewrites. Exactly one must be correct under standard *kalimat efektif* rules (no redundant words, clear subject and predicate, consistent conjunction, PUEBI spelling). Every distractor must break a **nameable** rule, and the explanation must name it. Do not write items where two rewrites are both defensible — this is the easiest type to get wrong.
-- **`deret_angka`** (kuantitatif) — number sequences. **Script-generated**, and the screening matters as much as the rule: every candidate is tested against rival readings (arithmetic, geometric, second difference, interleaved, alternating, Fibonacci) and thrown away if any of them fits the printed terms but continues differently. Three stem shapes, hardest last: `...` at the end (one blank), `..., ...` at the end (two), and `--interior` — four terms, two blanks, then a further term printed as an **anchor** (`−9, −10, −8, −24, ..., ..., −138`). The anchored shape is where the real test gets hard, so every package from 4 on carries at least one. Rules span the whole list the official sets use: `+`, `−`, `×`, `:` (including a three-step operation cycle whose operand climbs straight through the repeat — `−1, +2, ×3, −4, +5, ×6`), Fibonacci sums, second-difference climbs, and interleaved *loncat angka*. Division-cycles are built backwards from their last term so every step divides exactly.
+- **`deret_angka`** (kuantitatif) — number sequences. **Script-generated**, and the screening matters as much as the rule: every candidate is tested against rival readings (arithmetic, geometric, second difference, two/three interleaved tracks, alternating, Fibonacci) and thrown away if any of them fits the printed terms but continues differently. Four stem shapes are supported: a one-blank tail, a two-blank tail, `--leading` (the first term is missing, with three later observations per interleaved track so two equal intervals anchor it), and `--interior` (four terms, two blanks, then a printed anchor, e.g. `−9, −10, −8, −24, ..., ..., −138`). Rules span the whole list the official sets use: `+`, `−`, `×`, `:`, Fibonacci sums, second-difference climbs, and two/three-track *loncat angka*. Two operation-cycle architectures are distinct: `cycling_ops` repeats three operators while its operand keeps climbing, whereas opt-in `fixed_four_operation_cycle` repeats `×m, −k, :m, +k` with fixed operands, as in the screenshot architecture. Division is exact by construction, and a draw is rejected when its subtraction transition is also readable as exact integer division. A repeated answer is normally rejected, but the fixed four-cycle may legitimately return to an earlier printed value because its inverse operations make that repetition evidence of the rule.
+- **`deret_huruf`** (kuantitatif) — alphabet-position sequences, with A=1 through Z=26. **Script-generated.** Supported families match the screenshot set: increasing jumps (`+1,+2,+3,...`), two opposite interleaved tracks, two interleaved tracks whose jumps increase, a four-step jump cycle, a constant `+5` sequence that wraps after Z, and the anchored descending-square positions `Y, P, I, ..., A`. It supports one or two tail blanks. Every tail item is screened against constant/second differences, interleaved tracks, three/four-step cycles, and modular steps; the interior square item is accepted only when exactly one A–Z candidate preserves its second difference. Do not mix letters and numbers in one item until a separate screened template exists.
 - **`aljabar`** (kuantitatif) — linear equations, two-variable systems, evaluating expressions, symmetric identities. **Script-generated.**
-- **`kecukupan_data`** (kuantitatif) — a question, two numbered statements, and the fixed five options (see `OPTIONS` in `kecukupan_data.py`; never re-word them). The key is a claim about three separate facts — (1) alone, (2) alone, both — so it is decided by computation, never by eye. **Script-generated.** Half the templates are geometry items that come with a figure (`--kind geometry`): parallel lines cut by two transversals, a right triangle with a midsegment, two right triangles sharing a base. Real sets lean on these, and they are where candidates go wrong most, because a picture invites you to look and looking is not deciding — each is built around one quantity that looks decisive and is not (AB in a midsegment item determines nothing about DE; the base in the two-triangle item cancels out of the answer entirely).
+- **`kecukupan_data`** (kuantitatif) — a question, two numbered statements, and the fixed five options (see `OPTIONS` in `kecukupan_data.py`; never re-word them). The key is a claim about three separate facts — (1) alone, (2) alone, both — so it is decided by computation, never by eye. **Script-generated.** `kecukupan_data.py` handles exact-quantity questions with rational linear algebra and includes geometry figures. `kecukupan_data_predikat.py` handles the screenshot's yes/no inequality architecture: it symbolically reduces the fraction comparison, checks every sufficiency key against a positive-integer model search, and prints concrete counterexamples for every insufficient statement. Never route a predicate item through the exact-quantity engine. Real sets lean on geometry and predicate variants because both punish deciding by appearance rather than proof.
 - **`peluang_kombinatorik`** (kuantitatif and pemecahan_masalah) — probability and counting. Probabilities print as reduced fractions (`12/95`), never decimals. **Script-generated.**
 - **`interpretasi_data`** (pemecahan_masalah) — a table or chart, then a question whose options are claims about it. Every option must be decidable from the data alone; the classic key is a superlative ("paling sedikit"), and the classic distractor is a plausible claim the table simply does not cover — which must be labelled as such in its explanation.
 - **`analisis_teks`** (pemecahan_masalah) — a short argumentative text (an editorial, a report), then a question about its main problem, the writer's stance, or an implied conclusion. Distractors should be statements that appear in the text but are supporting detail rather than the main point.
 
 ## Workflow
 
-1. **Generate** — run the `question-generator` agent. Computable types MUST come from the deterministic scripts (they write valid files directly and print what they created):
+1. **Generate** — run the `question_generator` agent. Computable types MUST come from the deterministic scripts (they write valid files directly and print what they created):
    ```bash
    python3 questions/generator/deret_angka.py --package 1 --count 3              # next term
    python3 questions/generator/deret_angka.py --package 1 --count 1 --blanks 2   # next two terms
    python3 questions/generator/deret_angka.py --package 1 --count 1 --interior   # hardest: 4 terms, 2 blanks, anchor
+   python3 questions/generator/deret_angka.py --package 1 --count 1 --leading    # missing first term
+   python3 questions/generator/deret_angka.py --package 1 --count 1 --template fixed_four_operation_cycle --blanks 2
+   python3 questions/generator/deret_angka.py --package 1 --count 1 --template three_interleaved
+   python3 questions/generator/deret_huruf.py --package 1 --count 1              # one letter
+   python3 questions/generator/deret_huruf.py --package 1 --count 1 --blanks 2   # next two letters
+   python3 questions/generator/deret_huruf.py --package 1 --count 1 --interior   # Y, P, I, ..., A family
    python3 questions/generator/aritmetika.py --package 1 --count 5 --type aritmetika
    python3 questions/generator/aritmetika.py --package 1 --count 4 --type perbandingan_kuantitatif
    python3 questions/generator/aljabar.py --package 1 --count 3
    python3 questions/generator/kecukupan_data.py --package 1 --count 2
    python3 questions/generator/kecukupan_data.py --package 1 --count 1 --kind geometry   # with a figure
+   python3 questions/generator/kecukupan_data_predikat.py --package 1 --count 1          # yes/no inequality
    python3 questions/generator/peluang_kombinatorik.py --package 1 --count 2 --subtest pemecahan_masalah
    ```
    Every script takes `--seed` for reproducible output and `--bank-dir` to write somewhere other than `questions/bank` (use a scratch dir when experimenting — the scripts refuse to overwrite an existing file).
@@ -144,7 +152,7 @@ Eleven of the eighteen types are traditional; these seven were added after compa
 
    Verbal, `soal_cerita`, `geometri`, `interpretasi_data`, `analisis_teks` and the pemecahan_masalah logic types are written by the agent. Anything with a number in it — `geometri` answers, the totals in an `interpretasi_data` table — still gets checked with a quick Python calculation via Bash before it is saved.
 2. **Validate** — `python3 questions/generator/validate_bank.py` must exit 0 (schema, counts vs blueprint, unique numbers, key ∈ options, all 5 explanations, images exist).
-3. **Review** — run the `question-reviewer` agent (blind re-solve). Regenerate every FAIL, then re-validate. Set `"verified": true` on PASSed questions.
+3. **Review** — run the read-only `question_reviewer` agent (blind re-solve). Route every FAIL back to `question_generator`, regenerate it, and re-validate. After a question PASSes, have `question_generator` set `"verified": true`, then validate once more.
 4. **Push** — developer-run, needs `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` in env:
    ```bash
    python3 questions/generator/push_to_supabase.py --package 1
