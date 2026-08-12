@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-022",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Tujuan utama penulis dalam menyajikan teks bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Kualitas tidur yang baik memiliki peran krusial dalam menjaga kesehatan fisik dan fungsi kognitif manusia. Selama tidur nyenyak, tubuh melakukan proses pemulihan jaringan sel serta konsolidasi memori di otak. Kurang tidur secara kronis dapat meningkatkan risiko penyakit kardiovaskular, penurunan konsentrasi, serta gangguan suasana hati. Para ahli kesehatan merekomendasikan tidur berkualitas selama 7 hingga 8 jam setiap malam bagi orang dewasa. Menjaga pola tidur yang teratur dan menghindari penggunaan gawai sebelum tidur merupakan langkah efektif untuk meningkatkan kualitas istirahat malam.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Mengkritik penggunaan gawai di kalangan remaja pada malam hari."
+    },
+    {
+      "key": "B",
+      "text": "Menjelaskan pentingnya kualitas tidur bagi kesehatan dan memberikan rekomendasi pola tidur."
+    },
+    {
+      "key": "C",
+      "text": "Membandingkan efektivitas obat tidur dengan olahraga teratur."
+    },
+    {
+      "key": "D",
+      "text": "Menjelaskan tata cara medis menyembuhkan penyakit kardiovaskular."
+    },
+    {
+      "key": "E",
+      "text": "Menyarankan pembaca untuk tidur lebih dari 10 jam setiap hari."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Teks tidak fokus mengkritik gawai di kalangan remaja secara khusus.",
+    "B": "Benar. Penulis memaparkan peran krusial tidur bagi fisik/kognitif, dampak kurang tidur, serta saran menjaga kualitas tidur.",
+    "C": "Teks tidak membahas atau membandingkan obat tidur.",
+    "D": "Penyakit kardiovaskular hanya disebut sebagai salah satu risiko kurang tidur, bukan pembahasan medis pengobatan.",
+    "E": "Rekomendasi ahli adalah 7 hingga 8 jam, bukan lebih dari 10 jam."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

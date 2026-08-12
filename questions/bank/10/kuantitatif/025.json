@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-025",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar balok berikut! Sebuah balok memiliki panjang 10 cm, lebar 6 cm, dan tinggi 4 cm. Berapakah luas permukaan balok tersebut?",
+  "image": "images/balok.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "224 cm²"
+    },
+    {
+      "key": "B",
+      "text": "236 cm²"
+    },
+    {
+      "key": "C",
+      "text": "240 cm²"
+    },
+    {
+      "key": "D",
+      "text": "248 cm²"
+    },
+    {
+      "key": "E",
+      "text": "260 cm²"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "224 cm² salah hitung penjumlahan sisi.",
+    "B": "236 cm² salah hitung perkalian.",
+    "C": "240 cm³ adalah volume balok (p × l × t), bukan luas permukaan.",
+    "D": "Benar. Luas permukaan balok L = 2 × (p×l + p×t + l×t) = 2 × (10×6 + 10×4 + 6×4) = 2 × (60 + 40 + 24) = 2 × 124 = 248 cm².",
+    "E": "260 cm² salah hitung penambahan angka."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

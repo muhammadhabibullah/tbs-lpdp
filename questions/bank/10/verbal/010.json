@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-010",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "SENDOK : MAKAN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Gunting : Kertas"
+    },
+    {
+      "key": "B",
+      "text": "Sepatu : Kaki"
+    },
+    {
+      "key": "C",
+      "text": "Kacamata : Mata"
+    },
+    {
+      "key": "D",
+      "text": "Pena : Menulis"
+    },
+    {
+      "key": "E",
+      "text": "Pintu : Kunci"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Gunting digunakan untuk memotong kertas (objek), bukan kata kerja aktivitas utama.",
+    "B": "Sepatu dikenakan pada kaki (anggota tubuh).",
+    "C": "Kacamata dikenakan pada mata.",
+    "D": "Benar. Sendok adalah alat yang digunakan untuk aktivitas makan, sebagaimana Pena adalah alat yang digunakan untuk aktivitas menulis.",
+    "E": "Pintu dikunci dengan kunci."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

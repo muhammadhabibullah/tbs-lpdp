@@ -1,0 +1,43 @@
+{
+  "id": "10-pemecahan_masalah-007",
+  "package": 10,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah perusahaan memiliki anggaran Rp50.000.000,00 untuk pengembangan operasional bulan depan. Tim manajerial mengusulkan dua opsi:\n(1) Mengalokasikan seluruh dana untuk promosi digital yang diprediksi meningkatkan penjualan 15%.\n(2) Mengalokasikan 60% dana untuk promosi digital dan 40% untuk peningkatan mutu layanan pelanggan yang diprediksi meningkatkan retensi pelanggan 25% dan penjualan 10%.\n\nBerdasarkan prinsip pertumbuhan bisnis yang berkelanjutan, langkah strategis yang paling tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Memilih opsi (1) karena kenaikan penjualan langsung lebih besar 5%."
+    },
+    {
+      "key": "B",
+      "text": "Memilih opsi (2) karena meningkatkan retensi pelanggan sekaligus penjualan untuk keberlanjutan jangka panjang."
+    },
+    {
+      "key": "C",
+      "text": "Membatalkan kedua opsi dan menyimpan seluruh anggaran operasional."
+    },
+    {
+      "key": "D",
+      "text": "Mengalokasikan seluruh dana hanya untuk layanan pelanggan tanpa promosi."
+    },
+    {
+      "key": "E",
+      "text": "Menggunakan dana operasional untuk membeli aset tetap."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Hanya berfokus pada penjualan jangka pendek tanpa memperhatikan retensi pelanggan yang berisiko.",
+    "B": "Benar. Opsi (2) memberi kombinasi pertumbuhan penjualan serta retensi pelanggan (loyalitas) yang menjaga keberlanjutan bisnis jangka panjang.",
+    "C": "Menyimpan dana tanpa investasi operasional menghambat pertumbuhan bisnis.",
+    "D": "Tanpa promosi, jangkauan pelanggan baru tidak bertambah.",
+    "E": "Membeli aset tetap tidak menjawab kebutuhan operasional bulanan."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

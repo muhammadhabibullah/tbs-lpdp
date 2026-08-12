@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-003",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 3,
+  "type": "aritmetika",
+  "question_text": "Hasil dari (4/5 + 1/2) × 60 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "24"
+    },
+    {
+      "key": "B",
+      "text": "78"
+    },
+    {
+      "key": "C",
+      "text": "61,3"
+    },
+    {
+      "key": "D",
+      "text": "48,5"
+    },
+    {
+      "key": "E",
+      "text": "30,8"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 24 diperoleh dengan mengalikan kedua pecahan, bukan menjumlahkannya lebih dahulu.",
+    "B": "Benar. (4/5 + 1/2) × 60 = 13/10 × 60 = 78.",
+    "C": "Salah. Nilai 61,3 diperoleh dengan menambahkan 60 alih-alih mengalikannya.",
+    "D": "Salah. Nilai 48,5 diperoleh dengan mengalikan hanya pecahan pertama dengan 60, lalu menambahkan 1/2 yang belum dikalikan.",
+    "E": "Salah. Nilai 30,8 diperoleh dengan mengalikan hanya pecahan kedua dengan 60 sehingga sifat distributif tidak diterapkan."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

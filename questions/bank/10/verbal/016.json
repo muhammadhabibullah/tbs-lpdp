@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-016",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Premis 1: Semua kendaraan bermotor wajib memiliki surat izin mengemudi (SIM) bagi pengemudinya.\nPremis 2: Sebagian alat transportasi di desa bukan kendaraan bermotor.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua alat transportasi di desa wajib memiliki SIM bagi pengemudinya."
+    },
+    {
+      "key": "B",
+      "text": "Semua kendaraan bermotor berada di desa."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian alat transportasi di desa wajib memiliki SIM bagi pengemudinya."
+    },
+    {
+      "key": "D",
+      "text": "Sebagian alat transportasi di desa tidak wajib memiliki SIM pengemudi kendaraan bermotor."
+    },
+    {
+      "key": "E",
+      "text": "Tidak ada alat transportasi di desa yang membutuhkan SIM."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah karena tidak semua alat transportasi di desa adalah kendaraan bermotor.",
+    "B": "Salah karena lokasi kendaraan bermotor tidak dibatasi hanya di desa.",
+    "C": "Kurang tepat untuk menyoroti bagian yang bukan kendaraan bermotor.",
+    "D": "Benar. Karena sebagian alat transportasi di desa bukan kendaraan bermotor, maka bagian tersebut tidak wajib memiliki SIM khusus kendaraan bermotor.",
+    "E": "Salah karena bertentangan dengan fakta bahwa sebagian alat transportasi desa bisa berupa kendaraan bermotor."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

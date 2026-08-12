@@ -1,0 +1,43 @@
+{
+  "id": "10-pemecahan_masalah-001",
+  "package": 10,
+  "subtest": "pemecahan_masalah",
+  "number": 1,
+  "type": "peluang_kombinatorik",
+  "question_text": "Sebuah kotak berisi 3 bola merah dan 7 bola putih. Apabila diambil dua bola sekaligus secara acak, peluang terambil sekurang-kurangnya satu bola merah adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "3/5"
+    },
+    {
+      "key": "B",
+      "text": "3/10"
+    },
+    {
+      "key": "C",
+      "text": "7/15"
+    },
+    {
+      "key": "D",
+      "text": "8/15"
+    },
+    {
+      "key": "E",
+      "text": "1/15"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 3/5 diperoleh dengan menjumlahkan peluang merah pada pengambilan pertama dan kedua, sehingga kejadian kedua bola merah terhitung dua kali.",
+    "B": "Salah. Nilai 3/10 diperoleh dengan menghitung peluang untuk satu kali pengambilan saja.",
+    "C": "Salah. Nilai 7/15 diperoleh dengan menghitung peluang tidak ada bola merah yang terambil, yaitu justru komplemen dari yang ditanyakan.",
+    "D": "Benar. Peluang tidak ada bola merah yang terambil adalah C(7, 2) : C(10, 2) = 21/45 = 7/15. Peluang sekurang-kurangnya satu bola merah adalah komplemennya, yaitu 1 − 7/15 = 8/15.",
+    "E": "Salah. Nilai 1/15 diperoleh dengan menghitung peluang kedua bola berwarna merah, padahal yang diminta sekurang-kurangnya satu."
+  },
+  "difficulty": "easy",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

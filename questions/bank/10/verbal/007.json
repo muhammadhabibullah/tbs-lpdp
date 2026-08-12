@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-007",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "OPTIMIS >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pesimis"
+    },
+    {
+      "key": "B",
+      "text": "Yakin"
+    },
+    {
+      "key": "C",
+      "text": "Semangat"
+    },
+    {
+      "key": "D",
+      "text": "Positif"
+    },
+    {
+      "key": "E",
+      "text": "Gembira"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Optimis adalah berpandangan baik/penuh harapan, lawan katanya adalah pesimis (berpandangan buruk/putus asa).",
+    "B": "Yakin adalah sinonim dekat optimis.",
+    "C": "Semangat adalah dorongan positif, sejalan dengan optimis.",
+    "D": "Positif sejalan dengan sikap optimis.",
+    "E": "Gembira adalah perasaan senang."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

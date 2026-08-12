@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-021",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Budi membeli 5 buah buku tulis dengan harga total Rp25.000,00. Jika Budi ingin membeli 8 buah buku tulis yang sama, berapa uang yang harus dibayarkan?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp32.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp35.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp38.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp40.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp45.000,00"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Rp32.000,00 didapat jika harga satuan dianggap Rp4.000,00.",
+    "B": "Rp35.000,00 salah hitung perkalian.",
+    "C": "Rp38.000,00 salah hitung perkalian.",
+    "D": "Benar. Harga 1 buku = Rp25.000,00 / 5 = Rp5.000,00. Harga 8 buku = 8 × Rp5.000,00 = Rp40.000,00.",
+    "E": "Rp45.000,00 didapat jika membeli 9 buku."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

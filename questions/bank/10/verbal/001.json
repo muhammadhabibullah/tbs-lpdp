@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-001",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "AKURAT = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Samar"
+    },
+    {
+      "key": "B",
+      "text": "Cermat"
+    },
+    {
+      "key": "C",
+      "text": "Ragu"
+    },
+    {
+      "key": "D",
+      "text": "Luas"
+    },
+    {
+      "key": "E",
+      "text": "Bebas"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Samar berarti tidak jelas, bukan arti dari akurat.",
+    "B": "Benar. Akurat berarti teliti, tepat, atau cermat.",
+    "C": "Ragu menunjukkan ketidakpastian, berlawanan dengan akurat.",
+    "D": "Luas berkaitan dengan ukuran atau cakupan wilayah.",
+    "E": "Bebas berarti tidak terikat, tidak sesuai dengan makna akurat."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

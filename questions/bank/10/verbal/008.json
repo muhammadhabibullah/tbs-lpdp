@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-008",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "PRODUKTIF >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Subur"
+    },
+    {
+      "key": "B",
+      "text": "Giat"
+    },
+    {
+      "key": "C",
+      "text": "Improduktif"
+    },
+    {
+      "key": "D",
+      "text": "Hasil"
+    },
+    {
+      "key": "E",
+      "text": "Aktif"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Subur adalah sifat tanah atau tanaman yang menghasilkan banyak.",
+    "B": "Giat berarti rajin, mendukung sifat produktif.",
+    "C": "Benar. Produktif berarti banyak menghasilkan, lawan katanya adalah improduktif (tidak menghasilkan).",
+    "D": "Hasil adalah produk yang didapat.",
+    "E": "Aktif berarti giat atau rajin."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

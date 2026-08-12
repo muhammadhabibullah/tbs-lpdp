@@ -1,0 +1,43 @@
+{
+  "id": "10-pemecahan_masalah-009",
+  "package": 10,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Berdasarkan tabel di atas, divisi manakah yang mencatatkan jumlah staf tertinggi pada Kuartal 4?",
+  "image": null,
+  "passage": "Divisi | Kuartal 1 | Kuartal 2 | Kuartal 3 | Kuartal 4\nPemasaran | 15 | 18 | 22 | 25\nOperasional | 20 | 20 | 25 | 30\nKeuangan | 10 | 12 | 14 | 16\nTeknologi | 25 | 30 | 35 | 40",
+  "options": [
+    {
+      "key": "A",
+      "text": "Pemasaran"
+    },
+    {
+      "key": "B",
+      "text": "Operasional"
+    },
+    {
+      "key": "C",
+      "text": "Keuangan"
+    },
+    {
+      "key": "D",
+      "text": "Teknologi"
+    },
+    {
+      "key": "E",
+      "text": "Semua divisi sama"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Pemasaran pada Kuartal 4 berjumlah 25 staf.",
+    "B": "Operasional pada Kuartal 4 berjumlah 30 staf.",
+    "C": "Keuangan pada Kuartal 4 berjumlah 16 staf.",
+    "D": "Benar. Divisi Teknologi pada Kuartal 4 memiliki 40 staf, tertinggi di antara seluruh divisi.",
+    "E": "Jumlah staf pada Kuartal 4 berbeda-beda untuk tiap divisi."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

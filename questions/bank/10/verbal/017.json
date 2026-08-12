@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-017",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat berikut yang merupakan kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Para peserta hendaknya datang lebih awal agar supaya tidak tertinggal materi."
+    },
+    {
+      "key": "B",
+      "text": "Seluruh peserta mengumpulkan berkas pendaftaran sebelum batas waktu yang ditentukan."
+    },
+    {
+      "key": "C",
+      "text": "Dalam rapat itu memutuskan untuk menambah alokasi anggaran penelitian tahun depan."
+    },
+    {
+      "key": "D",
+      "text": "Meskipun hujan deras, tetapi para siswa tetap hadir di sekolah tepat waktu."
+    },
+    {
+      "key": "E",
+      "text": "Banyak anak-anak bermain di lapangan perkampungan itu pada sore hari."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah karena menggunakan kata penghubung redundan 'agar supaya' yang melanggar kehematan kata.",
+    "B": "Benar. Kalimat ini memiliki subjek (Seluruh peserta), predikat (mengumpulkan), objek (berkas pendaftaran), dan keterangan waktu yang lugas serta hemat kata.",
+    "C": "Salah karena tidak memiliki subjek yang jelas akibat penggunaan kata depan 'Dalam' di awal kalimat sebelum kata kerja 'memutuskan'.",
+    "D": "Salah karena menggunakan konjungsi ganda 'Meskipun ... tetapi ...' yang tidak efektif.",
+    "E": "Salah karena pemakaian jamak ganda 'Banyak anak-anak' yang tidak hemat kata."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

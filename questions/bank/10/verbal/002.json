@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-002",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "INSENTIF = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Denda"
+    },
+    {
+      "key": "B",
+      "text": "Potongan"
+    },
+    {
+      "key": "C",
+      "text": "Bonus"
+    },
+    {
+      "key": "D",
+      "text": "Tagihan"
+    },
+    {
+      "key": "E",
+      "text": "Pajak"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Denda adalah hukuman berupa uang, bukan insentif.",
+    "B": "Potongan adalah pengurangan harga atau gaji.",
+    "C": "Benar. Insentif adalah dorongan atau bonus berupa tambahan penghasilan.",
+    "D": "Tagihan adalah permintaan pembayaran atas jasa/barang.",
+    "E": "Pajak adalah iuran wajib kepada negara."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

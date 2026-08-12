@@ -1163,7 +1163,12 @@ FIGURES: list[Figure] = [
         radius_u=7, height_u=24, unit="cm")),
     Figure("9-kuantitatif-025", "limas-persegi.svg", lambda: square_pyramid(
         base_u=12, height_u=8, unit="cm")),
+    Figure("10-kuantitatif-024", "tabung.svg", lambda: cylinder(
+        radius_u=7, height_u=10, unit="cm")),
+    Figure("10-kuantitatif-025", "balok.svg", lambda: cuboid(
+        length_u=10, width_u=6, height_u=4, unit="cm")),
 ]
+
 
 
 

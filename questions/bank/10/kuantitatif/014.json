@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-014",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 14,
+  "type": "deret_angka",
+  "question_text": "14, 55, 17, 47, 20, 39, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "23, 39"
+    },
+    {
+      "key": "B",
+      "text": "42, 39"
+    },
+    {
+      "key": "C",
+      "text": "23, 31"
+    },
+    {
+      "key": "D",
+      "text": "23, 7"
+    },
+    {
+      "key": "E",
+      "text": "31, 31"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Suku ketujuh sudah tepat, tetapi bilangan kedua 39 diperoleh dengan menambahkan selisih 8 pada suku kedelapan 31, yaitu mengulangi selisih suku ketujuh ke kedelapan alih-alih berhenti pada suku kedelapan.",
+    "B": "Salah. Suku ketujuh 42 diperoleh dengan menambahkan beda deret pertama (3) pada suku terakhir, padahal suku terakhir milik deret kedua, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "C": "Benar. Deret ini terdiri atas dua deret berselang-seling. Suku ganjil (14, 17, 20) naik tetap 3, sedangkan suku genap (55, 47, 39) berubah tetap −8. Suku ketujuh melanjutkan deret pertama: 20 + 3 = 23. Dengan pola yang sama, suku kedelapan adalah 31.",
+    "D": "Salah. Suku ketujuh sudah tepat, tetapi suku kedelapan 7 diperoleh dengan mengulangkan selisih suku ketujuh dan keenam (−16), seolah-olah selisih deret ini tetap.",
+    "E": "Salah. Suku ketujuh 31 diperoleh dengan melanjutkan deret kedua, padahal suku ketujuh adalah giliran deret pertama, sehingga pasangan ini keliru sejak bilangan pertamanya."
+  },
+  "difficulty": "easy",
+  "source": "deret_angka.py",
+  "verified": true
+}

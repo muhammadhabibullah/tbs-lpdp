@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-018",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 18,
+  "type": "kecukupan_data",
+  "question_text": "a, b, c, dan d adalah bilangan positif. Apakah a/b < (a+c)/(b+d)?\n(1) a/b < c/d.\n(2) a = c dan b > d.\nPutuskan apakah pernyataan (1) dan (2) yang diberikan cukup untuk menjawab pertanyaan tersebut.",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup"
+    },
+    {
+      "key": "B",
+      "text": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup"
+    },
+    {
+      "key": "C",
+      "text": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup untuk menjawab pertanyaan"
+    },
+    {
+      "key": "E",
+      "text": "Pernyataan (1) dan (2) BERSAMA-SAMA tidak cukup untuk menjawab pertanyaan"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Pernyataan (2) cukup dan menetapkan jawaban Ya. Karena semua peubah positif, a/b < (a+c)/(b+d) ekuivalen dengan ad < bc, yang juga ekuivalen dengan a/b < c/d. Jika a=c dan b>d, maka ad=cd<bc; jadi pernyataan (2) juga memastikan jawabannya Ya.",
+    "B": "Salah. Pernyataan (1) cukup dan menetapkan jawaban Ya. Karena semua peubah positif, a/b < (a+c)/(b+d) ekuivalen dengan ad < bc, yang juga ekuivalen dengan a/b < c/d. Pernyataan (1) memastikan jawabannya Ya.",
+    "C": "Salah. Pernyataan (1) cukup dan menetapkan jawaban Ya. Karena semua peubah positif, a/b < (a+c)/(b+d) ekuivalen dengan ad < bc, yang juga ekuivalen dengan a/b < c/d. Pernyataan (1) memastikan jawabannya Ya.",
+    "D": "Benar. Pernyataan (1) cukup dan menetapkan jawaban Ya. Karena semua peubah positif, a/b < (a+c)/(b+d) ekuivalen dengan ad < bc, yang juga ekuivalen dengan a/b < c/d. Pernyataan (1) memastikan jawabannya Ya; pernyataan (2) cukup dan menetapkan jawaban Ya. Karena semua peubah positif, a/b < (a+c)/(b+d) ekuivalen dengan ad < bc, yang juga ekuivalen dengan a/b < c/d. Jika a=c dan b>d, maka ad=cd<bc; jadi pernyataan (2) juga memastikan jawabannya Ya.",
+    "E": "Salah. Pernyataan (1) dan (2) bersama-sama cukup dan menetapkan jawaban Ya. Karena semua peubah positif, a/b < (a+c)/(b+d) ekuivalen dengan ad < bc, yang juga ekuivalen dengan a/b < c/d. Masing-masing pernyataan sendiri sudah memastikan jawaban Ya."
+  },
+  "difficulty": "easy",
+  "source": "kecukupan_data_predikat.py",
+  "verified": true
+}

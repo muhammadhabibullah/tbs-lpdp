@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-014",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Premis 1: Semua mahasiswa penerima beasiswa LPDP wajib mengikuti kegiatan orientasi kepemimpinan.\nPremis 2: Budi adalah mahasiswa penerima beasiswa LPDP.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Budi wajib mengikuti kegiatan orientasi kepemimpinan."
+    },
+    {
+      "key": "B",
+      "text": "Budi tidak perlu mengikuti kegiatan orientasi kepemimpinan."
+    },
+    {
+      "key": "C",
+      "text": "Budi mungkin mengikuti kegiatan orientasi kepemimpinan."
+    },
+    {
+      "key": "D",
+      "text": "Semua yang mengikuti orientasi kepemimpinan adalah Budi."
+    },
+    {
+      "key": "E",
+      "text": "Tidak ada simpulan yang dapat ditarik."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Berdasarkan premis universal 'semua penerima beasiswa wajib mengikuti orientasi' dan Budi adalah penerima beasiswa, maka Budi pasti wajib mengikuti orientasi.",
+    "B": "Salah karena bertentangan dengan premis 1.",
+    "C": "Salah karena hukum silogisme kategori menghasilkan kepastian, bukan kemungkinan.",
+    "D": "Salah karena membalik subjek dan predikat secara keliru.",
+    "E": "Salah karena simpulan yang valid dapat ditarik secara pasti."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

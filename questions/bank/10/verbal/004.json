@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-004",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "RENOVASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pembongkaran"
+    },
+    {
+      "key": "B",
+      "text": "Perobohan"
+    },
+    {
+      "key": "C",
+      "text": "Pengurangan"
+    },
+    {
+      "key": "D",
+      "text": "Perbaikan"
+    },
+    {
+      "key": "E",
+      "text": "Penjualan"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Pembongkaran adalah merusak atau membuka bangunan, bukan merenovasi.",
+    "B": "Perobohan berarti meruntuhkan hingga hancur.",
+    "C": "Pengurangan berkaitan dengan jumlah atau volume.",
+    "D": "Benar. Renovasi adalah pembaharuan atau perbaikan bangunan/bangunan tua.",
+    "E": "Penjualan adalah pengalihan kepemilikan dengan imbalan uang."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-018",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat berikut yang merupakan kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Untuk para mahasiswa diharapkan berkumpul di aula lantai dua."
+    },
+    {
+      "key": "B",
+      "text": "Pemandangan alam di pegunungan itu sangat indah sekali pada pagi hari."
+    },
+    {
+      "key": "C",
+      "text": "Pemerintah meningkatkan mutu pendidikan di wilayah terpencil melalui program beasiswa."
+    },
+    {
+      "key": "D",
+      "text": "Tugas panitia adalah menyusun jadwal, mengundang pembicara, dan penyediaan konsumsi."
+    },
+    {
+      "key": "E",
+      "text": "Buku laporan keuangan itu saya sudah serahkan kepada bendahara kemarin."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah karena penggunaan kata depan 'Untuk' membuat kalimat tidak memiliki subjek yang jelas.",
+    "B": "Salah karena pemakaian penguat ganda 'sangat ... sekali' yang redundan.",
+    "C": "Benar. Kalimat memiliki struktur SPOK lengkap, sejajar, dan komunikatif.",
+    "D": "Salah karena ketidaksejajaran bentuk kata kerja/benda dalam rincian (menyusun, mengundang, penyediaan).",
+    "E": "Salah karena tata urutan kata pasif persona yang tidak baku ('saya sudah serahkan' seharusnya 'sudah saya serahkan')."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

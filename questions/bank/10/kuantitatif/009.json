@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-009",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 9,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nDiketahui x = 4.\nP = 3x + 1\nQ = 5x + 5\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Jumlah P dan Q kurang daripada 28"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. P = 13 dan Q = 25, sehingga Q > P; nilai P tidak melebihi nilai Q (13 tidak lebih besar daripada 25).",
+    "B": "Benar. P = 13 dan Q = 25, sehingga Q > P.",
+    "C": "Salah. P = 13 dan Q = 25, sehingga Q > P; kedua nilai tidak sama (13 ≠ 25).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 13 dan Q = 25), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 13 dan Q = 25, jumlahnya 38, tidak kurang daripada 28."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

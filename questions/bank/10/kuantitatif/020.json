@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-020",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Sebuah toko pakaian memberikan diskon 20% untuk semua produk. Jika harga awal sebuah kemeja adalah Rp150.000,00, berapakah harga kemeja tersebut setelah dipotong diskon?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp110.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp120.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp125.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp130.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp135.000,00"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Rp110.000,00 didapat dari menghitung potongan 26,7%, bukan 20%.",
+    "B": "Benar. Besar diskon = 20% × Rp150.000,00 = Rp30.000,00. Harga setelah diskon = Rp150.000,00 − Rp30.000,00 = Rp120.000,00.",
+    "C": "Rp125.000,00 didapat jika menghitung diskon 16,7%.",
+    "D": "Rp130.000,00 didapat jika hanya mengurangi Rp20.000,00 bukan 20%.",
+    "E": "Rp135.000,00 didapat jika menghitung diskon 10%."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

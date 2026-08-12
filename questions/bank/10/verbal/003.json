@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-003",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "EVALUASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Penilaian"
+    },
+    {
+      "key": "B",
+      "text": "Perencanaan"
+    },
+    {
+      "key": "C",
+      "text": "Pembuatan"
+    },
+    {
+      "key": "D",
+      "text": "Pelaksanaan"
+    },
+    {
+      "key": "E",
+      "text": "Pengajuan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Evaluasi berarti pengumpulan dan analisis data untuk menentukan nilai atau kualitas (penilaian).",
+    "B": "Perencanaan dilakukan di awal sebelum pelaksanaan, bukan evaluasi.",
+    "C": "Pembuatan adalah proses menghasilkan sesuatu.",
+    "D": "Pelaksanaan adalah proses mengerjakan rencana.",
+    "E": "Pengajuan adalah tindakan menyodorkan usulan."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

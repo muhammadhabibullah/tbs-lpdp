@@ -1,0 +1,43 @@
+{
+  "id": "10-pemecahan_masalah-005",
+  "package": 10,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Jika Andi diketahui duduk di kursi nomor 2, siapakah yang duduk di kursi nomor 4?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Andi"
+    },
+    {
+      "key": "B",
+      "text": "Budi"
+    },
+    {
+      "key": "C",
+      "text": "Citra"
+    },
+    {
+      "key": "D",
+      "text": "Dewi"
+    },
+    {
+      "key": "E",
+      "text": "Eko"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Andi sudah menempati kursi nomor 2.",
+    "B": "Budi di kursi nomor 1.",
+    "C": "Citra di kursi nomor 3.",
+    "D": "Benar. Karena Citra di nomor 3 berada di antara Andi (nomor 2) dan Dewi, maka Dewi pasti menempati kursi nomor 4.",
+    "E": "Eko di kursi nomor 5."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

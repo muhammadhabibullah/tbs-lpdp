@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-011",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 11,
+  "type": "aljabar",
+  "question_text": "Diketahui 5x + 3y = 21 dan 3x − y = 21. Nilai dari 3x + 3y adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "9"
+    },
+    {
+      "key": "B",
+      "text": "−9"
+    },
+    {
+      "key": "C",
+      "text": "18"
+    },
+    {
+      "key": "D",
+      "text": "12,6"
+    },
+    {
+      "key": "E",
+      "text": "3"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Menyelesaikan kedua persamaan diperoleh x = 6 dan y = −3, sehingga 3x + 3y = 3 × (6 + (−3)) = 9.",
+    "B": "Salah. Nilai −9 diperoleh dengan hanya menghitung 3y dan mengabaikan suku 3x.",
+    "C": "Salah. Nilai 18 diperoleh dengan hanya menghitung 3x dan mengabaikan suku 3y.",
+    "D": "Salah. Nilai 12,6 diperoleh dengan menjumlahkan kedua persamaan menjadi 42, membaginya dengan jumlah seluruh koefisien (10) sehingga diperoleh 4,2, lalu mengalikannya dengan 3 — seolah-olah koefisien x dan y sudah sama.",
+    "E": "Salah. Nilai 3 diperoleh dengan berhenti pada x + y dan lupa mengalikannya dengan 3."
+  },
+  "difficulty": "easy",
+  "source": "aljabar.py",
+  "verified": true
+}

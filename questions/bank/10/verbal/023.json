@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-023",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Pernyataan berikut yang TIDAK SESUAI dengan isi bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Kualitas tidur yang baik memiliki peran krusial dalam menjaga kesehatan fisik dan fungsi kognitif manusia. Selama tidur nyenyak, tubuh melakukan proses pemulihan jaringan sel serta konsolidasi memori di otak. Kurang tidur secara kronis dapat meningkatkan risiko penyakit kardiovaskular, penurunan konsentrasi, serta gangguan suasana hati. Para ahli kesehatan merekomendasikan tidur berkualitas selama 7 hingga 8 jam setiap malam bagi orang dewasa. Menjaga pola tidur yang teratur dan menghindari penggunaan gawai sebelum tidur merupakan langkah efektif untuk meningkatkan kualitas istirahat malam.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Pemulihan jaringan sel terjadi saat tubuh mengalami tidur nyenyak."
+    },
+    {
+      "key": "B",
+      "text": "Kurang tidur secara kronis dapat memicu penurunan konsentrasi."
+    },
+    {
+      "key": "C",
+      "text": "Orang dewasa disarankan untuk tidur selama 7 hingga 8 jam setiap malam."
+    },
+    {
+      "key": "D",
+      "text": "Penggunaan gawai sebelum tidur sangat dianjurkan untuk mempercepat tidur."
+    },
+    {
+      "key": "E",
+      "text": "Konsolidasi memori di otak berlangsung selama periode tidur."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Sesuai dengan kalimat kedua teks.",
+    "B": "Sesuai dengan kalimat ketiga teks.",
+    "C": "Sesuai dengan kalimat keempat teks.",
+    "D": "Benar (TIDAK SESUAI). Teks justru merekomendasikan 'menghindari penggunaan gawai sebelum tidur'.",
+    "E": "Sesuai dengan kalimat kedua teks."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

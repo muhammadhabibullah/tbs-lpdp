@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-013",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "KERTAS : BUKU = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kayu : Meja"
+    },
+    {
+      "key": "B",
+      "text": "Benang : Kain"
+    },
+    {
+      "key": "C",
+      "text": "Roda : Mobil"
+    },
+    {
+      "key": "D",
+      "text": "Daun : Pohon"
+    },
+    {
+      "key": "E",
+      "text": "Batu bata : Tembok"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Kayu adalah bahan mentah untuk membuat meja.",
+    "B": "Benang dipintal menjadi kain.",
+    "C": "Roda adalah komponen mekanis dari mobil.",
+    "D": "Daun adalah bagian biologis dari pohon.",
+    "E": "Benar. Kertas disusun menjadi buku, sebagaimana Batu bata disusun membentuk tembok."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

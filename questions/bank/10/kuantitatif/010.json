@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-010",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "aljabar",
+  "question_text": "Jika 5x − 14 = 36, nilai x adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "50"
+    },
+    {
+      "key": "B",
+      "text": "7,2"
+    },
+    {
+      "key": "C",
+      "text": "45"
+    },
+    {
+      "key": "D",
+      "text": "4,4"
+    },
+    {
+      "key": "E",
+      "text": "10"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 50 diperoleh dengan berhenti pada nilai 5x dan belum membaginya dengan 5.",
+    "B": "Salah. Nilai 7,2 diperoleh dengan membagi 36 dengan 5 tanpa memindahkan −14 lebih dahulu.",
+    "C": "Salah. Nilai 45 diperoleh dengan mengurangkan koefisien 5 dari 50, padahal koefisien itu harus dijadikan pembagi.",
+    "D": "Salah. Nilai 4,4 diperoleh dengan mengurangkan 14 sekali lagi ketika memindahkan ruas, padahal −14 berubah menjadi +14.",
+    "E": "Benar. 5x = 36 + 14 = 50, sehingga x = 50 : 5 = 10."
+  },
+  "difficulty": "easy",
+  "source": "aljabar.py",
+  "verified": true
+}

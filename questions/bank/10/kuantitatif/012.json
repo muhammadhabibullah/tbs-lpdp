@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-012",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 12,
+  "type": "aljabar",
+  "question_text": "Diketahui x + y = 16 dan xy = 22. Nilai dari x² + y² adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "168"
+    },
+    {
+      "key": "B",
+      "text": "256"
+    },
+    {
+      "key": "C",
+      "text": "212"
+    },
+    {
+      "key": "D",
+      "text": "300"
+    },
+    {
+      "key": "E",
+      "text": "234"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 168 diperoleh dengan menghitung (x − y)² = (x + y)² − 4xy, yang merupakan besaran lain.",
+    "B": "Salah. Nilai 256 diperoleh dengan menghitung (x + y)² = 256 dan berhenti di situ, tanpa mengurangkan 2xy.",
+    "C": "Benar. x² + y² = (x + y)² − 2xy = 16² − 2 × 22 = 256 − 44 = 212.",
+    "D": "Salah. Nilai 300 diperoleh dengan menambahkan 2xy, padahal suku itu harus dipindahkan sehingga dikurangkan.",
+    "E": "Salah. Nilai 234 diperoleh dengan mengurangkan xy satu kali, padahal penjabaran (x + y)² memuat 2xy."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

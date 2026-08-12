@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-006",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "STABIL >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tetap"
+    },
+    {
+      "key": "B",
+      "text": "Labil"
+    },
+    {
+      "key": "C",
+      "text": "Kukuh"
+    },
+    {
+      "key": "D",
+      "text": "Aman"
+    },
+    {
+      "key": "E",
+      "text": "Seimbang"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Tetap adalah sinonim dari stabil.",
+    "B": "Benar. Stabil berarti mantap atau tidak berubah-ubah, antonimnya adalah labil (mudah berubah).",
+    "C": "Kukuh berarti kuat atau mantap, sinonim dekat dari stabil.",
+    "D": "Aman berarti bebas dari bahaya.",
+    "E": "Seimbang adalah sinonim dari stabil."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-022",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Rata-rata nilai ujian Matematika dari 4 orang siswa adalah 80. Jika seorang siswa baru bergabung dengan nilai 90, berapakah rata-rata nilai Matematika kelima siswa tersebut sekarang?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "81"
+    },
+    {
+      "key": "B",
+      "text": "82"
+    },
+    {
+      "key": "C",
+      "text": "83"
+    },
+    {
+      "key": "D",
+      "text": "84"
+    },
+    {
+      "key": "E",
+      "text": "85"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "81 didapat dari kesalahan membagi 410 dengan 5,06.",
+    "B": "Benar. Total nilai 4 siswa = 4 × 80 = 320. Total nilai 5 siswa = 320 + 90 = 410. Rata-rata baru = 410 / 5 = 82.",
+    "C": "83 didapat jika total dianggap 415.",
+    "D": "84 didapat dari (80 + 90) / 2 = 85 dikurangi 1.",
+    "E": "85 adalah nilai tengah sederhana antara 80 dan 90 tanpa memperhitungkan jumlah bobot siswa."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-017",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 17,
+  "type": "deret_huruf",
+  "question_text": "A, B, D, G, K, ... Huruf yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Q"
+    },
+    {
+      "key": "B",
+      "text": "N"
+    },
+    {
+      "key": "C",
+      "text": "O"
+    },
+    {
+      "key": "D",
+      "text": "V"
+    },
+    {
+      "key": "E",
+      "text": "P"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Menaikkan lompatan dua tingkat sekaligus dari +4 menjadi +6.",
+    "B": "Salah. Menghitung lompatan berikutnya sebagai +3, bukan +5.",
+    "C": "Salah. Mengulang lompatan terakhir +4, padahal lompatannya naik menjadi +5.",
+    "D": "Salah. Melanjutkan dua langkah sekaligus dan memilih suku setelah jawaban.",
+    "E": "Benar. Posisi huruf bertambah dengan lompatan berurutan +1, +2, +3, +4, sehingga lompatan berikutnya +5 dan menghasilkan P. Jadi, huruf berikutnya adalah P."
+  },
+  "difficulty": "easy",
+  "source": "deret_huruf.py",
+  "verified": true
+}

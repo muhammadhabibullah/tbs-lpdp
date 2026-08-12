@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-019",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Gagasan utama dari bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Penggunaan energi terbarukan di Indonesia terus mengalami peningkatan dalam lima tahun terakhir. Pemerintah berkomitmen menurunkan emisi karbon dengan mendorong pemanfaatan energi surya, angin, dan hidro. Berdasarkan data Kementerian ESDM, pembangkit listrik tenaga surya (PLTS) mencatatkan pertumbuhan tertinggi karena biaya instalasi panel surya yang semakin terjangkau. Meskipun demikian, tantangan utama yang dihadapi adalah keterbatasan infrastruktur jaringan listrik di wilayah kepulauan. Oleh karena itu, investasi pada teknologi penyimpanan daya dan modernisasi jaringan menjadi prioritas strategis untuk memastikan pasokan energi yang stabil dan merata di seluruh Nusantara.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Penurunan harga instalasi panel surya di kawasan perkotaan."
+    },
+    {
+      "key": "B",
+      "text": "Peningkatan penggunaan energi terbarukan serta tantangan pengembangan infrastrukturnya di Indonesia."
+    },
+    {
+      "key": "C",
+      "text": "Keunggulan pembangkit listrik tenaga angin dibandingkan tenaga surya."
+    },
+    {
+      "key": "D",
+      "text": "Pentingnya menghentikan seluruh pembangkit listrik berbahan bakar fosil."
+    },
+    {
+      "key": "E",
+      "text": "Rencana Kementerian ESDM membangun jaringan listrik di pulau Jawa."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Penurunan harga panel surya merupakan detail pendukung pertumbuhan PLTS, bukan gagasan utama.",
+    "B": "Benar. Teks secara utuh membahas peningkatan pemanfaatan energi terbarukan di Indonesia beserta tantangan infrastruktur yang dihadapi.",
+    "C": "Teks tidak membandingkan keunggulan tenaga angin dan surya.",
+    "D": "Teks tidak mengusulkan penghentian seketika seluruh energi fosil.",
+    "E": "Teks membahas pasokan merata di seluruh Nusantara, bukan hanya pulau Jawa."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

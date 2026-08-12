@@ -1,0 +1,9 @@
+{
+  "id": 10,
+  "title": "TBS LPDP Try Out — Paket 10",
+  "description": "Simulasi lengkap Tes Bakat Skolastik LPDP dengan tingkat kesulitan rendah (Low Difficulty): Penalaran Verbal (23 soal/30 menit), Penalaran Kuantitatif (25 soal/40 menit), dan Pemecahan Masalah (12 soal/20 menit).",
+  "difficulty": "easy",
+  "ai_model": "Gemini 3.6 Flash",
+  "ai_company": "Google DeepMind",
+  "ai_model_description": "Model flagship Google DeepMind untuk penalaran cepat dan pemecahan masalah kompleks."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-023",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Sebuah mobil menempuh jarak 180 km dalam waktu 3 jam dengan kecepatan konstan. Berapakah kecepatan rata-rata mobil tersebut dalam km/jam?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "50 km/jam"
+    },
+    {
+      "key": "B",
+      "text": "55 km/jam"
+    },
+    {
+      "key": "C",
+      "text": "60 km/jam"
+    },
+    {
+      "key": "D",
+      "text": "65 km/jam"
+    },
+    {
+      "key": "E",
+      "text": "70 km/jam"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "50 km/jam didapat jika jarak dianggap 150 km.",
+    "B": "55 km/jam salah pembagian.",
+    "C": "Benar. Kecepatan = Jarak / Waktu = 180 km / 3 jam = 60 km/jam.",
+    "D": "65 km/jam salah pembagian.",
+    "E": "70 km/jam didapat jika jarak dianggap 210 km."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

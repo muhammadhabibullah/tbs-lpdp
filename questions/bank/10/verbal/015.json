@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-015",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Premis 1: Semua pegawai di Divisi Pemasaran bekerja dari hari Senin hingga Jumat.\nPremis 2: Sebagian pegawai di Divisi Pemasaran adalah spesialis media sosial.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua spesialis media sosial bekerja dari hari Senin hingga Jumat."
+    },
+    {
+      "key": "B",
+      "text": "Tidak ada spesialis media sosial yang bekerja pada hari Senin."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian spesialis media sosial di Divisi Pemasaran bekerja dari hari Senin hingga Jumat."
+    },
+    {
+      "key": "D",
+      "text": "Semua pegawai yang bekerja Senin hingga Jumat adalah spesialis media sosial."
+    },
+    {
+      "key": "E",
+      "text": "Sebagian pegawai Divisi Pemasaran tidak bekerja pada hari Rabu."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah karena generasi 'semua' tidak didukung premis 2 yang hanya menyebut 'sebagian'.",
+    "B": "Salah karena bertentangan dengan premis 1.",
+    "C": "Benar. Karena seluruh pegawai Divisi Pemasaran bekerja Senin–Jumat, maka anggota Divisi Pemasaran yang merupakan spesialis media sosial juga pasti bekerja Senin–Jumat.",
+    "D": "Salah karena merancukan hubungan himpunan pegawai dengan spesialis media sosial.",
+    "E": "Salah karena tidak ada premis mengenai hari Rabu secara khusus."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

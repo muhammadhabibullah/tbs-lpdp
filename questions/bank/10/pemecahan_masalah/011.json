@@ -1,0 +1,43 @@
+{
+  "id": "10-pemecahan_masalah-011",
+  "package": 10,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Apakah kesimpulan utama dari teks di atas?",
+  "image": null,
+  "passage": "Transformasi digital di sektor pendidikan telah mengubah lanskap pembelajaran secara signifikan. Pemanfaatan platform pembelajaran daring memungkinkan akses materi yang lebih fleksibel dan inklusif bagi para pelajar di berbagai daerah. Namun, keberhasilan transformasi ini sangat bergantung pada pemerataan infrastruktur internet dan kesiapan literasi digital para pengajar. Tanpa dukungan infrastruktur yang memadai, ketimpangan kualitas pendidikan antarwilayah justru berpotensi semakin melebar.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Platform pembelajaran daring sepenuhnya menggantikan peran pengajar di kelas."
+    },
+    {
+      "key": "B",
+      "text": "Ketimpangan pendidikan tidak dipengaruhi oleh akses internet di daerah."
+    },
+    {
+      "key": "C",
+      "text": "Keberhasilan transformasi digital pendidikan memerlukan dukungan infrastruktur internet dan literasi digital agar tidak memperlebar ketimpangan."
+    },
+    {
+      "key": "D",
+      "text": "Seluruh sekolah di Indonesia sudah memiliki infrastruktur internet yang sempurna."
+    },
+    {
+      "key": "E",
+      "text": "Pembelajaran tatap muka harus segera dihentikan secara permanen."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Teks tidak menyatakan platform daring menggantikan peran pengajar.",
+    "B": "Salah karena bertentangan dengan isi paragraf akhir teks.",
+    "C": "Benar. Teks menegaskan bahwa transformasi digital berpotensi melebarkan ketimpangan jika tidak didukung pemerataan infrastruktur dan literasi digital.",
+    "D": "Teks tidak menyatakan infrastruktur internet sudah sempurna.",
+    "E": "Teks tidak membahas penghentian permanen sekolah tatap muka."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

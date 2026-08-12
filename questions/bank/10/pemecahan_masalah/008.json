@@ -1,0 +1,43 @@
+{
+  "id": "10-pemecahan_masalah-008",
+  "package": 10,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah panitia seminar nasional menghadapi kendala ketersediaan tempat karena jumlah pendaftar melebihi kapasitas aula utama. Panitia dapat menyewa ruangan tambahan di gedung sebelah dengan biaya tinggi atau mengalihkan sebagian peserta ke sesi daring (online) interaktif tanpa biaya tambahan. Jika prioritas utama panitia adalah efisiensi anggaran tanpa membatalkan kepesertaan, langkah strategis terbaik adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Menyewa ruangan tambahan meskipun anggaran melampaui batas."
+    },
+    {
+      "key": "B",
+      "text": "Membatalkan keikutsertaan peserta yang mendaftar paling akhir."
+    },
+    {
+      "key": "C",
+      "text": "Mengalihkan sebagian peserta ke sesi daring interaktif agar anggaran tetap efisien dan seluruh peserta terfasilitasi."
+    },
+    {
+      "key": "D",
+      "text": "Menunda pelaksanaan seminar hingga tahun depan."
+    },
+    {
+      "key": "E",
+      "text": "Memaksakan seluruh peserta masuk ke aula utama hingga melebihi kapasitas aman."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Melanggar prioritas efisiensi anggaran.",
+    "B": "Membatalkan peserta akan merusak reputasi panitia dan melanggar tujuan memfasilitasi peserta.",
+    "C": "Benar. Mengalihkan ke sesi daring mematuhi prioritas efisiensi anggaran sekaligus memastikan tidak ada peserta yang dibatalkan.",
+    "D": "Menunda acara bukan solusi efisien bagi acara yang sudah dijadwalkan.",
+    "E": "Memaksakan peserta melebihi kapasitas aula membahayakan keselamatan dan kenyamanan."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

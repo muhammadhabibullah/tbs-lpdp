@@ -1,0 +1,43 @@
+{
+  "id": "10-pemecahan_masalah-012",
+  "package": 10,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Sebuah tim proyek terdiri dari 4 orang pekerja dapat menyelesaikan pembuatan sistem aplikasi dalam waktu 15 hari. Jika tim tersebut ditambah 2 orang pekerja dengan kemampuan yang sama, berapa hari waktu yang dibutuhkan untuk menyelesaikan proyek aplikasi tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "8 hari"
+    },
+    {
+      "key": "B",
+      "text": "10 hari"
+    },
+    {
+      "key": "C",
+      "text": "12 hari"
+    },
+    {
+      "key": "D",
+      "text": "13 hari"
+    },
+    {
+      "key": "E",
+      "text": "14 hari"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "8 hari salah hitung perbandingan terbalik.",
+    "B": "Benar. Ini adalah perbandingan berbalik nilai. Total beban kerja = 4 orang × 15 hari = 60 orang-hari. Dengan 4 + 2 = 6 pekerja, waktu yang dibutuhkan = 60 / 6 = 10 hari.",
+    "C": "12 hari didapat jika hanya membagi 60 dengan 5.",
+    "D": "13 hari salah perhitungan.",
+    "E": "14 hari didapat dari 15 dikurangi 1."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

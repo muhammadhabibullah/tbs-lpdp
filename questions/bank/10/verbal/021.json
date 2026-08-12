@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-021",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Pernyataan berikut yang SESUAI dengan isi teks bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Penggunaan energi terbarukan di Indonesia terus mengalami peningkatan dalam lima tahun terakhir. Pemerintah berkomitmen menurunkan emisi karbon dengan mendorong pemanfaatan energi surya, angin, dan hidro. Berdasarkan data Kementerian ESDM, pembangkit listrik tenaga surya (PLTS) mencatatkan pertumbuhan tertinggi karena biaya instalasi panel surya yang semakin terjangkau. Meskipun demikian, tantangan utama yang dihadapi adalah keterbatasan infrastruktur jaringan listrik di wilayah kepulauan. Oleh karena itu, investasi pada teknologi penyimpanan daya dan modernisasi jaringan menjadi prioritas strategis untuk memastikan pasokan energi yang stabil dan merata di seluruh Nusantara.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Pemanfaatan energi angin mengalami pertumbuhan paling tinggi dibandingkan energi lainnya."
+    },
+    {
+      "key": "B",
+      "text": "Infrastruktur jaringan listrik di wilayah kepulauan sudah sangat memadai."
+    },
+    {
+      "key": "C",
+      "text": "Investasi pada teknologi penyimpanan daya menjadi salah satu prioritas strategis."
+    },
+    {
+      "key": "D",
+      "text": "Penggunaan energi terbarukan di Indonesia menurun dalam lima tahun terakhir."
+    },
+    {
+      "key": "E",
+      "text": "Pemerintah menolak modernisasi jaringan listrik karena biaya yang mahal."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah karena PLTS yang mencatatkan pertumbuhan tertinggi.",
+    "B": "Salah karena infrastruktur wilayah kepulauan disebutkan masih terbatas.",
+    "C": "Benar. Teks menyebutkan 'investasi pada teknologi penyimpanan daya dan modernisasi jaringan menjadi prioritas strategis'.",
+    "D": "Salah karena teks menyebut energi terbarukan mengalami peningkatan.",
+    "E": "Salah karena modernisasi jaringan justru diprioritaskan oleh pemerintah."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

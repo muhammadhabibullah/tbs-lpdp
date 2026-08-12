@@ -1,0 +1,43 @@
+{
+  "id": "10-pemecahan_masalah-002",
+  "package": 10,
+  "subtest": "pemecahan_masalah",
+  "number": 2,
+  "type": "peluang_kombinatorik",
+  "question_text": "Rani memiliki 6 jenis permen yang berbeda dan akan membagikan seluruhnya kepada dua orang temannya. Apabila setiap teman harus menerima 3 permen, banyak cara pembagian yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "10"
+    },
+    {
+      "key": "B",
+      "text": "20"
+    },
+    {
+      "key": "C",
+      "text": "120"
+    },
+    {
+      "key": "D",
+      "text": "64"
+    },
+    {
+      "key": "E",
+      "text": "720"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 10 diperoleh dengan membagi hasilnya dengan 2 seolah-olah kedua teman tidak dibedakan, padahal keduanya orang yang berbeda.",
+    "B": "Benar. Cukup memilih 3 permen untuk teman pertama; sisanya otomatis menjadi bagian teman kedua. Banyak caranya adalah C(6, 3) = 20.",
+    "C": "Salah. Nilai 120 diperoleh dengan memperhatikan urutan ketika memilih 3 permen untuk teman pertama, padahal permen yang diterima tidak berurutan.",
+    "D": "Salah. Nilai 64 diperoleh dengan menganggap setiap permen bebas diberikan kepada salah satu dari dua teman, tanpa syarat masing-masing menerima 3 permen.",
+    "E": "Salah. Nilai 720 diperoleh dengan menghitung seluruh urutan 6 permen, bukan pembagiannya menjadi dua kelompok."
+  },
+  "difficulty": "easy",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

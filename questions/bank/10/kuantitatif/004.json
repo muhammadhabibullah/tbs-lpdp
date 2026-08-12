@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-004",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 4,
+  "type": "aritmetika",
+  "question_text": "15% dari 240 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "204"
+    },
+    {
+      "key": "B",
+      "text": "360"
+    },
+    {
+      "key": "C",
+      "text": "3,6"
+    },
+    {
+      "key": "D",
+      "text": "225"
+    },
+    {
+      "key": "E",
+      "text": "36"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 204 diperoleh dengan menghitung sisanya, yaitu bagian 85%.",
+    "B": "Salah. Nilai 360 diperoleh dengan menggeser koma desimal satu tempat ke kanan.",
+    "C": "Salah. Nilai 3,6 diperoleh dengan menggeser koma desimal satu tempat ke kiri.",
+    "D": "Salah. Nilai 225 diperoleh dengan mengurangkan 15 dari 240 alih-alih menghitung persentasenya.",
+    "E": "Benar. 15% × 240 = (15/100) × 240 = 36."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-024",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar tabung berikut! Sebuah tabung memiliki jari-jari alas r = 7 cm dan tinggi h = 10 cm. Berapakah volume tabung tersebut? (Gunakan π = 22/7)",
+  "image": "images/tabung.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "1.230 cm³"
+    },
+    {
+      "key": "B",
+      "text": "1.440 cm³"
+    },
+    {
+      "key": "C",
+      "text": "1.540 cm³"
+    },
+    {
+      "key": "D",
+      "text": "1.650 cm³"
+    },
+    {
+      "key": "E",
+      "text": "1.760 cm³"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "1.230 cm³ salah perhitungan perkalian.",
+    "B": "1.440 cm³ didapat dari keliru menggunakan rumus luas permukaan.",
+    "C": "Benar. Volume tabung V = π × r² × h = (22/7) × 7 × 7 × 10 = 22 × 7 × 10 = 1.540 cm³.",
+    "D": "1.650 cm³ salah hitung perkalian.",
+    "E": "1.760 cm³ didapat jika tinggi dianggap 11,4 cm."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

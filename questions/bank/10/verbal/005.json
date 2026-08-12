@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-005",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "KONSERVATIF >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kuno"
+    },
+    {
+      "key": "B",
+      "text": "Tradisional"
+    },
+    {
+      "key": "C",
+      "text": "Bertahan"
+    },
+    {
+      "key": "D",
+      "text": "Kaku"
+    },
+    {
+      "key": "E",
+      "text": "Progresif"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Kuno adalah sinonim dari konservatif dalam arti bersikap tradisional.",
+    "B": "Tradisional adalah sinonim dekat dari konservatif.",
+    "C": "Bertahan menunjukkan sikap menjaga keadaan.",
+    "D": "Kaku berkaitan dengan ketidakmampuan beradaptasi.",
+    "E": "Benar. Konservatif berarti mempertahankan tradisi/keadaan lama, antonimnya adalah progresif (kemajuan/kearah perubahan positif)."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

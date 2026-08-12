@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-016",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 16,
+  "type": "deret_angka",
+  "question_text": "12, 11, 13, 39, ..., ..., 240 Dua bilangan yang tepat untuk mengisi titik-titik tersebut berturut-turut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "65, 91"
+    },
+    {
+      "key": "B",
+      "text": "35, 39"
+    },
+    {
+      "key": "C",
+      "text": "38, 40"
+    },
+    {
+      "key": "D",
+      "text": "35, 40"
+    },
+    {
+      "key": "E",
+      "text": "43, 38"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Pasangan ini diperoleh dengan menganggap selisih deret tetap sebesar selisih dua suku tercetak terakhir (26), yang tidak membawa deret sampai ke suku terakhir.",
+    "B": "Salah. Pasangan ini diperoleh dengan menghitung suku kelima dengan benar, tetapi memakai bilangan 4 lagi untuk suku keenam alih-alih menaikkannya menjadi 5.",
+    "C": "Salah. Pasangan ini diperoleh dengan mengulang bilangan operasi dari awal (1, 2) ketika siklus berulang, padahal bilangan itu terus naik ke 4 dan 5.",
+    "D": "Benar. Operasinya berulang dalam siklus tiga langkah — kurangi, tambah, lalu kali — sementara bilangan operasinya naik satu setiap langkah dan tidak ikut diulang: −1, +2, ×3, −4, +5, ×6. Langkah keenam adalah kali 6, sehingga 40 × 6 = 240. Dua bilangan yang hilang adalah 35 dan 40; suku terakhir yang tercetak (240) mengonfirmasi pola tersebut.",
+    "E": "Salah. Pasangan ini diperoleh dengan menukar urutan kedua operasi dalam siklus (tambah dulu, baru kurangi)."
+  },
+  "difficulty": "medium",
+  "source": "deret_angka.py",
+  "verified": true
+}

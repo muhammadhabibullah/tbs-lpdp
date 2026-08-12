@@ -1,0 +1,43 @@
+{
+  "id": "10-kuantitatif-001",
+  "package": 10,
+  "subtest": "kuantitatif",
+  "number": 1,
+  "type": "aritmetika",
+  "question_text": "Sebuah mesin fotokopi menghasilkan 144 lembar salinan dalam 8 menit. Apabila kecepatannya tetap, berapa lembar salinan yang dihasilkan mesin itu dalam 20 menit?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "156"
+    },
+    {
+      "key": "B",
+      "text": "360"
+    },
+    {
+      "key": "C",
+      "text": "216"
+    },
+    {
+      "key": "D",
+      "text": "57,6"
+    },
+    {
+      "key": "E",
+      "text": "2.880"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 156 diperoleh dengan menambahkan selisih waktu (20 − 8) pada banyaknya salinan.",
+    "B": "Benar. Kecepatan mesin = 144 ÷ 8 = 18 lembar per menit; dalam 20 menit dihasilkan 18 × 20 = 360 lembar.",
+    "C": "Salah. Nilai 216 diperoleh dengan menghitung salinan untuk selisih waktunya saja, yaitu 20 − 8 menit.",
+    "D": "Salah. Nilai 57,6 diperoleh dengan membalik perbandingan menjadi 144 × 8 ÷ 20.",
+    "E": "Salah. Nilai 2.880 diperoleh dengan mengalikan 144 dengan 20 tanpa membaginya dengan 8 lebih dahulu."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

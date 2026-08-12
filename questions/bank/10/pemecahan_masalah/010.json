@@ -1,0 +1,43 @@
+{
+  "id": "10-pemecahan_masalah-010",
+  "package": 10,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Berapakah total kenaikan jumlah staf Divisi Pemasaran dari Kuartal 1 hingga Kuartal 4?",
+  "image": null,
+  "passage": "Divisi | Kuartal 1 | Kuartal 2 | Kuartal 3 | Kuartal 4\nPemasaran | 15 | 18 | 22 | 25\nOperasional | 20 | 20 | 25 | 30\nKeuangan | 10 | 12 | 14 | 16\nTeknologi | 25 | 30 | 35 | 40",
+  "options": [
+    {
+      "key": "A",
+      "text": "7 staf"
+    },
+    {
+      "key": "B",
+      "text": "10 staf"
+    },
+    {
+      "key": "C",
+      "text": "12 staf"
+    },
+    {
+      "key": "D",
+      "text": "15 staf"
+    },
+    {
+      "key": "E",
+      "text": "18 staf"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "7 staf didapat dari 22 - 15 (Kuartal 3 dikurangi Kuartal 1).",
+    "B": "Benar. Jumlah staf Pemasaran Kuartal 1 = 15, Kuartal 4 = 25. Kenaikan total = 25 − 15 = 10 staf.",
+    "C": "12 staf salah pembacaan data.",
+    "D": "15 staf adalah jumlah staf awal pada Kuartal 1.",
+    "E": "18 staf adalah jumlah staf pada Kuartal 2."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

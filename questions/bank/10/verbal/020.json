@@ -1,0 +1,43 @@
+{
+  "id": "10-verbal-020",
+  "package": 10,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan di atas, faktor utama yang mendorong pesatnya pertumbuhan PLTS adalah ...",
+  "image": null,
+  "passage": "Penggunaan energi terbarukan di Indonesia terus mengalami peningkatan dalam lima tahun terakhir. Pemerintah berkomitmen menurunkan emisi karbon dengan mendorong pemanfaatan energi surya, angin, dan hidro. Berdasarkan data Kementerian ESDM, pembangkit listrik tenaga surya (PLTS) mencatatkan pertumbuhan tertinggi karena biaya instalasi panel surya yang semakin terjangkau. Meskipun demikian, tantangan utama yang dihadapi adalah keterbatasan infrastruktur jaringan listrik di wilayah kepulauan. Oleh karena itu, investasi pada teknologi penyimpanan daya dan modernisasi jaringan menjadi prioritas strategis untuk memastikan pasokan energi yang stabil dan merata di seluruh Nusantara.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Bantuan dana hibah langsung dari organisasi internasional."
+    },
+    {
+      "key": "B",
+      "text": "Biaya instalasi panel surya yang semakin terjangkau."
+    },
+    {
+      "key": "C",
+      "text": "Ketersediaan lahan kosong yang sangat luas di kepulauan."
+    },
+    {
+      "key": "D",
+      "text": "Ketiadaan tantangan infrastruktur jaringan listrik."
+    },
+    {
+      "key": "E",
+      "text": "Penghentian otomatis pembangkit listrik tenaga air."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Bantuan hibah internasional tidak disebutkan dalam teks.",
+    "B": "Benar. Teks secara eksplisit menyatakan 'PLTS mencatatkan pertumbuhan tertinggi karena biaya instalasi panel surya yang semakin terjangkau'.",
+    "C": "Ketersediaan lahan kosong tidak dibahas dalam teks.",
+    "D": "Salah karena justru keterbatasan infrastruktur jaringan disebut sebagai tantangan utama.",
+    "E": "Salah karena pembangkit listrik tenaga air (hidro) tetap didorong oleh pemerintah."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}
