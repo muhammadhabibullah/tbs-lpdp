@@ -104,15 +104,39 @@ type Os = 'windows' | 'macos' | 'linux' | 'android' | 'ios' | 'unknown'
 /**
  * Order matters: Android's user agent also says "Linux", and an iPad since
  * iPadOS 13 claims to be a Mac — only the touch-point count gives it away.
+ * Chrome on Android tablets (e.g. Samsung Galaxy Tab) defaults to Desktop site mode,
+ * which sets UA to Linux x86_64, but userAgentData.platform remains 'Android'.
  */
 function detectOs(): Os {
   if (typeof navigator === 'undefined') return 'unknown'
+
+  // 1. Client Hints platform check (Chromium on Android reports 'Android' even in desktop mode)
+  const uaData = (navigator as Navigator & { userAgentData?: { platform?: string } }).userAgentData
+  const uaDataPlatform = uaData?.platform?.toLowerCase()
+  if (uaDataPlatform === 'android') return 'android'
+  if (uaDataPlatform === 'ios') return 'ios'
+  if (uaDataPlatform === 'mac' || uaDataPlatform === 'macos') {
+    return navigator.maxTouchPoints > 1 ? 'ios' : 'macos'
+  }
+  if (uaDataPlatform === 'windows') return 'windows'
+
+  // 2. User Agent & Platform regex checks
   const ua = navigator.userAgent
-  if (/android/i.test(ua)) return 'android'
-  if (/iphone|ipod/i.test(ua)) return 'ios'
-  if (/mac/i.test(ua)) return navigator.maxTouchPoints > 1 ? 'ios' : 'macos'
-  if (/windows|win32|win64/i.test(ua)) return 'windows'
-  if (/linux|x11|cros/i.test(ua)) return 'linux'
+  const platform = navigator.platform || ''
+
+  if (/android/i.test(ua) || /android/i.test(platform)) return 'android'
+  if (/iphone|ipad|ipod/i.test(ua) || /iphone|ipad|ipod/i.test(platform)) return 'ios'
+  if (/mac/i.test(ua) || /mac/i.test(platform)) return navigator.maxTouchPoints > 1 ? 'ios' : 'macos'
+  if (/windows|win32|win64/i.test(ua) || /win/i.test(platform)) return 'windows'
+
+  // 3. Fallback check for Linux UA on mobile/tablet devices
+  if (/linux|x11|cros/i.test(ua) || /linux/i.test(platform)) {
+    if (typeof navigator.vendor === 'string' && /google|samsung/i.test(navigator.vendor) && navigator.maxTouchPoints > 0) {
+      return 'android'
+    }
+    return 'linux'
+  }
+
   return 'unknown'
 }
 
@@ -124,7 +148,7 @@ function detectOs(): Os {
  * not launch.
  */
 interface UserAgentData {
-  getHighEntropyValues?: (hints: string[]) => Promise<{ architecture?: string }>
+  getHighEntropyValues?: (hints: string[]) => Promise<{ architecture?: string; platform?: string }>
 }
 
 async function detectMacArch(): Promise<'arm' | 'intel'> {
@@ -145,9 +169,24 @@ function formatSize(bytes: number): string {
 export default function DownloadApp() {
   const [release, setRelease] = useState<Release | null>(null)
   const [failed, setFailed] = useState(false)
-  const [os] = useState<Os>(detectOs)
+  const [os, setOs] = useState<Os>(detectOs)
   const [macArch, setMacArch] = useState<'arm' | 'intel'>('arm')
   const [showAll, setShowAll] = useState(false)
+
+  useEffect(() => {
+    if (os !== 'linux' && os !== 'unknown') return
+    const uaData = (navigator as Navigator & { userAgentData?: UserAgentData }).userAgentData
+    let cancelled = false
+    void uaData?.getHighEntropyValues?.(['platform']).then((values) => {
+      if (cancelled) return
+      if (values?.platform?.toLowerCase() === 'android') {
+        setOs('android')
+      }
+    }).catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [os])
 
   useEffect(() => {
     let cancelled = false

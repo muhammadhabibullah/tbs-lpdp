@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import FeedbackFooter from './FeedbackFooter'
 import MaintenanceBanner from './MaintenanceBanner'
 import MenuBar from './MenuBar'
+import ScrollToTop from './ScrollToTop'
 
 /** Blue masthead + light page body, mirroring the PUSMENDIK CBT chrome. */
 export default function AppShell({
@@ -47,6 +48,8 @@ export default function AppShell({
       </header>
       <main className="page">{children}</main>
       {hideChrome ? null : <FeedbackFooter />}
+      <ScrollToTop />
     </div>
   )
 }
+
