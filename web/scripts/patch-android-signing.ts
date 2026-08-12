@@ -15,6 +15,10 @@
  *     keyAlias=…
  *     password=…
  *
+ * `storeFile` is resolved against `gen/android/` (the Gradle *root* project),
+ * not `gen/android/app/`, which is where the release workflow writes the
+ * keystore.
+ *
  *     node scripts/patch-android-signing.ts
  */
 
@@ -35,20 +39,32 @@ if (source.includes('signingConfigs.getByName("release")')) {
   process.exit(0)
 }
 
-const IMPORTS = 'import java.io.FileInputStream\nimport java.util.Properties\n'
+/**
+ * The template already imports `java.util.Properties` to read `tauri.properties`.
+ * Importing it a second time is not a warning in Kotlin script — it is a hard
+ * "imported name 'Properties' is ambiguous" compile error — so only add what is
+ * genuinely missing. `Properties.load` takes any InputStream, so using
+ * `File.inputStream()` avoids needing `java.io.FileInputStream` at all.
+ */
+const REQUIRED_IMPORTS = ['import java.util.Properties']
 
 const SIGNING_CONFIG = `
     signingConfigs {
         create("release") {
+            // Written by the release workflow next to this Gradle root project.
             val keystorePropertiesFile = rootProject.file("keystore.properties")
-            val keystoreProperties = Properties()
-            if (keystorePropertiesFile.exists()) {
-                keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+            if (!keystorePropertiesFile.exists()) {
+                throw GradleException(
+                    "keystore.properties not found in \${rootProject.projectDir}. " +
+                        "A release APK must be signed with the project keystore (C-30)."
+                )
             }
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["password"] as String
-            storeFile = file(keystoreProperties["storeFile"] as String)
-            storePassword = keystoreProperties["storePassword"] as String
+            val keystoreProperties = Properties()
+            keystorePropertiesFile.inputStream().use { keystoreProperties.load(it) }
+            keyAlias = keystoreProperties.getProperty("keyAlias")
+            keyPassword = keystoreProperties.getProperty("password")
+            storeFile = rootProject.file(keystoreProperties.getProperty("storeFile"))
+            storePassword = keystoreProperties.getProperty("storePassword")
         }
     }
 `
@@ -59,10 +75,13 @@ function fail(what: string): never {
   process.exit(1)
 }
 
-// 1. Imports go above the plugins block, which is always the first statement.
-const pluginsAt = source.indexOf('plugins {')
-if (pluginsAt < 0) fail('the `plugins {` block')
-source = `${IMPORTS}${source.slice(0, pluginsAt)}${source.slice(pluginsAt)}`
+// 1. Add only the imports the template does not already have, at the very top.
+const missingImports = REQUIRED_IMPORTS.filter(
+  (statement) => !new RegExp(`^\\s*${statement.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*$`, 'm').test(source),
+)
+if (missingImports.length > 0) {
+  source = `${missingImports.join('\n')}\n${source}`
+}
 
 // 2. The signing config itself, just inside `android { … }`.
 const androidAt = source.indexOf('\nandroid {')
