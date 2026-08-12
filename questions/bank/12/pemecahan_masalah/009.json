@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-009",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "logika_numerik",
+  "question_text": "Jika 5 mesin dapat memproduksi 5 barang dalam 5 menit, berapa lama waktu yang dibutuhkan 100 mesin untuk memproduksi 100 barang?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "5 menit"
+    },
+    {
+      "key": "B",
+      "text": "20 menit"
+    },
+    {
+      "key": "C",
+      "text": "50 menit"
+    },
+    {
+      "key": "D",
+      "text": "100 menit"
+    },
+    {
+      "key": "E",
+      "text": "500 menit"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. 5 menit adalah jawaban yang tepat.",
+    "B": "Salah. 20 menit bukan jawaban yang tepat.",
+    "C": "Salah. 50 menit bukan jawaban yang tepat.",
+    "D": "Salah. 100 menit bukan jawaban yang tepat.",
+    "E": "Salah. 500 menit bukan jawaban yang tepat."
+  },
+  "difficulty": "hard",
+  "source": "qwen-generated",
+  "verified": true
+}

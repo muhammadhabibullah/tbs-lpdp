@@ -1,0 +1,43 @@
+{
+  "id": "12-verbal-009",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "sinonim",
+  "question_text": "TENDENSIUS = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Netral"
+    },
+    {
+      "key": "B",
+      "text": "Berpihak"
+    },
+    {
+      "key": "C",
+      "text": "Objektif"
+    },
+    {
+      "key": "D",
+      "text": "Adil"
+    },
+    {
+      "key": "E",
+      "text": "Seimbang"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Netral bukan jawaban yang tepat.",
+    "B": "Benar. Berpihak adalah jawaban yang tepat untuk pertanyaan ini.",
+    "C": "Salah. Objektif bukan jawaban yang tepat.",
+    "D": "Salah. Adil bukan jawaban yang tepat.",
+    "E": "Salah. Seimbang bukan jawaban yang tepat."
+  },
+  "difficulty": "hard",
+  "source": "qwen-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-012",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 12,
+  "type": "aljabar",
+  "question_text": "Faktor dari x\u00b2 - 9 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "(x-3)(x-3)"
+    },
+    {
+      "key": "B",
+      "text": "(x+3)(x+3)"
+    },
+    {
+      "key": "C",
+      "text": "(x-3)(x+3)"
+    },
+    {
+      "key": "D",
+      "text": "(x-9)(x+1)"
+    },
+    {
+      "key": "E",
+      "text": "(x+9)(x-1)"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. (x-3)(x-3) bukan jawaban yang tepat.",
+    "B": "Salah. (x+3)(x+3) bukan jawaban yang tepat.",
+    "C": "Benar. (x-3)(x+3) adalah jawaban yang tepat.",
+    "D": "Salah. (x-9)(x+1) bukan jawaban yang tepat.",
+    "E": "Salah. (x+9)(x-1) bukan jawaban yang tepat."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

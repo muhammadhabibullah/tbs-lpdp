@@ -1,0 +1,9 @@
+{
+  "id": 12,
+  "title": "TBS LPDP Try Out — Paket 12",
+  "description": "Simulasi lengkap Tes Bakat Skolastik LPDP: Penalaran Verbal (23 soal/30 menit), Penalaran Kuantitatif (25 soal/40 menit), dan Pemecahan Masalah (12 soal/20 menit).",
+  "difficulty": "medium",
+  "ai_model": "Qwen 3.8",
+  "ai_company": "Alibaba Cloud",
+  "ai_model_description": "Model Alibaba Cloud untuk penalaran mendalam, pemrograman agentik, dan pekerjaan kompleks berdurasi panjang."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "12-verbal-013",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "sinonim",
+  "question_text": "NOMADIK = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Menetap"
+    },
+    {
+      "key": "B",
+      "text": "Berpindah-pindah"
+    },
+    {
+      "key": "C",
+      "text": "Stabil"
+    },
+    {
+      "key": "D",
+      "text": "Permanen"
+    },
+    {
+      "key": "E",
+      "text": "Tetap"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Menetap bukan jawaban yang tepat.",
+    "B": "Benar. Berpindah-pindah adalah jawaban yang tepat untuk pertanyaan ini.",
+    "C": "Salah. Stabil bukan jawaban yang tepat.",
+    "D": "Salah. Permanen bukan jawaban yang tepat.",
+    "E": "Salah. Tetap bukan jawaban yang tepat."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

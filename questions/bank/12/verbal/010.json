@@ -1,0 +1,43 @@
+{
+  "id": "12-verbal-010",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "antonim",
+  "question_text": "EKLEKTIK >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Campuran"
+    },
+    {
+      "key": "B",
+      "text": "Selektif"
+    },
+    {
+      "key": "C",
+      "text": "Satu aliran"
+    },
+    {
+      "key": "D",
+      "text": "Beragam"
+    },
+    {
+      "key": "E",
+      "text": "Majemuk"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Campuran bukan jawaban yang tepat.",
+    "B": "Salah. Selektif bukan jawaban yang tepat.",
+    "C": "Benar. Satu aliran adalah jawaban yang tepat untuk pertanyaan ini.",
+    "D": "Salah. Beragam bukan jawaban yang tepat.",
+    "E": "Salah. Majemuk bukan jawaban yang tepat."
+  },
+  "difficulty": "hard",
+  "source": "qwen-generated",
+  "verified": true
+}

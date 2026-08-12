@@ -1,0 +1,43 @@
+{
+  "id": "12-verbal-022",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "evaluasi",
+  "question_text": "Pernyataan yang TIDAK sesuai dengan teks adalah ...",
+  "image": null,
+  "passage": "Bacalah teks berikut untuk menjawab soal nomor 17 sampai 23!\n\nTransformasi digital telah mengubah lanskap bisnis secara fundamental. Perusahaan yang mampu beradaptasi dengan teknologi baru akan memiliki keunggulan kompetitif yang signifikan. Namun, transformasi digital bukan sekadar mengadopsi teknologi terbaru, melainkan juga memerlukan perubahan budaya organisasi dan pola pikir karyawan.\n\nTantangan utama dalam transformasi digital adalah resistensi terhadap perubahan. Karyawan sering kali merasa nyaman dengan cara kerja lama dan enggan mempelajari sistem baru. Oleh karena itu, manajemen perlu menyusun strategi komunikasi yang efektif dan menyediakan pelatihan yang memadai.\n\nSelain itu, keamanan siber menjadi isu kritis dalam era digital. Semakin banyak data yang disimpan secara digital, semakin besar pula risiko kebocoran data. Perusahaan harus investasi dalam sistem keamanan yang handal dan melatih karyawan tentang praktik keamanan digital yang baik.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Transformasi digital mengubah bisnis secara fundamental"
+    },
+    {
+      "key": "B",
+      "text": "Karyawan selalu menyambut baik teknologi baru"
+    },
+    {
+      "key": "C",
+      "text": "Keamanan siber memerlukan investasi"
+    },
+    {
+      "key": "D",
+      "text": "Perubahan budaya organisasi diperlukan"
+    },
+    {
+      "key": "E",
+      "text": "Pelatihan karyawan penting untuk transformasi"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Transformasi digital mengubah bisnis secara fundamental tidak sesuai dengan informasi dalam teks.",
+    "B": "Benar. Karyawan selalu menyambut baik teknologi baru adalah jawaban yang tepat berdasarkan teks.",
+    "C": "Salah. Keamanan siber memerlukan investasi tidak sesuai dengan informasi dalam teks.",
+    "D": "Salah. Perubahan budaya organisasi diperlukan tidak sesuai dengan informasi dalam teks.",
+    "E": "Salah. Pelatihan karyawan penting untuk transformasi tidak sesuai dengan informasi dalam teks."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

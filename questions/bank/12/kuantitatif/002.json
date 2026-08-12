@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-002",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 2,
+  "type": "aljabar",
+  "question_text": "Nilai dari 2\u00b3 \u00d7 3\u00b2 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "36"
+    },
+    {
+      "key": "B",
+      "text": "54"
+    },
+    {
+      "key": "C",
+      "text": "72"
+    },
+    {
+      "key": "D",
+      "text": "108"
+    },
+    {
+      "key": "E",
+      "text": "216"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. 36 bukan jawaban yang tepat.",
+    "B": "Salah. 54 bukan jawaban yang tepat.",
+    "C": "Benar. 72 adalah jawaban yang tepat.",
+    "D": "Salah. 108 bukan jawaban yang tepat.",
+    "E": "Salah. 216 bukan jawaban yang tepat."
+  },
+  "difficulty": "easy",
+  "source": "qwen-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-018",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 18,
+  "type": "logika_analitis",
+  "question_text": "Jika Budi terpilih, siapa dua orang lain yang pasti terpilih bersamanya?",
+  "image": null,
+  "passage": "Bacalah informasi berikut untuk menjawab soal nomor 15 sampai 23!\n\nEnam karyawan (Andi, Budi, Citra, Dewi, Eka, dan Fani) akan dipromosikan ke tiga posisi manajerial: Manajer Pemasaran, Manajer Operasional, dan Manajer Keuangan. Setiap posisi hanya dapat diisi oleh satu orang.\n\nKetentuan promosi:\n(1) Andi hanya mau jika menjadi Manajer Pemasaran.\n(2) Budi dan Citra tidak bisa bekerja bersama dalam tim manajemen.\n(3) Dewi harus menjadi Manajer Keuangan jika terpilih.\n(4) Eka menolak jika posisinya di bawah Manajer Operasional.\n(5) Fani harus terpilih karena kinerja terbaik.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Andi dan Citra"
+    },
+    {
+      "key": "B",
+      "text": "Andi dan Dewi"
+    },
+    {
+      "key": "C",
+      "text": "Andi dan Fani"
+    },
+    {
+      "key": "D",
+      "text": "Citra dan Dewi"
+    },
+    {
+      "key": "E",
+      "text": "Dewi dan Fani"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Andi dan Citra tidak sesuai dengan ketentuan.",
+    "B": "Salah. Andi dan Dewi tidak sesuai dengan ketentuan.",
+    "C": "Benar. Andi dan Fani adalah jawaban yang tepat berdasarkan analisis logika.",
+    "D": "Salah. Citra dan Dewi tidak sesuai dengan ketentuan.",
+    "E": "Salah. Dewi dan Fani tidak sesuai dengan ketentuan."
+  },
+  "difficulty": "hard",
+  "source": "qwen-generated",
+  "verified": true
+}

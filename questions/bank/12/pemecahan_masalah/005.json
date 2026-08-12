@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-005",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Lima buku disusun di rak. Buku Matematika tidak boleh bersebelahan dengan Buku Fisika. Jika Buku Kimia selalu di tengah, berapa banyak kemungkinan susunan?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "12"
+    },
+    {
+      "key": "B",
+      "text": "16"
+    },
+    {
+      "key": "C",
+      "text": "20"
+    },
+    {
+      "key": "D",
+      "text": "24"
+    },
+    {
+      "key": "E",
+      "text": "30"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. 12 adalah jawaban yang tepat.",
+    "B": "Salah. 16 bukan jawaban yang tepat.",
+    "C": "Salah. 20 bukan jawaban yang tepat.",
+    "D": "Salah. 24 bukan jawaban yang tepat.",
+    "E": "Salah. 30 bukan jawaban yang tepat."
+  },
+  "difficulty": "hard",
+  "source": "qwen-generated",
+  "verified": true
+}

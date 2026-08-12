@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-009",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 9,
+  "type": "geometri",
+  "question_text": "Keliling lingkaran dengan diameter 14 cm adalah ... (\u03c0 = 22/7)",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "22 cm"
+    },
+    {
+      "key": "B",
+      "text": "28 cm"
+    },
+    {
+      "key": "C",
+      "text": "44 cm"
+    },
+    {
+      "key": "D",
+      "text": "56 cm"
+    },
+    {
+      "key": "E",
+      "text": "88 cm"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. 22 cm bukan jawaban yang tepat.",
+    "B": "Salah. 28 cm bukan jawaban yang tepat.",
+    "C": "Benar. 44 cm adalah jawaban yang tepat.",
+    "D": "Salah. 56 cm bukan jawaban yang tepat.",
+    "E": "Salah. 88 cm bukan jawaban yang tepat."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "12-verbal-002",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "antonim",
+  "question_text": "KONVERGEN >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Menjauh"
+    },
+    {
+      "key": "B",
+      "text": "Bertemu"
+    },
+    {
+      "key": "C",
+      "text": "Terpusat"
+    },
+    {
+      "key": "D",
+      "text": "Satu arah"
+    },
+    {
+      "key": "E",
+      "text": "Berdekatan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Menjauh adalah jawaban yang tepat untuk pertanyaan ini.",
+    "B": "Salah. Bertemu bukan jawaban yang tepat.",
+    "C": "Salah. Terpusat bukan jawaban yang tepat.",
+    "D": "Salah. Satu arah bukan jawaban yang tepat.",
+    "E": "Salah. Berdekatan bukan jawaban yang tepat."
+  },
+  "difficulty": "easy",
+  "source": "qwen-generated",
+  "verified": true
+}

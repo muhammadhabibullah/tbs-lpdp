@@ -1,0 +1,43 @@
+{
+  "id": "12-verbal-020",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "pemahaman_wacana",
+  "question_text": "Solusi yang ditawarkan untuk mengatasi resistensi karyawan adalah ...",
+  "image": null,
+  "passage": "Bacalah teks berikut untuk menjawab soal nomor 17 sampai 23!\n\nTransformasi digital telah mengubah lanskap bisnis secara fundamental. Perusahaan yang mampu beradaptasi dengan teknologi baru akan memiliki keunggulan kompetitif yang signifikan. Namun, transformasi digital bukan sekadar mengadopsi teknologi terbaru, melainkan juga memerlukan perubahan budaya organisasi dan pola pikir karyawan.\n\nTantangan utama dalam transformasi digital adalah resistensi terhadap perubahan. Karyawan sering kali merasa nyaman dengan cara kerja lama dan enggan mempelajari sistem baru. Oleh karena itu, manajemen perlu menyusun strategi komunikasi yang efektif dan menyediakan pelatihan yang memadai.\n\nSelain itu, keamanan siber menjadi isu kritis dalam era digital. Semakin banyak data yang disimpan secara digital, semakin besar pula risiko kebocoran data. Perusahaan harus investasi dalam sistem keamanan yang handal dan melatih karyawan tentang praktik keamanan digital yang baik.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Memecat karyawan yang menolak"
+    },
+    {
+      "key": "B",
+      "text": "Strategi komunikasi efektif dan pelatihan"
+    },
+    {
+      "key": "C",
+      "text": "Menaikkan gaji"
+    },
+    {
+      "key": "D",
+      "text": "Mengurangi beban kerja"
+    },
+    {
+      "key": "E",
+      "text": "Memberikan bonus"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Memecat karyawan yang menolak tidak sesuai dengan informasi dalam teks.",
+    "B": "Benar. Strategi komunikasi efektif dan pelatihan adalah jawaban yang tepat berdasarkan teks.",
+    "C": "Salah. Menaikkan gaji tidak sesuai dengan informasi dalam teks.",
+    "D": "Salah. Mengurangi beban kerja tidak sesuai dengan informasi dalam teks.",
+    "E": "Salah. Memberikan bonus tidak sesuai dengan informasi dalam teks."
+  },
+  "difficulty": "easy",
+  "source": "qwen-generated",
+  "verified": true
+}

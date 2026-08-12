@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-002",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 2,
+  "type": "logika_analitis",
+  "question_text": "Jika hari ini adalah Senin, maka 100 hari lagi adalah hari ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Senin"
+    },
+    {
+      "key": "B",
+      "text": "Selasa"
+    },
+    {
+      "key": "C",
+      "text": "Rabu"
+    },
+    {
+      "key": "D",
+      "text": "Kamis"
+    },
+    {
+      "key": "E",
+      "text": "Jumat"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Senin bukan jawaban yang tepat.",
+    "B": "Salah. Selasa bukan jawaban yang tepat.",
+    "C": "Benar. Rabu adalah jawaban yang tepat.",
+    "D": "Salah. Kamis bukan jawaban yang tepat.",
+    "E": "Salah. Jumat bukan jawaban yang tepat."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

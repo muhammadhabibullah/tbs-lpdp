@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-008",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "perbandingan",
+  "question_text": "Perbandingan uang Andi dan Budi adalah 3:5. Jika selisih uang mereka Rp 40.000, berapakah jumlah uang mereka?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp 120.000"
+    },
+    {
+      "key": "B",
+      "text": "Rp 140.000"
+    },
+    {
+      "key": "C",
+      "text": "Rp 160.000"
+    },
+    {
+      "key": "D",
+      "text": "Rp 180.000"
+    },
+    {
+      "key": "E",
+      "text": "Rp 200.000"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Rp 120.000 bukan jawaban yang tepat.",
+    "B": "Salah. Rp 140.000 bukan jawaban yang tepat.",
+    "C": "Benar. Rp 160.000 adalah jawaban yang tepat.",
+    "D": "Salah. Rp 180.000 bukan jawaban yang tepat.",
+    "E": "Salah. Rp 200.000 bukan jawaban yang tepat."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}
