@@ -1,0 +1,43 @@
+{
+  "id": "14-pemecahan_masalah-007",
+  "package": 14,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah unit teknologi informasi akan mengerjakan tepat tiga proyek dari lima proyek kandidat: P berbiaya Rp300 juta, Q berbiaya Rp250 juta, R berbiaya Rp200 juta, S berbiaya Rp350 juta, dan T berbiaya Rp150 juta. Ketentuan pemilihan: (1) total biaya ketiga proyek tidak boleh melebihi anggaran Rp800 juta, (2) proyek P dan R tidak boleh dipilih bersama karena keduanya memakai platform yang sama, (3) jika proyek S dipilih, proyek T wajib dipilih karena modul T merupakan prasyarat S, dan (4) proyek Q wajib dipilih karena telah menjadi bagian kontrak dengan klien. Dengan prioritas utilisasi anggaran setinggi-tingginya tanpa melanggar ketentuan, kombinasi proyek yang dipilih adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Q, S, dan T"
+    },
+    {
+      "key": "B",
+      "text": "P, Q, dan R"
+    },
+    {
+      "key": "C",
+      "text": "Q, R, dan S"
+    },
+    {
+      "key": "D",
+      "text": "P, Q, dan S"
+    },
+    {
+      "key": "E",
+      "text": "P, Q, dan T"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Karena Q wajib dipilih (ketentuan 4), dua proyek lain dipilih dari {P, R, S, T} dengan sisa anggaran Rp550 juta. Kombinasi Q, S, T berbiaya 250 + 350 + 150 = Rp750 juta: tidak melampaui anggaran, tidak memasangkan P dengan R, dan memenuhi prasyarat S–T. Di antara seluruh kombinasi yang memenuhi ketentuan (Q, S, T = 750; P, Q, T = 700; Q, R, T = 600), kombinasi ini memiliki utilisasi anggaran tertinggi.",
+    "B": "Salah. Kombinasi P, Q, R berbiaya 300 + 250 + 200 = Rp750 juta sehingga memenuhi anggaran, tetapi melanggar ketentuan (2) karena memilih P dan R sekaligus.",
+    "C": "Salah. Kombinasi Q, R, S berbiaya tepat Rp800 juta sehingga tidak melampaui anggaran, tetapi melanggar ketentuan (3) karena S dipilih tanpa menyertakan T sebagai prasyaratnya.",
+    "D": "Salah. Kombinasi P, Q, S berbiaya 300 + 250 + 350 = Rp900 juta sehingga melampaui anggaran Rp800 juta, dan sekaligus melanggar ketentuan (3) karena S tidak disertai T.",
+    "E": "Salah. Kombinasi P, Q, T memang memenuhi seluruh ketentuan dengan biaya Rp700 juta, tetapi utilisasinya lebih rendah daripada Q, S, T (Rp750 juta) sehingga tidak sesuai dengan prioritas utilisasi anggaran setinggi-tingginya."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

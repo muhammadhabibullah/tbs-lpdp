@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-003",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "PREROGATIF = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kewajiban mutlak"
+    },
+    {
+      "key": "B",
+      "text": "Hak umum"
+    },
+    {
+      "key": "C",
+      "text": "Kekuasaan tertinggi"
+    },
+    {
+      "key": "D",
+      "text": "Larangan resmi"
+    },
+    {
+      "key": "E",
+      "text": "Hak istimewa"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Kewajiban mutlak bermakna beban yang harus dilaksanakan, berlawanan arah dengan prerogatif yang merupakan hak.",
+    "B": "Hak umum dimiliki oleh semua orang; prerogatif justru hanya dimiliki pihak tertentu, sehingga maknanya tidak tepat.",
+    "C": "Kekuasaan tertinggi adalah makna supremasi; prerogatif menunjuk hak khusus, bukan tingkat kekuasaan yang paling atas.",
+    "D": "Larangan resmi bermakna pelarangan oleh yang berwenang, tidak berkaitan dengan hak khusus.",
+    "E": "Benar. Menurut KBBI, prerogatif berarti hak istimewa, khususnya hak khusus yang hanya dimiliki pihak tertentu, misalnya kepala negara."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

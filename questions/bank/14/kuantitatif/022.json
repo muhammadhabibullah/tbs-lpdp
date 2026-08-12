@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-022",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Sebuah proyek direncanakan selesai dalam 25 hari dengan 12 pekerja. Setelah proyek berjalan selama 10 hari, pekerjaan terhenti selama 5 hari. Dengan asumsi semua pekerja berkemampuan sama dan bekerja dengan laju tetap, banyak pekerja tambahan yang diperlukan agar proyek selesai sesuai jadwal semula adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "6 orang"
+    },
+    {
+      "key": "B",
+      "text": "12 orang"
+    },
+    {
+      "key": "C",
+      "text": "18 orang"
+    },
+    {
+      "key": "D",
+      "text": "30 orang"
+    },
+    {
+      "key": "E",
+      "text": "60 orang"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Total pekerjaan = 25 × 12 = 300 hari-pekerja. Setelah 10 hari terselesaikan 10 × 12 = 120 hari-pekerja, sehingga tersisa 300 − 120 = 180 hari-pekerja. Sisa waktu sesuai jadwal = 25 − 10 − 5 = 10 hari, sehingga diperlukan 180 : 10 = 18 pekerja. Karena sudah ada 12 pekerja, banyak pekerja tambahan = 18 − 12 = 6 orang.",
+    "B": "Salah. 12 = 180 : 15 diperoleh bila penghentian 5 hari diabaikan (sisa waktu dihitung 25 − 10 = 15 hari) dan hasil pembagian itu langsung dijadikan jawaban tanpa mengurangkan pekerja yang sudah ada.",
+    "C": "Salah. 18 = 180 : 10 adalah jumlah pekerja total yang diperlukan, bukan banyak pekerja tambahan; 12 pekerja semula belum dikurangkan.",
+    "D": "Salah. 30 = 300 : 10 diperoleh bila yang dibagi dengan sisa waktu adalah seluruh pekerjaan 300 hari-pekerja, padahal 120 hari-pekerja telah diselesaikan pada 10 hari pertama.",
+    "E": "Salah. 60 = 12 × 5 adalah banyak pekerjaan yang hilang selama penghentian dalam satuan hari-pekerja, bukan banyak pekerja tambahan yang diperlukan."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

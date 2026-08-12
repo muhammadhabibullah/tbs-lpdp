@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-015",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Semua karyawan kantor pusat memiliki hak akses ke ruang arsip digital.\nSebagian pemilik hak akses ruang arsip digital adalah staf administrasi.\nTidak ada staf administrasi yang bertugas di kantor cabang luar negeri.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua staf administrasi memiliki hak akses ke ruang arsip digital."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian pemilik hak akses ruang arsip digital tidak bertugas di kantor cabang luar negeri."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian karyawan kantor pusat adalah staf administrasi."
+    },
+    {
+      "key": "D",
+      "text": "Tidak ada karyawan kantor pusat yang menjadi staf administrasi."
+    },
+    {
+      "key": "E",
+      "text": "Tidak ada staf administrasi yang memiliki hak akses ke ruang arsip digital."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Premis kedua hanya menyebut sebagian pemilik akses adalah staf administrasi, bukan semua staf administrasi memiliki akses; simpulan ini menggeneralisasi premis particular secara terbalik.",
+    "B": "Benar. Sebagian pemilik hak akses adalah staf administrasi, dan tidak ada staf administrasi yang bertugas di luar negeri, sehingga sebagian pemilik hak akses itu pasti tidak bertugas di kantor cabang luar negeri.",
+    "C": "Premis tidak menghubungkan karyawan kantor pusat dengan staf administrasi; staf administrasi pemilik akses itu bisa saja seluruhnya bukan karyawan kantor pusat.",
+    "D": "Premis tidak melarang karyawan kantor pusat menjadi staf administrasi; simpulan negatif total ini melampaui jaminan premis.",
+    "E": "Premis kedua justru menyatakan sebagian pemilik akses adalah staf administrasi, sehingga pernyataan ini bertentangan dengan premis."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

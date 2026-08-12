@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-024",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar wadah gabungan tabung dan kerucut di atas. Wadah tersebut terdiri atas sebuah tabung dengan jari-jari alas 7 cm dan tinggi 10 cm, serta sebuah kerucut dengan tinggi 9 cm yang menutup bagian atas tabung. Dengan π = 22/7, volume seluruh wadah tersebut adalah ...",
+  "image": "images/tabung-kerucut.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "462 cm³"
+    },
+    {
+      "key": "B",
+      "text": "1.386 cm³"
+    },
+    {
+      "key": "C",
+      "text": "1.540 cm³"
+    },
+    {
+      "key": "D",
+      "text": "2.002 cm³"
+    },
+    {
+      "key": "E",
+      "text": "2.926 cm³"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. 462 cm³ = 1/3 × 22/7 × 7² × 9 hanyalah volume kerucut, tanpa volume tabung.",
+    "B": "Salah. 1.386 cm³ = 22/7 × 7² × 9 diperoleh bila volume kerucut dihitung tanpa faktor 1/3, dan volume tabung juga belum ditambahkan.",
+    "C": "Salah. 1.540 cm³ = 22/7 × 7² × 10 hanyalah volume tabung, tanpa volume kerucut.",
+    "D": "Benar. Volume tabung = 22/7 × 7² × 10 = 1.540 cm³ dan volume kerucut = 1/3 × 22/7 × 7² × 9 = 462 cm³, sehingga volume seluruh wadah = 1.540 + 462 = 2.002 cm³.",
+    "E": "Salah. 2.926 cm³ = 1.540 + 1.386 diperoleh bila volume kerucut dihitung seperti tabung, yaitu tanpa faktor 1/3."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

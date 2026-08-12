@@ -1,0 +1,9 @@
+{
+  "id": 14,
+  "title": "TBS LPDP Try Out — Paket 14",
+  "description": "Simulasi lengkap Tes Bakat Skolastik LPDP dengan tingkat kesulitan sangat tinggi (Hard+ Difficulty): Penalaran Verbal (23 soal/30 menit), Penalaran Kuantitatif (25 soal/40 menit), dan Pemecahan Masalah (12 soal/20 menit).",
+  "difficulty": "hard",
+  "ai_model": "Kimi-K3",
+  "ai_company": "Moonshot AI",
+  "ai_model_description": "Kimi-K3 adalah model bahasa unggulan Moonshot AI dengan kemampuan penalaran mendalam untuk menghasilkan soal TBS yang lebih menantang dari paket sebelumnya."
+}

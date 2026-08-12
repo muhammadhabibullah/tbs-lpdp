@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-004",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "KLISE = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Klasik"
+    },
+    {
+      "key": "B",
+      "text": "Lazim"
+    },
+    {
+      "key": "C",
+      "text": "Baku"
+    },
+    {
+      "key": "D",
+      "text": "Populer"
+    },
+    {
+      "key": "E",
+      "text": "Basi"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Klasik bermakna bernilai tinggi dan tidak lekang oleh zaman; klise justru bernilai rendah karena terlalu sering diulang.",
+    "B": "Lazim bermakna umum berlaku; sesuatu yang lazim belum tentu usang, sedangkan klise selalu mengandung kesan basi.",
+    "C": "Baku bermakna sesuai standar resmi, tidak berkaitan dengan keusangan suatu ungkapan.",
+    "D": "Populer bermakna disukai banyak orang; klise menilai segi kesegarannya, bukan banyaknya peminat.",
+    "E": "Benar. Menurut KBBI, klise berarti basi atau tidak asli lagi karena terlalu sering diulang, sehingga padanan yang tepat adalah basi."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

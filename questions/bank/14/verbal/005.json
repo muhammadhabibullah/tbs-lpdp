@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-005",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "PRODUSEN >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Distributor"
+    },
+    {
+      "key": "B",
+      "text": "Pemasok"
+    },
+    {
+      "key": "C",
+      "text": "Konsumen"
+    },
+    {
+      "key": "D",
+      "text": "Pedagang"
+    },
+    {
+      "key": "E",
+      "text": "Agen"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Distributor adalah penyalur yang meneruskan barang dari produsen; kedudukannya satu arah dengan produsen, bukan lawannya.",
+    "B": "Pemasok adalah pihak yang menyediakan bahan bagi produsen; keduanya sama-sama berada di sisi penawaran.",
+    "C": "Benar. Produsen adalah pihak yang menghasilkan barang, sedangkan konsumen adalah pihak yang memakai barang tersebut; keduanya berlawanan peran.",
+    "D": "Pedagang adalah perantara penjualan, bukan pihak yang berlawanan peran dengan produsen.",
+    "E": "Agen adalah perwakilan yang menjual atas nama produsen, sehingga bukan lawan katanya."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

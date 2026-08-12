@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-008",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "SUMBANG >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rancu"
+    },
+    {
+      "key": "B",
+      "text": "Selaras"
+    },
+    {
+      "key": "C",
+      "text": "Janggal"
+    },
+    {
+      "key": "D",
+      "text": "Fals"
+    },
+    {
+      "key": "E",
+      "text": "Seragam"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Rancu bermakna tidak jelas dan kacau, justru dekat maknanya dengan sumbang, sehingga bukan lawan kata.",
+    "B": "Benar. Sumbang berarti tidak selaras atau tidak seirama, sehingga lawan kata yang tepat adalah selaras.",
+    "C": "Janggal bermakna aneh dan tidak wajar, sejalan dengan kesan sumbang, bukan lawannya.",
+    "D": "Fals bermakna tidak tepat nada, hampir bersinonim dengan sumbang, sehingga menjadi pengecoh, bukan lawan kata.",
+    "E": "Seragam bermakna sama bentuknya; keseragaman menekankan kesamaan, bukan keselarasan, sehingga bukan lawan yang tepat."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

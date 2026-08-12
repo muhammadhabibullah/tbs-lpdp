@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-021",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Simpulan berikut yang paling didukung oleh bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Ekosistem mangrove merupakan salah satu benteng alami di kawasan pesisir. Hutan mangrove mampu meredam gelombang dan menahan abrasi sehingga melindungi permukiman warga dari terjangan air laut. Selain itu, akar mangrove menjadi tempat pemijahan berbagai jenis ikan dan udang, sehingga kawasan mangrove yang sehat berkaitan erat dengan penghidupan nelayan. Mangrove juga dikenal sebagai penyimpan karbon yang sangat efektif dibandingkan dengan hutan daratan. Di sejumlah wilayah, kawasan mangrove yang tertata bahkan menjadi daya tarik wisata alam yang dikelola masyarakat setempat.\n\nDalam beberapa tahun terakhir, upaya rehabilitasi mangrove gencar dilakukan di berbagai daerah. Kegiatan penanaman kembali sering melibatkan masyarakat setempat, kelompok pemuda, dan sekolah. Kendalanya, tingkat kelangsungan hidup bibit yang ditanam tidak selalu tinggi karena pemilihan lokasi dan jenis bibit yang kurang tepat. Oleh karena itu, para ahli menekankan pentingnya kajian kondisi lahan sebelum penanaman serta pemantauan berkala sesudahnya, agar rehabilitasi benar-benar memulihkan fungsi ekosistem, bukan sekadar menambah jumlah pohon.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Keberhasilan rehabilitasi mangrove tidak cukup diukur dari banyaknya bibit yang ditanam."
+    },
+    {
+      "key": "B",
+      "text": "Mangrove menyimpan karbon lebih efektif daripada seluruh ekosistem yang ada di bumi."
+    },
+    {
+      "key": "C",
+      "text": "Abrasi di kawasan pesisir dapat dihentikan sepenuhnya melalui rehabilitasi mangrove."
+    },
+    {
+      "key": "D",
+      "text": "Nelayan tidak akan memperoleh hasil tangkapan di kawasan yang tidak memiliki mangrove."
+    },
+    {
+      "key": "E",
+      "text": "Penanaman mangrove sebaiknya dilakukan tanpa melibatkan masyarakat setempat."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Kalimat penutup menegaskan rehabilitasi harus benar-benar memulihkan fungsi ekosistem, bukan sekadar menambah jumlah pohon, dengan prasyarat kajian lahan dan pemantauan; simpulan ini paling didukung teks.",
+    "B": "Bacaan hanya membandingkan mangrove dengan hutan daratan, bukan dengan seluruh ekosistem di bumi; pernyataan ini menggeneralisasi secara berlebihan.",
+    "C": "Bacaan menyebut mangrove meredam gelombang dan menahan abrasi, bukan menghentikannya sepenuhnya; kata sepenuhnya melampaui dukungan teks.",
+    "D": "Bacaan menyatakan mangrove yang sehat berkaitan erat dengan penghidupan nelayan, bukan bahwa nelayan mustahil memperoleh hasil tangkapan tanpa mangrove.",
+    "E": "Bacaan justru mencatat keterlibatan masyarakat setempat sebagai bagian dari kegiatan penanaman; tidak ada dukungan untuk meniadakan peran mereka."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

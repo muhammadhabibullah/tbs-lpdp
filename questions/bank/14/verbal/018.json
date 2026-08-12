@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-018",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat berikut tidak efektif.\n\nDalam rangka meningkatkan mutu pendidikan di daerah terpencil, pemerintah daerah mengirimkan para guru-guru muda, memberikan beasiswa, serta sarana belajar yang memadai.\n\nPerbaikan kalimat yang paling tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Dalam rangka meningkatkan mutu pendidikan di daerah terpencil, pemerintah daerah mengirimkan para guru-guru muda, memberikan beasiswa, serta menyediakan sarana belajar yang memadai."
+    },
+    {
+      "key": "B",
+      "text": "Dalam rangka meningkatkan mutu pendidikan di daerah terpencil, pemerintah daerah mengirimkan guru muda, memberikan beasiswa, serta sarana belajar yang memadai."
+    },
+    {
+      "key": "C",
+      "text": "Dalam rangka untuk meningkatkan mutu pendidikan di daerah terpencil, pemerintah daerah mengirimkan guru muda, memberikan beasiswa, serta menyediakan sarana belajar yang memadai."
+    },
+    {
+      "key": "D",
+      "text": "Dalam rangka meningkatkan mutu pendidikan di daerah terpencil, pemerintah daerah bukan hanya mengirimkan guru muda, tetapi memberikan beasiswa, serta menyediakan sarana belajar yang memadai."
+    },
+    {
+      "key": "E",
+      "text": "Dalam rangka meningkatkan mutu pendidikan di daerah terpencil, pemerintah daerah mengirimkan guru muda, memberikan beasiswa, serta menyediakan sarana belajar yang memadai."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Perbaikan ini masih menyisakan penanda jamak ganda pada para guru-guru; kaidah kehematan mengharuskan memilih para guru atau guru-guru, bukan keduanya sekaligus.",
+    "B": "Perbaikan ini tidak menyelesaikan kerusakan paralelisme karena unsur ketiga perincian, sarana belajar yang memadai, tetap tidak didahului verba seperti dua unsur sebelumnya.",
+    "C": "Perbaikan ini boros konjungsi karena menggabungkan dalam rangka dengan untuk; kaidah kehematan mengharuskan salah satu saja, yaitu dalam rangka meningkatkan atau untuk meningkatkan.",
+    "D": "Perbaikan ini merusak konsistensi konjungsi korelatif karena pasangan bukan hanya seharusnya diikuti tetapi juga, bukan tetapi saja.",
+    "E": "Benar. Ketiga unsur perincian kini paralel sebagai frasa verba (mengirimkan, memberikan, serta menyediakan), penanda jamak tidak lagi ganda, dan konjungsi digunakan secara hemat."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

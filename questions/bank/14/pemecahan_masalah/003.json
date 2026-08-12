@@ -1,0 +1,43 @@
+{
+  "id": "14-pemecahan_masalah-003",
+  "package": 14,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Lima kotak arsip (K, L, M, N, O) disusun bertingkat pada sebuah rak dari tingkat paling bawah (tingkat 1) hingga tingkat paling atas (tingkat 5), satu kotak pada setiap tingkat. Diketahui: (1) M berada pada tingkat 3, (2) K berada tepat satu tingkat di bawah M, (3) O berada pada tingkat paling atas, dan (4) L berada di bawah N. Kotak yang berada tepat satu tingkat di atas kotak L adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "L"
+    },
+    {
+      "key": "B",
+      "text": "M"
+    },
+    {
+      "key": "C",
+      "text": "N"
+    },
+    {
+      "key": "D",
+      "text": "K"
+    },
+    {
+      "key": "E",
+      "text": "O"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. L berada pada tingkat 1 (paling bawah), sehingga tidak mungkin berada tepat satu tingkat di atas dirinya sendiri.",
+    "B": "Salah. M berada pada tingkat 3; kotak tepat satu tingkat di atas L (tingkat 1) adalah kotak pada tingkat 2, yaitu K.",
+    "C": "Salah. Karena M=3, K=2, dan O=5, sisa tingkat 1 dan 4 diisi L dan N; karena L berada di bawah N (kendala 4), maka N=4, bukan tepat di atas L.",
+    "D": "Benar. Kendala (1) menempatkan M pada tingkat 3; kendala (2) menempatkan K tepat satu tingkat di bawahnya sehingga K=2; kendala (3) menempatkan O=5. Sisa tingkat 1 dan 4 diisi L dan N, dan kendala (4) menuntut L=1 serta N=4. Kotak tepat satu tingkat di atas L (tingkat 1) adalah kotak pada tingkat 2, yaitu K.",
+    "E": "Salah. O berada pada tingkat 5 (paling atas), empat tingkat di atas L, bukan tepat satu tingkat di atasnya."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

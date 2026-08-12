@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-007",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "EGALITER >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Hierarkis"
+    },
+    {
+      "key": "B",
+      "text": "Merata"
+    },
+    {
+      "key": "C",
+      "text": "Demokratis"
+    },
+    {
+      "key": "D",
+      "text": "Adil"
+    },
+    {
+      "key": "E",
+      "text": "Terbuka"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Egaliter berarti menjunjung persamaan derajat tanpa tingkatan, sehingga lawan kata yang tepat adalah hierarkis, yaitu bertingkat-tingkat.",
+    "B": "Merata bermakna sama rata, justru sejalan dengan semangat egaliter, sehingga bukan lawan kata.",
+    "C": "Demokratis berkaitan dengan pengambilan keputusan bersama; demokrasi dapat berjalan seiring dengan egaliter, bukan lawannya.",
+    "D": "Adil bermakna berpihak pada kebenaran; keadilan tidak meniadakan tingkatan dan tidak berlawanan langsung dengan egaliter.",
+    "E": "Terbuka bermakna dapat diakses semua pihak; keterbukaan sejalan dengan semangat egaliter, bukan lawannya."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

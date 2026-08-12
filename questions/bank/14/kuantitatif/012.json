@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-012",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 12,
+  "type": "aljabar",
+  "question_text": "Diketahui x + y = 13 dan xy = 31. Nilai dari x² + y² adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "231"
+    },
+    {
+      "key": "B",
+      "text": "107"
+    },
+    {
+      "key": "C",
+      "text": "45"
+    },
+    {
+      "key": "D",
+      "text": "169"
+    },
+    {
+      "key": "E",
+      "text": "138"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 231 diperoleh dengan menambahkan 2xy, padahal suku itu harus dipindahkan sehingga dikurangkan.",
+    "B": "Benar. x² + y² = (x + y)² − 2xy = 13² − 2 × 31 = 169 − 62 = 107.",
+    "C": "Salah. Nilai 45 diperoleh dengan menghitung (x − y)² = (x + y)² − 4xy, yang merupakan besaran lain.",
+    "D": "Salah. Nilai 169 diperoleh dengan menghitung (x + y)² = 169 dan berhenti di situ, tanpa mengurangkan 2xy.",
+    "E": "Salah. Nilai 138 diperoleh dengan mengurangkan xy satu kali, padahal penjabaran (x + y)² memuat 2xy."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

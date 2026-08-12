@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-010",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "METER : PANJANG = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Panjang : Meter"
+    },
+    {
+      "key": "B",
+      "text": "Ampere : Tegangan"
+    },
+    {
+      "key": "C",
+      "text": "Barometer : Tekanan"
+    },
+    {
+      "key": "D",
+      "text": "Detik : Waktu"
+    },
+    {
+      "key": "E",
+      "text": "Gram : Liter"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Panjang : meter membalik urutan pasangan rangsang; satuan harus disebut lebih dahulu daripada besaran yang diukurnya.",
+    "B": "Ampere adalah satuan arus listrik, bukan satuan tegangan; pasangan satuan dan besaran ini keliru.",
+    "C": "Barometer adalah alat pengukur tekanan, yaitu hubungan alat dan besaran, sedangkan meter adalah satuan, bukan alat ukur.",
+    "D": "Benar. Meter adalah satuan untuk besaran panjang, sebagaimana detik adalah satuan untuk besaran waktu; keduanya menyatakan hubungan satuan dan besaran.",
+    "E": "Gram dan liter sama-sama satuan, sehingga hubungannya setara, bukan satuan dan besaran."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-022",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Pernyataan berikut yang tidak sesuai dengan isi bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Teknologi pertanian presisi membantu petani mengelola lahan secara lebih akurat. Melalui sensor tanah, citra satelit, dan sistem irigasi otomatis, petani dapat mengetahui kadar air, unsur hara, dan kondisi tanaman di setiap bagian lahan. Informasi tersebut memungkinkan pemberian pupuk dan air sesuai kebutuhan, tidak lagi merata untuk seluruh lahan. Dengan cara ini, penggunaan pupuk dan air menjadi lebih hemat, sedangkan hasil panen berpotensi meningkat. Sejumlah kajian juga mencatat berkurangnya limpasan pupuk ke lingkungan sekitar.\n\nPenerapan pertanian presisi di kalangan petani kecil masih menghadapi sejumlah hambatan. Harga perangkat sensor dan biaya pemasangannya relatif tinggi bagi petani dengan lahan sempit. Selain itu, diperlukan keterampilan membaca data agar informasi yang diperoleh benar-benar bermanfaat. Beberapa daerah mengatasi persoalan ini melalui kepemilikan alat secara bersama oleh kelompok tani disertai pendampingan. Pola tersebut menunjukkan bahwa keberhasilan teknologi tidak hanya ditentukan oleh kecanggihan perangkat, tetapi juga oleh cara petani mengorganisasikan penggunaannya.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Pertanian presisi memanfaatkan sensor tanah, citra satelit, dan sistem irigasi otomatis."
+    },
+    {
+      "key": "B",
+      "text": "Pemberian pupuk dan air dilakukan sesuai kebutuhan setiap bagian lahan."
+    },
+    {
+      "key": "C",
+      "text": "Seluruh petani kecil telah mampu membeli perangkat pertanian presisi."
+    },
+    {
+      "key": "D",
+      "text": "Kepemilikan alat secara bersama oleh kelompok tani menjadi solusi di beberapa daerah."
+    },
+    {
+      "key": "E",
+      "text": "Keterampilan membaca data diperlukan agar informasi dari teknologi bermanfaat."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Pernyataan ini sesuai karena paragraf pertama secara eksplisit menyebut sensor tanah, citra satelit, dan sistem irigasi otomatis.",
+    "B": "Pernyataan ini sesuai karena paragraf pertama menyatakan pemberian pupuk dan air dilakukan sesuai kebutuhan, tidak lagi merata untuk seluruh lahan.",
+    "C": "Benar. Pernyataan ini tidak sesuai karena paragraf kedua justru menyebut harga perangkat dan biaya pemasangan relatif tinggi sehingga menjadi hambatan bagi petani kecil.",
+    "D": "Pernyataan ini sesuai karena paragraf kedua menyebut kepemilikan alat secara bersama oleh kelompok tani sebagai cara mengatasi persoalan di beberapa daerah.",
+    "E": "Pernyataan ini sesuai karena paragraf kedua menegaskan perlunya keterampilan membaca data agar informasi yang diperoleh benar-benar bermanfaat."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

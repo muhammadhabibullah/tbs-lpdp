@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-020",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Sebuah pabrik roti memproduksi 270 roti dalam 6 jam. Dengan laju produksi yang sama, banyak roti yang diproduksi dalam 10 jam adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "162 roti"
+    },
+    {
+      "key": "B",
+      "text": "315 roti"
+    },
+    {
+      "key": "C",
+      "text": "405 roti"
+    },
+    {
+      "key": "D",
+      "text": "450 roti"
+    },
+    {
+      "key": "E",
+      "text": "495 roti"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. 162 = 270 × 6 : 10 diperoleh bila arah perbandingan dibalik, yaitu mengalikan dengan waktu semula dan membagi dengan waktu yang ditanyakan.",
+    "B": "Salah. 315 = 270 + 45 hanya menambahkan hasil produksi satu jam ke hasil 6 jam, padahal yang ditanyakan adalah hasil produksi 10 jam.",
+    "C": "Salah. 405 = 45 × 9 diperoleh bila lama produksi dihitung 9 jam, bukan 10 jam.",
+    "D": "Benar. Laju produksi = 270 : 6 = 45 roti per jam, sehingga dalam 10 jam diproduksi 45 × 10 = 450 roti.",
+    "E": "Salah. 495 = 45 × 11 diperoleh bila lama produksi dihitung 11 jam, bukan 10 jam."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

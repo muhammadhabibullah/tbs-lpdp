@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-006",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "SPESIFIK >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Khusus"
+    },
+    {
+      "key": "B",
+      "text": "Terbatas"
+    },
+    {
+      "key": "C",
+      "text": "Rinci"
+    },
+    {
+      "key": "D",
+      "text": "Umum"
+    },
+    {
+      "key": "E",
+      "text": "Jelas"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Khusus justru merupakan padanan makna spesifik, sehingga opsi ini adalah pengecoh sinonim, bukan lawan kata.",
+    "B": "Terbatas bermakna sempit cakupannya; hal yang spesifik belum tentu terbatas, dan lawan spesifik bukan soal luas sempit.",
+    "C": "Rinci bermakna terperinci; hal yang spesifik sering dirinci, sehingga maknanya sejalan, bukan berlawanan.",
+    "D": "Benar. Spesifik berarti khusus atau tertentu, sehingga lawan kata yang tepat adalah umum.",
+    "E": "Jelas bermakna gamblang; kejelasan adalah kesan yang menyertai hal spesifik, bukan lawan katanya."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

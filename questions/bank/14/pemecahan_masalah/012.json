@@ -1,0 +1,43 @@
+{
+  "id": "14-pemecahan_masalah-012",
+  "package": 14,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Sebuah wadah memuat 120 liter campuran sirup dan air yang telah tercampur rata dengan perbandingan 3 : 5. Sebanyak 40 liter campuran dikeluarkan dari wadah, kemudian ke dalam wadah ditambahkan 40 liter air murni. Air murni yang masih harus ditambahkan ke dalam wadah agar perbandingan sirup dan air menjadi 1 : 4 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "60 liter"
+    },
+    {
+      "key": "B",
+      "text": "65 liter"
+    },
+    {
+      "key": "C",
+      "text": "70 liter"
+    },
+    {
+      "key": "D",
+      "text": "120 liter"
+    },
+    {
+      "key": "E",
+      "text": "30 liter"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 60 liter diperoleh jika perbandingan sasaran keliru dibaca sebagai 1 : 5 (5 × 30 − 90 = 60), padahal yang dituntut adalah perbandingan 1 : 4.",
+    "B": "Salah. Nilai 65 liter diperoleh dengan mengabaikan pengeluaran 40 liter campuran, sehingga sirup dianggap tetap 45 liter (4 × 45 − (75 + 40) = 65); padahal pengeluaran itu ikut mengurangi sirup sesuai perbandingan campuran.",
+    "C": "Salah. Nilai 70 liter diperoleh dengan mengabaikan penambahan 40 liter air pada tahap kedua (4 × 30 − 50 = 70), padahal air tersebut sudah terlanjur ditambahkan ke dalam wadah.",
+    "D": "Salah. Nilai 120 liter adalah volume air total yang dibutuhkan pada keadaan akhir (4 × 30 = 120), bukan volume tambahan; karena air sudah 90 liter, tambahan yang diperlukan hanya 30 liter.",
+    "E": "Benar. Mula-mula sirup 3/8 × 120 = 45 liter dan air 75 liter. Mengeluarkan 40 liter campuran berarti mengeluarkan 3/8 × 40 = 15 liter sirup dan 25 liter air, sehingga tersisa 30 liter sirup dan 50 liter air. Setelah ditambah 40 liter air murni, air menjadi 90 liter. Agar sirup : air = 1 : 4, air harus 4 × 30 = 120 liter, sehingga air yang masih harus ditambahkan adalah 120 − 90 = 30 liter."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

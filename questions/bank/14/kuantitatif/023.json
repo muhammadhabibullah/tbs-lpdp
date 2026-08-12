@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-023",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Harga sebuah laptop adalah Rp8.000.000,00. Sebuah toko memberikan diskon 20%, kemudian diskon tambahan 10% dari harga setelah diskon pertama. Setelah seluruh diskon, pembeli dikenakan pajak 10% dari harga setelah diskon. Harga akhir yang harus dibayar pembeli adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp5.600.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp5.760.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp6.160.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp6.336.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp6.560.000,00"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Rp5.600.000,00 = Rp8.000.000,00 × 70% diperoleh bila kedua diskon dijumlahkan menjadi 30% dan pajak 10% tidak dikenakan sama sekali.",
+    "B": "Salah. Rp5.760.000,00 = Rp8.000.000,00 × 80% × 90% adalah harga setelah kedua diskon, sebelum pajak 10% ditambahkan.",
+    "C": "Salah. Rp6.160.000,00 = Rp8.000.000,00 × 70% × 110% diperoleh bila kedua diskon dijumlahkan menjadi 30%; diskon bertingkat tidak boleh dijumlahkan karena diskon kedua dihitung dari harga setelah diskon pertama.",
+    "D": "Benar. Harga setelah diskon pertama = Rp8.000.000,00 × 80% = Rp6.400.000,00, setelah diskon tambahan = Rp6.400.000,00 × 90% = Rp5.760.000,00, dan setelah pajak = Rp5.760.000,00 × 110% = Rp6.336.000,00.",
+    "E": "Salah. Rp6.560.000,00 = Rp5.760.000,00 + Rp800.000,00 diperoleh bila pajak dihitung 10% dari harga awal, padahal pajak dikenakan dari harga setelah seluruh diskon."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

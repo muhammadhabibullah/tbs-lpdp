@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-001",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "AKUMULASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pengurangan"
+    },
+    {
+      "key": "B",
+      "text": "Penggandaan"
+    },
+    {
+      "key": "C",
+      "text": "Penyebaran"
+    },
+    {
+      "key": "D",
+      "text": "Penumpukan"
+    },
+    {
+      "key": "E",
+      "text": "Perbandingan"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Pengurangan bermakna membuat menjadi berkurang, justru bertolak belakang dengan akumulasi.",
+    "B": "Penggandaan bermakna melipatgandakan; akumulasi terjadi melalui penambahan sedikit demi sedikit, bukan perkalian.",
+    "C": "Penyebaran bermakna meluaskan ke berbagai arah, tidak berkaitan dengan bertambahnya jumlah di satu tempat.",
+    "D": "Benar. Menurut KBBI, akumulasi berarti penumpukan atau penimbunan, sehingga padanan yang tepat adalah penumpukan.",
+    "E": "Perbandingan bermakna membandingkan dua hal, tidak berkaitan dengan makna akumulasi."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "14-pemecahan_masalah-010",
+  "package": 14,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Tabel di atas menyajikan data fiktif jumlah penumpang lima trayek kereta pada tahun 2024 dan 2025. Berdasarkan tabel tersebut, pernyataan yang benar adalah ...",
+  "image": null,
+  "passage": "Trayek | Penumpang 2024 (ribu) | Penumpang 2025 (ribu)\nArga | 480 | 600\nBahari | 750 | 600\nCitra | 200 | 300\nDirga | 360 | 450\nEka | 400 | 300",
+  "options": [
+    {
+      "key": "A",
+      "text": "Trayek Arga mengalami persentase kenaikan penumpang tertinggi di antara seluruh trayek"
+    },
+    {
+      "key": "B",
+      "text": "Total penumpang kelima trayek pada tahun 2025 lebih sedikit daripada total pada tahun 2024"
+    },
+    {
+      "key": "C",
+      "text": "Di antara trayek yang jumlah penumpangnya bertambah, trayek dengan kenaikan jumlah penumpang terbesar bukanlah trayek dengan persentase kenaikan tertinggi"
+    },
+    {
+      "key": "D",
+      "text": "Trayek Bahari memperoleh pendapatan tiket paling besar pada tahun 2025"
+    },
+    {
+      "key": "E",
+      "text": "Porsi trayek Eka terhadap total penumpang pada tahun 2025 lebih besar daripada porsinya pada tahun 2024"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Kenaikan jumlah penumpang Arga memang terbesar (600 − 480 = 120 ribu), tetapi persentasenya hanya 120 : 480 = 25 persen, kalah dari Citra yang naik 100 : 200 = 50 persen.",
+    "B": "Salah. Total penumpang 2024 adalah 480 + 750 + 200 + 360 + 400 = 2.190 ribu, sedangkan total 2025 adalah 600 + 600 + 300 + 450 + 300 = 2.250 ribu, sehingga total 2025 justru lebih besar 60 ribu.",
+    "C": "Benar. Trayek yang penumpangnya bertambah adalah Arga (+120 ribu; +25 persen), Citra (+100 ribu; +50 persen), dan Dirga (+90 ribu; +25 persen). Kenaikan jumlah terbesar dicapai Arga (120 ribu), tetapi persentase kenaikan tertinggi dicapai Citra (50 persen), sehingga keduanya bukan trayek yang sama; menilai klaim ini menuntut penggabungan data kedua tahun untuk setiap trayek.",
+    "D": "Salah. Tabel hanya memuat jumlah penumpang pada dua tahun; tidak ada data mengenai harga tiket maupun pendapatan, sehingga pernyataan ini tidak dapat diputuskan dari tabel.",
+    "E": "Salah. Porsi Eka pada 2024 adalah 400 : 2.190 ≈ 18,3 persen, sedangkan pada 2025 adalah 300 : 2.250 ≈ 13,3 persen, sehingga porsinya justru menurun."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "14-pemecahan_masalah-004",
+  "package": 14,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Enam siswa (A, B, C, D, E, F) dibagi menjadi dua regu kerja bakti yang masing-masing beranggotakan tepat tiga orang. Diketahui: (1) A tidak satu regu dengan B, (2) C satu regu dengan A, (3) D satu regu dengan B, dan (4) E tidak satu regu dengan B. Pasangan yang pasti berada dalam satu regu adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "C dan D"
+    },
+    {
+      "key": "B",
+      "text": "F dan D"
+    },
+    {
+      "key": "C",
+      "text": "E dan D"
+    },
+    {
+      "key": "D",
+      "text": "A dan B"
+    },
+    {
+      "key": "E",
+      "text": "F dan C"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. C satu regu dengan A (kendala 2), sedangkan D satu regu dengan B (kendala 3); karena A dan B berbeda regu (kendala 1), C dan D selalu berada pada regu yang berbeda.",
+    "B": "Benar. Kendala (1) memisahkan A dan B ke dua regu berbeda; kendala (2) membuat C menyertai A; kendala (3) membuat D menyertai B. Kendala (4) melarang E satu regu dengan B, sehingga E harus bergabung dengan regu A. Regu A kini berisi A, C, dan E (penuh tiga orang), sehingga F pasti berada di regu B bersama B dan D. Jadi F pasti satu regu dengan D.",
+    "C": "Salah. Karena E tidak satu regu dengan B (kendala 4), E berada di regu A, sementara D berada di regu B, sehingga keduanya tidak pernah satu regu.",
+    "D": "Salah. Kendala (1) secara tegas melarang A satu regu dengan B.",
+    "E": "Salah. C berada di regu A, sedangkan F terpaksa berada di regu B karena regu A sudah penuh oleh A, C, dan E, sehingga F dan C berbeda regu."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-005",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "Rata-rata nilai 18 peserta kelompok P adalah 74, sedangkan rata-rata nilai 12 peserta kelompok Q adalah 83. Berapakah rata-rata nilai seluruh peserta kedua kelompok tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "79,4"
+    },
+    {
+      "key": "B",
+      "text": "77,6"
+    },
+    {
+      "key": "C",
+      "text": "78,5"
+    },
+    {
+      "key": "D",
+      "text": "74"
+    },
+    {
+      "key": "E",
+      "text": "72,75"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 79,4 diperoleh dengan menukar banyak peserta yang menjadi bobot kedua kelompok.",
+    "B": "Benar. Jumlah nilai kelompok P = 18 × 74 = 1.332 dan kelompok Q = 12 × 83 = 996; rata-rata gabungan = (1.332 + 996) : 30 = 77,6.",
+    "C": "Salah. Nilai 78,5 diperoleh dengan merata-ratakan dua nilai rata-rata tanpa membobotinya dengan banyak peserta.",
+    "D": "Salah. Nilai 74 diperoleh dengan menggunakan rata-rata kelompok P untuk kedua kelompok.",
+    "E": "Salah. Nilai 72,75 diperoleh dengan menambahkan dua nilai rata-rata sebagai dua peserta baru pada pembagi."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

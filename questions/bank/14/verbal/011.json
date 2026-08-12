@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-011",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "ZIGOT : EMBRIO = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Janin : Embrio"
+    },
+    {
+      "key": "B",
+      "text": "Ovum : Sperma"
+    },
+    {
+      "key": "C",
+      "text": "Embrio : Janin"
+    },
+    {
+      "key": "D",
+      "text": "Plasenta : Janin"
+    },
+    {
+      "key": "E",
+      "text": "Zigot : Gamet"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Janin : embrio membalik urutan tahap; tahap yang benar adalah embrio berkembang menjadi janin, bukan sebaliknya.",
+    "B": "Ovum dan sperma adalah dua sel gamet yang setara kedudukannya, bukan dua tahap perkembangan yang berurutan.",
+    "C": "Benar. Zigot berkembang menjadi embrio pada tahap berikutnya, sebagaimana embrio berkembang menjadi janin; keduanya menyatakan hubungan tahap perkembangan yang berurutan.",
+    "D": "Plasenta adalah organ pendukung kehidupan janin, yaitu hubungan organ pendukung dan yang didukung, bukan tahap berurutan.",
+    "E": "Zigot terbentuk dari peleburan gamet, sehingga urutannya terbalik; selain itu gamet adalah pembentuk, bukan tahap lanjut perkembangan individu."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

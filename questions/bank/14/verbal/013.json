@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-013",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "RIBOSOM : SEL = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Jaringan : Sel"
+    },
+    {
+      "key": "B",
+      "text": "Ribosom : Protein"
+    },
+    {
+      "key": "C",
+      "text": "Katup : Jantung"
+    },
+    {
+      "key": "D",
+      "text": "Enzim : Protein"
+    },
+    {
+      "key": "E",
+      "text": "Nukleus : Ribosom"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Jaringan : sel membalik urutan; sel adalah bagian penyusun jaringan, sehingga seharusnya sel : jaringan.",
+    "B": "Ribosom adalah tempat sintesis protein, yaitu hubungan tempat pembentukan dan hasilnya, bukan bagian dan keseluruhan.",
+    "C": "Benar. Ribosom adalah bagian yang menyusun sel, sebagaimana katup adalah bagian yang menyusun jantung; keduanya menyatakan hubungan bagian dan keseluruhan.",
+    "D": "Enzim adalah salah satu golongan protein, yaitu hubungan anggota dan golongannya, bukan bagian dan keseluruhan.",
+    "E": "Nukleus dan ribosom adalah dua organel sel yang setara kedudukannya, bukan hubungan bagian dan keseluruhan."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-021",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Pada awal bulan, sebuah toko menaikkan harga sebuah barang yang semula Rp400.000,00 sebesar 25%. Pada akhir bulan, toko tersebut memberikan diskon 20% dari harga baru. Harga barang tersebut setelah diskon adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp320.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp380.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp400.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp420.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp500.000,00"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Rp320.000,00 = Rp400.000,00 × 80% diperoleh bila hanya diskon 20% yang diterapkan dan kenaikan 25% diabaikan.",
+    "B": "Salah. Rp380.000,00 = Rp400.000,00 × 95% diperoleh bila harga dianggap turun bersih 5% karena selisih 25% − 20% dihitung dengan arah yang terbalik.",
+    "C": "Benar. Harga setelah kenaikan 25% = Rp400.000,00 × 125% = Rp500.000,00, kemudian harga setelah diskon 20% = Rp500.000,00 × 80% = Rp400.000,00. Kenaikan 25% yang diikuti diskon 20% mengembalikan harga semula karena 1,25 × 0,80 = 1.",
+    "D": "Salah. Rp420.000,00 = Rp400.000,00 × 105% diperoleh bila kenaikan bersih dianggap 25% − 20% = 5%; persen bertingkat tidak dapat dikurangkan karena dasar perhitungan keduanya berbeda.",
+    "E": "Salah. Rp500.000,00 = Rp400.000,00 × 125% adalah harga setelah kenaikan 25%, sebelum diskon 20% diterapkan."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

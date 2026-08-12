@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-011",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 11,
+  "type": "aljabar",
+  "question_text": "Jika (x + 14) : 2 = 13, nilai x adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "12"
+    },
+    {
+      "key": "B",
+      "text": "−7,5"
+    },
+    {
+      "key": "C",
+      "text": "40"
+    },
+    {
+      "key": "D",
+      "text": "−1"
+    },
+    {
+      "key": "E",
+      "text": "−2"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. x + 14 = 13 × 2 = 26, sehingga x = 26 − 14 = 12.",
+    "B": "Salah. Nilai −7,5 diperoleh dengan membagi dengan 2, padahal kedua ruas harus dikalikan dengan 2.",
+    "C": "Salah. Nilai 40 diperoleh dengan menambahkan 14 setelah mengalikan dengan 2, padahal 14 harus dikurangkan.",
+    "D": "Salah. Nilai −1 diperoleh dengan mengurangkan 14 tanpa lebih dahulu mengalikan kedua ruas dengan 2.",
+    "E": "Salah. Nilai −2 diperoleh dengan mengurangkan 14 lebih dahulu, baru mengalikan dengan 2; urutannya terbalik."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-015",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 15,
+  "type": "deret_angka",
+  "question_text": "..., 63, 5, 58, 8, 53, 11, 48 Bilangan yang tepat untuk mengisi titik-titik tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "3"
+    },
+    {
+      "key": "B",
+      "text": "10"
+    },
+    {
+      "key": "C",
+      "text": "2"
+    },
+    {
+      "key": "D",
+      "text": "−1"
+    },
+    {
+      "key": "E",
+      "text": "−3"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 3 diperoleh dengan menemukan arah mundur yang benar tetapi bergeser satu satuan di atas suku pertama.",
+    "B": "Salah. Nilai 10 diperoleh dengan memundurkan jalur ganjil dengan beda milik jalur genap.",
+    "C": "Benar. Suku ganjil membentuk deret dengan beda 3, sedangkan suku genap memiliki beda −5. Karena 2 + 3 = 5, suku pertama yang hilang adalah 2.",
+    "D": "Salah. Nilai −1 diperoleh dengan memundurkan jalur ganjil dua langkah, bukan satu langkah.",
+    "E": "Salah. Nilai −3 diperoleh dengan mencampurkan nilai awal jalur ganjil dengan beda jalur genap."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

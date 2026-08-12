@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-016",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Semua peserta yang lulus seleksi akhir menerima sertifikat pelatihan.\nSebagian peserta program magang menerima sertifikat pelatihan.\nSemua peserta program magang adalah mahasiswa tingkat akhir.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sebagian peserta program magang belum tentu lulus seleksi akhir."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian peserta program magang lulus seleksi akhir."
+    },
+    {
+      "key": "C",
+      "text": "Semua mahasiswa tingkat akhir adalah peserta yang lulus seleksi akhir."
+    },
+    {
+      "key": "D",
+      "text": "Tidak ada peserta program magang yang lulus seleksi akhir."
+    },
+    {
+      "key": "E",
+      "text": "Semua penerima sertifikat pelatihan adalah peserta yang lulus seleksi akhir."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Sertifikat memang diterima semua peserta yang lulus seleksi akhir, tetapi premis tidak menyatakan hanya mereka yang menerimanya; peserta magang yang bersertifikat bisa saja memperolehnya tanpa seleksi akhir, sehingga satu-satunya simpulan yang sah adalah keraguan ini.",
+    "B": "Simpulan ini tampak masuk akal, tetapi tidak pasti; mungkin saja seluruh peserta magang yang bersertifikat memperoleh sertifikatnya bukan dari seleksi akhir.",
+    "C": "Premis hanya menyatakan semua peserta magang adalah mahasiswa tingkat akhir; tidak ada premis yang menyatakan semua mahasiswa tingkat akhir lulus seleksi akhir.",
+    "D": "Premis tidak menutup kemungkinan adanya peserta magang yang lulus seleksi akhir, sehingga simpulan negatif total ini tidak terjamin.",
+    "E": "Premis pertama memastikan peserta yang lulus seleksi akhir menerima sertifikat, bukan sebaliknya; simpulan ini membalik arah hubungan."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

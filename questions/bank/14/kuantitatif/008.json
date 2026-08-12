@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-008",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nP = 5/8 dari 176 dikurangi 14\nQ = 40% dari 250\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Jumlah P dan Q kurang daripada 191"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. P = 96 dan Q = 100, sehingga Q > P; nilai P tidak melebihi nilai Q (96 tidak lebih besar daripada 100).",
+    "B": "Benar. P = 96 dan Q = 100, sehingga Q > P.",
+    "C": "Salah. P = 96 dan Q = 100, sehingga Q > P; kedua nilai tidak sama (96 ≠ 100).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 96 dan Q = 100), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 96 dan Q = 100, jumlahnya 196, tidak kurang daripada 191."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-025",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar lapangan di atas. Lapangan tersebut terdiri atas sebuah persegi panjang dengan panjang 90 m dan lebar 56 m, serta sebuah setengah lingkaran pada masing-masing ujungnya. Dengan π = 22/7, luas seluruh lapangan tersebut adalah ...",
+  "image": "images/lapangan.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "2.464 m²"
+    },
+    {
+      "key": "B",
+      "text": "4.928 m²"
+    },
+    {
+      "key": "C",
+      "text": "5.040 m²"
+    },
+    {
+      "key": "D",
+      "text": "6.272 m²"
+    },
+    {
+      "key": "E",
+      "text": "7.504 m²"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. 2.464 m² = 22/7 × 28² hanyalah luas gabungan kedua setengah lingkaran (satu lingkaran penuh), tanpa bagian persegi panjang.",
+    "B": "Salah. 4.928 m² = 2 × 2.464 diperoleh bila kedua setengah lingkaran dihitung sebagai dua lingkaran penuh dan bagian persegi panjang tidak ditambahkan.",
+    "C": "Salah. 5.040 m² = 90 × 56 hanyalah luas bagian persegi panjang, tanpa kedua ujung setengah lingkaran.",
+    "D": "Salah. 6.272 m² = 5.040 + 1.232 diperoleh bila hanya satu setengah lingkaran (1.232 m²) yang ditambahkan, padahal lapangan memiliki dua ujung setengah lingkaran.",
+    "E": "Benar. Kedua setengah lingkaran membentuk satu lingkaran penuh berjari-jari 56 : 2 = 28 m, sehingga luasnya = 22/7 × 28² = 2.464 m². Luas persegi panjang = 90 × 56 = 5.040 m², sehingga luas seluruh lapangan = 5.040 + 2.464 = 7.504 m²."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

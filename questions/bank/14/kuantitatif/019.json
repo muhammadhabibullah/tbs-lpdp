@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-019",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 19,
+  "type": "kecukupan_data",
+  "question_text": "a, b, c, dan d adalah bilangan positif. Apakah a/b < (a+c)/(b+d)?\n(1) a < c.\n(2) b < d.\nPutuskan apakah pernyataan (1) dan (2) yang diberikan cukup untuk menjawab pertanyaan tersebut.",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup"
+    },
+    {
+      "key": "B",
+      "text": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup"
+    },
+    {
+      "key": "C",
+      "text": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup untuk menjawab pertanyaan"
+    },
+    {
+      "key": "E",
+      "text": "Pernyataan (1) dan (2) BERSAMA-SAMA tidak cukup untuk menjawab pertanyaan"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Pernyataan (1) tidak cukup: [a=1, b=1, c=2, d=2] dan [a=1, b=1, c=2, d=1] sama-sama memenuhinya, tetapi jawaban pertanyaan masing-masing Tidak dan Ya.",
+    "B": "Salah. Pernyataan (2) tidak cukup: [a=1, b=1, c=1, d=2] dan [a=1, b=1, c=3, d=2] sama-sama memenuhinya, tetapi jawaban pertanyaan masing-masing Tidak dan Ya.",
+    "C": "Salah. Pernyataan (1) dan (2) bersama-sama tidak cukup: [a=1, b=1, c=2, d=2] dan [a=1, b=1, c=3, d=2] sama-sama memenuhinya, tetapi jawaban pertanyaan masing-masing Tidak dan Ya.",
+    "D": "Salah. Pernyataan (1) tidak cukup: [a=1, b=1, c=2, d=2] dan [a=1, b=1, c=2, d=1] sama-sama memenuhinya, tetapi jawaban pertanyaan masing-masing Tidak dan Ya.",
+    "E": "Benar. Pernyataan (1) dan (2) bersama-sama tidak cukup: [a=1, b=1, c=2, d=2] dan [a=1, b=1, c=3, d=2] sama-sama memenuhinya, tetapi jawaban pertanyaan masing-masing Tidak dan Ya."
+  },
+  "difficulty": "hard",
+  "source": "kecukupan_data_predikat.py",
+  "verified": true
+}

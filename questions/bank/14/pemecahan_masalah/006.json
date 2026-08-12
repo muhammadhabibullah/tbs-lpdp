@@ -1,0 +1,43 @@
+{
+  "id": "14-pemecahan_masalah-006",
+  "package": 14,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Delapan kontainer (A, B, C, D, E, F, G, H) diturunkan dari sebuah kapal satu per satu pada urutan pertama sampai kedelapan. Diketahui: (1) kontainer B diturunkan tepat tiga urutan setelah kontainer A sehingga terdapat tepat dua kontainer di antara keduanya, (2) kontainer C diturunkan tepat satu urutan setelah kontainer D, (3) kontainer E diturunkan sebelum kontainer A, (4) kontainer F diturunkan setelah kontainer B, (5) kontainer G diturunkan setelah kontainer D tetapi sebelum kontainer F, dan (6) kontainer H tidak diturunkan pada urutan pertama maupun kedelapan. Kontainer yang pasti diturunkan pada urutan kedelapan adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "G"
+    },
+    {
+      "key": "B",
+      "text": "B"
+    },
+    {
+      "key": "C",
+      "text": "F"
+    },
+    {
+      "key": "D",
+      "text": "H"
+    },
+    {
+      "key": "E",
+      "text": "E"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Kendala (5) mensyaratkan G diturunkan sebelum F, sehingga G tidak mungkin menjadi kontainer terakhir; G hanya dapat menempati urutan kelima sampai ketujuh.",
+    "B": "Salah. Jika B diturunkan kedelapan, maka A berada pada urutan kelima (kendala 1) dan kendala (4) menuntut F diturunkan setelah urutan kedelapan, yang mustahil.",
+    "C": "Benar. Kendala (3) membuat A paling awal di urutan kedua, sedangkan kendala (1) dan (4) membatasi A paling jauh di urutan keempat (jika A=5, maka B=8 dan tidak ada tempat bagi F setelahnya), sehingga B paling akhir di urutan ketujuh dan E paling jauh di urutan ketiga. Kendala (2) dan (5) membuat D paling jauh di urutan keenam (G dan F harus menyusul sesudahnya), C paling jauh di urutan ketujuh, dan G paling jauh di urutan ketujuh, sementara kendala (6) melarang H di urutan kedelapan. Dengan demikian tidak ada kontainer lain yang dapat menempati urutan kedelapan selain F, misalnya pada susunan E1, A2, D3, C4, B5, G6, H7, F8.",
+    "D": "Salah. Kendala (6) secara tegas melarang H diturunkan pada urutan pertama maupun kedelapan.",
+    "E": "Salah. Karena E harus mendahului A (kendala 3) dan A paling awal di urutan kedua, E paling jauh berada di urutan ketiga, misalnya pada susunan D1, C2, E3, A4, G5, H6, B7, F8."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

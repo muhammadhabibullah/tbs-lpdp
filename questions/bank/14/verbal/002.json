@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-002",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "DISTINGSI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pembedaan"
+    },
+    {
+      "key": "B",
+      "text": "Penyamaan"
+    },
+    {
+      "key": "C",
+      "text": "Pembagian"
+    },
+    {
+      "key": "D",
+      "text": "Penyaringan"
+    },
+    {
+      "key": "E",
+      "text": "Penegasan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Menurut KBBI, distingsi berarti perbedaan atau pembedaan, sehingga padanan yang tepat adalah pembedaan.",
+    "B": "Penyamaan bermakna menganggap sama, justru berlawanan dengan distingsi yang menegaskan perbedaan.",
+    "C": "Pembagian bermakna membagi sesuatu menjadi bagian-bagian; distingsi membedakan ciri, bukan membagi keseluruhan.",
+    "D": "Penyaringan bermakna memilih yang lolos dan tidak lolos; prosesnya berbeda dengan membedakan dua hal.",
+    "E": "Penegasan bermakna memperjelas atau memperkuat pernyataan, tidak berkaitan dengan pembedaan."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

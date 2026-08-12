@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-014",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Semua peserta pelatihan dasar wajib memiliki kartu anggota perpustakaan.\nTidak ada siswa kelas sepuluh yang memiliki kartu anggota perpustakaan.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua pemilik kartu anggota perpustakaan adalah peserta pelatihan dasar."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian peserta pelatihan dasar adalah siswa kelas sepuluh."
+    },
+    {
+      "key": "C",
+      "text": "Kartu anggota perpustakaan hanya boleh dimiliki oleh peserta pelatihan dasar."
+    },
+    {
+      "key": "D",
+      "text": "Sebagian peserta pelatihan dasar belum tentu memiliki kartu anggota perpustakaan."
+    },
+    {
+      "key": "E",
+      "text": "Tidak ada siswa kelas sepuluh yang menjadi peserta pelatihan dasar."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Premis pertama hanya menyatakan semua peserta pelatihan memiliki kartu, bukan sebaliknya; simpulan ini membalik arah hubungan sehingga tidak terjamin.",
+    "B": "Pernyataan ini mustahil karena setiap peserta pelatihan pasti memiliki kartu, sedangkan tidak ada siswa kelas sepuluh yang memiliki kartu.",
+    "C": "Premis tidak membatasi kepemilikan kartu hanya bagi peserta pelatihan; kata hanya menambahkan pembatasan yang tidak didukung premis.",
+    "D": "Premis pertama mewajibkan semua peserta pelatihan memiliki kartu, sehingga keraguan ini justru salah; bentuk kehati-hatian tidak selalu berarti benar.",
+    "E": "Benar. Semua peserta pelatihan dasar memiliki kartu anggota, sedangkan tidak ada siswa kelas sepuluh yang memilikinya, sehingga pasti tidak ada siswa kelas sepuluh yang menjadi peserta pelatihan dasar."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

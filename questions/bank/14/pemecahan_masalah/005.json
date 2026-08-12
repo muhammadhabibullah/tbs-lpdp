@@ -1,0 +1,43 @@
+{
+  "id": "14-pemecahan_masalah-005",
+  "package": 14,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Tujuh calon penghuni (P, Q, R, S, T, U, V) akan menempati tujuh rumah berderet di satu sisi jalan yang bernomor 1 sampai 7 dari ujung kiri, satu orang pada setiap rumah. Diketahui: (1) R menempati rumah tepat satu nomor di sebelah kiri rumah P, (2) Q menempati rumah tepat dua nomor setelah rumah P, (3) S menempati rumah bernomor lebih besar daripada rumah Q, (4) T tidak menempati rumah nomor 1 maupun nomor 7, dan (5) U menempati rumah bernomor lebih kecil daripada rumah V. Jika S menempati rumah nomor 5, pernyataan yang pasti benar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "R menempati rumah nomor 2"
+    },
+    {
+      "key": "B",
+      "text": "P menempati rumah nomor 3"
+    },
+    {
+      "key": "C",
+      "text": "T menempati rumah nomor 3"
+    },
+    {
+      "key": "D",
+      "text": "U menempati rumah nomor 6"
+    },
+    {
+      "key": "E",
+      "text": "V menempati rumah nomor 7"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Jika S=5, kendala (3) menuntut Q bernomor di bawah 5; karena Q = P + 2 (kendala 2) dan P ≥ 2 (R tepat satu nomor di kirinya), satu-satunya kemungkinan adalah Q=4, P=2, dan R=1, bukan R=2.",
+    "B": "Salah. Dengan S=5, rantai kendala (1), (2), dan (3) memaksa P menempati rumah nomor 2, bukan nomor 3.",
+    "C": "Tidak pasti. Setelah R=1, P=2, Q=4, dan S=5, nomor yang tersisa bagi T, U, dan V adalah 3, 6, dan 7. T memang dapat di nomor 3 (susunan R1, P2, T3, Q4, S5, U6, V7), tetapi susunan R1, P2, U3, Q4, S5, T6, V7 juga memenuhi seluruh kendala dengan T di nomor 6.",
+    "D": "Tidak pasti. U dapat menempati nomor 6, tetapi susunan R1, P2, U3, Q4, S5, T6, V7 menunjukkan U dapat pula menempati nomor 3 sementara seluruh kendala tetap terpenuhi.",
+    "E": "Benar. Jika S=5, kendala (3) menuntut Q<5; karena Q=P+2 dengan P≥2 (R tepat satu nomor di kiri P), maka P=2, Q=4, dan R=1. Nomor tersisa bagi T, U, V adalah 3, 6, dan 7; kendala (4) melarang T di nomor 7, dan kendala (5) melarang U di nomor 7 karena V harus bernomor lebih besar daripadanya. Satu-satunya penghuni yang mungkin di nomor 7 adalah V, dan kedua susunan yang memenuhi seluruh kendala (R1, P2, T3, Q4, S5, U6, V7 serta R1, P2, U3, Q4, S5, T6, V7) sama-sama menempatkan V di nomor 7."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

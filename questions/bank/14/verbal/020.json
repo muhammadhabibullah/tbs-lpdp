@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-020",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Tujuan penulis menuliskan paragraf kedua bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Ekosistem mangrove merupakan salah satu benteng alami di kawasan pesisir. Hutan mangrove mampu meredam gelombang dan menahan abrasi sehingga melindungi permukiman warga dari terjangan air laut. Selain itu, akar mangrove menjadi tempat pemijahan berbagai jenis ikan dan udang, sehingga kawasan mangrove yang sehat berkaitan erat dengan penghidupan nelayan. Mangrove juga dikenal sebagai penyimpan karbon yang sangat efektif dibandingkan dengan hutan daratan. Di sejumlah wilayah, kawasan mangrove yang tertata bahkan menjadi daya tarik wisata alam yang dikelola masyarakat setempat.\n\nDalam beberapa tahun terakhir, upaya rehabilitasi mangrove gencar dilakukan di berbagai daerah. Kegiatan penanaman kembali sering melibatkan masyarakat setempat, kelompok pemuda, dan sekolah. Kendalanya, tingkat kelangsungan hidup bibit yang ditanam tidak selalu tinggi karena pemilihan lokasi dan jenis bibit yang kurang tepat. Oleh karena itu, para ahli menekankan pentingnya kajian kondisi lahan sebelum penanaman serta pemantauan berkala sesudahnya, agar rehabilitasi benar-benar memulihkan fungsi ekosistem, bukan sekadar menambah jumlah pohon.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Menyangsikan manfaat penanaman kembali mangrove di kawasan pesisir."
+    },
+    {
+      "key": "B",
+      "text": "Menguraikan tahapan teknis pemilihan bibit mangrove yang tepat."
+    },
+    {
+      "key": "C",
+      "text": "Memaparkan data keberhasilan rehabilitasi mangrove di berbagai daerah."
+    },
+    {
+      "key": "D",
+      "text": "Menjelaskan pelaksanaan rehabilitasi mangrove beserta kendala dan hal yang perlu diperhatikan agar upaya itu berhasil."
+    },
+    {
+      "key": "E",
+      "text": "Mengajak pembaca menanam mangrove di sekitar tempat tinggalnya."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Paragraf kedua tidak meragukan manfaat rehabilitasi; kendala disebut justru agar upaya itu berhasil, bukan untuk menyangsikannya.",
+    "B": "Paragraf hanya menyebut pemilihan lokasi dan jenis bibit yang kurang tepat sebagai kendala, tanpa menguraikan tahapan teknis pemilihannya.",
+    "C": "Tidak ada satu pun data keberhasilan pada paragraf kedua; pilihan ini menuntut isi yang tidak disediakan bacaan.",
+    "D": "Benar. Paragraf kedua memaparkan jalannya rehabilitasi, kendala rendahnya kelangsungan hidup bibit, serta anjuran kajian kondisi lahan dan pemantauan berkala agar rehabilitasi berhasil.",
+    "E": "Paragraf kedua bersifat informatif, bukan persuasif; tidak ada kalimat yang mengajak pembaca menanam mangrove."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

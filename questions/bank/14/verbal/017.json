@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-017",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat berikut tidak efektif.\n\nSeluruh para peserta membahas tentang materi pelatihan secara bersama-sama.\n\nPerbaikan kalimat yang paling tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Seluruh peserta membahas tentang materi pelatihan bersama-sama."
+    },
+    {
+      "key": "B",
+      "text": "Para peserta membahas materi pelatihan secara bersama-sama."
+    },
+    {
+      "key": "C",
+      "text": "Seluruh peserta membahas materi pelatihan bersama-sama."
+    },
+    {
+      "key": "D",
+      "text": "Seluruh para peserta membahas materi pelatihan bersama-sama."
+    },
+    {
+      "key": "E",
+      "text": "Seluruh peserta membahas materi pelatihan secara bersama-sama."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Perbaikan ini masih menyisakan pemborosan kata karena verba transitif membahas tidak memerlukan preposisi tentang; bentuk yang hemat adalah membahas materi.",
+    "B": "Perbaikan ini masih boros karena menggabungkan secara dengan kata ulang bersama-sama; kaidah kehematan mengharuskan memilih secara bersamaan atau bersama-sama saja.",
+    "C": "Benar. Kalimat ini hemat, bersubjek seluruh peserta dan berpredikat membahas dengan jelas, tanpa penanda kuantitas ganda, preposisi berlebih, ataupun gabungan secara dengan kata ulang.",
+    "D": "Perbaikan ini masih menyisakan penanda kuantitas ganda, yaitu seluruh dan para; kaidah kehematan mengharuskan memilih salah satu.",
+    "E": "Perbaikan ini masih menyisakan pemborosan secara bersama-sama yang merupakan kesalahan pada kalimat asal."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

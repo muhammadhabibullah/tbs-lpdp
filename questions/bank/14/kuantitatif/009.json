@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-009",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 9,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nP = 3,25 km dikurangi 475 m\nQ = 2.775 m\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Jumlah P dan Q kurang daripada 5.540 m"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. P = 2.775 m dan Q = 2.775 m, sehingga P = Q; nilai P tidak melebihi nilai Q (2.775 m tidak lebih besar daripada 2.775 m).",
+    "B": "Salah. P = 2.775 m dan Q = 2.775 m, sehingga P = Q; nilai Q tidak melebihi nilai P (2.775 m tidak lebih besar daripada 2.775 m).",
+    "C": "Benar. P = 2.775 m dan Q = 2.775 m, sehingga P = Q.",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 2.775 m dan Q = 2.775 m), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 2.775 m dan Q = 2.775 m, jumlahnya 5.550 m, tidak kurang daripada 5.540 m."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

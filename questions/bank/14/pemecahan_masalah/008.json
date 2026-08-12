@@ -1,0 +1,43 @@
+{
+  "id": "14-pemecahan_masalah-008",
+  "package": 14,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Empat tim (W, X, Y, Z) mengikuti turnamen dengan sistem setengah kompetisi, sehingga setiap tim bertemu setiap tim lain tepat satu kali. Aturan poin: menang memperoleh 3 poin, seri 1 poin, dan kalah 0 poin. Hasil yang telah diketahui: W menang atas X; W bermain seri melawan Y; W bermain seri melawan Z; X menang atas Y; dan Z menang atas X. Satu-satunya pertandingan yang belum dimainkan adalah Y melawan Z. Berdasarkan hasil yang telah diketahui, pernyataan yang pasti benar mengenai klasemen akhir adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Z pasti menjadi juara turnamen"
+    },
+    {
+      "key": "B",
+      "text": "Y pasti menempati peringkat keempat"
+    },
+    {
+      "key": "C",
+      "text": "W pasti finis dengan poin lebih banyak daripada setiap tim lain"
+    },
+    {
+      "key": "D",
+      "text": "X tidak mungkin finis sebagai pemuncak klasemen akhir"
+    },
+    {
+      "key": "E",
+      "text": "poin akhir Y pasti lebih kecil daripada poin akhir X"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Jika Y mengalahkan Z, poin akhir Z adalah 1 + 3 + 0 = 4, berada di bawah W yang telah pasti memperoleh 5 poin; Z baru menjadi juara apabila mengalahkan Y, sehingga tidak pasti.",
+    "B": "Salah. Jika Y mengalahkan Z, Y memperoleh 1 + 0 + 3 = 4 poin dan berada di atas X (3 poin), sehingga Y tidak pasti menempati peringkat keempat.",
+    "C": "Salah. W telah pasti memperoleh 3 + 1 + 1 = 5 poin, tetapi jika pertandingan Y melawan Z berakhir seri, Z juga memperoleh 1 + 3 + 1 = 5 poin, sehingga W tidak melebihi setiap tim lain.",
+    "D": "Benar. Dari hasil yang telah diketahui, X memperoleh 0 + 3 + 0 = 3 poin dan tidak bermain lagi, sedangkan W telah pasti mengantongi 5 poin. Pada ketiga kemungkinan hasil Y melawan Z (Y menang: W=5, Y=4, Z=4, X=3; seri: W=5, Z=5, X=3, Y=2; Z menang: Z=7, W=5, X=3, Y=1), poin X selalu berada di bawah poin W, sehingga X tidak mungkin menjadi pemuncak klasemen akhir.",
+    "E": "Salah. Jika Y mengalahkan Z, poin akhir Y adalah 4, lebih besar daripada poin akhir X yang tetap 3."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-010",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "aljabar",
+  "question_text": "Jika y = 4x² + 5x + 3, nilai y untuk x = 4 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "55"
+    },
+    {
+      "key": "B",
+      "text": "279"
+    },
+    {
+      "key": "C",
+      "text": "81"
+    },
+    {
+      "key": "D",
+      "text": "47"
+    },
+    {
+      "key": "E",
+      "text": "87"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 55 diperoleh dengan membaca 4x² sebagai 4 × 2 × x sehingga pangkat dua berubah menjadi perkalian dua.",
+    "B": "Salah. Nilai 279 diperoleh dengan mengkuadratkan 4x sebagai satu kesatuan, yaitu (4 × 4)², padahal yang dikuadratkan hanya x.",
+    "C": "Salah. Nilai 81 diperoleh dengan salah tanda pada tetapan + 3.",
+    "D": "Salah. Nilai 47 diperoleh dengan salah tanda pada suku + 5x ketika mensubstitusikan x = 4.",
+    "E": "Benar. y = 4 × (4)² + 5 × (4) + 3 = 64 + 20 + 3 = 87."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

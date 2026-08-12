@@ -1,0 +1,43 @@
+{
+  "id": "14-pemecahan_masalah-011",
+  "package": 14,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Masalah utama yang disoroti penulis dalam teks tersebut adalah ...",
+  "image": null,
+  "passage": "Setiap tahun, rumah tangga Indonesia menghasilkan jutaan ton sampah elektronik, mulai dari ponsel rusak dan baterai bekas hingga kulkas usang. Selama ini, pengelolaannya diserahkan kepada kesadaran konsumen melalui berbagai program sukarela, dan hasilnya hampir tidak terlihat: sebagian besar sampah elektronik berakhir di tempat pembuangan biasa atau diolah pengepul tanpa standar keselamatan. Mengandalkan kesadaran individu untuk persoalan sebesar ini adalah keliru. Beban pengelolaan seharusnya dipikul oleh pihak yang menikmati keuntungan dari penjualan produk elektronik, yaitu produsen. Negara-negara yang mewajibkan produsen menarik kembali dan mendaur ulang produknya terbukti mampu menekan timbulan sampah elektronik secara signifikan. Karena itu, dibutuhkan regulasi yang mewajibkan produsen bertanggung jawab atas produknya hingga akhir masa pakai, bukan sekadar imbauan kepada konsumen.",
+  "options": [
+    {
+      "key": "A",
+      "text": "rendahnya kesadaran konsumen dalam mengelola sampah elektronik rumah tangga"
+    },
+    {
+      "key": "B",
+      "text": "belum adanya kewajiban bagi produsen untuk bertanggung jawab atas produk elektronik hingga akhir masa pakainya"
+    },
+    {
+      "key": "C",
+      "text": "pengolahan sampah elektronik oleh pengepul yang tidak memenuhi standar keselamatan"
+    },
+    {
+      "key": "D",
+      "text": "menumpuknya sampah elektronik yang berakhir di tempat pembuangan biasa"
+    },
+    {
+      "key": "E",
+      "text": "minimnya insentif bagi konsumen yang mengembalikan produk elektronik bekas"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Lemahnya hasil pendekatan berbasis kesadaran konsumen memang disebut, tetapi penulis menggunakannya sebagai premis untuk menolak pendekatan itu ('mengandalkan kesadaran individu ... adalah keliru'), bukan sebagai masalah utama yang disoroti.",
+    "B": "Benar. Seluruh argumen bermuara pada tuntutan adanya regulasi yang mewajibkan produsen bertanggung jawab atas produknya hingga akhir masa pakai; inilah masalah utama teks, yaitu beban pengelolaan sampah elektronik selama ini tidak dipikul oleh produsen yang menikmati keuntungannya.",
+    "C": "Salah. Pengolahan oleh pengepul tanpa standar keselamatan adalah rincian pendukung yang menggambarkan kegagalan pengelolaan saat ini, bukan masalah utama yang diperjuangkan penulis.",
+    "D": "Salah. Berakhirnya sampah elektronik di tempat pembuangan biasa adalah gejala yang dipakai penulis sebagai bukti kegagalan program sukarela, bukan inti persoalan menurut penulis.",
+    "E": "Salah. Teks tidak membahas insentif bagi konsumen; penulis justru mengalihkan tanggung jawab pengelolaan dari konsumen kepada produsen."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

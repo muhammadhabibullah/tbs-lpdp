@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-003",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 3,
+  "type": "aritmetika",
+  "question_text": "Rata-rata 4 bilangan adalah 20. Apabila bilangan 45 ditambahkan ke dalam kelompok tersebut, berapakah rata-rata 5 bilangan itu?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "25"
+    },
+    {
+      "key": "B",
+      "text": "16"
+    },
+    {
+      "key": "C",
+      "text": "31,25"
+    },
+    {
+      "key": "D",
+      "text": "20"
+    },
+    {
+      "key": "E",
+      "text": "32,5"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Jumlah semula = 4 × 20 = 80; jumlah baru = 80 + 45 = 125; rata-rata baru = 125 ÷ 5 = 25.",
+    "B": "Salah. Nilai 16 diperoleh dengan membagi jumlah semula dengan 5 tanpa menambahkan bilangan baru.",
+    "C": "Salah. Nilai 31,25 diperoleh dengan membagi jumlah baru dengan 4, yaitu banyaknya bilangan semula.",
+    "D": "Salah. Nilai 20 diperoleh dengan menganggap rata-rata tidak berubah oleh penambahan satu bilangan.",
+    "E": "Salah. Nilai 32,5 diperoleh dengan merata-ratakan rata-rata lama dengan bilangan baru seolah-olah keduanya berbobot sama."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "14-pemecahan_masalah-009",
+  "package": 14,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Tabel di atas menyajikan data fiktif lima peternakan sapi perah. Berdasarkan tabel tersebut, pernyataan yang benar adalah ...",
+  "image": null,
+  "passage": "Peternakan | Jumlah Sapi Perah | Produksi Susu per Bulan (liter)\nArunika | 80 | 2.400\nBumindera | 120 | 3.600\nCandra | 60 | 1.500\nDayang | 100 | 3.800\nEndra | 90 | 2.700",
+  "options": [
+    {
+      "key": "A",
+      "text": "Peternakan Bumindera menghasilkan susu paling banyak dalam sebulan"
+    },
+    {
+      "key": "B",
+      "text": "Peternakan Dayang memiliki produksi susu per sapi paling tinggi"
+    },
+    {
+      "key": "C",
+      "text": "Peternakan Endra memiliki produksi susu per sapi lebih rendah daripada peternakan Candra"
+    },
+    {
+      "key": "D",
+      "text": "Peternakan Arunika menjual susu dengan harga per liter paling tinggi"
+    },
+    {
+      "key": "E",
+      "text": "Selisih produksi susu peternakan Dayang dan Bumindera adalah 300 liter"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Pada kolom produksi, Dayang tercatat paling banyak dengan 3.800 liter; Bumindera memang memiliki sapi terbanyak (120 ekor), tetapi produksinya 3.600 liter, masih di bawah Dayang.",
+    "B": "Benar. Produksi susu per sapi Dayang adalah 3.800 : 100 = 38 liter, lebih tinggi daripada Arunika (2.400 : 80 = 30 liter), Bumindera (3.600 : 120 = 30 liter), Candra (1.500 : 60 = 25 liter), dan Endra (2.700 : 90 = 30 liter).",
+    "C": "Salah. Produksi susu per sapi Endra adalah 2.700 : 90 = 30 liter, sedangkan Candra 1.500 : 60 = 25 liter, sehingga Endra justru lebih tinggi daripada Candra.",
+    "D": "Salah. Tabel hanya memuat jumlah sapi perah dan produksi susu bulanan; tidak ada data mengenai harga jual susu, sehingga pernyataan ini tidak dapat diputuskan dari tabel.",
+    "E": "Salah. Selisih produksi Dayang dan Bumindera adalah 3.800 − 3.600 = 200 liter, bukan 300 liter."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -762,6 +762,107 @@ def square_pyramid(*, base_u: float, height_u: float, unit: str,
     )
 
 
+def cylinder_with_cone(*, radius_u: float, cyl_height_u: float, cone_height_u: float,
+                       unit: str, target_h: float = 250, target_w: float = 190) -> Drawing:
+    """A cylinder with a cone on top of it, both on the same radius (a silo).
+
+    The shared radius and both heights are stated by the stem and therefore
+    labelled. The total volume — the point of the item — appears nowhere in
+    the drawing.
+    """
+    scale = min(target_h / (cyl_height_u + cone_height_u), target_w / (2 * radius_u))
+    rx = radius_u * scale
+    ry = rx * ELLIPSE_RATIO
+    cyl_h = cyl_height_u * scale
+    cone_h = cone_height_u * scale
+
+    cx = PAD + rx
+    apex_y = PAD + 6.0
+    joint_cy = apex_y + cone_h
+    bottom_cy = joint_cy + cyl_h
+    dim_x = cx + rx + 34
+    # The radius label goes below the bottom rim with a leader, mirroring how
+    # the plain cone labels its radius: the cylinder's lid is covered by the
+    # cone, so the top of the figure has no room for it.
+    leader_x = cx + rx / 2
+
+    parts = [
+        # cone roof: apex, down the left slant, along the front rim, back up
+        f'<path d="M {_f(cx)} {_f(apex_y)} L {_f(cx - rx)} {_f(joint_cy)} '
+        f'A {_f(rx)} {_f(ry)} 0 0 0 {_f(cx + rx)} {_f(joint_cy)} Z" '
+        f'fill="{FILL_TOP}" stroke="{STROKE}" stroke-width="2"/>',
+        # hidden back half of the rim where cone and cylinder meet
+        f'<path d="M {_f(cx - rx)} {_f(joint_cy)} A {_f(rx)} {_f(ry)} 0 0 1 '
+        f'{_f(cx + rx)} {_f(joint_cy)}" fill="none" stroke="{HIDDEN}" '
+        f'stroke-width="1.5" stroke-dasharray="5 4"/>',
+        # cylinder body: the two sides and the visible front of the bottom rim
+        f'<path d="M {_f(cx - rx)} {_f(joint_cy)} L {_f(cx - rx)} {_f(bottom_cy)} '
+        f'A {_f(rx)} {_f(ry)} 0 0 0 {_f(cx + rx)} {_f(bottom_cy)} '
+        f'L {_f(cx + rx)} {_f(joint_cy)}" '
+        f'fill="{FILL}" stroke="{STROKE}" stroke-width="2"/>',
+        # the cone's axis (its height) and the point it stands on
+        f'<line x1="{_f(cx)}" y1="{_f(apex_y)}" x2="{_f(cx)}" y2="{_f(joint_cy)}" '
+        f'stroke="{INK_SOFT}" stroke-width="1.5" stroke-dasharray="5 4"/>',
+        f'<circle cx="{_f(cx)}" cy="{_f(joint_cy)}" r="2.5" fill="{INK}"/>',
+        f'<line class="tick" x1="{_f(cx)}" y1="{_f(joint_cy)}" x2="{_f(cx + rx)}" '
+        f'y2="{_f(joint_cy)}" stroke="{INK}"/>',
+        f'<line class="tick" x1="{_f(leader_x)}" y1="{_f(bottom_cy + 2)}" '
+        f'x2="{_f(leader_x)}" y2="{_f(bottom_cy + ry + 8)}"/>',
+        _text(leader_x, bottom_cy + ry + 22, f"{_num(radius_u)} {unit}"),
+        # the two stated heights, stacked on one shared dimension line
+        *_dim_v(apex_y, joint_cy, dim_x, f"{_num(cone_height_u)} {unit}", left=False),
+        *_dim_v(joint_cy, bottom_cy, dim_x, f"{_num(cyl_height_u)} {unit}", left=False),
+    ]
+    return Drawing(
+        width=dim_x + 46,
+        height=bottom_cy + ry + 22 + PAD - 8,
+        parts=parts,
+        note=(f"tabung (tinggi {_num(cyl_height_u)} {unit}) dengan kerucut (tinggi "
+              f"{_num(cone_height_u)} {unit}) di atasnya, jari-jari bersama "
+              f"{_num(radius_u)} {unit}; skala {_f(scale)} px per {unit}. "
+              "Volume total TIDAK dilabeli."),
+    )
+
+
+def stadium(*, length_u: float, width_u: float, unit: str,
+            target_w: float = 300, target_h: float = 150) -> Drawing:
+    """A rectangle with a semicircle on each short end (a running-track shape).
+
+    The stem states the rectangle's length and the full width; both are
+    labelled. The radius of the semicircles and the total area are not.
+    """
+    scale = min(target_w / (length_u + width_u), target_h / width_u)
+    length, r = length_u * scale, width_u * scale / 2
+    # Room on the left for the width dimension, which must clear the left
+    # semicircle's bulge (its leftmost point sits r to the left of the seam).
+    left = PAD + r + 56
+    cy = PAD + r
+    x0, x1 = left, left + length
+
+    parts = [
+        f'<path d="M {_f(x0)} {_f(cy - r)} L {_f(x1)} {_f(cy - r)} '
+        f'A {_f(r)} {_f(r)} 0 0 1 {_f(x1)} {_f(cy + r)} '
+        f'L {_f(x0)} {_f(cy + r)} '
+        f'A {_f(r)} {_f(r)} 0 0 1 {_f(x0)} {_f(cy - r)} Z" '
+        f'fill="{FILL_GRASS}" stroke="{STROKE}" stroke-width="2"/>',
+        # the seams where the semicircles meet the rectangle
+        f'<line x1="{_f(x0)}" y1="{_f(cy - r)}" x2="{_f(x0)}" y2="{_f(cy + r)}" '
+        f'stroke="{INK_SOFT}" stroke-width="1.5" stroke-dasharray="5 4"/>',
+        f'<line x1="{_f(x1)}" y1="{_f(cy - r)}" x2="{_f(x1)}" y2="{_f(cy + r)}" '
+        f'stroke="{INK_SOFT}" stroke-width="1.5" stroke-dasharray="5 4"/>',
+        *_dim_h(x0, x1, cy + r + GAP + TICK, f"{_num(length_u)} {unit}"),
+        *_dim_v(cy - r, cy + r, left - r - GAP - TICK, f"{_num(width_u)} {unit}"),
+    ]
+    return Drawing(
+        width=x1 + r + PAD,
+        height=cy + r + GAP + TICK + CAP + 6 + PAD - 8,
+        parts=parts,
+        note=(f"lapangan: persegi panjang {_num(length_u)} x {_num(width_u)} {unit} "
+              f"dengan setengah lingkaran di kedua ujungnya; skala {_f(scale)} px "
+              f"per {unit}. Jari-jari dan luas total TIDAK dilabeli."),
+    )
+
+
 def _num(v: float) -> str:
     """Format a quantity for a label: 20 not 20.0, 7.5 stays 7.5."""
     return str(int(v)) if float(v).is_integer() else _f(v)
@@ -1179,6 +1280,10 @@ FIGURES: list[Figure] = [
         angle_deg=72, radius_u=35, unit="m", label="taman")),
     Figure("13-kuantitatif-025", "limas-segiempat.svg", lambda: square_pyramid(
         base_u=12, height_u=8, unit="cm")),
+    Figure("14-kuantitatif-024", "tabung-kerucut.svg", lambda: cylinder_with_cone(
+        radius_u=7, cyl_height_u=10, cone_height_u=9, unit="cm")),
+    Figure("14-kuantitatif-025", "lapangan.svg", lambda: stadium(
+        length_u=90, width_u=56, unit="m")),
 ]
 
 

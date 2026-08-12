@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-016",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 16,
+  "type": "deret_angka",
+  "question_text": "1, −4, 9, −16, 25, −36, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "49, −64"
+    },
+    {
+      "key": "B",
+      "text": "64, −177"
+    },
+    {
+      "key": "C",
+      "text": "49, 134"
+    },
+    {
+      "key": "D",
+      "text": "49, −177"
+    },
+    {
+      "key": "E",
+      "text": "−49, −64"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Nilai mutlak suku-sukunya adalah kuadrat berurutan dan tandanya berganti positif-negatif. Setelah 36 = 6² bertanda negatif, suku berikutnya adalah 7² = 49 bertanda positif. Dengan pola yang sama, suku kedelapan adalah −64.",
+    "B": "Salah. Suku ketujuh 64 diperoleh dengan langsung memakai 8² dan melewati 7², sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "C": "Salah. Suku ketujuh sudah tepat, tetapi suku kedelapan 134 diperoleh dengan mengulangkan selisih suku ketujuh dan keenam (85), seolah-olah selisih deret ini tetap.",
+    "D": "Salah. Suku ketujuh sudah tepat, tetapi bilangan kedua −177 diperoleh dengan menambahkan selisih −113 pada suku kedelapan −64, yaitu mengulangi selisih suku ketujuh ke kedelapan alih-alih berhenti pada suku kedelapan.",
+    "E": "Salah. Suku ketujuh −49 diperoleh dengan memperoleh kuadrat 7² tetapi mengulang tanda negatif, padahal tanda suku berganti positif dan negatif, sehingga pasangan ini keliru sejak bilangan pertamanya."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

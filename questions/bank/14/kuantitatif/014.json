@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-014",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 14,
+  "type": "deret_angka",
+  "question_text": "3, 3, 6, 9, ..., ..., 39 Dua bilangan yang tepat untuk mengisi titik-titik tersebut berturut-turut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "15, 21"
+    },
+    {
+      "key": "B",
+      "text": "24, 15"
+    },
+    {
+      "key": "C",
+      "text": "15, 24"
+    },
+    {
+      "key": "D",
+      "text": "12, 15"
+    },
+    {
+      "key": "E",
+      "text": "18, 24"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Bilangan pertama benar (6 + 9 = 15), tetapi bilangan kedua diperoleh dengan menjumlahkan suku ketiga dengan bilangan pertama isian (6 + 15 = 21), bukan menjumlahkan dua suku sebelumnya (9 + 15 = 24).",
+    "B": "Salah. Pasangan ini diperoleh dengan menemukan kedua bilangan dengan benar tetapi menuliskannya terbalik.",
+    "C": "Benar. Setiap suku merupakan jumlah dua suku sebelumnya (3 + 3 = 6; 3 + 6 = 9). Suku berikutnya adalah 15 + 24 = 39. Dua bilangan yang hilang adalah 15 dan 24; suku terakhir yang tercetak (39) mengonfirmasi pola tersebut.",
+    "D": "Salah. Pasangan ini diperoleh dengan menganggap selisih deret tetap sebesar selisih dua suku tercetak terakhir (3), yang tidak membawa deret sampai ke suku terakhir.",
+    "E": "Salah. Bilangan pertama diperoleh dengan menjumlahkan suku keempat dengan dirinya sendiri (9 + 9 = 18), padahal aturan deret menjumlahkan dua suku berurutan (6 + 9 = 15). Bilangan kedua kebetulan sesuai, tetapi pasangan ini tidak dihasilkan oleh satu aturan yang konsisten dengan seluruh suku tercetak."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

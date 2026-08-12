@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-023",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Judul yang paling tepat untuk bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Teknologi pertanian presisi membantu petani mengelola lahan secara lebih akurat. Melalui sensor tanah, citra satelit, dan sistem irigasi otomatis, petani dapat mengetahui kadar air, unsur hara, dan kondisi tanaman di setiap bagian lahan. Informasi tersebut memungkinkan pemberian pupuk dan air sesuai kebutuhan, tidak lagi merata untuk seluruh lahan. Dengan cara ini, penggunaan pupuk dan air menjadi lebih hemat, sedangkan hasil panen berpotensi meningkat. Sejumlah kajian juga mencatat berkurangnya limpasan pupuk ke lingkungan sekitar.\n\nPenerapan pertanian presisi di kalangan petani kecil masih menghadapi sejumlah hambatan. Harga perangkat sensor dan biaya pemasangannya relatif tinggi bagi petani dengan lahan sempit. Selain itu, diperlukan keterampilan membaca data agar informasi yang diperoleh benar-benar bermanfaat. Beberapa daerah mengatasi persoalan ini melalui kepemilikan alat secara bersama oleh kelompok tani disertai pendampingan. Pola tersebut menunjukkan bahwa keberhasilan teknologi tidak hanya ditentukan oleh kecanggihan perangkat, tetapi juga oleh cara petani mengorganisasikan penggunaannya.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Tingginya Harga Perangkat Sensor bagi Petani Kecil"
+    },
+    {
+      "key": "B",
+      "text": "Cara Kerja Sensor Tanah dan Citra Satelit di Lahan Pertanian"
+    },
+    {
+      "key": "C",
+      "text": "Peran Kelompok Tani dalam Pendampingan Teknologi"
+    },
+    {
+      "key": "D",
+      "text": "Pertanian Presisi: Manfaat dan Tantangan Penerapannya"
+    },
+    {
+      "key": "E",
+      "text": "Irigasi Otomatis Meningkatkan Hasil Panen Petani"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Harga perangkat hanyalah satu hambatan pada paragraf kedua; judul ini mengangkat rincian pendukung, bukan gagasan keseluruhan bacaan.",
+    "B": "Bacaan tidak menjelaskan cara kerja sensor tanah maupun citra satelit; keduanya hanya disebut sebagai contoh teknologi yang dimanfaatkan.",
+    "C": "Kelompok tani hanya muncul sebagai satu contoh solusi pada paragraf kedua, bukan pokok bahasan seluruh bacaan.",
+    "D": "Benar. Paragraf pertama menguraikan manfaat pertanian presisi, sedangkan paragraf kedua menguraikan hambatan serta cara mengatasinya; judul ini merangkum kedua bagian.",
+    "E": "Irigasi otomatis hanya salah satu contoh teknologi, dan bacaan menyatakan hasil panen berpotensi meningkat, bukan pasti meningkat."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

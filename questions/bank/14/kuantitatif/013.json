@@ -1,0 +1,43 @@
+{
+  "id": "14-kuantitatif-013",
+  "package": 14,
+  "subtest": "kuantitatif",
+  "number": 13,
+  "type": "deret_angka",
+  "question_text": "6, 12, 8, 4, 8, 16, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "32"
+    },
+    {
+      "key": "B",
+      "text": "12"
+    },
+    {
+      "key": "C",
+      "text": "14"
+    },
+    {
+      "key": "D",
+      "text": "20"
+    },
+    {
+      "key": "E",
+      "text": "24"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 32 diperoleh dengan mengulang perkalian dengan 2, padahal sesudah perkalian giliran berikutnya adalah mengurangkan 4.",
+    "B": "Benar. Operasi berulang dalam siklus ×2, −4, :2, +4. Suku terakhir tercetak diperoleh melalui ×2, sehingga langkah berikutnya adalah −4: 16 − 4 = 12. Setelah itu deret dibagi 2, sehingga 12 : 2 = 6.",
+    "C": "Salah. Nilai 14 diperoleh dengan mengurangkan setengah dari 4, bukan pengurang tetap 4.",
+    "D": "Salah. Nilai 20 diperoleh dengan menerapkan penjumlahan 4, padahal giliran berikutnya adalah pengurangan.",
+    "E": "Salah. Nilai 24 diperoleh dengan menambahkan 4 dua kali, padahal langkah ini adalah satu kali pengurangan."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

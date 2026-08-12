@@ -1,0 +1,43 @@
+{
+  "id": "14-verbal-009",
+  "package": 14,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "RESEP : MASAKAN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Bahan : Kue"
+    },
+    {
+      "key": "B",
+      "text": "Denah : Rumah"
+    },
+    {
+      "key": "C",
+      "text": "Menu : Makanan"
+    },
+    {
+      "key": "D",
+      "text": "Koki : Masakan"
+    },
+    {
+      "key": "E",
+      "text": "Masakan : Resep"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Bahan adalah materi mentah pembuatan kue, yaitu hubungan bahan dan produk, bukan panduan dan hasil yang dihasilkannya.",
+    "B": "Benar. Resep adalah panduan yang diikuti untuk menghasilkan masakan, sebagaimana denah adalah panduan yang diikuti untuk membangun rumah; keduanya menyatakan hubungan panduan dan hasil.",
+    "C": "Menu adalah daftar makanan yang tersedia, yaitu hubungan daftar dan butir di dalamnya; menu tidak memandu pembuatan makanan.",
+    "D": "Koki adalah pelaku yang menghasilkan masakan, yaitu hubungan pelaku dan hasil karya, bukan panduan dan hasil.",
+    "E": "Masakan : resep membalik urutan pasangan rangsang; panduan harus disebut lebih dahulu daripada hasilnya."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}
