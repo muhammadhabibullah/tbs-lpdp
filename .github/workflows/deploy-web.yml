@@ -99,6 +99,22 @@ jobs:
       - name: Publish the question-bank artifact (AP-3)
         run: npm run build:bank -- --out dist/bank
 
+      # QG-12: Push complete immutable package releases to Supabase.
+      # publish_package_release RPC is server-authoritative and content-hashed;
+      # unchanged packages produce zero new revisions or release records.
+      - name: Push question packages to Supabase (QG-12)
+        working-directory: .
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL || vars.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SUPABASE_SERVICE_ROLE_KEY:-}" ]; then
+            echo "SUPABASE_SERVICE_ROLE_KEY secret is not configured; skipping Supabase push."
+          else
+            python3 questions/generator/push_to_supabase.py --all --publish
+          fi
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3

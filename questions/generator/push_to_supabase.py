@@ -219,28 +219,20 @@ def build_question_payload(
     return payload, content_hash
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--package", type=int, required=True)
-    parser.add_argument("--publish", action="store_true", help="publish the resulting release")
-    parser.add_argument("--bank-dir", type=Path, default=BANK_DIR)
-    parser.add_argument("--dry-run", action="store_true")
-    args = parser.parse_args()
-
-    manifest, questions = load_package(args.bank_dir, args.package)
-    client: Optional[Client] = None
-    if not args.dry_run:
-        url = os.environ.get("SUPABASE_URL")
-        key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
-        if not url or not key:
-            sys.exit("set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in the environment")
-        client = Client(url, key)
+def push_package(
+    package_id: int,
+    bank_dir: Path,
+    publish: bool,
+    dry_run: bool,
+    client: Optional[Client],
+) -> dict[str, Any]:
+    manifest, questions = load_package(bank_dir, package_id)
 
     question_payloads: list[dict[str, Any]] = []
     hash_pairs: list[list[str]] = []
     for question in questions:
         payload, content_hash = build_question_payload(
-            args.bank_dir, args.package, question, client
+            bank_dir, package_id, question, client
         )
         question_payloads.append(payload)
         hash_pairs.append([question["id"], content_hash])
@@ -250,7 +242,7 @@ def main() -> None:
         BLUEPRINT.items(), key=lambda item: item[1][1]
     ):
         subtests.append({
-            "id": f"{args.package}-{key}",
+            "id": f"{package_id}-{key}",
             "key": key,
             "name": name,
             "position": position,
@@ -260,7 +252,7 @@ def main() -> None:
         })
 
     package_hash = canonical_hash({
-        "id": args.package,
+        "id": package_id,
         "title": manifest["title"],
         "description": manifest["description"],
         "difficulty": manifest["difficulty"],
@@ -271,7 +263,7 @@ def main() -> None:
     })
     payload = {
         "package": {
-            "id": args.package,
+            "id": package_id,
             "title": manifest["title"],
             "description": manifest["description"],
             "difficulty": manifest["difficulty"],
@@ -279,7 +271,7 @@ def main() -> None:
             "ai_company": manifest["ai_company"],
             "ai_model_description": manifest["ai_model_description"],
             # null preserves the current publication state; true publishes.
-            "is_published": True if args.publish else None,
+            "is_published": True if publish else None,
             "client_content_hash": package_hash,
         },
         "subtests": subtests,
@@ -287,14 +279,14 @@ def main() -> None:
     }
 
     print(
-        f"package {args.package}: {len(questions)} questions, "
+        f"package {package_id}: {len(questions)} questions, "
         f"difficulty={manifest['difficulty']}, model={manifest['ai_model']} "
         f"({manifest['ai_company']})"
     )
     print(f"  local package hash {package_hash}")
-    if args.dry_run:
+    if dry_run:
         print("dry run — content-addressed paths and canonical hashes computed; nothing uploaded or published")
-        return
+        return {"created": False, "version": None, "new_question_revisions": 0, "dry_run": True}
 
     assert client is not None
     result = client.publish(payload)
@@ -303,7 +295,51 @@ def main() -> None:
         f"done — release v{result.get('version')} {action}; "
         f"{result.get('new_question_revisions', 0)} new question revision(s)"
     )
+    return result
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("--package", type=int, help="Package ID to publish (e.g. 1)")
+    group.add_argument("--all", action="store_true", help="Publish all packages found in bank-dir")
+    parser.add_argument("--publish", action="store_true", help="publish the resulting release")
+    parser.add_argument("--bank-dir", type=Path, default=BANK_DIR)
+    parser.add_argument("--dry-run", action="store_true")
+    args = parser.parse_args()
+
+    client: Optional[Client] = None
+    if not args.dry_run:
+        url = os.environ.get("SUPABASE_URL")
+        key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+        if not url or not key:
+            sys.exit("set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in the environment")
+        client = Client(url, key)
+
+    if args.all:
+        package_dirs = sorted(
+            [
+                p for p in args.bank_dir.iterdir()
+                if p.is_dir() and p.name.isdigit() and (p / "package.json").is_file()
+            ],
+            key=lambda p: int(p.name),
+        )
+        if not package_dirs:
+            sys.exit(f"no valid package directories found in {args.bank_dir}")
+        package_ids = [int(p.name) for p in package_dirs]
+    else:
+        package_ids = [args.package]
+
+    for pkg_id in package_ids:
+        push_package(
+            package_id=pkg_id,
+            bank_dir=args.bank_dir,
+            publish=args.publish,
+            dry_run=args.dry_run,
+            client=client,
+        )
 
 
 if __name__ == "__main__":
     main()
+
