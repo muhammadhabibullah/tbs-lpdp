@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-020",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan, mengapa audit algoritma secara berkala sangat diperlukan?",
+  "image": null,
+  "passage": "Kemajuan teknologi kecerdasan buatan (AI) telah mengubah lanskap berbagai industri, termasuk kesehatan, pendidikan, dan keuangan. Di sektor kesehatan, AI dimanfaatkan untuk menganalisis data rekam medis pasien guna memprediksi penyakit genetik dengan akurasi tinggi sebelum gejala muncul. Hal ini memungkinkan dokter untuk melakukan langkah pencegahan lebih dini dan mempersonalisasi pengobatan sesuai profil genetik pasien.\n\nMeskipun menawarkan banyak potensi positif, penerapan AI dalam bidang kesehatan menghadapi kendala privasi data dan bias algoritma. Banyak pasien merasa khawatir data pribadi mereka disalahgunakan oleh pihak ketiga. Selain itu, algoritma yang dilatih dengan data yang tidak representatif berisiko menghasilkan diagnosis yang bias terhadap kelompok minoritas. Oleh karena itu, diperlukan kerangka regulasi yang ketat dan audit algoritma secara berkala agar teknologi ini dapat dimanfaatkan secara etis dan aman.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Agar data privasi pasien tidak bocor ke pihak ketiga secara terus-menerus."
+    },
+    {
+      "key": "B",
+      "text": "Untuk mencegah algoritma menghasilkan diagnosis yang bias karena data pelatihan yang tidak representatif."
+    },
+    {
+      "key": "C",
+      "text": "Supaya dokter dapat mempersonalisasi pengobatan sesuai profil genetik pasien dengan lebih cepat."
+    },
+    {
+      "key": "D",
+      "text": "Untuk memperluas pemanfaatan AI ke sektor industri lain seperti pendidikan dan keuangan."
+    },
+    {
+      "key": "E",
+      "text": "Karena dokter tidak mampu mendeteksi penyakit genetik tanpa bantuan teknologi algoritma tingkat tinggi."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Privasi data diselesaikan dengan kerangka regulasi, sedangkan audit algoritma menyelesaikan masalah bias.",
+    "B": "Benar. Teks menyebutkan algoritma yang dilatih dengan data tidak representatif berisiko bias, sehingga diperlukan audit algoritma.",
+    "C": "Personalisasi pengobatan adalah manfaat AI, bukan alasan spesifik diperlukannya audit algoritma.",
+    "D": "Tidak disebutkan dalam teks bahwa audit bertujuan memperluas ke sektor lain.",
+    "E": "Teks tidak pernah menyatakan dokter tidak mampu mendiagnosis tanpa AI, melainkan AI meningkatkan prediksinya."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "11-kuantitatif-011",
+  "package": 11,
+  "subtest": "kuantitatif",
+  "number": 11,
+  "type": "aljabar",
+  "question_text": "Jika 3x − 6 = 39, nilai x adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "45"
+    },
+    {
+      "key": "B",
+      "text": "13"
+    },
+    {
+      "key": "C",
+      "text": "11"
+    },
+    {
+      "key": "D",
+      "text": "15"
+    },
+    {
+      "key": "E",
+      "text": "42"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 45 diperoleh dengan berhenti pada nilai 3x dan belum membaginya dengan 3.",
+    "B": "Salah. Nilai 13 diperoleh dengan membagi 39 dengan 3 tanpa memindahkan −6 lebih dahulu.",
+    "C": "Salah. Nilai 11 diperoleh dengan mengurangkan 6 sekali lagi ketika memindahkan ruas, padahal −6 berubah menjadi +6.",
+    "D": "Benar. 3x = 39 + 6 = 45, sehingga x = 45 : 3 = 15.",
+    "E": "Salah. Nilai 42 diperoleh dengan mengurangkan koefisien 3 dari 45, padahal koefisien itu harus dijadikan pembagi."
+  },
+  "difficulty": "easy",
+  "source": "aljabar.py",
+  "verified": true
+}

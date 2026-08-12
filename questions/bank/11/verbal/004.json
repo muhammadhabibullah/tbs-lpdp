@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-004",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "PARADOKS = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Persamaan"
+    },
+    {
+      "key": "B",
+      "text": "Perbandingan"
+    },
+    {
+      "key": "C",
+      "text": "Pertentangan"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan"
+    },
+    {
+      "key": "E",
+      "text": "Perumpamaan"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Persamaan merujuk pada kesamaan antara dua hal.",
+    "B": "Perbandingan adalah proses mengkomparasi.",
+    "C": "Benar. Paradoks berarti pernyataan yang seolah bertentangan dengan pendapat umum tetapi mungkin mengandung kebenaran.",
+    "D": "Pernyataan adalah kalimat informatif biasa.",
+    "E": "Perumpamaan (analogi/metafora) bukan bermakna pertentangan."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

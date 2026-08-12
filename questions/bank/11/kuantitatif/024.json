@@ -1,0 +1,43 @@
+{
+  "id": "11-kuantitatif-024",
+  "package": 11,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Diketahui sebuah balok dengan panjang 15 cm, lebar 8 cm, dan tinggi 6 cm. Luas permukaan seluruh balok tersebut adalah ...",
+  "image": "images/balok.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "480 cm²"
+    },
+    {
+      "key": "B",
+      "text": "516 cm²"
+    },
+    {
+      "key": "C",
+      "text": "640 cm²"
+    },
+    {
+      "key": "D",
+      "text": "720 cm²"
+    },
+    {
+      "key": "E",
+      "text": "800 cm²"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "480 didapat tanpa mengkalikan 2 untuk salah satu pasang sisi.",
+    "B": "Benar. Luas = 2(pl + pt + lt) = 2(15×8 + 15×6 + 8×6) = 2(120 + 90 + 48) = 2(258) = 516 cm².",
+    "C": "Hasil hitungan keliru.",
+    "D": "720 adalah volume balok (15×8×6), bukan luas permukaan.",
+    "E": "Kesalahan jumlah penjumlahan."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "11-pemecahan_masalah-011",
+  "package": 11,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Simpulan manakah yang paling sesuai dengan teks di atas?",
+  "image": null,
+  "passage": "Kebijakan bekerja dari rumah (WFH) yang masif tidak serta-merta berakibat pada penurunan produktivitas seperti yang ditakutkan. Justru, survei menunjukkan bahwa pekerja memiliki tingkat kepuasan yang lebih tinggi, yang berujung pada peningkatan retensi karyawan. Namun, inovasi produk secara kolaboratif cenderung melambat karena minimnya interaksi spontan antar-staf.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Produktivitas menurun drastis seiring melambatnya inovasi produk secara kolaboratif."
+    },
+    {
+      "key": "B",
+      "text": "Bekerja dari rumah menaikkan produktivitas karyawan tanpa ada efek samping sedikitpun."
+    },
+    {
+      "key": "C",
+      "text": "Kepuasan kerja yang tinggi adalah akibat dari lambatnya inovasi produk."
+    },
+    {
+      "key": "D",
+      "text": "Kebijakan WFH meningkatkan kepuasan karyawan tetapi berdampak negatif pada inovasi kolaboratif."
+    },
+    {
+      "key": "E",
+      "text": "Inovasi produk hanya bisa dilakukan di kantor pusat perusahaan."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Teks menyatakan produktivitas tidak menurun, yang melambat adalah inovasi kolaboratif.",
+    "B": "Teks menyebut adanya efek samping (inovasi kolaboratif lambat).",
+    "C": "Kedua hal ini (kepuasan dan lambat inovasi) adalah hasil berbeda dari WFH, bukan sebab-akibat langsung di antara keduanya.",
+    "D": "Benar. Ini mencakup kedua poin utama dari argumen (positif di kepuasan/retensi, negatif di inovasi kolaboratif).",
+    "E": "Ini terlalu ekstrem dan tidak dinyatakan di teks."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

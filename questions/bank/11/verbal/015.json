@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-015",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Jika harga bahan bakar naik, maka tarif angkutan umum akan naik. Saat ini tarif angkutan umum tidak naik.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Harga bahan bakar sedang turun."
+    },
+    {
+      "key": "B",
+      "text": "Harga bahan bakar belum tentu naik."
+    },
+    {
+      "key": "C",
+      "text": "Tarif angkutan umum segera naik."
+    },
+    {
+      "key": "D",
+      "text": "Harga bahan bakar tidak naik."
+    },
+    {
+      "key": "E",
+      "text": "Harga bahan bakar mungkin stabil."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Menyimpulkan turun melebihi premis (modus tollens hanya menghasilkan 'tidak naik').",
+    "B": "Modus tollens memberi kepastian, bukan 'belum tentu'.",
+    "C": "Bertentangan dengan fakta di premis.",
+    "D": "Benar. Modus tollens: P -> Q, ~Q maka ~P. Jika tarif tidak naik, harga bahan bakar tidak naik.",
+    "E": "Tidak ada simpulan probabilitas dalam modus tollens logis."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

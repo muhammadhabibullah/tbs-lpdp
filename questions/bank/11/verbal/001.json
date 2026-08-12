@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-001",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "MITIGASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pencegahan"
+    },
+    {
+      "key": "B",
+      "text": "Pengurangan"
+    },
+    {
+      "key": "C",
+      "text": "Penyelidikan"
+    },
+    {
+      "key": "D",
+      "text": "Perencanaan"
+    },
+    {
+      "key": "E",
+      "text": "Penanggulangan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Pencegahan (preventif) dilakukan sebelum kejadian, bukan fokus mitigasi.",
+    "B": "Benar. Mitigasi berarti tindakan mengurangi dampak dari suatu kejadian/bencana.",
+    "C": "Penyelidikan berarti investigasi.",
+    "D": "Perencanaan adalah proses membuat rencana kerja.",
+    "E": "Penanggulangan adalah respons menyeluruh saat/setelah kejadian."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

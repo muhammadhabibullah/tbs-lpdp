@@ -1,0 +1,43 @@
+{
+  "id": "11-pemecahan_masalah-010",
+  "package": 11,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Pernyataan yang PASTI BENAR berdasarkan tabel penjualan kendaraan tersebut adalah ...",
+  "image": null,
+  "passage": "Jenis Kendaraan|Penjualan 2022 (Unit)|Penjualan 2023 (Unit)\nMobil Sedan|12.000|13.200\nSUV|15.000|19.500\nTruk Ringan|8.000|8.400\nMobil Listrik|2.000|4.000\nMotor Sport|5.000|5.500",
+  "options": [
+    {
+      "key": "A",
+      "text": "Penjualan Motor Sport menyumbang pendapatan terbesar pada 2023."
+    },
+    {
+      "key": "B",
+      "text": "Tidak ada kendaraan yang mengalami penurunan volume penjualan di tahun 2023."
+    },
+    {
+      "key": "C",
+      "text": "Mobil Sedan adalah kendaraan terlaris di tahun 2022."
+    },
+    {
+      "key": "D",
+      "text": "Harga SUV pada tahun 2023 lebih rendah dibanding tahun 2022."
+    },
+    {
+      "key": "E",
+      "text": "Masyarakat mulai meninggalkan Truk Ringan."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Tabel hanya menyajikan data unit terjual, bukan pendapatan (harga per unit tidak diketahui).",
+    "B": "Benar. Semua jenis kendaraan mencatat kenaikan jumlah unit dari 2022 ke 2023, jadi tidak ada yang turun.",
+    "C": "SUV adalah kendaraan terlaris di 2022 (15.000 unit), bukan Mobil Sedan (12.000).",
+    "D": "Tabel tidak memberikan informasi harga.",
+    "E": "Truk Ringan tetap mencatat kenaikan (walau kecil), jadi menyimpulkan ditinggalkan adalah keliru."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

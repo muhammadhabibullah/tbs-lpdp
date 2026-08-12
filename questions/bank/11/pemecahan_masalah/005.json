@@ -1,0 +1,43 @@
+{
+  "id": "11-pemecahan_masalah-005",
+  "package": 11,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Jadwal piket lima perawat: P, Q, R, S, T. P berjaga 2 hari sebelum S. Q berjaga tepat setelah S. R berjaga pada hari pertama atau hari terakhir. Jika T berjaga pada hari Rabu, pada hari apa Q berjaga?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Senin"
+    },
+    {
+      "key": "B",
+      "text": "Selasa"
+    },
+    {
+      "key": "C",
+      "text": "Kamis"
+    },
+    {
+      "key": "D",
+      "text": "Jumat"
+    },
+    {
+      "key": "E",
+      "text": "Sabtu"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Senin biasanya diisi R atau P.",
+    "B": "Selasa adalah jadwal P jika P S selang satu hari.",
+    "C": "Kamis adalah jadwal S, karena Q tepat setelah S.",
+    "D": "Benar. Susunan pastinya: R (Senin), P (Selasa), T (Rabu), S (Kamis), Q (Jumat). P dan S selang 1 hari (2 hari sebelum), S hari Kamis, jadi Q berjaga tepat setelah S yaitu Jumat.",
+    "E": "Piket lima perawat dalam 5 hari (Senin-Jumat)."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-019",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Gagasan utama dari bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Kemajuan teknologi kecerdasan buatan (AI) telah mengubah lanskap berbagai industri, termasuk kesehatan, pendidikan, dan keuangan. Di sektor kesehatan, AI dimanfaatkan untuk menganalisis data rekam medis pasien guna memprediksi penyakit genetik dengan akurasi tinggi sebelum gejala muncul. Hal ini memungkinkan dokter untuk melakukan langkah pencegahan lebih dini dan mempersonalisasi pengobatan sesuai profil genetik pasien.\n\nMeskipun menawarkan banyak potensi positif, penerapan AI dalam bidang kesehatan menghadapi kendala privasi data dan bias algoritma. Banyak pasien merasa khawatir data pribadi mereka disalahgunakan oleh pihak ketiga. Selain itu, algoritma yang dilatih dengan data yang tidak representatif berisiko menghasilkan diagnosis yang bias terhadap kelompok minoritas. Oleh karena itu, diperlukan kerangka regulasi yang ketat dan audit algoritma secara berkala agar teknologi ini dapat dimanfaatkan secara etis dan aman.",
+  "options": [
+    {
+      "key": "A",
+      "text": "AI membantu dokter mendiagnosis penyakit genetik secara dini dan mencegah gejalanya."
+    },
+    {
+      "key": "B",
+      "text": "Penerapan AI di bidang kesehatan memiliki potensi besar namun juga menghadapi tantangan privasi dan bias."
+    },
+    {
+      "key": "C",
+      "text": "Diperlukan regulasi ketat untuk melindungi data pasien dari penyalahgunaan pihak ketiga."
+    },
+    {
+      "key": "D",
+      "text": "Kecerdasan buatan mengubah sektor kesehatan, pendidikan, dan keuangan secara drastis."
+    },
+    {
+      "key": "E",
+      "text": "Algoritma AI memiliki bias terhadap kelompok minoritas karena data yang tidak representatif."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Ini hanya gagasan utama dari paragraf pertama, bukan seluruh teks.",
+    "B": "Benar. Teks mencakup dua hal utama: potensi besar AI (paragraf 1) dan kendala yang dihadapi (paragraf 2).",
+    "C": "Ini adalah rekomendasi atau simpulan pendukung di akhir teks, bukan gagasan utamanya.",
+    "D": "Ini adalah kalimat pengantar (background), inti teks berfokus pada sektor kesehatan.",
+    "E": "Ini adalah salah satu poin tantangan di paragraf kedua, terlalu spesifik untuk gagasan utama."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

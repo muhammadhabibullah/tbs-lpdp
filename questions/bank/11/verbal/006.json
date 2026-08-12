@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-006",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "PROMINEN >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tersembunyi"
+    },
+    {
+      "key": "B",
+      "text": "Biasa"
+    },
+    {
+      "key": "C",
+      "text": "Rendah"
+    },
+    {
+      "key": "D",
+      "text": "Minor"
+    },
+    {
+      "key": "E",
+      "text": "Terkenal"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Tersembunyi lebih kepada letak fisik yang tidak terlihat.",
+    "B": "Benar. Prominen berarti terkemuka atau menonjol, antonim yang paling tepat adalah biasa (tidak menonjol).",
+    "C": "Rendah merujuk pada posisi hierarki.",
+    "D": "Minor merujuk pada skala, bukan penonjolan identitas.",
+    "E": "Terkenal adalah sinonim dari prominen."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

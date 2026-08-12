@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-008",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "EKLEKTIK >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Eksklusif"
+    },
+    {
+      "key": "B",
+      "text": "Seragam"
+    },
+    {
+      "key": "C",
+      "text": "Homogen"
+    },
+    {
+      "key": "D",
+      "text": "Dogmatis"
+    },
+    {
+      "key": "E",
+      "text": "Terbatas"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Eksklusif merujuk pada keterbatasan akses.",
+    "B": "Seragam berantonim dengan beragam.",
+    "C": "Homogen berantonim dengan heterogen.",
+    "D": "Benar. Eklektik berarti memilih yang terbaik dari berbagai sumber/sistem, antonimnya dogmatis (memegang teguh satu ajaran tanpa kompromi).",
+    "E": "Terbatas berkaitan dengan kapasitas."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

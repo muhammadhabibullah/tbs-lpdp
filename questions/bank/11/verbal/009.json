@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-009",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "PADI : LUMBUNG = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Air : Sumur"
+    },
+    {
+      "key": "B",
+      "text": "Pakaian : Lemari"
+    },
+    {
+      "key": "C",
+      "text": "Uang : Bank"
+    },
+    {
+      "key": "D",
+      "text": "Mobil : Garasi"
+    },
+    {
+      "key": "E",
+      "text": "Barang : Gudang"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Sumur adalah sumber air, bukan tempat menyimpan air yang dipanen secara kolektif.",
+    "B": "Lemari adalah tempat menyimpan pakaian perorangan, bukan skala penyimpanan komoditas.",
+    "C": "Bank menyalurkan dan memutar uang, bukan sekadar tempat penyimpanan komoditas fisik.",
+    "D": "Garasi adalah tempat parkir mobil individu.",
+    "E": "Benar. Padi disimpan dalam skala komoditas di lumbung, sama seperti barang disimpan dalam skala komoditas di gudang."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

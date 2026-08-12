@@ -1,0 +1,43 @@
+{
+  "id": "11-pemecahan_masalah-008",
+  "package": 11,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Seorang guru mendapatkan laporan bahwa beberapa siswanya sering menggunakan kecerdasan buatan untuk membuat esai tugas tanpa membaca materinya sama sekali. Tindakan kuratif dan edukatif terbaik yang sebaiknya dilakukan guru tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Melarang total penggunaan internet selama berada di sekolah."
+    },
+    {
+      "key": "B",
+      "text": "Memberikan nilai 0 pada semua tugas esai tanpa kecuali."
+    },
+    {
+      "key": "C",
+      "text": "Mengubah format tugas esai menjadi ujian lisan dan sesi diskusi tanya jawab di kelas."
+    },
+    {
+      "key": "D",
+      "text": "Melaporkan siswa kepada kepala sekolah untuk segera dikeluarkan."
+    },
+    {
+      "key": "E",
+      "text": "Menambah porsi tugas esai harian agar siswa kewalahan menggunakan AI."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Pelarangan internet total menghambat proses belajar modern yang sah.",
+    "B": "Tidak adil bagi siswa yang mengerjakan sendiri tanpa AI.",
+    "C": "Benar. Mengubah ke diskusi atau ujian lisan akan menguji pemahaman esensial secara langsung tanpa bisa diwakilkan, bersifat edukatif sekaligus mencegah kecurangan.",
+    "D": "Tindakan ini terlalu ekstrem (punitif), bukan edukatif.",
+    "E": "Menambah beban tugas berpotensi memperparah penggunaan AI."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

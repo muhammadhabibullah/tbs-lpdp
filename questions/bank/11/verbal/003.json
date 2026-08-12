@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-003",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "AFIRMASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Penegasan"
+    },
+    {
+      "key": "B",
+      "text": "Penolakan"
+    },
+    {
+      "key": "C",
+      "text": "Pengurangan"
+    },
+    {
+      "key": "D",
+      "text": "Perlindungan"
+    },
+    {
+      "key": "E",
+      "text": "Perjanjian"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Afirmasi berarti penetapan positif atau penegasan.",
+    "B": "Penolakan adalah lawan kata (antonim) dari afirmasi.",
+    "C": "Pengurangan berkaitan dengan kuantitas yang menurun.",
+    "D": "Perlindungan berkaitan dengan penjagaan.",
+    "E": "Perjanjian adalah kesepakatan."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

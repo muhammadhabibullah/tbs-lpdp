@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-016",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Sebagian karyawan perusahaan X tidak setuju dengan kebijakan baru. Semua yang tidak setuju dengan kebijakan baru adalah anggota serikat pekerja.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua anggota serikat pekerja adalah karyawan perusahaan X."
+    },
+    {
+      "key": "B",
+      "text": "Semua karyawan perusahaan X adalah anggota serikat pekerja."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian karyawan perusahaan X bukan anggota serikat pekerja."
+    },
+    {
+      "key": "D",
+      "text": "Sebagian anggota serikat pekerja setuju dengan kebijakan baru."
+    },
+    {
+      "key": "E",
+      "text": "Sebagian karyawan perusahaan X adalah anggota serikat pekerja."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Anggota serikat pekerja bisa berasal dari perusahaan lain.",
+    "B": "Hanya sebagian yang diketahui (yang tidak setuju).",
+    "C": "Kita tidak tahu status karyawan yang setuju.",
+    "D": "Premis tidak menyebut anggota serikat pekerja yang setuju.",
+    "E": "Benar. Karena sebagian karyawan X masuk dalam kelompok 'tidak setuju' dan semua di kelompok itu adalah 'anggota serikat pekerja', maka sebagian karyawan X adalah anggota serikat pekerja."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

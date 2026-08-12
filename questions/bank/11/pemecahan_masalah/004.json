@@ -1,0 +1,43 @@
+{
+  "id": "11-pemecahan_masalah-004",
+  "package": 11,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Dari kelima orang pada rapat yang sama (Aldi, Bima, Caca, Doni, Elsa), jika Doni bertukar tempat dengan Bima, siapakah yang kini duduk diapit oleh Caca dan Elsa?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Aldi"
+    },
+    {
+      "key": "B",
+      "text": "Bima"
+    },
+    {
+      "key": "C",
+      "text": "Doni"
+    },
+    {
+      "key": "D",
+      "text": "Keduanya"
+    },
+    {
+      "key": "E",
+      "text": "Tidak ada"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Aldi sekarang diapit Bima dan Elsa.",
+    "B": "Bima bertukar tempat dengan Doni, ia kini diapit Caca dan Aldi.",
+    "C": "Benar. Susunan baru berlawanan arah jarum jam: Doni - Elsa - Aldi - Bima - Caca. Doni berada di antara Caca (kanan) dan Elsa (kiri).",
+    "D": "Hanya satu orang.",
+    "E": "Ada satu orang yaitu Doni."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

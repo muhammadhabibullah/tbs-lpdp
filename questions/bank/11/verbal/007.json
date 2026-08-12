@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-007",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "DINAMIS >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Lambat"
+    },
+    {
+      "key": "B",
+      "text": "Statis"
+    },
+    {
+      "key": "C",
+      "text": "Pasif"
+    },
+    {
+      "key": "D",
+      "text": "Kaku"
+    },
+    {
+      "key": "E",
+      "text": "Pasti"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Lambat berkaitan dengan kecepatan.",
+    "B": "Benar. Dinamis berarti penuh semangat dan cepat bergerak/berubah, antonim utamanya adalah statis (tidak bergerak/berubah).",
+    "C": "Pasif adalah antonim dari aktif.",
+    "D": "Kaku adalah antonim dari fleksibel.",
+    "E": "Pasti berkaitan dengan ketetapan hati/keputusan."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

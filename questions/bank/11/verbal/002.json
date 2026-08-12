@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-002",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "TENDENSI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kecenderungan"
+    },
+    {
+      "key": "B",
+      "text": "Kemungkinan"
+    },
+    {
+      "key": "C",
+      "text": "Ketegangan"
+    },
+    {
+      "key": "D",
+      "text": "Kepastian"
+    },
+    {
+      "key": "E",
+      "text": "Keinginan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Tendensi merujuk pada kecenderungan atau condong ke suatu hal.",
+    "B": "Kemungkinan merujuk pada peluang terjadinya sesuatu.",
+    "C": "Ketegangan merujuk pada situasi tegang atau konflik (tensi).",
+    "D": "Kepastian berarti sesuatu yang pasti terjadi.",
+    "E": "Keinginan berarti hasrat, bukan pola kecenderungan."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

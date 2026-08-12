@@ -162,7 +162,7 @@ The bank recognises nineteen types. Nine have especially strict format contracts
 ## Style rules for authored content
 
 - Formal Bahasa Indonesia, matching official PUSMENDIK CBT phrasing; no slang, no first person.
-- Stems end with `...` for completion-style items (sinonim/antonim show the stimulus word in CAPITALS, e.g. `INSINUASI = ...`).
+- Stems end with `...` for completion-style items (sinonim shows the stimulus word with `=`, antonim with `><`, e.g. `INSINUASI = ...` or `PROMINEN >< ...`).
 - Distractors encode believable mistakes (off-by-one in sequences, near-synonyms, reversed analogy order) — never random noise.
 - Reading passages: 120–200 words, neutral topics (science, education, environment); questions answerable from the passage alone. `analisis_teks` texts are shorter (80–140 words) and must actually argue something.
 - **Vary the item architecture across packages, not just the wording.** A candidate who has sat an earlier package must not be able to shortcut a later one by pattern. Two habits caught in review of package 2: reusing the same reading stem set in the same order (`Gagasan utama ...` → `Berdasarkan bacaan, ... karena ...` → `Simpulan ... paragraf ketiga ...`) with the same key letters and the same "... bukan pada X" closing device, and using a literal reversal of the stimulus pair as a distractor in almost every `analogi` item. Before writing a new package, read the same subtest in the previous one and deliberately pick different stem types (makna kata dalam konteks, tujuan penulis, pernyataan yang tidak sesuai) and different distractor devices. Cap any one distractor device at roughly two items per subtest.

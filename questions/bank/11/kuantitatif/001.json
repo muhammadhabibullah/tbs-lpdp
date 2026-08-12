@@ -1,0 +1,43 @@
+{
+  "id": "11-kuantitatif-001",
+  "package": 11,
+  "subtest": "kuantitatif",
+  "number": 1,
+  "type": "aritmetika",
+  "question_text": "Nilai dari 13 × 6 − 14 × 17 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−160"
+    },
+    {
+      "key": "B",
+      "text": "316"
+    },
+    {
+      "key": "C",
+      "text": "137"
+    },
+    {
+      "key": "D",
+      "text": "47"
+    },
+    {
+      "key": "E",
+      "text": "160"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. 13 × 6 − 14 × 17 = 78 − 238 = −160.",
+    "B": "Salah. Nilai 316 diperoleh dengan menjumlahkan kedua hasil kali, bukan mengurangkannya.",
+    "C": "Salah. Nilai 137 diperoleh dengan menukar faktor kedua pada masing-masing perkalian, yaitu 13 × 17 − 14 × 6.",
+    "D": "Salah. Nilai 47 diperoleh dengan mengurangkan jumlah 14 dan 17, bukan hasil kalinya.",
+    "E": "Salah. Nilai 160 diperoleh dengan membalik urutan pengurangan sehingga tandanya tertukar."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}
