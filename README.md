@@ -18,6 +18,7 @@ Free, browser-based practice tests for the LPDP **Tes Bakat Skolastik (TBS)**. T
 - Package difficulty, authoring-model metadata, and deletion-safe aggregate mean/median statistics.
 - Capacity controls, rate limits, data-retention jobs, and a Supabase-scheduled maintenance screen.
 - Server-verified Turnstile protection for creation of new anonymous identities.
+- An installable **offline application** for Windows, macOS, Linux, and Android that runs the whole try-out with no account and no internet connection.
 - A development-only mock backend that runs directly from the Git question bank without Supabase.
 
 ## Exam format
@@ -40,11 +41,19 @@ Git question bank + Python generators
                 v
 GitHub Pages SPA  --------------------->  Supabase
 React + Vite + TypeScript                Postgres + RLS + RPC
-                                         Anonymous Auth + Storage
-                                         Cron + private Edge Function
+       |                                 Anonymous Auth + Storage
+       |                                 Cron + private Edge Function
+       | /bank/manifest.json
+       | /bank/bank-<digest>.json
+       v
+Offline app (Tauri 2)  ------------->  GitHub Releases
+same SPA, local exam engine            signed installers + latest.json
+bundled question bank
 ```
 
-The browser never grades an attempt and cannot read answer keys for an active section. Trusted exam logic lives in Supabase database functions; Row Level Security scopes attempt data to the current anonymous user. Git is the source of truth for question content, while Supabase stores immutable published releases.
+On the web, the browser never grades an attempt and cannot read answer keys for an active section. Trusted exam logic lives in Supabase database functions; Row Level Security scopes attempt data to the current anonymous user. Git is the source of truth for question content, while Supabase stores immutable published releases.
+
+The offline application necessarily carries the answer keys and grading on the device — it could not work without a network otherwise. That exposes nothing new: this repository is public and `questions/bank/` already contains every key. The two builds come from one codebase, and the build flavor is fixed at compile time, so the deployed website contains no local grading engine and the application contains no Supabase credentials.
 
 ## Quick start with the mock backend
 
@@ -158,7 +167,7 @@ More detail is available in [`questions/generator/README.md`](questions/generato
 │   └── schema.json              Question JSON Schema
 ├── exambrowser-ui/              PUSMENDIK CBT visual references
 ├── docs/                        Requirements and operational documentation
-└── .github/workflows/           GitHub Pages deployment
+└── .github/workflows/           GitHub Pages deployment and application releases
 ```
 
 ## Documentation
@@ -169,6 +178,7 @@ More detail is available in [`questions/generator/README.md`](questions/generato
 - [`docs/TECHNICAL_REQUIREMENTS_V3_1.md`](docs/TECHNICAL_REQUIREMENTS_V3_1.md) — qualified mean/median statistics and metadata help.
 - [`docs/TECHNICAL_REQUIREMENTS_V4.md`](docs/TECHNICAL_REQUIREMENTS_V4.md) — scheduled frontend maintenance mode.
 - [`docs/TECHNICAL_REQUIREMENTS_V5.md`](docs/TECHNICAL_REQUIREMENTS_V5.md) — Turnstile-protected anonymous sign-in and AI-scraper deterrence.
+- [`docs/TECHNICAL_REQUIREMENTS_V6.md`](docs/TECHNICAL_REQUIREMENTS_V6.md) — the offline desktop and Android application.
 - [`docs/CAPACITY_GUARD.md`](docs/CAPACITY_GUARD.md) — free-tier capacity protection and retention strategy.
 
 ## Deployment
@@ -179,4 +189,8 @@ Pushes to `master` that change `web/` trigger [the GitHub Pages workflow](.githu
 - `VITE_SUPABASE_PUBLISHABLE_KEY` (or the legacy `VITE_SUPABASE_ANON_KEY`)
 - `VITE_TURNSTILE_SITE_KEY`
 
-The workflow installs locked dependencies, type-checks the SPA, builds it with the `/tbs-lpdp/` base path, and deploys `web/dist` to GitHub Pages. Backend migrations and question publication are deliberate operator steps and are not run by the Pages workflow.
+The workflow installs locked dependencies, type-checks the SPA, builds it with the `/tbs-lpdp/` base path, publishes the compiled question-bank artifact under `/tbs-lpdp/bank/`, and deploys `web/dist` to GitHub Pages. Backend migrations and question publication to Supabase are deliberate operator steps and are not run by the Pages workflow.
+
+### Application releases
+
+Pushing a `app-v*` tag triggers [the release workflow](.github/workflows/release-app.yml), which builds installers for macOS (Apple Silicon and Intel), Windows, and Linux, plus a signed Android APK, and collects them into a single draft GitHub Release together with the updater manifest. Signing keys are held only as GitHub Actions secrets. See [`web/README.md`](web/README.md) for the one-time setup and the release procedure.

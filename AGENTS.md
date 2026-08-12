@@ -2,7 +2,19 @@
 
 Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pages** (React + Vite + TypeScript in `web/`), backend on **Supabase** (Postgres + RLS + RPC, anonymous auth, Storage). No other infrastructure — all trusted logic (timing, grading, answer-key secrecy) lives in `supabase/schema.sql`.
 
-**Read `docs/TECHNICAL_REQUIREMENTS.md` before non-trivial work**, plus `docs/TECHNICAL_REQUIREMENTS_V2.md` for question feedback, `docs/TECHNICAL_REQUIREMENTS_V3.md` for question/package versioning and the daily report digest, `docs/TECHNICAL_REQUIREMENTS_V3_1.md` for qualified mean/median statistics and package metadata help, `docs/TECHNICAL_REQUIREMENTS_V4.md` for the Supabase-scheduled frontend maintenance mode, and `docs/TECHNICAL_REQUIREMENTS_V5.md` for robot and AI-scraper deterrence. Requirement IDs (FE-x, BE-x, QG-x, C-x, NF-x) continue one shared sequence across all documents.
+The same SPA also ships as an **offline desktop/Android app** (v6, Tauri 2 in `web/src-tauri/`) that runs the exam against a local engine and a bundled question bank, with no Supabase at all. See "Build flavors" below.
+
+**Read `docs/TECHNICAL_REQUIREMENTS.md` before non-trivial work**, plus `docs/TECHNICAL_REQUIREMENTS_V2.md` for question feedback, `docs/TECHNICAL_REQUIREMENTS_V3.md` for question/package versioning and the daily report digest, `docs/TECHNICAL_REQUIREMENTS_V3_1.md` for qualified mean/median statistics and package metadata help, `docs/TECHNICAL_REQUIREMENTS_V4.md` for the Supabase-scheduled frontend maintenance mode, `docs/TECHNICAL_REQUIREMENTS_V5.md` for robot and AI-scraper deterrence, and `docs/TECHNICAL_REQUIREMENTS_V6.md` for the offline Tauri app and its two update planes. Requirement IDs (FE-x, BE-x, QG-x, AP-x, C-x, NF-x) continue one shared sequence across all documents.
+
+## Build flavors (v6 §2) — three, one codebase
+
+| Flavor | Selector | Backend | Ships to |
+|---|---|---|---|
+| Web production | *(default)* | `supabaseApi` | GitHub Pages |
+| Dev mock | `VITE_USE_MOCK=true`, dev server only | local engine + Vite bank middleware | never |
+| Offline app | `vite --mode app` (`.env.app`) + Tauri | local engine + bundled/cached bank | GitHub Releases |
+
+Both selectors are `define`d as literals in `web/vite.config.ts` so the dead branch is provably dead. **Never remove that `define`**: without constant folding Rollup keeps both backends in every bundle, putting the local engine (and answer keys) on GitHub Pages (C-29) or a Supabase key in the app (C-31). Both invariants are asserted in CI.
 
 ## Exam format (do not change without updating docs)
 
@@ -27,8 +39,12 @@ Free LPDP **Tes Bakat Skolastik (TBS)** try-out website. Frontend on **GitHub Pa
 - `supabase/maintenance.sql` — `pg_cron` retention, capacity, and report-digest jobs; apply last. Operational only — re-applying the schema files never undoes it
 - `docs/CAPACITY_GUARD.md` — how the storage ceiling (BE-18/FE-19/NF-11) stops new attempts before the free tier fills
 - `exambrowser-ui/` — PUSMENDIK CBT screenshots; the UI must mimic these
-- `web/` — the SPA (React + Vite + TS, `base: '/tbs-lpdp/'`, hash routing); see `web/README.md`
-- `.github/workflows/deploy-web.yml` — builds `web/` and deploys to GitHub Pages
+- `docs/TECHNICAL_REQUIREMENTS_V6.md` — v6: the offline Tauri app, the published bank artifact, and both update planes
+- `web/` — the SPA (React + Vite + TS, hash routing; `base: '/tbs-lpdp/'` on the web, `'./'` under Tauri); see `web/README.md`
+- `web/src-tauri/` — the offline app shell (Tauri 2: config, Rust entry, capabilities, icons)
+- `web/vite/bank-reader.ts`, `web/vite/bank-artifact.ts`, `web/scripts/build-bank.ts` — compile `questions/bank/` into the published `manifest.json` + `bank-<digest>.json`; versions come from git history, so the output is reproducible (AP-3/NF-32)
+- `.github/workflows/deploy-web.yml` — builds `web/`, publishes the bank artifact, deploys to GitHub Pages
+- `.github/workflows/release-app.yml` — tag `app-v*` → desktop matrix + signed Android APK → one GitHub Release
 
 ## Question work — use the skill and agents
 
@@ -52,13 +68,21 @@ python3 questions/generator/figures.py                 # regenerate every figure
 python3 questions/generator/push_to_supabase.py --package 1 --dry-run
 python3 questions/generator/push_to_supabase.py --package 1 --publish   # needs env below
 
-cd web && npm install                                  # once
+cd web && npm install                                  # once (Node >= 22.18)
 cd web && VITE_USE_MOCK=true npm run dev               # run the SPA off questions/bank, no Supabase
-cd web && npm run build                                # typecheck + production build
+cd web && npm run build                                # typecheck + web production build
+cd web && npm run build:bank -- --out dist/bank        # publishable bank artifact (validates first)
+cd web && npm run dev:app                              # offline-app UI in a plain browser
+cd web && npm run app:dev                              # the Tauri app (needs a Rust toolchain)
+cd web && npm run app:build                            # installers -> src-tauri/target/release/bundle
 ```
 
 `VITE_USE_MOCK=true` is a **dev-only** path: it serves the bank (answer keys included) from a
 Vite middleware that cannot exist in a production build. Never set it for a deployed build.
+
+The offline app *does* contain answer keys and grading by design (C-28) — it has to, to work
+offline — and this costs nothing, because `questions/bank/` is already public. C-4 ("no key
+reaches the client") remains a property of the **web/Supabase** deployment only.
 
 `push_to_supabase.py` requires env vars `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`. **Never commit or print the service-role key; never put it in `web/`.** Only the anon key may reach the client bundle.
 
@@ -68,4 +92,5 @@ Vite middleware that cannot exist in a production build. Never set it for a depl
 - Figures are generated, never hand-drawn: add a builder to `figures.py` and run it. A figure may label only what its stem already gives, and a `kecukupan_data` figure labels no value at all — a drawing faithful enough to measure would answer the item.
 - Client never writes tables directly. The final client RPC definitions live in `schema_v3.sql`; applying `schema.sql` or `schema_v2_reports.sql` requires re-applying v3 afterwards.
 - `answer_keys` must never gain a client-readable RLS policy (constraint C-4).
+- Signing material — the Tauri updater minisign private key and the Android release keystore — lives only in GitHub Actions secrets, never in git (C-30). `web/src-tauri/tauri.conf.json` carries the **public** key; `release-app.yml` refuses to run while it is still the placeholder.
 - UI copy in Bahasa Indonesia; code, comments, and docs in English.

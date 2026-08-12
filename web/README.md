@@ -1,7 +1,22 @@
 # web/ — TBS LPDP try-out SPA
 
-React 18 + Vite + TypeScript. Static build deployed to GitHub Pages under
-`/tbs-lpdp/`; all state lives in Supabase and is reached through the RPCs in
+React 18 + Vite + TypeScript. One codebase, **three build flavors** (v6 §2);
+the selector is inlined by Vite, so each bundle contains only its own backend:
+
+| Flavor | Selector | Backend | Ships to |
+|---|---|---|---|
+| Web production | *(default)* | `supabaseApi` | GitHub Pages |
+| Dev mock | `VITE_USE_MOCK=true`, dev server only | local engine + Vite bank middleware | never |
+| Offline app | `--mode app` (`.env.app` sets `VITE_OFFLINE=true`) + Tauri | local engine + bundled/cached bank | GitHub Releases |
+
+`vite.config.ts` `define`s both selectors as literals on purpose — an undefined
+`import.meta.env.VITE_*` does not fold to a constant, and without folding Rollup
+keeps *both* backends in every bundle, which is exactly what C-29 (no local
+engine or answer key on GitHub Pages) and C-31 (no Supabase or Turnstile key in
+the app) forbid.
+
+The web flavor deploys to GitHub Pages under `/tbs-lpdp/`; all its state lives
+in Supabase and is reached through the RPCs in
 [`../supabase/schema.sql`](../supabase/schema.sql) and
 [`../supabase/schema_v2_reports.sql`](../supabase/schema_v2_reports.sql), with
 the final versioned RPC contracts in
@@ -25,9 +40,17 @@ npm run dev
 # C. Against Supabase while its maintenance window is active (dev only):
 VITE_USE_MOCK=false VITE_BYPASS_MAINTENANCE=true npm run dev
 
+# D. The offline app's UI in an ordinary browser (no Tauri, no persistence):
+npm run dev:app
+
 npm run build       # tsc --noEmit && vite build → dist/
+npm run build:app   # same, offline flavor (bank artifact emitted into dist/bank)
+npm run build:bank  # publishable bank artifact → dist/bank (validates first)
 npm run typecheck
 ```
+
+Node ≥ 22.18 is required: `scripts/*.ts` run under Node's native TypeScript
+type stripping, with no extra tooling.
 
 ### Robot protection
 
@@ -64,12 +87,13 @@ GitHub project sites cannot place a project-specific robots file at the shared
 ### Mock mode
 
 `vite/mock-bank-plugin.ts` serves `questions/bank/` at `/__mock/bank.json`, and
-`src/lib/mockApi.ts` reimplements the RPC semantics (immutable release
+`src/lib/localApi.ts` reimplements the RPC semantics (immutable release
 snapshots, attempt pinning, server deadline + 5 s grace, idempotent finish,
 keys only for finished sections, and monotonic package statistics) against
 `localStorage`. The plugin is `apply: 'serve'`, and `VITE_USE_MOCK` is inlined at
-build time, so **neither the mock nor any answer key can reach a production
-bundle** (C-4/C-11). Reset a mock run by clearing the `tbs-lpdp.mock.v3` key.
+build time, so **neither the mock nor any answer key can reach the web
+production bundle** (C-4/C-11/C-29). Reset a mock run by clearing the
+`tbs-lpdp.mock.v3` key.
 
 To rehearse the maintenance UI in mock mode, set a window in the browser
 console and reload. ISO timestamps may use `Z` or an explicit offset:
@@ -96,10 +120,14 @@ For a faster fixed state, restart the dev server with
 ```
 src/
 ├── lib/
-│   ├── types.ts        # RPC payload shapes + the ExamApi interface
-│   ├── api.ts          # lazy backend pick (supabase | mock) + retry helper
+│   ├── types.ts        # RPC payload shapes, the ExamApi interface, Bank shapes
+│   ├── api.ts          # lazy backend pick (supabase | local) + retry helper
 │   ├── supabaseApi.ts  # supabase-js: anonymous auth + v3 RPCs
-│   ├── mockApi.ts      # dev-only stand-in (see above)
+│   ├── localApi.ts     # local exam engine — dev mock and offline app (AP-2)
+│   ├── bankSource.ts   # dev / offline bank sources, manifest check + swap (AP-4)
+│   ├── bankSchema.ts   # manifest contract, shared with scripts/build-bank.ts
+│   ├── appRuntime.ts   # Tauri seam: openExternal, app version, platform
+│   ├── appUpdate.ts    # AP-6 desktop updater, AP-7 Android version check
 │   ├── supabase.ts     # client + ApiError + pg error codes
 │   └── clock.ts        # server-time skew, countdown formatting (NF-3)
 ├── contexts/
@@ -111,7 +139,18 @@ src/
 │   ├── ExamPage.tsx    # FE-3/4/5/6/7 question screen
 │   └── ReviewPage.tsx  # FE-8 score + explanations, FE-11…16 report a question
 └── components/         # AppShell, Modal, DaftarSoal, InformasiSoal, KonfirmasiTes,
-                        # LaporSoal, MaintenanceGate, HumanVerificationGate
+                        # LaporSoal, MaintenanceGate, HumanVerificationGate,
+                        # DownloadApp (FE-42), UpdateControls (AP-4/6/10)
+
+vite/
+├── bank-reader.ts       # compiles questions/bank → { packages, questions } (AP-3)
+├── bank-artifact.ts     # bank-<digest>.json + manifest.json (NF-32)
+├── mock-bank-plugin.ts  # dev middleware for the above (serve only)
+└── bank-asset-plugin.ts # bundles the artifact into the offline app
+scripts/
+├── build-bank.ts             # CLI: publishable bank artifact
+└── patch-android-signing.ts  # release signing for the generated Gradle project
+src-tauri/                    # Tauri 2 shell: config, Rust entry (print_page), capabilities
 ```
 
 ## Notes
@@ -135,19 +174,106 @@ src/
 - **Maintenance is frontend-only** (v4 C-18): the global gate probes before
   routes mount and blocks the official SPA during the configured window, but
   existing Supabase RPCs deliberately remain callable.
+- **"Unduh PDF" is the platform print dialog** (FE-20), and the copy it prints
+  is always in the DOM: `ReviewPage` renders `.print-body` — the whole attempt —
+  hidden outside `@media print`, while the on-screen list sits in `.no-print`.
+  In the app the call goes through the shell's `print_page` command, because the
+  macOS WKWebView treats `window.print()` as a no-op. Neither dialog reports
+  back when it closes, which is why nothing about the page is swapped for the
+  duration of a print. The button is hidden on Android, which has no dialog.
 - **Local maintenance bypass is development-only.** Set
   `VITE_BYPASS_MAINTENANCE=true` when running `npm run dev` against Supabase.
   The bypass also requires Vite's built-in `import.meta.env.DEV`, which is
   always `false` in a production build; configuring the flag in GitHub Actions
   cannot bypass maintenance on the deployed site.
 
+## Offline app (v6)
+
+The Tauri 2 shell in `src-tauri/` wraps this same SPA and runs it against the
+local exam engine: no account, no CAPTCHA, no network needed to take a try-out.
+Two update planes, deliberately decoupled:
+
+- **Question bank (AP-4).** `deploy-web.yml` publishes
+  `https://muhammadhabibullah.github.io/tbs-lpdp/bank/{manifest.json,bank-<digest>.json}`
+  on every push that touches the bank. The app checks the manifest once per
+  launch (5 s timeout, silent when offline) and on the **Perbarui Bank Soal**
+  button, verifies the SHA-256, writes it atomically into the app data
+  directory, and hot-swaps it. Running and finished attempts are unaffected —
+  they stay pinned to the release snapshot stored with the attempt.
+- **Application (AP-6/AP-7).** `release-app.yml` publishes signed installers and
+  `latest.json`. Desktop updates in place through `tauri-plugin-updater`;
+  Android compares versions against `api.github.com` and opens the APK download,
+  since the updater plugin has no Android implementation. `.deb`/`.rpm` installs
+  cannot self-update — the dialog links to the release page instead.
+
+Versions are visible together on the home page: *Aplikasi v… · Bank soal …*
+(AP-10). `bank_schema_version` in the manifest is the only coupling: a bank that
+needs a newer app is not downloaded, and the app says so (AP-5).
+
+### Run it
+
+```bash
+npm run app:dev       # tauri dev  (Rust toolchain required)
+npm run app:build     # tauri build → installers in src-tauri/target/release/bundle
+npm run app:android   # tauri android build --apk  (Java 17 + Android SDK/NDK)
+```
+
+`npm run dev:app` runs the same UI in an ordinary browser — useful for layout
+work. Outside Tauri there is no persistent bank cache and no updater, so the app
+falls back to the bundled snapshot on each load.
+
+### Signing, and why the installers are still "unidentified"
+
+macOS builds are **ad-hoc signed** (`bundle.macOS.signingIdentity: "-"`). Apple
+Silicon refuses to launch a bundle carrying no valid signature and reports it as
+*"…is damaged and can't be opened"*, which reads as a corrupt download rather
+than a policy decision. The ad-hoc signature costs nothing and needs no Apple
+account; it turns that into the ordinary unidentified-developer prompt, which
+**System Settings → Privacy & Security → Open Anyway** clears. It is *not*
+notarization — swap `"-"` for a real Developer ID if a membership is ever
+obtained. Windows still shows SmartScreen; both are documented for users in the
+release notes (`releaseBody` in `release-app.yml`), which the download section
+links to (FE-42). Keep those notes and this paragraph in step — they are the
+only place a user is told what to do about the warning.
+
+### One-time operator setup (v6 §5)
+
+Both keys live **only** in GitHub Actions secrets, never in git (C-30):
+
+1. `npm run tauri signer generate -- -w ~/.tauri/tbs-lpdp.key` → commit the
+   **public** key into `src-tauri/tauri.conf.json` (`plugins.updater.pubkey`,
+   currently the placeholder `REPLACE_WITH_MINISIGN_PUBLIC_KEY`), and add
+   secrets `TAURI_SIGNING_PRIVATE_KEY` and
+   `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`. `release-app.yml` refuses to run while
+   the placeholder is still there.
+2. `keytool -genkeypair -v -keystore release.jks -keyalg RSA -keysize 2048 \
+   -validity 10000 -alias tbs-lpdp` → add secrets `ANDROID_KEYSTORE_B64`
+   (`base64 -i release.jks`), `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`,
+   `ANDROID_KEY_PASSWORD`. **Back the keystore up privately** — losing it
+   permanently breaks in-place APK upgrades for every existing install.
+
+### Cutting a release
+
+```bash
+# bump "version" in src-tauri/tauri.conf.json, commit, then:
+git tag app-v0.1.0 && git push origin app-v0.1.0
+```
+
+CI asserts the tag matches the config version, builds the desktop matrix
+(macOS aarch64 + x86_64, Windows NSIS, Linux AppImage/deb/rpm) and a signed
+arm64 APK into one **draft** release. Review it, then publish. The web home
+page resolves its download links from the latest published release at runtime,
+so no site rebuild is needed.
+
 ## Deployment
 
 `.github/workflows/deploy-web.yml` builds on pushes to `master` that touch
-`web/`. Set repo **variables** (Settings → Secrets and variables → Actions →
-Variables) `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, and
+`web/` or `questions/`. Set repo **variables** (Settings → Secrets and variables
+→ Actions → Variables) `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, and
 `VITE_TURNSTILE_SITE_KEY`. All are public values; the Supabase privileged key
-and Turnstile secret must never appear here.
+and Turnstile secret must never appear here. The workflow asserts that
+`VITE_OFFLINE` and `VITE_USE_MOCK` are unset and that the built bundle carries
+no local engine (C-29), then publishes the bank artifact alongside the site.
 
 ### Which key?
 

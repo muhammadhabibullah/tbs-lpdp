@@ -428,15 +428,15 @@ a {
   padding: 26px 24px 34px;
 }
 
-/* Single column so every row shares one left edge; the top row is the only
-   thing that splits into two. */
 .site-footer-inner {
   max-width: 1080px;
   margin: 0 auto;
 }
 
 /* Text on the left, a contact card on the right — the right column is sized to
-   its content so the address never wraps mid-word. */
+   its content so the address never wraps mid-word. Each column runs its own
+   sub-block below the fold (Disclaimer / Open Source Code), which is what keeps
+   the two sides roughly level instead of leaving a hole under the shorter one. */
 .site-footer-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
@@ -505,7 +505,8 @@ a {
   color: var(--ink-faint) !important;
 }
 
-.site-footer-contact .btn {
+.site-footer-contact .btn,
+.site-footer-cta {
   margin-top: 14px;
 }
 
@@ -552,13 +553,20 @@ a {
   }
 }
 
+/* Same divider as `.site-footer-source` opposite it, so the two columns read
+   as one row of four blocks rather than four unrelated ones. */
+.site-footer-notes {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
 /* Unmarkered: the fine print sits flush with the heading above it, so the
    footer reads as one column rather than two indents. */
-.site-footer-notes {
-  margin: 16px 0 0;
+.site-footer-notes ul {
+  margin: 0;
   padding: 0;
   list-style: none;
-  max-width: 92ch;
   font-size: 12.5px;
   line-height: 1.6;
   color: var(--ink-faint);
@@ -2050,6 +2058,159 @@ button.package-badge {
   color: var(--ink-soft);
 }
 
+/* ------------------------------------------- download the offline app (v6) -- */
+
+.download-app > p {
+  max-width: 78ch;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+/* One button for the device that is asking, centred, with everything else a
+   line of links beneath it. Four platform cards asked the reader to work out
+   which file was theirs; the page already knows. */
+.download-cta {
+  margin-top: 18px;
+  padding: 22px 18px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fbfcfe;
+  text-align: center;
+}
+
+/* Not `.btn`'s inline-flex: on a phone the label wraps to two lines, and as
+   flex children the icon and the file size would strand themselves either side
+   of it. As inline text the whole thing reflows as one centred block. */
+.download-primary {
+  display: inline-block;
+  max-width: 100%;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.download-primary .download-size {
+  white-space: nowrap;
+}
+
+.download-app .download-status {
+  margin: 10px 0 0;
+  max-width: none;
+  font-size: 13px;
+}
+
+.download-alternatives {
+  margin: 4px 0 0 !important;
+  font-size: 13px;
+}
+
+/* The link-styled toggle has to sit on the text baseline beside real links. */
+.download-alternatives .btn-link {
+  padding: 0;
+  font-size: inherit;
+  vertical-align: baseline;
+}
+
+.download-app .download-alternatives a,
+.download-others a {
+  color: var(--navy-600);
+  font-weight: 600;
+}
+
+.download-others {
+  margin: 14px auto 0;
+  padding: 14px 0 0;
+  max-width: 420px;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.download-others li + li {
+  margin-top: 8px;
+}
+
+.download-size {
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+/* Two classes, to outrank `.download-app > p`'s size and colour. */
+.download-app > .download-footnote {
+  margin: 16px 0 0;
+  max-width: 78ch;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--ink-faint);
+}
+
+.download-footnote a {
+  color: var(--navy-600);
+  font-weight: 600;
+  word-break: break-word;
+}
+
+/* --------------------------------------- app version + updates (v6, AP-10) -- */
+
+.update-versions {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f3743;
+}
+
+.update-versions code {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.update-hint {
+  margin: 6px 0 14px;
+  font-size: 13px;
+  max-width: 72ch;
+}
+
+/* The launch-time bank toast: the same pill as `.toast`, plus a dismiss. */
+.app-toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-toast button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.75;
+  padding: 0 2px;
+}
+
+.app-toast button:hover {
+  opacity: 1;
+}
+
+/* Sits under the reason list, above the withdraw link, in the app only. */
+.report-email {
+  display: inline-flex;
+  margin-top: 4px;
+}
+
+/* -------------------------------------------------- footer: open source -- */
+
+.site-footer-source {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer-source p {
+  margin-bottom: 8px;
+}
+
 /* ------------------------------------------------------------ responsive -- */
 
 /* Tablet: only the outer chrome needs to give way. */
@@ -2459,12 +2620,14 @@ button.package-badge {
 }
 
 /* ------------------------------------------------------------------ print -- */
-/* FE-20: "Unduh PDF" is the browser's own print dialog with Save as PDF, so the
-   PDF is whatever this stylesheet says. The page is rebuilt as a document:
-   navigation, filters and every control disappear, and the review expands to
-   the whole attempt (ReviewPage renders all sections while `printing`). */
+/* FE-20: "Unduh PDF" is the platform print dialog with Save as PDF, so the PDF
+   is whatever this stylesheet says. The page is rebuilt as a document:
+   navigation, filters and every control disappear, and the on-screen review —
+   one subtest, one filter — gives way to `.print-body`, which ReviewPage keeps
+   in the document holding the whole attempt. */
 
-.print-header {
+.print-header,
+.print-body {
   display: none;
 }
 
@@ -2514,6 +2677,10 @@ button.package-badge {
 
   .card + .card {
     margin-top: 10mm;
+  }
+
+  .print-body {
+    display: block;
   }
 
   .print-header {

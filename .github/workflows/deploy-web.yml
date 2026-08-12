@@ -5,6 +5,9 @@ on:
     branches: [master]
     paths:
       - 'web/**'
+      # v6 §4: the Pages deployment also publishes the question-bank artifact
+      # the offline app pulls from, so a bank change has to redeploy.
+      - 'questions/**'
       - '.github/workflows/deploy-web.yml'
   workflow_dispatch:
 
@@ -26,12 +29,50 @@ jobs:
         working-directory: web
     steps:
       - uses: actions/checkout@v4
+        with:
+          # NF-32: question versions and the bank digest are derived from commit
+          # history, so the publish step needs the full log, not a shallow one.
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
           cache-dependency-path: web/package-lock.json
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install -r questions/generator/requirements.txt
+        working-directory: .
+
+      # C-29: the local exam engine — and every answer key with it — must never
+      # be selected for the Pages bundle. Neither flavor flag may be set here.
+      - name: Assert the web flavor (C-29)
+        env:
+          REPO_VAR_OFFLINE: ${{ vars.VITE_OFFLINE }}
+          REPO_VAR_MOCK: ${{ vars.VITE_USE_MOCK }}
+        run: |
+          set -euo pipefail
+          for name in VITE_OFFLINE VITE_USE_MOCK; do
+            if [ -n "${!name:-}" ]; then
+              echo "::error::$name is set in the build environment; the Pages build must not select the local engine (C-29)"
+              exit 1
+            fi
+          done
+          if [ -n "$REPO_VAR_OFFLINE" ] || [ -n "$REPO_VAR_MOCK" ]; then
+            echo "::error::repository variables VITE_OFFLINE / VITE_USE_MOCK must be empty (C-29)"
+            exit 1
+          fi
+          # `.env.app` is only read by `vite --mode app`; anything that leaks
+          # the flag into the default mode would silently flip the flavor.
+          if ls .env .env.production .env.production.local >/dev/null 2>&1; then
+            if grep -qE '^\s*VITE_(OFFLINE|USE_MOCK)\s*=\s*true' .env .env.production .env.production.local 2>/dev/null; then
+              echo "::error::an env file loaded in production mode enables a local-engine flavor (C-29)"
+              exit 1
+            fi
+          fi
 
       - run: npm ci
 
@@ -44,6 +85,19 @@ jobs:
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
           VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
           VITE_TURNSTILE_SITE_KEY: ${{ vars.VITE_TURNSTILE_SITE_KEY }}
+
+      - name: Assert no local engine reached the bundle (C-29, A-9)
+        run: |
+          set -euo pipefail
+          if grep -rl 'tbs-lpdp\.mock\.v3' dist/assets >/dev/null 2>&1; then
+            echo "::error::the local exam engine is present in the Pages bundle (C-29)"
+            exit 1
+          fi
+
+      # v6 §4: /tbs-lpdp/bank/{manifest.json,bank-<digest>.json}. The script
+      # runs validate_bank.py first, so a broken bank never reaches users.
+      - name: Publish the question-bank artifact (AP-3)
+        run: npm run build:bank -- --out dist/bank
 
       - uses: actions/configure-pages@v5
 

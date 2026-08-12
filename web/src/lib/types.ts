@@ -187,6 +187,29 @@ export interface ServiceStatus {
   measured_at: string
 }
 
+/**
+ * A question as it sits in the compiled question bank — answer key and
+ * explanations included. This shape exists only where the exam is graded
+ * locally: the dev mock and the offline app (C-28). It never crosses the
+ * Supabase deployment's wire (C-4).
+ */
+export interface BankQuestion extends Question {
+  correct_option: OptionKey
+  explanations: Record<OptionKey, string>
+}
+
+/** A bank package plus the content-addressed release the engine pins to. */
+export interface BankPackage extends Package {
+  release_id: string
+}
+
+/** Output of `web/vite/bank-reader.ts`; input of the local exam engine. */
+export interface Bank {
+  packages: BankPackage[]
+  /** Keyed by subtest id (`<package>-<subtest_key>`). */
+  questions: Record<string, BankQuestion[]>
+}
+
 export type MaintenancePhase = 'open' | 'warning' | 'maintenance'
 
 /**
