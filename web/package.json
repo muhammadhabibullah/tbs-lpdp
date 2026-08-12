@@ -10,6 +10,7 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test ../supabase/functions/question-report-digest/render.test.ts",
     "preview": "vite preview",
     "build:bank": "node scripts/build-bank.ts",
     "dev:app": "vite --mode app",

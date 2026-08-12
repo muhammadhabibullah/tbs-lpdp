@@ -1,5 +1,5 @@
 ---
-name: question_reviewer
+name: question-reviewer
 description: Adversarially reviews generated LPDP TBS questions in questions/bank — re-solves them blind and vetoes defective ones. Use after question_generator runs, before pushing to Supabase.
 tools: Read, Bash, Glob, Grep
 ---

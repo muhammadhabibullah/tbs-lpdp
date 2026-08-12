@@ -1,0 +1,245 @@
+{
+  "status": "available",
+  "data": {
+    "kind": "better-harness.harness-analysis-evidence",
+    "schemaVersion": 1,
+    "evidence": "HARNESS ANALYSIS EVIDENCE\n\nThis is a read-only evidence brief, not a report conclusion.\nProjected report conclusions are intentionally excluded; use the observations and boundaries below to make your own evidence-backed decisions.\nWorkspace: /Users/mac/github.com/muhammadhabibullah/tbs-lpdp\nPlatform: qoder\nLanguage: en\nBudget: at most 6000 estimated tokens; each evidence domain uses bounded representative rows and reports omissions.\n\nOBSERVATION SCOPE\nSource roots: 1 of 6 enabled roots exist; 7 roots were discovered.\nSession selection: analyzed 0 of 0 eligible sessions with all-eligible selection; confidence Low; representative yes.\nScope: workspace; global capability metadata included yes; since 2026-07-13T00:00:00.000Z; until 2026-08-12T23:59:59.000Z.\nPrivacy boundary: reader-safe; raw prompts included no; raw commands included no; absolute home paths included no.\nSource warnings: disabled-source-root, missing-optional-root.\n\nREPOSITORY FACTS\nProject label: tbs-lpdp.\n- Task understanding: 1 observed and 1 connected signal(s). Representative evidence: 3 agent guidance file(s), 5 architecture/readme and 0 spec file(s).\n- Controlled execution: 1 observed and 0 connected signal(s). Representative evidence: 15 workspace manifest(s).\n- Change validation: 1 observed and 0 connected signal(s). Representative evidence: 2 tracked test file(s).\n- Reliable delivery: 0 observed and 1 connected signal(s). Representative evidence: 3 CI workflow file(s).\n- Agent practice coverage: Rules has 1 asset(s) in Project; paths: AGENTS.md.\n- Agent practice coverage: Skills has 5 asset(s) in Project, Global, Plugin; paths: .agents/skills/lpdp-question-generation/SKILL.md, ~/.agents/skills/find-skills/SKILL.md, ~/.qoder/plugins/cache/qoder-bundler/better-harness/skills/better-harness/SKILL.md, ~/.qoder/plugins/cache/qoder-bundler/qoder-create-plugin/skills/create-plugin/SKILL.md, ~/.qoder/plugins/cache/qoder-marketplace/qmind/0.1.0/skills/qmind-knowledge/SKILL.md.\n- Agent practice coverage: Custom Agents has 4 asset(s) in Project; paths: .agents/agents/question_generator.md, .agents/agents/question-generator.md, .agents/agents/question_reviewer.md, .agents/agents/question-reviewer.md.\n- Agent practice coverage: Workflows has 3 asset(s) in Project; paths: .github/workflows/deploy-web.yml, .github/workflows/pr.yml, .github/workflows/release-app.yml.\n- Agent practice coverage: Plugins has 3 asset(s) in Plugin; paths: ~/.qoder/plugins/cache/qoder-bundler/better-harness/.qoder-plugin/plugin.json, ~/.qoder/plugins/cache/qoder-marketplace/qmind/0.1.0/.qoder-plugin/plugin.json, ~/.qoder/plugins/cache/qoder-bundler/qoder-create-plugin.\n- Agent practice coverage: Memories has 4 asset(s) in Project; scope counts Project=4; title review 4/4, exact collisions 0, near-title candidates 0, truncated no. Memory titles, paths, categories, and bodies omitted.\n- Agent practice coverage: Hooks has 0 asset(s) in Project.\n- Agent practice coverage: Commands has 0 asset(s) in Project.\n- Agent practice coverage: 1 additional row(s) omitted.\n- Repository source only: claude declares 1 Rules asset(s) under .; paths: CLAUDE.md. Do not add these to the selected provider's active count.\n- Repository source only: claude declares 4 Custom Agents asset(s) under .claude; paths: .claude/agents/question-generator.md, .claude/agents/question-reviewer.md, .claude/agents/question_generator.md, .claude/agents/question_reviewer.md. Do not add these to the selected provider's active count.\n- Repository source only: claude declares 1 Skills asset(s) under .claude; paths: .claude/skills/lpdp-question-generation/SKILL.md. Do not add these to the selected provider's active count.\n- Reusable Skill evidence: candidates-present; 2 candidate asset(s), 0 observed project Skill(s), and 0 unresolved name match(es).\n  - .agents/skills/lpdp-question-generation/SKILL.md: trigger no, procedure yes, output no, validation no, routed yes via .agents/AGENTS.md.\n  - .claude/skills/lpdp-question-generation/SKILL.md: trigger no, procedure yes, output no, validation no, routed yes via CLAUDE.md.\n- Regression-test evidence: scanned-empty; inspected 65 commit(s) and retained 0 source/test co-change candidate(s).\n- Canonical planning evidence: scanned-empty; 0 candidate(s).\n- Sensitive-config scan coverage: complete; 826 of 826 candidate file(s) scanned, 0 skipped, 0 read error(s), truncated no.\n- Learning observation coverage: 0 episode record(s), 0 recurring candidate(s), 0 scoped Skill observation(s), and 0 unscoped Skill observation(s).\n  - Aggregated friction signals: source-warning:missing-optional-root: 5, source-warning:disabled-source-root: 1.\n  - Coverage boundary: Asset Coverage=checked-clean, Capture=not-evaluable-missing-normalized-events, Pattern Detection=insufficient-episodes, Routing=not-evaluable-missing-invocation-events, Freshness=not-evaluable-missing-freshness-evidence, Application=not-evaluable-missing-application-events, Evolution=not-evaluable-missing-update-evidence, Effectiveness=pending-no-later-window, Memory Governance=not-evaluable-missing-memory-policy.\n- Workflow-demand observation: 0 current handoff(s) and 0 repeated candidate(s); candidate contents are not projected into this brief.\n  - Coverage boundary: Demand Signals=not-evaluable-missing-normalized-events, Current Handoff=checked-clean, Recurrence=insufficient-episodes, Skill Inventory=checked-clean, Skill Activation=checked-clean.\n\nSESSION AND TASK FACTS\nSession packet: 0 selected session(s), 0 retained candidate episode(s), and 0 discarded episode(s).\n\nANALYZER OBSERVATIONS\n- Analyzed 0 of 0 sessions; 1/6 enabled source roots exist. Use this as the current workspace evidence boundary for final insight cards.\n- No validation command category was observed in the analyzed session sample. Inspect more sessions or add explicit validation guidance before claiming validation-after-edit behavior.\n- No edit event was observed in the analyzed sample. Inspect more sessions before making claims about edit or validation habits.\n- No strong execution friction signal in the analyzed sample. Keep friction claims narrow unless additional failed commands, rejected actions, or warnings are inspected.\n\nDELIVERY EVIDENCE\nNo bounded evidence observed.\n\nINTERVENTION HISTORY\nNo bounded evidence observed.\n\nREVIEW BOUNDARIES\n- Source candidate: requires-review.\n- Repository review: requires-review; 2 framework(s), 9 repository check(s), and 5 Software Fluency capability review(s) remain in scope.\n- Score review: requires-review; 5 dimension(s) await AI judgment.\n- Session observation review: candidate; 4 observation card(s) from 0 analyzed session(s).",
+    "summaryFacts": {
+      "evidenceMode": "session-limited",
+      "evidenceBoundary": {
+        "manifest": {
+          "schemaVersion": 2,
+          "sourceFingerprint": "c493c13ef90f8a44",
+          "adapterVersion": "qoder-task-loop-source-v2",
+          "platform": "qoder",
+          "selection": {
+            "strategy": "all-eligible",
+            "eligibleCount": 0,
+            "analyzedCount": 0,
+            "confidence": "Low"
+          }
+        },
+        "episodeCoverage": {
+          "episodeCount": 0,
+          "editedEpisodeCount": 0,
+          "closedEpisodeCount": 0,
+          "recoveredEpisodeCount": 0
+        },
+        "deliveryEvidenceLevels": [],
+        "sourceGaps": []
+      },
+      "semanticFacets": {
+        "schemaVersion": 1,
+        "status": "supplementary",
+        "entries": [
+          {
+            "id": "session-insight:source-coverage",
+            "kind": "redacted-summary",
+            "episodeRef": null,
+            "status": "candidate",
+            "labels": [
+              "source-coverage",
+              "Low"
+            ],
+            "summary": "Analyzed 0 of 0 sessions; 1/6 enabled source roots exist. Use this as the current workspace evidence boundary for final insight cards.",
+            "evidenceRefs": [],
+            "modelVersion": "session-insights-v1"
+          },
+          {
+            "id": "session-insight:validation-behavior",
+            "kind": "redacted-summary",
+            "episodeRef": null,
+            "status": "candidate",
+            "labels": [
+              "validation-behavior",
+              "Low"
+            ],
+            "summary": "No validation command category was observed in the analyzed session sample. Inspect more sessions or add explicit validation guidance before claiming validation-after-edit behavior.",
+            "evidenceRefs": [],
+            "modelVersion": "session-insights-v1"
+          },
+          {
+            "id": "session-insight:post-edit-validation",
+            "kind": "rework-correction",
+            "episodeRef": null,
+            "status": "candidate",
+            "labels": [
+              "post-edit-validation",
+              "Low"
+            ],
+            "summary": "No edit event was observed in the analyzed sample. Inspect more sessions before making claims about edit or validation habits.",
+            "evidenceRefs": [],
+            "modelVersion": "session-insights-v1"
+          },
+          {
+            "id": "session-insight:execution-friction",
+            "kind": "friction-taxonomy",
+            "episodeRef": null,
+            "status": "candidate",
+            "labels": [
+              "execution-friction",
+              "Low"
+            ],
+            "summary": "No strong execution friction signal in the analyzed sample. Keep friction claims narrow unless additional failed commands, rejected actions, or warnings are inspected.",
+            "evidenceRefs": [],
+            "modelVersion": "session-insights-v1"
+          }
+        ]
+      },
+      "learningCapture": {
+        "schemaVersion": 1,
+        "state": "N/A",
+        "summary": "N/A — requires two comparable observation windows and an intervention comparison.",
+        "interventions": []
+      },
+      "aiAgentPractice": {
+        "inspectedSurfaces": [],
+        "coverageRows": [
+          {
+            "surface": "Rules",
+            "scopes": [
+              "Project"
+            ],
+            "count": 1,
+            "paths": [
+              "AGENTS.md"
+            ]
+          },
+          {
+            "surface": "Skills",
+            "scopes": [
+              "Project",
+              "Global",
+              "Plugin"
+            ],
+            "count": 5,
+            "paths": [
+              ".agents/skills/lpdp-question-generation/SKILL.md",
+              "~/.agents/skills/find-skills/SKILL.md",
+              "~/.qoder/plugins/cache/qoder-bundler/better-harness/skills/better-harness/SKILL.md",
+              "~/.qoder/plugins/cache/qoder-bundler/qoder-create-plugin/skills/create-plugin/SKILL.md",
+              "~/.qoder/plugins/cache/qoder-marketplace/qmind/0.1.0/skills/qmind-knowledge/SKILL.md"
+            ]
+          },
+          {
+            "surface": "Custom Agents",
+            "scopes": [
+              "Project"
+            ],
+            "count": 4,
+            "paths": [
+              ".agents/agents/question_generator.md",
+              ".agents/agents/question-generator.md",
+              ".agents/agents/question_reviewer.md",
+              ".agents/agents/question-reviewer.md"
+            ]
+          },
+          {
+            "surface": "Workflows",
+            "scopes": [
+              "Project"
+            ],
+            "count": 3,
+            "paths": [
+              ".github/workflows/deploy-web.yml",
+              ".github/workflows/pr.yml",
+              ".github/workflows/release-app.yml"
+            ]
+          },
+          {
+            "surface": "Plugins",
+            "scopes": [
+              "Plugin"
+            ],
+            "count": 3,
+            "paths": [
+              "~/.qoder/plugins/cache/qoder-bundler/better-harness/.qoder-plugin/plugin.json",
+              "~/.qoder/plugins/cache/qoder-marketplace/qmind/0.1.0/.qoder-plugin/plugin.json",
+              "~/.qoder/plugins/cache/qoder-bundler/qoder-create-plugin"
+            ]
+          },
+          {
+            "surface": "Memories",
+            "scopes": [
+              "Project"
+            ],
+            "count": 4
+          },
+          {
+            "surface": "Hooks",
+            "scopes": [
+              "Project"
+            ],
+            "count": 0
+          },
+          {
+            "surface": "Commands",
+            "scopes": [
+              "Project"
+            ],
+            "count": 0
+          },
+          {
+            "surface": "MCP",
+            "scopes": [
+              "Project"
+            ],
+            "count": 0
+          }
+        ],
+        "repositorySourceRows": [
+          {
+            "surface": "Rules",
+            "provider": "claude",
+            "owner": ".",
+            "count": 1,
+            "paths": [
+              "CLAUDE.md"
+            ]
+          },
+          {
+            "surface": "Custom Agents",
+            "provider": "claude",
+            "owner": ".claude",
+            "count": 4,
+            "paths": [
+              ".claude/agents/question-generator.md",
+              ".claude/agents/question-reviewer.md",
+              ".claude/agents/question_generator.md",
+              ".claude/agents/question_reviewer.md"
+            ]
+          },
+          {
+            "surface": "Skills",
+            "provider": "claude",
+            "owner": ".claude",
+            "count": 1,
+            "paths": [
+              ".claude/skills/lpdp-question-generation/SKILL.md"
+            ]
+          }
+        ],
+        "memoryDetails": {
+          "contentPolicy": "metadata-only",
+          "scanState": "scanned-present",
+          "scopeCounts": [
+            {
+              "scope": "Project",
+              "count": 4
+            }
+          ],
+          "integrity": {
+            "status": "reviewed",
+            "titleCount": 4,
+            "reviewedTitleCount": 4,
+            "truncated": false,
+            "exactCollisionGroups": 0,
+            "similarityCandidates": 0
+          }
+        }
+      }
+    },
+    "canvasPath": "/Users/mac/github.com/muhammadhabibullah/tbs-lpdp/.qoder/better-harness-runs/2026-08-12-230924-tbs-lpdp/canvas.json",
+    "canvasReplaced": false
+  }
+}

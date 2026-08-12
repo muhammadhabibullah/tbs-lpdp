@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "projectName": "tbs-lpdp",
+    "locale": "en",
+    "modelId": "agent-work-loop-v4",
+    "reportContractVersion": 26,
+    "overview": "The project has strong agent instructions and CI-guarded security invariants, but the PR verification loop has two gaps: AGENTS.md claims a figures.py CI check that no workflow runs, and PR CI omits the full Vite build. Session evidence was unavailable (0 eligible sessions), so delivery and learning dimensions are evidence-limited.",
+    "strengths": [
+      "Detailed, security-aware root AGENTS.md with constraint IDs, build-flavor table, and command catalog",
+      "CI-guarded security invariants: C-29 mock-mode assertion, C-30 signing-key guard, tag-version consistency check",
+      "Question bank validation via JSON Schema Draft 2020-12 with exit-coded gate in both PR and deploy CI",
+      "Path-filtered CI routing avoids wasteful runs and correctly routes web versus question changes",
+      "Three build flavors from one codebase with dead-code elimination via Vite define literals"
+    ],
+    "aiAgentPractice": {
+      "inspectedSurfaces": [
+        "Rules",
+        "Skills",
+        "Custom Agents"
+      ],
+      "coverageRows": [
+        {
+          "surface": "Rules",
+          "scopes": [
+            "Project"
+          ],
+          "count": 1,
+          "paths": [
+            "AGENTS.md"
+          ]
+        },
+        {
+          "surface": "Skills",
+          "scopes": [
+            "Project",
+            "Global",
+            "Plugin"
+          ],
+          "count": 5,
+          "paths": [
+            ".agents/skills/lpdp-question-generation/SKILL.md",
+            "~/.agents/skills/find-skills/SKILL.md",
+            "~/.qoder/plugins/cache/qoder-bundler/better-harness/skills/better-harness/SKILL.md",
+            "~/.qoder/plugins/cache/qoder-bundler/qoder-create-plugin/skills/create-plugin/SKILL.md",
+            "~/.qoder/plugins/cache/qoder-marketplace/qmind/0.1.0/skills/qmind-knowledge/SKILL.md"
+          ]
+        },
+        {
+          "surface": "Custom Agents",
+          "scopes": [
+            "Project"
+          ],
+          "count": 2,
+          "paths": [
+            ".agents/agents/question-generator.md",
+            ".agents/agents/question-reviewer.md"
+          ]
+        },
+        {
+          "surface": "Workflows",
+          "scopes": [
+            "Project"
+          ],
+          "count": 4,
+          "paths": [
+            ".github/workflows/deploy-web.yml",
+            ".github/workflows/pr-web.yml",
+            ".github/workflows/pr.yml",
+            ".github/workflows/release-app.yml"
+          ]
+        },
+        {
+          "surface": "Plugins",
+          "scopes": [
+            "Plugin"
+          ],
+          "count": 3,
+          "paths": [
+            "~/.qoder/plugins/cache/qoder-bundler/better-harness/.qoder-plugin/plugin.json",
+            "~/.qoder/plugins/cache/qoder-marketplace/qmind/0.1.0/.qoder-plugin/plugin.json",
+            "~/.qoder/plugins/cache/qoder-bundler/qoder-create-plugin"
+          ]
+        },
+        {
+          "surface": "Memories",
+          "scopes": [
+            "Project"
+          ],
+          "count": 7
+        },
+        {
+          "surface": "Hooks",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "Commands",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "MCP",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        }
+      ],
+      "repositorySourceRows": [
+        {
+          "surface": "Rules",
+          "provider": "claude",
+          "owner": ".",
+          "count": 1,
+          "paths": [
+            "CLAUDE.md"
+          ]
+        },
+        {
+          "surface": "Custom Agents",
+          "provider": "claude",
+          "owner": ".claude",
+          "count": 2,
+          "paths": [
+            ".claude/agents/question-generator.md",
+            ".claude/agents/question-reviewer.md"
+          ]
+        },
+        {
+          "surface": "Skills",
+          "provider": "claude",
+          "owner": ".claude",
+          "count": 1,
+          "paths": [
+            ".claude/skills/lpdp-question-generation/SKILL.md"
+          ]
+        }
+      ]
+    },
+    "assignmentSummaries": [],
+    "dimensions": [
+      {
+        "id": "task-understanding",
+        "label": "Task Understanding",
+        "score": 68,
+        "summary": "Root AGENTS.md provides detailed context, routing, and scope boundaries, but a documentation claim about figures.py --check in CI is not backed by any workflow.",
+        "findingRefs": [
+          "figures-check-doc-drift"
+        ]
+      },
+      {
+        "id": "controlled-execution",
+        "label": "Controlled Execution",
+        "score": 66,
+        "summary": "Setup and run commands are documented for all three build flavors, with security constraints and CI guards. No automation, Docker, or reset guidance beyond git.",
+        "findingRefs": []
+      },
+      {
+        "id": "change-validation",
+        "label": "Change Validation",
+        "score": 55,
+        "summary": "Typecheck and bank validation run in CI, but PR CI omits the full Vite build and a claimed figures.py --check step is absent from all workflows. Only one test file exists. Failure diagnosis and revalidation are unobserved.",
+        "findingRefs": [
+          "figures-check-doc-drift",
+          "pr-ci-missing-build"
+        ]
+      },
+      {
+        "id": "reliable-delivery",
+        "label": "Reliable Delivery",
+        "score": 48,
+        "summary": "Deploy and release CI enforce security invariants and run the full build, but no automatic rollback or recovery path exists for GitHub Pages or Releases.",
+        "findingRefs": []
+      },
+      {
+        "id": "learning-capture",
+        "label": "Learning Capture",
+        "score": 35,
+        "summary": "No session evidence was available (0 eligible sessions), so lifecycle detection, loop engineering, and longitudinal validation are unobserved.",
+        "findingRefs": []
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "figures-check-doc-drift",
+      "title": "AGENTS.md claims a figures.py CI check that no workflow runs",
+      "severity": "Medium",
+      "reason": "AGENTS.md states 'figures.py --check in CI' (line 67), but grepping all four GitHub workflow files (pr.yml, pr-web.yml, deploy-web.yml, release-app.yml) returns zero matches for 'figures'. An agent following the instructions will believe figure integrity is mechanically verified and may skip manual figure validation, allowing figure drift or regeneration failures to reach production undetected. The command 'python3 questions/generator/figures.py --check' is documented in AGENTS.md and exists in figures.py, so the repair is either adding the step to CI or removing the claim.",
+      "expectedOutput": [
+        "Update the existing Document owner identified by the reviewed evidence and retain a focused validation result."
+      ],
+      "aiFixPrompt": "/better-harness fix this issue\n\nResolve the mismatch between AGENTS.md's claim that 'figures.py --check in CI' runs and the absence of that step from all GitHub workflow files. Either add a 'python3 questions/generator/figures.py --check' step to the appropriate CI workflow (pr.yml for questions/** changes) or update AGENTS.md to remove the 'in CI' claim if the check is intended to be run manually only.\n\nLimit the change to AGENTS.md and/or the relevant .github/workflows/*.yml file.\n\n## Validation\n\n- Grep for 'figures' across .github/workflows/ to confirm the step exists or the claim is removed\n- Run 'python3 questions/generator/figures.py --check' to confirm the command works\n- Confirm AGENTS.md no longer makes a claim that contradicts the CI configuration",
+      "dimensionRefs": [
+        "change-validation",
+        "task-understanding"
+      ]
+    },
+    {
+      "id": "pr-ci-missing-build",
+      "title": "PR CI runs typecheck but not the full Vite build",
+      "severity": "Low",
+      "reason": "The PR workflow (pr.yml) runs 'npm run typecheck' (tsc --noEmit only) for web/** changes, but does not run 'npm run build' (tsc --noEmit && vite build). The full build runs only in deploy-web.yml at deploy time. Vite build failures — import resolution, asset processing, plugin errors, or dead-code-elimination issues related to C-29/C-31 — are therefore caught at deploy time rather than on the PR, delaying feedback. The command 'npm run build' exists in web/package.json and deploy-web.yml already runs it, so the repair is adding the same step to the PR workflow.",
+      "expectedOutput": [
+        "Update the existing Document owner identified by the reviewed evidence and retain a focused validation result."
+      ],
+      "aiFixPrompt": "/better-harness fix this issue\n\nAdd 'npm run build' (or at minimum 'vite build') to the web CI job in .github/workflows/pr.yml so that PRs catch Vite build failures before deploy. The command already exists in web/package.json and is already used in deploy-web.yml.\n\nLimit the change to .github/workflows/pr.yml.\n\n## Validation\n\n- Confirm pr.yml runs 'npm run build' for web/** changes\n- Run 'npm run build' locally to verify it passes\n- Confirm the PR workflow still uses path filtering correctly",
+      "dimensionRefs": [
+        "change-validation"
+      ]
+    }
+  ]
+}

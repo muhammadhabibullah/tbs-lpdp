@@ -6,9 +6,42 @@ on:
     paths:
       - 'questions/**'
       - '.github/workflows/**'
+      - 'web/**'
+      - 'supabase/**'
 
 jobs:
+  # Route each change set to the check that cares about it. Without job-level
+  # path filtering, a web-only PR would also spin up the Python bank validator
+  # and a questions-only PR would also run the TS typecheck. The repo already
+  # depends on third-party actions in the release pipeline, so paths-filter
+  # fits the existing conventions.
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      bank: ${{ steps.filter.outputs.bank }}
+      web: ${{ steps.filter.outputs.web }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          # `bank` preserves validate-bank's original trigger scope. `web`
+          # covers supabase/ too: a backend schema or RPC change can break the
+          # SPA's expectations, so the web typecheck guards both sides.
+          filters: |
+            bank:
+              - 'questions/**'
+              - '.github/workflows/**'
+            web:
+              - 'web/**'
+              - 'supabase/**'
+
   validate-bank:
+    needs: changes
+    if: needs.changes.outputs.bank == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -25,3 +58,27 @@ jobs:
 
       - name: Validate question bank
         run: python3 questions/generator/validate_bank.py
+
+  typecheck:
+    needs: changes
+    if: needs.changes.outputs.web == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - run: npm ci
+
+      # `npm run typecheck` = `tsc --noEmit` (web/package.json). The web
+      # tsconfig covers src, vite, and scripts; a type error fails the check
+      # without producing a bundle.
+      - name: Typecheck
+        run: npm run typecheck

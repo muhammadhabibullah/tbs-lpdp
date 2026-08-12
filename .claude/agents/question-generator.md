@@ -1,5 +1,5 @@
 ---
-name: question_generator
+name: question-generator
 description: Generates LPDP TBS try-out questions into questions/bank in the repo's JSON format. Use PROACTIVELY when asked to create, add, or regenerate questions for a package or subtest.
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---

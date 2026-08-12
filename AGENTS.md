@@ -50,7 +50,7 @@ Both selectors are `define`d as literals in `web/vite.config.ts` so the dead bra
 
 For any question generation/editing, follow `.agents/skills/lpdp-question-generation/SKILL.md`. Key rules:
 
-- Use the **question_generator** agent to write or regenerate questions; use the read-only **question_reviewer** agent to verify them before considering the work done. Route every reviewer failure back to `question_generator`.
+- Use the **question-generator** agent to write or regenerate questions; use the read-only **question-reviewer** agent to verify them before considering the work done. Route every reviewer failure back to `question-generator`.
 - Computable types (`deret_angka`, `deret_huruf`, `aritmetika`, `perbandingan_kuantitatif`, `aljabar`, `kecukupan_data`, `peluang_kombinatorik`) MUST come from the Python generators, never hand-written keys. Use `kecukupan_data_predikat.py` for yes/no inequality predicates and `kecukupan_data.py` for exact-quantity/geometry items.
 - Always finish with `python3 questions/generator/validate_bank.py` — it must exit 0.
 

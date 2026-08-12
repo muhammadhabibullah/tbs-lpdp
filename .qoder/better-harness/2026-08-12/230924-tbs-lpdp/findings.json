@@ -1,0 +1,245 @@
+{
+  "summary": {
+    "projectName": "TBS LPDP Try Out",
+    "locale": "en",
+    "modelId": "agent-work-loop-v4",
+    "reportContractVersion": 26,
+    "overview": "The project has strong context routing and a mature bank-lane validation loop, but web and Supabase changes have no CI gate, the only test file is not wired to any command, and duplicate custom agent files create routing ambiguity. Learning Capture is session-limited with 0 analyzed sessions.",
+    "aiAgentPractice": {
+      "inspectedSurfaces": [
+        "Rules",
+        "Custom Agents"
+      ],
+      "coverageRows": [
+        {
+          "surface": "Rules",
+          "scopes": [
+            "Project"
+          ],
+          "count": 1,
+          "paths": [
+            "AGENTS.md"
+          ]
+        },
+        {
+          "surface": "Skills",
+          "scopes": [
+            "Project",
+            "Global",
+            "Plugin"
+          ],
+          "count": 5,
+          "paths": [
+            ".agents/skills/lpdp-question-generation/SKILL.md",
+            "~/.agents/skills/find-skills/SKILL.md",
+            "~/.qoder/plugins/cache/qoder-bundler/better-harness/skills/better-harness/SKILL.md",
+            "~/.qoder/plugins/cache/qoder-bundler/qoder-create-plugin/skills/create-plugin/SKILL.md",
+            "~/.qoder/plugins/cache/qoder-marketplace/qmind/0.1.0/skills/qmind-knowledge/SKILL.md"
+          ]
+        },
+        {
+          "surface": "Custom Agents",
+          "scopes": [
+            "Project"
+          ],
+          "count": 4,
+          "paths": [
+            ".agents/agents/question_generator.md",
+            ".agents/agents/question-generator.md",
+            ".agents/agents/question_reviewer.md",
+            ".agents/agents/question-reviewer.md"
+          ]
+        },
+        {
+          "surface": "Workflows",
+          "scopes": [
+            "Project"
+          ],
+          "count": 3,
+          "paths": [
+            ".github/workflows/deploy-web.yml",
+            ".github/workflows/pr.yml",
+            ".github/workflows/release-app.yml"
+          ]
+        },
+        {
+          "surface": "Plugins",
+          "scopes": [
+            "Plugin"
+          ],
+          "count": 3,
+          "paths": [
+            "~/.qoder/plugins/cache/qoder-bundler/better-harness/.qoder-plugin/plugin.json",
+            "~/.qoder/plugins/cache/qoder-marketplace/qmind/0.1.0/.qoder-plugin/plugin.json",
+            "~/.qoder/plugins/cache/qoder-bundler/qoder-create-plugin"
+          ]
+        },
+        {
+          "surface": "Memories",
+          "scopes": [
+            "Project"
+          ],
+          "count": 4
+        },
+        {
+          "surface": "Hooks",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "Commands",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "MCP",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        }
+      ],
+      "repositorySourceRows": [
+        {
+          "surface": "Rules",
+          "provider": "claude",
+          "owner": ".",
+          "count": 1,
+          "paths": [
+            "CLAUDE.md"
+          ]
+        },
+        {
+          "surface": "Custom Agents",
+          "provider": "claude",
+          "owner": ".claude",
+          "count": 4,
+          "paths": [
+            ".claude/agents/question-generator.md",
+            ".claude/agents/question-reviewer.md",
+            ".claude/agents/question_generator.md",
+            ".claude/agents/question_reviewer.md"
+          ]
+        },
+        {
+          "surface": "Skills",
+          "provider": "claude",
+          "owner": ".claude",
+          "count": 1,
+          "paths": [
+            ".claude/skills/lpdp-question-generation/SKILL.md"
+          ]
+        }
+      ]
+    },
+    "assignmentSummaries": [],
+    "dimensions": [
+      {
+        "id": "task-understanding",
+        "label": "Task Understanding",
+        "score": 58,
+        "summary": "AGENTS.md provides strong context routing to spec docs, schemas, and generators, but no sessions are available to confirm intent, scope boundary, or exercised context use.",
+        "findingRefs": []
+      },
+      {
+        "id": "controlled-execution",
+        "label": "Controlled Execution",
+        "score": 62,
+        "summary": "Setup commands and lockfiles are declared, and custom agents are configured, but duplicate agent files and a tool-role-conflict lint error introduce configuration defects with no exercised evidence.",
+        "findingRefs": [
+          "duplicate-agent-pairs",
+          "agent-tool-role-conflict"
+        ]
+      },
+      {
+        "id": "change-validation",
+        "label": "Change Validation",
+        "score": 48,
+        "summary": "The bank lane has a deterministic validator wired to CI, but the web and Supabase core has no CI gate and the only test file is not wired to any runnable command.",
+        "findingRefs": [
+          "web-supabase-ci-gap",
+          "test-file-not-wired"
+        ]
+      },
+      {
+        "id": "reliable-delivery",
+        "label": "Reliable Delivery",
+        "score": 52,
+        "summary": "High-risk approval for signing and publish is declared, but web and Supabase changes can merge without CI validation and no project-declared rollback path exists for the SPA.",
+        "findingRefs": [
+          "web-supabase-ci-gap"
+        ]
+      },
+      {
+        "id": "learning-capture",
+        "label": "Learning Capture",
+        "score": 35,
+        "summary": "Zero sessions were analyzed in the 30-day window (1 of 6 source roots enabled; disabled-source-root and missing-optional-root warnings), blocking lifecycle detection and loop engineering. This unobserved evidence gap stays in the boundary, not as a finding.",
+        "findingRefs": []
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "web-supabase-ci-gap",
+      "title": "Web and Supabase changes can merge without CI validation",
+      "severity": "Medium",
+      "reason": "The pr.yml path filter includes only questions/** and .github/workflows/**, so a PR touching web/src/** (the 42-file high-churn core, including the 583-churn HomePage.tsx) or supabase/** triggers zero CI jobs. AGENTS.md declares security invariants (C-4, C-29, C-31) and claims they are asserted in CI, but the asserting job is not on the PR lane. The bank lane has a deterministic validate_bank.py gate; the web/Supabase lane has only tsc --noEmit folded into the build script with no CI trigger. Consequence: runtime, contract, and security-invariant regressions in the web/Supabase core are not mechanically caught pre-merge. Owner: .github/workflows/pr.yml. Uncertainty: deploy-web.yml and release-app.yml may assert some invariants post-merge or on tag; they were not inspected, so this is a PR-lane gap, not a claim that no CI anywhere exercises web code.",
+      "expectedOutput": [
+        "Update the existing Workflow owner identified by the reviewed evidence and retain a focused validation result."
+      ],
+      "expectedArtifact": "Workflow",
+      "aiFixPrompt": "Add web/** and supabase/** to the paths filter in .github/workflows/pr.yml so PRs touching those directories trigger CI. Add a job that installs Node.js and runs `npm run typecheck` (from web/package.json) on web/ and supabase/ changes.\n\n## Validation\n\n- Open a PR touching web/src/ and confirm the CI check triggers\n- Introduce a type error and confirm the check fails\n- Fix the error and confirm the check passes",
+      "dimensionRefs": [
+        "change-validation",
+        "reliable-delivery"
+      ]
+    },
+    {
+      "id": "test-file-not-wired",
+      "title": "The only test file has no runnable command or CI job",
+      "severity": "Low",
+      "reason": "supabase/functions/question-report-digest/render.test.ts exists and covers XSS injection, zero-report heartbeat, and HTML escaping using node:test and node:assert/strict, but web/package.json has no test script and pr.yml does not invoke it. The test covers a security-relevant rendering path that escapes user-supplied comment HTML, but it has no mechanical guard beyond developer memory. Owner: web/package.json and .github/workflows/pr.yml. Uncertainty: the test may be runnable via a Deno or supabase functions runner not declared in the inspected manifests; its invocation surface is unverified.",
+      "expectedOutput": [
+        "Update the existing Test owner identified by the reviewed evidence and retain a focused validation result."
+      ],
+      "expectedArtifact": "Test",
+      "aiFixPrompt": "Add a `test` script to web/package.json that runs the existing test in supabase/functions/question-report-digest/render.test.ts using node --test. Wire it into the CI job added for web/ and supabase/ changes.\n\n## Validation\n\n- Run `npm test` locally and confirm it passes\n- Open a PR touching supabase/functions/ and confirm the test runs in CI",
+      "dimensionRefs": [
+        "change-validation"
+      ]
+    },
+    {
+      "id": "duplicate-agent-pairs",
+      "title": "Duplicate custom agent files create routing ambiguity",
+      "severity": "Low",
+      "reason": "Both pairs of custom agent files under .agents/agents/ are byte-for-byte identical: question_generator.md equals question-generator.md (46 lines), and question_reviewer.md equals question-reviewer.md (50 lines). All four files are registered as active custom agents in the inventory. The lint flags all four with custom-agent-invalid-name (underscore names are not lowercase-hyphenated identifiers) and the hyphen-filename variants with custom-agent-name-mismatch (declared name differs from invocable filename). AGENTS.md routes to both agents by their underscore names. Consequence: two active registrations exist for each agent identity, and the canonical filename is undetermined, which may cause routing ambiguity or shadowing. Owner: .agents/agents/ directory and AGENTS.md. Uncertainty: whether the platform resolves agents by filename or declared name determines whether both are truly invocable or one is silently ignored; this was not evidenced.",
+      "expectedOutput": [
+        "Update the existing Agent owner identified by the reviewed evidence and retain a focused validation result."
+      ],
+      "expectedArtifact": "Agent",
+      "aiFixPrompt": "Determine the canonical filename for each custom agent pair. The lint convention requires lowercase-hyphenated identifiers, so the hyphenated filenames (question-generator.md, question-reviewer.md) are likely canonical. Remove the underscore-named duplicate from each pair. Update the declared `name` in the frontmatter of the remaining file to use the hyphenated form. Update AGENTS.md line 53 to reference the hyphenated names if the routing name changes.\n\n## Validation\n\n- Run `better-harness harness checkup --phase scan --provider qoder --workspace . --json` and confirm no duplicate, invalid-name, or name-mismatch findings remain for custom agents",
+      "dimensionRefs": [
+        "controlled-execution"
+      ]
+    },
+    {
+      "id": "agent-tool-role-conflict",
+      "title": "Question generator agent has write tools without a matching role declaration",
+      "severity": "Low",
+      "reason": "The lint flags both question_generator.md and question-generator.md with custom-agent-tool-role-conflict (severity: error): the agent declares a read-only role but grants write-capable tools. Direct inspection confirms the frontmatter tools list includes Write, Edit, and Bash, and the body explicitly states the agent writes files and runs scripts. No explicit role or mode field is present in the frontmatter; the read-only inference likely stems from a platform default for subagents. The question_reviewer agent, which has only Read, Bash, Glob, Grep tools, was not flagged. Consequence: the agent configuration is inconsistent — the tools list grants write capabilities that may not be effective if the platform enforces the inferred read-only role. Owner: .agents/agents/question-generator.md frontmatter. Uncertainty: the platform role-resolution mechanism was not discovered; the repair should add an explicit role declaration rather than assume a specific field name.",
+      "expectedOutput": [
+        "Update the existing Config owner identified by the reviewed evidence and retain a focused validation result."
+      ],
+      "expectedArtifact": "Config",
+      "aiFixPrompt": "Inspect the custom agent frontmatter in .agents/agents/question-generator.md. The tools list includes Write, Edit, and Bash, but the lint reports a read-only role conflict. Add an explicit role or mode declaration to the frontmatter that matches the write-capable tools, or consult the Qoder custom agent documentation to discover the correct field for declaring write access.\n\n## Validation\n\n- Run `better-harness harness checkup --phase scan --provider qoder --workspace . --json` and confirm the custom-agent-tool-role-conflict error no longer appears for the generator agent",
+      "dimensionRefs": [
+        "controlled-execution"
+      ]
+    }
+  ]
+}

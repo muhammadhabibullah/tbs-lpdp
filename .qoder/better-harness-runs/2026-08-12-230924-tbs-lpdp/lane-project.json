@@ -1,0 +1,3689 @@
+{
+  "status": "available",
+  "data": {
+    "schemaVersion": 1,
+    "kind": "core-change-watch-evidence-pack",
+    "status": "ok",
+    "repoRoot": "/Users/mac/github.com/muhammadhabibullah/tbs-lpdp",
+    "generatedAt": "2026-08-12T16:10:57.372Z",
+    "summary": {
+      "reviewRecommended": false,
+      "attentionRequired": false,
+      "diffStatus": "ok",
+      "diffSeverity": "low",
+      "diffScore": 0,
+      "topLanguages": [
+        "tsx",
+        "typescript",
+        "python"
+      ],
+      "projectInfo": {
+        "name": "TBS LPDP Try Out",
+        "description": "",
+        "readmeTitle": "TBS LPDP Try Out",
+        "identityEvidence": [
+          "README.md:h1"
+        ],
+        "primaryLanguages": [
+          {
+            "language": "tsx",
+            "sourceFiles": 27,
+            "testFiles": 0
+          },
+          {
+            "language": "typescript",
+            "sourceFiles": 24,
+            "testFiles": 1
+          },
+          {
+            "language": "python",
+            "sourceFiles": 13,
+            "testFiles": 0
+          }
+        ],
+        "frameworks": [],
+        "sourceFiles": 64,
+        "testFiles": 1,
+        "measuredSourceLines": null,
+        "sourceLineStatus": "skipped",
+        "sourceLineMethod": "not measured by default; use --measure-source-lines to count tracked readable primary source files only",
+        "sourceRoots": [
+          {
+            "path": "web",
+            "files": 49
+          },
+          {
+            "path": "questions",
+            "files": 12
+          },
+          {
+            "path": "supabase",
+            "files": 2
+          },
+          {
+            "path": "scripts",
+            "files": 1
+          }
+        ],
+        "entryCandidates": [
+          {
+            "path": "supabase/functions/question-report-digest/index.ts",
+            "language": "typescript",
+            "score": 65
+          },
+          {
+            "path": "web/src/main.tsx",
+            "language": "tsx",
+            "score": 65
+          }
+        ]
+      },
+      "agentInstructions": {
+        "status": "adequate",
+        "count": 2,
+        "rootCount": 1,
+        "nestedCount": 1,
+        "suggestedMinimum": 1,
+        "suggestedAdditional": 0,
+        "sourceFilesPerInstruction": 32,
+        "sourceFilesUnderNestedInstructions": 0,
+        "nestedSourceFileCoveragePercent": 0,
+        "suggestedScopes": [
+          {
+            "path": "web/src",
+            "sourceFiles": 42
+          },
+          {
+            "path": "questions/generator",
+            "sourceFiles": 12
+          },
+          {
+            "path": "web/vite",
+            "sourceFiles": 4
+          },
+          {
+            "path": "supabase/functions",
+            "sourceFiles": 2
+          },
+          {
+            "path": "web/scripts",
+            "sourceFiles": 2
+          },
+          {
+            "path": "scripts",
+            "sourceFiles": 1
+          },
+          {
+            "path": "web",
+            "sourceFiles": 1
+          }
+        ],
+        "reasons": [
+          "root AGENTS.md present",
+          "1 nested AGENTS.md files provide module-local guidance"
+        ]
+      },
+      "coreCandidates": {
+        "highConfidence": 2,
+        "mediumConfidence": 2,
+        "candidateCount": 6
+      },
+      "changedFiles": 0,
+      "changedLines": 0,
+      "companionHits": 0,
+      "changeDrift": {
+        "status": "ok",
+        "findingCount": 0,
+        "typeCounts": {}
+      },
+      "coreCodeRules": {
+        "status": "missing",
+        "includeCount": 0,
+        "excludeCount": 0,
+        "boundaryKind": "inferred-core-boundary"
+      },
+      "historyWindows": [
+        30,
+        90,
+        180
+      ],
+      "historyConfidence": {
+        "confidence": "medium",
+        "reasons": [
+          "history span is only 3 days"
+        ]
+      },
+      "frameworks": [],
+      "filtersApplied": false
+    },
+    "filters": {
+      "projectProfile": {
+        "ignorePatterns": [],
+        "ignoredCount": 0,
+        "ignoredSample": []
+      },
+      "historyProfile": {
+        "ignorePatterns": [],
+        "ignoredCount": 0,
+        "ignoredSample": []
+      },
+      "coreAnalysis": {
+        "ignorePatterns": [],
+        "ignoredCount": 0,
+        "ignoredSample": []
+      },
+      "diffImpact": {
+        "ignorePatterns": [],
+        "ignoredCount": 0,
+        "ignoredSample": []
+      }
+    },
+    "evidenceSources": {
+      "boundary": "static-local-git-and-file-analysis",
+      "numericSources": [
+        {
+          "claim": "tracked file, language, manifest, source-root, entrypoint, and framework counts",
+          "source": "projectProfile",
+          "command": "git ls-files -z plus local manifest/path inspection"
+        },
+        {
+          "claim": "hot files, hot paths, co-change paths, and history windows",
+          "source": "historyProfile",
+          "command": "git log -500 --numstat --format=commit... --"
+        },
+        {
+          "claim": "changed files, line counts, configured core boundary hits, hot hits, and companion hits",
+          "source": "diffImpact",
+          "command": "git diff --numstat --no-ext-diff --find-renames HEAD --"
+        },
+        {
+          "claim": "changed API, schema, UI, config, error, and CLI surfaces with missing companion evidence",
+          "source": "changeDrift",
+          "command": "git diff --numstat --no-ext-diff --find-renames HEAD -- plus git ls-files -z"
+        },
+        {
+          "claim": "history day windows",
+          "source": "summary.historyWindows",
+          "command": "bounded history windows: 30,90,180"
+        }
+      ],
+      "unverifiedClaims": [
+        {
+          "claim": "tests passed",
+          "status": "UNVERIFIED",
+          "reason": "core-change-watch does not run target project tests"
+        },
+        {
+          "claim": "CI status",
+          "status": "UNVERIFIED",
+          "reason": "core-change-watch does not open external CI systems"
+        },
+        {
+          "claim": "runtime behavior",
+          "status": "UNVERIFIED",
+          "reason": "core-change-watch does not execute the target application"
+        }
+      ]
+    },
+    "projectProfile": {
+      "schemaVersion": 1,
+      "kind": "project-profile",
+      "status": "ok",
+      "repoRoot": "/Users/mac/github.com/muhammadhabibullah/tbs-lpdp",
+      "filters": {
+        "ignorePatterns": [],
+        "ignoredCount": 0,
+        "ignoredSample": []
+      },
+      "projectInfo": {
+        "name": "TBS LPDP Try Out",
+        "description": "",
+        "readmeTitle": "TBS LPDP Try Out",
+        "evidence": [
+          "README.md:h1"
+        ],
+        "primaryLanguages": [
+          {
+            "language": "tsx",
+            "sourceFiles": 27,
+            "testFiles": 0
+          },
+          {
+            "language": "typescript",
+            "sourceFiles": 24,
+            "testFiles": 1
+          },
+          {
+            "language": "python",
+            "sourceFiles": 13,
+            "testFiles": 0
+          }
+        ],
+        "frameworks": [],
+        "sourceFiles": 64,
+        "testFiles": 1,
+        "measuredSourceLines": null,
+        "sourceLineStatus": "skipped",
+        "sourceLineMethod": "not measured by default; use --measure-source-lines to count tracked readable primary source files only",
+        "sourceRoots": [
+          {
+            "path": "web",
+            "files": 49
+          },
+          {
+            "path": "questions",
+            "files": 12
+          },
+          {
+            "path": "supabase",
+            "files": 2
+          },
+          {
+            "path": "scripts",
+            "files": 1
+          }
+        ],
+        "entryCandidates": [
+          {
+            "path": "supabase/functions/question-report-digest/index.ts",
+            "language": "typescript",
+            "score": 65
+          },
+          {
+            "path": "web/src/main.tsx",
+            "language": "tsx",
+            "score": 65
+          }
+        ],
+        "manifests": [
+          {
+            "path": "questions/bank/1/package.json",
+            "kind": "node",
+            "scripts": []
+          },
+          {
+            "path": "questions/bank/10/package.json",
+            "kind": "node",
+            "scripts": []
+          },
+          {
+            "path": "questions/bank/11/package.json",
+            "kind": "node",
+            "scripts": []
+          },
+          {
+            "path": "questions/bank/12/package.json",
+            "kind": "node",
+            "scripts": []
+          },
+          {
+            "path": "questions/bank/13/package.json",
+            "kind": "node",
+            "scripts": []
+          },
+          {
+            "path": "questions/bank/2/package.json",
+            "kind": "node",
+            "scripts": []
+          },
+          {
+            "path": "questions/bank/3/package.json",
+            "kind": "node",
+            "scripts": []
+          },
+          {
+            "path": "questions/bank/4/package.json",
+            "kind": "node",
+            "scripts": []
+          }
+        ]
+      },
+      "agentInstructions": {
+        "count": 2,
+        "rootCount": 1,
+        "nestedCount": 1,
+        "files": [
+          {
+            "path": ".agents/AGENTS.md",
+            "scope": ".agents"
+          },
+          {
+            "path": "AGENTS.md",
+            "scope": "."
+          }
+        ],
+        "status": "adequate",
+        "suggestedMinimum": 1,
+        "suggestedAdditional": 0,
+        "sourceFilesPerInstruction": 32,
+        "sourceFilesUnderNestedInstructions": 0,
+        "nestedSourceFileCoveragePercent": 0,
+        "suggestedScopes": [
+          {
+            "path": "web/src",
+            "sourceFiles": 42
+          },
+          {
+            "path": "questions/generator",
+            "sourceFiles": 12
+          },
+          {
+            "path": "web/vite",
+            "sourceFiles": 4
+          },
+          {
+            "path": "supabase/functions",
+            "sourceFiles": 2
+          },
+          {
+            "path": "web/scripts",
+            "sourceFiles": 2
+          },
+          {
+            "path": "scripts",
+            "sourceFiles": 1
+          },
+          {
+            "path": "web",
+            "sourceFiles": 1
+          }
+        ],
+        "reasons": [
+          "root AGENTS.md present",
+          "1 nested AGENTS.md files provide module-local guidance"
+        ]
+      },
+      "languages": [
+        {
+          "language": "tsx",
+          "files": 27,
+          "sourceFiles": 27,
+          "testFiles": 0,
+          "roots": [
+            {
+              "name": "web/src",
+              "count": 27
+            }
+          ]
+        },
+        {
+          "language": "typescript",
+          "files": 25,
+          "sourceFiles": 24,
+          "testFiles": 1,
+          "roots": [
+            {
+              "name": "web/src",
+              "count": 15
+            },
+            {
+              "name": "web/vite",
+              "count": 4
+            },
+            {
+              "name": "supabase/functions",
+              "count": 3
+            },
+            {
+              "name": "web/scripts",
+              "count": 2
+            },
+            {
+              "name": "web",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "language": "python",
+          "files": 13,
+          "sourceFiles": 13,
+          "testFiles": 0,
+          "roots": [
+            {
+              "name": "questions/generator",
+              "count": 12
+            },
+            {
+              "name": "scripts",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "manifests": [
+        {
+          "path": "questions/bank/1/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/10/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/11/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/12/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/13/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/2/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/3/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/4/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/5/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/6/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/7/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/8/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/bank/9/package.json",
+          "kind": "node",
+          "scripts": []
+        },
+        {
+          "path": "questions/generator/requirements.txt",
+          "kind": "python",
+          "scripts": []
+        },
+        {
+          "path": "web/package.json",
+          "kind": "node",
+          "scripts": [
+            "app:android",
+            "app:build",
+            "app:dev",
+            "app:icons",
+            "app:version",
+            "build",
+            "build:app",
+            "build:bank",
+            "dev",
+            "dev:app",
+            "preview",
+            "tauri",
+            "typecheck"
+          ]
+        },
+        {
+          "path": "web/src-tauri/Cargo.toml",
+          "kind": "toml",
+          "scripts": []
+        },
+        {
+          "path": "web/tsconfig.json",
+          "kind": "config",
+          "scripts": []
+        }
+      ],
+      "frameworks": [],
+      "sourceRoots": [
+        {
+          "path": "web",
+          "files": 49
+        },
+        {
+          "path": "questions",
+          "files": 12
+        },
+        {
+          "path": "supabase",
+          "files": 2
+        },
+        {
+          "path": "scripts",
+          "files": 1
+        }
+      ],
+      "entryCandidates": [
+        {
+          "path": "supabase/functions/question-report-digest/index.ts",
+          "language": "typescript",
+          "score": 65,
+          "reasons": [
+            "entrypoint naming convention"
+          ]
+        },
+        {
+          "path": "web/src/main.tsx",
+          "language": "tsx",
+          "score": 65,
+          "reasons": [
+            "entrypoint naming convention"
+          ]
+        }
+      ],
+      "corePathHints": [],
+      "totals": {
+        "trackedFiles": 1192,
+        "trackedFilesBeforeFilters": 1192,
+        "sourceFiles": 64,
+        "testFiles": 1,
+        "generatedOrDependencyFiles": 198,
+        "sourceLines": null,
+        "sourceLineMeasurement": "skipped",
+        "readableSourceFiles": 0,
+        "unreadableSourceFiles": 0
+      }
+    },
+    "historyProfile": {
+      "schemaVersion": 1,
+      "kind": "git-history-profile",
+      "status": "ok",
+      "repoRoot": "/Users/mac/github.com/muhammadhabibullah/tbs-lpdp",
+      "filters": {
+        "ignorePatterns": [],
+        "ignoredCount": 0,
+        "ignoredSample": []
+      },
+      "range": {
+        "maxCommits": 500,
+        "analyzedCommits": 70,
+        "newest": "7124ee0",
+        "oldest": "35c35a3"
+      },
+      "confidence": {
+        "confidence": "medium",
+        "reasons": [
+          "history span is only 3 days"
+        ]
+      },
+      "historyWindows": [
+        {
+          "days": 30,
+          "since": "2026-07-13T16:10:57.000Z",
+          "analyzedCommits": 70,
+          "trendLabel": "recent-hotspots",
+          "interpretation": "recent window for spotting recent hotspots from bounded git history.",
+          "hotFiles": [
+            {
+              "path": "web/src/pages/HomePage.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 12,
+              "added": 491,
+              "deleted": 92,
+              "churn": 583,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "questions/generator/figures.py",
+              "language": "python",
+              "role": "source",
+              "supporting": false,
+              "commits": 11,
+              "added": 1274,
+              "deleted": 2,
+              "churn": 1276,
+              "lastTouched": "d1e1590"
+            },
+            {
+              "path": "web/src/components/FeedbackFooter.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 10,
+              "added": 194,
+              "deleted": 82,
+              "churn": 276,
+              "lastTouched": "b6a5b26"
+            },
+            {
+              "path": "web/src/pages/ReviewPage.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 8,
+              "added": 502,
+              "deleted": 85,
+              "churn": 587,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/mockApi.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 7,
+              "added": 759,
+              "deleted": 191,
+              "churn": 950,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/types.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 7,
+              "added": 259,
+              "deleted": 4,
+              "churn": 263,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/api.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 7,
+              "added": 139,
+              "deleted": 12,
+              "churn": 151,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/pages/ExamPage.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 6,
+              "added": 425,
+              "deleted": 46,
+              "churn": 471,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/supabaseApi.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 6,
+              "added": 251,
+              "deleted": 82,
+              "churn": 333,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/App.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 6,
+              "added": 86,
+              "deleted": 24,
+              "churn": 110,
+              "lastTouched": "2794437"
+            }
+          ],
+          "supportingHotFiles": [
+            {
+              "path": "web/src/styles.css",
+              "language": null,
+              "role": "other",
+              "supporting": true,
+              "commits": 16,
+              "added": 3067,
+              "deleted": 149,
+              "churn": 3216,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/README.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 10,
+              "added": 340,
+              "deleted": 26,
+              "churn": 366,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "CLAUDE.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 8,
+              "added": 119,
+              "deleted": 23,
+              "churn": 142,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "AGENTS.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 8,
+              "added": 112,
+              "deleted": 16,
+              "churn": 128,
+              "lastTouched": "1718995"
+            },
+            {
+              "path": ".github/workflows/release-app.yml",
+              "language": null,
+              "role": "configuration",
+              "supporting": true,
+              "commits": 7,
+              "added": 337,
+              "deleted": 28,
+              "churn": 365,
+              "lastTouched": "bb05b48"
+            },
+            {
+              "path": "README.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 6,
+              "added": 287,
+              "deleted": 160,
+              "churn": 447,
+              "lastTouched": "35c35a3"
+            },
+            {
+              "path": "docs/TECHNICAL_REQUIREMENTS.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 6,
+              "added": 263,
+              "deleted": 7,
+              "churn": 270,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": ".github/workflows/deploy-web.yml",
+              "language": null,
+              "role": "configuration",
+              "supporting": true,
+              "commits": 5,
+              "added": 135,
+              "deleted": 3,
+              "churn": 138,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src-tauri/tauri.conf.json",
+              "language": null,
+              "role": "configuration",
+              "supporting": true,
+              "commits": 5,
+              "added": 110,
+              "deleted": 12,
+              "churn": 122,
+              "lastTouched": "bb05b48"
+            },
+            {
+              "path": "supabase/schema.sql",
+              "language": null,
+              "role": "other",
+              "supporting": true,
+              "commits": 4,
+              "added": 708,
+              "deleted": 17,
+              "churn": 725,
+              "lastTouched": "2794437"
+            }
+          ],
+          "hotPaths": [
+            {
+              "path": "web/src",
+              "commits": 26
+            },
+            {
+              "path": "questions/generator",
+              "commits": 17
+            },
+            {
+              "path": "web/vite",
+              "commits": 4
+            },
+            {
+              "path": ".",
+              "commits": 2
+            },
+            {
+              "path": "web",
+              "commits": 2
+            },
+            {
+              "path": "web/scripts",
+              "commits": 2
+            },
+            {
+              "path": "scripts",
+              "commits": 1
+            },
+            {
+              "path": "supabase/functions",
+              "commits": 1
+            }
+          ]
+        },
+        {
+          "days": 90,
+          "since": "2026-05-14T16:10:57.000Z",
+          "analyzedCommits": 70,
+          "trendLabel": "sustained-hotspots",
+          "interpretation": "sustained window for spotting sustained hotspots from bounded git history.",
+          "hotFiles": [
+            {
+              "path": "web/src/pages/HomePage.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 12,
+              "added": 491,
+              "deleted": 92,
+              "churn": 583,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "questions/generator/figures.py",
+              "language": "python",
+              "role": "source",
+              "supporting": false,
+              "commits": 11,
+              "added": 1274,
+              "deleted": 2,
+              "churn": 1276,
+              "lastTouched": "d1e1590"
+            },
+            {
+              "path": "web/src/components/FeedbackFooter.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 10,
+              "added": 194,
+              "deleted": 82,
+              "churn": 276,
+              "lastTouched": "b6a5b26"
+            },
+            {
+              "path": "web/src/pages/ReviewPage.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 8,
+              "added": 502,
+              "deleted": 85,
+              "churn": 587,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/mockApi.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 7,
+              "added": 759,
+              "deleted": 191,
+              "churn": 950,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/types.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 7,
+              "added": 259,
+              "deleted": 4,
+              "churn": 263,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/api.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 7,
+              "added": 139,
+              "deleted": 12,
+              "churn": 151,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/pages/ExamPage.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 6,
+              "added": 425,
+              "deleted": 46,
+              "churn": 471,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/supabaseApi.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 6,
+              "added": 251,
+              "deleted": 82,
+              "churn": 333,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/App.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 6,
+              "added": 86,
+              "deleted": 24,
+              "churn": 110,
+              "lastTouched": "2794437"
+            }
+          ],
+          "supportingHotFiles": [
+            {
+              "path": "web/src/styles.css",
+              "language": null,
+              "role": "other",
+              "supporting": true,
+              "commits": 16,
+              "added": 3067,
+              "deleted": 149,
+              "churn": 3216,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/README.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 10,
+              "added": 340,
+              "deleted": 26,
+              "churn": 366,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "CLAUDE.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 8,
+              "added": 119,
+              "deleted": 23,
+              "churn": 142,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "AGENTS.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 8,
+              "added": 112,
+              "deleted": 16,
+              "churn": 128,
+              "lastTouched": "1718995"
+            },
+            {
+              "path": ".github/workflows/release-app.yml",
+              "language": null,
+              "role": "configuration",
+              "supporting": true,
+              "commits": 7,
+              "added": 337,
+              "deleted": 28,
+              "churn": 365,
+              "lastTouched": "bb05b48"
+            },
+            {
+              "path": "README.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 6,
+              "added": 287,
+              "deleted": 160,
+              "churn": 447,
+              "lastTouched": "35c35a3"
+            },
+            {
+              "path": "docs/TECHNICAL_REQUIREMENTS.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 6,
+              "added": 263,
+              "deleted": 7,
+              "churn": 270,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": ".github/workflows/deploy-web.yml",
+              "language": null,
+              "role": "configuration",
+              "supporting": true,
+              "commits": 5,
+              "added": 135,
+              "deleted": 3,
+              "churn": 138,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src-tauri/tauri.conf.json",
+              "language": null,
+              "role": "configuration",
+              "supporting": true,
+              "commits": 5,
+              "added": 110,
+              "deleted": 12,
+              "churn": 122,
+              "lastTouched": "bb05b48"
+            },
+            {
+              "path": "supabase/schema.sql",
+              "language": null,
+              "role": "other",
+              "supporting": true,
+              "commits": 4,
+              "added": 708,
+              "deleted": 17,
+              "churn": 725,
+              "lastTouched": "2794437"
+            }
+          ],
+          "hotPaths": [
+            {
+              "path": "web/src",
+              "commits": 26
+            },
+            {
+              "path": "questions/generator",
+              "commits": 17
+            },
+            {
+              "path": "web/vite",
+              "commits": 4
+            },
+            {
+              "path": ".",
+              "commits": 2
+            },
+            {
+              "path": "web",
+              "commits": 2
+            },
+            {
+              "path": "web/scripts",
+              "commits": 2
+            },
+            {
+              "path": "scripts",
+              "commits": 1
+            },
+            {
+              "path": "supabase/functions",
+              "commits": 1
+            }
+          ]
+        },
+        {
+          "days": 180,
+          "since": "2026-02-13T16:10:57.000Z",
+          "analyzedCommits": 70,
+          "trendLabel": "legacy-or-long-range-hotspots",
+          "interpretation": "long-range window for spotting legacy or long range hotspots from bounded git history.",
+          "hotFiles": [
+            {
+              "path": "web/src/pages/HomePage.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 12,
+              "added": 491,
+              "deleted": 92,
+              "churn": 583,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "questions/generator/figures.py",
+              "language": "python",
+              "role": "source",
+              "supporting": false,
+              "commits": 11,
+              "added": 1274,
+              "deleted": 2,
+              "churn": 1276,
+              "lastTouched": "d1e1590"
+            },
+            {
+              "path": "web/src/components/FeedbackFooter.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 10,
+              "added": 194,
+              "deleted": 82,
+              "churn": 276,
+              "lastTouched": "b6a5b26"
+            },
+            {
+              "path": "web/src/pages/ReviewPage.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 8,
+              "added": 502,
+              "deleted": 85,
+              "churn": 587,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/mockApi.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 7,
+              "added": 759,
+              "deleted": 191,
+              "churn": 950,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/types.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 7,
+              "added": 259,
+              "deleted": 4,
+              "churn": 263,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/api.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 7,
+              "added": 139,
+              "deleted": 12,
+              "churn": 151,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/pages/ExamPage.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 6,
+              "added": 425,
+              "deleted": 46,
+              "churn": 471,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/lib/supabaseApi.ts",
+              "language": "typescript",
+              "role": "source",
+              "supporting": false,
+              "commits": 6,
+              "added": 251,
+              "deleted": 82,
+              "churn": 333,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src/App.tsx",
+              "language": "tsx",
+              "role": "source",
+              "supporting": false,
+              "commits": 6,
+              "added": 86,
+              "deleted": 24,
+              "churn": 110,
+              "lastTouched": "2794437"
+            }
+          ],
+          "supportingHotFiles": [
+            {
+              "path": "web/src/styles.css",
+              "language": null,
+              "role": "other",
+              "supporting": true,
+              "commits": 16,
+              "added": 3067,
+              "deleted": 149,
+              "churn": 3216,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/README.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 10,
+              "added": 340,
+              "deleted": 26,
+              "churn": 366,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "CLAUDE.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 8,
+              "added": 119,
+              "deleted": 23,
+              "churn": 142,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "AGENTS.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 8,
+              "added": 112,
+              "deleted": 16,
+              "churn": 128,
+              "lastTouched": "1718995"
+            },
+            {
+              "path": ".github/workflows/release-app.yml",
+              "language": null,
+              "role": "configuration",
+              "supporting": true,
+              "commits": 7,
+              "added": 337,
+              "deleted": 28,
+              "churn": 365,
+              "lastTouched": "bb05b48"
+            },
+            {
+              "path": "README.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 6,
+              "added": 287,
+              "deleted": 160,
+              "churn": 447,
+              "lastTouched": "35c35a3"
+            },
+            {
+              "path": "docs/TECHNICAL_REQUIREMENTS.md",
+              "language": null,
+              "role": "documentation",
+              "supporting": true,
+              "commits": 6,
+              "added": 263,
+              "deleted": 7,
+              "churn": 270,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": ".github/workflows/deploy-web.yml",
+              "language": null,
+              "role": "configuration",
+              "supporting": true,
+              "commits": 5,
+              "added": 135,
+              "deleted": 3,
+              "churn": 138,
+              "lastTouched": "2794437"
+            },
+            {
+              "path": "web/src-tauri/tauri.conf.json",
+              "language": null,
+              "role": "configuration",
+              "supporting": true,
+              "commits": 5,
+              "added": 110,
+              "deleted": 12,
+              "churn": 122,
+              "lastTouched": "bb05b48"
+            },
+            {
+              "path": "supabase/schema.sql",
+              "language": null,
+              "role": "other",
+              "supporting": true,
+              "commits": 4,
+              "added": 708,
+              "deleted": 17,
+              "churn": 725,
+              "lastTouched": "2794437"
+            }
+          ],
+          "hotPaths": [
+            {
+              "path": "web/src",
+              "commits": 26
+            },
+            {
+              "path": "questions/generator",
+              "commits": 17
+            },
+            {
+              "path": "web/vite",
+              "commits": 4
+            },
+            {
+              "path": ".",
+              "commits": 2
+            },
+            {
+              "path": "web",
+              "commits": 2
+            },
+            {
+              "path": "web/scripts",
+              "commits": 2
+            },
+            {
+              "path": "scripts",
+              "commits": 1
+            },
+            {
+              "path": "supabase/functions",
+              "commits": 1
+            }
+          ]
+        }
+      ],
+      "languageTouchCounts": [
+        {
+          "language": "tsx",
+          "touches": 82
+        },
+        {
+          "language": "typescript",
+          "touches": 61
+        },
+        {
+          "language": "python",
+          "touches": 48
+        }
+      ],
+      "hotFiles": [
+        {
+          "path": "web/src/pages/HomePage.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 12,
+          "added": 491,
+          "deleted": 92,
+          "churn": 583,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "questions/generator/figures.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 11,
+          "added": 1274,
+          "deleted": 2,
+          "churn": 1276,
+          "lastTouched": "d1e1590"
+        },
+        {
+          "path": "web/src/components/FeedbackFooter.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 10,
+          "added": 194,
+          "deleted": 82,
+          "churn": 276,
+          "lastTouched": "b6a5b26"
+        },
+        {
+          "path": "web/src/pages/ReviewPage.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 8,
+          "added": 502,
+          "deleted": 85,
+          "churn": 587,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/lib/mockApi.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 7,
+          "added": 759,
+          "deleted": 191,
+          "churn": 950,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/lib/types.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 7,
+          "added": 259,
+          "deleted": 4,
+          "churn": 263,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/lib/api.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 7,
+          "added": 139,
+          "deleted": 12,
+          "churn": 151,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/pages/ExamPage.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 6,
+          "added": 425,
+          "deleted": 46,
+          "churn": 471,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/lib/supabaseApi.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 6,
+          "added": 251,
+          "deleted": 82,
+          "churn": 333,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/App.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 6,
+          "added": 86,
+          "deleted": 24,
+          "churn": 110,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/components/AppShell.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 6,
+          "added": 64,
+          "deleted": 9,
+          "churn": 73,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "questions/generator/deret_angka.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 5,
+          "added": 1300,
+          "deleted": 49,
+          "churn": 1349,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/components/DownloadApp.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 5,
+          "added": 552,
+          "deleted": 187,
+          "churn": 739,
+          "lastTouched": "bb05b48"
+        },
+        {
+          "path": "questions/generator/aritmetika.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 4,
+          "added": 844,
+          "deleted": 9,
+          "churn": 853,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "questions/generator/push_to_supabase.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 4,
+          "added": 495,
+          "deleted": 150,
+          "churn": 645,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/vite/mock-bank-plugin.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 4,
+          "added": 208,
+          "deleted": 157,
+          "churn": 365,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/components/MenuBar.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 4,
+          "added": 103,
+          "deleted": 4,
+          "churn": 107,
+          "lastTouched": "b13036c"
+        },
+        {
+          "path": "web/src/vite-env.d.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 4,
+          "added": 25,
+          "deleted": 0,
+          "churn": 25,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "questions/generator/kecukupan_data.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 3,
+          "added": 966,
+          "deleted": 33,
+          "churn": 999,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "questions/generator/peluang_kombinatorik.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 3,
+          "added": 530,
+          "deleted": 6,
+          "churn": 536,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "questions/generator/common.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 3,
+          "added": 218,
+          "deleted": 1,
+          "churn": 219,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "questions/generator/validate_bank.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 3,
+          "added": 207,
+          "deleted": 0,
+          "churn": 207,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/components/MaintenanceGate.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 3,
+          "added": 141,
+          "deleted": 1,
+          "churn": 142,
+          "lastTouched": "8d2e9fc"
+        },
+        {
+          "path": "web/src/lib/config.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 3,
+          "added": 71,
+          "deleted": 4,
+          "churn": 75,
+          "lastTouched": "b6a5b26"
+        },
+        {
+          "path": "questions/generator/aljabar.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 325,
+          "deleted": 1,
+          "churn": 326,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "generate_package_12_kuantitatif.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 156,
+          "deleted": 156,
+          "churn": 312,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "generate_package_12_pm.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 156,
+          "deleted": 156,
+          "churn": 312,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "generate_package_12.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 155,
+          "deleted": 155,
+          "churn": 310,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "web/src/components/LaporSoal.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 185,
+          "deleted": 1,
+          "churn": 186,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/pages/AttemptPage.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 142,
+          "deleted": 1,
+          "churn": 143,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/scripts/patch-android-signing.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 111,
+          "deleted": 12,
+          "churn": 123,
+          "lastTouched": "bb05b48"
+        },
+        {
+          "path": "web/src/components/PackageStatisticsPopover.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 108,
+          "deleted": 4,
+          "churn": 112,
+          "lastTouched": "21eccb5"
+        },
+        {
+          "path": "web/src/pages/SectionIntro.tsx",
+          "language": "tsx",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 81,
+          "deleted": 1,
+          "churn": 82,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/lib/appRuntime.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 72,
+          "deleted": 0,
+          "churn": 72,
+          "lastTouched": "bb05b48"
+        },
+        {
+          "path": "web/src/lib/supabase.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 40,
+          "deleted": 27,
+          "churn": 67,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/vite.config.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 60,
+          "deleted": 7,
+          "churn": 67,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src/lib/clock.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 2,
+          "added": 64,
+          "deleted": 0,
+          "churn": 64,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "questions/generator/deret_huruf.py",
+          "language": "python",
+          "role": "source",
+          "supporting": false,
+          "commits": 1,
+          "added": 390,
+          "deleted": 0,
+          "churn": 390,
+          "lastTouched": "a7d3bc6"
+        },
+        {
+          "path": "web/src/lib/bankSource.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 1,
+          "added": 322,
+          "deleted": 0,
+          "churn": 322,
+          "lastTouched": "bb05b48"
+        },
+        {
+          "path": "web/vite/bank-reader.ts",
+          "language": "typescript",
+          "role": "source",
+          "supporting": false,
+          "commits": 1,
+          "added": 297,
+          "deleted": 0,
+          "churn": 297,
+          "lastTouched": "bb05b48"
+        }
+      ],
+      "supportingHotFiles": [
+        {
+          "path": "web/src/styles.css",
+          "language": null,
+          "role": "other",
+          "supporting": true,
+          "commits": 16,
+          "added": 3067,
+          "deleted": 149,
+          "churn": 3216,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/README.md",
+          "language": null,
+          "role": "documentation",
+          "supporting": true,
+          "commits": 10,
+          "added": 340,
+          "deleted": 26,
+          "churn": 366,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "CLAUDE.md",
+          "language": null,
+          "role": "documentation",
+          "supporting": true,
+          "commits": 8,
+          "added": 119,
+          "deleted": 23,
+          "churn": 142,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "AGENTS.md",
+          "language": null,
+          "role": "documentation",
+          "supporting": true,
+          "commits": 8,
+          "added": 112,
+          "deleted": 16,
+          "churn": 128,
+          "lastTouched": "1718995"
+        },
+        {
+          "path": ".github/workflows/release-app.yml",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 7,
+          "added": 337,
+          "deleted": 28,
+          "churn": 365,
+          "lastTouched": "bb05b48"
+        },
+        {
+          "path": "README.md",
+          "language": null,
+          "role": "documentation",
+          "supporting": true,
+          "commits": 6,
+          "added": 287,
+          "deleted": 160,
+          "churn": 447,
+          "lastTouched": "35c35a3"
+        },
+        {
+          "path": "docs/TECHNICAL_REQUIREMENTS.md",
+          "language": null,
+          "role": "documentation",
+          "supporting": true,
+          "commits": 6,
+          "added": 263,
+          "deleted": 7,
+          "churn": 270,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": ".github/workflows/deploy-web.yml",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 5,
+          "added": 135,
+          "deleted": 3,
+          "churn": 138,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src-tauri/tauri.conf.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 5,
+          "added": 110,
+          "deleted": 12,
+          "churn": 122,
+          "lastTouched": "bb05b48"
+        },
+        {
+          "path": "supabase/schema.sql",
+          "language": null,
+          "role": "other",
+          "supporting": true,
+          "commits": 4,
+          "added": 708,
+          "deleted": 17,
+          "churn": 725,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "docs/TECHNICAL_REQUIREMENTS_V6.md",
+          "language": null,
+          "role": "documentation",
+          "supporting": true,
+          "commits": 4,
+          "added": 357,
+          "deleted": 11,
+          "churn": 368,
+          "lastTouched": "bb05b48"
+        },
+        {
+          "path": ".claude/skills/lpdp-question-generation/SKILL.md",
+          "language": null,
+          "role": "documentation",
+          "supporting": true,
+          "commits": 4,
+          "added": 184,
+          "deleted": 14,
+          "churn": 198,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "supabase/maintenance.sql",
+          "language": null,
+          "role": "other",
+          "supporting": true,
+          "commits": 4,
+          "added": 182,
+          "deleted": 16,
+          "churn": 198,
+          "lastTouched": "b6a5b26"
+        },
+        {
+          "path": "web/index.html",
+          "language": null,
+          "role": "other",
+          "supporting": true,
+          "commits": 4,
+          "added": 118,
+          "deleted": 3,
+          "churn": 121,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/package.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 4,
+          "added": 48,
+          "deleted": 3,
+          "churn": 51,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "questions/generator/README.md",
+          "language": null,
+          "role": "documentation",
+          "supporting": true,
+          "commits": 4,
+          "added": 37,
+          "deleted": 5,
+          "churn": 42,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/.env.example",
+          "language": null,
+          "role": "other",
+          "supporting": true,
+          "commits": 4,
+          "added": 29,
+          "deleted": 0,
+          "churn": 29,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": "web/src-tauri/Cargo.lock",
+          "language": null,
+          "role": "other",
+          "supporting": true,
+          "commits": 3,
+          "added": 5601,
+          "deleted": 2,
+          "churn": 5603,
+          "lastTouched": "bb05b48"
+        },
+        {
+          "path": "docs/TECHNICAL_REQUIREMENTS_V3.md",
+          "language": null,
+          "role": "documentation",
+          "supporting": true,
+          "commits": 3,
+          "added": 493,
+          "deleted": 9,
+          "churn": 502,
+          "lastTouched": "07c3e02"
+        },
+        {
+          "path": "supabase/schema_v2_reports.sql",
+          "language": null,
+          "role": "other",
+          "supporting": true,
+          "commits": 3,
+          "added": 297,
+          "deleted": 6,
+          "churn": 303,
+          "lastTouched": "2794437"
+        },
+        {
+          "path": ".agents/skills/lpdp-question-generation/SKILL.md",
+          "language": null,
+          "role": "documentation",
+          "supporting": true,
+          "commits": 3,
+          "added": 176,
+          "deleted": 6,
+          "churn": 182,
+          "lastTouched": "1718995"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/001.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/002.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/003.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/004.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/005.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/006.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/007.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/008.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/009.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/010.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/011.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/012.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/013.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/014.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/015.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/016.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/017.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/018.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        },
+        {
+          "path": "questions/bank/12/kuantitatif/019.json",
+          "language": null,
+          "role": "configuration",
+          "supporting": true,
+          "commits": 3,
+          "added": 86,
+          "deleted": 43,
+          "churn": 129,
+          "lastTouched": "dad6ab4"
+        }
+      ],
+      "hotPaths": [
+        {
+          "path": "web/src",
+          "commits": 26
+        },
+        {
+          "path": "questions/generator",
+          "commits": 17
+        },
+        {
+          "path": "web/vite",
+          "commits": 4
+        },
+        {
+          "path": ".",
+          "commits": 2
+        },
+        {
+          "path": "web",
+          "commits": 2
+        },
+        {
+          "path": "web/scripts",
+          "commits": 2
+        },
+        {
+          "path": "scripts",
+          "commits": 1
+        },
+        {
+          "path": "supabase/functions",
+          "commits": 1
+        }
+      ],
+      "supportingHotPaths": [
+        {
+          "path": "questions/bank",
+          "commits": 1003
+        },
+        {
+          "path": "web/src-tauri",
+          "commits": 70
+        },
+        {
+          "path": ".",
+          "commits": 29
+        },
+        {
+          "path": "web",
+          "commits": 28
+        },
+        {
+          "path": "docs",
+          "commits": 20
+        },
+        {
+          "path": "supabase",
+          "commits": 18
+        },
+        {
+          "path": "web/src",
+          "commits": 16
+        },
+        {
+          "path": ".github/workflows",
+          "commits": 13
+        },
+        {
+          "path": ".claude/agents",
+          "commits": 8
+        },
+        {
+          "path": "\".qoder/repowiki",
+          "commits": 8
+        },
+        {
+          "path": "questions/generator",
+          "commits": 6
+        },
+        {
+          "path": "questions/sample",
+          "commits": 6
+        },
+        {
+          "path": "exambrowser-ui",
+          "commits": 5
+        },
+        {
+          "path": "web/public",
+          "commits": 5
+        },
+        {
+          "path": ".agents/agents",
+          "commits": 4
+        },
+        {
+          "path": ".claude/skills",
+          "commits": 4
+        },
+        {
+          "path": ".agents/skills",
+          "commits": 3
+        },
+        {
+          "path": "questions",
+          "commits": 2
+        },
+        {
+          "path": "supabase/tests",
+          "commits": 2
+        },
+        {
+          "path": ".agents",
+          "commits": 1
+        },
+        {
+          "path": ".claude",
+          "commits": 1
+        },
+        {
+          "path": "supabase/functions",
+          "commits": 1
+        }
+      ],
+      "coChangePaths": [
+        {
+          "paths": [
+            "web/src",
+            "web/vite"
+          ],
+          "commits": 4
+        },
+        {
+          "paths": [
+            "questions/generator",
+            "web/src"
+          ],
+          "commits": 3
+        },
+        {
+          "paths": [
+            "questions/generator",
+            "web/vite"
+          ],
+          "commits": 3
+        },
+        {
+          "paths": [
+            "web",
+            "web/src"
+          ],
+          "commits": 2
+        },
+        {
+          "paths": [
+            "web",
+            "web/vite"
+          ],
+          "commits": 2
+        },
+        {
+          "paths": [
+            "questions/generator",
+            "supabase/functions"
+          ],
+          "commits": 1
+        },
+        {
+          "paths": [
+            "questions/generator",
+            "web"
+          ],
+          "commits": 1
+        },
+        {
+          "paths": [
+            "supabase/functions",
+            "web/src"
+          ],
+          "commits": 1
+        },
+        {
+          "paths": [
+            "supabase/functions",
+            "web/vite"
+          ],
+          "commits": 1
+        },
+        {
+          "paths": [
+            "web",
+            "web/scripts"
+          ],
+          "commits": 1
+        },
+        {
+          "paths": [
+            "web/scripts",
+            "web/src"
+          ],
+          "commits": 1
+        },
+        {
+          "paths": [
+            "web/scripts",
+            "web/vite"
+          ],
+          "commits": 1
+        }
+      ]
+    },
+    "coreAnalysis": {
+      "schemaVersion": 1,
+      "kind": "core-candidates",
+      "status": "ok",
+      "repoRoot": "/Users/mac/github.com/muhammadhabibullah/tbs-lpdp",
+      "filters": {
+        "ignorePatterns": [],
+        "ignoredCount": 0,
+        "ignoredSample": []
+      },
+      "candidates": [
+        {
+          "path": "web/src",
+          "score": 88,
+          "confidence": "high",
+          "files": 42,
+          "languages": [
+            {
+              "language": "tsx",
+              "files": 27
+            },
+            {
+              "language": "typescript",
+              "files": 15
+            }
+          ],
+          "reasons": [
+            "dense package/root",
+            "hot path in git history (26 commits)",
+            "contains repeatedly touched files",
+            "contains entry candidate"
+          ],
+          "evidence": {
+            "sourceFiles": [
+              "web/src/App.tsx",
+              "web/src/components/AppShell.tsx",
+              "web/src/components/DaftarSoal.tsx",
+              "web/src/components/DownloadApp.tsx",
+              "web/src/components/FeedbackFooter.tsx",
+              "web/src/components/HumanVerificationGate.tsx",
+              "web/src/components/InfoTooltip.tsx",
+              "web/src/components/InformasiSoal.tsx",
+              "web/src/components/KonfirmasiTes.tsx",
+              "web/src/components/LaporSoal.tsx"
+            ],
+            "hotFiles": [
+              {
+                "path": "web/src/pages/HomePage.tsx",
+                "language": "tsx",
+                "role": "source",
+                "supporting": false,
+                "commits": 12,
+                "added": 491,
+                "deleted": 92,
+                "churn": 583,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/components/FeedbackFooter.tsx",
+                "language": "tsx",
+                "role": "source",
+                "supporting": false,
+                "commits": 10,
+                "added": 194,
+                "deleted": 82,
+                "churn": 276,
+                "lastTouched": "b6a5b26"
+              },
+              {
+                "path": "web/src/pages/ReviewPage.tsx",
+                "language": "tsx",
+                "role": "source",
+                "supporting": false,
+                "commits": 8,
+                "added": 502,
+                "deleted": 85,
+                "churn": 587,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/lib/mockApi.ts",
+                "language": "typescript",
+                "role": "source",
+                "supporting": false,
+                "commits": 7,
+                "added": 759,
+                "deleted": 191,
+                "churn": 950,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/lib/types.ts",
+                "language": "typescript",
+                "role": "source",
+                "supporting": false,
+                "commits": 7,
+                "added": 259,
+                "deleted": 4,
+                "churn": 263,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/lib/api.ts",
+                "language": "typescript",
+                "role": "source",
+                "supporting": false,
+                "commits": 7,
+                "added": 139,
+                "deleted": 12,
+                "churn": 151,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/pages/ExamPage.tsx",
+                "language": "tsx",
+                "role": "source",
+                "supporting": false,
+                "commits": 6,
+                "added": 425,
+                "deleted": 46,
+                "churn": 471,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/lib/supabaseApi.ts",
+                "language": "typescript",
+                "role": "source",
+                "supporting": false,
+                "commits": 6,
+                "added": 251,
+                "deleted": 82,
+                "churn": 333,
+                "lastTouched": "2794437"
+              }
+            ],
+            "manifests": [
+              {
+                "path": "web/package.json",
+                "kind": "node",
+                "scripts": [
+                  "app:android",
+                  "app:build",
+                  "app:dev",
+                  "app:icons",
+                  "app:version",
+                  "build",
+                  "build:app",
+                  "build:bank",
+                  "dev",
+                  "dev:app",
+                  "preview",
+                  "tauri",
+                  "typecheck"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "path": "questions/generator",
+          "score": 75,
+          "confidence": "high",
+          "files": 12,
+          "languages": [
+            {
+              "language": "python",
+              "files": 12
+            }
+          ],
+          "reasons": [
+            "package/root with multiple source files",
+            "hot path in git history (17 commits)",
+            "contains repeatedly touched files"
+          ],
+          "evidence": {
+            "sourceFiles": [
+              "questions/generator/aljabar.py",
+              "questions/generator/aritmetika.py",
+              "questions/generator/common.py",
+              "questions/generator/deret_angka.py",
+              "questions/generator/deret_huruf.py",
+              "questions/generator/figures.py",
+              "questions/generator/kecukupan_data.py",
+              "questions/generator/kecukupan_data_predikat.py",
+              "questions/generator/peluang_kombinatorik.py",
+              "questions/generator/push_to_supabase.py"
+            ],
+            "hotFiles": [
+              {
+                "path": "questions/generator/figures.py",
+                "language": "python",
+                "role": "source",
+                "supporting": false,
+                "commits": 11,
+                "added": 1274,
+                "deleted": 2,
+                "churn": 1276,
+                "lastTouched": "d1e1590"
+              },
+              {
+                "path": "questions/generator/deret_angka.py",
+                "language": "python",
+                "role": "source",
+                "supporting": false,
+                "commits": 5,
+                "added": 1300,
+                "deleted": 49,
+                "churn": 1349,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "questions/generator/aritmetika.py",
+                "language": "python",
+                "role": "source",
+                "supporting": false,
+                "commits": 4,
+                "added": 844,
+                "deleted": 9,
+                "churn": 853,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "questions/generator/push_to_supabase.py",
+                "language": "python",
+                "role": "source",
+                "supporting": false,
+                "commits": 4,
+                "added": 495,
+                "deleted": 150,
+                "churn": 645,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "questions/generator/kecukupan_data.py",
+                "language": "python",
+                "role": "source",
+                "supporting": false,
+                "commits": 3,
+                "added": 966,
+                "deleted": 33,
+                "churn": 999,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "questions/generator/peluang_kombinatorik.py",
+                "language": "python",
+                "role": "source",
+                "supporting": false,
+                "commits": 3,
+                "added": 530,
+                "deleted": 6,
+                "churn": 536,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "questions/generator/common.py",
+                "language": "python",
+                "role": "source",
+                "supporting": false,
+                "commits": 3,
+                "added": 218,
+                "deleted": 1,
+                "churn": 219,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "questions/generator/validate_bank.py",
+                "language": "python",
+                "role": "source",
+                "supporting": false,
+                "commits": 3,
+                "added": 207,
+                "deleted": 0,
+                "churn": 207,
+                "lastTouched": "2794437"
+              }
+            ],
+            "manifests": [
+              {
+                "path": "questions/generator/requirements.txt",
+                "kind": "python",
+                "scripts": []
+              }
+            ]
+          }
+        },
+        {
+          "path": "web/vite",
+          "score": 62,
+          "confidence": "medium",
+          "files": 4,
+          "languages": [
+            {
+              "language": "typescript",
+              "files": 4
+            }
+          ],
+          "reasons": [
+            "package/root with multiple source files",
+            "hot path in git history (4 commits)",
+            "contains repeatedly touched files"
+          ],
+          "evidence": {
+            "sourceFiles": [
+              "web/vite/bank-artifact.ts",
+              "web/vite/bank-asset-plugin.ts",
+              "web/vite/bank-reader.ts",
+              "web/vite/mock-bank-plugin.ts"
+            ],
+            "hotFiles": [
+              {
+                "path": "web/vite/mock-bank-plugin.ts",
+                "language": "typescript",
+                "role": "source",
+                "supporting": false,
+                "commits": 4,
+                "added": 208,
+                "deleted": 157,
+                "churn": 365,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/vite/bank-reader.ts",
+                "language": "typescript",
+                "role": "source",
+                "supporting": false,
+                "commits": 1,
+                "added": 297,
+                "deleted": 0,
+                "churn": 297,
+                "lastTouched": "bb05b48"
+              }
+            ],
+            "manifests": [
+              {
+                "path": "web/package.json",
+                "kind": "node",
+                "scripts": [
+                  "app:android",
+                  "app:build",
+                  "app:dev",
+                  "app:icons",
+                  "app:version",
+                  "build",
+                  "build:app",
+                  "build:bank",
+                  "dev",
+                  "dev:app",
+                  "preview",
+                  "tauri",
+                  "typecheck"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "path": "web",
+          "score": 48,
+          "confidence": "medium",
+          "files": 1,
+          "languages": [
+            {
+              "language": "typescript",
+              "files": 1
+            }
+          ],
+          "reasons": [
+            "hot path in git history (2 commits)",
+            "contains repeatedly touched files",
+            "contains entry candidate"
+          ],
+          "evidence": {
+            "sourceFiles": [
+              "web/vite.config.ts"
+            ],
+            "hotFiles": [
+              {
+                "path": "web/src/pages/HomePage.tsx",
+                "language": "tsx",
+                "role": "source",
+                "supporting": false,
+                "commits": 12,
+                "added": 491,
+                "deleted": 92,
+                "churn": 583,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/components/FeedbackFooter.tsx",
+                "language": "tsx",
+                "role": "source",
+                "supporting": false,
+                "commits": 10,
+                "added": 194,
+                "deleted": 82,
+                "churn": 276,
+                "lastTouched": "b6a5b26"
+              },
+              {
+                "path": "web/src/pages/ReviewPage.tsx",
+                "language": "tsx",
+                "role": "source",
+                "supporting": false,
+                "commits": 8,
+                "added": 502,
+                "deleted": 85,
+                "churn": 587,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/lib/mockApi.ts",
+                "language": "typescript",
+                "role": "source",
+                "supporting": false,
+                "commits": 7,
+                "added": 759,
+                "deleted": 191,
+                "churn": 950,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/lib/types.ts",
+                "language": "typescript",
+                "role": "source",
+                "supporting": false,
+                "commits": 7,
+                "added": 259,
+                "deleted": 4,
+                "churn": 263,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/lib/api.ts",
+                "language": "typescript",
+                "role": "source",
+                "supporting": false,
+                "commits": 7,
+                "added": 139,
+                "deleted": 12,
+                "churn": 151,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/pages/ExamPage.tsx",
+                "language": "tsx",
+                "role": "source",
+                "supporting": false,
+                "commits": 6,
+                "added": 425,
+                "deleted": 46,
+                "churn": 471,
+                "lastTouched": "2794437"
+              },
+              {
+                "path": "web/src/lib/supabaseApi.ts",
+                "language": "typescript",
+                "role": "source",
+                "supporting": false,
+                "commits": 6,
+                "added": 251,
+                "deleted": 82,
+                "churn": 333,
+                "lastTouched": "2794437"
+              }
+            ],
+            "manifests": [
+              {
+                "path": "web/package.json",
+                "kind": "node",
+                "scripts": [
+                  "app:android",
+                  "app:build",
+                  "app:dev",
+                  "app:icons",
+                  "app:version",
+                  "build",
+                  "build:app",
+                  "build:bank",
+                  "dev",
+                  "dev:app",
+                  "preview",
+                  "tauri",
+                  "typecheck"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "path": "web/scripts",
+          "score": 26,
+          "confidence": "low",
+          "files": 2,
+          "languages": [
+            {
+              "language": "typescript",
+              "files": 2
+            }
+          ],
+          "reasons": [
+            "hot path in git history (2 commits)",
+            "contains repeatedly touched files"
+          ],
+          "evidence": {
+            "sourceFiles": [
+              "web/scripts/build-bank.ts",
+              "web/scripts/patch-android-signing.ts"
+            ],
+            "hotFiles": [
+              {
+                "path": "web/scripts/patch-android-signing.ts",
+                "language": "typescript",
+                "role": "source",
+                "supporting": false,
+                "commits": 2,
+                "added": 111,
+                "deleted": 12,
+                "churn": 123,
+                "lastTouched": "bb05b48"
+              }
+            ],
+            "manifests": [
+              {
+                "path": "web/package.json",
+                "kind": "node",
+                "scripts": [
+                  "app:android",
+                  "app:build",
+                  "app:dev",
+                  "app:icons",
+                  "app:version",
+                  "build",
+                  "build:app",
+                  "build:bank",
+                  "dev",
+                  "dev:app",
+                  "preview",
+                  "tauri",
+                  "typecheck"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "path": "supabase/functions",
+          "score": 18,
+          "confidence": "low",
+          "files": 2,
+          "languages": [
+            {
+              "language": "typescript",
+              "files": 2
+            }
+          ],
+          "reasons": [
+            "contains entry candidate"
+          ],
+          "evidence": {
+            "sourceFiles": [
+              "supabase/functions/question-report-digest/index.ts",
+              "supabase/functions/question-report-digest/render.ts"
+            ],
+            "hotFiles": [],
+            "manifests": []
+          }
+        }
+      ],
+      "summary": {
+        "highConfidence": 2,
+        "mediumConfidence": 2,
+        "candidateCount": 6
+      }
+    },
+    "diffImpact": {
+      "schemaVersion": 1,
+      "kind": "diff-impact",
+      "status": "ok",
+      "repoRoot": "/Users/mac/github.com/muhammadhabibullah/tbs-lpdp",
+      "baseRef": "HEAD",
+      "filters": {
+        "ignorePatterns": [],
+        "ignoredCount": 0,
+        "ignoredSample": []
+      },
+      "coreCodeRules": {
+        "status": "missing",
+        "includeCount": 0,
+        "excludeCount": 0,
+        "boundaryKind": "inferred-core-boundary"
+      },
+      "score": 0,
+      "severity": "low",
+      "reviewRecommended": false,
+      "attentionRequired": false,
+      "reasons": [],
+      "changedFiles": [],
+      "coreHits": [],
+      "hotHits": [],
+      "companionHits": [],
+      "metrics": {
+        "changedFiles": 0,
+        "changedLines": 0,
+        "coreHits": 0,
+        "hotHits": 0,
+        "companionHits": 0
+      }
+    },
+    "changeDrift": {
+      "schemaVersion": 1,
+      "kind": "change-drift",
+      "status": "ok",
+      "repoRoot": "/Users/mac/github.com/muhammadhabibullah/tbs-lpdp",
+      "baseRef": "HEAD",
+      "filters": {
+        "ignorePatterns": [],
+        "ignoredCount": 0,
+        "ignoredSample": []
+      },
+      "summary": {
+        "findingCount": 0,
+        "highConfidenceCount": 0,
+        "typeCounts": {},
+        "changedFiles": 0
+      },
+      "changedFiles": [],
+      "findings": []
+    },
+    "recommendedReads": [
+      {
+        "path": "questions/generator/aritmetika.py",
+        "language": "python",
+        "role": "source",
+        "supporting": false,
+        "priority": 75,
+        "reasons": [
+          "hot file under questions/generator",
+          "representative source under questions/generator"
+        ]
+      },
+      {
+        "path": "questions/generator/deret_angka.py",
+        "language": "python",
+        "role": "source",
+        "supporting": false,
+        "priority": 75,
+        "reasons": [
+          "hot file under questions/generator"
+        ]
+      },
+      {
+        "path": "questions/generator/figures.py",
+        "language": "python",
+        "role": "source",
+        "supporting": false,
+        "priority": 75,
+        "reasons": [
+          "hot file under questions/generator"
+        ]
+      },
+      {
+        "path": "web/scripts/patch-android-signing.ts",
+        "language": "typescript",
+        "role": "source",
+        "supporting": false,
+        "priority": 75,
+        "reasons": [
+          "hot file under web/scripts",
+          "representative source under web/scripts"
+        ]
+      },
+      {
+        "path": "web/src/components/FeedbackFooter.tsx",
+        "language": "tsx",
+        "role": "source",
+        "supporting": false,
+        "priority": 75,
+        "reasons": [
+          "hot file under web/src",
+          "hot file under web"
+        ]
+      },
+      {
+        "path": "web/src/pages/HomePage.tsx",
+        "language": "tsx",
+        "role": "source",
+        "supporting": false,
+        "priority": 75,
+        "reasons": [
+          "hot file under web/src",
+          "hot file under web"
+        ]
+      },
+      {
+        "path": "web/src/pages/ReviewPage.tsx",
+        "language": "tsx",
+        "role": "source",
+        "supporting": false,
+        "priority": 75,
+        "reasons": [
+          "hot file under web/src",
+          "hot file under web"
+        ]
+      },
+      {
+        "path": "web/vite/bank-reader.ts",
+        "language": "typescript",
+        "role": "source",
+        "supporting": false,
+        "priority": 75,
+        "reasons": [
+          "hot file under web/vite"
+        ]
+      },
+      {
+        "path": "web/vite/mock-bank-plugin.ts",
+        "language": "typescript",
+        "role": "source",
+        "supporting": false,
+        "priority": 75,
+        "reasons": [
+          "hot file under web/vite"
+        ]
+      },
+      {
+        "path": "questions/generator/aljabar.py",
+        "language": "python",
+        "role": "source",
+        "supporting": false,
+        "priority": 55,
+        "reasons": [
+          "representative source under questions/generator"
+        ]
+      },
+      {
+        "path": "supabase/functions/question-report-digest/index.ts",
+        "language": "typescript",
+        "role": "source",
+        "supporting": false,
+        "priority": 55,
+        "reasons": [
+          "representative source under supabase/functions",
+          "entry candidate"
+        ]
+      },
+      {
+        "path": "supabase/functions/question-report-digest/render.ts",
+        "language": "typescript",
+        "role": "source",
+        "supporting": false,
+        "priority": 55,
+        "reasons": [
+          "representative source under supabase/functions"
+        ]
+      },
+      {
+        "path": "web/scripts/build-bank.ts",
+        "language": "typescript",
+        "role": "source",
+        "supporting": false,
+        "priority": 55,
+        "reasons": [
+          "representative source under web/scripts"
+        ]
+      },
+      {
+        "path": "web/src/App.tsx",
+        "language": "tsx",
+        "role": "source",
+        "supporting": false,
+        "priority": 55,
+        "reasons": [
+          "representative source under web/src"
+        ]
+      },
+      {
+        "path": "web/src/components/AppShell.tsx",
+        "language": "tsx",
+        "role": "source",
+        "supporting": false,
+        "priority": 55,
+        "reasons": [
+          "representative source under web/src"
+        ]
+      },
+      {
+        "path": "web/vite.config.ts",
+        "language": "typescript",
+        "role": "source",
+        "supporting": false,
+        "priority": 55,
+        "reasons": [
+          "representative source under web"
+        ]
+      },
+      {
+        "path": "web/vite/bank-artifact.ts",
+        "language": "typescript",
+        "role": "source",
+        "supporting": false,
+        "priority": 55,
+        "reasons": [
+          "representative source under web/vite"
+        ]
+      },
+      {
+        "path": "web/vite/bank-asset-plugin.ts",
+        "language": "typescript",
+        "role": "source",
+        "supporting": false,
+        "priority": 55,
+        "reasons": [
+          "representative source under web/vite"
+        ]
+      },
+      {
+        "path": "web/src/main.tsx",
+        "language": "tsx",
+        "role": "source",
+        "supporting": false,
+        "priority": 45,
+        "reasons": [
+          "entry candidate"
+        ]
+      }
+    ],
+    "followUpActions": [
+      {
+        "id": "inspect-primary-core",
+        "type": "inspection",
+        "priority": "high",
+        "title": "Inspect primary core implementation before editing",
+        "reason": "Core candidates combine path, density, and git-history signals.",
+        "files": [
+          {
+            "path": "web/src/pages/HomePage.tsx",
+            "role": "source",
+            "language": "tsx"
+          },
+          {
+            "path": "web/src/components/FeedbackFooter.tsx",
+            "role": "source",
+            "language": "tsx"
+          },
+          {
+            "path": "web/src/pages/ReviewPage.tsx",
+            "role": "source",
+            "language": "tsx"
+          },
+          {
+            "path": "web/src/lib/mockApi.ts",
+            "role": "source",
+            "language": "typescript"
+          },
+          {
+            "path": "web/src/lib/types.ts",
+            "role": "source",
+            "language": "typescript"
+          },
+          {
+            "path": "web/src/lib/api.ts",
+            "role": "source",
+            "language": "typescript"
+          },
+          {
+            "path": "web/src/pages/ExamPage.tsx",
+            "role": "source",
+            "language": "tsx"
+          },
+          {
+            "path": "web/src/lib/supabaseApi.ts",
+            "role": "source",
+            "language": "typescript"
+          },
+          {
+            "path": "web/src/App.tsx",
+            "role": "source",
+            "language": "tsx"
+          },
+          {
+            "path": "web/src/components/AppShell.tsx",
+            "role": "source",
+            "language": "tsx"
+          }
+        ],
+        "passCheck": "The agent can name the target implementation files and likely callers before making changes."
+      },
+      {
+        "id": "apply-targeted-implementation",
+        "type": "implementation",
+        "priority": "high",
+        "title": "Make the requested behavior change in primary source first",
+        "reason": "Supporting files should follow source behavior, not substitute for the implementation change.",
+        "files": [
+          {
+            "path": "web/src/pages/HomePage.tsx",
+            "role": "source",
+            "language": "tsx"
+          },
+          {
+            "path": "web/src/components/FeedbackFooter.tsx",
+            "role": "source",
+            "language": "tsx"
+          },
+          {
+            "path": "web/src/pages/ReviewPage.tsx",
+            "role": "source",
+            "language": "tsx"
+          },
+          {
+            "path": "web/src/lib/mockApi.ts",
+            "role": "source",
+            "language": "typescript"
+          },
+          {
+            "path": "web/src/lib/types.ts",
+            "role": "source",
+            "language": "typescript"
+          },
+          {
+            "path": "web/src/lib/api.ts",
+            "role": "source",
+            "language": "typescript"
+          }
+        ],
+        "passCheck": "The requested behavior is implemented in source code and not only reflected in docs, locale, or fixture files."
+      },
+      {
+        "id": "sync-documentation",
+        "type": "companion-sync",
+        "priority": "medium",
+        "title": "Sync documentation when behavior or workflow changes",
+        "reason": "Documentation hotspots are useful follow-up checks but should not be mistaken for core implementation.",
+        "files": [
+          {
+            "path": "web/README.md",
+            "role": "documentation",
+            "language": null
+          },
+          {
+            "path": "CLAUDE.md",
+            "role": "documentation",
+            "language": null
+          },
+          {
+            "path": "AGENTS.md",
+            "role": "documentation",
+            "language": null
+          },
+          {
+            "path": "README.md",
+            "role": "documentation",
+            "language": null
+          },
+          {
+            "path": "docs/TECHNICAL_REQUIREMENTS.md",
+            "role": "documentation",
+            "language": null
+          },
+          {
+            "path": "docs/TECHNICAL_REQUIREMENTS_V6.md",
+            "role": "documentation",
+            "language": null
+          },
+          {
+            "path": ".claude/skills/lpdp-question-generation/SKILL.md",
+            "role": "documentation",
+            "language": null
+          },
+          {
+            "path": "questions/generator/README.md",
+            "role": "documentation",
+            "language": null
+          }
+        ],
+        "passCheck": "Docs that describe the changed behavior are updated, or the agent states why docs are unaffected."
+      },
+      {
+        "id": "validate-impact",
+        "type": "validation",
+        "priority": "medium",
+        "title": "Run focused validation for changed core or hotspot areas",
+        "reason": "Core candidates need focused validation after implementation changes.",
+        "files": [],
+        "passCheck": "Relevant focused tests, build, lint, smoke, or caller/API checks pass or failures are reported with exact output."
+      }
+    ],
+    "agentGuidance": {
+      "stance": "Use the pack as an evidence starting point, then inspect source files and rerun narrower analysis when project-specific noise is visible.",
+      "optionalReruns": [
+        {
+          "id": "rerun-with-explicit-ignore",
+          "reason": "Supporting hotspots are visible; rerun with explicit ignores if they distract from the requested implementation change.",
+          "commandArgs": [
+            "--ignore",
+            "web/**,CLAUDE.md,AGENTS.md,.github/workflows/release-app.yml,README.md,docs/**"
+          ],
+          "patterns": [
+            "web/**",
+            "CLAUDE.md",
+            "AGENTS.md",
+            ".github/workflows/release-app.yml",
+            "README.md",
+            "docs/**"
+          ]
+        }
+      ],
+      "reportFiltering": [
+        "Keep primary source candidates and supporting files in separate sections.",
+        "When a locale, docs, fixture, config, or migration file matters, explain it as companion sync or evidence, not as the primary implementation.",
+        "Do not recommend creating, editing, or populating internal core boundary configuration as a user-facing action.",
+        "Do not render the internal core boundary file name or internal core boundary label in user-visible reports, evidence boundaries, recommendations, or handoff prompts; use configured core boundary, inferred core boundary, or affected core files.",
+        "For an affected core chain, review diagnostic coverage through the shared observability rubric. If inspected evidence confirms that a named segment lacks readable logs or correlation, keep the gap and its causal impact as a reader-facing finding; do not infer the gap from logger-call counts or a runtime-only access failure.",
+        "If explicit ignores are used, mention the patterns and do not hide changed files that are directly relevant to the user's request."
+      ],
+      "currentFilters": {
+        "projectProfile": {
+          "ignorePatterns": [],
+          "ignoredCount": 0,
+          "ignoredSample": []
+        },
+        "historyProfile": {
+          "ignorePatterns": [],
+          "ignoredCount": 0,
+          "ignoredSample": []
+        },
+        "coreAnalysis": {
+          "ignorePatterns": [],
+          "ignoredCount": 0,
+          "ignoredSample": []
+        },
+        "diffImpact": {
+          "ignorePatterns": [],
+          "ignoredCount": 0,
+          "ignoredSample": []
+        }
+      },
+      "coreCandidateCount": 6
+    },
+    "reviewMatrix": [
+      {
+        "id": "core-supporting-separation",
+        "title": "Core candidates and supporting hotspots are separated",
+        "status": "ready",
+        "evidence": {
+          "primaryHotFiles": 40,
+          "supportingHotFiles": 40
+        },
+        "note": "Primary hot file lists should not be led by locale, docs, tests, fixtures, config, or migrations."
+      },
+      {
+        "id": "follow-up-edit-readiness",
+        "title": "Analysis can drive implementation work",
+        "status": "ready",
+        "evidence": {
+          "actionIds": [
+            "inspect-primary-core",
+            "apply-targeted-implementation",
+            "sync-documentation",
+            "validate-impact"
+          ]
+        },
+        "note": "For change/fix/optimize requests, convert follow-up actions into edits before final validation."
+      },
+      {
+        "id": "history-window-coverage",
+        "title": "History uses 30/90/180 style windows with confidence notes",
+        "status": "ready",
+        "evidence": {
+          "windows": [
+            30,
+            90,
+            180
+          ],
+          "confidence": "medium"
+        },
+        "note": "Low history confidence should downgrade hotspot certainty, not block source inspection."
+      },
+      {
+        "id": "large-repo-safety",
+        "title": "Large git output has explicit bounded handling",
+        "status": "ready",
+        "evidence": {
+          "trackedFiles": 1192,
+          "trackedFilesBeforeFilters": 1192
+        },
+        "note": "A non-empty tracked-file profile is the first regression guard for large repositories."
+      },
+      {
+        "id": "language-framework-coverage",
+        "title": "Language and framework signals are visible",
+        "status": "ready",
+        "evidence": {
+          "languages": [
+            "tsx",
+            "typescript",
+            "python"
+          ],
+          "frameworks": []
+        },
+        "note": "Framework signals guide inspection; they do not replace reading implementation files."
+      },
+      {
+        "id": "static-evidence-boundary",
+        "title": "Runtime, CI, and test claims stay unverified until separately checked",
+        "status": "ready",
+        "evidence": {
+          "boundary": "static-local-git-and-file-analysis",
+          "unverified": [
+            "tests passed",
+            "CI status",
+            "runtime behavior"
+          ]
+        },
+        "note": "Reports should cite commands for local counts and mark non-executed claims as UNVERIFIED."
+      },
+      {
+        "id": "core-diagnostic-coverage",
+        "title": "Affected core chains receive a diagnostic-coverage review",
+        "status": "not-applicable",
+        "evidence": {
+          "affectedCoreFiles": [],
+          "actionId": "review-core-diagnostic-coverage"
+        },
+        "note": "The static pack requests a semantic review; source, executable-route, or captured-output evidence must confirm any missing-log finding."
+      },
+      {
+        "id": "change-drift-companion-coverage",
+        "title": "Changed surfaces have companion evidence checks",
+        "status": "ready",
+        "evidence": {
+          "findingCount": 0,
+          "types": []
+        },
+        "note": "Companion drift findings are advisory; update the companion file or document why it is not needed."
+      },
+      {
+        "id": "agent-report-flexibility",
+        "title": "Agents can rerun or filter instead of accepting noisy defaults",
+        "status": "ready",
+        "evidence": {
+          "filtersApplied": false,
+          "optionalSupportingPatterns": [
+            "web/**",
+            "CLAUDE.md",
+            "AGENTS.md",
+            ".github/workflows/release-app.yml",
+            "README.md",
+            "docs/**"
+          ]
+        },
+        "note": "Optional filters are analysis aids; they should be disclosed when used."
+      }
+    ]
+  }
+}
