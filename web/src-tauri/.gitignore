@@ -6,6 +6,15 @@
 # scripts/patch-android-signing.ts, so nothing under gen/ belongs in git.
 /gen/
 
+# By-products of `npm run app:icons`. Only the desktop set beside them is read
+# from here (bundle.icon in tauri.conf.json). There is no iOS flavor at all, and
+# the Android launcher icons the APK actually ships are the ones the same script
+# writes into gen/android/app/src/main/res — a committed copy under icons/ is
+# never consulted by `tauri android init`, so keeping one only invites the
+# belief that the APK is branded when it is not.
+/icons/android/
+/icons/ios/
+
 # C-30: signing material never enters the repository.
 /gen/android/release.jks
 keystore.properties

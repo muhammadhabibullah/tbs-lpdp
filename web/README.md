@@ -222,6 +222,35 @@ npm run app:android   # tauri android build --apk  (Java 17 + Android SDK/NDK)
 work. Outside Tauri there is no persistent bank cache and no updater, so the app
 falls back to the bundled snapshot on each load.
 
+### Icons
+
+```bash
+npm run app:icons     # tauri icon src-tauri/icon-source/app-icon.json
+```
+
+`src-tauri/icon-source/` holds the manifest and the three Android layers;
+`default` points at `public/favicon.svg`, so the site's mortarboard is the one
+source of truth for the brand mark and desktop icons need nothing else. The
+generated sets in `src-tauri/icons/` are committed and read by the desktop
+bundler directly.
+
+Android is the exception, and the reason this script exists. `tauri android
+init` builds `src-tauri/gen/android/` from the CLI's own template, launcher
+icons included, and never consults `src-tauri/icons/` — so an APK built
+straight after `init` carries the **Tauri** logo no matter what is committed
+here. `tauri icon` writes into `gen/android/app/src/main/res/` whenever that
+project exists, so run it *after* `init` and before the APK build:
+
+```bash
+npx tauri android init && npm run app:icons && npm run app:android
+```
+
+`release-app.yml` does exactly this, and fails the job if the adaptive-icon
+descriptor is missing afterwards. Android 8+ draws only the middle ~66% of the
+adaptive layers, so `foreground.svg` and `monochrome.svg` inset the mark 0.8×
+about the centre; `background.svg` is the favicon's gradient with the rounding
+removed, because the launcher supplies the shape by masking it.
+
 ### Signing, and why the installers are still "unidentified"
 
 macOS builds are **ad-hoc signed** (`bundle.macOS.signingIdentity: "-"`). Apple

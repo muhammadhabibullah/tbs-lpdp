@@ -35,6 +35,7 @@ Both selectors are `define`d as literals in `vite.config.ts` so the dead branch 
 - `exambrowser-ui/` — PUSMENDIK CBT screenshots; the UI must mimic these
 - `web/` — the SPA (React + Vite + TS, hash routing; `base: '/tbs-lpdp/'` on the web, `'./'` under Tauri); see `web/README.md`
 - `web/src-tauri/` — the offline app shell (Tauri 2: config, Rust entry, capabilities, icons)
+- `web/src-tauri/icon-source/` — icon manifest + the three Android adaptive layers; `npm run app:icons` regenerates `web/src-tauri/icons/` from them. Android launcher icons must be regenerated *after* `tauri android init`, which otherwise leaves the Tauri logo on the APK
 - `web/vite/bank-reader.ts`, `web/vite/bank-artifact.ts`, `web/scripts/build-bank.ts` — compile `questions/bank/` into the published `manifest.json` + `bank-<digest>.json`; versions come from git history so the output is reproducible (AP-3/NF-32)
 - `.github/workflows/deploy-web.yml` — builds `web/`, publishes the bank artifact, deploys to GitHub Pages
 - `.github/workflows/release-app.yml` — tag `app-v*` → desktop matrix + signed Android APK → one GitHub Release
@@ -65,6 +66,7 @@ cd web && npm run build:bank -- --out dist/bank        # publishable bank artifa
 cd web && npm run dev:app                              # offline-app UI in a plain browser
 cd web && npm run app:dev                              # the Tauri app (needs a Rust toolchain)
 cd web && npm run app:build                            # installers → src-tauri/target/release/bundle
+cd web && npm run app:icons                            # regenerate app icons from web/public/favicon.svg
 ```
 
 `VITE_USE_MOCK=true` is a **dev-only** path: it serves the bank (answer keys included) from a

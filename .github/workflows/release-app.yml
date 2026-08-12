@@ -227,6 +227,25 @@ jobs:
         working-directory: web
         run: npx tauri android init --ci
 
+      # `tauri android init` seeds gen/android with the Tauri CLI's own
+      # placeholder launcher icons and never looks at src-tauri/icons, so
+      # without this step the APK ships the Tauri logo. `tauri icon` writes
+      # straight into gen/android/app/src/main/res once that project exists,
+      # which it now does — order matters.
+      - name: Brand the launcher icons
+        working-directory: web
+        run: |
+          set -euo pipefail
+          npm run app:icons
+          # The template ships no adaptive-icon descriptor, so this file exists
+          # only if `tauri icon` really wrote into the Gradle project. Catching
+          # a silent no-op here beats discovering it on a published APK.
+          RES=src-tauri/gen/android/app/src/main/res
+          if [ ! -f "$RES/mipmap-anydpi-v26/ic_launcher.xml" ]; then
+            echo "::error::launcher icons were not written to gen/android — the APK would ship the Tauri logo"
+            exit 1
+          fi
+
       - name: Configure release signing (C-30)
         working-directory: web
         env:

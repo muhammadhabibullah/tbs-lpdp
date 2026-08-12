@@ -1,0 +1,17 @@
+<!-- Adaptive-icon foreground layer (Android 8+): the mortarboard alone, no tile.
+     Android draws only the middle ~66% of this canvas — the rest is reserved for
+     the launcher's mask and parallax — so the mark from public/favicon.svg is
+     scaled 0.8x about the centre to land inside that safe zone. Keep the two
+     path definitions identical to the favicon; only the wrapping transform differs. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <g transform="translate(24 24) scale(0.8) translate(-24 -25.17)">
+    <path d="M6.6 19.65 24 10.95l17.4 8.7-17.4 8.7-17.4-8.7Z" fill="#fff" />
+    <path
+      d="M13.85 24.73V32.7c0 2.9 5.08 5.08 10.15 5.08s10.15-2.18 10.15-5.08v-7.97"
+      fill="none"
+      stroke="#fff"
+      stroke-width="3.2"
+      stroke-linecap="round"
+    />
+  </g>
+</svg>
