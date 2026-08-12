@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-002",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "EFEKTUASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Perencanaan"
+    },
+    {
+      "key": "B",
+      "text": "Perancangan"
+    },
+    {
+      "key": "C",
+      "text": "Pelaksanaan"
+    },
+    {
+      "key": "D",
+      "text": "Penundaan"
+    },
+    {
+      "key": "E",
+      "text": "Pengawasan"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Perencanaan adalah penyusunan rencana sebelum tindakan dilakukan.",
+    "B": "Perancangan bermakna desain atau formulasi konsep awal.",
+    "C": "Benar. Efaktuasi adalah proses merealisasikan atau melaksanakan suatu rencana menjadi tindakan nyata.",
+    "D": "Penundaan adalah tindakan mengulur waktu pelaksanaan.",
+    "E": "Pengawasan adalah monitoring terhadap proses yang berjalan."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-023",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Wadah A berisi 40 liter larutan gula dengan konsentrasi 15%. Wadah B berisi 60 liter larutan gula dengan konsentrasi 25%. Jika 10 liter larutan dari Wadah A dan 20 liter larutan dari Wadah B dicampurkan ke dalam Wadah C, berapa persentase konsentrasi gula pada Wadah C?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "18,33%"
+    },
+    {
+      "key": "B",
+      "text": "20,00%"
+    },
+    {
+      "key": "C",
+      "text": "21,67%"
+    },
+    {
+      "key": "D",
+      "text": "22,50%"
+    },
+    {
+      "key": "E",
+      "text": "23,33%"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. 18,33% diperoleh dari kesalahan mengalikan volume awal wadah.",
+    "B": "Salah. 20,00% adalah rata-rata aritmetika sederhana (15 + 25)/2.",
+    "C": "Benar. Gula dari Wadah A = 10 x 15% = 1,5 liter. Gula dari Wadah B = 20 x 25% = 5,0 liter. Total gula di Wadah C = 1,5 + 5,0 = 6,5 liter. Total volume Wadah C = 10 + 20 = 30 liter. Konsentrasi Wadah C = (6,5 / 30) x 100% = 65/3 % = 21,67%.",
+    "D": "Salah. 22,50% adalah pembagian yang salah pada bobot campuran.",
+    "E": "Salah. 23,33% memperhitungkan proporsi terbalik."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "9-pemecahan_masalah-001",
+  "package": 9,
+  "subtest": "pemecahan_masalah",
+  "number": 1,
+  "type": "peluang_kombinatorik",
+  "question_text": "Dua buah dadu setimbang dilempar bersama-sama satu kali. Peluang jumlah mata dadu yang muncul sama dengan 6 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "1/12"
+    },
+    {
+      "key": "B",
+      "text": "5/12"
+    },
+    {
+      "key": "C",
+      "text": "1/6"
+    },
+    {
+      "key": "D",
+      "text": "5/36"
+    },
+    {
+      "key": "E",
+      "text": "5/21"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 1/12 diperoleh dengan hanya menghitung 3 pasangan nilai yang berbeda dan mengabaikan bahwa pasangan seperti (1, 2) dan (2, 1) merupakan dua hasil berbeda.",
+    "B": "Salah. Nilai 5/12 diperoleh dengan memakai 12 sebagai banyak hasil yang mungkin, yaitu jumlah kedua sisi dadu, bukan banyak pasangan yang mungkin.",
+    "C": "Salah. Nilai 1/6 diperoleh dengan menganggap setiap kemungkinan jumlah mata dadu berpeluang sama seperti satu sisi dadu, padahal jumlah 7 jauh lebih sering muncul daripada 2.",
+    "D": "Benar. Ruang sampelnya memuat 6 × 6 = 36 pasangan terurut. Pasangan yang berjumlah 6 ada 5, sehingga peluangnya 5/36.",
+    "E": "Salah. Nilai 5/21 diperoleh dengan memakai 21 sebagai banyak hasil yang mungkin, yaitu banyak pasangan mata dadu tanpa memperhatikan urutan."
+  },
+  "difficulty": "medium",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

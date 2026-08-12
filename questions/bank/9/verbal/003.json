@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-003",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "EKSKORIASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pengelupasan kulit"
+    },
+    {
+      "key": "B",
+      "text": "Pembengkakan jaringan"
+    },
+    {
+      "key": "C",
+      "text": "Penyumbatan pembuluh"
+    },
+    {
+      "key": "D",
+      "text": "Pendarahan dalam"
+    },
+    {
+      "key": "E",
+      "text": "Penulangan sendi"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Ekskoriasi adalah istilah medis/biologi untuk pengelupasan kulit atau luka lecet pada permukaan kulit.",
+    "B": "Pembengkakan jaringan merujuk pada edema atau inflamasi.",
+    "C": "Penyumbatan pembuluh merujuk pada penyumbatan atau oklusi.",
+    "D": "Pendarahan dalam merujuk pada hematoma atau pendarahan internal.",
+    "E": "Penulangan sendi merujuk pada ossifikasi atau ankilosis."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

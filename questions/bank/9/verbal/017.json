@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-017",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat berikut yang merupakan perbaikan dari kalimat 'Agar supaya proses evakuasi berjalan lancar, petugas mengimbau masyarakat untuk tenang' menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Agar supaya proses evakuasi berjalan lancar, petugas mengimbau masyarakat agar tenang."
+    },
+    {
+      "key": "B",
+      "text": "Supaya agar proses evakuasi berjalan lancar, petugas mengimbau masyarakat untuk tenang."
+    },
+    {
+      "key": "C",
+      "text": "Agar proses evakuasi berjalan dengan lancar sekali, petugas mengimbau masyarakat untuk tenang."
+    },
+    {
+      "key": "D",
+      "text": "Agar proses evakuasi berjalan lancar, petugas mengimbau masyarakat untuk tenang."
+    },
+    {
+      "key": "E",
+      "text": "Untuk agar proses evakuasi berjalan lancar, petugas mengimbau masyarakat untuk tenang."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah karena masih mempertahankan pleonisme kata 'agar supaya'.",
+    "B": "Salah karena membalik gabungan pleonastis menjadi 'supaya agar'.",
+    "C": "Salah karena menambahkan pemborosan kata 'dengan' dan 'sekali'.",
+    "D": "Benar. Mengeliminasi pleonisme (pemborosan kata) 'agar supaya' menjadi cukup 'Agar', sehingga kalimat memenuhi kaidah kalimat efektif PUEBI.",
+    "E": "Salah karena gabungan kata tugas 'Untuk agar' redundan."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

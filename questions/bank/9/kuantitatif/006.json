@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-006",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 6,
+  "type": "aljabar",
+  "question_text": "Jika y = 2x² + 6x − 5, nilai y untuk x = 4 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "51"
+    },
+    {
+      "key": "B",
+      "text": "3"
+    },
+    {
+      "key": "C",
+      "text": "61"
+    },
+    {
+      "key": "D",
+      "text": "83"
+    },
+    {
+      "key": "E",
+      "text": "35"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. y = 2 × (4)² + 6 × (4) − 5 = 32 + 24 − 5 = 51.",
+    "B": "Salah. Nilai 3 diperoleh dengan salah tanda pada suku + 6x ketika mensubstitusikan x = 4.",
+    "C": "Salah. Nilai 61 diperoleh dengan salah tanda pada tetapan − 5.",
+    "D": "Salah. Nilai 83 diperoleh dengan mengkuadratkan 2x sebagai satu kesatuan, yaitu (2 × 4)², padahal yang dikuadratkan hanya x.",
+    "E": "Salah. Nilai 35 diperoleh dengan membaca 2x² sebagai 2 × 2 × x sehingga pangkat dua berubah menjadi perkalian dua."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

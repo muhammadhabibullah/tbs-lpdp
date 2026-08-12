@@ -1,0 +1,43 @@
+{
+  "id": "9-pemecahan_masalah-008",
+  "package": 9,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah rumah sakit rujukan daerah mengalami lonjakan pasien darurat sementara kapasitas tempat tidur ruang rawat inap sudah mencapai 95%. Aturan operasional menetapkan:\n1. Aturan I: Pasien kritis ICU harus segera mendapatkan tempat tidur rujukan darurat.\n2. Aturan II: Operasi elektif (terencana) dapat ditunda maksimal 48 jam jika kondisi kapasitas kritis.\n3. Aturan III: Pasien non-darurat tidak boleh dirawat inap tanpa surat rujukan poli spesialis.\n\nLangkah operasional manakah yang PALING EFEKTIF diambil Direktur Pelayanan Medis untuk menjaga keselamatan pasien sekaligus mengurai krisis kapasitas?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Memulangkan pasien non-darurat lebih awal tanpa verifikasi dokter spesialis."
+    },
+    {
+      "key": "B",
+      "text": "Menunda sementara pelaksanaan operasi elektif 24-48 jam untuk mengosongkan bangsal bedah bagi penampungan pasien darurat, sambil menjaga ketersediaan ruang ICU untuk kasus kritis."
+    },
+    {
+      "key": "C",
+      "text": "Menolak seluruh rujukan pasien darurat baru hingga kapasitas tempat tidur turun di bawah 80%."
+    },
+    {
+      "key": "D",
+      "text": "Mengubah fungsi tempat tidur ICU menjadi tempat tidur rawat inap umum bagi pasien non-kritis."
+    },
+    {
+      "key": "E",
+      "text": "Mengarahkan pasien ICU untuk dirawat di poliklinik rawat jalan."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah karena melanggar keselamatan pasien dan prosedur medis.",
+    "B": "Benar. Sesuai Aturan II, menunda operasi elektif adalah kebijakan sah dan aman secara klinis untuk mengosongkan kapasitas tempat tidur bagi pasien darurat tanpa mengganggu ICU (Aturan I).",
+    "C": "Salah karena menolak pasien darurat melanggar etika dan keselamatan jiwa.",
+    "D": "Salah karena menurunkan standar penanganan pasien kritis ICU.",
+    "E": "Salah karena poliklinik rawat jalan tidak memiliki peralatan perawatan intensif ICU."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-007",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "PROLIFERASI <>< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pertumbuhan"
+    },
+    {
+      "key": "B",
+      "text": "Perkembangan"
+    },
+    {
+      "key": "C",
+      "text": "Penggandaan"
+    },
+    {
+      "key": "D",
+      "text": "Reduksi"
+    },
+    {
+      "key": "E",
+      "text": "Ekspansi"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Pertumbuhan adalah sinonim/proses prolferasi.",
+    "B": "Perkembangan sejalan dengan proliferasi.",
+    "C": "Penggandaan adalah pembiakan pesat (proliferasi).",
+    "D": "Benar. Proliferasi bermakna pembiakan/pertumbuhan yang sangat pesat, sedangkan reduksi bermakna pengurangan atau penurunan jumlah.",
+    "E": "Ekspansi berarti perluasan, yang sejalan dengan proliferasi."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

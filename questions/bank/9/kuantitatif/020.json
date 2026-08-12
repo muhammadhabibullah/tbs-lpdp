@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-020",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Seorang pedagang membeli 50 kg apel dengan harga total Rp1.000.000,00. Sebanyak 10 kg apel busuk dan tidak dapat dijual. Jika pedagang ingin memperoleh keuntungan total sebesar 20% dari modal awal, berapa harga jual per kg untuk apel yang tersisa?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp27.500,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp30.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp32.500,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp35.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp36.000,00"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Rp27.500 x 40 = Rp1.100.000 (untung 10%).",
+    "B": "Benar. Modal = Rp1.000.000. Target penerimaan = 1.000.000 x (1 + 0,20) = Rp1.200.000. Apel tersisa = 50 - 10 = 40 kg. Harga jual per kg = 1.200.000 / 40 = Rp30.000,00.",
+    "C": "Salah. Rp32.500 x 40 = Rp1.300.000 (untung 30%).",
+    "D": "Salah. Rp35.000 x 40 = Rp1.400.000 (untung 40%).",
+    "E": "Salah. Rp36.000 diperoleh jika tidak memperhitungkan apel yang busuk (1.200.000 / 50 x faktor)."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

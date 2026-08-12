@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-022",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Tujuan utama penulis dalam menyampaikan teks tersebut adalah ...",
+  "image": null,
+  "passage": "Fenomena pulau bahang perkotaan (urban heat island) menyebabkan suhu udara di pusat kota lebih tinggi 2–5 derajat Celsius dibandingkan wilayah pinggiran. Hal ini dipicu oleh tingginya paparan permukaan beton dan aspal yang menyerap panas serta minimnya ruang terbuka hijau. Infrastruktur hijau seperti atap hijau (green roof), taman vertikal, dan hutan kota terbukti efektif menurunkan suhu mikro perkotaan melalui proses evapotranspirasi. Selain menurunkan suhu, vegetasi perkotaan juga menyerap emisi karbon dan mengurangi beban limpasan air hujan saat curah hujan tinggi. Pemerintah daerah perlu mengintegrasikan kewajiban penyediaan ruang hijau dalam izin mendirikan bangunan untuk menjamin keberlanjutan lingkungan kota.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Menjelaskan proses kimia evapotranspirasi pada tanaman perkotaan."
+    },
+    {
+      "key": "B",
+      "text": "Melarang penggunaan bahan beton dan aspal pada bangunan di pusat kota."
+    },
+    {
+      "key": "C",
+      "text": "Mendorong pemerintah daerah mengintegrasikan infrastruktur hijau dalam kebijakan pembangunan kota."
+    },
+    {
+      "key": "D",
+      "text": "Membandingkan tingkat emisi karbon antara wilayah kota dan wilayah pinggiran."
+    },
+    {
+      "key": "E",
+      "text": "Mengkritik pengembang gedung yang tidak memiliki sistem penampungan air hujan."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Evapotranspirasi hanya dijelaskan sepintas sebagai mekanisme penurunan suhu.",
+    "B": "Penulis tidak melarang beton/aspal, melainkan memberikan solusi vegetasi.",
+    "C": "Benar. Kalimat penutup menegaskan ide pokok rekomendasi penulis agar Pemda mengintegrasikan kewajiban ruang hijau dalam IMB.",
+    "D": "Perbandingan emisi karbon bukan fokus pembahasan teks.",
+    "E": "Teks tidak fokus mengkritik pengembang gedung secara personal."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

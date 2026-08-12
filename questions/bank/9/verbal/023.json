@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-023",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Mengapa fenomena pulau bahang perkotaan (urban heat island) dapat terjadi?",
+  "image": null,
+  "passage": "Fenomena pulau bahang perkotaan (urban heat island) menyebabkan suhu udara di pusat kota lebih tinggi 2–5 derajat Celsius dibandingkan wilayah pinggiran. Hal ini dipicu oleh tingginya paparan permukaan beton dan aspal yang menyerap panas serta minimnya ruang terbuka hijau. Infrastruktur hijau seperti atap hijau (green roof), taman vertikal, dan hutan kota terbukti efektif menurunkan suhu mikro perkotaan melalui proses evapotranspirasi. Selain menurunkan suhu, vegetasi perkotaan juga menyerap emisi karbon dan mengurangi beban limpasan air hujan saat curah hujan tinggi. Pemerintah daerah perlu mengintegrasikan kewajiban penyediaan ruang hijau dalam izin mendirikan bangunan untuk menjamin keberlanjutan lingkungan kota.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Karena peningkatan curah hujan yang berlebihan di pusat kota."
+    },
+    {
+      "key": "B",
+      "text": "Karena penggunaan atap hijau dan taman vertikal yang tidak terawat."
+    },
+    {
+      "key": "C",
+      "text": "Karena perbedaan tinggi bangunan antara pusat kota dan pinggiran."
+    },
+    {
+      "key": "D",
+      "text": "Karena hilangnya emisi karbon dari aktivitas transportasi kota."
+    },
+    {
+      "key": "E",
+      "text": "Karena dominasi material penyerap panas dan terbatasnya keberadaan ruang terbuka hijau."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Curah hujan tinggi bukan pemicu utama pulau bahang perkotaan.",
+    "B": "Atap hijau adalah solusi penurun suhu, bukan pemicu.",
+    "C": "Tinggi bangunan bukan sebab utama yang dijelaskan dalam bacaan.",
+    "D": "Hilangnya emisi karbon kontradiktif dengan fakta lingkungan.",
+    "E": "Benar. Teks menyebutkan 'dipicu oleh tingginya paparan permukaan beton dan aspal yang menyerap panas serta minimnya ruang terbuka hijau'."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

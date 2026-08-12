@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-020",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan di atas, kendala utama dalam adopsi teknologi pemuliaan molekuler tanaman di Indonesia adalah ...",
+  "image": null,
+  "passage": "Pengembangan varietas tanaman pangan toleran kekeringan melalui rekayasa genetika dan pemuliaan molekuler menjadi strategi kunci dalam menghadapi perubahan iklim global. Di Indonesia, ancaman fenomena El Niño yang berkepanjangan dapat memicu penurunan produktivitas padi hingga 20%. Tanaman hasil pemuliaan molekuler ini dirancang memiliki sistem perakaran yang lebih dalam serta efisiensi penggunaan air yang lebih tinggi tanpa mengurangi potensi hasil panen. Kendati demikian, penerapan teknologi ini masih menghadapi tantangan regulasi keamanan hayati serta resistensi sebagian kelompok masyarakat terkait isu keamanan pangan. Oleh karena itu, penguatan edukasi berbasis bukti ilmiah serta pendampingan bagi petani sangat diperlukan agar adopsi inovasi ini dapat berlangsung secara optimal.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Tingginya biaya pembuatan sistem perakaran tanaman di laboratorium."
+    },
+    {
+      "key": "B",
+      "text": "Kegagalan tanaman hasil pemuliaan dalam mempertahankan hasil panen."
+    },
+    {
+      "key": "C",
+      "text": "Ketidakmampuan petani dalam mempelajari teknik rekayasa genetika."
+    },
+    {
+      "key": "D",
+      "text": "Regulasi keamanan hayati dan kekhawatiran sebagian masyarakat."
+    },
+    {
+      "key": "E",
+      "text": "Kurangnya pasokan air irigasi di wilayah pertanian padi."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Biaya pembuatan laboratorium tidak disebutkan dalam teks.",
+    "B": "Teks justru menyatakan potensi hasil panen tidak berkurang.",
+    "C": "Kemampuan teknis petani bukan hambatan utama yang disebutkan dalam teks.",
+    "D": "Benar. Teks secara eksplisit menyatakan 'penerapan teknologi ini masih menghadapi tantangan regulasi keamanan hayati serta resistensi sebagian kelompok masyarakat terkait isu keamanan pangan'.",
+    "E": "Kurangnya pasokan irigasi adalah dampak iklim, bukan kendala adopsi teknologi."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

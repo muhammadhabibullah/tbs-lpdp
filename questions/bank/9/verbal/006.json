@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-006",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "SKEPTIS <>< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Ragu-ragu"
+    },
+    {
+      "key": "B",
+      "text": "Optimis"
+    },
+    {
+      "key": "C",
+      "text": "Curiga"
+    },
+    {
+      "key": "D",
+      "text": "Apatis"
+    },
+    {
+      "key": "E",
+      "text": "Pesimis"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Ragu-ragu adalah sinonim dari skeptis.",
+    "B": "Benar. Skeptis bermakna selalu ragu dan tidak percaya, sedangkan optimis bermakna penuh keyakinan dan percaya pada hasil baik.",
+    "C": "Curiga adalah wujud dari sikap skeptis.",
+    "D": "Apatis berarti tidak peduli, bukan lawan kata berkeyakinan.",
+    "E": "Pesimis adalah sikap memandang buruk, tidak berlawanan langsung dengan skeptisisme."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

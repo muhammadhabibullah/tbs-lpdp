@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-025",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Sebuah limas tegak alas persegi memiliki panjang sisi alas 12 cm dan tinggi limas 8 cm. Berapakah luas permukaan total limas tersebut?",
+  "image": "images/limas-persegi.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "336 cm²"
+    },
+    {
+      "key": "B",
+      "text": "360 cm²"
+    },
+    {
+      "key": "C",
+      "text": "384 cm²"
+    },
+    {
+      "key": "D",
+      "text": "408 cm²"
+    },
+    {
+      "key": "E",
+      "text": "432 cm²"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. 336 cm² mengalikan tinggi limas langsung sebagai tinggi segitiga tegak.",
+    "B": "Salah. 360 cm² salah dalam menghitung luas segitiga sisi tegak.",
+    "C": "Benar. Luas alas persegi = 12 x 12 = 144 cm². Tinggi segitiga sisi tegak s = √(tinggi² + (sisi/2)²) = √(8² + 6²) = √(64 + 36) = √100 = 10 cm. Luas 1 segitiga sisi tegak = (1/2) x 12 x 10 = 60 cm². Luas 4 segitiga sisi tegak = 4 x 60 = 240 cm². Luas permukaan total = 144 + 240 = 384 cm².",
+    "D": "Salah. 408 cm² salah menghitung keliling alas.",
+    "E": "Salah. 432 cm² menghitung tinggi segitiga tegak sebesar 12 cm."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "9-pemecahan_masalah-009",
+  "package": 9,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Berdasarkan data tabel tersebut, wilayah manakah yang memiliki proporsi pasokan energi terbarukan tertinggi terhadap total kebutuhan energinya?",
+  "image": null,
+  "passage": "Wilayah | Kebutuhan Energi (MW) | Pasokan Energi Terbarukan (MW) | Target Efisiensi (%)\nWilayah A | 450 | 180 | 15\nWilayah B | 600 | 300 | 20\nWilayah C | 350 | 105 | 10\nWilayah D | 500 | 225 | 25",
+  "options": [
+    {
+      "key": "A",
+      "text": "Wilayah A"
+    },
+    {
+      "key": "B",
+      "text": "Wilayah B"
+    },
+    {
+      "key": "C",
+      "text": "Wilayah C"
+    },
+    {
+      "key": "D",
+      "text": "Wilayah D"
+    },
+    {
+      "key": "E",
+      "text": "Wilayah A dan Wilayah D setara"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Wilayah A = 180/450 = 40,0%.",
+    "B": "Benar. Proporsi pasokan EBT: Wilayah A = 180/450 = 40,0%; Wilayah B = 300/600 = 50,0%; Wilayah C = 105/350 = 30,0%; Wilayah D = 225/500 = 45,0%. Proporsi tertinggi dimiliki oleh Wilayah B (50,0%).",
+    "C": "Salah. Wilayah C = 105/350 = 30,0% (paling rendah).",
+    "D": "Salah. Wilayah D = 225/500 = 45,0%.",
+    "E": "Salah karena Wilayah A (40%) dan Wilayah D (45%) tidak setara."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

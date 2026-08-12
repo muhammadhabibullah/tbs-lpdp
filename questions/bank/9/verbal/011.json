@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-011",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "APOTEKER : OBAT = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "DOKTER : PASIEN"
+    },
+    {
+      "key": "B",
+      "text": "GURU : MURID"
+    },
+    {
+      "key": "C",
+      "text": "KOKI : RESTORAN"
+    },
+    {
+      "key": "D",
+      "text": "PETANI : SAWAH"
+    },
+    {
+      "key": "E",
+      "text": "ARSITEK : CETAK BIRU"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Dokter merawat pasien, bukan meracik/membuat produk karya profesionalnya.",
+    "B": "Guru mengajar murid, bukan pembuat objek karya.",
+    "C": "Koki bekerja di restoran (tempat), bukan hubungan profesi terhadap produk rancangannya.",
+    "D": "Petani bekerja di sawah (lokasi).",
+    "E": "Benar. Apoteker adalah profesi ahli yang meracik/menyiapkan obat, sebagaimana arsitek adalah profesi ahli yang merancang cetak biru (blueprint)."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

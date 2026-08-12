@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-016",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Semua anggota tim A mahir berbahasa Inggris.\nSebagian anggota tim B mahir berbahasa Inggris.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua anggota tim B adalah anggota tim A."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian anggota tim B adalah anggota tim A."
+    },
+    {
+      "key": "C",
+      "text": "Semua anggota tim A adalah anggota tim B."
+    },
+    {
+      "key": "D",
+      "text": "Sebagian anggota tim A tidak mahir berbahasa Inggris."
+    },
+    {
+      "key": "E",
+      "text": "Tidak dapat ditarik simpulan yang pasti mengenai hubungan anggota tim A dan tim B."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah karena kesamaan predikat ('mahir berbahasa Inggris') tidak menunjukkan inklusi himpunan subjek.",
+    "B": "Salah karena merupakan fallacy of the undistributed middle (kemampuan bahasa tidak menjamin keanggotaan tim yang sama).",
+    "C": "Salah karena tim A dan tim B adalah dua himpunan independen.",
+    "D": "Salah karena kontradiktif dengan premis pertama ('Semua anggota tim A mahir...').",
+    "E": "Benar. Dua himpunan yang memiliki kesamaan sebagian predikat tidak secara otomatis memiliki hubungan irisan atau keanggotaan antar subjeknya."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

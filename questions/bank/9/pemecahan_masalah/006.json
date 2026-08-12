@@ -1,0 +1,43 @@
+{
+  "id": "9-pemecahan_masalah-006",
+  "package": 9,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Six eksekutif (A, B, C, D, E, F) duduk mengelilingi meja bundar menghadap ke pusat meja.\n1. A duduk tepat berhadapan dengan D.\n2. B duduk tepat di sebelah kanan A.\n3. C tidak duduk berdampingan dengan A maupun D.\n4. E duduk tepat berhadapan dengan B.\n\nSiapakah yang duduk tepat di sebelah kiri D?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "B"
+    },
+    {
+      "key": "B",
+      "text": "C"
+    },
+    {
+      "key": "C",
+      "text": "E"
+    },
+    {
+      "key": "D",
+      "text": "F"
+    },
+    {
+      "key": "E",
+      "text": "A"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. B berhadapan dengan E di posisi 6.",
+    "B": "Salah. C duduk di posisi 2 (di sebelah kanan B).",
+    "C": "Salah. E tepat berhadapan dengan B (posisi 3).",
+    "D": "Benar. Misal posisi 1-6 searah jarum jam: A=1, berhadapan D=4. Sebelah kanan A = posisi 6 (B). E berhadapan dengan B = posisi 3. C tidak boleh berdampingan A (1,6) atau D (4,3,5), jadi C = posisi 2. Sisa posisi 5 diisi F. Menghadap pusat meja, sebelah kiri D (posisi 4) adalah posisi 5, yaitu F.",
+    "E": "Salah. A berhadapan dengan D."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

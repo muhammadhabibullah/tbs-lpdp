@@ -1,0 +1,43 @@
+{
+  "id": "9-pemecahan_masalah-004",
+  "package": 9,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Lima sesi presentasi (P, Q, R, S, T) dijadwalkan pada hari Senin dari urutan ke-1 sampai ke-5.\n1. Presentasi R harus dilaksanakan tepat sebelum presentasi S.\n2. Presentasi P dijadwalkan sebelum presentasi R.\n3. Presentasi T dilaksanakan pada urutan terakhir (ke-5).\n4. Presentasi Q tidak dilaksanakan pada urutan pertama.\n\nPresentasi manakah yang dilaksanakan pada urutan pertama (ke-1)?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P"
+    },
+    {
+      "key": "B",
+      "text": "Q"
+    },
+    {
+      "key": "C",
+      "text": "R"
+    },
+    {
+      "key": "D",
+      "text": "S"
+    },
+    {
+      "key": "E",
+      "text": "T"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. T di urutan 5. R tepat sebelum S (blok RS). P sebelum R (P ... R S). Karena Q tidak boleh di urutan 1, maka P harus di urutan 1, Q di urutan 2, R di urutan 3, S di urutan 4, dan T di urutan 5. Jadi urutan ke-1 adalah P.",
+    "B": "Salah. Q berada di urutan 2 karena aturan 4 melarang Q di urutan 1.",
+    "C": "Salah. R berada di urutan 3.",
+    "D": "Salah. S berada di urutan 4.",
+    "E": "Salah. T berada di urutan 5."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

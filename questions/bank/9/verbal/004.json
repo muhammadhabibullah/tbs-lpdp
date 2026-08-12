@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-004",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "PRESOMPSI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kepastian"
+    },
+    {
+      "key": "B",
+      "text": "Buktinya"
+    },
+    {
+      "key": "C",
+      "text": "Kebenaran"
+    },
+    {
+      "key": "D",
+      "text": "Praduga"
+    },
+    {
+      "key": "E",
+      "text": "Keputusan"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Kepastian adalah hal yang sudah pasti dan tidak ragu.",
+    "B": "Bukti adalah fakta empiris yang mendukung kebenaran.",
+    "C": "Kebenaran adalah kondisi sesuai dengan fakta nyata.",
+    "D": "Benar. Presompsi (presumsi) berarti prasangka, anggapan dasar, atau praduga sebelum ada bukti pasti.",
+    "E": "Keputusan adalah hasil akhir dari pertimbangan."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

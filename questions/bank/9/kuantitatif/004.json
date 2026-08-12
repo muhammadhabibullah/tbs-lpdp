@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-004",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 4,
+  "type": "aritmetika",
+  "question_text": "Harga sebuah barang Rp200.000,00 dinaikkan 40%, kemudian harga baru itu diturunkan 25%. Berapakah harga barang setelah kedua perubahan tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp200.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp230.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp150.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp280.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp210.000,00"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai Rp200.000,00 diperoleh dengan menganggap kenaikan dan penurunan dengan persentase saling meniadakan.",
+    "B": "Salah. Nilai Rp230.000,00 diperoleh dengan menjumlahkan langsung kedua persentase menjadi 40% − 25% dan menerapkannya pada harga awal.",
+    "C": "Salah. Nilai Rp150.000,00 diperoleh dengan hanya menerapkan penurunan 25% pada harga awal.",
+    "D": "Salah. Nilai Rp280.000,00 diperoleh dengan berhenti setelah kenaikan dan tidak menerapkan penurunan.",
+    "E": "Benar. Harga setelah kenaikan = Rp200.000,00 × 140/100 = Rp280.000,00; harga setelah penurunan = Rp280.000,00 × 75/100 = Rp210.000,00."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-009",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 9,
+  "type": "deret_angka",
+  "question_text": "3, −9, 27, −81, 243, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−729, −1.701"
+    },
+    {
+      "key": "B",
+      "text": "2.187, 5.103"
+    },
+    {
+      "key": "C",
+      "text": "−729, 5.103"
+    },
+    {
+      "key": "D",
+      "text": "−729, 2.187"
+    },
+    {
+      "key": "E",
+      "text": "567, 2.187"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Suku keenam sudah tepat, tetapi suku ketujuh −1.701 diperoleh dengan mengulangkan selisih suku keenam dan kelima (−972), seolah-olah selisih deret ini tetap.",
+    "B": "Salah. Suku keenam 2.187 diperoleh dengan mengalikan dengan rasio dua kali sehingga melompat satu suku terlalu jauh, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "C": "Salah. Suku keenam sudah tepat, tetapi bilangan kedua 5.103 diperoleh dengan menambahkan selisih 2.916 pada suku ketujuh 2.187, yaitu mengulangi selisih suku keenam ke ketujuh alih-alih berhenti pada suku ketujuh.",
+    "D": "Benar. Setiap suku diperoleh dengan mengalikan suku sebelumnya dengan −3: 243 × (−3) = −729. Dengan pola yang sama, suku ketujuh adalah 2.187.",
+    "E": "Salah. Suku keenam 567 diperoleh dengan menambahkan selisih dua suku terakhir (324) alih-alih mengalikan dengan rasio −3, sehingga pasangan ini keliru sejak bilangan pertamanya."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

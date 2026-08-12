@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-021",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Pekerja A dapat menyelesaikan pengecatan sebuah gedung dalam waktu 12 jam, sedangkan Pekerja B dapat menyelesaikannya dalam waktu 18 jam. Jika Pekerja A bekerja sendiri terlebih dahulu selama 4 jam kemudian dilanjutkan bekerja bersama-sama dengan Pekerja B, berapa jam waktu tambahan yang diperlukan untuk menyelesaikan sisa pekerjaan tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "4 jam 12 menit"
+    },
+    {
+      "key": "B",
+      "text": "4 jam 30 menit"
+    },
+    {
+      "key": "C",
+      "text": "4 jam 48 menit"
+    },
+    {
+      "key": "D",
+      "text": "5 jam 15 menit"
+    },
+    {
+      "key": "E",
+      "text": "5 jam 30 menit"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. 4 jam 12 menit = 4,2 jam (salah menghitung laju gabungan).",
+    "B": "Salah. 4 jam 30 menit = 4,5 jam.",
+    "C": "Benar. Laju A = 1/12 pekerjaan/jam. Dalam 4 jam, A menyelesaikan 4/12 = 1/3 bagian. Sisa pekerjaan = 1 - 1/3 = 2/3 bagian. Laju gabungan A + B = 1/12 + 1/18 = 5/36 pekerjaan/jam. Waktu tambahan t = (2/3) / (5/36) = 24/5 jam = 4,8 jam = 4 jam 48 menit.",
+    "D": "Salah. 5 jam 15 menit melampaui perhitungan rasio.",
+    "E": "Salah. 5 jam 30 menit salah menghitung bagian yang tersisa."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-003",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 3,
+  "type": "aritmetika",
+  "question_text": "Dari 1.500 pelamar sebuah program beasiswa, 50% dinyatakan lulus seleksi administrasi. Dari pelamar yang lulus seleksi administrasi tersebut, 25% dinyatakan lulus seleksi wawancara. Berapa banyak pelamar yang lulus kedua tahap seleksi itu?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "375"
+    },
+    {
+      "key": "B",
+      "text": "562,5"
+    },
+    {
+      "key": "C",
+      "text": "1.125"
+    },
+    {
+      "key": "D",
+      "text": "750"
+    },
+    {
+      "key": "E",
+      "text": "187,5"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 375 diperoleh dengan menerapkan 25% pada seluruh pelamar, bukan pada pelamar yang lulus seleksi administrasi.",
+    "B": "Salah. Nilai 562,5 diperoleh dengan menghitung pelamar yang gugur pada seleksi wawancara, bukan yang lulus.",
+    "C": "Salah. Nilai 1.125 diperoleh dengan menjumlahkan kedua persentase menjadi 75% lalu menerapkannya sekaligus.",
+    "D": "Salah. Nilai 750 diperoleh dengan berhenti pada tahap pertama dan tidak menerapkan seleksi kedua.",
+    "E": "Benar. Lulus administrasi = 50% × 1.500 = 750; lulus wawancara = 25% × 750 = 187,5."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

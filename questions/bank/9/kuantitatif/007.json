@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-007",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 7,
+  "type": "aljabar",
+  "question_text": "Diketahui x + y = 10 dan xy = 12. Nilai dari x² + y² adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "52"
+    },
+    {
+      "key": "B",
+      "text": "100"
+    },
+    {
+      "key": "C",
+      "text": "76"
+    },
+    {
+      "key": "D",
+      "text": "124"
+    },
+    {
+      "key": "E",
+      "text": "88"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 52 diperoleh dengan menghitung (x − y)² = (x + y)² − 4xy, yang merupakan besaran lain.",
+    "B": "Salah. Nilai 100 diperoleh dengan menghitung (x + y)² = 100 dan berhenti di situ, tanpa mengurangkan 2xy.",
+    "C": "Benar. x² + y² = (x + y)² − 2xy = 10² − 2 × 12 = 100 − 24 = 76.",
+    "D": "Salah. Nilai 124 diperoleh dengan menambahkan 2xy, padahal suku itu harus dipindahkan sehingga dikurangkan.",
+    "E": "Salah. Nilai 88 diperoleh dengan mengurangkan xy satu kali, padahal penjabaran (x + y)² memuat 2xy."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

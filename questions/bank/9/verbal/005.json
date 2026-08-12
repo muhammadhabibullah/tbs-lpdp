@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-005",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "KONSERVASI <>< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Preservasi"
+    },
+    {
+      "key": "B",
+      "text": "Perlindungan"
+    },
+    {
+      "key": "C",
+      "text": "Penangkaran"
+    },
+    {
+      "key": "D",
+      "text": "Pemeliharaan"
+    },
+    {
+      "key": "E",
+      "text": "Eksploitasi"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Preservasi adalah sinonim dari konservasi (pengawetan/perlindungan).",
+    "B": "Perlindungan adalah bentuk tindakan dalam konservasi.",
+    "C": "Penangkaran adalah salah satu upaya konservasi satwa.",
+    "D": "Pemeliharaan sejalan dengan konsep konservasi.",
+    "E": "Benar. Konservasi adalah perlindungan/pengelolaan bijaksana, sedangkan eksploitasi adalah pemanfaatan secara habis-habisan tanpa perlindungan."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

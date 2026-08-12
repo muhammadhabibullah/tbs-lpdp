@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-022",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Mobil P berangkat dari Kota A menuju Kota B pada pukul 08.00 dengan kecepatan konstan 60 km/jam. Pada pukul 08.30, Mobil Q berangkat dari Kota B menuju Kota A melalui rute yang sama dengan kecepatan konstan 80 km/jam. Jika jarak antara Kota A dan Kota B adalah 240 km, pada pukul berapa kedua mobil tersebut akan berpapasan di jalan?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "09.45"
+    },
+    {
+      "key": "B",
+      "text": "10.00"
+    },
+    {
+      "key": "C",
+      "text": "10.15"
+    },
+    {
+      "key": "D",
+      "text": "10.30"
+    },
+    {
+      "key": "E",
+      "text": "10.45"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. 09.45 mengabaikan jarak yang sudah ditempuh mobil P selama 30 menit awal.",
+    "B": "Benar. Dalam 0,5 jam (08.00 - 08.30), Mobil P menempuh 60 x 0,5 = 30 km. Sisa jarak pada 08.30 = 240 - 30 = 210 km. Kecepatan relatif P + Q = 60 + 80 = 140 km/jam. Waktu berpapasan sejak 08.30 = 210 / 140 = 1,5 jam (1 jam 30 menit). Waktu berpapasan = 08.30 + 1 jam 30 menit = pukul 10.00.",
+    "C": "Salah. 10.15 menambahkan waktu dari total jarak tanpa mengurangkan jarak awal P.",
+    "D": "Salah. 10.30 menghitung waktu dari 08.00 dengan kecepatan gabungan.",
+    "E": "Salah. 10.45 menghitung seolah kedua mobil berangkat 08.30 dengan laju tunggal."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

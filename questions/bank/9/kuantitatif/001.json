@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-001",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 1,
+  "type": "aritmetika",
+  "question_text": "Nilai dari 5³ − √144 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "3"
+    },
+    {
+      "key": "B",
+      "text": "113"
+    },
+    {
+      "key": "C",
+      "text": "13"
+    },
+    {
+      "key": "D",
+      "text": "53"
+    },
+    {
+      "key": "E",
+      "text": "137"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 3 diperoleh dengan menghitung 5³ sebagai 5 × 3 = 15.",
+    "B": "Benar. 5³ = 125 dan √144 = 12, sehingga 125 − 12 = 113.",
+    "C": "Salah. Nilai 13 diperoleh dengan menghitung pangkat tiga sebagai pangkat dua (5² = 25).",
+    "D": "Salah. Nilai 53 diperoleh dengan menghitung akar kuadrat sebagai setengah dari 144.",
+    "E": "Salah. Nilai 137 diperoleh dengan menjumlahkan kedua nilai alih-alih mengurangkannya."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-017",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 17,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nDiketahui x = 4.\nP = 6x + 3\nQ = 3x + 2\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "P bernilai lebih dari dua kali Q"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. P = 27 dan Q = 14, sehingga P > Q.",
+    "B": "Salah. P = 27 dan Q = 14, sehingga P > Q; nilai Q tidak melebihi nilai P (14 tidak lebih besar daripada 27).",
+    "C": "Salah. P = 27 dan Q = 14, sehingga P > Q; kedua nilai tidak sama (27 ≠ 14).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 27 dan Q = 14), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 27 dan Q = 14, dua kali Q adalah 28, sedangkan P hanya 27."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

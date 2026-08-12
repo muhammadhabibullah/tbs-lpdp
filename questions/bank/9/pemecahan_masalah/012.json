@@ -1,0 +1,43 @@
+{
+  "id": "9-pemecahan_masalah-012",
+  "package": 9,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Sebuah pabrik memiliki dua lini produksi, yaitu Lini X dan Lini Y. Lini X menghasilkan 40 unit barang per jam dengan biaya operasional Rp200.000,00 per jam. Lini Y menghasilkan 60 unit barang per jam dengan biaya operasional Rp360.000,00 per jam. Dalam satu hari, total waktu beroperasi gabungan kedua lini adalah 15 jam dan berhasil memproduksi tepat 700 unit barang. Berapakah total biaya operasional yang dikeluarkan pabrik pada hari tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp3.400.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp3.600.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp3.800.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp4.000.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp4.200.000,00"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Rp3.400.000,00 mengasumsikan waktu Lini Y lebih singkat.",
+    "B": "Salah. Rp3.600.000,00 menghitung biaya jika hanya Lini Y beroperasi 10 jam.",
+    "C": "Benar. Misal jam Lini X = a dan Lini Y = b. Persamaan (1): a + b = 15. Persamaan (2): 40a + 60b = 700 -> 2a + 3b = 35. Dari (1), a = 15 - b. Substitusi: 2(15 - b) + 3b = 35 -> 30 + b = 35 -> b = 5 jam, sehingga a = 10 jam. Total biaya = (10 x Rp200.000) + (5 x Rp360.000) = Rp2.000.000 + Rp1.800.000 = Rp3.800.000,00.",
+    "D": "Salah. Rp4.000.000,00 terbalik dalam pertukaran waktu operasi.",
+    "E": "Salah. Rp4.200.000,00 menghitung dengan asumsi waktu Lini X 5 jam dan Y 10 jam."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

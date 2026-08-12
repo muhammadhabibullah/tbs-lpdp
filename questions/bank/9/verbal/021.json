@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-021",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Pernyataan berikut yang TIDAK SESUAI dengan isi bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Pengembangan varietas tanaman pangan toleran kekeringan melalui rekayasa genetika dan pemuliaan molekuler menjadi strategi kunci dalam menghadapi perubahan iklim global. Di Indonesia, ancaman fenomena El Niño yang berkepanjangan dapat memicu penurunan produktivitas padi hingga 20%. Tanaman hasil pemuliaan molekuler ini dirancang memiliki sistem perakaran yang lebih dalam serta efisiensi penggunaan air yang lebih tinggi tanpa mengurangi potensi hasil panen. Kendati demikian, penerapan teknologi ini masih menghadapi tantangan regulasi keamanan hayati serta resistensi sebagian kelompok masyarakat terkait isu keamanan pangan. Oleh karena itu, penguatan edukasi berbasis bukti ilmiah serta pendampingan bagi petani sangat diperlukan agar adopsi inovasi ini dapat berlangsung secara optimal.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Fenomena El Niño berpotensi menurunkan produktivitas padi di Indonesia hingga 20%."
+    },
+    {
+      "key": "B",
+      "text": "Varietas tanaman toleran kekeringan memerlukan waktu tanam yang lebih lama dibanding varietas konvensional."
+    },
+    {
+      "key": "C",
+      "text": "Tanaman hasil pemuliaan molekuler dirancang memiliki sistem perakaran yang lebih dalam."
+    },
+    {
+      "key": "D",
+      "text": "Edukasi berbasis bukti ilmiah diperlukan untuk mendukung adopsi inovasi pemuliaan tanaman."
+    },
+    {
+      "key": "E",
+      "text": "Tanaman toleran kekeringan memiliki efisiensi penggunaan air yang lebih tinggi."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Sesuai dengan kalimat kedua pada bacaan.",
+    "B": "Benar. Bacaan tidak pernah menyebutkan bahwa varietas toleran kekeringan memerlukan waktu tanam lebih lama.",
+    "C": "Sesuai dengan kalimat ketiga pada bacaan.",
+    "D": "Sesuai dengan kalimat terakhir pada bacaan.",
+    "E": "Sesuai dengan kalimat ketiga pada bacaan."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

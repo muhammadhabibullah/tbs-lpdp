@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-024",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Sebuah kerucut lingkaran tegak memiliki jari-jari alas 7 cm dan tinggi 24 cm. Berapakah luas permukaan total kerucut tersebut? (Gunakan π = 22/7)",
+  "image": "images/kerucut.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "616 cm²"
+    },
+    {
+      "key": "B",
+      "text": "660 cm²"
+    },
+    {
+      "key": "C",
+      "text": "704 cm²"
+    },
+    {
+      "key": "D",
+      "text": "748 cm²"
+    },
+    {
+      "key": "E",
+      "text": "792 cm²"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. 616 cm² hanya menghitung luas selimut saja tanpa alas.",
+    "B": "Salah. 660 cm² salah dalam menghitung garis pelukis s.",
+    "C": "Benar. Garis pelukis s = √(r² + t²) = √(7² + 24²) = √(49 + 576) = √625 = 25 cm. Luas alas = π x r² = (22/7) x 49 = 154 cm². Luas selimut = π x r x s = (22/7) x 7 x 25 = 550 cm². Luas permukaan total = 154 + 550 = 704 cm².",
+    "D": "Salah. 748 cm² salah menjumlahkan jari-jari.",
+    "E": "Salah. 792 cm² menghitung dua kali luas alas."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

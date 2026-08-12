@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-015",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Jika suatu produk pangan lulus uji sertifikasi SNI, maka produk tersebut aman dikonsumsi publik.\nSebagian makanan impor di pasar Z tidak aman dikonsumsi publik.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua makanan impor di pasar Z tidak lulus uji sertifikasi SNI."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian makanan impor di pasar Z tidak lulus uji sertifikasi SNI."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian makanan impor di pasar Z lulus uji sertifikasi SNI."
+    },
+    {
+      "key": "D",
+      "text": "Semua produk yang tidak lulus uji sertifikasi SNI adalah makanan impor."
+    },
+    {
+      "key": "E",
+      "text": "Jika makanan aman dikonsumsi maka makanan tersebut pasti makanan impor."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah karena premis hanya menyebutkan 'sebagian makanan impor', bukan seluruhnya.",
+    "B": "Benar. Menggunakan modus tollens pada sebagian subjek: Jika Lulus (P) -> Aman (Q). Berdasarkan kontraposisi, Tidak Aman (~Q) -> Tidak Lulus (~P). Karena sebagian makanan impor tidak aman (~Q), maka sebagian makanan impor tersebut tidak lulus uji SNI (~P).",
+    "C": "Tidak dapat dipastikan dari premis yang diberikan.",
+    "D": "Salah karena membalik anteseden secara keliru.",
+    "E": "Salah karena menyimpulkan hubungan anteseden yang tidak valid."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

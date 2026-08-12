@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-018",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat berikut yang merupakan perbaikan dari kalimat rancu 'Dalam rapat koordinasi itu membicarakan tentang penetapan anggaran belanja daerah' menjadi kalimat efektif adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Dalam rapat koordinasi itu membicarakan penetapan anggaran belanja daerah."
+    },
+    {
+      "key": "B",
+      "text": "Rapat koordinasi itu membicarakan tentang penetapan anggaran belanja daerah."
+    },
+    {
+      "key": "C",
+      "text": "Rapat koordinasi itu membicarakan penetapan anggaran belanja daerah."
+    },
+    {
+      "key": "D",
+      "text": "Dalam rapat koordinasi itu dibicarakan tentang penetapan anggaran belanja daerah."
+    },
+    {
+      "key": "E",
+      "text": "Tentang penetapan anggaran belanja daerah dibicarakan dalam rapat koordinasi itu."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah karena penggunaan kata depan 'Dalam' di awal kalimat membuat kalimat kehilangan subjek.",
+    "B": "Salah karena kata transitif 'membicarakan' tidak boleh diikuti kata depan 'tentang' (obyek langsung).",
+    "C": "Benar. Menghilangkan kata depan 'Dalam' agar 'Rapat koordinasi itu' menjadi subjek yang jelas, dan mengeliminasi 'tentang' setelah verba transitif 'membicarakan'.",
+    "D": "Salah karena masih mengandung kontaminasi gabungan 'dibicarakan tentang'.",
+    "E": "Salah karena struktur kalimat tidak padu dan berbelit-belit."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

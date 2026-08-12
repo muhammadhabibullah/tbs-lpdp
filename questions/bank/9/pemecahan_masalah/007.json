@@ -1,0 +1,43 @@
+{
+  "id": "9-pemecahan_masalah-007",
+  "package": 9,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah perusahaan teknologi memiliki anggaran tetap Rp500.000.000,00 untuk dialokasikan pada tiga proyek ekspansi: Proyek X (Otomatisasi AI, potensi pengembalian tinggi, risiko tinggi), Proyek Y (Kepatuhan Keamanan Siber, kewajiban regulasi pemerintah yang berdenda jika dilanggar), dan Proyek Z (Kampanye Pemasaran, potensi pengembalian sedang, risiko rendah).\n\nBerdasarkan prinsip manajemen risiko dan kepatuhan regulasi, manakah alokasi anggaran yang PALING TEPAT?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Mengalokasikan 100% anggaran ke Proyek X untuk memaksimalkan potensi keuntungan finansial."
+    },
+    {
+      "key": "B",
+      "text": "Memprioritaskan pendanaan penuh untuk Proyek Y guna memenuhi regulasi wajib, lalu mengalokasikan sisanya secara proporsional ke Proyek Z dan X."
+    },
+    {
+      "key": "C",
+      "text": "Membagi anggaran secara merata sepertiga untuk setiap proyek tanpa mempertimbangkan regulasi."
+    },
+    {
+      "key": "D",
+      "text": "Menunda Proyek Y dan menginvestasikan seluruh dana ke Proyek Z pemasaran."
+    },
+    {
+      "key": "E",
+      "text": "Membatalkan Proyek Y dan membagi dana hanya untuk Proyek X dan Z."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah karena mengabaikan kewajiban regulasi pemerintah dan mengambil risiko ekstrem.",
+    "B": "Benar. Dalam analisis kasus organisasi, kepatuhan regulasi hukum/pemerintah yang berisiko denda harus dipenuhi terlebih dahulu (Proyek Y) sebelum mengalokasikan sisa dana pada proyek ekspansi komersial.",
+    "C": "Salah karena pembagian rata mengabaikan urgensi kepatuhan regulasi.",
+    "D": "Salah karena menunda kewajiban regulasi menimbulkan sanksi hukum denda bagi perusahaan.",
+    "E": "Salah karena pembatalan Proyek Y melanggar aturan hukum."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

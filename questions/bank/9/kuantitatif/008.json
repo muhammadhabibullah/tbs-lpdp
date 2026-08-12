@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-008",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "aljabar",
+  "question_text": "Diketahui x + 4y = −21 dan 4x − 2y = 6. Nilai dari 3x + 3y adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "12"
+    },
+    {
+      "key": "B",
+      "text": "−18"
+    },
+    {
+      "key": "C",
+      "text": "−6"
+    },
+    {
+      "key": "D",
+      "text": "−3"
+    },
+    {
+      "key": "E",
+      "text": "−15"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 12 diperoleh dengan menghitung 3x − 3y, yaitu selisihnya, bukan jumlahnya.",
+    "B": "Benar. Menyelesaikan kedua persamaan diperoleh x = −1 dan y = −5, sehingga 3x + 3y = 3 × ((−1) + (−5)) = −18.",
+    "C": "Salah. Nilai −6 diperoleh dengan berhenti pada x + y dan lupa mengalikannya dengan 3.",
+    "D": "Salah. Nilai −3 diperoleh dengan hanya menghitung 3x dan mengabaikan suku 3y.",
+    "E": "Salah. Nilai −15 diperoleh dengan hanya menghitung 3y dan mengabaikan suku 3x."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

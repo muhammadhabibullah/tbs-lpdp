@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-008",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "PERFIDIUS <>< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Setia"
+    },
+    {
+      "key": "B",
+      "text": "Khianat"
+    },
+    {
+      "key": "C",
+      "text": "Liczik"
+    },
+    {
+      "key": "D",
+      "text": "Palsu"
+    },
+    {
+      "key": "E",
+      "text": "Curang"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Perfidius bermakna curang, khianat, atau tidak jahat/luntur kepercayaannya; lawan katanya adalah setia (loyal).",
+    "B": "Khianat adalah sinonim dari perfidius.",
+    "C": "Licik adalah karakter yang dekat dengan perfidius.",
+    "D": "Palsu adalah sinonim parsial perfidius dalam konteks janji.",
+    "E": "Curang adalah makna dari perfidius."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

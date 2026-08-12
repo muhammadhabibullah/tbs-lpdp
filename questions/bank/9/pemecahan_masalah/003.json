@@ -1,0 +1,43 @@
+{
+  "id": "9-pemecahan_masalah-003",
+  "package": 9,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Empat orang siswa (Andi, Budi, Caca, dan Deni) duduk berdampingan dalam satu baris kursi berurutan dari kiri ke kanan (nomor 1 sampai 4).\n1. Deni duduk di kursi paling kanan (nomor 4).\n2. Budi duduk di antara Andi dan Caca.\n3. Andi tidak duduk berdampingan dengan Deni.\n\nSiapakah yang duduk di kursi paling kiri (nomor 1)?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Andi"
+    },
+    {
+      "key": "B",
+      "text": "Budi"
+    },
+    {
+      "key": "C",
+      "text": "Caca"
+    },
+    {
+      "key": "D",
+      "text": "Deni"
+    },
+    {
+      "key": "E",
+      "text": "Tidak dapat ditentukan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Deni di posisi 4. Budi di antara Andi dan Caca (berarti urutan mereka A-B-C atau C-B-A). Karena Andi tidak boleh berdampingan dengan Deni (posisi 3), maka posisi 3 harus diisi Caca. Sehingga urutan dari kiri ke kanan adalah Andi (1), Budi (2), Caca (3), Deni (4). Orang di paling kiri adalah Andi.",
+    "B": "Salah. Budi berada di posisi 2 (tengah).",
+    "C": "Salah. Caca berada di posisi 3.",
+    "D": "Salah. Deni berada di posisi 4 (paling kanan).",
+    "E": "Salah karena posisi dapat ditentukan secara unik."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

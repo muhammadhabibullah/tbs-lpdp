@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-012",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 12,
+  "type": "deret_angka",
+  "question_text": "14, 28, 22, 11, 17, 34, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "28, 34"
+    },
+    {
+      "key": "B",
+      "text": "68, 62"
+    },
+    {
+      "key": "C",
+      "text": "22, 11"
+    },
+    {
+      "key": "D",
+      "text": "28, 14"
+    },
+    {
+      "key": "E",
+      "text": "40, 80"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Bilangan pertama sudah tepat, tetapi bilangan kedua menambahkan 6; sesudah −6 seharusnya dibagi 2.",
+    "B": "Salah. Pasangan ini mengulang ×2 sebelum −6, padahal suku terakhir tercetak sudah diperoleh melalui perkalian.",
+    "C": "Salah. Pasangan ini mengurangkan 6 dua kali sebelum membagi, padahal setiap operasi muncul satu kali per siklus.",
+    "D": "Benar. Operasi berulang dalam siklus ×2, −6, :2, +6. Suku terakhir tercetak diperoleh melalui ×2, sehingga langkah berikutnya adalah −6: 34 − 6 = 28. Setelah itu deret dibagi 2, sehingga 28 : 2 = 14.",
+    "E": "Salah. Pasangan ini memakai +6 lalu ×2, sehingga urutan siklus bergeser dua langkah."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

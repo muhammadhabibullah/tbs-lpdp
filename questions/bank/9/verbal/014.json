@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-014",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Semua peneliti lembaga X memiliki keahlian dalam analisis data kuantitatif.\nSebagian dosen Universitas Y adalah peneliti lembaga X.\n\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua dosen Universitas Y memiliki keahlian dalam analisis data kuantitatif."
+    },
+    {
+      "key": "B",
+      "text": "Semua dosen Universitas Y adalah peneliti lembaga X."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian dosen Universitas Y memiliki keahlian dalam analisis data kuantitatif."
+    },
+    {
+      "key": "D",
+      "text": "Sebagian peneliti lembaga X bukan dosen Universitas Y."
+    },
+    {
+      "key": "E",
+      "text": "Tidak ada dosen Universitas Y yang memiliki keahlian dalam analisis data kuantitatif."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah karena premis kedua hanya menyebut 'sebagian dosen', sehingga tidak bisa disimpulkan untuk seluruh dosen.",
+    "B": "Salah karena bertentangan dengan premis kedua yang menyatakan 'sebagian'.",
+    "C": "Benar. Karena sebagian dosen Universitas Y adalah peneliti lembaga X, dan seluruh peneliti lembaga X ahli analisis data kuantitatif, maka sebagian dosen tersebut pasti ahli analisis data kuantitatif.",
+    "D": "Meskipun mungkin benar di dunia nyata, simpulan ini tidak diturunkan secara langsung sebagai konsekuensi logis mutlak dari premis.",
+    "E": "Salah karena kontradiktif dengan simpulan sah."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

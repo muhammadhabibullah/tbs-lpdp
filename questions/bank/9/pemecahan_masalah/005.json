@@ -1,0 +1,43 @@
+{
+  "id": "9-pemecahan_masalah-005",
+  "package": 9,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Empat manajer (Fajar, Gilang, Hana, Indah) ditempatkan di empat kota berbeda (Jakarta, Bandung, Surabaya, Medan) dan memimpin empat divisi berbeda (Keuangan, Pemasaran, HRD, IT).\n1. Fajar bertugas di kota Surabaya.\n2. Manajer divisi HRD bertugas di kota Bandung.\n3. Gilang memimpin divisi Keuangan dan tidak bertugas di Jakarta.\n4. Indah memimpin divisi Pemasaran.\n\nDi kota manakah Indah bertugas dan apa divisinya?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Surabaya, Pemasaran"
+    },
+    {
+      "key": "B",
+      "text": "Bandung, HRD"
+    },
+    {
+      "key": "C",
+      "text": "Jakarta, Pemasaran"
+    },
+    {
+      "key": "D",
+      "text": "Medan, Keuangan"
+    },
+    {
+      "key": "E",
+      "text": "Jakarta, IT"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Surabaya adalah kota tugas Fajar.",
+    "B": "Salah. Bandung adalah kota tugas manajer HRD (Hana).",
+    "C": "Benar. Fajar di Surabaya. HRD di Bandung. Gilang (Keuangan) tidak di Jakarta, Surabaya (Fajar), atau Bandung (HRD), sehingga Gilang pasti di Medan. Hana pasti manajer HRD di Bandung. Karena Surabaya (Fajar), Medan (Gilang), Bandung (Hana) sudah terisi, maka Indah pasti di Jakarta dengan divisi Pemasaran.",
+    "D": "Salah. Medan dan Keuangan adalah lokasi Gilang.",
+    "E": "Salah. Divisi Indah secara eksplisit adalah Pemasaran."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "9-pemecahan_masalah-011",
+  "package": 9,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Manakah dari pernyataan berikut yang merupakan simpulan utama dari bacaan di atas?",
+  "image": null,
+  "passage": "Penerapan kecerdasan buatan (AI) dalam sistem tata kelola publik menawarkan efisiensi birokrasi yang signifikan, mulai dari otomatisasi layanan administrasi hingga analisis data kebijakan secara real-time. Namun, ketergantungan berlebihan pada algoritma tanpa pengawasan manusia yang memadai berpotensi menimbulkan bias keputusan serta mengikis akuntabilitas publik. Kelemahan utama algoritma terletak pada ketidakmampuannya memahami konteks sosial-budaya yang kompleks. Oleh karena itu, pengadopsian AI dalam pemerintahan tidak boleh menggantikan peran pertimbangan moral manusia, melainkan harus diposisikan sebagai alat bantu pelengkap yang tunduk pada kerangka etika dan audit transparan.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Penggunaan AI harus menggeser penuh peran birokrat demi terciptanya efisiensi layanan publik."
+    },
+    {
+      "key": "B",
+      "text": "Pemanfaatan AI dalam tata kelola publik harus dibatasi sebagai alat bantu pelengkap dengan pengawasan etika dan pertimbangan manusia."
+    },
+    {
+      "key": "C",
+      "text": "Algoritma AI sudah sepenuhnya mampu memahami konteks sosial-budaya dalam pengambilan keputusan."
+    },
+    {
+      "key": "D",
+      "text": "Bias keputusan birokrasi dapat dihilangkan secara permanen melalui penerapan otomatisasi AI."
+    },
+    {
+      "key": "E",
+      "text": "Tata kelola publik tidak memerlukan otomatisasi AI karena risiko hilangnya akuntabilitas."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah karena bertentangan dengan arahan penutup kalimat yang melarang AI menggantikan manusia.",
+    "B": "Benar. Simpulan utama merangkum pesan akhir penulis bahwa AI harus diposisikan sebagai alat bantu pelengkap di bawah pertimbangan etika dan moral manusia.",
+    "C": "Salah karena teks menyatakan algoritma justru tidak mampu memahami konteks sosial-budaya.",
+    "D": "Salah karena teks menyebut AI berpotensi menimbulkan bias keputusan jika tanpa pengawasan.",
+    "E": "Salah karena teks mengakui manfaat efisiensi AI dan tidak menolak penerapannya secara mutlak."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

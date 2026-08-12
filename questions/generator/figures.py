@@ -1159,7 +1159,12 @@ FIGURES: list[Figure] = [
         length_u=16, width_u=9, height_u=7, unit="cm")),
     Figure("8-kuantitatif-025", "prisma-segitiga.svg", lambda: triangular_prism(
         leg_front_u=8, leg_depth_u=15, height_u=10, unit="cm")),
+    Figure("9-kuantitatif-024", "kerucut.svg", lambda: cone(
+        radius_u=7, height_u=24, unit="cm")),
+    Figure("9-kuantitatif-025", "limas-persegi.svg", lambda: square_pyramid(
+        base_u=12, height_u=8, unit="cm")),
 ]
+
 
 
 # ---------------------------------------------------------------------- main --

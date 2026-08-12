@@ -1,0 +1,43 @@
+{
+  "id": "9-kuantitatif-013",
+  "package": 9,
+  "subtest": "kuantitatif",
+  "number": 13,
+  "type": "deret_huruf",
+  "question_text": "E, J, O, T, Y, ..., ... Dua huruf yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "E dan H"
+    },
+    {
+      "key": "B",
+      "text": "D dan I"
+    },
+    {
+      "key": "C",
+      "text": "D dan J"
+    },
+    {
+      "key": "D",
+      "text": "I dan D"
+    },
+    {
+      "key": "E",
+      "text": "C dan I"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Pasangan E dan H diperoleh karena memajukan suku pertama dan memundurkan suku kedua masing-masing satu posisi.",
+    "B": "Benar. Setiap huruf maju lima posisi alfabet; setelah Z hitungan kembali ke A. Dua huruf berikutnya adalah D dan I.",
+    "C": "Salah. Pasangan D dan J diperoleh karena mempertahankan suku pertama yang benar tetapi memajukan suku kedua satu posisi.",
+    "D": "Salah. Pasangan I dan D diperoleh karena menukar urutan kedua suku yang sebenarnya.",
+    "E": "Salah. Pasangan C dan I diperoleh karena memundurkan suku pertama satu posisi walaupun suku kedua sudah benar."
+  },
+  "difficulty": "easy",
+  "source": "deret_huruf.py",
+  "verified": true
+}

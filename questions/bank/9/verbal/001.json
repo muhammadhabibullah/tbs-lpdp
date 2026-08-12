@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-001",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "INSINUASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pujian"
+    },
+    {
+      "key": "B",
+      "text": "Sindiran"
+    },
+    {
+      "key": "C",
+      "text": "Tuduhan"
+    },
+    {
+      "key": "D",
+      "text": "Ancaman"
+    },
+    {
+      "key": "E",
+      "text": "Hutan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Pujian adalah kebalikan dari sindiran atau insinuasi.",
+    "B": "Benar. Insinuasi berarti sindiran tersembunyi atau kiasan yang tidak terang-terangan.",
+    "C": "Tuduhan bersifat terbuka dan langsung, sedangkan insinuasi bersifat sindiran terselubung.",
+    "D": "Ancaman bermakna gertakan atau intimidasi, bukan insinuasi.",
+    "E": "Hutan sama sekali tidak berkaitan dengan istilah insinuasi."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

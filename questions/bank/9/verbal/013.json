@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-013",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "ABRASI : PANTAI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "KOROSI : LOGAM"
+    },
+    {
+      "key": "B",
+      "text": "REBOISASI : HUTAN"
+    },
+    {
+      "key": "C",
+      "text": "EVAPORASI : AIR"
+    },
+    {
+      "key": "D",
+      "text": "EROSI : TANAH"
+    },
+    {
+      "key": "E",
+      "text": "SEDIMENTASI : SUNGAI"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Korosi adalah pengikisan kimiawi pada logam, bukan pengikisan daratan oleh media pengangkut alamiah.",
+    "B": "Reboisasi adalah pemulihan hutan, bukan pengikisan.",
+    "C": "Evaporasi adalah penguapan air, bukan pengikisan struktur.",
+    "D": "Benar. Abrasi adalah proses pengikisan pantai oleh air laut, sebagaimana erosi adalah proses pengikisan tanah oleh air/angin.",
+    "E": "Sedimentasi adalah pengendapan, kebalikan dari pengikisan."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

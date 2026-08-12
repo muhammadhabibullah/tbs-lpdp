@@ -1,0 +1,43 @@
+{
+  "id": "9-verbal-019",
+  "package": 9,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Gagasan utama paragraf tersebut adalah ...",
+  "image": null,
+  "passage": "Pengembangan varietas tanaman pangan toleran kekeringan melalui rekayasa genetika dan pemuliaan molekuler menjadi strategi kunci dalam menghadapi perubahan iklim global. Di Indonesia, ancaman fenomena El Niño yang berkepanjangan dapat memicu penurunan produktivitas padi hingga 20%. Tanaman hasil pemuliaan molekuler ini dirancang memiliki sistem perakaran yang lebih dalam serta efisiensi penggunaan air yang lebih tinggi tanpa mengurangi potensi hasil panen. Kendati demikian, penerapan teknologi ini masih menghadapi tantangan regulasi keamanan hayati serta resistensi sebagian kelompok masyarakat terkait isu keamanan pangan. Oleh karena itu, penguatan edukasi berbasis bukti ilmiah serta pendampingan bagi petani sangat diperlukan agar adopsi inovasi ini dapat berlangsung secara optimal.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Pengembangan varietas tanaman toleran kekeringan sebagai inovasi menghadapi perubahan iklim."
+    },
+    {
+      "key": "B",
+      "text": "Dampak fenomena El Niño terhadap penurunan produksi padi di Indonesia."
+    },
+    {
+      "key": "C",
+      "text": "Keunggulan sistem perakaran tanaman hasil pemuliaan molekuler."
+    },
+    {
+      "key": "D",
+      "text": "Penolakan masyarakat terhadap regulasi keamanan hayati produk rekayasa genetika."
+    },
+    {
+      "key": "E",
+      "text": "Pentingnya pendampingan bagi petani dalam memasarkan hasil panen padi."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Gagasan utama mencakup keseluruhan isi bacaan tentang pengembangan varietas tanaman pangan toleran kekeringan sebagai langkah strategis mengatasi iklim.",
+    "B": "Penurunan produksi akibat El Niño hanya kalimat penjelas (pendukung).",
+    "C": "Sistem perakaran adalah rincian teknis dari keunggulan tanaman.",
+    "D": "Tantangan regulasi adalah hambatan sekunder yang dijelaskan di bagian tengah.",
+    "E": "Pendampingan petani disebutkan di akhir sebagai rekomendasi pelaksanaan."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}

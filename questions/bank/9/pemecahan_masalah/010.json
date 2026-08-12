@@ -1,0 +1,43 @@
+{
+  "id": "9-pemecahan_masalah-010",
+  "package": 9,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Berdasarkan tabel tersebut, manakah pernyataan berikut yang PALING TEPAT mengenai efisiensi alokasi dana riset dan publikasi?",
+  "image": null,
+  "passage": "Fakultas | Jumlah Dosen | Dana Riset (Juta Rp) | Publikasi Internasional\nTeknik | 80 | 2.400 | 120\nKedokteran | 60 | 3.000 | 90\nMIPA | 50 | 1.750 | 100\nEkonomi | 70 | 1.400 | 56",
+  "options": [
+    {
+      "key": "A",
+      "text": "Fakultas Kedokteran memiliki rasio publikasi per dosen tertinggi dibanding fakultas lainnya."
+    },
+    {
+      "key": "B",
+      "text": "Fakultas MIPA menghasilkan rerata publikasi per dosen tertinggi sekaligus dana riset per publikasi terkecil."
+    },
+    {
+      "key": "C",
+      "text": "Fakultas Teknik menerima alokasi dana riset per dosen paling tinggi."
+    },
+    {
+      "key": "D",
+      "text": "Fakultas Ekonomi memiliki rerata publikasi per dosen yang lebih tinggi daripada Fakultas Kedokteran."
+    },
+    {
+      "key": "E",
+      "text": "Dana riset per publikasi di Fakultas Teknik lebih besar dibanding Fakultas Kedokteran."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Publikasi per dosen: Teknik = 120/80 = 1,5; Kedokteran = 90/60 = 1,5; MIPA = 100/50 = 2,0; Ekonomi = 56/70 = 0,8. MIPA adalah yang tertinggi.",
+    "B": "Benar. Rerata publikasi/dosen MIPA = 100/50 = 2,0 (tertinggi). Dana riset per publikasi: Teknik = 2.400/120 = 20 juta; Kedokteran = 3.000/90 = 33,3 juta; MIPA = 1.750/100 = 17,5 juta; Ekonomi = 1.400/56 = 25 juta. MIPA memiliki dana riset per publikasi terkecil (17,5 juta).",
+    "C": "Salah. Dana riset/dosen: Teknik = 2.400/80 = 30 juta; Kedokteran = 3.000/60 = 50 juta (Kedokteran tertinggi).",
+    "D": "Salah. Ekonomi = 0,8 < Kedokteran = 1,5.",
+    "E": "Salah. Teknik = 20 juta < Kedokteran = 33,3 juta."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.6-flash-generated",
+  "verified": true
+}
