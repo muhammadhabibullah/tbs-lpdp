@@ -215,6 +215,18 @@ npm run app:android   # tauri android build --apk  (Java 17 + Android SDK/NDK)
 work. Outside Tauri there is no persistent bank cache and no updater, so the app
 falls back to the bundled snapshot on each load.
 
+### Signing, and why the installers are still "unidentified"
+
+macOS builds are **ad-hoc signed** (`bundle.macOS.signingIdentity: "-"`). Apple
+Silicon refuses to launch a bundle carrying no valid signature and reports it as
+*"…is damaged and can't be opened"*, which reads as a corrupt download rather
+than a policy decision. The ad-hoc signature costs nothing and needs no Apple
+account; it turns that into the ordinary unidentified-developer prompt, which
+**System Settings → Privacy & Security → Open Anyway** clears. It is *not*
+notarization — swap `"-"` for a real Developer ID if a membership is ever
+obtained. Windows still shows SmartScreen; both are documented for users on the
+download page (FE-42).
+
 ### One-time operator setup (v6 §5)
 
 Both keys live **only** in GitHub Actions secrets, never in git (C-30):

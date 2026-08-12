@@ -83,13 +83,18 @@ jobs:
           # snapshot compiled into the installer needs the full log.
           fetch-depth: 0
 
+      # Tauri v2's own list. `libappindicator3-dev` is deliberately absent: it
+      # is the pre-Ayatana package and conflicts with
+      # `libayatana-appindicator3-dev`, so asking for both leaves apt with
+      # nothing it can install.
       - name: Install Linux build dependencies
         if: matrix.platform == 'ubuntu-22.04'
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf \
-            libgtk-3-dev build-essential curl wget file libssl-dev libayatana-appindicator3-dev
+            libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev \
+            libgtk-3-dev libxdo-dev libssl-dev patchelf \
+            build-essential curl wget file
 
       - uses: actions/setup-node@v4
         with:
@@ -159,6 +164,12 @@ jobs:
         with:
           packages: 'platform-tools platforms;android-34 build-tools;34.0.0 ndk;27.2.12479018'
 
+      # `${{ env.X }}` only reads env blocks declared in this workflow, not the
+      # runner's own environment, so ANDROID_HOME has to be expanded by the
+      # shell. Publishing NDK_HOME here keeps the later steps declarative.
+      - name: Locate the NDK
+        run: echo "NDK_HOME=$ANDROID_HOME/ndk/27.2.12479018" >> "$GITHUB_ENV"
+
       - uses: dtolnay/rust-toolchain@stable
         with:
           targets: aarch64-linux-android
@@ -175,8 +186,6 @@ jobs:
       # project — including the signing patch below — is rebuilt every run.
       - name: Initialise the Android project
         working-directory: web
-        env:
-          NDK_HOME: ${{ env.ANDROID_HOME }}/ndk/27.2.12479018
         run: npx tauri android init --ci
 
       - name: Configure release signing (C-30)
@@ -193,18 +202,15 @@ jobs:
             exit 1
           fi
           echo "$ANDROID_KEYSTORE_B64" | base64 -d > src-tauri/gen/android/release.jks
-          cat > src-tauri/gen/android/keystore.properties <<EOF
-          storeFile=release.jks
-          storePassword=${ANDROID_KEYSTORE_PASSWORD}
-          keyAlias=${ANDROID_KEY_ALIAS}
-          password=${ANDROID_KEY_PASSWORD}
-          EOF
+          # printf, not a heredoc: the arguments are written verbatim, so a
+          # password containing `$` or a backtick cannot be re-expanded.
+          printf 'storeFile=release.jks\nstorePassword=%s\nkeyAlias=%s\npassword=%s\n' \
+            "$ANDROID_KEYSTORE_PASSWORD" "$ANDROID_KEY_ALIAS" "$ANDROID_KEY_PASSWORD" \
+            > src-tauri/gen/android/keystore.properties
           node scripts/patch-android-signing.ts
 
       - name: Build the APK
         working-directory: web
-        env:
-          NDK_HOME: ${{ env.ANDROID_HOME }}/ndk/27.2.12479018
         run: npx tauri android build --apk --target aarch64
 
       - name: Verify the signature and rename the artifact

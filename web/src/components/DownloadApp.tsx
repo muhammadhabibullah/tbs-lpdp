@@ -91,12 +91,14 @@ const PLATFORMS: PlatformCard[] = [
         Buka berkas tersebut, lalu seret ikon aplikasi ke folder <strong>Applications</strong>.
       </>,
       <>
-        Saat pertama dibuka, macOS menolak aplikasi tanpa tanda tangan Apple. Buka{' '}
+        Saat pertama dibuka, macOS menahan aplikasi yang tidak bersertifikat berbayar Apple. Buka{' '}
         <strong>System Settings → Privacy &amp; Security</strong>, gulir ke bawah, lalu klik{' '}
-        <strong>Open Anyway</strong>. Cara lain: klik kanan ikon aplikasi → <strong>Open</strong>.
+        <strong>Open Anyway</strong>. Pada macOS 14 ke bawah, klik kanan ikon aplikasi →{' '}
+        <strong>Open</strong> juga bisa.
       </>,
       <>
-        Jika masih ditolak, buka <strong>Terminal</strong> dan jalankan{' '}
+        Jika muncul pesan <strong>“… is damaged and can’t be opened”</strong>, itu penanda karantina
+        unduhan — berkasnya tidak rusak. Buka <strong>Terminal</strong>, jalankan{' '}
         <code>xattr -cr &quot;/Applications/TBS LPDP Try Out.app&quot;</code>, lalu buka lagi aplikasinya.
       </>,
     ],

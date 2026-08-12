@@ -258,6 +258,17 @@ app's assets, so the bundled and cached paths share one loader and one
 verification routine. The cached copy is content-addressed and its manifest is
 written last, so a crash mid-update leaves the previous pair intact (NF-31).
 
+**macOS builds are ad-hoc signed** (`bundle.macOS.signingIdentity: "-"`).
+Apple Silicon refuses to launch a bundle with no valid signature at all, and
+reports it as *"…is damaged and can't be opened"* — which reads to a user as a
+corrupt download rather than a policy decision. An ad-hoc signature costs
+nothing, needs no Apple account, and turns that into the ordinary
+unidentified-developer prompt the FE-42 instructions already cover. It is not a
+substitute for a Developer ID: §1's honest limit still holds, and Gatekeeper
+still requires **System Settings → Privacy & Security → Open Anyway**. Replacing
+`"-"` with a real identity is the only change needed if a membership is ever
+obtained.
+
 **Reachable network endpoints are pinned twice** (C-31): by the CSP
 `connect-src` in `tauri.conf.json`, and by the opener scope in
 `capabilities/default.json`. Filesystem access is scoped to `$APPDATA/bank`.
