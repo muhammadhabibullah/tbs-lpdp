@@ -4,7 +4,7 @@
   "subtest": "verbal",
   "number": 6,
   "type": "antonim",
-  "question_text": "PROMINEN = ...",
+  "question_text": "PROMINEN >< ...",
   "image": null,
   "passage": null,
   "options": [
