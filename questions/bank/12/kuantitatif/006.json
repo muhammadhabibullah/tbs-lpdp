@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-006",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 6,
+  "type": "aljabar",
+  "question_text": "Jika y = 3x² + 4x + 7, nilai y untuk x = −4 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−57"
+    },
+    {
+      "key": "B",
+      "text": "71"
+    },
+    {
+      "key": "C",
+      "text": "135"
+    },
+    {
+      "key": "D",
+      "text": "39"
+    },
+    {
+      "key": "E",
+      "text": "−33"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai −57 diperoleh dengan menganggap (−4)² bernilai negatif, padahal kuadrat bilangan negatif selalu positif.",
+    "B": "Salah. Nilai 71 diperoleh dengan salah tanda pada suku + 4x ketika mensubstitusikan x = −4.",
+    "C": "Salah. Nilai 135 diperoleh dengan mengkuadratkan 3x sebagai satu kesatuan, yaitu (3 × (−4))², padahal yang dikuadratkan hanya x.",
+    "D": "Benar. y = 3 × (−4)² + 4 × (−4) + 7 = 48 − 16 + 7 = 39.",
+    "E": "Salah. Nilai −33 diperoleh dengan membaca 3x² sebagai 3 × 2 × x sehingga pangkat dua berubah menjadi perkalian dua."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

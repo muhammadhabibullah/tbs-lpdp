@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-004",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 4,
+  "type": "aritmetika",
+  "question_text": "30% dari 400 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "1.200"
+    },
+    {
+      "key": "B",
+      "text": "370"
+    },
+    {
+      "key": "C",
+      "text": "12"
+    },
+    {
+      "key": "D",
+      "text": "280"
+    },
+    {
+      "key": "E",
+      "text": "120"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 1.200 diperoleh dengan menggeser koma desimal satu tempat ke kanan.",
+    "B": "Salah. Nilai 370 diperoleh dengan mengurangkan 30 dari 400 alih-alih menghitung persentasenya.",
+    "C": "Salah. Nilai 12 diperoleh dengan menggeser koma desimal satu tempat ke kiri.",
+    "D": "Salah. Nilai 280 diperoleh dengan menghitung sisanya, yaitu bagian 70%.",
+    "E": "Benar. 30% × 400 = (30/100) × 400 = 120."
+  },
+  "difficulty": "easy",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

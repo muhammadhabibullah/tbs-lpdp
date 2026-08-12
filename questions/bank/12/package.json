@@ -1,0 +1,9 @@
+{
+  "id": 12,
+  "title": "TBS LPDP Try Out — Paket 12",
+  "description": "Simulasi lengkap Tes Bakat Skolastik LPDP dengan tingkat kesulitan tinggi (Hard Difficulty): Penalaran Verbal (23 soal/30 menit), Penalaran Kuantitatif (25 soal/40 menit), dan Pemecahan Masalah (12 soal/20 menit).",
+  "difficulty": "hard",
+  "ai_model": "MiniMax-M3",
+  "ai_company": "MiniMax",
+  "ai_model_description": "Model MiniMax-M3 dengan kemampuan penalaran yang kuat untuk menghasilkan soal TBS berkualitas tinggi."
+}

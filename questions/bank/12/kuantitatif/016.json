@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-016",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 16,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nDiketahui x = 7.\nP = 3x + 7\nQ = 5x + 9\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Jumlah P dan Q kurang daripada 52"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. P = 28 dan Q = 44, sehingga Q > P; nilai P tidak melebihi nilai Q (28 tidak lebih besar daripada 44).",
+    "B": "Benar. P = 28 dan Q = 44, sehingga Q > P.",
+    "C": "Salah. P = 28 dan Q = 44, sehingga Q > P; kedua nilai tidak sama (28 ≠ 44).",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 28 dan Q = 44), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 28 dan Q = 44, jumlahnya 72, tidak kurang daripada 52."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

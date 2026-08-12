@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-008",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 8,
+  "type": "aljabar",
+  "question_text": "Jika 4x − 30 = −22, nilai x adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "8"
+    },
+    {
+      "key": "B",
+      "text": "−13"
+    },
+    {
+      "key": "C",
+      "text": "−5,5"
+    },
+    {
+      "key": "D",
+      "text": "4"
+    },
+    {
+      "key": "E",
+      "text": "2"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 8 diperoleh dengan berhenti pada nilai 4x dan belum membaginya dengan 4.",
+    "B": "Salah. Nilai −13 diperoleh dengan mengurangkan 30 sekali lagi ketika memindahkan ruas, padahal −30 berubah menjadi +30.",
+    "C": "Salah. Nilai −5,5 diperoleh dengan membagi −22 dengan 4 tanpa memindahkan −30 lebih dahulu.",
+    "D": "Salah. Nilai 4 diperoleh dengan mengurangkan koefisien 4 dari 8, padahal koefisien itu harus dijadikan pembagi.",
+    "E": "Benar. 4x = −22 + 30 = 8, sehingga x = 8 : 4 = 2."
+  },
+  "difficulty": "easy",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

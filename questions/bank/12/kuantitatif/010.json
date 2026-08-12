@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-010",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "deret_angka",
+  "question_text": "8, 11, 16, 23, ..., ..., 56 Dua bilangan yang tepat untuk mengisi titik-titik tersebut berturut-turut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "32, 43"
+    },
+    {
+      "key": "B",
+      "text": "43, 56"
+    },
+    {
+      "key": "C",
+      "text": "24, 35"
+    },
+    {
+      "key": "D",
+      "text": "30, 37"
+    },
+    {
+      "key": "E",
+      "text": "43, 32"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Selisih antarsuku bertambah tetap 2: 3, 5, 7, dan seterusnya. Selisih berikutnya adalah 13, sehingga suku berikutnya 43 + 13 = 56. Dua bilangan yang hilang adalah 32 dan 43; suku terakhir yang tercetak (56) mengonfirmasi pola tersebut.",
+    "B": "Salah. Pasangan ini diperoleh dengan menggeser jawaban satu suku, sehingga titik-titik diisi dengan suku keenam dan suku ketujuh — padahal suku ketujuh sudah tercetak.",
+    "C": "Salah. Pasangan ini diperoleh dengan membaca deret ini sebagai dua deret berselang-seling, masing-masing dilanjutkan dari suku sejenisnya.",
+    "D": "Salah. Pasangan ini diperoleh dengan menganggap selisih deret tetap sebesar selisih dua suku tercetak terakhir (7), yang tidak membawa deret sampai ke suku terakhir.",
+    "E": "Salah. Pasangan ini diperoleh dengan menemukan kedua bilangan dengan benar tetapi menuliskannya terbalik."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

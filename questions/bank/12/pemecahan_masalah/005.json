@@ -1,0 +1,28 @@
+{
+  "id": "12-pemecahan_masalah-005",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah perusahaan rintisan (startup) mengalami pertumbuhan pengguna yang stagnan selama 6 bulan terakhir. Tim produk memiliki dua opsi: (1) menambah fitur baru yang membutuhkan biaya pengembangan besar dengan risiko menyulitkan pengguna lama, atau (2) memperbaiki kualitas fitur yang sudah ada sehingga lebih cepat dan stabil. Anggaran perusahaan terbatas dan tim engineering juga tidak besar. Keputusan paling tepat bagi startup tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Menambah fitur baru secara besar-besaran untuk menarik segmen pengguna baru."},
+    {"key": "B", "text": "Memperbaiki kualitas fitur yang sudah ada karena biaya lebih terkontrol dan dampak langsung pada retensi pengguna."},
+    {"key": "C", "text": "Menambah fitur sekaligus memperbaiki fitur lama secara paralel dengan menambah karyawan baru."},
+    {"key": "D", "text": "Menghentikan sementara pengembangan sambil menunggu pasar membaik."},
+    {"key": "E", "text": "Beralih total ke strategi pemasaran agresif untuk menggaet pengguna baru tanpa mengubah produk."}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Menambah fitur baru membutuhkan biaya besar dan berisiko mengusir pengguna lama, sehingga tidak sesuai dengan anggaran dan tim yang terbatas.",
+    "B": "Benar. Memperbaiki kualitas fitur yang sudah ada memerlukan biaya lebih rendah, memanfaatkan tim yang ada, dan meningkatkan kepuasan serta retensi pengguna yang sudah ada.",
+    "C": "Menambah karyawan baru membutuhkan biaya besar yang tidak sesuai dengan kondisi perusahaan.",
+    "D": "Menghentikan pengembangan sama sekali berarti kehilangan momentum dan berpotensi kehilangan pengguna.",
+    "E": "Memperbaiki pemasaran tanpa memperbaiki produk tidak akan mengatasi akar masalah stagnasi yang biasanya terkait dengan kepuasan pengguna."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

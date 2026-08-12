@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-007",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "EKSPLISIT >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Jelas"},
+    {"key": "B", "text": "Tersurat"},
+    {"key": "C", "text": "Gamblang"},
+    {"key": "D", "text": "Implisit"},
+    {"key": "E", "text": "Tersembunyi"}
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Jelas justru sinonim dari eksplisit, bukan antonimnya.",
+    "B": "Tersurat juga sinonim, bukan antonim.",
+    "C": "Gamblang bermakna yang sama dengan eksplisit, bukan antonim.",
+    "D": "Benar. Eksplisit berarti dinyatakan dengan terang dan jelas, antonim yang paling tepat adalah implisit (tersirat, tidak dinyatakan secara langsung).",
+    "E": "Tersembunyi bermakna tidak terlihat, yang merupakan konsekuensi tetapi bukan pasangan baku dari eksplisit."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "12-pemecahan_masalah-011",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Simpulan yang paling tepat mengenai teks di atas adalah ...",
+  "image": null,
+  "passage": "Pemanfaatan kecerdasan buatan (AI) di dunia pendidikan tinggi membawa dua implikasi yang saling berbenturan. Di satu sisi, AI dapat mempercepat proses penelitian dan membantu dosen memberikan umpan balik yang lebih personal kepada mahasiswa. Di sisi lain, ketergantungan berlebihan pada AI berpotensi melemahkan kemampuan berpikir kritis mahasiswa, karena mereka cenderung menerima hasil keluaran AI tanpa verifikasi mandiri. Karena itu, perguruan tinggi perlu merumuskan pedoman yang jelas agar AI menjadi alat bantu, bukan pengganti proses berpikir.",
+  "options": [
+    {"key": "A", "text": "AI seharusnya tidak digunakan sama sekali di perguruan tinggi karena selalu melemahkan kemampuan berpikir."},
+    {"key": "B", "text": "Pemanfaatan AI di perguruan tinggi memiliki manfaat dan risiko, sehingga diperlukan regulasi yang tepat."},
+    {"key": "C", "text": "Dosen lebih diuntungkan oleh AI daripada mahasiswa."},
+    {"key": "D", "text": "Tanpa AI, kemampuan berpikir kritis mahasiswa tidak akan berkembang."},
+    {"key": "E", "text": "AI hanya bermanfaat untuk penelitian, bukan untuk kegiatan belajar mengajar."}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Pernyataan ini berlebihan; teks tidak menyarankan pelarangan total, melainkan pedoman penggunaan.",
+    "B": "Benar. Teks menyajikan dua sisi (manfaat dan risiko) dan menekankan perlunya pedoman yang jelas, sehingga simpulan utamanya adalah perlunya regulasi yang tepat.",
+    "C": "Teks tidak membandingkan keuntungan antara dosen dan mahasiswa; fokus utama adalah regulasi.",
+    "D": "Teks tidak menyatakan bahwa AI menghambat perkembangan kemampuan berpikir kritis; hanya menyebut risiko ketergantungan berlebihan.",
+    "E": "Teks menyatakan AI bermanfaat untuk penelitian dan umpan balik pembelajaran, tidak terbatas pada penelitian saja."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-009",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 9,
+  "type": "deret_angka",
+  "question_text": "2, 5, 10, 17, 26, 37, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "48, 65"
+    },
+    {
+      "key": "B",
+      "text": "50, 65"
+    },
+    {
+      "key": "C",
+      "text": "50, 63"
+    },
+    {
+      "key": "D",
+      "text": "49, 80"
+    },
+    {
+      "key": "E",
+      "text": "50, 80"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Suku ketujuh 48 diperoleh dengan menganggap selisih tetap sebesar 11, padahal selisihnya bertambah dua setiap langkah, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "B": "Benar. Suku ke-n adalah n² + 1 (1² + 1 = 2, 2² + 1 = 5, dan seterusnya). Suku ketujuh adalah 7² + 1 = 50. Dengan pola yang sama, suku kedelapan adalah 65.",
+    "C": "Salah. Suku ketujuh sudah tepat, tetapi suku kedelapan 63 diperoleh dengan mengulangkan selisih suku ketujuh dan keenam (13), seolah-olah selisih deret ini tetap.",
+    "D": "Salah. Suku ketujuh 49 diperoleh dengan menambahkan 2 × 6 = 12 dan lupa bahwa selisih berikutnya adalah 2 × 6 + 1 = 13, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "E": "Salah. Suku ketujuh sudah tepat, tetapi bilangan kedua 80 diperoleh dengan menambahkan selisih 15 pada suku kedelapan 65, yaitu mengulangi selisih suku ketujuh ke kedelapan alih-alih berhenti pada suku kedelapan."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-021",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Berdasarkan bacaan, dapat disimpulkan bahwa ...",
+  "image": null,
+  "passage": "Biodiversitas Indonesia tercatat sebagai salah satu yang tertinggi di dunia, dengan lebih dari 17.000 pulau yang menjadi rumah bagi flora dan fauna endemik. Hutan tropis Indonesia, misalnya, menjadi habitat alami bagi orangutan, harimau Sumatera, dan berbagai spesies yang tidak ditemukan di tempat lain. Kekayaan hayati ini memiliki nilai ekologis dan ekonomis yang sangat penting bagi keseimbangan ekosistem global.\n\nNamun, laju deforestasi dan perdagangan satwa liar ilegal mengancam kelestarian biodiversitas tersebut. Pembukaan lahan untuk perkebunan dan pertambangan telah menyusutkan luas hutan secara signifikan dalam dua dekade terakhir. Upaya konservasi yang dilakukan pemerintah, seperti penetapan taman nasional dan rehabilitasi hutan, belum cukup untuk mengimbangi laju kerusakan yang terjadi.",
+  "options": [
+    {"key": "A", "text": "Indonesia tidak memerlukan kerja sama internasional dalam pelestarian biodiversitas."},
+    {"key": "B", "text": "Kerusakan hutan Indonesia terutama disebabkan oleh bencana alam, bukan aktivitas manusia."},
+    {"key": "C", "text": "Pelestarian biodiversitas Indonesia memerlukan upaya yang lebih kuat dari sekedar penetapan taman nasional."},
+    {"key": "D", "text": "Biodiversitas Indonesia tidak memiliki nilai ekonomis bagi masyarakat."},
+    {"key": "E", "text": "Deforestasi hanya berdampak pada fauna, bukan pada flora."}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Tidak ada pernyataan di bacaan yang menyiratkan penolakan kerja sama internasional.",
+    "B": "Bacaan menunjukkan deforestasi disebabkan oleh aktivitas manusia (perkebunan dan pertambangan), bukan bencana alam.",
+    "C": "Benar. Bacaan menekankan bahwa upaya konservasi (termasuk taman nasional) belum cukup, sehingga diperlukan upaya yang lebih kuat lagi.",
+    "D": "Bacaan justru menyatakan biodiversitas memiliki nilai ekonomis.",
+    "E": "Tidak ada pernyataan spesifik seperti ini di bacaan; deforestasi memengaruhi keseluruhan ekosistem."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-003",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "KONTEMPORER = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Bersamaan"},
+    {"key": "B", "text": "Moderen"},
+    {"key": "C", "text": "Aktual"},
+    {"key": "D", "text": "Mutakhir"},
+    {"key": "E", "text": "Masa kini"}
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Bersamaan bermakna terjadi pada saat yang sama, bukan sebutan gaya atau pemikiran.",
+    "B": "Moderen adalah serapan langsung, bukan kata baku dalam bahasa Indonesia.",
+    "C": "Aktual bermakna benar-benar terjadi saat ini, bukan sebuah gaya atau mazhab.",
+    "D": "Benar. Kontemporer bermakna hidup atau terjadi pada zaman sekarang, sinonim yang tepat adalah mutakhir.",
+    "E": "Masa kini adalah keterangan waktu, bukan sebutan bagi sebuah gaya atau karya."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-016",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Jika hasil panen berkurang, maka harga pangan akan naik. Harga pangan saat ini tidak naik.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Hasil panen sedang meningkat."},
+    {"key": "B", "text": "Hasil panen tidak berkurang."},
+    {"key": "C", "text": "Hasil panen sudah pasti sama dengan tahun lalu."},
+    {"key": "D", "text": "Harga pangan kemungkinan akan turun."},
+    {"key": "E", "text": "Penyebab naiknya harga pangan bukan karena hasil panen."}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Meningkat menyimpulkan lebih dari premis; yang dapat disimpulkan hanya 'tidak berkurang'.",
+    "B": "Benar. Modus tollens: P → Q, ~Q maka ~P. Harga tidak naik, maka hasil panen tidak berkurang.",
+    "C": "Tidak ada informasi tentang perbandingan dengan tahun lalu; kata \"sama\" tidak dijamin premis.",
+    "D": "Harga pangan dapat saja tetap, sehingga simpulan ini tidak dijamin.",
+    "E": "Premis hanya membahas satu penyebab, tidak membahas penyebab lain."
+  },
+  "difficulty": "easy",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

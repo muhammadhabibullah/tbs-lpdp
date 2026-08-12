@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-023",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Simpulan yang paling tepat mengenai hubungan dua paragraf pada bacaan adalah ...",
+  "image": null,
+  "passage": "Biodiversitas Indonesia tercatat sebagai salah satu yang tertinggi di dunia, dengan lebih dari 17.000 pulau yang menjadi rumah bagi flora dan fauna endemik. Hutan tropis Indonesia, misalnya, menjadi habitat alami bagi orangutan, harimau Sumatera, dan berbagai spesies yang tidak ditemukan di tempat lain. Kekayaan hayati ini memiliki nilai ekologis dan ekonomis yang sangat penting bagi keseimbangan ekosistem global.\n\nNamun, laju deforestasi dan perdagangan satwa liar ilegal mengancam kelestarian biodiversitas tersebut. Pembukaan lahan untuk perkebunan dan pertambangan telah menyusutkan luas hutan secara signifikan dalam dua dekade terakhir. Upaya konservasi yang dilakukan pemerintah, seperti penetapan taman nasional dan rehabilitasi hutan, belum cukup untuk mengimbangi laju kerusakan yang terjadi.",
+  "options": [
+    {"key": "A", "text": "Paragraf kedua menolak seluruh informasi yang disampaikan di paragraf pertama."},
+    {"key": "B", "text": "Paragraf kedua menyajikan data statistik yang berbeda dari paragraf pertama."},
+    {"key": "C", "text": "Paragraf kedua memaparkan masalah yang dapat mengancam hal-hal baik yang dipaparkan di paragraf pertama."},
+    {"key": "D", "text": "Paragraf kedua menjelaskan sejarah kerusakan hutan yang tidak terkait dengan paragraf pertama."},
+    {"key": "E", "text": "Paragraf kedua memperkuat argumen bahwa biodiversitas tidak penting."}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Paragraf kedua tidak menolak, melainkan memberikan sisi lain dari realitas biodiversitas Indonesia.",
+    "B": "Tidak ada data statistik di paragraf pertama yang dibandingkan dengan paragraf kedua.",
+    "C": "Benar. Paragraf pertama membahas kekayaan biodiversitas, dan paragraf kedua memaparkan ancaman (deforestasi) yang dapat merusaknya.",
+    "D": "Paragraf kedua sangat terkait dengan paragraf pertama karena membahas ancaman terhadap hal yang sama.",
+    "E": "Paragraf kedua justru menyiratkan biodiversitas penting sehingga harus dilestarikan."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

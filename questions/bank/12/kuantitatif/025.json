@@ -1,0 +1,28 @@
+{
+  "id": "12-kuantitatif-025",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Perhatikan tabung pada gambar. Diketahui jari-jari alas tabung adalah 10 cm dan tinggi tabung adalah 18 cm. Volume tabung tersebut adalah ... (gunakan π = 3,14)",
+  "image": "images/tabung.svg",
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "3.768 cm³"},
+    {"key": "B", "text": "5.652 cm³"},
+    {"key": "C", "text": "1.884 cm³"},
+    {"key": "D", "text": "565,2 cm³"},
+    {"key": "E", "text": "5.024 cm³"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Nilai ini adalah volume tabung dengan jari-jari 10 dan tinggi 12, atau jari-jari 8 dan tinggi 18; tidak sesuai soal.",
+    "B": "Benar. Volume tabung = π × r² × t = 3,14 × 10² × 18 = 3,14 × 100 × 18 = 3,14 × 1.800 = 5.652 cm³.",
+    "C": "Nilai ini adalah luas alas saja (π × r² = 314 cm², dikalikan 6 ≈ 1.884) atau volume dengan keliru menggunakan diameter sebagai jari-jari.",
+    "D": "Nilai ini adalah volume yang terlalu kecil; diperoleh dengan keliru menghitung sebagai 3,14 × 10 × 18 tanpa mengkuadratkan jari-jari.",
+    "E": "Nilai ini diperoleh dengan keliru menggunakan diameter (20) sebagai jari-jari: 3,14 × 20² × 18 ÷ 2, atau kalkulasi dengan satuan keliru."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

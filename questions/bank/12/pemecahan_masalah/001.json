@@ -1,0 +1,28 @@
+{
+  "id": "12-pemecahan_masalah-001",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 1,
+  "type": "logika_analitis",
+  "question_text": "Lima orang (A, B, C, D, E) berdiri dalam satu barisan. Diketahui: (1) A dan E berada di kedua ujung barisan, dengan E di posisi paling kiri, (2) C berada di posisi ketiga dari kiri, (3) B berdiri persis di sebelah kanan D. Siapakah yang berdiri persis di sebelah kiri C?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "A"},
+    {"key": "B", "text": "B"},
+    {"key": "C", "text": "E"},
+    {"key": "D", "text": "D"},
+    {"key": "E", "text": "A atau E"}
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "A berada di posisi 5 (paling kanan), bukan di posisi 2.",
+    "B": "B berada di posisi 4 (di sebelah kanan D), bukan di posisi 2.",
+    "C": "E berada di posisi 1 (paling kiri), bukan di posisi 2.",
+    "D": "Benar. E=1, C=3, A=5 (sesuai kendala 1 dan 2). Posisi 2 dan 4 tersisa untuk B dan D. Kendala 3: B persis di sebelah kanan D, sehingga D=2 dan B=4. Orang di sebelah kiri C (posisi 3) adalah yang menempati posisi 2, yaitu D.",
+    "E": "E dan A sudah menempati posisi 1 dan 5, sehingga tidak mungkin berada di posisi 2."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

@@ -1171,6 +1171,10 @@ FIGURES: list[Figure] = [
         length_u=15, width_u=8, height_u=6, unit="cm")),
     Figure("11-kuantitatif-025", "kerucut.svg", lambda: cone(
         radius_u=7, height_u=24, unit="cm")),
+    Figure("12-kuantitatif-024", "trapesium.svg", lambda: isosceles_trapezoid(
+        long_u=28, short_u=18, leg_u=13, unit="cm")),
+    Figure("12-kuantitatif-025", "tabung.svg", lambda: cylinder(
+        radius_u=10, height_u=18, unit="cm")),
 ]
 
 

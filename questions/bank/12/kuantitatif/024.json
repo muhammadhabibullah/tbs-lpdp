@@ -1,0 +1,28 @@
+{
+  "id": "12-kuantitatif-024",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Perhatikan trapesium sama kaki pada gambar. Diketahui panjang sisi sejajarnya adalah 28 cm dan 18 cm, dan panjang kaki yang sama panjangnya adalah 13 cm. Luas trapesium tersebut adalah ...",
+  "image": "images/trapesium.svg",
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "184 cm²"},
+    {"key": "B", "text": "276 cm²"},
+    {"key": "C", "text": "138 cm²"},
+    {"key": "D", "text": "312 cm²"},
+    {"key": "E", "text": "252 cm²"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Nilai ini diperoleh dengan keliru menggunakan panjang kaki 13 cm sebagai tinggi trapesium.",
+    "B": "Benar. Selisih sisi sejajar adalah 28 − 18 = 10 cm, sehingga proyeksi horizontal kaki = 5 cm. Dengan Pythagoras, tinggi = √(13² − 5²) = √(169 − 25) = √144 = 12 cm. Luas = (28 + 18)/2 × 12 = 23 × 12 = 276 cm².",
+    "C": "Nilai ini adalah setengah dari luas yang benar (276/2), karena keliru mengalikan dengan faktor 1/2 lagi.",
+    "D": "Nilai ini diperoleh dengan mengalikan sisi sejajar terpanjang (28) dengan tinggi 12, tanpa memperhitungkan sisi sejajar pendek.",
+    "E": "Nilai ini diperoleh dengan mengalikan rata-rata sisi sejajar (23) dengan panjang kaki (13), bukan dengan tinggi."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-008",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "KONSTAN >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Tetap"},
+    {"key": "B", "text": "Stabil"},
+    {"key": "C", "text": "Berubah-ubah"},
+    {"key": "D", "text": "Berfluktuasi"},
+    {"key": "E", "text": "Berganti-ganti"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Tetap justru sinonim dari konstan, bukan antonimnya.",
+    "B": "Stabil bermakna tidak goyah, sinonim dari konstan.",
+    "C": "Benar. Konstan berarti tidak berubah-ubah, antonim yang paling tepat adalah berubah-ubah.",
+    "D": "Berfluktuasi bermakna naik-turun, yang menangkap sebagian makna tetapi bukan padanan antonim yang paling lazim untuk konstan.",
+    "E": "Berganti-ganti juga bermakna berubah, tetapi kurang setepat berubah-ubah sebagai antonim baku konstan."
+  },
+  "difficulty": "easy",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

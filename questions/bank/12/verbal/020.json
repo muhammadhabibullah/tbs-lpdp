@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-020",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Pernyataan berikut yang tidak sesuai dengan isi bacaan adalah ...",
+  "image": null,
+  "passage": "Biodiversitas Indonesia tercatat sebagai salah satu yang tertinggi di dunia, dengan lebih dari 17.000 pulau yang menjadi rumah bagi flora dan fauna endemik. Hutan tropis Indonesia, misalnya, menjadi habitat alami bagi orangutan, harimau Sumatera, dan berbagai spesies yang tidak ditemukan di tempat lain. Kekayaan hayati ini memiliki nilai ekologis dan ekonomis yang sangat penting bagi keseimbangan ekosistem global.\n\nNamun, laju deforestasi dan perdagangan satwa liar ilegal mengancam kelestarian biodiversitas tersebut. Pembukaan lahan untuk perkebunan dan pertambangan telah menyusutkan luas hutan secara signifikan dalam dua dekade terakhir. Upaya konservasi yang dilakukan pemerintah, seperti penetapan taman nasional dan rehabilitasi hutan, belum cukup untuk mengimbangi laju kerusakan yang terjadi.",
+  "options": [
+    {"key": "A", "text": "Indonesia memiliki lebih dari 17.000 pulau dengan biodiversitas tinggi."},
+    {"key": "B", "text": "Orangutan dan harimau Sumatera adalah contoh fauna endemik Indonesia."},
+    {"key": "C", "text": "Deforestasi dan perdagangan satwa liar ilegal menjadi ancaman bagi biodiversitas."},
+    {"key": "D", "text": "Upaya konservasi pemerintah dinilai sudah berhasil mengimbangi laju kerusakan."},
+    {"key": "E", "text": "Pembukaan lahan untuk perkebunan dan pertambangan menyusutkan luas hutan."}
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Sesuai dengan paragraf pertama bacaan.",
+    "B": "Disebutkan secara eksplisit di paragraf pertama.",
+    "C": "Disebutkan di awal paragraf kedua sebagai ancaman.",
+    "D": "Benar sebagai pernyataan yang tidak sesuai. Bacaan justru menyatakan upaya konservasi 'belum cukup' untuk mengimbangi laju kerusakan, bukan sudah berhasil.",
+    "E": "Disebutkan di paragraf kedua."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

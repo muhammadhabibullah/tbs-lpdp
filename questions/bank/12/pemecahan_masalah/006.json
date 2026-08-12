@@ -1,0 +1,28 @@
+{
+  "id": "12-pemecahan_masalah-006",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah kota pesisir menghadapi peningkatan volume sampah plastik yang signifikan setiap tahun. Penduduk setempat kebanyakan bermata pencaharian sebagai nelayan. Pemerintah daerah mempertimbangkan tiga kebijakan: (1) melarang total penjualan plastik sekali pakai, (2) membangun fasilitas daur ulang modern dengan biaya tinggi, (3) kampanye pemilahan sampah dari rumah tangga. Dengan pertimbangan dampak lingkungan, biaya, dan keterlibatan masyarakat, kombinasi kebijakan yang paling tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Hanya kebijakan 1 karena dampak lingkungannya paling cepat terasa."},
+    {"key": "B", "text": "Hanya kebijakan 2 karena memberikan solusi struktural jangka panjang."},
+    {"key": "C", "text": "Hanya kebijakan 3 karena biaya rendah dan memberdayakan masyarakat."},
+    {"key": "D", "text": "Kebijakan 1 dan 3, karena melarang plastik sekali pakai sekaligus mengedukasi masyarakat untuk pemilahan."},
+    {"key": "E", "text": "Kebijakan 2 dan 3, karena membangun fasilitas daur ulang dan mengedukasi masyarakat untuk berpartisipasi."}
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Larangan total tanpa persiapan dapat menghambat aktivitas ekonomi warga, terutama nelayan yang bergantung pada plastik untuk pengemasan hasil tangkap.",
+    "B": "Fasilitas daur ulang modern memerlukan biaya besar yang kemungkinan tidak sesuai dengan APBD kota pesisir tersebut.",
+    "C": "Kampanye pemilahan saja tidak cukup mengatasi volume sampah yang sudah menumpuk.",
+    "D": "Larangan total plastik sekali pakai bagi kota pesisir yang aktivitas ekonominya bergantung pada plastik akan terlalu memberatkan.",
+    "E": "Benar. Membangun fasilitas daur ulang memberikan solusi struktural untuk mengelola sampah yang ada, sementara kampanye pemilahan menumbuhkan kebiasaan baik dari tingkat rumah tangga dengan biaya terjangkau."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

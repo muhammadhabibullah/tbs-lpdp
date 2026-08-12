@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-009",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "peluang_kombinatorik",
+  "question_text": "Rani memiliki 8 jenis permen yang berbeda dan akan membagikan seluruhnya kepada dua orang temannya. Apabila setiap teman harus menerima 4 permen, banyak cara pembagian yang mungkin adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "1.680"
+    },
+    {
+      "key": "B",
+      "text": "70"
+    },
+    {
+      "key": "C",
+      "text": "40.320"
+    },
+    {
+      "key": "D",
+      "text": "256"
+    },
+    {
+      "key": "E",
+      "text": "35"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 1.680 diperoleh dengan memperhatikan urutan ketika memilih 4 permen untuk teman pertama, padahal permen yang diterima tidak berurutan.",
+    "B": "Benar. Cukup memilih 4 permen untuk teman pertama; sisanya otomatis menjadi bagian teman kedua. Banyak caranya adalah C(8, 4) = 70.",
+    "C": "Salah. Nilai 40.320 diperoleh dengan menghitung seluruh urutan 8 permen, bukan pembagiannya menjadi dua kelompok.",
+    "D": "Salah. Nilai 256 diperoleh dengan menganggap setiap permen bebas diberikan kepada salah satu dari dua teman, tanpa syarat masing-masing menerima 4 permen.",
+    "E": "Salah. Nilai 35 diperoleh dengan membagi hasilnya dengan 2 seolah-olah kedua teman tidak dibedakan, padahal keduanya orang yang berbeda."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

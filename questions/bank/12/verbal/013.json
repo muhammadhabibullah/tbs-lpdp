@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-013",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "BIBLIOGRAFI : BUKU = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Atlas : peta"},
+    {"key": "B", "text": "Diskografi : lagu"},
+    {"key": "C", "text": "Katalog : barang"},
+    {"key": "D", "text": "Ensiklopedia : pengetahuan"},
+    {"key": "E", "text": "Album : foto"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Atlas memuat peta, tetapi peta bukan sesuatu yang 'tercatat bibliografis'; kurang setepat analogi B.",
+    "B": "Benar. Bibliografi adalah daftar tercatat dari buku, sebagaimana diskografi adalah daftar tercatat dari lagu atau karya musik.",
+    "C": "Katalog adalah daftar barang, tetapi katalog tidak selalu 'tercatat' seperti bibliografi.",
+    "D": "Ensiklopedia memuat pengetahuan, tetapi pengetahuan bukan objek yang 'tercatat bibliografis'.",
+    "E": "Album memuat foto, tetapi foto bukan objek yang 'terdaftar'."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

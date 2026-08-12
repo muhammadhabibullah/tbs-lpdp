@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-014",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Semua pegawai yang bekerja lebih dari 8 jam akan menerima uang lembur. Pak Hendra tidak menerima uang lembur bulan ini.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Pak Hendra bukan pegawai kantor itu."},
+    {"key": "B", "text": "Pak Hendra bekerja kurang dari atau sama dengan 8 jam bulan ini."},
+    {"key": "C", "text": "Pak Hendra tidak disiplin."},
+    {"key": "D", "text": "Pak Hendra kemungkinan bekerja lebih dari 8 jam."},
+    {"key": "E", "text": "Pak Hendra belum tentu pegawai tetap."}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Premis tidak menyebut status kepegawaian Hendra; simpulan ini tidak dapat ditarik.",
+    "B": "Benar. Dengan modus tollens: bila lebih dari 8 jam → lembur, dan Hendra tidak menerima lembur, maka Hendra tidak bekerja lebih dari 8 jam (yaitu ≤ 8 jam).",
+    "C": "Simpulan ini menilai sikap, padahal premis tidak membicarakan kedisiplinan.",
+    "D": "Bertentangan dengan kesimpulan modus tollens yang pasti.",
+    "E": "Status kepegawaian tetap bukan implikasi dari premis yang ada."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

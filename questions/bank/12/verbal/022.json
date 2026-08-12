@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-022",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Kata 'rehabilitasi' dalam konteks bacaan memiliki makna ...",
+  "image": null,
+  "passage": "Biodiversitas Indonesia tercatat sebagai salah satu yang tertinggi di dunia, dengan lebih dari 17.000 pulau yang menjadi rumah bagi flora dan fauna endemik. Hutan tropis Indonesia, misalnya, menjadi habitat alami bagi orangutan, harimau Sumatera, dan berbagai spesies yang tidak ditemukan di tempat lain. Kekayaan hayati ini memiliki nilai ekologis dan ekonomis yang sangat penting bagi keseimbangan ekosistem global.\n\nNamun, laju deforestasi dan perdagangan satwa liar ilegal mengancam kelestarian biodiversitas tersebut. Pembukaan lahan untuk perkebunan dan pertambangan telah menyusutkan luas hutan secara signifikan dalam dua dekade terakhir. Upaya konservasi yang dilakukan pemerintah, seperti penetapan taman nasional dan rehabilitasi hutan, belum cukup untuk mengimbangi laju kerusakan yang terjadi.",
+  "options": [
+    {"key": "A", "text": "Pembukaan kembali lahan hutan untuk aktivitas ekonomi."},
+    {"key": "B", "text": "Pemulihan kondisi hutan yang rusak agar berfungsi kembali."},
+    {"key": "C", "text": "Penggantian spesies asli dengan spesies baru yang lebih unggul."},
+    {"key": "D", "text": "Perubahan status hutan menjadi kawasan industri."},
+    {"key": "E", "text": "Penebangan pohon secara berkala untuk hasil hutan."}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Bertentangan dengan konteks upaya konservasi.",
+    "B": "Benar. Dalam konteks konservasi hutan, rehabilitasi berarti pemulihan kondisi hutan yang rusak agar dapat berfungsi kembali.",
+    "C": "Tidak ada kaitannya dengan konservasi; mengganti spesies justru menurunkan biodiversitas.",
+    "D": "Perubahan status menjadi kawasan industri bertentangan dengan upaya konservasi.",
+    "E": "Penebangan pohon merupakan bagian dari kerusakan, bukan rehabilitasi."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

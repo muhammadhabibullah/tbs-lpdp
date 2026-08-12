@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-007",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 7,
+  "type": "aljabar",
+  "question_text": "Diketahui x + y = 14 dan xy = 29. Nilai dari x² + y² adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "80"
+    },
+    {
+      "key": "B",
+      "text": "196"
+    },
+    {
+      "key": "C",
+      "text": "138"
+    },
+    {
+      "key": "D",
+      "text": "254"
+    },
+    {
+      "key": "E",
+      "text": "167"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 80 diperoleh dengan menghitung (x − y)² = (x + y)² − 4xy, yang merupakan besaran lain.",
+    "B": "Salah. Nilai 196 diperoleh dengan menghitung (x + y)² = 196 dan berhenti di situ, tanpa mengurangkan 2xy.",
+    "C": "Benar. x² + y² = (x + y)² − 2xy = 14² − 2 × 29 = 196 − 58 = 138.",
+    "D": "Salah. Nilai 254 diperoleh dengan menambahkan 2xy, padahal suku itu harus dipindahkan sehingga dikurangkan.",
+    "E": "Salah. Nilai 167 diperoleh dengan mengurangkan xy satu kali, padahal penjabaran (x + y)² memuat 2xy."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

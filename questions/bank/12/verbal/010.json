@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-010",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "GURU : SEKOLAH = DOKTER : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Obat"},
+    {"key": "B", "text": "Rumah sakit"},
+    {"key": "C", "text": "Pasien"},
+    {"key": "D", "text": "Stetoskop"},
+    {"key": "E", "text": "Praktik"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Obat adalah alat kerja dokter, bukan tempat dokter bekerja.",
+    "B": "Benar. Guru bekerja di sekolah, sebagaimana dokter bekerja di rumah sakit.",
+    "C": "Pasien adalah objek yang dilayani dokter, bukan tempat praktiknya.",
+    "D": "Stetoskop adalah instrumen, bukan tempat kerja.",
+    "E": "Praktik adalah kegiatan kerjanya, bukan tempat bekerja secara spesifik."
+  },
+  "difficulty": "easy",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

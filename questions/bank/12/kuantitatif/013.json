@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-013",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 13,
+  "type": "deret_huruf",
+  "question_text": "B, Z, C, Y, E, W, H, ... Huruf yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "U"
+    },
+    {
+      "key": "B",
+      "text": "T"
+    },
+    {
+      "key": "C",
+      "text": "L"
+    },
+    {
+      "key": "D",
+      "text": "R"
+    },
+    {
+      "key": "E",
+      "text": "S"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Mengulang penurunan −2, padahal lompatan jalur menurun menjadi −3.",
+    "B": "Benar. Dua jalur berselang-seling bergerak berlawanan. Jalur ganjil naik +1, +2, +3, +4, sedangkan jalur genap turun −1, −2, −3, −4. Jadi, huruf berikutnya adalah T.",
+    "C": "Salah. Melanjutkan jalur menaik lebih dahulu, padahal giliran berikutnya jalur menurun.",
+    "D": "Salah. Membaca penurunan berikutnya sebagai −5, bukan −3.",
+    "E": "Salah. Menaikkan besar lompatan dua tingkat sekaligus menjadi −4."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

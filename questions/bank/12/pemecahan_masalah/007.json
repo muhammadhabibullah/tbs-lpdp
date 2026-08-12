@@ -1,0 +1,28 @@
+{
+  "id": "12-pemecahan_masalah-007",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "interpretasi_data",
+  "question_text": "Berdasarkan tabel di atas, proporsi siswa yang memilih jurusan Teknik Informatika terhadap total siswa angkatan tersebut adalah ...",
+  "image": null,
+  "passage": "Jurusan|Jumlah Siswa\nTeknik Informatika|48\nSistem Informasi|36\nTeknik Elektro|24\nManajemen Informatika|12",
+  "options": [
+    {"key": "A", "text": "40%"},
+    {"key": "B", "text": "36%"},
+    {"key": "C", "text": "45%"},
+    {"key": "D", "text": "32%"},
+    {"key": "E", "text": "48%"}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Total siswa = 48 + 36 + 24 + 12 = 120. Proporsi Teknik Informatika = 48/120 = 0,40 = 40%.",
+    "B": "Nilai ini merupakan proporsi Sistem Informasi (36/120 = 30%); bukan 36%.",
+    "C": "Nilai ini diperoleh dengan keliru menghitung total sebagai 48 + 36 + 24 saja (108) sehingga 48/108 ≈ 44,4%, dibulatkan ke 45%.",
+    "D": "Nilai ini merupakan selisih proporsi Teknik Informatika dan Sistem Informasi (40% − 30% = 10%), bukan proporsi Teknik Informatika.",
+    "E": "Nilai ini adalah jumlah siswa Teknik Informatika (48), bukan proporsi."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

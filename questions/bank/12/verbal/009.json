@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-009",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "EPIDEMIOLOG : PENYAKIT = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Seismolog : gempa"},
+    {"key": "B", "text": "Botani : tumbuh-tumbuhan"},
+    {"key": "C", "text": "Astronom : bintang"},
+    {"key": "D", "text": "Arkeolog : fosil"},
+    {"key": "E", "text": "Filolog : bahasa"}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Epidemiolog adalah ahli yang mempelajari pola penyebaran penyakit, sebagaimana seismolog mempelajari gempa bumi.",
+    "B": "Botani adalah cabang ilmu, bukan ahlinya; padanan yang dimaksud adalah ahlinya (botanis atau botanawan).",
+    "C": "Astronom adalah ahlinya, tetapi analogi di sini menyiratkan objek yang dipelajari berupa fenomena, bukan objek tetap; kurang setepat pilihan A.",
+    "D": "Arkeolog mempelajari artefak dan peninggalan masa lalu, bukan fosil secara khusus.",
+    "E": "Filolog mengkaji naskah dan teks, bukan bahasa secara keseluruhan."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

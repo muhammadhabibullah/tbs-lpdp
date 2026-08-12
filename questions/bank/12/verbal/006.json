@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-006",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "KONVERGEN >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Memusat"},
+    {"key": "B", "text": "Menyatu"},
+    {"key": "C", "text": "Divergen"},
+    {"key": "D", "text": "Menyebar"},
+    {"key": "E", "text": "Memencar"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Memusat justru sinonim dari konvergen, bukan antonimnya.",
+    "B": "Menyatu juga sinonim, bukan antonim.",
+    "C": "Benar. Konvergen berarti menuju satu titik yang sama, antonim yang paling tepat adalah divergen (menyebar ke arah yang berbeda).",
+    "D": "Menyebar menangkap makna yang benar, tetapi bukan padanan baku bahasa Indonesia untuk konvergen.",
+    "E": "Memencar juga bermakna benar, tetapi tidak setepat divergen sebagai pasangan baku konvergen."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-017",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat yang paling efektif dan sesuai dengan kaidah bahasa Indonesia adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Dalam rapat itu membahas tentang rencana kerja tahun depan."},
+    {"key": "B", "text": "Bagi seluruh peserta didik diwajibkan membawa kartu pelajar."},
+    {"key": "C", "text": "Dokumen proposal penelitian itu sudah ditandatangani oleh ketua tim."},
+    {"key": "D", "text": "Kepada yang hadir dalam acara tersebut, mohon untuk berdiri."},
+    {"key": "E", "text": "Hasil daripada ujian akhir semester ini menunjukkan peningkatan yang sangat signifikan sekali."}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Subjek tidak jelas (kalimat yang berprefiks 'me-' kehilangan subjek); seharusnya 'Rapat itu membahas'.",
+    "B": "Preposisi 'Bagi' di awal kalimat mengaburkan subjek; lebih tepat 'Seluruh peserta didik wajib membawa'.",
+    "C": "Benar. Kalimat memiliki subjek dan predikat yang jelas, tidak ada pemborosan kata, dan sesuai dengan PUEBI.",
+    "D": "Penggunaan 'Kepada' di awal tidak tepat untuk objek yang melakukan tindakan; lebih baik 'Para hadirin dimohon berdiri'.",
+    "E": "Penggunaan 'daripada' salah (untuk perbandingan), 'sangat signifikan' dan 'sekali' redundan."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

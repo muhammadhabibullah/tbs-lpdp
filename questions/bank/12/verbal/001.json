@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-001",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "INKONSISTEN = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Tidak tetap"},
+    {"key": "B", "text": "Tidak beraturan"},
+    {"key": "C", "text": "Tidak stabil"},
+    {"key": "D", "text": "Tidak seragam"},
+    {"key": "E", "text": "Tidak sejalan"}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Inkonsisten berarti tidak tetap pendirian atau sikapnya, sehingga sinonim yang paling tepat adalah tidak tetap.",
+    "B": "Salah. Tidak beraturan lebih dekat maknanya dengan acak atau tidak sistematis.",
+    "C": "Salah. Tidak stabil lazim dipakai untuk benda atau kondisi fisik, bukan untuk prinsip atau sikap.",
+    "D": "Salah. Tidak seragam berarti bentuknya berbeda-beda, bukan selaras dengan yang sebelumnya.",
+    "E": "Salah. Tidak sejalan bermakna bertentangan arah, bukan berubah-ubah."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

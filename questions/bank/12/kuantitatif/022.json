@@ -1,0 +1,28 @@
+{
+  "id": "12-kuantitatif-022",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Sebuah perusahaan memproduksi dua varian produk, Premium dan Reguler, dengan biaya produksi tetap per bulan berturut-turut Rp4.000.000,00 dan Rp2.500.000,00. Harga jual Premium Rp180.000,00 per unit dengan biaya variabel Rp100.000,00 per unit; harga jual Reguler Rp120.000,00 per unit dengan biaya variabel Rp70.000,00 per unit. Apabila pada bulan tersebut terjual 80 unit Premium dan 150 unit Reguler, laba bersih perusahaan adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Rp6.400.000,00"},
+    {"key": "B", "text": "Rp7.500.000,00"},
+    {"key": "C", "text": "Rp8.400.000,00"},
+    {"key": "D", "text": "Rp7.400.000,00"},
+    {"key": "E", "text": "Rp5.400.000,00"}
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Nilai ini hanya marjin kontribusi dari produk Premium saja, tanpa menambah kontribusi Reguler dan mengurang biaya tetap.",
+    "B": "Nilai ini hanya marjin kontribusi dari produk Reguler saja.",
+    "C": "Nilai ini diperoleh dengan menjumlahkan marjin kontribusi tetapi hanya mengurangi satu biaya tetap.",
+    "D": "Benar. Marjin kontribusi Premium = (180.000 − 100.000) × 80 = 6.400.000. Marjin kontribusi Reguler = (120.000 − 70.000) × 150 = 7.500.000. Total marjin = 13.900.000. Biaya tetap total = 4.000.000 + 2.500.000 = 6.500.000. Laba bersih = 13.900.000 − 6.500.000 = 7.400.000.",
+    "E": "Nilai ini diperoleh dengan mengurangi biaya tetap terlalu besar."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

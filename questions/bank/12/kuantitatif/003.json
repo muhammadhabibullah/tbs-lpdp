@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-003",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 3,
+  "type": "aritmetika",
+  "question_text": "Harga sebuah barang Rp400.000,00 dinaikkan 40%, kemudian harga baru itu diturunkan 10%. Berapakah harga barang setelah kedua perubahan tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp400.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp560.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp360.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp520.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp504.000,00"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai Rp400.000,00 diperoleh dengan menganggap kenaikan dan penurunan dengan persentase saling meniadakan.",
+    "B": "Salah. Nilai Rp560.000,00 diperoleh dengan berhenti setelah kenaikan dan tidak menerapkan penurunan.",
+    "C": "Salah. Nilai Rp360.000,00 diperoleh dengan hanya menerapkan penurunan 10% pada harga awal.",
+    "D": "Salah. Nilai Rp520.000,00 diperoleh dengan menjumlahkan langsung kedua persentase menjadi 40% − 10% dan menerapkannya pada harga awal.",
+    "E": "Benar. Harga setelah kenaikan = Rp400.000,00 × 140/100 = Rp560.000,00; harga setelah penurunan = Rp560.000,00 × 90/100 = Rp504.000,00."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

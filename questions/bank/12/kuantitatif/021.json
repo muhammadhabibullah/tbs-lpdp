@@ -1,0 +1,28 @@
+{
+  "id": "12-kuantitatif-021",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Sebuah tabungan awalnya berisi Rp2.000.000,00. Pada awal setiap bulan, pemilik mengambil 20% dari saldo akhir bulan sebelumnya untuk biaya hidup, lalu akhir bulan menambahkan lagi Rp200.000,00. Setelah 2 bulan, saldo tabungan menjadi ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Rp1.440.000,00"},
+    {"key": "B", "text": "Rp1.800.000,00"},
+    {"key": "C", "text": "Rp1.640.000,00"},
+    {"key": "D", "text": "Rp1.520.000,00"},
+    {"key": "E", "text": "Rp1.760.000,00"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Nilai ini adalah saldo setelah pengambilan 20% pada bulan kedua, sebelum penambahan setoran.",
+    "B": "Nilai ini adalah saldo akhir bulan pertama.",
+    "C": "Benar. Bulan 1: ambil 20% × 2.000.000 = 400.000, sisa 1.600.000, tambah 200.000 menjadi 1.800.000. Bulan 2: ambil 20% × 1.800.000 = 360.000, sisa 1.440.000, tambah 200.000 menjadi 1.640.000.",
+    "D": "Nilai ini diperoleh dengan keliru menarik 20% dari saldo awal Rp2.000.000 dua kali berturut-turut tanpa memperhitungkan setoran bulanan.",
+    "E": "Nilai ini diperoleh dengan asumsi 20% dihitung dari saldo awal, bukan saldo akhir bulan sebelumnya."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

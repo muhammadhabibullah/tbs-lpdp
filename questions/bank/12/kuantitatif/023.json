@@ -1,0 +1,28 @@
+{
+  "id": "12-kuantitatif-023",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Sebuah investasi awal sebesar Rp5.000.000,00 memberikan bunga majemuk 10% per tahun. Setelah 3 tahun, investasi tersebut menjadi ... (Catatan: pembulatan ke rupiah terdekat)",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Rp6.500.000,00"},
+    {"key": "B", "text": "Rp6.655.000,00"},
+    {"key": "C", "text": "Rp6.050.000,00"},
+    {"key": "D", "text": "Rp6.500.500,00"},
+    {"key": "E", "text": "Rp6.000.000,00"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Nilai ini merupakan total dengan bunga tunggal 10% per tahun selama 3 tahun (Rp1.500.000), bukan bunga majemuk.",
+    "B": "Benar. Dengan bunga majemuk 10% per tahun: tahun 1 menjadi 5.000.000 × 1,1 = 5.500.000; tahun 2 menjadi 5.500.000 × 1,1 = 6.050.000; tahun 3 menjadi 6.050.000 × 1,1 = 6.655.000.",
+    "C": "Nilai ini adalah saldo setelah 2 tahun saja.",
+    "D": "Nilai ini merupakan hasil dengan keliru mengalikan 1,1 tiga kali terhadap 5.000.000 (5.000.000 × 1,1^3 = 6.655.000); angka 6.500.500 tidak bersesuaian dengan rumus bunga majemuk yang benar.",
+    "E": "Nilai ini merupakan saldo awal ditambah satu kali bunga 10% saja, setara 1 tahun."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

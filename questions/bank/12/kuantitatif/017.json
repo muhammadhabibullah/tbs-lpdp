@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-017",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 17,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nDiketahui x adalah bilangan bulat positif.\nP = 2x + 10\nQ = 4x\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Nilai P dan Q tidak dapat dihitung untuk nilai x mana pun"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. P tidak selalu lebih besar: untuk x = 1 diperoleh P = 12 dan Q = 4 sehingga P > Q, sedangkan untuk x = 11 diperoleh P = 32 dan Q = 44 sehingga Q > P.",
+    "B": "Salah. Q tidak selalu lebih besar: untuk x = 1 diperoleh P = 12 dan Q = 4 sehingga P > Q, sedangkan untuk x = 11 diperoleh P = 32 dan Q = 44 sehingga Q > P.",
+    "C": "Salah. Kedua besaran tidak selalu sama: untuk x = 1 diperoleh P = 12 dan Q = 4 sehingga P > Q, sedangkan untuk x = 11 diperoleh P = 32 dan Q = 44 sehingga Q > P.",
+    "D": "Benar. Hubungan P dan Q bergantung pada nilai x — untuk x = 1 diperoleh P = 12 dan Q = 4 sehingga P > Q, sedangkan untuk x = 11 diperoleh P = 32 dan Q = 44 sehingga Q > P — sehingga tidak ada satu hubungan yang berlaku untuk seluruh bilangan bulat positif.",
+    "E": "Salah. Begitu sebuah nilai x dipilih, P dan Q langsung dapat dihitung; yang tidak dapat ditentukan adalah hubungan keduanya secara umum."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

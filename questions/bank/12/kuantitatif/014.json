@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-014",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 14,
+  "type": "perbandingan_kuantitatif",
+  "question_text": "Perhatikan dua besaran berikut.\nP = 40% dari 200\nQ = 2/5 dari 200\nManakah pernyataan yang benar mengenai hubungan P dan Q?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P lebih besar daripada Q"
+    },
+    {
+      "key": "B",
+      "text": "Q lebih besar daripada P"
+    },
+    {
+      "key": "C",
+      "text": "P sama dengan Q"
+    },
+    {
+      "key": "D",
+      "text": "Hubungan P dan Q tidak dapat ditentukan dari informasi yang diberikan"
+    },
+    {
+      "key": "E",
+      "text": "Selisih antara P dan Q lebih besar daripada 10"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. P = 80 dan Q = 80, sehingga P = Q; nilai P tidak melebihi nilai Q (80 tidak lebih besar daripada 80).",
+    "B": "Salah. P = 80 dan Q = 80, sehingga P = Q; nilai Q tidak melebihi nilai P (80 tidak lebih besar daripada 80).",
+    "C": "Benar. P = 80 dan Q = 80, sehingga P = Q.",
+    "D": "Salah. Kedua besaran dapat dihitung pasti dari informasi yang diberikan (P = 80 dan Q = 80), sehingga hubungannya dapat ditentukan.",
+    "E": "Salah. P = 80 dan Q = 80, selisihnya 0, tidak lebih besar daripada 10."
+  },
+  "difficulty": "easy",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

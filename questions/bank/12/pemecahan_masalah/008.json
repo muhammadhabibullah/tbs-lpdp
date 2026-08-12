@@ -1,0 +1,28 @@
+{
+  "id": "12-pemecahan_masalah-008",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "interpretasi_data",
+  "question_text": "Berdasarkan tabel di atas, pernyataan yang PALING TEPAT adalah ...",
+  "image": null,
+  "passage": "Program Studi|Pendaftar 2022|Pendaftar 2023|Pendaftar 2024\nKedokteran|800|950|1.100\nHukum|600|650|680\nTeknik|900|1.050|1.150\nEkonomi|500|520|540",
+  "options": [
+    {"key": "A", "text": "Prodi Hukum memiliki pertumbuhan pendaftar paling tinggi dalam dua tahun terakhir."},
+    {"key": "B", "text": "Prodi Teknik memiliki jumlah pendaftar terbesar pada setiap tahun."},
+    {"key": "C", "text": "Selisih pendaftar prodi Kedokteran dari 2022 ke 2024 lebih besar daripada pertumbuhan total prodi lain."},
+    {"key": "D", "text": "Prodi Ekonomi menurun secara konsisten dari tahun ke tahun."},
+    {"key": "E", "text": "Semua prodi mengalami peningkatan pendaftar pada rentang 2022–2024."}
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Hukum tumbuh dari 600 ke 680, yaitu 13,3% (paling rendah). Kedokteran tumbuh dari 800 ke 1.100, yaitu 37,5% (tertinggi).",
+    "B": "Benar hanya untuk 2024 (Teknik 1.150 > Kedokteran 1.100), tetapi pada 2022 (Teknik 900 > Kedokteran 800) dan 2023 (Teknik 1.050 > Kedokteran 950) juga benar. Namun pilihan E lebih tepat karena mencakup semua prodi.",
+    "C": "Pertumbuhan Kedokteran 2022→2024 adalah 1.100 − 800 = 300. Total pertumbuhan prodi lain: Hukum 80 + Teknik 250 + Ekonomi 40 = 370. Selisih Kedokteran lebih kecil, bukan lebih besar.",
+    "D": "Ekonomi justru meningkat (500 → 520 → 540), bukan menurun.",
+    "E": "Benar. Setiap prodi memiliki pendaftar yang lebih besar dari tahun sebelumnya: Kedokteran 800→950→1.100, Hukum 600→650→680, Teknik 900→1.050→1.150, Ekonomi 500→520→540."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

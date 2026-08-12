@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-015",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Tidak semua karyawan yang rajin dipromosikan tahun ini. Beberapa karyawan yang dipromosikan adalah mereka yang telah bekerja lebih dari 5 tahun.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Semua karyawan yang telah bekerja lebih dari 5 tahun rajin."},
+    {"key": "B", "text": "Beberapa karyawan yang telah bekerja lebih dari 5 tahun tidak dipromosikan."},
+    {"key": "C", "text": "Karyawan yang tidak rajin tidak dipromosikan."},
+    {"key": "D", "text": "Karyawan yang rajin pasti dipromosikan."},
+    {"key": "E", "text": "Tidak ada karyawan yang telah bekerja lebih dari 5 tahun yang rajin."}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Premis tidak mengatakan apa-apa tentang hubungan 'rajin' dengan 'lebih dari 5 tahun'.",
+    "B": "Benar. Premis pertama ('tidak semua yang rajin dipromosikan') menunjukkan ada karyawan rajin yang tidak dipromosikan. Premis kedua menunjukkan beberapa yang dipromosikan adalah yang bekerja lebih dari 5 tahun, sehingga dapat disimpulkan bahwa beberapa yang bekerja lebih dari 5 tahun tidak dipromosikan (karena tidak semua yang rajin dipromosikan, dan yang dipromosikan beberapa di antaranya yang bekerja lebih dari 5 tahun).",
+    "C": "Premis tidak memberikan informasi tentang karyawan yang tidak rajin.",
+    "D": "Premis pertama justru menyangkal ini ('tidak semua').",
+    "E": "Premis tidak menyatakan hubungan tersebut."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-002",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "RESILIEN = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Kuat"},
+    {"key": "B", "text": "Tangguh"},
+    {"key": "C", "text": "Tahan lama"},
+    {"key": "D", "text": "Cepat pulih"},
+    {"key": "E", "text": "Lentur"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Kuat bermakna fisik, tidak menangkap inti kemampuan pulih dari tekanan.",
+    "B": "Benar. Resilien berarti mampu beradaptasi dan pulih dari tekanan, sinonim yang paling tepat adalah tangguh.",
+    "C": "Tahan lama bermakna awet, bukan kemampuan pulih dari tekanan.",
+    "D": "Cepat pulih hanya menangkap satu aspek resiliensi, bukan keseluruhan maknanya.",
+    "E": "Lentur bermakna mudah berubah bentuk, bukan kemampuan menghadapi tekanan."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

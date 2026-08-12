@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-005",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "PROLIFERASI >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Pertumbuhan cepat"},
+    {"key": "B", "text": "Penyusutan"},
+    {"key": "C", "text": "Pengurangan"},
+    {"key": "D", "text": "Stagnasi"},
+    {"key": "E", "text": "Kemerosotan"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Pertumbuhan cepat justru sinonim dari proliferasi, bukan antonimnya.",
+    "B": "Benar. Proliferasi berarti perkembangan atau perbanyakan dengan cepat, antonim yang paling tepat adalah penyusutan.",
+    "C": "Pengurangan hanya sebatas berkurang, belum tentu menyusut secara berarti seperti kebalikan proliferasi.",
+    "D": "Stagnasi bermakna tidak berubah, bukan proses kebalikan dari perbanyakan cepat.",
+    "E": "Kemerosotan bermakna menurun kualitasnya, bukan menyusut jumlahnya."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-011",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "BENIH : TUNAS = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Telur : embrio"},
+    {"key": "B", "text": "Biji : buah"},
+    {"key": "C", "text": "Api : asap"},
+    {"key": "D", "text": "Hujan : banjir"},
+    {"key": "E", "text": "Mentari : siang"}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Benih merupakan awal dari tunas, sebagaimana telur merupakan awal dari embrio (keduanya merupakan tahap permulaan dari kehidupan berikutnya).",
+    "B": "Biji adalah bagian dari buah, bukan tahap awal yang berbeda dari buah.",
+    "C": "Api menghasilkan asap, tetapi asap bukan bentuk awal api.",
+    "D": "Hujan dapat menyebabkan banjir, tetapi banjir bukan bentuk awal hujan.",
+    "E": "Mentari menandai siang, tetapi siang bukan bentuk awal mentari."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

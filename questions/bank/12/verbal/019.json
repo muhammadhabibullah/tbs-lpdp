@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-019",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Gagasan utama paragraf kedua bacaan di atas ditonjolkan oleh ...",
+  "image": null,
+  "passage": "Biodiversitas Indonesia tercatat sebagai salah satu yang tertinggi di dunia, dengan lebih dari 17.000 pulau yang menjadi rumah bagi flora dan fauna endemik. Hutan tropis Indonesia, misalnya, menjadi habitat alami bagi orangutan, harimau Sumatera, dan berbagai spesies yang tidak ditemukan di tempat lain. Kekayaan hayati ini memiliki nilai ekologis dan ekonomis yang sangat penting bagi keseimbangan ekosistem global.\n\nNamun, laju deforestasi dan perdagangan satwa liar ilegal mengancam kelestarian biodiversitas tersebut. Pembukaan lahan untuk perkebunan dan pertambangan telah menyusutkan luas hutan secara signifikan dalam dua dekade terakhir. Upaya konservasi yang dilakukan pemerintah, seperti penetapan taman nasional dan rehabilitasi hutan, belum cukup untuk mengimbangi laju kerusakan yang terjadi.",
+  "options": [
+    {"key": "A", "text": "Ancaman terhadap kelestarian biodiversitas Indonesia."},
+    {"key": "B", "text": "Peran penting Indonesia dalam ekosistem global."},
+    {"key": "C", "text": "Daftar spesies endemik yang dimiliki Indonesia."},
+    {"key": "D", "text": "Upaya konservasi yang sudah berhasil dilakukan pemerintah."},
+    {"key": "E", "text": "Nilai ekonomis dari biodiversitas Indonesia."}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Paragraf kedua secara keseluruhan membahas deforestasi, perdagangan ilegal, dan upaya konservasi yang belum cukup, yaitu ancaman terhadap kelestarian biodiversitas.",
+    "B": "Ini adalah bagian dari paragraf pertama, bukan gagasan utama paragraf kedua.",
+    "C": "Daftar spesies endemik juga dibahas di paragraf pertama.",
+    "D": "Upaya konservasi disebut di paragraf kedua, tetapi dinilai belum cukup; bukan gagasan utama.",
+    "E": "Nilai ekonomis biodiversitas juga merupakan bagian dari paragraf pertama."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

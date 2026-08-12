@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-005",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "Rata-rata 4 bilangan adalah 20. Apabila bilangan 25 ditambahkan ke dalam kelompok tersebut, berapakah rata-rata 5 bilangan itu?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "21"
+    },
+    {
+      "key": "B",
+      "text": "16"
+    },
+    {
+      "key": "C",
+      "text": "26,25"
+    },
+    {
+      "key": "D",
+      "text": "22,5"
+    },
+    {
+      "key": "E",
+      "text": "20"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Jumlah semula = 4 × 20 = 80; jumlah baru = 80 + 25 = 105; rata-rata baru = 105 ÷ 5 = 21.",
+    "B": "Salah. Nilai 16 diperoleh dengan membagi jumlah semula dengan 5 tanpa menambahkan bilangan baru.",
+    "C": "Salah. Nilai 26,25 diperoleh dengan membagi jumlah baru dengan 4, yaitu banyaknya bilangan semula.",
+    "D": "Salah. Nilai 22,5 diperoleh dengan merata-ratakan rata-rata lama dengan bilangan baru seolah-olah keduanya berbobot sama.",
+    "E": "Salah. Nilai 20 diperoleh dengan menganggap rata-rata tidak berubah oleh penambahan satu bilangan."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

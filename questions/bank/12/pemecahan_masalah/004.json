@@ -1,0 +1,28 @@
+{
+  "id": "12-pemecahan_masalah-004",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Delapan tim (P, Q, R, S, T, U, V, W) mengikuti turnamen dengan sistem gugur. Pada babak pertama, P mengalahkan Q, R mengalahkan S, T mengalahkan U, dan V mengalahkan W. Pada babak kedua, R mengalahkan P, dan V mengalahkan T. Pada babak final, V mengalahkan R. Berdasarkan informasi tersebut, pernyataan yang PALING TEPAT adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "V mengalahkan seluruh lawannya tanpa pernah kalah di turnamen."},
+    {"key": "B", "text": "P tidak pernah bertemu V di turnamen."},
+    {"key": "C", "text": "R mengalahkan P pada babak final, bukan semifinal."},
+    {"key": "D", "text": "S lebih unggul dari Q karena berada di jalur yang sama."},
+    {"key": "E", "text": "T mengalahkan V pada pertemuan pertama mereka."}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Pernyataan ini tidak dapat disimpulkan; tidak ada informasi bahwa V tidak pernah kalah sebelumnya.",
+    "B": "Benar. P kalah dari R di babak kedua (semifinal), dan R kemudian kalah dari V di final. P tidak pernah bertemu V.",
+    "C": "Salah. R mengalahkan P di babak kedua (semifinal), bukan di final. Di final, R melawan V dan kalah.",
+    "D": "Tidak ada sistem jalur yang sama dalam turnamen gugur; S dan Q bertemu di babak pertama dengan R yang mengalahkan S dan P yang mengalahkan Q.",
+    "E": "V mengalahkan T di babak kedua, bukan sebaliknya."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

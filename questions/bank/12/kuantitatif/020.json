@@ -1,0 +1,28 @@
+{
+  "id": "12-kuantitatif-020",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Sebuah perusahaan memproduksi dua jenis barang, A dan B. Setiap unit A memerlukan 2 jam pengerjaan dan 1 jam finishing, sedangkan setiap unit B memerlukan 1 jam pengerjaan dan 3 jam finishing. Dalam satu minggu, tersedia total 100 jam pengerjaan dan 120 jam finishing. Apabila seluruh kapasitas terpakai dan keuntungan setiap unit A adalah Rp30.000,00 serta setiap unit B adalah Rp40.000,00, maka keuntungan maksimum yang dapat diperoleh adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Rp1.800.000,00"},
+    {"key": "B", "text": "Rp2.000.000,00"},
+    {"key": "C", "text": "Rp2.200.000,00"},
+    {"key": "D", "text": "Rp2.400.000,00"},
+    {"key": "E", "text": "Rp1.600.000,00"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Nilai ini diperoleh dari kombinasi yang tidak memenuhi kendala finishing secara penuh.",
+    "B": "Nilai ini diperoleh dengan asumsi proporsi yang salah antara A dan B.",
+    "C": "Benar. Misal x unit A dan y unit B. Kendala: 2x + y = 100 (pengerjaan) dan x + 3y = 120 (finishing). Dari dua persamaan: 6x + 3y = 300 dikurangi x + 3y = 120 menghasilkan 5x = 180, sehingga x = 36 dan y = 28. Keuntungan = 36 × 30.000 + 28 × 40.000 = 1.080.000 + 1.120.000 = 2.200.000.",
+    "D": "Nilai ini melebihi batas maksimum yang mungkin dari kapasitas yang tersedia.",
+    "E": "Nilai ini terlalu rendah untuk kapasitas penuh yang tersedia."
+  },
+  "difficulty": "hard",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

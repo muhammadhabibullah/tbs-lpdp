@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-004",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "FRAGMEN = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Potongan"},
+    {"key": "B", "text": "Bagian"},
+    {"key": "C", "text": "Sisa"},
+    {"key": "D", "text": "Belahan"},
+    {"key": "E", "text": "Serpihan"}
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Potongan terlalu umum, dapat berupa bagian yang teratur maupun serpihan.",
+    "B": "Bagian adalah bagian utuh dari keseluruhan, bukan pecahan.",
+    "C": "Sisa bermakna yang tertinggal, bukan pecahan kecil.",
+    "D": "Belahan menunjuk bagian yang sama besar dari benda yang terbagi dua, bukan kepingan kecil.",
+    "E": "Benar. Fragmen adalah bagian kecil yang terpisah dari keseluruhan, sinonim yang paling tepat adalah serpihan."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

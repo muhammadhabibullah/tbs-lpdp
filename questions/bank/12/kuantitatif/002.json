@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-002",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 2,
+  "type": "aritmetika",
+  "question_text": "Diketahui a : b = 3 : 5. Apabila a = 24, berapakah nilai b?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "120"
+    },
+    {
+      "key": "B",
+      "text": "40"
+    },
+    {
+      "key": "C",
+      "text": "64"
+    },
+    {
+      "key": "D",
+      "text": "8"
+    },
+    {
+      "key": "E",
+      "text": "14,4"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 120 diperoleh dengan mengalikan dengan 5 tanpa membaginya dengan 3.",
+    "B": "Benar. a : b = 3 : 5, sehingga b = a × 5/3 = 24 × 5/3 = 40.",
+    "C": "Salah. Nilai 64 diperoleh dengan menghitung jumlah a dan b, bukan nilai b saja.",
+    "D": "Salah. Nilai 8 diperoleh dengan berhenti pada faktor pengali perbandingan (24 ÷ 3) dan tidak mengalikannya kembali.",
+    "E": "Salah. Nilai 14,4 diperoleh dengan membalik perbandingan sehingga menghitung 24 × 3/5."
+  },
+  "difficulty": "easy",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

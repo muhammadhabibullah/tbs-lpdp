@@ -1,0 +1,28 @@
+{
+  "id": "12-pemecahan_masalah-012",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Sebuah kompetisi matematika diikuti oleh 10 tim. Setiap tim bertanding satu kali melawan setiap tim lainnya. Setiap pertandingan menghasilkan pemenang (tidak ada seri). Jika total kemenangan yang tercatat adalah 45, maka total kekalahan yang tercatat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Lebih banyak dari kemenangan"},
+    {"key": "B", "text": "Sama dengan 45"},
+    {"key": "C", "text": "Lebih sedikit dari kemenangan"},
+    {"key": "D", "text": "Tidak dapat ditentukan"},
+    {"key": "E", "text": "Bergantung pada format pertandingan"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Dalam sistem setiap pertandingan menghasilkan satu pemenang dan satu yang kalah, jumlah kemenangan selalu sama dengan jumlah kekalahan.",
+    "B": "Benar. Setiap pertandingan pasti menghasilkan tepat satu pemenang dan satu yang kalah. Total pertandingan = C(10,2) = 45, sehingga total kemenangan = total kekalahan = 45.",
+    "C": "Salah, karena setiap pertandingan menghasilkan satu pemenang dan satu yang kalah.",
+    "D": "Kesimpulan dapat ditentukan; setiap pertandingan menghasilkan tepat satu pemenang.",
+    "E": "Format round-robin menghasilkan satu pemenang per pertandingan, sehingga kekalahan selalu sama dengan kemenangan."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}

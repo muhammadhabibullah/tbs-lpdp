@@ -1,0 +1,28 @@
+{
+  "id": "12-pemecahan_masalah-003",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Tujuh siswa mengikuti lomba lari dengan urutan finis. Diketahui: (1) A finis di posisi ketiga, (2) B finis tepat setelah A, (3) C finis di posisi pertama, (4) D finis di posisi terakhir, (5) E finis sebelum F, (6) G finis di posisi kedua. Siapakah yang finis di posisi kelima?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "E"},
+    {"key": "B", "text": "F"},
+    {"key": "C", "text": "G"},
+    {"key": "D", "text": "A"},
+    {"key": "E", "text": "B"}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Posisi pasti: C=1, G=2, A=3, B=4, D=7. Sisa posisi 5 dan 6 untuk E dan F. Karena E finis sebelum F, maka E=5 dan F=6. Yang finis di posisi kelima adalah E.",
+    "B": "F finis di posisi 6, bukan 5.",
+    "C": "G finis di posisi 2, bukan 5.",
+    "D": "A finis di posisi 3, bukan 5.",
+    "E": "B finis di posisi 4, bukan 5."
+  },
+  "difficulty": "medium",
+  "source": "MiniMax-M3-generated",
+  "verified": true
+}
