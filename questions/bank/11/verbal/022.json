@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-022",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Berdasarkan teks, apa tujuan logis dari kebijakan pengetatan likuiditas di pasar oleh Bank Sentral?",
+  "image": null,
+  "passage": "Dalam upaya menekan laju inflasi, Bank Sentral telah menaikkan suku bunga acuan sebesar 50 basis poin berturut-turut pada dua kuartal terakhir. Kebijakan moneter yang ketat ini bertujuan menyedot likuiditas berlebih di pasar dan memperlambat permintaan kredit dari konsumen maupun korporasi. Secara teori, ketika jumlah uang beredar menurun, daya beli akan melemah sehingga harga barang dan jasa berangsur turun.\n\nNamun, di lapangan kebijakan ini membawa dampak samping yang signifikan. Sektor riil, khususnya Usaha Mikro, Kecil, dan Menengah (UMKM), mulai merasakan beban biaya pinjaman yang membengkak. Banyak pelaku UMKM menunda rencana ekspansi bisnis karena margin keuntungan tergerus cicilan utang. Jika kondisi ini dibiarkan terlalu lama, perlambatan ekonomi yang diharapkan untuk menjinakkan inflasi berisiko berubah menjadi stagnasi bahkan resesi.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Mendorong UMKM untuk melakukan ekspansi bisnis dalam waktu singkat."
+    },
+    {
+      "key": "B",
+      "text": "Melemahkan daya beli masyarakat guna menurunkan harga barang dan jasa."
+    },
+    {
+      "key": "C",
+      "text": "Mempercepat permintaan kredit dari konsumen untuk memutar roda ekonomi."
+    },
+    {
+      "key": "D",
+      "text": "Meningkatkan margin keuntungan perusahaan besar di tengah inflasi."
+    },
+    {
+      "key": "E",
+      "text": "Menghindari terjadinya resesi di sektor riil dengan menurunkan suku bunga."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Pengetatan likuiditas justru membuat UMKM menunda ekspansi.",
+    "B": "Benar. Teks menjelaskan bahwa menyedot likuiditas bertujuan memperlambat kredit, sehingga uang beredar turun, daya beli melemah, dan harga barang/jasa berangsur turun.",
+    "C": "Kebijakan ini bertujuan *memperlambat* permintaan kredit, bukan mempercepatnya.",
+    "D": "Margin keuntungan tidak disebut meningkat; justru UMKM tergerus marginnya.",
+    "E": "Bank Sentral justru menaikkan suku bunga, bukan menurunkan, dan tindakan ini malah berisiko memicu resesi."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

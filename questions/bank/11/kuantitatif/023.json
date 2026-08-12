@@ -1,0 +1,43 @@
+{
+  "id": "11-kuantitatif-023",
+  "package": 11,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Jarak kota A dan B adalah 240 km. Sebuah mobil melaju dari A ke B dengan kecepatan rata-rata 60 km/jam. Pada perjalanan pulang, karena macet, kecepatannya menjadi 40 km/jam. Berapakah kecepatan rata-rata mobil untuk seluruh perjalanan pergi-pulang?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "45 km/jam"
+    },
+    {
+      "key": "B",
+      "text": "48 km/jam"
+    },
+    {
+      "key": "C",
+      "text": "50 km/jam"
+    },
+    {
+      "key": "D",
+      "text": "52 km/jam"
+    },
+    {
+      "key": "E",
+      "text": "55 km/jam"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Perhitungan yang kurang tepat dengan bobot waktu.",
+    "B": "Benar. Waktu pergi = 240/60 = 4 jam. Waktu pulang = 240/40 = 6 jam. Total waktu = 10 jam. Total jarak = 480 km. Rata-rata = 480 / 10 = 48 km/jam.",
+    "C": "50 km/jam adalah rata-rata aritmetika dari 60 dan 40, yang keliru karena waktu tempuh berbeda.",
+    "D": "Salah dalam membagi total jarak.",
+    "E": "Kesalahan aritmetika sederhana."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

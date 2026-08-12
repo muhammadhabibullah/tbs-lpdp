@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-018",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat yang paling efektif dan tepat penggunaannya adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Ia menceritakan tentang pengalamannya selama bekerja di luar negeri."
+    },
+    {
+      "key": "B",
+      "text": "Buku itu membahas kemajuan teknologi komunikasi di era digital."
+    },
+    {
+      "key": "C",
+      "text": "Menurut para ahli mengatakan bahwa pemanasan global berdampak buruk."
+    },
+    {
+      "key": "D",
+      "text": "Walaupun sudah belajar dengan giat, namun dia tetap gagal dalam ujian."
+    },
+    {
+      "key": "E",
+      "text": "Banyak berbagai cara dilakukan untuk mengatasi kemacetan Jakarta."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Kata kerja 'menceritakan' bersifat transitif dan langsung diikuti objek, tidak perlu kata 'tentang'.",
+    "B": "Benar. Kalimat ini efektif, subjek dan predikat jelas, serta tidak ada pemborosan kata.",
+    "C": "Kerancuan struktur, penggabungan 'Menurut para ahli' dan 'mengatakan' menghilangkan subjek yang jelas.",
+    "D": "Penggunaan 'Walaupun' dan 'namun' sekaligus adalah bentuk pleonasme (pemborosan kata hubung pertentangan).",
+    "E": "Kata 'Banyak' dan 'berbagai' memiliki makna yang tumpang tindih (jamak)."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

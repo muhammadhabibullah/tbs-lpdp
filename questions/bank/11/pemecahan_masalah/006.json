@@ -1,0 +1,43 @@
+{
+  "id": "11-pemecahan_masalah-006",
+  "package": 11,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Berdasarkan jadwal piket sebelumnya (P, Q, R, S, T), siapakah perawat yang berjaga pada hari Senin?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "P"
+    },
+    {
+      "key": "B",
+      "text": "Q"
+    },
+    {
+      "key": "C",
+      "text": "R"
+    },
+    {
+      "key": "D",
+      "text": "S"
+    },
+    {
+      "key": "E",
+      "text": "T"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "P berjaga hari Selasa.",
+    "B": "Q berjaga hari Jumat.",
+    "C": "Benar. R harus di hari pertama (Senin) atau terakhir (Jumat). Karena Q menempati Jumat, maka R di hari Senin.",
+    "D": "S berjaga hari Kamis.",
+    "E": "T berjaga hari Rabu."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

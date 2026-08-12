@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-017",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat yang paling efektif dan sesuai dengan ejaan bahasa Indonesia adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Karena hujan lebat, maka jalanan di depan rumah banjir."
+    },
+    {
+      "key": "B",
+      "text": "Para tamu-tamu undangan dipersilakan mencicipi hidangan yang telah disediakan."
+    },
+    {
+      "key": "C",
+      "text": "Pembangunan jembatan itu membutuhkan dana yang tidak sedikit."
+    },
+    {
+      "key": "D",
+      "text": "Bagi semua peserta ujian yang membawa telepon genggam harus mematikannya."
+    },
+    {
+      "key": "E",
+      "text": "Tujuan daripada rapat ini adalah untuk mengevaluasi kinerja tahunan."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Terdapat pleonasme dengan penggunaan 'Karena' dan 'maka' sekaligus dalam satu kalimat.",
+    "B": "Kata 'Para' sudah bermakna jamak, tidak perlu diikuti pengulangan 'tamu-tamu'.",
+    "C": "Benar. Kalimat ini efektif, memiliki struktur subjek dan predikat yang jelas tanpa pemborosan kata.",
+    "D": "Penggunaan preposisi 'Bagi' di awal kalimat mengaburkan subjek (seharusnya 'Semua peserta...').",
+    "E": "Penggunaan 'daripada' tidak tepat karena kata tersebut hanya untuk perbandingan, bukan pengganti kata 'dari' atau 'untuk kepemilikan'."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

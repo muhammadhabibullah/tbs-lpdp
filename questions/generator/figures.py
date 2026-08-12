@@ -1167,6 +1167,10 @@ FIGURES: list[Figure] = [
         radius_u=7, height_u=10, unit="cm")),
     Figure("10-kuantitatif-025", "balok.svg", lambda: cuboid(
         length_u=10, width_u=6, height_u=4, unit="cm")),
+    Figure("11-kuantitatif-024", "balok.svg", lambda: cuboid(
+        length_u=15, width_u=8, height_u=6, unit="cm")),
+    Figure("11-kuantitatif-025", "kerucut.svg", lambda: cone(
+        radius_u=7, height_u=24, unit="cm")),
 ]
 
 

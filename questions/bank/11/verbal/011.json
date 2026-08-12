@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-011",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "KUAS : LUKISAN = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pena : Tanda Tangan"
+    },
+    {
+      "key": "B",
+      "text": "Pahat : Patung"
+    },
+    {
+      "key": "C",
+      "text": "Kamera : Foto"
+    },
+    {
+      "key": "D",
+      "text": "Buku : Cerita"
+    },
+    {
+      "key": "E",
+      "text": "Gitar : Lagu"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Pena digunakan untuk menulis tanda tangan, namun lukisan adalah karya seni utama dari kuas.",
+    "B": "Benar. Kuas adalah alat utama untuk membuat lukisan, sebagaimana pahat adalah alat utama untuk membuat patung.",
+    "C": "Kamera menangkap foto (mekanis), bukan membentuknya dari nol secara perlahan seperti kuas/pahat.",
+    "D": "Buku adalah wadah cerita, bukan alat pembuatnya.",
+    "E": "Gitar menghasilkan melodi/lagu tetapi bukan medium ukir fisik seperti kuas/pahat."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-021",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Pernyataan yang TIDAK SESUAI dengan isi teks tersebut adalah ...",
+  "image": null,
+  "passage": "Kemajuan teknologi kecerdasan buatan (AI) telah mengubah lanskap berbagai industri, termasuk kesehatan, pendidikan, dan keuangan. Di sektor kesehatan, AI dimanfaatkan untuk menganalisis data rekam medis pasien guna memprediksi penyakit genetik dengan akurasi tinggi sebelum gejala muncul. Hal ini memungkinkan dokter untuk melakukan langkah pencegahan lebih dini dan mempersonalisasi pengobatan sesuai profil genetik pasien.\n\nMeskipun menawarkan banyak potensi positif, penerapan AI dalam bidang kesehatan menghadapi kendala privasi data dan bias algoritma. Banyak pasien merasa khawatir data pribadi mereka disalahgunakan oleh pihak ketiga. Selain itu, algoritma yang dilatih dengan data yang tidak representatif berisiko menghasilkan diagnosis yang bias terhadap kelompok minoritas. Oleh karena itu, diperlukan kerangka regulasi yang ketat dan audit algoritma secara berkala agar teknologi ini dapat dimanfaatkan secara etis dan aman.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Teknologi AI memberikan pengaruh terhadap industri keuangan dan pendidikan."
+    },
+    {
+      "key": "B",
+      "text": "Diagnosis AI yang bias disebabkan oleh kurang representatifnya data pelatihan."
+    },
+    {
+      "key": "C",
+      "text": "Prediksi penyakit genetik oleh AI dilakukan setelah gejala pertama kali muncul pada pasien."
+    },
+    {
+      "key": "D",
+      "text": "Pasien memiliki kekhawatiran terkait penyalahgunaan data medis mereka."
+    },
+    {
+      "key": "E",
+      "text": "Pengobatan berbasis AI dapat disesuaikan dengan profil genetik individu pasien."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Sesuai, disebutkan pada kalimat pertama.",
+    "B": "Sesuai, disebutkan di paragraf kedua.",
+    "C": "Benar (Tidak Sesuai). Teks dengan jelas menyatakan AI memprediksi penyakit genetik 'sebelum gejala muncul', bukan sesudahnya.",
+    "D": "Sesuai, kekhawatiran pasien tentang privasi data disebutkan.",
+    "E": "Sesuai, 'mempersonalisasi pengobatan sesuai profil genetik pasien'."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

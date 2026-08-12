@@ -1,0 +1,43 @@
+{
+  "id": "11-kuantitatif-021",
+  "package": 11,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Rata-rata nilai ujian Matematika dari 20 siswa adalah 75. Setelah nilai 5 orang siswa tambahan dimasukkan, rata-ratanya menjadi 78. Berapakah rata-rata nilai dari 5 siswa tambahan tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "85"
+    },
+    {
+      "key": "B",
+      "text": "88"
+    },
+    {
+      "key": "C",
+      "text": "90"
+    },
+    {
+      "key": "D",
+      "text": "92"
+    },
+    {
+      "key": "E",
+      "text": "95"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "85 adalah perhitungan keliru jika jumlah total tidak diperhitungkan menjadi 25.",
+    "B": "88 keliru dalam mengurangkan selisih rata-rata.",
+    "C": "Benar. Total nilai awal = 20 × 75 = 1500. Total akhir = 25 × 78 = 1950. Jumlah nilai 5 siswa = 1950 - 1500 = 450. Rata-rata mereka = 450 / 5 = 90.",
+    "D": "92 didapat dari kesalahan penambahan total akhir.",
+    "E": "95 didapat dari perhitungan 20/5 × selisih tanpa memperhitungkan basis total baru."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

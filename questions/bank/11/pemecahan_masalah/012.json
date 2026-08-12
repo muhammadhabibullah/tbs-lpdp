@@ -1,0 +1,43 @@
+{
+  "id": "11-pemecahan_masalah-012",
+  "package": 11,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Sebuah proyek pembuatan jalan direncanakan selesai dalam waktu 30 hari jika dikerjakan oleh 20 pekerja. Setelah berjalan 10 hari, pekerjaan terhenti selama 5 hari akibat cuaca buruk. Agar proyek tetap selesai tepat pada waktunya, berapa banyak tambahan pekerja yang diperlukan?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "5 pekerja"
+    },
+    {
+      "key": "B",
+      "text": "7 pekerja"
+    },
+    {
+      "key": "C",
+      "text": "8 pekerja"
+    },
+    {
+      "key": "D",
+      "text": "10 pekerja"
+    },
+    {
+      "key": "E",
+      "text": "12 pekerja"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Perhitungan keliru jika menggunakan perbandingan senilai.",
+    "B": "Benar. Total beban awal = 30 × 20 = 600 H-O (Hari-Orang). Sudah dikerjakan = 10 × 20 = 200 H-O. Sisa beban = 400 H-O. Sisa waktu = 30 - 10 - 5 = 15 hari. Pekerja dibutuhkan = 400 / 15 = 26,67 -> dibulatkan ke atas jadi 27 pekerja. Tambahan = 27 - 20 = 7 pekerja.",
+    "C": "Jika membulatkan salah di pembagian 400/15.",
+    "D": "Kesalahan sisa waktu menjadi 10 hari.",
+    "E": "Tebakan acak."
+  },
+  "difficulty": "hard",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

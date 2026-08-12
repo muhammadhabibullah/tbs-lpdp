@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-005",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "APATIS = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Simpati"
+    },
+    {
+      "key": "B",
+      "text": "Antusias"
+    },
+    {
+      "key": "C",
+      "text": "Kritis"
+    },
+    {
+      "key": "D",
+      "text": "Skeptis"
+    },
+    {
+      "key": "E",
+      "text": "Peduli"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Simpati adalah perasaan kasih sayang, bukan antonim langsung dari apatis (masa bodoh).",
+    "B": "Antusias berarti bersemangat, lebih menjadi antonim pasif.",
+    "C": "Kritis berarti tajam dalam analisis.",
+    "D": "Skeptis berarti ragu-ragu.",
+    "E": "Benar. Apatis berarti acuh tak acuh atau tidak peduli, sehingga antonim yang tepat adalah peduli."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

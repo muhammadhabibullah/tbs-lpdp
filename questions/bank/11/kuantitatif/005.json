@@ -1,0 +1,43 @@
+{
+  "id": "11-kuantitatif-005",
+  "package": 11,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "10% dari 240 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "2,4"
+    },
+    {
+      "key": "B",
+      "text": "216"
+    },
+    {
+      "key": "C",
+      "text": "230"
+    },
+    {
+      "key": "D",
+      "text": "24"
+    },
+    {
+      "key": "E",
+      "text": "240"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 2,4 diperoleh dengan menggeser koma desimal satu tempat ke kiri.",
+    "B": "Salah. Nilai 216 diperoleh dengan menghitung sisanya, yaitu bagian 90%.",
+    "C": "Salah. Nilai 230 diperoleh dengan mengurangkan 10 dari 240 alih-alih menghitung persentasenya.",
+    "D": "Benar. 10% × 240 = (10/100) × 240 = 24.",
+    "E": "Salah. Nilai 240 diperoleh dengan menggeser koma desimal satu tempat ke kanan."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

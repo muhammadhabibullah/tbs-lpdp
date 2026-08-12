@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-023",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Apa risiko utama apabila kebijakan kenaikan suku bunga dipertahankan dalam jangka waktu yang terlampau panjang?",
+  "image": null,
+  "passage": "Dalam upaya menekan laju inflasi, Bank Sentral telah menaikkan suku bunga acuan sebesar 50 basis poin berturut-turut pada dua kuartal terakhir. Kebijakan moneter yang ketat ini bertujuan menyedot likuiditas berlebih di pasar dan memperlambat permintaan kredit dari konsumen maupun korporasi. Secara teori, ketika jumlah uang beredar menurun, daya beli akan melemah sehingga harga barang dan jasa berangsur turun.\n\nNamun, di lapangan kebijakan ini membawa dampak samping yang signifikan. Sektor riil, khususnya Usaha Mikro, Kecil, dan Menengah (UMKM), mulai merasakan beban biaya pinjaman yang membengkak. Banyak pelaku UMKM menunda rencana ekspansi bisnis karena margin keuntungan tergerus cicilan utang. Jika kondisi ini dibiarkan terlalu lama, perlambatan ekonomi yang diharapkan untuk menjinakkan inflasi berisiko berubah menjadi stagnasi bahkan resesi.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Laju inflasi akan kembali meningkat dua kali lipat akibat penumpukan uang."
+    },
+    {
+      "key": "B",
+      "text": "Konsumen akan semakin mudah mendapatkan pinjaman berbunga rendah dari pihak swasta."
+    },
+    {
+      "key": "C",
+      "text": "Terjadinya perlambatan ekonomi yang sangat tajam hingga berujung pada resesi ekonomi."
+    },
+    {
+      "key": "D",
+      "text": "UMKM akan memperoleh subsidi cicilan utang langsung dari pemerintah dan Bank Sentral."
+    },
+    {
+      "key": "E",
+      "text": "Daya beli konsumen korporasi akan stabil sehingga harga barang dan jasa meningkat tajam."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Penahanan suku bunga tinggi seharusnya menekan inflasi, bukan melipatgandakannya.",
+    "B": "Teks menyatakan beban pinjaman membengkak, bukan makin mudah.",
+    "C": "Benar. Teks pada kalimat terakhir menyatakan 'perlambatan ekonomi yang diharapkan... berisiko berubah menjadi stagnasi bahkan resesi'.",
+    "D": "Tidak ada informasi tentang subsidi utang UMKM dalam teks.",
+    "E": "Daya beli diprediksi melemah, bukan stabil/meningkat."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

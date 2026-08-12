@@ -1,0 +1,43 @@
+{
+  "id": "11-pemecahan_masalah-003",
+  "package": 11,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Dalam sebuah rapat, terdapat 5 orang yang duduk melingkar: Aldi, Bima, Caca, Doni, dan Elsa.\n1. Bima duduk di sebelah kiri Elsa.\n2. Caca tidak duduk di sebelah Doni.\n3. Aldi duduk diapit oleh Doni dan Elsa.\nSiapakah yang duduk di sebelah kanan Caca?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Aldi"
+    },
+    {
+      "key": "B",
+      "text": "Bima"
+    },
+    {
+      "key": "C",
+      "text": "Doni"
+    },
+    {
+      "key": "D",
+      "text": "Elsa"
+    },
+    {
+      "key": "E",
+      "text": "Tidak dapat ditentukan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Aldi diapit Doni dan Elsa, letaknya jauh dari sebelah kanan Caca.",
+    "B": "Benar. Susunan berlawanan arah jarum jam: Bima - Elsa - Aldi - Doni - Caca. Sebelah kanan Caca (searah jarum jam) adalah Bima.",
+    "C": "Caca tidak boleh duduk di sebelah Doni.",
+    "D": "Elsa diapit oleh Bima dan Aldi.",
+    "E": "Susunan sudah definitif."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

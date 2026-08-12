@@ -1,0 +1,43 @@
+{
+  "id": "11-verbal-014",
+  "package": 11,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Semua tanaman di taman kota dirawat dengan baik. Sebagian bunga mawar ada di taman kota.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua bunga mawar dirawat dengan baik."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian tanaman yang dirawat dengan baik bukan bunga mawar."
+    },
+    {
+      "key": "C",
+      "text": "Sebagian bunga mawar dirawat dengan baik."
+    },
+    {
+      "key": "D",
+      "text": "Semua yang dirawat dengan baik adalah bunga mawar di taman kota."
+    },
+    {
+      "key": "E",
+      "text": "Tidak ada bunga mawar yang tidak dirawat dengan baik."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Tidak semua bunga mawar ada di taman kota.",
+    "B": "Ini mungkin benar tetapi simpulan logis harus terkait langsung dengan subjek (bunga mawar di taman).",
+    "C": "Benar. Karena sebagian mawar ada di taman kota dan semua di taman kota dirawat, maka sebagian mawar pasti dirawat dengan baik.",
+    "D": "Banyak tanaman lain di taman kota yang dirawat.",
+    "E": "Mawar di luar taman kota mungkin tidak dirawat."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

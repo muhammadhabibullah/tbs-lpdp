@@ -1,0 +1,43 @@
+{
+  "id": "11-kuantitatif-020",
+  "package": 11,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Sebuah bak mandi memiliki pipa pengisi yang dapat mengisi bak sampai penuh dalam waktu 6 jam. Terdapat pula pipa penguras yang dapat mengosongkan bak yang penuh dalam waktu 9 jam. Jika kedua pipa dibuka secara bersamaan saat bak dalam keadaan kosong, berapa waktu yang dibutuhkan agar bak terisi penuh?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "12 jam"
+    },
+    {
+      "key": "B",
+      "text": "15 jam"
+    },
+    {
+      "key": "C",
+      "text": "18 jam"
+    },
+    {
+      "key": "D",
+      "text": "21 jam"
+    },
+    {
+      "key": "E",
+      "text": "24 jam"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Perhitungan salah, bukan selisih waktu 9 - 6 ditambah suatu angka sembarang.",
+    "B": "15 didapat dari penjumlahan 9 + 6 secara keliru.",
+    "C": "Benar. Kecepatan isi = 1/6 bagian/jam, kecepatan kuras = 1/9 bagian/jam. Kecepatan net = 1/6 - 1/9 = 3/18 - 2/18 = 1/18 bagian/jam. Maka, butuh 18 jam hingga penuh.",
+    "D": "Perhitungan yang keliru antara selisih pecahan.",
+    "E": "Waktu 24 jam tidak sesuai dengan perhitungan 1/18."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

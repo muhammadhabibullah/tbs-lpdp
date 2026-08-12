@@ -1,0 +1,43 @@
+{
+  "id": "11-kuantitatif-003",
+  "package": 11,
+  "subtest": "kuantitatif",
+  "number": 3,
+  "type": "aritmetika",
+  "question_text": "Sebuah mesin fotokopi menghasilkan 90 lembar salinan dalam 5 menit. Apabila kecepatannya tetap, berapa lembar salinan yang dihasilkan mesin itu dalam 30 menit?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "15"
+    },
+    {
+      "key": "B",
+      "text": "450"
+    },
+    {
+      "key": "C",
+      "text": "115"
+    },
+    {
+      "key": "D",
+      "text": "540"
+    },
+    {
+      "key": "E",
+      "text": "2.700"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 15 diperoleh dengan membalik perbandingan menjadi 90 × 5 ÷ 30.",
+    "B": "Salah. Nilai 450 diperoleh dengan menghitung salinan untuk selisih waktunya saja, yaitu 30 − 5 menit.",
+    "C": "Salah. Nilai 115 diperoleh dengan menambahkan selisih waktu (30 − 5) pada banyaknya salinan.",
+    "D": "Benar. Kecepatan mesin = 90 ÷ 5 = 18 lembar per menit; dalam 30 menit dihasilkan 18 × 30 = 540 lembar.",
+    "E": "Salah. Nilai 2.700 diperoleh dengan mengalikan 90 dengan 30 tanpa membaginya dengan 5 lebih dahulu."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

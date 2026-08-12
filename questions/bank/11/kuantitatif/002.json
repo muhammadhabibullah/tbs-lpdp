@@ -1,0 +1,43 @@
+{
+  "id": "11-kuantitatif-002",
+  "package": 11,
+  "subtest": "kuantitatif",
+  "number": 2,
+  "type": "aritmetika",
+  "question_text": "Rata-rata 4 bilangan adalah 24. Apabila bilangan 34 ditambahkan ke dalam kelompok tersebut, berapakah rata-rata 5 bilangan itu?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "19,2"
+    },
+    {
+      "key": "B",
+      "text": "26"
+    },
+    {
+      "key": "C",
+      "text": "29"
+    },
+    {
+      "key": "D",
+      "text": "32,5"
+    },
+    {
+      "key": "E",
+      "text": "24"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 19,2 diperoleh dengan membagi jumlah semula dengan 5 tanpa menambahkan bilangan baru.",
+    "B": "Benar. Jumlah semula = 4 × 24 = 96; jumlah baru = 96 + 34 = 130; rata-rata baru = 130 ÷ 5 = 26.",
+    "C": "Salah. Nilai 29 diperoleh dengan merata-ratakan rata-rata lama dengan bilangan baru seolah-olah keduanya berbobot sama.",
+    "D": "Salah. Nilai 32,5 diperoleh dengan membagi jumlah baru dengan 4, yaitu banyaknya bilangan semula.",
+    "E": "Salah. Nilai 24 diperoleh dengan menganggap rata-rata tidak berubah oleh penambahan satu bilangan."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

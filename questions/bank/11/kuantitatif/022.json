@@ -1,0 +1,43 @@
+{
+  "id": "11-kuantitatif-022",
+  "package": 11,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Harga sebuah tas setelah dikenai diskon 15% adalah Rp425.000,00. Berapakah harga tas tersebut sebelum diskon?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp450.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp480.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp500.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp525.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp550.000,00"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Harga keliru karena menambahkan diskon 15% dari harga akhir, bukan harga awal.",
+    "B": "Harga yang melenceng karena keliru mengalikan pecahan.",
+    "C": "Benar. Harga awal × 85% = 425.000. Maka Harga awal = 425.000 / 0,85 = 500.000.",
+    "D": "Salah membagi dengan angka konversi diskon.",
+    "E": "Tebakan yang terlalu tinggi."
+  },
+  "difficulty": "easy",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

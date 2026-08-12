@@ -1,0 +1,43 @@
+{
+  "id": "11-pemecahan_masalah-007",
+  "package": 11,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Perusahaan teknologi X ingin merilis produk jam tangan pintar terbarunya. Bulan depan, dua kompetitor utama juga akan merilis produk serupa dengan harga yang lebih murah 20%. Fitur unggulan jam X adalah pemantau kesehatan presisi tingkat medis, yang belum dimiliki kompetitor. Strategi pemasaran paling tepat bagi perusahaan X adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Menurunkan harga produk sebesar 25% agar lebih murah dari pesaing."
+    },
+    {
+      "key": "B",
+      "text": "Menunda peluncuran hingga tahun depan agar pesaing kehabisan momentum."
+    },
+    {
+      "key": "C",
+      "text": "Membuat kampanye promosi yang sangat menonjolkan fitur kesehatan medis tersebut pada segmen pasar premium."
+    },
+    {
+      "key": "D",
+      "text": "Menghapus beberapa fitur untuk menekan harga agar setara dengan pesaing."
+    },
+    {
+      "key": "E",
+      "text": "Membagikan produk secara gratis untuk mendapat ulasan dari masyarakat luas."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Menurunkan harga secara drastis (25%) berisiko merugikan perusahaan dan mengurangi nilai fitur unggulannya.",
+    "B": "Menunda setahun berisiko produk menjadi tertinggal secara teknologi.",
+    "C": "Benar. Strategi yang fokus pada diferensiasi produk (fitur presisi medis) menyasar pasar yang mementingkan fitur dibanding harga semata.",
+    "D": "Menghapus fitur justru menghilangkan keunggulan komparatif produk X.",
+    "E": "Membagikan gratis secara massal tidak berkelanjutan dan merugikan investasi produk."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

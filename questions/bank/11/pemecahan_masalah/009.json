@@ -1,0 +1,43 @@
+{
+  "id": "11-pemecahan_masalah-009",
+  "package": 11,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Berdasarkan tabel di atas, kendaraan manakah yang mengalami peningkatan penjualan tertinggi secara persentase dari 2022 ke 2023?",
+  "image": null,
+  "passage": "Jenis Kendaraan|Penjualan 2022 (Unit)|Penjualan 2023 (Unit)\nMobil Sedan|12.000|13.200\nSUV|15.000|19.500\nTruk Ringan|8.000|8.400\nMobil Listrik|2.000|4.000\nMotor Sport|5.000|5.500",
+  "options": [
+    {
+      "key": "A",
+      "text": "Mobil Sedan"
+    },
+    {
+      "key": "B",
+      "text": "SUV"
+    },
+    {
+      "key": "C",
+      "text": "Truk Ringan"
+    },
+    {
+      "key": "D",
+      "text": "Mobil Listrik"
+    },
+    {
+      "key": "E",
+      "text": "Motor Sport"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Mobil Sedan naik 1.200 unit, yaitu 10%.",
+    "B": "SUV naik 4.500 unit (terbesar secara nominal), yaitu 30%.",
+    "C": "Truk ringan naik 400 unit, yaitu 5%.",
+    "D": "Benar. Mobil Listrik naik dari 2.000 ke 4.000 unit, yaitu peningkatan 100%, persentase tertinggi.",
+    "E": "Motor sport naik 500 unit, yaitu 10%."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}

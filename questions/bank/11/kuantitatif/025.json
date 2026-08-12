@@ -1,0 +1,43 @@
+{
+  "id": "11-kuantitatif-025",
+  "package": 11,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar kerucut di atas. Jika jari-jari alas kerucut adalah 7 cm dan tingginya 24 cm, luas selimut kerucut tersebut adalah ... (π = 22/7)",
+  "image": "images/kerucut.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "528 cm²"
+    },
+    {
+      "key": "B",
+      "text": "550 cm²"
+    },
+    {
+      "key": "C",
+      "text": "616 cm²"
+    },
+    {
+      "key": "D",
+      "text": "704 cm²"
+    },
+    {
+      "key": "E",
+      "text": "850 cm²"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Luas dihitung memakai tinggi, bukan garis pelukis (s).",
+    "B": "Benar. Garis pelukis s = √(7² + 24²) = √(49 + 576) = √625 = 25 cm. Luas selimut = πrs = (22/7) × 7 × 25 = 550 cm².",
+    "C": "Ini adalah luas alas (154) ditambah luas sesuatu yang keliru.",
+    "D": "Luas seluruh permukaan kerucut = 550 + luas alas (154) = 704. Yang diminta hanyalah luas selimut.",
+    "E": "Kesalahan perhitungan aritmetika."
+  },
+  "difficulty": "medium",
+  "source": "gemini-3.1-pro-generated",
+  "verified": true
+}
