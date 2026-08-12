@@ -4,40 +4,25 @@
   "subtest": "verbal",
   "number": 3,
   "type": "sinonim",
-  "question_text": "AMBIGUITAS = ...",
+  "question_text": "PROLIFERASI = ...",
   "image": null,
   "passage": null,
   "options": [
-    {
-      "key": "A",
-      "text": "Kejelasan"
-    },
-    {
-      "key": "B",
-      "text": "Ketidakpastian"
-    },
-    {
-      "key": "C",
-      "text": "Kepastian"
-    },
-    {
-      "key": "D",
-      "text": "Kesepakatan"
-    },
-    {
-      "key": "E",
-      "text": "Kebenaran"
-    }
+    {"key": "A", "text": "Penurunan"},
+    {"key": "B", "text": "Perkembangan biak"},
+    {"key": "C", "text": "Kerusakan"},
+    {"key": "D", "text": "Penuaan"},
+    {"key": "E", "text": "Kematian"}
   ],
   "correct_option": "B",
   "explanations": {
-    "A": "Salah. Kejelasan bukan jawaban yang tepat.",
-    "B": "Benar. Ketidakpastian adalah jawaban yang tepat untuk pertanyaan ini.",
-    "C": "Salah. Kepastian bukan jawaban yang tepat.",
-    "D": "Salah. Kesepakatan bukan jawaban yang tepat.",
-    "E": "Salah. Kebenaran bukan jawaban yang tepat."
+    "A": "Salah. Penurunan adalah antonim proliferasi.",
+    "B": "Benar. Proliferasi berarti perkembangan biak atau pertumbuhan cepat.",
+    "C": "Salah. Kerusakan bukan sinonim proliferasi.",
+    "D": "Salah. Penuaan berbeda dengan proliferasi.",
+    "E": "Salah. Kematian adalah antonim proliferasi."
   },
-  "difficulty": "medium",
+  "difficulty": "hard",
   "source": "qwen-generated",
   "verified": true
 }

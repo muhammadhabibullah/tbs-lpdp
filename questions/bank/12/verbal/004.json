@@ -3,39 +3,24 @@
   "package": 12,
   "subtest": "verbal",
   "number": 4,
-  "type": "padanan_kata",
-  "question_text": "PENULIS : BUKU = ... : ...",
+  "type": "sinonim",
+  "question_text": "KONTEMPORER = ...",
   "image": null,
   "passage": null,
   "options": [
-    {
-      "key": "A",
-      "text": "Pelukis : Kanvas"
-    },
-    {
-      "key": "B",
-      "text": "Komposer : Lagu"
-    },
-    {
-      "key": "C",
-      "text": "Arsitek : Gedung"
-    },
-    {
-      "key": "D",
-      "text": "Petani : Sawah"
-    },
-    {
-      "key": "E",
-      "text": "Guru : Sekolah"
-    }
+    {"key": "A", "text": "Kuno"},
+    {"key": "B", "text": "Tradisional"},
+    {"key": "C", "text": "Modern"},
+    {"key": "D", "text": "Klasik"},
+    {"key": "E", "text": "Kuno"}
   ],
   "correct_option": "C",
   "explanations": {
-    "A": "Salah. Pelukis : Kanvas bukan jawaban yang tepat.",
-    "B": "Salah. Komposer : Lagu bukan jawaban yang tepat.",
-    "C": "Benar. Arsitek : Gedung adalah jawaban yang tepat untuk pertanyaan ini.",
-    "D": "Salah. Petani : Sawah bukan jawaban yang tepat.",
-    "E": "Salah. Guru : Sekolah bukan jawaban yang tepat."
+    "A": "Salah. Kuno adalah antonim kontemporer.",
+    "B": "Salah. Tradisional berbeda dengan kontemporer.",
+    "C": "Benar. Kontemporer berarti modern atau sezaman.",
+    "D": "Salah. Klasik adalah antonim kontemporer.",
+    "E": "Salah. Kuno adalah antonim kontemporer."
   },
   "difficulty": "medium",
   "source": "qwen-generated",

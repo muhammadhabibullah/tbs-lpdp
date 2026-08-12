@@ -3,39 +3,24 @@
   "package": 12,
   "subtest": "verbal",
   "number": 8,
-  "type": "padanan_kata",
-  "question_text": "LABORATORIUM : PENELITIAN = ... : ...",
+  "type": "sinonim",
+  "question_text": "KONTRADIKSI = ...",
   "image": null,
   "passage": null,
   "options": [
-    {
-      "key": "A",
-      "text": "Perpustakaan : Membaca"
-    },
-    {
-      "key": "B",
-      "text": "Dapur : Memasak"
-    },
-    {
-      "key": "C",
-      "text": "Kelas : Belajar"
-    },
-    {
-      "key": "D",
-      "text": "Studio : Melukis"
-    },
-    {
-      "key": "E",
-      "text": "Bengkel : Memperbaiki"
-    }
+    {"key": "A", "text": "Persetujuan"},
+    {"key": "B", "text": "Perbedaan pendapat"},
+    {"key": "C", "text": "Kesepakatan"},
+    {"key": "D", "text": "Harmoni"},
+    {"key": "E", "text": "Kesesuaian"}
   ],
-  "correct_option": "A",
+  "correct_option": "B",
   "explanations": {
-    "A": "Benar. Perpustakaan : Membaca adalah jawaban yang tepat untuk pertanyaan ini.",
-    "B": "Salah. Dapur : Memasak bukan jawaban yang tepat.",
-    "C": "Salah. Kelas : Belajar bukan jawaban yang tepat.",
-    "D": "Salah. Studio : Melukis bukan jawaban yang tepat.",
-    "E": "Salah. Bengkel : Memperbaiki bukan jawaban yang tepat."
+    "A": "Salah. Persetujuan adalah antonim kontradiksi.",
+    "B": "Benar. Kontradiksi berarti perbedaan pendapat atau pertentangan.",
+    "C": "Salah. Kesepakatan adalah antonim kontradiksi.",
+    "D": "Salah. Harmoni adalah antonim kontradiksi.",
+    "E": "Salah. Kesesuaian adalah antonim kontradiksi."
   },
   "difficulty": "medium",
   "source": "qwen-generated",

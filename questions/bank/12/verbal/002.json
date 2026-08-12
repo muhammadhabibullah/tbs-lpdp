@@ -3,39 +3,24 @@
   "package": 12,
   "subtest": "verbal",
   "number": 2,
-  "type": "antonim",
-  "question_text": "KONVERGEN >< ...",
+  "type": "sinonim",
+  "question_text": "INSOMNIA = ...",
   "image": null,
   "passage": null,
   "options": [
-    {
-      "key": "A",
-      "text": "Menjauh"
-    },
-    {
-      "key": "B",
-      "text": "Bertemu"
-    },
-    {
-      "key": "C",
-      "text": "Terpusat"
-    },
-    {
-      "key": "D",
-      "text": "Satu arah"
-    },
-    {
-      "key": "E",
-      "text": "Berdekatan"
-    }
+    {"key": "A", "text": "Tidur nyenyak"},
+    {"key": "B", "text": "Sulit tidur"},
+    {"key": "C", "text": "Mimpi buruk"},
+    {"key": "D", "text": "Bangun pagi"},
+    {"key": "E", "text": "Lelah"}
   ],
-  "correct_option": "A",
+  "correct_option": "B",
   "explanations": {
-    "A": "Benar. Menjauh adalah jawaban yang tepat untuk pertanyaan ini.",
-    "B": "Salah. Bertemu bukan jawaban yang tepat.",
-    "C": "Salah. Terpusat bukan jawaban yang tepat.",
-    "D": "Salah. Satu arah bukan jawaban yang tepat.",
-    "E": "Salah. Berdekatan bukan jawaban yang tepat."
+    "A": "Salah. Tidur nyenyak adalah antonim insomnia.",
+    "B": "Benar. Insomnia berarti sulit tidur atau tidak bisa tidur.",
+    "C": "Salah. Mimpi buruk berbeda dengan insomnia.",
+    "D": "Salah. Bangun pagi bukan sinonim insomnia.",
+    "E": "Salah. Lelah adalah akibat insomnia, bukan sinonim."
   },
   "difficulty": "easy",
   "source": "qwen-generated",

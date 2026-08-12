@@ -4,38 +4,23 @@
   "subtest": "verbal",
   "number": 1,
   "type": "sinonim",
-  "question_text": "PROLIFERASI = ...",
+  "question_text": "EKSENTRIK = ...",
   "image": null,
   "passage": null,
   "options": [
-    {
-      "key": "A",
-      "text": "Penyusutan"
-    },
-    {
-      "key": "B",
-      "text": "Perkembangan"
-    },
-    {
-      "key": "C",
-      "text": "Pengurangan"
-    },
-    {
-      "key": "D",
-      "text": "Pemusnahan"
-    },
-    {
-      "key": "E",
-      "text": "Pembatasan"
-    }
+    {"key": "A", "text": "Biasa"},
+    {"key": "B", "text": "Aneh"},
+    {"key": "C", "text": "Sederhana"},
+    {"key": "D", "text": "Lazim"},
+    {"key": "E", "text": "Normal"}
   ],
   "correct_option": "B",
   "explanations": {
-    "A": "Salah. Penyusutan bukan jawaban yang tepat.",
-    "B": "Benar. Perkembangan adalah jawaban yang tepat untuk pertanyaan ini.",
-    "C": "Salah. Pengurangan bukan jawaban yang tepat.",
-    "D": "Salah. Pemusnahan bukan jawaban yang tepat.",
-    "E": "Salah. Pembatasan bukan jawaban yang tepat."
+    "A": "Salah. Biasa adalah antonim dari eksentrik.",
+    "B": "Benar. Eksentrik berarti aneh atau tidak biasa.",
+    "C": "Salah. Sederhana bukan sinonim eksentrik.",
+    "D": "Salah. Lazim adalah antonim dari eksentrik.",
+    "E": "Salah. Normal adalah antonim dari eksentrik."
   },
   "difficulty": "medium",
   "source": "qwen-generated",

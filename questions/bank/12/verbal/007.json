@@ -4,40 +4,25 @@
   "subtest": "verbal",
   "number": 7,
   "type": "sinonim",
-  "question_text": "REKONSILIASI = ...",
+  "question_text": "TENDENSIUS = ...",
   "image": null,
   "passage": null,
   "options": [
-    {
-      "key": "A",
-      "text": "Perdamaian"
-    },
-    {
-      "key": "B",
-      "text": "Pertentangan"
-    },
-    {
-      "key": "C",
-      "text": "Permusuhan"
-    },
-    {
-      "key": "D",
-      "text": "Perselisihan"
-    },
-    {
-      "key": "E",
-      "text": "Konflik"
-    }
+    {"key": "A", "text": "Netral"},
+    {"key": "B", "text": "Berpihak"},
+    {"key": "C", "text": "Objektif"},
+    {"key": "D", "text": "Adil"},
+    {"key": "E", "text": "Seimbang"}
   ],
-  "correct_option": "A",
+  "correct_option": "B",
   "explanations": {
-    "A": "Benar. Perdamaian adalah jawaban yang tepat untuk pertanyaan ini.",
-    "B": "Salah. Pertentangan bukan jawaban yang tepat.",
-    "C": "Salah. Permusuhan bukan jawaban yang tepat.",
-    "D": "Salah. Perselisihan bukan jawaban yang tepat.",
-    "E": "Salah. Konflik bukan jawaban yang tepat."
+    "A": "Salah. Netral adalah antonim tendensius.",
+    "B": "Benar. Tendensius berarti berpihak atau tidak netral.",
+    "C": "Salah. Objektif adalah antonim tendensius.",
+    "D": "Salah. Adil adalah antonim tendensius.",
+    "E": "Salah. Seimbang adalah antonim tendensius."
   },
-  "difficulty": "easy",
+  "difficulty": "hard",
   "source": "qwen-generated",
   "verified": true
 }
