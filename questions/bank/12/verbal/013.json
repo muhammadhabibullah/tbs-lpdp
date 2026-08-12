@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-013",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "DOKTOR : DISERTASI = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Sarjana : Skripsi"},
+    {"key": "B", "text": "Guru : Pelajaran"},
+    {"key": "C", "text": "Penulis : Buku"},
+    {"key": "D", "text": "Arsitek : Bangunan"},
+    {"key": "E", "text": "Pelukis : Lukisan"}
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Doktor menghasilkan disertasi sebagai karya ilmiah akhir, sebagaimana sarjana menghasilkan skripsi sebagai karya ilmiah akhir.",
+    "B": "Salah. Guru mengajar pelajaran, bukan menghasilkan pelajaran sebagai karya akhir.",
+    "C": "Salah. Penulis menghasilkan buku, tetapi buku bukan syarat gelar akademik tertentu.",
+    "D": "Salah. Arsitek merancang bangunan, tetapi bangunan bukan karya tulis ilmiah.",
+    "E": "Salah. Pelukis menghasilkan lukisan, tetapi lukisan bukan karya tulis ilmiah untuk gelar."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

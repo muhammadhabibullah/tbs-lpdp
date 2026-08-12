@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-012",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 12,
+  "type": "analogi",
+  "question_text": "FOTO : KAMERA = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Lukisan : Kuas"},
+    {"key": "B", "text": "Film : Bioskop"},
+    {"key": "C", "text": "Suara : Mikrofon"},
+    {"key": "D", "text": "Gambar : Pensil"},
+    {"key": "E", "text": "Tulisan : Kertas"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Lukisan dihasilkan oleh pelukis dengan kuas sebagai alat bantu, bukan kuas yang merekam lukisan.",
+    "B": "Salah. Film diputar di bioskop, bukan dihasilkan oleh bioskop.",
+    "C": "Benar. Foto direkam oleh kamera, sebagaimana suara direkam oleh mikrofon; keduanya hubungan objek dengan alat perekam.",
+    "D": "Salah. Gambar dapat dibuat dengan pensil, tetapi pensil tidak merekam gambar secara otomatis.",
+    "E": "Salah. Tulisan dibuat di atas kertas, kertas berfungsi sebagai media, bukan alat perekam."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

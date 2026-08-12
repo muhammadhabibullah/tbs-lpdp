@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-011",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "antonim",
+  "question_text": "KALEIDOSKOPIS >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Berwarna-warni"},
+    {"key": "B", "text": "Monoton"},
+    {"key": "C", "text": "Berubah-ubah"},
+    {"key": "D", "text": "Dinamis"},
+    {"key": "E", "text": "Kompleks"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Berwarna-warni adalah ciri kaleidoskopis, bukan lawannya.",
+    "B": "Benar. Kaleidoskopis berarti selalu berubah dan berwarna-warni, sehingga lawannya adalah monoton atau tidak bervariasi.",
+    "C": "Salah. Berubah-ubah adalah sinonim kaleidoskopis, bukan antonim.",
+    "D": "Salah. Dinamis berkaitan dengan perubahan, mirip dengan kaleidoskopis.",
+    "E": "Salah. Kompleks berarti rumit, bukan lawan kaleidoskopis."
+  },
+  "difficulty": "hard",
+  "source": "qwen-generated",
+  "verified": true
+}

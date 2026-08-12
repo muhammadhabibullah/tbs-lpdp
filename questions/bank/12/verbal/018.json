@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-018",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "pemahaman_wacana",
+  "question_text": "Berdasarkan bacaan pada soal nomor 16, manakah pernyataan yang PALING SESUAI dengan isi teks?",
+  "image": null,
+  "passage": "Energi terbarukan menjadi solusi penting dalam menghadapi krisis iklim global. Panel surya, turbin angin, dan pembangkit listrik tenaga air adalah beberapa contoh teknologi yang memanfaatkan sumber daya alam tanpa menguras cadangan fosil. Negara-negara maju telah mengalokasikan dana besar untuk penelitian dan pengembangan energi bersih. Namun, tantangan utama tetap ada, yaitu biaya instalasi yang tinggi dan kebutuhan infrastruktur pendukung yang memadai.",
+  "options": [
+    {"key": "A", "text": "Energi terbarukan sepenuhnya menggantikan energi fosil"},
+    {"key": "B", "text": "Teknologi energi terbarukan sudah sempurna tanpa kekurangan"},
+    {"key": "C", "text": "Energi terbarukan ramah lingkungan tetapi masih memiliki tantangan"},
+    {"key": "D", "text": "Hanya negara maju yang dapat menggunakan energi terbarukan"},
+    {"key": "E", "text": "Biaya instalasi energi terbarukan semakin murah setiap tahun"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Teks tidak menyatakan energi terbarukan sudah sepenuhnya menggantikan energi fosil.",
+    "B": "Salah. Teks justru menyebutkan adanya tantangan biaya dan infrastruktur.",
+    "C": "Benar. Teks menjelaskan manfaat energi terbarukan (tanpa menguras cadangan fosil) sekaligus tantangannya (biaya tinggi dan infrastruktur).",
+    "D": "Salah. Teks hanya menyebutkan negara maju mengalokasikan dana besar, bukan bahwa hanya mereka yang bisa menggunakan.",
+    "E": "Salah. Teks tidak membahas tren penurunan biaya instalasi."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

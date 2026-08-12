@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-022",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "penalaran_logis",
+  "question_text": "Semua peserta ujian harus membawa kartu identitas. Beberapa peserta ujian lupa membawa kartu identitas.\\n\\nKesimpulan yang paling tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Semua peserta ujian tidak boleh mengikuti ujian"},
+    {"key": "B", "text": "Beberapa peserta ujian tidak memenuhi persyaratan"},
+    {"key": "C", "text": "Tidak ada peserta ujian yang boleh mengikuti ujian"},
+    {"key": "D", "text": "Semua peserta ujian lupa membawa kartu identitas"},
+    {"key": "E", "text": "Peserta yang lupa tidak perlu dihukum"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Tidak dapat disimpulkan bahwa semua peserta tidak boleh ikut, hanya yang lupa membawa kartu.",
+    "B": "Benar. Karena semua peserta harus membawa kartu dan beberapa lupa, maka beberapa peserta tersebut tidak memenuhi persyaratan.",
+    "C": "Salah. Hanya yang lupa membawa kartu yang bermasalah, bukan semua peserta.",
+    "D": "Salah. Premis menyatakan beberapa peserta lupa, bukan semua.",
+    "E": "Salah. Teks tidak membahas tentang hukuman atau konsekuensi."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

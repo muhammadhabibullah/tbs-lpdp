@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-009",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "antonim",
+  "question_text": "PARADOKSAL >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Bertentangan"},
+    {"key": "B", "text": "Konsisten"},
+    {"key": "C", "text": "Ambigu"},
+    {"key": "D", "text": "Rancu"},
+    {"key": "E", "text": "Kompleks"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Bertentangan adalah sinonim paradoksal, bukan antonim.",
+    "B": "Benar. Paradoksal berarti bertentangan atau tidak konsisten, sehingga lawannya adalah konsisten.",
+    "C": "Salah. Ambigu berarti bermakna ganda, bukan lawan paradoksal.",
+    "D": "Salah. Rancu berarti tidak jelas, bukan lawan paradoksal.",
+    "E": "Salah. Kompleks berarti rumit, bukan lawan paradoksal."
+  },
+  "difficulty": "hard",
+  "source": "qwen-generated",
+  "verified": true
+}

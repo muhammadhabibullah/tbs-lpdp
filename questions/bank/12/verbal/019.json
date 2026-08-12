@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-019",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "pemahaman_wacana",
+  "question_text": "Bacaan berikut untuk menjawab soal nomor 19-21.\\n\\nKecerdasan buatan (AI) telah mengubah berbagai sektor industri. Dalam bidang kesehatan, AI membantu diagnosis penyakit dengan akurasi tinggi. Di sektor keuangan, algoritma AI mendeteksi penipuan transaksi secara real-time. Namun, penggunaan AI juga menimbulkan kekhawatiran tentang privasi data dan potensi penggantian tenaga kerja manusia. Para ahli menekankan pentingnya regulasi yang tepat untuk memastikan AI digunakan secara etis dan bertanggung jawab.\\n\\nApa manfaat AI dalam bidang kesehatan menurut teks?",
+  "image": null,
+  "passage": "Kecerdasan buatan (AI) telah mengubah berbagai sektor industri. Dalam bidang kesehatan, AI membantu diagnosis penyakit dengan akurasi tinggi. Di sektor keuangan, algoritma AI mendeteksi penipuan transaksi secara real-time. Namun, penggunaan AI juga menimbulkan kekhawatiran tentang privasi data dan potensi penggantian tenaga kerja manusia. Para ahli menekankan pentingnya regulasi yang tepat untuk memastikan AI digunakan secara etis dan bertanggung jawab.",
+  "options": [
+    {"key": "A", "text": "Menggantikan dokter sepenuhnya"},
+    {"key": "B", "text": "Membantu diagnosis penyakit dengan akurasi tinggi"},
+    {"key": "C", "text": "Mengurangi biaya rumah sakit"},
+    {"key": "D", "text": "Memproduksi obat-obatan baru"},
+    {"key": "E", "text": "Melakukan operasi tanpa manusia"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Teks tidak menyebutkan AI menggantikan dokter sepenuhnya, hanya membantu diagnosis.",
+    "B": "Benar. Teks secara eksplisit menyatakan AI membantu diagnosis penyakit dengan akurasi tinggi.",
+    "C": "Salah. Teks tidak membahas pengurangan biaya rumah sakit.",
+    "D": "Salah. Teks tidak menyebutkan produksi obat-obatan baru.",
+    "E": "Salah. Teks tidak membahas operasi tanpa manusia."
+  },
+  "difficulty": "easy",
+  "source": "qwen-generated",
+  "verified": true
+}

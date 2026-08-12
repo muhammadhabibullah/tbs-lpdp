@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-010",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "antonim",
+  "question_text": "NISBI >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Relatif"},
+    {"key": "B", "text": "Mutlak"},
+    {"key": "C", "text": "Sementara"},
+    {"key": "D", "text": "Terbatas"},
+    {"key": "E", "text": "Subjektif"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Relatif adalah sinonim nisbi, bukan antonim.",
+    "B": "Benar. Nisbi berarti relatif atau tergantung pada acuan, sehingga lawannya adalah mutlak atau tetap.",
+    "C": "Salah. Sementara berkaitan dengan waktu, bukan lawan nisbi.",
+    "D": "Salah. Terbatas berarti ada batasan, bukan lawan nisbi.",
+    "E": "Salah. Subjektif berkaitan dengan sudut pandang pribadi, bukan lawan nisbi."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

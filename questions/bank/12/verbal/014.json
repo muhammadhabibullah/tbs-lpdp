@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-014",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "analogi",
+  "question_text": "INSULIN : PANKREAS = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Otak : Pikiran"},
+    {"key": "B", "text": "Empedu : Hati"},
+    {"key": "C", "text": "Jantung : Darah"},
+    {"key": "D", "text": "Paru-paru : Napas"},
+    {"key": "E", "text": "Ginjal : Urine"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Otak menghasilkan pikiran, tetapi pikiran bukan zat kimia yang diproduksi.",
+    "B": "Benar. Insulin diproduksi oleh pankreas, sebagaimana empedu diproduksi oleh hati; keduanya hubungan zat dengan organ penghasil.",
+    "C": "Salah. Jantung memompa darah, bukan memproduksi darah.",
+    "D": "Salah. Paru-paru berfungsi untuk pertukaran napas, bukan memproduksi napas.",
+    "E": "Salah. Ginjal menyaring urine, bukan memproduksi urine sebagai zat sekret."
+  },
+  "difficulty": "hard",
+  "source": "qwen-generated",
+  "verified": true
+}

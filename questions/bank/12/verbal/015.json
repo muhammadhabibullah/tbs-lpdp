@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-015",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "analogi",
+  "question_text": "SEKOLAH : GURU = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {"key": "A", "text": "Rumah : Orang tua"},
+    {"key": "B", "text": "Rumah sakit : Dokter"},
+    {"key": "C", "text": "Penjara : Narapidana"},
+    {"key": "D", "text": "Pasar : Pedagang"},
+    {"key": "E", "text": "Gedung : Arsitek"}
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Rumah adalah tempat tinggal, orang tua bukan profesional yang bekerja di rumah dalam konteks formal.",
+    "B": "Benar. Sekolah adalah tempat guru bekerja memberikan layanan, sebagaimana rumah sakit adalah tempat dokter bekerja memberikan layanan kesehatan.",
+    "C": "Salah. Penjara adalah tempat narapidana ditahan, narapidana bukan pemberi layanan.",
+    "D": "Salah. Pasar adalah tempat pedagang berjualan, tetapi hubungan ini lebih bersifat transaksi dagang, bukan layanan profesional.",
+    "E": "Salah. Gedung adalah hasil karya arsitek, bukan tempat arsitek bekerja sehari-hari."
+  },
+  "difficulty": "easy",
+  "source": "qwen-generated",
+  "verified": true
+}

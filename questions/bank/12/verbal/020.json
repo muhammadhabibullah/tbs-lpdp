@@ -1,0 +1,28 @@
+{
+  "id": "12-verbal-020",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "pemahaman_wacana",
+  "question_text": "Berdasarkan bacaan pada soal nomor 19, apa kekhawatiran utama terkait penggunaan AI?",
+  "image": null,
+  "passage": "Kecerdasan buatan (AI) telah mengubah berbagai sektor industri. Dalam bidang kesehatan, AI membantu diagnosis penyakit dengan akurasi tinggi. Di sektor keuangan, algoritma AI mendeteksi penipuan transaksi secara real-time. Namun, penggunaan AI juga menimbulkan kekhawatiran tentang privasi data dan potensi penggantian tenaga kerja manusia. Para ahli menekankan pentingnya regulasi yang tepat untuk memastikan AI digunakan secara etis dan bertanggung jawab.",
+  "options": [
+    {"key": "A", "text": "AI terlalu mahal untuk diimplementasikan"},
+    {"key": "B", "text": "AI tidak cukup akurat dalam diagnosis"},
+    {"key": "C", "text": "Privasi data dan penggantian tenaga kerja manusia"},
+    {"key": "D", "text": "AI hanya dapat digunakan di negara maju"},
+    {"key": "E", "text": "AI memerlukan terlalu banyak energi"}
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Teks tidak membahas biaya implementasi AI.",
+    "B": "Salah. Teks justru menyebutkan AI memiliki akurasi tinggi dalam diagnosis.",
+    "C": "Benar. Teks secara eksplisit menyebutkan kekhawatiran tentang privasi data dan potensi penggantian tenaga kerja manusia.",
+    "D": "Salah. Teks tidak membatasi penggunaan AI hanya di negara maju.",
+    "E": "Salah. Teks tidak membahas konsumsi energi AI."
+  },
+  "difficulty": "easy",
+  "source": "qwen-generated",
+  "verified": true
+}
