@@ -1,0 +1,43 @@
+{
+  "id": "12-verbal-015",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "sinonim",
+  "question_text": "KONTUMELI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Penghormatan"
+    },
+    {
+      "key": "B",
+      "text": "Penghinaan"
+    },
+    {
+      "key": "C",
+      "text": "Pujian"
+    },
+    {
+      "key": "D",
+      "text": "Apresiasi"
+    },
+    {
+      "key": "E",
+      "text": "Pengakuan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Penghormatan bukan jawaban yang tepat.",
+    "B": "Benar. Penghinaan adalah jawaban yang tepat untuk pertanyaan ini.",
+    "C": "Salah. Pujian bukan jawaban yang tepat.",
+    "D": "Salah. Apresiasi bukan jawaban yang tepat.",
+    "E": "Salah. Pengakuan bukan jawaban yang tepat."
+  },
+  "difficulty": "hard",
+  "source": "qwen-generated",
+  "verified": true
+}

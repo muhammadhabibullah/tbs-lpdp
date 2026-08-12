@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-012",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "logika_numerik",
+  "question_text": "Lanjutkan deret: 1, 1, 2, 3, 5, 8, 13, ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "18"
+    },
+    {
+      "key": "B",
+      "text": "19"
+    },
+    {
+      "key": "C",
+      "text": "20"
+    },
+    {
+      "key": "D",
+      "text": "21"
+    },
+    {
+      "key": "E",
+      "text": "22"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. 18 bukan jawaban yang tepat.",
+    "B": "Salah. 19 bukan jawaban yang tepat.",
+    "C": "Salah. 20 bukan jawaban yang tepat.",
+    "D": "Benar. 21 adalah jawaban yang tepat.",
+    "E": "Salah. 22 bukan jawaban yang tepat."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

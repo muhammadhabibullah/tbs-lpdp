@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-001",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 1,
+  "type": "logika_analitis",
+  "question_text": "Semua dokter adalah lulusan universitas. Sebagian lulusan universitas bekerja di rumah sakit. Kesimpulan yang paling tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua dokter bekerja di rumah sakit"
+    },
+    {
+      "key": "B",
+      "text": "Sebagian dokter bekerja di rumah sakit"
+    },
+    {
+      "key": "C",
+      "text": "Semua yang bekerja di rumah sakit adalah dokter"
+    },
+    {
+      "key": "D",
+      "text": "Sebagian yang bekerja di rumah sakit adalah lulusan universitas"
+    },
+    {
+      "key": "E",
+      "text": "Tidak ada kesimpulan yang pasti"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Semua dokter bekerja di rumah sakit bukan jawaban yang tepat.",
+    "B": "Salah. Sebagian dokter bekerja di rumah sakit bukan jawaban yang tepat.",
+    "C": "Salah. Semua yang bekerja di rumah sakit adalah dokter bukan jawaban yang tepat.",
+    "D": "Benar. Sebagian yang bekerja di rumah sakit adalah lulusan universitas adalah jawaban yang tepat.",
+    "E": "Salah. Tidak ada kesimpulan yang pasti bukan jawaban yang tepat."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

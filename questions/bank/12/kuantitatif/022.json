@@ -1,0 +1,43 @@
+{
+  "id": "12-kuantitatif-022",
+  "package": 12,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "komparasi",
+  "question_text": "Selisih total gaji antara divisi Produksi dan divisi Keuangan adalah ...",
+  "image": null,
+  "passage": "Bacalah informasi berikut untuk menjawab soal nomor 17 sampai 23!\n\nSebuah perusahaan memiliki tiga divisi: Produksi, Pemasaran, dan Keuangan. Total karyawan perusahaan adalah 150 orang. Divisi Produksi memiliki 60 karyawan, Divisi Pemasaran memiliki 50 karyawan, dan Divisi Keuangan memiliki 40 karyawan.\n\nGaji rata-rata per bulan untuk setiap divisi adalah:\n- Divisi Produksi: Rp 5.000.000\n- Divisi Pemasaran: Rp 6.000.000  \n- Divisi Keuangan: Rp 7.000.000\n\nPerusahaan berencana menaikkan gaji sebesar 10% untuk semua karyawan tahun depan.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp 10.000.000"
+    },
+    {
+      "key": "B",
+      "text": "Rp 15.000.000"
+    },
+    {
+      "key": "C",
+      "text": "Rp 20.000.000"
+    },
+    {
+      "key": "D",
+      "text": "Rp 25.000.000"
+    },
+    {
+      "key": "E",
+      "text": "Rp 30.000.000"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Rp 10.000.000 tidak sesuai dengan perhitungan.",
+    "B": "Salah. Rp 15.000.000 tidak sesuai dengan perhitungan.",
+    "C": "Benar. Rp 20.000.000 adalah jawaban yang tepat berdasarkan data.",
+    "D": "Salah. Rp 25.000.000 tidak sesuai dengan perhitungan.",
+    "E": "Salah. Rp 30.000.000 tidak sesuai dengan perhitungan."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

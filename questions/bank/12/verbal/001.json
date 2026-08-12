@@ -1,0 +1,43 @@
+{
+  "id": "12-verbal-001",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "PROLIFERASI = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Penyusutan"
+    },
+    {
+      "key": "B",
+      "text": "Perkembangan"
+    },
+    {
+      "key": "C",
+      "text": "Pengurangan"
+    },
+    {
+      "key": "D",
+      "text": "Pemusnahan"
+    },
+    {
+      "key": "E",
+      "text": "Pembatasan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Penyusutan bukan jawaban yang tepat.",
+    "B": "Benar. Perkembangan adalah jawaban yang tepat untuk pertanyaan ini.",
+    "C": "Salah. Pengurangan bukan jawaban yang tepat.",
+    "D": "Salah. Pemusnahan bukan jawaban yang tepat.",
+    "E": "Salah. Pembatasan bukan jawaban yang tepat."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

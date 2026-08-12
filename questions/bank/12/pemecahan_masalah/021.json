@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-021",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 21,
+  "type": "evaluasi",
+  "question_text": "Pernyataan yang PALING MUNGKIN benar adalah ...",
+  "image": null,
+  "passage": "Bacalah informasi berikut untuk menjawab soal nomor 15 sampai 23!\n\nEnam karyawan (Andi, Budi, Citra, Dewi, Eka, dan Fani) akan dipromosikan ke tiga posisi manajerial: Manajer Pemasaran, Manajer Operasional, dan Manajer Keuangan. Setiap posisi hanya dapat diisi oleh satu orang.\n\nKetentuan promosi:\n(1) Andi hanya mau jika menjadi Manajer Pemasaran.\n(2) Budi dan Citra tidak bisa bekerja bersama dalam tim manajemen.\n(3) Dewi harus menjadi Manajer Keuangan jika terpilih.\n(4) Eka menolak jika posisinya di bawah Manajer Operasional.\n(5) Fani harus terpilih karena kinerja terbaik.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Andi menjadi Manajer Operasional"
+    },
+    {
+      "key": "B",
+      "text": "Budi dan Citra bersama dalam tim"
+    },
+    {
+      "key": "C",
+      "text": "Dewi menjadi Manajer Pemasaran"
+    },
+    {
+      "key": "D",
+      "text": "Eka menjadi Manajer Operasional"
+    },
+    {
+      "key": "E",
+      "text": "Fani tidak terpilih"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Andi menjadi Manajer Operasional tidak sesuai dengan ketentuan.",
+    "B": "Salah. Budi dan Citra bersama dalam tim tidak sesuai dengan ketentuan.",
+    "C": "Salah. Dewi menjadi Manajer Pemasaran tidak sesuai dengan ketentuan.",
+    "D": "Benar. Eka menjadi Manajer Operasional adalah jawaban yang tepat berdasarkan analisis logika.",
+    "E": "Salah. Fani tidak terpilih tidak sesuai dengan ketentuan."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

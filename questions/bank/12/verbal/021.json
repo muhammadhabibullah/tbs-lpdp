@@ -1,0 +1,43 @@
+{
+  "id": "12-verbal-021",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "inferensi",
+  "question_text": "Dari teks dapat disimpulkan bahwa ...",
+  "image": null,
+  "passage": "Bacalah teks berikut untuk menjawab soal nomor 17 sampai 23!\n\nTransformasi digital telah mengubah lanskap bisnis secara fundamental. Perusahaan yang mampu beradaptasi dengan teknologi baru akan memiliki keunggulan kompetitif yang signifikan. Namun, transformasi digital bukan sekadar mengadopsi teknologi terbaru, melainkan juga memerlukan perubahan budaya organisasi dan pola pikir karyawan.\n\nTantangan utama dalam transformasi digital adalah resistensi terhadap perubahan. Karyawan sering kali merasa nyaman dengan cara kerja lama dan enggan mempelajari sistem baru. Oleh karena itu, manajemen perlu menyusun strategi komunikasi yang efektif dan menyediakan pelatihan yang memadai.\n\nSelain itu, keamanan siber menjadi isu kritis dalam era digital. Semakin banyak data yang disimpan secara digital, semakin besar pula risiko kebocoran data. Perusahaan harus investasi dalam sistem keamanan yang handal dan melatih karyawan tentang praktik keamanan digital yang baik.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Transformasi digital mudah dilakukan"
+    },
+    {
+      "key": "B",
+      "text": "Hanya teknologi yang penting"
+    },
+    {
+      "key": "C",
+      "text": "Faktor manusia sama pentingnya dengan teknologi"
+    },
+    {
+      "key": "D",
+      "text": "Keamanan siber tidak terlalu penting"
+    },
+    {
+      "key": "E",
+      "text": "Semua karyawan mendukung perubahan"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Transformasi digital mudah dilakukan tidak sesuai dengan informasi dalam teks.",
+    "B": "Salah. Hanya teknologi yang penting tidak sesuai dengan informasi dalam teks.",
+    "C": "Benar. Faktor manusia sama pentingnya dengan teknologi adalah jawaban yang tepat berdasarkan teks.",
+    "D": "Salah. Keamanan siber tidak terlalu penting tidak sesuai dengan informasi dalam teks.",
+    "E": "Salah. Semua karyawan mendukung perubahan tidak sesuai dengan informasi dalam teks."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

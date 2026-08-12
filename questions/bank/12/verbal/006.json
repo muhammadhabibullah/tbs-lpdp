@@ -1,0 +1,43 @@
+{
+  "id": "12-verbal-006",
+  "package": 12,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "PROMINEN >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Biasa"
+    },
+    {
+      "key": "B",
+      "text": "Terkenal"
+    },
+    {
+      "key": "C",
+      "text": "Utama"
+    },
+    {
+      "key": "D",
+      "text": "Penting"
+    },
+    {
+      "key": "E",
+      "text": "Menonjol"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Biasa adalah jawaban yang tepat untuk pertanyaan ini.",
+    "B": "Salah. Terkenal bukan jawaban yang tepat.",
+    "C": "Salah. Utama bukan jawaban yang tepat.",
+    "D": "Salah. Penting bukan jawaban yang tepat.",
+    "E": "Salah. Menonjol bukan jawaban yang tepat."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

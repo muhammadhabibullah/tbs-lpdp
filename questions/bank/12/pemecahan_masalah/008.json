@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-008",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "logika_analitis",
+  "question_text": "Tiga teman (Andi, Budi, Citra) duduk di bangku. Andi tidak mau duduk di sebelah Budi. Citra ingin duduk di tengah. Posisi Andi adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kiri"
+    },
+    {
+      "key": "B",
+      "text": "Tengah"
+    },
+    {
+      "key": "C",
+      "text": "Kanan"
+    },
+    {
+      "key": "D",
+      "text": "Kiri atau Kanan"
+    },
+    {
+      "key": "E",
+      "text": "Tidak dapat ditentukan"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Kiri bukan jawaban yang tepat.",
+    "B": "Salah. Tengah bukan jawaban yang tepat.",
+    "C": "Salah. Kanan bukan jawaban yang tepat.",
+    "D": "Benar. Kiri atau Kanan adalah jawaban yang tepat.",
+    "E": "Salah. Tidak dapat ditentukan bukan jawaban yang tepat."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

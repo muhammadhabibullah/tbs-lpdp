@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-004",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_numerik",
+  "question_text": "Lanjutkan deret: 2, 6, 12, 20, 30, ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "38"
+    },
+    {
+      "key": "B",
+      "text": "40"
+    },
+    {
+      "key": "C",
+      "text": "42"
+    },
+    {
+      "key": "D",
+      "text": "44"
+    },
+    {
+      "key": "E",
+      "text": "46"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. 38 bukan jawaban yang tepat.",
+    "B": "Salah. 40 bukan jawaban yang tepat.",
+    "C": "Benar. 42 adalah jawaban yang tepat.",
+    "D": "Salah. 44 bukan jawaban yang tepat.",
+    "E": "Salah. 46 bukan jawaban yang tepat."
+  },
+  "difficulty": "medium",
+  "source": "qwen-generated",
+  "verified": true
+}

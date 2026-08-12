@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-017",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 17,
+  "type": "logika_analitis",
+  "question_text": "Siapa yang TIDAK MUNGKIN menjadi Manajer Keuangan?",
+  "image": null,
+  "passage": "Bacalah informasi berikut untuk menjawab soal nomor 15 sampai 23!\n\nEnam karyawan (Andi, Budi, Citra, Dewi, Eka, dan Fani) akan dipromosikan ke tiga posisi manajerial: Manajer Pemasaran, Manajer Operasional, dan Manajer Keuangan. Setiap posisi hanya dapat diisi oleh satu orang.\n\nKetentuan promosi:\n(1) Andi hanya mau jika menjadi Manajer Pemasaran.\n(2) Budi dan Citra tidak bisa bekerja bersama dalam tim manajemen.\n(3) Dewi harus menjadi Manajer Keuangan jika terpilih.\n(4) Eka menolak jika posisinya di bawah Manajer Operasional.\n(5) Fani harus terpilih karena kinerja terbaik.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Andi"
+    },
+    {
+      "key": "B",
+      "text": "Budi"
+    },
+    {
+      "key": "C",
+      "text": "Citra"
+    },
+    {
+      "key": "D",
+      "text": "Eka"
+    },
+    {
+      "key": "E",
+      "text": "Fani"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Andi adalah jawaban yang tepat berdasarkan analisis logika.",
+    "B": "Salah. Budi tidak sesuai dengan ketentuan.",
+    "C": "Salah. Citra tidak sesuai dengan ketentuan.",
+    "D": "Salah. Eka tidak sesuai dengan ketentuan.",
+    "E": "Salah. Fani tidak sesuai dengan ketentuan."
+  },
+  "difficulty": "easy",
+  "source": "qwen-generated",
+  "verified": true
+}

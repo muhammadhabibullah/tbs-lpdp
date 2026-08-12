@@ -1,0 +1,43 @@
+{
+  "id": "12-pemecahan_masalah-003",
+  "package": 12,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Dalam sebuah antrian, Andi berada di posisi ke-5 dari depan dan ke-10 dari belakang. Berapa banyak orang dalam antrian tersebut?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "13"
+    },
+    {
+      "key": "B",
+      "text": "14"
+    },
+    {
+      "key": "C",
+      "text": "15"
+    },
+    {
+      "key": "D",
+      "text": "16"
+    },
+    {
+      "key": "E",
+      "text": "17"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. 13 bukan jawaban yang tepat.",
+    "B": "Benar. 14 adalah jawaban yang tepat.",
+    "C": "Salah. 15 bukan jawaban yang tepat.",
+    "D": "Salah. 16 bukan jawaban yang tepat.",
+    "E": "Salah. 17 bukan jawaban yang tepat."
+  },
+  "difficulty": "easy",
+  "source": "qwen-generated",
+  "verified": true
+}
