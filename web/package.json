@@ -1,7 +1,7 @@
 {
   "name": "tbs-lpdp-web",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.4",
   "type": "module",
   "engines": {
     "node": ">=22.18"
@@ -18,7 +18,8 @@
     "app:dev": "tauri dev",
     "app:build": "tauri build",
     "app:icons": "tauri icon src-tauri/icon-source/app-icon.json",
-    "app:android": "tauri android build --apk"
+    "app:android": "tauri android build --apk",
+    "app:version": "python3 ../scripts/bump_version.py"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
