@@ -24,7 +24,7 @@ The implementation decisions that resolve those gaps are:
 - A **package release** is an immutable set of exactly 60 question revisions plus package metadata. An attempt is pinned to one release when `start_attempt` creates it; all three subtests use that release even if a newer one is published mid-attempt.
 - The package card shows editorial package-level difficulty, authoring-model label, package release number/date, completed-attempt count, and arithmetic mean score. Per-question difficulty remains separate and is not exposed during an active exam.
 - Statistics are incremented transactionally when an attempt is created/finished and live independently of attempt rows. The retention cron never decrements them.
-- A Supabase Cron job freezes the report window into a private outbox row and calls one private Supabase Edge Function daily. The function claims that payload with a Supabase secret key and sends the operator's digest through Resend.
+- A Supabase Cron job creates a private outbox row and calls one private Supabase Edge Function daily, but only when new reports were submitted in the digest window. Days with no new reports produce no run and no email.
 
 ### 1.1 “Average” and “mean”
 
@@ -136,7 +136,7 @@ The package release hash covers the package title, description, package difficul
 | BE-29 | **Daily digest function**: private Edge Function `question-report-digest` accepts only the named Supabase secret key `automations`, claims one database-frozen digest payload with the admin client, sends the email, and records the provider message ID. Browser sessions and publishable keys receive 401. |
 | BE-30 | **Digest outbox**: `question_report_digest_runs` stores an immutable `[window_start, window_end)` and frozen email payload plus `pending\|sending\|sent\|failed\|manual_attention`, lease, attempts, provider ID, redacted error, and timestamps. Only one unsent run may exist. A retry sends the exact stored payload with the same run ID/provider idempotency key; it never rebuilds the body from mutable reports. |
 | BE-31 | **Cron schedule**: `pg_cron` + `pg_net` create/invoke the daily run at `01:00 UTC` (`08:00 WIB`; Jakarta has no DST). A second job retries an eligible unsent run every 30 minutes, without creating extra daily emails. The queue reuses an unsent run or creates a window beginning at the last sent cutoff, so an outage produces one catch-up digest rather than losing a day. Automatic ambiguous retries stop before Resend's 24-hour idempotency window expires and become `manual_attention`. |
-| BE-32 | **Digest content**: every daily email is sent, including a zero-report heartbeat. It contains the time window in WIB, new/edited count, open backlog count, and rows grouped by logical question and revision with reason/status/comment. User IDs, attempt IDs, auth data, and answer keys are omitted. Free text is HTML-escaped (or sent as plain text). |
+| BE-32 | **Digest content**: an email is sent only when at least one report was created or updated in the digest window; quiet days produce no run and no email. When sent, it contains the time window in WIB, new/edited count, open backlog count, and rows grouped by logical question and revision with reason/status/comment. User IDs, attempt IDs, auth data, and answer keys are omitted. Free text is HTML-escaped (or sent as plain text). |
 | BE-33 | **Digest secrets**: `RESEND_API_KEY`, `REPORT_DIGEST_TO`, and `REPORT_DIGEST_FROM` are Edge Function secrets. The project URL and named `automations` secret used by `pg_net` are stored in Supabase Vault. No service-role/secret key is stored in a public table or request body. |
 | BE-34 | **RLS/grants**: revision/key tables, release mappings, statistics, and digest-run tables have RLS enabled and no client table policies. Clients receive projections only through named RPCs. `publish_package_release` is revoked from `anon`, `authenticated`, and `public`; only service-role operation can execute it. |
 
@@ -315,6 +315,7 @@ Postgres `bigint` may exceed JavaScript's safe integer range, so the RPC must ei
 01:00 UTC pg_cron
   -> _queue_question_report_digest()
        -> reuse pending/failed run, or create [last sent cutoff, now)
+       -> if no new reports in window: skip (no run, no email)
        -> pg_net POST /functions/v1/question-report-digest {run_id}
             -> authenticate named `automations` secret
             -> claim the database-frozen payload for that run
@@ -340,7 +341,7 @@ Body:
 - new/edited reports in the window and current open backlog count;
 - package, subtest, question number/ID, reported revision, and whether that revision is current;
 - reason, status, selected option, created/updated time, and comment;
-- zero-report text when applicable, proving that the daily automation still ran.
+- email is not sent on days with no new reports; the cron runs but exits early.
 
 Comments are untrusted input. Prefer a plain-text body; if an HTML companion is sent, escape `& < > " '` before interpolation. Do not log full comments or the generated email body in Edge Function logs.
 
@@ -436,7 +437,7 @@ Similarly, the initial durable statistics can include attempts that still exist 
 | A-13 | Package has no finished attempts | Card shows `0 percobaan selesai` and `Belum ada hasil`, never `0 / 300` |
 | A-14 | Inspect packages 1–6 | Difficulty/model labels exactly match §1.2 and release date uses WIB Indonesian formatting |
 | A-15 | Invoke digest with a publishable key or user JWT | 401; no report data and no email |
-| A-16 | Successful digest with no report activity | Operator receives the daily zero-report heartbeat; run is `sent` |
+| A-16 | Cron fires with no report activity | No digest run is created, no email is sent, cron job returns normally |
 | A-17 | Successful digest with reports | Email contains correct fixed window, revision-aware details and backlog summary, but no user/attempt IDs or answer keys |
 | A-18 | Provider succeeds but caller retries the same run within 24 hours | Same frozen payload/idempotency key; no second delivered email; database run ends `sent` |
 | A-19 | Provider fails | Run is `failed`, cutoff does not advance, 30-minute retry reuses the run/window/payload; an ambiguous run older than 23 hours becomes `manual_attention` |
@@ -452,7 +453,7 @@ Similarly, the initial durable statistics can include attempts that still exist 
 | `supabase/maintenance.sql` | Enable `pg_net`; schedule daily queue at 01:00 UTC plus 30-minute retry; retain existing jobs |
 | `supabase/functions/question-report-digest/index.ts` | Private revision-aware daily email function with outbox/idempotent delivery |
 | `supabase/config.toml` | Function auth configuration (`verify_jwt = false`; named secret checked in function) |
-| `supabase/functions/question-report-digest/render.test.ts` | Escaping, zero-report heartbeat, and revision-detail rendering tests; delivery lifecycle is covered by SQL integration tests and provider idempotency |
+| `supabase/functions/question-report-digest/render.test.ts` | Escaping and revision-detail rendering tests; delivery lifecycle is covered by SQL integration tests and provider idempotency |
 | `questions/bank/1..6/package.json` | Add package `difficulty` and `ai_model` values from §1.2 |
 | `questions/generator/validate_bank.py` | Validate manifest metadata and v3 publish invariants |
 | `questions/generator/push_to_supabase.py` | Canonical hashes, content-addressed uploads, dry-run diff, one transactional publish RPC |
