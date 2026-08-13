@@ -4,6 +4,7 @@
 **Referenced Files in This Document**
 - [deploy-web.yml](file://.github/workflows/deploy-web.yml)
 - [pr.yml](file://.github/workflows/pr.yml)
+- [pr-web.yml](file://.github/workflows/pr-web.yml)
 - [release-app.yml](file://.github/workflows/release-app.yml)
 - [bump_version.py](file://scripts/bump_version.py)
 - [validate_bank.py](file://questions/generator/validate_bank.py)
@@ -12,6 +13,13 @@
 - [package.json](file://web/package.json)
 - [tauri.conf.json](file://web/src-tauri/tauri.conf.json)
 </cite>
+
+## Update Summary
+**Changes Made**
+- Enhanced PR validation with path-based filtering for improved efficiency
+- Added dedicated `pr-web.yml` workflow for web and Supabase changes
+- Separated question bank validation from web typechecking for better performance
+- Updated workflow triggers to use path filters for targeted CI execution
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -29,16 +37,17 @@
 This document describes the end-to-end CI/CD pipeline for automated testing, deployment, and release management. It covers:
 - GitHub Actions workflows for web deployment to GitHub Pages
 - Desktop and mobile application releases (Tauri-based desktop apps and Android APK)
-- Pull request validation for question bank integrity
+- Enhanced pull request validation with path-based filtering for question bank integrity
 - Automated testing stages, code quality checks, and security considerations
 - Deployment strategies across environments, version management, and rollback mechanisms
 - Pipeline customization options, debugging failed builds, and monitoring deployment status
 - Examples of triggering specific workflows and interpreting results
 
 ## Project Structure
-The repository organizes CI/CD configuration under .github/workflows with three primary workflows:
+The repository organizes CI/CD configuration under .github/workflows with four primary workflows:
 - Web deployment to GitHub Pages
-- Pull Request validation for question bank changes
+- **Enhanced** Pull Request validation with path-based filtering for questions, web, and Supabase changes
+- **New** Dedicated PR Check workflow specifically for web and Supabase changes
 - Offline app release workflow for desktop and Android
 
 Build and validation scripts live in:
@@ -49,7 +58,8 @@ Build and validation scripts live in:
 ```mermaid
 graph TB
 subgraph "GitHub Actions"
-PR["PR Check"]
+PR["Enhanced PR Check"]
+PRWEB["PR Check (web & supabase)"]
 WEB["Deploy Web to Pages"]
 REL["Release Offline App"]
 end
@@ -57,6 +67,8 @@ subgraph "Validation & Build"
 VBPY["validate_bank.py"]
 BBT["build-bank.ts"]
 PYPUB["push_to_supabase.py"]
+TESTS["Web Tests"]
+TYPECHECK["TypeScript Typecheck"]
 end
 subgraph "Artifacts"
 DIST["web/dist"]
@@ -65,6 +77,8 @@ DESKTOP["Desktop installers"]
 ANDR["Android APK"]
 end
 PR --> VBPY
+PR --> TYPECHECK
+PRWEB --> TESTS
 WEB --> BBT
 WEB --> PYPUB
 WEB --> DIST
@@ -75,7 +89,8 @@ BBT --> BANK
 
 **Diagram sources**
 - [deploy-web.yml:1-133](file://.github/workflows/deploy-web.yml#L1-L133)
-- [pr.yml:1-28](file://.github/workflows/pr.yml#L1-L28)
+- [pr.yml:1-85](file://.github/workflows/pr.yml#L1-L85)
+- [pr-web.yml:1-28](file://.github/workflows/pr-web.yml#L1-L28)
 - [release-app.yml:1-310](file://.github/workflows/release-app.yml#L1-L310)
 - [validate_bank.py:1-208](file://questions/generator/validate_bank.py#L1-L208)
 - [build-bank.ts:1-81](file://web/scripts/build-bank.ts#L1-L81)
@@ -83,12 +98,14 @@ BBT --> BANK
 
 **Section sources**
 - [deploy-web.yml:1-133](file://.github/workflows/deploy-web.yml#L1-L133)
-- [pr.yml:1-28](file://.github/workflows/pr.yml#L1-L28)
+- [pr.yml:1-85](file://.github/workflows/pr.yml#L1-L85)
+- [pr-web.yml:1-28](file://.github/workflows/pr-web.yml#L1-L28)
 - [release-app.yml:1-310](file://.github/workflows/release-app.yml#L1-L310)
 
 ## Core Components
-- Web deployment workflow: Builds the React/Vite app, validates environment flags to prevent local engine inclusion, generates a content-addressed question bank artifact, optionally publishes packages to Supabase, and deploys to GitHub Pages.
-- PR validation workflow: Installs Python dependencies and runs question bank validation to ensure schema compliance and data integrity before merging.
+- **Enhanced** Web deployment workflow: Builds the React/Vite app, validates environment flags to prevent local engine inclusion, generates a content-addressed question bank artifact, optionally publishes packages to Supabase, and deploys to GitHub Pages.
+- **Enhanced** PR validation workflow: Uses path-based filtering to route changes to appropriate validation jobs - question bank validation for questions directory changes and TypeScript typechecking for web/Supabase changes, improving efficiency by avoiding unnecessary job execution.
+- **New** Dedicated PR Check workflow: Specifically targets web and Supabase changes with comprehensive test execution and type checking.
 - Release workflow: Validates tag/version alignment, builds Tauri desktop installers across platforms, signs and builds an Android APK, uploads artifacts into a draft GitHub Release, and publishes it once all jobs succeed.
 - Version management: A script updates version fields consistently across Tauri config, Cargo metadata, lock file, and package manifest.
 
@@ -99,7 +116,8 @@ Key build and validation tools:
 
 **Section sources**
 - [deploy-web.yml:24-133](file://.github/workflows/deploy-web.yml#L24-L133)
-- [pr.yml:10-28](file://.github/workflows/pr.yml#L10-L28)
+- [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
+- [pr-web.yml:11-28](file://.github/workflows/pr-web.yml#L11-L28)
 - [release-app.yml:24-310](file://.github/workflows/release-app.yml#L24-L310)
 - [validate_bank.py:44-194](file://questions/generator/validate_bank.py#L44-L194)
 - [build-bank.ts:42-81](file://web/scripts/build-bank.ts#L42-L81)
@@ -107,26 +125,35 @@ Key build and validation tools:
 - [bump_version.py:29-124](file://scripts/bump_version.py#L29-L124)
 
 ## Architecture Overview
-The CI/CD architecture orchestrates three main flows:
-- Web flow: On pushes to master affecting web or questions, build and deploy to GitHub Pages while generating and publishing the question bank artifact.
-- PR flow: On pull requests touching questions or workflows, run validation to ensure data integrity.
+The enhanced CI/CD architecture orchestrates four main flows with intelligent path-based routing:
+- **Enhanced** Web flow: On pushes to master affecting web or questions, build and deploy to GitHub Pages while generating and publishing the question bank artifact.
+- **Enhanced** PR flow: Uses path-based filtering to route changes to appropriate validation jobs - question bank validation for questions directory changes and TypeScript typechecking for web/Supabase changes, preventing unnecessary job execution.
+- **New** Dedicated web PR flow: Specifically targets web and Supabase changes with comprehensive test execution.
 - Release flow: On tags matching app-v*, build and sign multi-platform desktop installers and Android APKs, then publish a single GitHub Release containing all assets and updater metadata.
 
 ```mermaid
 sequenceDiagram
 participant GH as "GitHub"
 participant WF as "Workflow Runner"
+participant FILTER as "Path Filter"
 participant PY as "Python Validator"
-participant TS as "Bank Builder"
+participant TS as "Type Checker"
+participant WEB as "Web Tests"
 participant SUP as "Supabase"
 participant PG as "GitHub Pages"
 participant REL as "GitHub Releases"
+Note over GH,WFB : Enhanced PR Check with Path Filtering
+GH->>WF : Trigger pr.yml
+WF->>FILTER : Analyze changed paths
+FILTER-->>PY : Run if questions/** changed
+FILTER-->>TS : Run if web/** or supabase/** changed
+Note over GH,WFB : Dedicated Web PR Check
+GH->>WF : Trigger pr-web.yml
+WF->>WEB : Run web tests
 Note over GH,WF : Web Deploy on push to master
 GH->>WF : Trigger deploy-web.yml
 WF->>PY : Install deps and run validate_bank.py
 PY-->>WF : Exit 0 if valid
-WF->>TS : Run build-bank.ts to generate manifest + bank
-TS-->>WF : Output dist/bank
 WF->>SUP : Optional publish_package_release RPC
 SUP-->>WF : Acknowledge
 WF->>PG : Upload pages artifact and deploy
@@ -140,12 +167,75 @@ WF->>REL : Publish release when all jobs pass
 
 **Diagram sources**
 - [deploy-web.yml:24-133](file://.github/workflows/deploy-web.yml#L24-L133)
+- [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
+- [pr-web.yml:11-28](file://.github/workflows/pr-web.yml#L11-L28)
 - [release-app.yml:24-310](file://.github/workflows/release-app.yml#L24-L310)
 - [validate_bank.py:44-194](file://questions/generator/validate_bank.py#L44-L194)
 - [build-bank.ts:42-81](file://web/scripts/build-bank.ts#L42-L81)
 - [push_to_supabase.py:107-119](file://questions/generator/push_to_supabase.py#L107-L119)
 
 ## Detailed Component Analysis
+
+### Enhanced PR Validation with Path-Based Filtering
+**Updated** The PR validation workflow now uses sophisticated path-based filtering to optimize CI execution:
+
+- **Intelligent Routing**: Uses `dorny/paths-filter@v3` to analyze changed files and route them to appropriate validation jobs
+- **Bank Validation**: Runs only when questions/** or workflow files are modified
+- **Web Typechecking**: Runs only when web/** or supabase/** directories are changed
+- **Efficiency**: Prevents unnecessary job execution - web-only PRs don't trigger Python validation, questions-only PRs don't run TypeScript typechecking
+
+```mermaid
+flowchart TD
+Start(["PR Event"]) --> Checkout["Checkout repo with full history"]
+Checkout --> Filter["Run paths-filter analysis"]
+Filter --> BankCheck{"Questions or workflows changed?"}
+Filter --> WebCheck{"Web or Supabase changed?"}
+BankCheck --> |Yes| ValidateBank["Install Python deps and run validate_bank.py"]
+BankCheck --> |No| SkipBank["Skip bank validation"]
+WebCheck --> |Yes| TypeCheck["Setup Node and run npm run typecheck"]
+WebCheck --> |No| SkipWeb["Skip typechecking"]
+ValidateBank --> End(["End"])
+SkipBank --> End
+TypeCheck --> End
+SkipWeb --> End
+```
+
+**Diagram sources**
+- [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
+- [validate_bank.py:44-194](file://questions/generator/validate_bank.py#L44-L194)
+
+**Section sources**
+- [pr.yml:1-85](file://.github/workflows/pr.yml#L1-L85)
+- [validate_bank.py:1-208](file://questions/generator/validate_bank.py#L1-L208)
+
+### Dedicated Web and Supabase PR Check
+**New** A separate workflow specifically targets web and Supabase changes:
+
+- **Focused Scope**: Only triggers on web/**, supabase/**, or pr-web.yml changes
+- **Comprehensive Testing**: Runs both npm test and type checking for complete web validation
+- **Optimized Performance**: Eliminates overhead of question bank validation for web-only changes
+- **Independent Execution**: Can fail independently without affecting other validation jobs
+
+```mermaid
+sequenceDiagram
+participant GH as "GitHub"
+participant WF as "PR Check (web & supabase)"
+participant NODE as "Node.js Environment"
+participant TESTS as "Test Suite"
+GH->>WF : PR event on master with web/supabase changes
+WF->>NODE : Setup Node 22 with caching
+NODE->>TESTS : npm ci && npm test
+TESTS-->>WF : Test results
+WF-->>GH : Set PR status based on test outcomes
+```
+
+**Diagram sources**
+- [pr-web.yml:11-28](file://.github/workflows/pr-web.yml#L11-L28)
+- [package.json:13](file://web/package.json#L13)
+
+**Section sources**
+- [pr-web.yml:1-28](file://.github/workflows/pr-web.yml#L1-L28)
+- [package.json:9-24](file://web/package.json#L9-L24)
 
 ### Web Deployment to GitHub Pages
 - Triggers: Push to master when changes affect web or questions directories or the workflow itself; also supports manual dispatch.
@@ -179,31 +269,6 @@ DeployPages --> End(["End"])
 **Section sources**
 - [deploy-web.yml:1-133](file://.github/workflows/deploy-web.yml#L1-L133)
 - [build-bank.ts:1-81](file://web/scripts/build-bank.ts#L1-L81)
-
-### Pull Request Validation
-- Triggers: Pull requests targeting master that modify questions or workflows.
-- Steps: Checks out the repo with full history, installs Python dependencies, and runs validate_bank.py to enforce schema and integrity rules.
-- Outcome: Fails the PR check if any validation errors are found, preventing merges of invalid question bank changes.
-
-```mermaid
-sequenceDiagram
-participant GH as "GitHub"
-participant WF as "PR Check Workflow"
-participant PY as "validate_bank.py"
-GH->>WF : PR event on master
-WF->>WF : Checkout with fetch-depth 0
-WF->>PY : Install Python deps and run validator
-PY-->>WF : Exit 0 if valid, else non-zero
-WF-->>GH : Set PR status based on exit code
-```
-
-**Diagram sources**
-- [pr.yml:1-28](file://.github/workflows/pr.yml#L1-L28)
-- [validate_bank.py:44-194](file://questions/generator/validate_bank.py#L44-L194)
-
-**Section sources**
-- [pr.yml:1-28](file://.github/workflows/pr.yml#L1-L28)
-- [validate_bank.py:1-208](file://questions/generator/validate_bank.py#L1-L208)
 
 ### Offline App Release (Desktop and Android)
 - Triggers: Tags matching app-v*; also supports manual dispatch.
@@ -260,9 +325,10 @@ UpdateFiles --> Done(["Done"])
 - [release-app.yml:31-57](file://.github/workflows/release-app.yml#L31-L57)
 
 ## Dependency Analysis
-- Workflow dependencies:
+- **Enhanced** Workflow dependencies:
   - deploy-web.yml depends on Node 22, Python 3.12, and optional Supabase credentials.
-  - pr.yml depends on Python 3.12 and the question bank validator.
+  - **Enhanced** pr.yml depends on Python 3.12 and Node 22 with intelligent path-based routing.
+  - **New** pr-web.yml depends on Node 22 and executes web-specific tests.
   - release-app.yml depends on Node 22, Rust toolchain, Java 17, Android SDK/NDK, and signing secrets.
 - Build-time dependencies:
   - validate_bank.py requires jsonschema and common utilities to enforce schema and blueprint constraints.
@@ -273,7 +339,9 @@ UpdateFiles --> Done(["Done"])
 
 ```mermaid
 graph LR
-PR["PR Check"] --> VBPY["validate_bank.py"]
+PR["Enhanced PR Check"] --> VBPY["validate_bank.py"]
+PR --> TYPECHECK["TypeScript Typecheck"]
+PRWEB["Web PR Check"] --> TESTS["Web Tests"]
 WEB["Web Deploy"] --> BBT["build-bank.ts"]
 WEB --> PYPUB["push_to_supabase.py"]
 REL["Release App"] --> DESK["Desktop Build"]
@@ -283,7 +351,8 @@ ANDR --> RELASSET
 ```
 
 **Diagram sources**
-- [pr.yml:10-28](file://.github/workflows/pr.yml#L10-L28)
+- [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
+- [pr-web.yml:11-28](file://.github/workflows/pr-web.yml#L11-L28)
 - [deploy-web.yml:24-133](file://.github/workflows/deploy-web.yml#L24-L133)
 - [release-app.yml:59-310](file://.github/workflows/release-app.yml#L59-L310)
 - [validate_bank.py:44-194](file://questions/generator/validate_bank.py#L44-L194)
@@ -292,16 +361,20 @@ ANDR --> RELASSET
 
 **Section sources**
 - [deploy-web.yml:24-133](file://.github/workflows/deploy-web.yml#L24-L133)
-- [pr.yml:10-28](file://.github/workflows/pr.yml#L10-L28)
+- [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
+- [pr-web.yml:11-28](file://.github/workflows/pr-web.yml#L11-L28)
 - [release-app.yml:59-310](file://.github/workflows/release-app.yml#L59-L310)
 
 ## Performance Considerations
-- Caching:
+- **Enhanced** Caching:
   - npm cache via actions/setup-node reduces dependency installation time.
   - pip cache via actions/setup-python speeds up Python dependency resolution.
   - Rust cache via swatinem/rust-cache accelerates native builds across matrix jobs.
-- Full history requirement:
+- **Improved** Full history requirement:
   - Both web and release workflows use fetch-depth 0 to enable accurate question version derivation and reproducible builds.
+- **Enhanced** Path-based filtering:
+  - Intelligent routing prevents unnecessary job execution - web-only PRs skip Python validation, questions-only PRs skip TypeScript compilation.
+  - Reduces CI queue times and resource consumption significantly.
 - Artifact size:
   - Bank builder warns when the compiled bank exceeds 10 MB, suggesting future optimization such as inlining images as data URIs.
 - Concurrency control:
@@ -324,9 +397,11 @@ Common issues and resolutions:
   - Verify APK signature using apksigner to prevent upgrade conflicts.
 - Release tag mismatch:
   - Tags must match app-v<version> where version comes from tauri.conf.json; update version via bump_version.py and commit changes before tagging.
-- Debugging failed builds:
+- **Enhanced** Debugging failed builds:
   - Inspect workflow logs for step-level errors; focus on assertion steps that fail early (e.g., environment checks, signing verification).
   - For bank building, confirm full git history is checked out to avoid fallback versions.
+  - **New** Check path-based filtering results to understand which validation jobs were triggered for your PR.
+  - **New** Use the dedicated web PR check workflow for web-specific issues separate from question bank validation.
 
 **Section sources**
 - [deploy-web.yml:52-95](file://.github/workflows/deploy-web.yml#L52-L95)
@@ -334,33 +409,43 @@ Common issues and resolutions:
 - [release-app.yml:250-296](file://.github/workflows/release-app.yml#L250-L296)
 - [validate_bank.py:44-194](file://questions/generator/validate_bank.py#L44-L194)
 - [build-bank.ts:59-65](file://web/scripts/build-bank.ts#L59-L65)
+- [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
 
 ## Conclusion
-The CI/CD pipeline provides robust automation for web deployment, question bank validation, and multi-platform app releases. It enforces security by preventing local engine inclusion in production builds, ensures data integrity through comprehensive validation, and streamlines releases with signed artifacts and updater metadata. Version management is centralized and consistent across project files, and concurrency controls maintain reliability during deployments and releases.
+The enhanced CI/CD pipeline provides robust automation for web deployment, intelligent question bank validation, and multi-platform app releases. The new path-based filtering system significantly improves CI efficiency by routing changes to appropriate validation jobs, while maintaining comprehensive coverage. The dedicated web PR check workflow provides focused testing for web and Supabase changes. The pipeline enforces security by preventing local engine inclusion in production builds, ensures data integrity through comprehensive validation, and streamlines releases with signed artifacts and updater metadata. Version management is centralized and consistent across project files, and concurrency controls maintain reliability during deployments and releases.
 
 [No sources needed since this section summarizes without analyzing specific files]
 
 ## Appendices
 
 ### Examples of Triggering Workflows
-- Web deployment:
+- **Enhanced** Web deployment:
   - Push commits to master affecting web or questions directories.
   - Manually trigger via workflow_dispatch.
-- PR validation:
-  - Open or update a pull request targeting master that modifies questions or workflows.
+- **Enhanced** PR validation:
+  - Open or update a pull request targeting master that modifies questions, web, or workflows.
+  - Changes are automatically routed to appropriate validation jobs based on affected paths.
+- **New** Dedicated web PR check:
+  - Automatically triggers for web/**, supabase/**, or pr-web.yml changes.
+  - Provides comprehensive web testing independent of question bank validation.
 - App release:
   - Create and push a tag matching app-v<version>, e.g., app-v0.1.4.
   - Manually trigger via workflow_dispatch.
 
 **Section sources**
 - [deploy-web.yml:3-12](file://.github/workflows/deploy-web.yml#L3-L12)
-- [pr.yml:3-9](file://.github/workflows/pr.yml#L3-L9)
+- [pr.yml:3-10](file://.github/workflows/pr.yml#L3-L10)
+- [pr-web.yml:3-9](file://.github/workflows/pr-web.yml#L3-L9)
 - [release-app.yml:12-15](file://.github/workflows/release-app.yml#L12-L15)
 
 ### Interpreting Pipeline Results
-- PR Check:
-  - Success indicates the question bank passes schema and integrity checks.
+- **Enhanced** PR Check:
+  - Success indicates the relevant validation jobs passed based on changed paths.
   - Failure lists specific errors; address them before merging.
+  - Check which validation jobs were triggered based on the paths filter results.
+- **New** Web PR Check:
+  - Success indicates web tests and type checking passed.
+  - Failure indicates web-specific issues that need resolution.
 - Web Deploy:
   - Success deploys the site to GitHub Pages and may publish question packages to Supabase.
   - Failure often relates to environment assertions or build errors; review logs for details.
@@ -369,7 +454,8 @@ The CI/CD pipeline provides robust automation for web deployment, question bank 
   - Failure may indicate tag/version mismatch, missing secrets, or signing issues; resolve accordingly.
 
 **Section sources**
-- [pr.yml:10-28](file://.github/workflows/pr.yml#L10-L28)
+- [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
+- [pr-web.yml:11-28](file://.github/workflows/pr-web.yml#L11-L28)
 - [deploy-web.yml:24-133](file://.github/workflows/deploy-web.yml#L24-L133)
 - [release-app.yml:24-310](file://.github/workflows/release-app.yml#L24-L310)
 

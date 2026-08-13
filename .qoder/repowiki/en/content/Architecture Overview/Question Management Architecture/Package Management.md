@@ -10,10 +10,23 @@
 - [scripts/bump_version.py](file://scripts/bump_version.py)
 - [questions/bank/1/package.json](file://questions/bank/1/package.json)
 - [questions/bank/2/package.json](file://questions/bank/2/package.json)
+- [questions/bank/13/package.json](file://questions/bank/13/package.json)
+- [questions/bank/14/package.json](file://questions/bank/14/package.json)
 - [questions/bank/1/verbal/001.json](file://questions/bank/1/verbal/001.json)
 - [questions/bank/1/kuantitatif/001.json](file://questions/bank/1/kuantitatif/001.json)
 - [questions/bank/1/pemecahan_masalah/001.json](file://questions/bank/1/pemecahan_masalah/001.json)
+- [questions/bank/14/verbal/001.json](file://questions/bank/14/verbal/001.json)
+- [questions/bank/14/kuantitatif/001.json](file://questions/bank/14/kuantitatif/001.json)
+- [questions/bank/14/pemecahan_masalah/001.json](file://questions/bank/14/pemecahan_masalah/001.json)
 </cite>
+
+## Update Summary
+**Changes Made**
+- Added comprehensive documentation for Package 14 featuring Kimi-K3 AI model from Moonshot AI
+- Updated package examples to include the latest package (Package 14)
+- Enhanced AI model diversity section to showcase different AI providers
+- Updated package count and statistics to reflect the new addition
+- Added specific examples of Package 14's question structure and metadata
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -30,6 +43,8 @@
 ## Introduction
 This document explains the package management system that organizes questions into version-controlled packages for distribution and deployment. Each package represents a complete set of questions for a specific exam session or practice set, organized by subtest categories (verbal, kuantitatif, pemecahan_masalah). The system uses Git as the source of truth to derive immutable versions and content-addressed release identifiers, ensuring reproducible builds and reliable attempt pinning. It also describes how package metadata is stored, how versions are tracked, and how updates are coordinated across multiple packages.
 
+The current question bank contains 14 packages, with Package 14 being the latest addition featuring the Kimi-K3 AI model from Moonshot AI, providing high-difficulty questions with enhanced reasoning capabilities.
+
 ## Project Structure
 The question bank lives under questions/bank. Each numbered directory is a package containing:
 - A package manifest (package.json) with metadata such as id, title, description, difficulty, and AI model information.
@@ -41,6 +56,8 @@ The question bank lives under questions/bank. Each numbered directory is a packa
 graph TB
 A["questions/bank"] --> B["Package 1"]
 A --> C["Package 2"]
+A --> D["Package 13"]
+A --> E["Package 14 - Kimi-K3"]
 B --> B1["verbal/*.json"]
 B --> B2["kuantitatif/*.json"]
 B --> B3["pemecahan_masalah/*.json"]
@@ -49,6 +66,14 @@ C --> C1["verbal/*.json"]
 C --> C2["kuantitatif/*.json"]
 C --> C3["pemecahan_masalah/*.json"]
 C --> C4["images/*"]
+D --> D1["verbal/*.json"]
+D --> D2["kuantitatif/*.json"]
+D --> D3["pemecahan_masalah/*.json"]
+D --> D4["images/*"]
+E --> E1["verbal/*.json"]
+E --> E2["kuantitatif/*.json"]
+E --> E3["pemecahan_masalah/*.json"]
+E --> E4["images/*"]
 ```
 
 **Diagram sources**
@@ -70,6 +95,7 @@ C --> C4["images/*"]
 **Section sources**
 - [questions/schema.json:1-98](file://questions/schema.json#L1-L98)
 - [questions/bank/1/package.json:1-10](file://questions/bank/1/package.json#L1-L10)
+- [questions/bank/14/package.json:1-10](file://questions/bank/14/package.json#L1-L10)
 - [web/vite/bank-reader.ts:159-298](file://web/vite/bank-reader.ts#L159-L298)
 - [web/src/lib/types.ts:200-211](file://web/src/lib/types.ts#L200-L211)
 - [scripts/bump_version.py:1-124](file://scripts/bump_version.py#L1-L124)
@@ -121,26 +147,35 @@ I --> IMG["Image assets"]
 
 **Diagram sources**
 - [questions/generator/common.py:17-58](file://questions/generator/common.py#L17-L58)
-- [questions/bank/1/verbal/001.json:1-29](file://questions/bank/1/verbal/001.json#L1-L29)
-- [questions/bank/1/kuantitatif/001.json:1-44](file://questions/bank/1/kuantitatif/001.json#L1-L44)
-- [questions/bank/1/pemecahan_masalah/001.json:1-44](file://questions/bank/1/pemecahan_masalah/001.json#L1-L44)
+- [questions/bank/14/verbal/001.json:1-43](file://questions/bank/14/verbal/001.json#L1-L43)
+- [questions/bank/14/kuantitatif/001.json:1-43](file://questions/bank/14/kuantitatif/001.json#L1-L43)
+- [questions/bank/14/pemecahan_masalah/001.json:1-43](file://questions/bank/14/pemecahan_masalah/001.json#L1-L43)
 
 **Section sources**
 - [questions/generator/common.py:17-58](file://questions/generator/common.py#L17-L58)
 - [questions/schema.json:23-96](file://questions/schema.json#L23-L96)
 
-### Package Metadata (package.json)
+### Package Metadata and AI Model Diversity
 Each package includes a manifest with:
 - id: numeric package identifier
 - title and description: human-readable labels
-- difficulty: easy, medium, hard
+- difficulty: easy, medium, hard, or hard+ (as seen in Package 14)
 - ai_model, ai_company, ai_model_description: provenance metadata
 
-These fields are read during compilation and included in the compiled package object.
+The question bank now features diverse AI models from different providers:
+- **Anthropic**: Opus 5 (Packages 1-12)
+- **Alibaba Cloud**: Qwen3.8-Max (Package 13)
+- **Moonshot AI**: Kimi-K3 (Package 14) - Latest addition with enhanced reasoning capabilities
+
+Package 14 specifically uses the Kimi-K3 model, described as "a leading language model from Moonshot AI with deep reasoning capabilities to generate more challenging TBS questions than previous packages."
+
+**Updated** Added Package 14 with Kimi-K3 AI model from Moonshot AI, representing the latest advancement in AI-generated questions with enhanced reasoning capabilities.
 
 **Section sources**
 - [questions/bank/1/package.json:1-10](file://questions/bank/1/package.json#L1-L10)
 - [questions/bank/2/package.json:1-10](file://questions/bank/2/package.json#L1-L10)
+- [questions/bank/13/package.json:1-10](file://questions/bank/13/package.json#L1-L10)
+- [questions/bank/14/package.json:1-10](file://questions/bank/14/package.json#L1-L10)
 - [web/vite/bank-reader.ts:194-202](file://web/vite/bank-reader.ts#L194-L202)
 - [web/vite/bank-reader.ts:271-293](file://web/vite/bank-reader.ts#L271-L293)
 
@@ -201,6 +236,8 @@ To create a new package:
 - Create subtest directories (verbal, kuantitatif, pemecahan_masalah) and add question JSON files following the schema.
 - Place images under images/ and reference them using relative paths in question files.
 - Commit changes to Git so revisions and release IDs can be computed.
+
+**Example**: Package 14 demonstrates the standard structure with 60 total questions (23 verbal, 25 quantitative, 12 problem-solving) generated using the Kimi-K3 AI model.
 
 **Section sources**
 - [web/vite/bank-reader.ts:189-202](file://web/vite/bank-reader.ts#L189-L202)
@@ -263,8 +300,6 @@ Revisions --> Reader
 - Image handling supports two modes: inline data URIs for offline bundles and URL references for dev mock serving, balancing size and performance.
 - Deterministic output ensures identical artifacts for the same tree, aiding caching and reproducibility.
 
-[No sources needed since this section provides general guidance]
-
 ## Troubleshooting Guide
 Common issues and resolutions:
 - Missing package.json: The reader skips directories without a manifest; ensure each package includes a valid manifest.
@@ -279,9 +314,7 @@ Common issues and resolutions:
 - [questions/schema.json:66-95](file://questions/schema.json#L66-L95)
 
 ## Conclusion
-The package management system leverages Git as the authoritative source for question content, deriving immutable versions and content-addressed release identifiers to ensure reproducibility and reliability. Packages are organized by subtest categories, validated by a strict schema, and compiled into a deterministic bank consumed by the exam engine. Semantic versioning for the application coordinates releases alongside package updates, while guidelines for creating and managing packages streamline collaboration and maintenance.
-
-[No sources needed since this section summarizes without analyzing specific files]
+The package management system leverages Git as the authoritative source for question content, deriving immutable versions and content-addressed release identifiers to ensure reproducibility and reliability. With the addition of Package 14 featuring the Kimi-K3 AI model from Moonshot AI, the question bank now offers 14 distinct packages with diverse AI-generated content ranging from medium to very high difficulty levels. Packages are organized by subtest categories, validated by a strict schema, and compiled into a deterministic bank consumed by the exam engine. Semantic versioning for the application coordinates releases alongside package updates, while guidelines for creating and managing packages streamline collaboration and maintenance.
 
 ## Appendices
 
@@ -291,6 +324,24 @@ The package management system leverages Git as the authoritative source for ques
 - Problem-solving example: demonstrates logical reasoning with constraints.
 
 **Section sources**
-- [questions/bank/1/verbal/001.json:1-29](file://questions/bank/1/verbal/001.json#L1-L29)
-- [questions/bank/1/kuantitatif/001.json:1-44](file://questions/bank/1/kuantitatif/001.json#L1-L44)
-- [questions/bank/1/pemecahan_masalah/001.json:1-44](file://questions/bank/1/pemecahan_masalah/001.json#L1-L44)
+- [questions/bank/1/verbal/001.json:1-43](file://questions/bank/1/verbal/001.json#L1-L43)
+- [questions/bank/1/kuantitatif/001.json:1-43](file://questions/bank/1/kuantitatif/001.json#L1-L43)
+- [questions/bank/1/pemecahan_masalah/001.json:1-43](file://questions/bank/1/pemecahan_masalah/001.json#L1-L43)
+- [questions/bank/14/verbal/001.json:1-43](file://questions/bank/14/verbal/001.json#L1-L43)
+- [questions/bank/14/kuantitatif/001.json:1-43](file://questions/bank/14/kuantitatif/001.json#L1-L43)
+- [questions/bank/14/pemecahan_masalah/001.json:1-43](file://questions/bank/14/pemecahan_masalah/001.json#L1-L43)
+
+### Package Statistics and AI Model Distribution
+The question bank currently contains 14 packages with the following distribution:
+- **Total Packages**: 14
+- **AI Models Used**: 
+  - Anthropic Opus 5 (Packages 1-12): 12 packages
+  - Alibaba Cloud Qwen3.8-Max (Package 13): 1 package
+  - Moonshot AI Kimi-K3 (Package 14): 1 package
+- **Difficulty Levels**: Medium, Hard, and Hard+ (Package 14)
+- **Questions per Package**: Consistent 60 questions (23 verbal, 25 quantitative, 12 problem-solving)
+
+**Section sources**
+- [questions/bank/1/package.json:1-10](file://questions/bank/1/package.json#L1-L10)
+- [questions/bank/13/package.json:1-10](file://questions/bank/13/package.json#L1-L10)
+- [questions/bank/14/package.json:1-10](file://questions/bank/14/package.json#L1-L10)

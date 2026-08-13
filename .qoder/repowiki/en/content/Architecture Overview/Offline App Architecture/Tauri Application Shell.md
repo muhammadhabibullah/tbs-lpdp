@@ -106,18 +106,18 @@ The Tauri shell runs a single main window that serves the React SPA. The fronten
 
 ```mermaid
 sequenceDiagram
-participant FE as "React SPA"
-participant RT as "appRuntime.ts"
-participant TR as "Tauri Runtime"
-participant PL as "Plugins"
-participant OS as "OS"
-FE->>RT : "printPage()"
-RT->>TR : "invoke('print_page')"
-TR->>PL : "window.print() (desktop)"
-PL-->>TR : "success/failure"
-TR-->>RT : "boolean result"
-RT-->>FE : "complete"
-Note over FE,OS : On Android, print is not supported; button is hidden.
+    participant FE as "React SPA"
+    participant RT as "appRuntime.ts"
+    participant TR as "Tauri Runtime"
+    participant PL as "Plugins"
+    participant OS as "OS"
+    FE->>RT: "printPage()"
+    RT->>TR: "invoke('print_page')"
+    TR->>PL: "window.print() (desktop)"
+    PL-->>TR: "success/failure"
+    TR-->>RT: "boolean result"
+    RT-->>FE: "complete"
+    Note over FE,OS: "On Android, print is not supported; button is hidden."
 ```
 
 **Diagram sources**

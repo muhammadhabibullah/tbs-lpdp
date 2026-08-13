@@ -18,6 +18,13 @@
 - [validate_bank.py](file://questions/generator/validate_bank.py)
 </cite>
 
+## Update Summary
+**Changes Made**
+- Enhanced figures.py section with detailed documentation of new geometry figure generators
+- Added comprehensive coverage of schematic figure generation capabilities
+- Updated dependency analysis to reflect enhanced figure generation system
+- Expanded troubleshooting guide with figure-specific issues and solutions
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -40,7 +47,7 @@ The framework supports multiple subtests and question types:
 - Algebra (aljabar)
 - Data sufficiency (kecukupan_data and predicate variants)
 - Probability and combinatorics (peluang_kombinatorik)
-- Figures (SVG builders for geometry items)
+- Figures (SVG builders for geometry items with enhanced capabilities)
 
 All generators write canonical JSON files conforming to a strict schema and are validated by a bank validator tool.
 
@@ -91,7 +98,7 @@ VAL --> SCH
 - [kecukupan_data.py:1-934](file://questions/generator/kecukupan_data.py#L1-L934)
 - [peluang_kombinatorik.py:1-525](file://questions/generator/peluang_kombinatorik.py#L1-L525)
 - [kecukupan_data_predikat.py:1-282](file://questions/generator/kecukupan_data_predikat.py#L1-L282)
-- [figures.py:1-200](file://questions/generator/figures.py#L1-L200)
+- [figures.py:1-1378](file://questions/generator/figures.py#L1-L1378)
 
 **Section sources**
 - [README.md:1-33](file://questions/generator/README.md#L1-L33)
@@ -308,16 +315,81 @@ Write --> End(["Done"])
 **Section sources**
 - [peluang_kombinatorik.py:1-525](file://questions/generator/peluang_kombinatorik.py#L1-L525)
 
-### Figures (figures.py)
-- Purpose: Generates SVG figures deterministically from stem parameters, enforcing that figures only label what the stem provides.
-- Features:
-  - Builders for rectangles, trapezoids, sectors, cylinders, and other shapes.
-  - Consistent palette and typography matching web styles.
-  - --check mode compares generated SVGs against disk to prevent manual edits.
-  - --link mode updates question image references to point at generated files.
+### Figures (figures.py) - Enhanced Capabilities
+
+**Updated** Enhanced with 105 additional lines of code for improved figure generation capabilities, including advanced schematic figure generation and comprehensive geometry support.
+
+#### Core Figure Generation System
+The figures.py module provides a comprehensive SVG generation system for geometry questions with two distinct approaches:
+
+**Measured Figures**: Scale according to stem parameters with precise dimensional accuracy
+- Rectangle with inner square (garden/pond scenarios)
+- Cylinder with perspective rendering
+- Isosceles trapezoid with height computation
+- Cuboid in oblique projection
+- Circular sector with angle visualization
+- Rhombus with diagonal representation
+- Cone with base ellipse
+- Parallelogram with height indication
+- Annular track with radial dimensions
+- Right triangle with parallel cuts
+- Triangular prism with depth projection
+- Kite with perpendicular diagonals
+- Square pyramid with apex visualization
+- Cylinder with cone combination (silo shape)
+- Stadium shape with semicircular ends
+
+#### Schematic Figure Generation
+Enhanced schematic figures provide generic configurations without specific measurements:
+
+**Parallel Lines Transversals**: Two parallel lines cut by transversals creating angle-chase configurations
+- Horizontal line k with parallel lines l and m
+- Transversal n intersecting at points P, Q, R, S, T
+- Angle relationships x°, y°, z° for geometric reasoning
+- Consistent configuration independent of item-specific values
+
+**Right Triangle Midsegment**: Right triangle ABC with midsegment properties
+- D as midpoint of AC with DE parallel to CB
+- Demonstrates midsegment theorem without specific measurements
+- Maintains geometric relationships while avoiding scale-dependent values
+
+**Two Right Triangles Configuration**: Complex arrangement with crossing diagonals
+- Right triangles ABD and ABC sharing base AB
+- Diagonals AC and BD intersecting at point E
+- Perpendicular distance EF from intersection to base
+- Illustrates harmonic mean relationship without numerical values
+
+#### Advanced Features
+- **Deterministic Rendering**: Byte-for-byte reproducibility through fixed constants and seed-based generation
+- **Consistent Styling**: Web-compatible color palette matching application styles
+- **Smart Labeling**: Automatic placement of dimension labels and annotations
+- **Validation Support**: --check mode ensures generated SVGs match expected output
+- **Integration**: Seamless linking with question metadata and image references
+
+```mermaid
+flowchart TD
+Subgraph["Figure Generation Pipeline"]
+A["Input Parameters"] --> B["Scale Calculation"]
+B --> C["Geometry Computation"]
+C --> D["SVG Element Generation"]
+D --> E["Label Placement"]
+E --> F["Style Application"]
+F --> G["Output SVG"]
+end
+Subgraph["Schematic Figures"]
+H["Generic Configuration"] --> I["Geometric Relationships"]
+I --> J["Angle/Line Markers"]
+J --> K["Point Labels"]
+K --> L["Not-to-Scale Note"]
+end
+```
+
+**Diagram sources**
+- [figures.py:170-864](file://questions/generator/figures.py#L170-L864)
+- [figures.py:1040-1164](file://questions/generator/figures.py#L1040-L1164)
 
 **Section sources**
-- [figures.py:1-200](file://questions/generator/figures.py#L1-L200)
+- [figures.py:1-1378](file://questions/generator/figures.py#L1-L1378)
 
 ## Dependency Analysis
 - Generators depend on common.py for shared utilities and schema validation.
@@ -343,7 +415,7 @@ VAL --> SCH["schema.json"]
 - [common.py:1-218](file://questions/generator/common.py#L1-L218)
 - [schema.json:1-98](file://questions/schema.json#L1-L98)
 - [validate_bank.py:1-200](file://questions/generator/validate_bank.py#L1-L200)
-- [figures.py:1-200](file://questions/generator/figures.py#L1-L200)
+- [figures.py:1-1378](file://questions/generator/figures.py#L1-L1378)
 
 **Section sources**
 - [requirements.txt:1-3](file://questions/generator/requirements.txt#L1-L3)
@@ -353,8 +425,7 @@ VAL --> SCH["schema.json"]
 - Rejection sampling (up to 200 attempts) prevents low-quality draws; this is bounded and safe for typical generator runs.
 - Rival-rule screening adds computational overhead but is essential for item quality and ambiguity elimination.
 - Figure generation is deterministic and fast; --check mode can be expensive for large banks but ensures integrity.
-
-[No sources needed since this section provides general guidance]
+- **Enhanced**: Schematic figure generation uses fixed configurations for optimal performance, eliminating per-item computation overhead.
 
 ## Troubleshooting Guide
 Common issues and resolutions:
@@ -363,15 +434,18 @@ Common issues and resolutions:
 - Blueprint mismatches: strict mode enforces exact counts per subtest; adjust generator counts accordingly.
 - Difficulty mismatch: package difficulty is calculated from counts; update package manifest or regenerate to match.
 - Image references: validate_bank.py checks existence; run figures.py --link to update references.
+- **Figure-specific issues**: 
+  - Stale SVG files: Run `python3 figures.py --check` to identify outdated figures
+  - Missing image links: Use `python3 figures.py --link` to synchronize question-image references
+  - Schematic figure conflicts: Ensure shared figures are regenerated consistently across packages
 
 **Section sources**
 - [validate_bank.py:44-194](file://questions/generator/validate_bank.py#L44-L194)
 - [common.py:154-164](file://questions/generator/common.py#L154-L164)
+- [figures.py:1294-1378](file://questions/generator/figures.py#L1294-L1378)
 
 ## Conclusion
-The framework delivers high-quality, deterministic question generation through exact computation, rigorous distractor design, and strict schema enforcement. Shared utilities centralize formatting, path management, and validation, while individual generators implement specialized algorithms tailored to each question type. The result is a robust pipeline for producing reproducible, exam-grade content suitable for automated validation and publishing.
-
-[No sources needed since this section summarizes without analyzing specific files]
+The framework delivers high-quality, deterministic question generation through exact computation, rigorous distractor design, and strict schema enforcement. Shared utilities centralize formatting, path management, and validation, while individual generators implement specialized algorithms tailored to each question type. The enhanced figures.py module provides comprehensive geometry visualization capabilities with both measured and schematic figure generation, ensuring robust visual support for quantitative reasoning questions. The result is a robust pipeline for producing reproducible, exam-grade content suitable for automated validation and publishing.
 
 ## Appendices
 
@@ -382,15 +456,19 @@ The framework delivers high-quality, deterministic question generation through e
 - Data sufficiency: python3 kecukupan_data.py --package 1 --count 2 --kind geometry --seed 7
 - Probability: python3 peluang_kombinatorik.py --package 1 --count 2 --subtest pemecahan_masalah --seed 7
 - Letter sequences: python3 deret_huruf.py --package 7 --count 1 --blanks 1 --seed SEED
+- **Figures**: python3 figures.py --check (verify SVG integrity) or python3 figures.py --link (update image references)
 
 **Section sources**
 - [COVERAGE.md:30-45](file://questions/generator/COVERAGE.md#L30-L45)
 - [README.md:24-33](file://questions/generator/README.md#L24-L33)
+- [figures.py:1294-1303](file://questions/generator/figures.py#L1294-L1303)
 
 ### Output Validation Process
 - Run validate_bank.py [--strict] to check schema compliance, blueprint counts, image references, and package difficulty consistency.
 - Fix reported errors/warnings and re-run until exit code 0.
+- **Enhanced**: Use figures.py --check to verify SVG file integrity and --link to synchronize image references.
 
 **Section sources**
 - [validate_bank.py:17-19](file://questions/generator/validate_bank.py#L17-L19)
 - [validate_bank.py:197-208](file://questions/generator/validate_bank.py#L197-L208)
+- [figures.py:1294-1378](file://questions/generator/figures.py#L1294-L1378)

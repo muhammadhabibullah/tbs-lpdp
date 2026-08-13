@@ -11,7 +11,16 @@
 - [types.ts](file://web/src/lib/types.ts)
 - [CAPACITY_GUARD.md](file://docs/CAPACITY_GUARD.md)
 - [index.ts](file://supabase/functions/question-report-digest/index.ts)
+- [render.ts](file://supabase/functions/question-report-digest/render.ts)
+- [schema_v3.sql](file://supabase/schema_v3.sql)
 </cite>
+
+## Update Summary
+**Changes Made**
+- Updated Daily Report Digest Pipeline section to reflect conditional delivery logic
+- Enhanced architecture diagrams to show quiet day handling
+- Added detailed explanation of the `_prepare_question_report_digest_run` function's activity counting mechanism
+- Updated troubleshooting guide with new quiet day scenarios
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -27,7 +36,7 @@
 
 ## Introduction
 This document explains the maintenance system that coordinates scheduled database operations and user-facing maintenance notifications for the application. It covers:
-- The pg_cron-based job scheduler that performs data retention, capacity snapshots, anonymous user cleanup, and daily report generation.
+- The pg_cron-based job scheduler that performs data retention, capacity snapshots, anonymous user cleanup, and daily report generation with conditional delivery logic.
 - The maintenance mode feature that shows frontend banners and gates to prevent new exam attempts during scheduled maintenance windows.
 - Automated cleanup processes with defined retention periods and database size management aligned with free-tier constraints.
 - Operational procedures for monitoring jobs, manual execution, emergency shutdowns, and recovery when maintenance tasks fail.
@@ -45,6 +54,7 @@ S["service_capacity<br/>schema.sql"]
 MM["site_maintenance + get_maintenance_status()<br/>schema_v4_maintenance_mode.sql"]
 QRD["_queue_question_report_digest()<br/>maintenance.sql"]
 F["question-report-digest Edge Function<br/>index.ts"]
+P["_prepare_question_report_digest_run()<br/>schema_v3.sql"]
 end
 subgraph "Frontend"
 MG["MaintenanceGate.tsx"]
@@ -58,7 +68,8 @@ MP --> MM
 MG --> ML
 M --> S
 M --> QRD
-QRD --> F
+QRD --> P
+P --> F
 ```
 
 **Diagram sources**
@@ -69,22 +80,24 @@ QRD --> F
 - [MaintenancePage.tsx:1-32](file://web/src/pages/MaintenancePage.tsx#L1-L32)
 - [maintenance.ts:1-48](file://web/src/lib/maintenance.ts#L1-L48)
 - [index.ts:27-119](file://supabase/functions/question-report-digest/index.ts#L27-L119)
+- [schema_v3.sql:1706-1780](file://supabase/schema_v3.sql#L1706-L1780)
 
 **Section sources**
-- [maintenance.sql:1-167](file://supabase/maintenance.sql#L1-L167)
+- [maintenance.sql:1-170](file://supabase/maintenance.sql#L1-L170)
 - [schema_v4_maintenance_mode.sql:1-82](file://supabase/schema_v4_maintenance_mode.sql#L1-L82)
 - [MaintenanceGate.tsx:1-141](file://web/src/components/MaintenanceGate.tsx#L1-L141)
 - [MaintenanceBanner.tsx:1-35](file://web/src/components/MaintenanceBanner.tsx#L1-L35)
 - [MaintenancePage.tsx:1-32](file://web/src/pages/MaintenancePage.tsx#L1-L32)
 - [maintenance.ts:1-48](file://web/src/lib/maintenance.ts#L1-L48)
 - [index.ts:1-119](file://supabase/functions/question-report-digest/index.ts#L1-L119)
+- [schema_v3.sql:1706-1895](file://supabase/schema_v3.sql#L1706-L1895)
 
 ## Core Components
 - pg_cron job scheduler:
   - Attempt pruning: deletes attempts older than 7 days at a fixed nightly time.
   - Capacity snapshot: periodically refreshes service capacity metrics used by the guard.
   - Anonymous user cleanup: removes inactive anonymous users after 60 days unless they have question reports.
-  - Daily report digest: queues and retries sending a daily email digest via an Edge Function.
+  - Daily report digest: queues and retries sending a daily email digest via an Edge Function with conditional delivery logic.
 - Maintenance mode:
   - Backend: a singleton table storing enabled state, start/end times, and message; a secure function computes phase and server time.
   - Frontend: a gate component polls the status, shows a warning banner before maintenance, and displays a maintenance page during the window.
@@ -93,7 +106,7 @@ QRD --> F
 
 **Section sources**
 - [maintenance.sql:22-73](file://supabase/maintenance.sql#L22-L73)
-- [maintenance.sql:87-152](file://supabase/maintenance.sql#L87-L152)
+- [maintenance.sql:87-155](file://supabase/maintenance.sql#L87-L155)
 - [schema_v4_maintenance_mode.sql:15-63](file://supabase/schema_v4_maintenance_mode.sql#L15-L63)
 - [MaintenanceGate.tsx:35-141](file://web/src/components/MaintenanceGate.tsx#L35-L141)
 - [CAPACITY_GUARD.md:1-161](file://docs/CAPACITY_GUARD.md#L1-L161)
@@ -122,20 +135,27 @@ FE->>FE : Show MaintenanceBanner
 else Maintenance phase
 FE->>FE : Render MaintenancePage
 end
-Note over DB,EF : Report digest pipeline
+Note over DB,EF : Report digest pipeline with conditional delivery
 Cron->>DB : _queue_question_report_digest(true)
+DB->>DB : _prepare_question_report_digest_run()
+DB->>DB : Check activity_count > 0
+alt Activity exists
 DB->>EF : HTTP POST with run_id
 EF->>DB : claim_question_report_digest()
 EF-->>DB : complete/fail_question_report_digest()
+else No activity (quiet day)
+DB-->>Cron : Return null (no email sent)
+end
 ```
 
 **Diagram sources**
 - [maintenance.sql:31-51](file://supabase/maintenance.sql#L31-L51)
 - [maintenance.sql:64-73](file://supabase/maintenance.sql#L64-L73)
-- [maintenance.sql:87-152](file://supabase/maintenance.sql#L87-L152)
+- [maintenance.sql:87-155](file://supabase/maintenance.sql#L87-L155)
 - [schema_v4_maintenance_mode.sql:38-63](file://supabase/schema_v4_maintenance_mode.sql#L38-L63)
 - [MaintenanceGate.tsx:56-139](file://web/src/components/MaintenanceGate.tsx#L56-L139)
 - [index.ts:27-119](file://supabase/functions/question-report-digest/index.ts#L27-L119)
+- [schema_v3.sql:1706-1780](file://supabase/schema_v3.sql#L1706-L1780)
 
 ## Detailed Component Analysis
 
@@ -145,6 +165,7 @@ EF-->>DB : complete/fail_question_report_digest()
 - Prune anonymous users (daily at 03:30 UTC): Removes anonymous users inactive for 60 days unless they authored question reports.
 - Daily report digest:
   - Creates or reuses a digest run window and invokes the Edge Function with a run ID.
+  - **Enhanced**: Now includes conditional delivery logic - emails are only sent when at least one report was created or updated in the digest window. Quiet days produce no run and no email.
   - Retry job runs every 30 minutes to resend any unsent runs without creating extra windows.
 
 ```mermaid
@@ -154,22 +175,27 @@ CheckType --> |Prune Attempts| DeleteOld["Delete attempts older than 7 days"]
 CheckType --> |Refresh Capacity| Measure["Measure db size and row counts"]
 CheckType --> |Prune Anonymous| Cleanup["Delete inactive anonymous users without reports"]
 CheckType --> |Digest Daily| Queue["Queue or reuse digest run"]
-Queue --> CallEF["HTTP POST to Edge Function"]
+Queue --> Prepare["_prepare_question_report_digest_run()"]
+Prepare --> CheckActivity{"activity_count > 0?"}
+CheckActivity --> |Yes| CallEF["HTTP POST to Edge Function"]
+CheckActivity --> |No| SkipEmail["Skip email - quiet day"]
 CallEF --> End([Exit])
 DeleteOld --> End
 Measure --> End
 Cleanup --> End
+SkipEmail --> End
 ```
 
 **Diagram sources**
 - [maintenance.sql:31-35](file://supabase/maintenance.sql#L31-L35)
 - [maintenance.sql:47-51](file://supabase/maintenance.sql#L47-L51)
 - [maintenance.sql:64-73](file://supabase/maintenance.sql#L64-L73)
-- [maintenance.sql:87-152](file://supabase/maintenance.sql#L87-L152)
+- [maintenance.sql:87-155](file://supabase/maintenance.sql#L87-L155)
+- [schema_v3.sql:1706-1780](file://supabase/schema_v3.sql#L1706-L1780)
 
 **Section sources**
 - [maintenance.sql:22-73](file://supabase/maintenance.sql#L22-L73)
-- [maintenance.sql:87-152](file://supabase/maintenance.sql#L87-L152)
+- [maintenance.sql:87-155](file://supabase/maintenance.sql#L87-L155)
 
 ### Maintenance Mode (Backend)
 - Singleton configuration table stores whether maintenance is enabled, its start/end timestamps, and a user-facing message.
@@ -266,6 +292,7 @@ Compare --> |No| Allow["Allow new attempts"]
 
 ### Daily Report Digest Pipeline
 - A database function queues a digest run, reads secrets from Vault, and calls the Edge Function with a run ID.
+- **Enhanced**: The `_prepare_question_report_digest_run` function now checks for activity count before creating a run. If no reports were created or updated in the digest window, it returns null and no email is sent.
 - The Edge Function claims the run, renders the digest, sends it via an email provider, and marks it sent or failed.
 - A retry job resends any unsent runs every 30 minutes without creating duplicate daily windows.
 
@@ -273,10 +300,15 @@ Compare --> |No| Allow["Allow new attempts"]
 sequenceDiagram
 participant Cron as "pg_cron"
 participant DB as "PostgreSQL"
+participant Prep as "_prepare_question_report_digest_run()"
 participant EF as "Edge Function"
 participant Email as "Email Provider"
 Cron->>DB : _queue_question_report_digest(true/false)
 DB->>DB : Prepare or pick digest run
+DB->>Prep : _prepare_question_report_digest_run(window_start, window_end)
+Prep->>Prep : Count activity in window
+alt Activity exists (reports created/updated)
+Prep-->>DB : Return run_id
 DB->>EF : POST /functions/v1/question-report-digest {run_id}
 EF->>DB : claim_question_report_digest(run_id)
 EF->>Email : Send email
@@ -285,21 +317,29 @@ EF->>DB : complete_question_report_digest(run_id)
 else Failure
 EF->>DB : fail_question_report_digest(run_id, error)
 end
+else No activity (quiet day)
+Prep-->>DB : Return null (no run created)
+DB-->>Cron : Exit early (no email sent)
+end
 ```
 
 **Diagram sources**
-- [maintenance.sql:87-152](file://supabase/maintenance.sql#L87-L152)
+- [maintenance.sql:87-155](file://supabase/maintenance.sql#L87-L155)
+- [schema_v3.sql:1706-1780](file://supabase/schema_v3.sql#L1706-L1780)
 - [index.ts:27-119](file://supabase/functions/question-report-digest/index.ts#L27-L119)
 
 **Section sources**
-- [maintenance.sql:87-152](file://supabase/maintenance.sql#L87-L152)
+- [maintenance.sql:87-155](file://supabase/maintenance.sql#L87-L155)
+- [schema_v3.sql:1706-1780](file://supabase/schema_v3.sql#L1706-L1780)
 - [index.ts:1-119](file://supabase/functions/question-report-digest/index.ts#L1-L119)
+- [render.ts:1-128](file://supabase/functions/question-report-digest/render.ts#L1-L128)
 
 ## Dependency Analysis
 - Frontend depends on the backend maintenance status RPC to compute phase and render appropriate UI.
 - pg_cron jobs depend on extensions being enabled and on Vault secrets for the digest pipeline.
 - Capacity guard depends on periodic measurement; if cron fails, reads still refresh stale data.
 - Digest pipeline depends on Edge Function configuration and email provider availability.
+- **Enhanced**: Digest pipeline now has conditional dependency on activity count - no email is sent on quiet days.
 
 ```mermaid
 graph LR
@@ -308,26 +348,32 @@ MS --> SM["site_maintenance table"]
 Cron["pg_cron"] --> Jobs["Retention & Snapshot Jobs"]
 Jobs --> Cap["service_capacity"]
 Cron --> Digest["_queue_question_report_digest()"]
-Digest --> EF["question-report-digest Edge Function"]
+Digest --> Prepare["_prepare_question_report_digest_run()"]
+Prepare --> Activity{"Activity Count"}
+Activity --> |>0| EF["question-report-digest Edge Function"]
+Activity --> |=0| Skip["Skip email - quiet day"]
 EF --> Email["Email Provider"]
 ```
 
 **Diagram sources**
 - [schema_v4_maintenance_mode.sql:15-63](file://supabase/schema_v4_maintenance_mode.sql#L15-L63)
 - [maintenance.sql:31-51](file://supabase/maintenance.sql#L31-L51)
-- [maintenance.sql:87-152](file://supabase/maintenance.sql#L87-L152)
+- [maintenance.sql:87-155](file://supabase/maintenance.sql#L87-L155)
+- [schema_v3.sql:1706-1780](file://supabase/schema_v3.sql#L1706-L1780)
 - [index.ts:27-119](file://supabase/functions/question-report-digest/index.ts#L27-L119)
 
 **Section sources**
-- [maintenance.sql:1-167](file://supabase/maintenance.sql#L1-L167)
+- [maintenance.sql:1-170](file://supabase/maintenance.sql#L1-L170)
 - [schema_v4_maintenance_mode.sql:1-82](file://supabase/schema_v4_maintenance_mode.sql#L1-L82)
 - [index.ts:1-119](file://supabase/functions/question-report-digest/index.ts#L1-L119)
+- [schema_v3.sql:1706-1895](file://supabase/schema_v3.sql#L1706-L1895)
 
 ## Performance Considerations
 - Retention jobs run off-peak to minimize impact on active users.
 - Capacity measurement is cached for 5 minutes and only refreshed when needed, avoiding frequent heavy queries.
 - Anonymous user cleanup uses existence checks to preserve users who filed reports, minimizing unnecessary deletions.
 - Digest retries avoid duplicate daily windows and rely on idempotent operations.
+- **Enhanced**: Conditional delivery reduces unnecessary email processing and network calls on quiet days, improving overall system efficiency.
 
 [No sources needed since this section provides general guidance]
 
@@ -337,19 +383,22 @@ EF --> Email["Email Provider"]
   - Check database size and per-table sizes to understand growth drivers.
 - Common issues:
   - Digest job fails due to missing Vault secrets or misconfigured Edge Function keys.
+  - **New**: Digest appears to not send emails - check if there was actually activity in the digest window. On quiet days, no email is expected.
   - Capacity guard trips because retention has not yet reclaimed space; wait for nightly sweep or adjust retention/limits.
   - Frontend maintenance banner not showing: verify schedule in site_maintenance and ensure the RPC is reachable.
 - Manual actions:
   - Force capacity measurement immediately.
   - Reschedule or unschedule specific jobs if necessary.
   - Trigger a digest run manually by invoking the queue function.
+  - **New**: To force email on a quiet day, temporarily modify the activity count check or add test data to trigger the digest.
 
 **Section sources**
-- [maintenance.sql:154-167](file://supabase/maintenance.sql#L154-L167)
+- [maintenance.sql:157-170](file://supabase/maintenance.sql#L157-L170)
 - [CAPACITY_GUARD.md:137-161](file://docs/CAPACITY_GUARD.md#L137-L161)
+- [schema_v3.sql:1706-1780](file://supabase/schema_v3.sql#L1706-L1780)
 
 ## Conclusion
-The maintenance system ensures long-term stability through automated retention, capacity monitoring, and transparent user communication. Scheduled jobs maintain database health within free-tier constraints, while the maintenance mode feature proactively informs users and prevents new attempts during planned downtime. Operators can monitor, adjust, and recover from issues using built-in diagnostics and manual procedures.
+The maintenance system ensures long-term stability through automated retention, capacity monitoring, and transparent user communication. Scheduled jobs maintain database health within free-tier constraints, while the maintenance mode feature proactively informs users and prevents new attempts during planned downtime. The enhanced daily report digest system now intelligently handles quiet days by skipping email delivery when no activity occurs, reducing unnecessary resource usage. Operators can monitor, adjust, and recover from issues using built-in diagnostics and manual procedures.
 
 [No sources needed since this section summarizes without analyzing specific files]
 
@@ -373,6 +422,7 @@ The maintenance system ensures long-term stability through automated retention, 
 - Recover failed digest delivery:
   - Ensure Vault secrets and Edge Function environment variables are configured.
   - Use the retry job to resend unsent digests; check Edge Function logs for provider errors.
+  - **New**: Verify that there was actual activity in the digest window. On quiet days, no email is expected and this is normal behavior.
 
 - Emergency shutdown:
   - Enable maintenance mode immediately to block new attempts and show the maintenance page.
@@ -385,6 +435,7 @@ The maintenance system ensures long-term stability through automated retention, 
 
 **Section sources**
 - [schema_v4_maintenance_mode.sql:65-81](file://supabase/schema_v4_maintenance_mode.sql#L65-L81)
-- [maintenance.sql:154-167](file://supabase/maintenance.sql#L154-L167)
+- [maintenance.sql:157-170](file://supabase/maintenance.sql#L157-L170)
 - [CAPACITY_GUARD.md:137-161](file://docs/CAPACITY_GUARD.md#L137-L161)
 - [index.ts:27-119](file://supabase/functions/question-report-digest/index.ts#L27-L119)
+- [schema_v3.sql:1706-1780](file://supabase/schema_v3.sql#L1706-L1780)
