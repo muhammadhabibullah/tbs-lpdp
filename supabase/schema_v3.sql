@@ -1723,6 +1723,9 @@ begin
   select count(*) into v_activity_count from public.question_reports
    where updated_at >= p_window_start and updated_at < p_window_end;
 
+  -- No new reports in this window: skip the run entirely so no email is sent.
+  if v_activity_count = 0 then return null; end if;
+
   v_payload := jsonb_build_object(
     'window_start', p_window_start,
     'window_end', p_window_end,

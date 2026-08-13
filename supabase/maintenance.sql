@@ -116,6 +116,9 @@ begin
     return null;
   end if;
 
+  -- No new reports in the window: nothing to send.
+  if v_run_id is null then return null; end if;
+
   select decrypted_secret into v_project_url
     from vault.decrypted_secrets where name = 'project_url' limit 1;
   select decrypted_secret into v_automation_key
