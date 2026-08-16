@@ -29,6 +29,8 @@ jobs:
       version: ${{ steps.check.outputs.version }}
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - id: check
         name: Tag must match tauri.conf.json, updater key must be configured
