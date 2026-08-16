@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: web_app
-title: TBS LPDP Practice Test Web App
+title: TBS LPDP Try-Out Web App (React + Tauri)
 scope:
     - web/
 source_files: []

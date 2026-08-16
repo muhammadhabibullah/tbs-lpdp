@@ -1,1 +1,0 @@
-Rust/Tauri packaging layer that builds the offline TBS LPDP Try Out app for desktop (macOS, Windows, Linux) and Android, wiring plugins, capabilities, and platform-specific bundling.

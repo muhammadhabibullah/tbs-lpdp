@@ -17,6 +17,14 @@
 - [MaintenanceContext.ts](file://web/src/contexts/MaintenanceContext.ts)
 </cite>
 
+## Update Summary
+**Changes Made**
+- Enhanced ReviewPage with new question type filtering capabilities
+- Added documentation for typeFilter state variable and useMemo-based computation
+- Documented compound filtering system combining answer status and question type filters
+- Added helper function documentation for snake_case to display label conversion
+- Updated UI enhancement documentation for chip-style filter buttons with question counts
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -24,12 +32,12 @@
 4. [Architecture Overview](#architecture-overview)
 5. [Detailed Component Analysis](#detailed-component-analysis)
 6. [Dependency Analysis](#dependency-analysis)
-7. [Performance Considerations](#performance-considerations)
+7. [Performance Considerations](#performance-considerances)
 8. [Troubleshooting Guide](#troubleshooting-guide)
 9. [Conclusion](#conclusion)
 
 ## Introduction
-This document explains the page components that drive the main user workflows in the TBS LPDP Try Out application: HomePage (package selection and onboarding), AttemptPage (exam orchestration with timed sections), ExamPage (question rendering and answer tracking), ReviewPage (results analysis and performance review), MaintenancePage (system status display), and SectionIntro (subtest introductions). It covers page lifecycles, data flow between pages, state persistence mechanisms, integration with the exam engine via a unified API abstraction, navigation patterns, error handling strategies, and user experience considerations.
+This document explains the page components that drive the main user workflows in the TBS LPDP Try Out application: HomePage (package selection and onboarding), AttemptPage (exam orchestration with timed sections), ExamPage (question rendering and answer tracking), ReviewPage (results analysis and performance review with enhanced filtering), MaintenancePage (system status display), and SectionIntro (subtest introductions). It covers page lifecycles, data flow between pages, state persistence mechanisms, integration with the exam engine via a unified API abstraction, navigation patterns, error handling strategies, and user experience considerations.
 
 ## Project Structure
 The page components live under web/src/pages and are wrapped by AppShell for consistent chrome and maintenance banner behavior. Shared utilities include clock helpers, types, and an API abstraction that selects either a Supabase-backed implementation or a local mock/offline engine at runtime.
@@ -73,7 +81,7 @@ AS --> MC
 - [HomePage.tsx:1-400](file://web/src/pages/HomePage.tsx#L1-L400)
 - [AttemptPage.tsx:1-142](file://web/src/pages/AttemptPage.tsx#L1-L142)
 - [ExamPage.tsx:1-380](file://web/src/pages/ExamPage.tsx#L1-L380)
-- [ReviewPage.tsx:1-418](file://web/src/pages/ReviewPage.tsx#L1-L418)
+- [ReviewPage.tsx:1-460](file://web/src/pages/ReviewPage.tsx#L1-L460)
 - [MaintenancePage.tsx:1-32](file://web/src/pages/MaintenancePage.tsx#L1-L32)
 - [SectionIntro.tsx:1-81](file://web/src/pages/SectionIntro.tsx#L1-L81)
 - [AppShell.tsx:1-56](file://web/src/components/AppShell.tsx#L1-L56)
@@ -88,7 +96,7 @@ AS --> MC
 - [HomePage.tsx:1-400](file://web/src/pages/HomePage.tsx#L1-L400)
 - [AttemptPage.tsx:1-142](file://web/src/pages/AttemptPage.tsx#L1-L142)
 - [ExamPage.tsx:1-380](file://web/src/pages/ExamPage.tsx#L1-L380)
-- [ReviewPage.tsx:1-418](file://web/src/pages/ReviewPage.tsx#L1-L418)
+- [ReviewPage.tsx:1-460](file://web/src/pages/ReviewPage.tsx#L1-L460)
 - [MaintenancePage.tsx:1-32](file://web/src/pages/MaintenancePage.tsx#L1-L32)
 - [SectionIntro.tsx:1-81](file://web/src/pages/SectionIntro.tsx#L1-L81)
 - [AppShell.tsx:1-56](file://web/src/components/AppShell.tsx#L1-L56)
@@ -103,7 +111,7 @@ AS --> MC
 - HomePage: Lists available packages, shows attempt history, handles capacity checks, and navigates to start a new attempt.
 - AttemptPage: Orchestrates one attempt lifecycle: loading state, section intro, running section, and completion transitions.
 - ExamPage: Renders individual questions, tracks answers, debounced saves, doubt toggling, timer countdown, and section finish flow.
-- ReviewPage: Displays scores per subtest, filters questions, supports question reporting, and print-to-PDF workflow.
+- ReviewPage: Displays scores per subtest, filters questions by answer status and question type, supports question reporting, and print-to-PDF workflow.
 - MaintenancePage: Shows scheduled maintenance status and allows manual refresh.
 - SectionIntro: Presents subtest instructions and a countdown before starting the section.
 
@@ -219,7 +227,7 @@ Error handling:
 
 UX considerations:
 - Keeps user focused within the attempt flow with minimal distractions.
-- Prevents accidental navigation away from active sections via AppShell’s hideChrome behavior.
+- Prevents accidental navigation away from active sections via AppShell's hideChrome behavior.
 
 Navigation:
 - Navigates to /attempt/:id/review when all sections are completed.
@@ -235,7 +243,7 @@ State persistence:
 Responsibilities:
 - Render current question, options, passage, and image.
 - Track answers locally with optimistic UI and debounced background saves.
-- Toggle “doubtful” marking per question.
+- Toggle "doubtful" marking per question.
 - Manage font scaling preference persisted in localStorage.
 - Enforce section timer and auto-submit on expiration.
 - Provide navigation via DaftarSoal modal and question info via InformasiSoal.
@@ -270,14 +278,24 @@ Timer integration:
 ### ReviewPage
 Responsibilities:
 - Load review data for an attempt and compute total score.
-- Filter questions by status: wrong, blank, doubtful, reported.
+- Filter questions by answer status: wrong, blank, doubtful, reported.
+- **Enhanced**: Filter questions by question type using chip-style buttons with real-time counts.
 - Support question reporting and withdrawal with retry logic.
 - Enable printing/PDF export of the full Pembahasan view.
 
+**Updated** Enhanced with advanced question type filtering capabilities including state management, automatic computation, and UI enhancements.
+
 Lifecycle and data flow:
 - Fetches review data on mount; sets document title for PDF naming.
-- Maintains active subtab and filter state to render visible questions.
+- Maintains active subtab, answer status filter, and question type filter states to render visible questions.
 - Patches local review state when reports are submitted or withdrawn to avoid refetching.
+
+**Enhanced Filtering System:**
+- **typeFilter State**: Manages selected question type filter (null for all types, specific qtype string for filtered view)
+- **availableTypes Computation**: Uses useMemo hook to automatically extract unique question types from current section in question order
+- **Compound Filtering**: Combines answer status filters with question type filters using logical AND operations
+- **Helper Function**: `typeLabel()` converts snake_case question types (e.g., "pemecahan_masalah") to display labels ("Pemecahan Masalah")
+- **UI Enhancements**: Chip-style filter buttons showing real-time question counts per type with active state indication
 
 Error handling:
 - Maps backend report-related codes to localized messages.
@@ -285,16 +303,18 @@ Error handling:
 
 UX considerations:
 - Score cards show per-subtest performance and pass thresholds.
-- Filters help users focus on areas needing improvement.
+- Multi-level filtering helps users focus on specific areas needing improvement.
 - Print-friendly layout includes hidden print-only body for complete output.
+- Responsive chip interface adapts to different screen sizes.
 
 State persistence:
-- Reports are stored server-side; UI reflects user’s own reports.
+- Reports are stored server-side; UI reflects user's own reports.
+- Filter states are managed locally within component scope.
 
 **Section sources**
 - [ReviewPage.tsx:53-166](file://web/src/pages/ReviewPage.tsx#L53-L166)
 - [ReviewPage.tsx:168-345](file://web/src/pages/ReviewPage.tsx#L168-L345)
-- [ReviewPage.tsx:348-418](file://web/src/pages/ReviewPage.tsx#L348-L418)
+- [ReviewPage.tsx:348-460](file://web/src/pages/ReviewPage.tsx#L348-L460)
 
 ### MaintenancePage
 Responsibilities:
@@ -351,6 +371,10 @@ class ExamPage {
 class ReviewPage {
 +submitReport(reason, comment)
 +withdrawReport()
++typeFilter state
++availableTypes useMemo
++typeMatches()
++typeLabel()
 }
 class SectionIntro {
 +onStart()
@@ -385,6 +409,7 @@ class types_ts {
 +Question
 +ActiveSection
 +Review
++ReviewQuestion
 }
 class MaintenanceContext_ts {
 +status
@@ -411,7 +436,7 @@ ReviewPage --> types_ts : "types"
 - [HomePage.tsx:1-400](file://web/src/pages/HomePage.tsx#L1-L400)
 - [AttemptPage.tsx:1-142](file://web/src/pages/AttemptPage.tsx#L1-L142)
 - [ExamPage.tsx:1-380](file://web/src/pages/ExamPage.tsx#L1-L380)
-- [ReviewPage.tsx:1-418](file://web/src/pages/ReviewPage.tsx#L1-L418)
+- [ReviewPage.tsx:1-460](file://web/src/pages/ReviewPage.tsx#L1-L460)
 - [SectionIntro.tsx:1-81](file://web/src/pages/SectionIntro.tsx#L1-L81)
 - [AppShell.tsx:1-56](file://web/src/components/AppShell.tsx#L1-L56)
 - [SisaWaktu.tsx:1-33](file://web/src/components/SisaWaktu.tsx#L1-L33)
@@ -431,6 +456,8 @@ ReviewPage --> types_ts : "types"
 - Server-time synchronization ensures accurate countdowns without relying on device clocks.
 - Lazy API implementation selection reduces bundle size by excluding unused backends.
 - Pagination on HomePage improves initial load and rendering performance for large package catalogs.
+- **Enhanced**: useMemo hooks optimize availableTypes computation and visible questions filtering to prevent unnecessary recalculations.
+- **Enhanced**: Compound filtering system efficiently combines multiple filter criteria without performance degradation.
 
 [No sources needed since this section provides general guidance]
 
@@ -441,6 +468,7 @@ Common issues and strategies:
 - Network failures: withRetry wraps critical operations with exponential backoff; chunk reload guard prevents loops on dynamic import failures.
 - Expired sections: AttemptPage detects elapsed deadlines and finishes sections automatically before transitioning.
 - Missing backend config: HomePage displays guidance to configure environment variables or use mock mode.
+- **Enhanced**: Question type filtering issues: Verify availableTypes computation uses correct section context and typeFilter state properly resets when switching subtests.
 
 **Section sources**
 - [HomePage.tsx:29-42](file://web/src/pages/HomePage.tsx#L29-L42)
@@ -449,6 +477,6 @@ Common issues and strategies:
 - [AttemptPage.tsx:38-52](file://web/src/pages/AttemptPage.tsx#L38-L52)
 
 ## Conclusion
-The page components form a cohesive workflow that guides users from package selection through timed exam execution to detailed results review. Robust error handling, server-time synchronization, and resilient networking ensure a reliable experience. The architecture cleanly separates concerns: pages manage UI and flow, components handle reusable interactions, and libraries provide cross-cutting capabilities like timing and API abstraction. This design supports both online and offline modes while maintaining consistent UX and performance.
+The page components form a cohesive workflow that guides users from package selection through timed exam execution to detailed results review with enhanced filtering capabilities. Robust error handling, server-time synchronization, and resilient networking ensure a reliable experience. The architecture cleanly separates concerns: pages manage UI and flow, components handle reusable interactions, and libraries provide cross-cutting capabilities like timing and API abstraction. Recent enhancements to ReviewPage provide sophisticated question type filtering with real-time counts and responsive chip-style interfaces, significantly improving the user experience for analyzing test results. This design supports both online and offline modes while maintaining consistent UX and performance.
 
 [No sources needed since this section summarizes without analyzing specific files]

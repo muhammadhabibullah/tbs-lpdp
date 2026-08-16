@@ -1,1 +1,0 @@
-Single-page React application that lets users browse practice test packages, take timed exams, and review answers via Supabase or a local offline question bank.

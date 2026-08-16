@@ -1,0 +1,1 @@
+Rust/Tauri v2 crate that packages the offline TBS LPDP Try Out SPA into desktop installers and an Android app, wiring plugins, capabilities, and platform-specific bundling.

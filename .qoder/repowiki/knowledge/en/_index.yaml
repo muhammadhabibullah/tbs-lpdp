@@ -3,11 +3,11 @@ schema_version: 1
 locale: en-US
 branch: master
 nodes_managed: true
-exported_at: "2026-08-16T08:24:14Z"
+exported_at: "2026-08-16T08:55:28Z"
 modules:
     "":
-        dir_name: TBS LPDP Practice Test Monorepo
-        title: TBS LPDP Practice Test Monorepo
+        dir_name: TBS LPDP Try-Out Monorepo
+        title: TBS LPDP Try-Out Monorepo
         scope:
             - README.md
             - CONTRIBUTING.md
@@ -100,8 +100,8 @@ modules:
             - path: question_bank/generator_tool
             - path: web_app/react_frontend
     web_app:
-        dir_name: TBS LPDP Practice Test Web App
-        title: TBS LPDP Practice Test Web App
+        dir_name: TBS LPDP Try-Out Web App (React + Tauri)
+        title: TBS LPDP Try-Out Web App (React + Tauri)
         scope:
             - web/
         source_files: []
@@ -124,8 +124,8 @@ modules:
         related_to:
             - path: supabase_backend
     web_app/tauri_packaging:
-        dir_name: Tauri Desktop & Mobile App Packaging
-        title: Tauri Desktop & Mobile App Packaging
+        dir_name: Tauri Rust Packaging Layer (Desktop & Android)
+        title: Tauri Rust Packaging Layer (Desktop & Android)
         scope:
             - web/src-tauri/
         source_files: []

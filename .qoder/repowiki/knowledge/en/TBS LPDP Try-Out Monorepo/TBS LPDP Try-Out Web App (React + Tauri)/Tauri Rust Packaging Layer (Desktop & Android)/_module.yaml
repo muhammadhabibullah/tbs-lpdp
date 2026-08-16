@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: web_app/tauri_packaging
-title: Tauri Desktop & Mobile App Packaging
+title: Tauri Rust Packaging Layer (Desktop & Android)
 scope:
     - web/src-tauri/
 source_files: []
