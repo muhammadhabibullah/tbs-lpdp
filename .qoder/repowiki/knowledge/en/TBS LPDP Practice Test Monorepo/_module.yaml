@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: ""
-title: TBS LPDP Try Out Repository
+title: TBS LPDP Practice Test Monorepo
 scope:
     - README.md
     - CONTRIBUTING.md

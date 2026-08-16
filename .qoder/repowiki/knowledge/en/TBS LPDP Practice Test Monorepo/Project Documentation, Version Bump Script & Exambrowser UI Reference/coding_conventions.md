@@ -1,0 +1,3 @@
+- Version numbers are treated as a single source of truth stored in multiple manifests and updated exclusively via the `bump_version.py` CLI rather than edited by hand.
+- Technical specifications evolve through numbered successor documents (`TECHNICAL_REQUIREMENTS_V2.md` … `V6.md`) instead of editing a single file, preserving historical decisions.
+- Operational limits such as database capacity thresholds are kept as data rows in `public.service_capacity` and adjusted via SQL rather than hard-coded constants.

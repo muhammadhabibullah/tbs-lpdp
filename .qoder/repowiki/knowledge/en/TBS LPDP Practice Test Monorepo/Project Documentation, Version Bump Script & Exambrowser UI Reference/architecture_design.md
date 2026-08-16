@@ -1,0 +1,4 @@
+This leaf module contains no application code and is split into three independent concerns with no internal dependencies:
+- `docs/` holds human-readable design notes — `CAPACITY_GUARD.md` explains the database-capacity guard mechanism, while `TECHNICAL_REQUIREMENTS_V*.md` files form an immutable history of spec changes (V2 through V6) so decisions are preserved rather than overwritten.
+- `scripts/bump_version.py` is a standalone CLI that reads semver from `web/src-tauri/tauri.conf.json`, then atomically rewrites four version-bearing files (`tauri.conf.json`, `Cargo.toml`, `Cargo.lock`, `package.json`) using regex substitution; it supports explicit `X.Y.Z`, `patch`, `minor`, and `major` targets and derives the repo root relative to the script's own location.
+- `exambrowser-ui/` is a static asset folder containing PNG screenshots of the Indonesian exambrowser guide plus a one-line README describing them as UI requirements references for the frontend team.

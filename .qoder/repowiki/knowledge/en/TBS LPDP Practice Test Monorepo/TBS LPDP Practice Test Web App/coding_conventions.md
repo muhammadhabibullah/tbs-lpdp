@@ -1,0 +1,3 @@
+- Application state and configuration are loaded once in `lib/appRuntime.ts` / `lib/config.ts` and consumed uniformly by both web pages and Tauri bundles.
+- API access is abstracted behind `lib/api.ts` and `lib/localApi.ts` so UI components work against Supabase online or the embedded offline bank without branching on platform.
+- Feature flags such as maintenance mode and human verification are exposed via React contexts (e.g., `MaintenanceContext`) rather than inline checks.

@@ -1,1 +1,0 @@
-Single web app project that builds a React/Vite frontend for practice tests, compiles an embedded question bank via Vite plugins, and packages it into desktop/mobile apps through Tauri.

@@ -1,0 +1,1 @@
+React + TypeScript + Vite for the SPA; Rust + Tauri for desktop/mobile packaging; Supabase client for online mode; Vite plugin system used to compile and embed the question bank asset into every build target.

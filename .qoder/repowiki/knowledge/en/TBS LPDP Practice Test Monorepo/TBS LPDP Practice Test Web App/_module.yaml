@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: web_app
-title: TBS LPDP Try Out Web Application
+title: TBS LPDP Practice Test Web App
 scope:
     - web/
 source_files: []

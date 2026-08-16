@@ -3,11 +3,11 @@ schema_version: 1
 locale: en-US
 branch: master
 nodes_managed: true
-exported_at: "2026-08-13T15:05:09Z"
+exported_at: "2026-08-16T07:55:51Z"
 modules:
     "":
-        dir_name: TBS LPDP Try Out Repository
-        title: TBS LPDP Try Out Repository
+        dir_name: TBS LPDP Practice Test Monorepo
+        title: TBS LPDP Practice Test Monorepo
         scope:
             - README.md
             - CONTRIBUTING.md
@@ -37,8 +37,8 @@ modules:
         related_to:
             - path: question_bank/sample_and_schema
     docs_and_scripts:
-        dir_name: Documentation, Version Bump Script & Exambrowser UI References
-        title: Documentation, Version Bump Script & Exambrowser UI References
+        dir_name: Project Documentation, Version Bump Script & Exambrowser UI Reference
+        title: Project Documentation, Version Bump Script & Exambrowser UI Reference
         scope:
             - docs/
             - scripts/
@@ -101,8 +101,8 @@ modules:
         related_to:
             - path: question_bank/generator_tool
     web_app:
-        dir_name: TBS LPDP Try Out Web Application
-        title: TBS LPDP Try Out Web Application
+        dir_name: TBS LPDP Practice Test Web App
+        title: TBS LPDP Practice Test Web App
         scope:
             - web/
         source_files: []
@@ -113,8 +113,8 @@ modules:
         depends_on: []
         related_to: []
     web_app/react_frontend:
-        dir_name: TBS LPDP Try Out React Frontend
-        title: TBS LPDP Try Out React Frontend
+        dir_name: React_Vite Frontend for TBS LPDP Practice Tests
+        title: React/Vite Frontend for TBS LPDP Practice Tests
         scope:
             - web/src/
             - web/public/

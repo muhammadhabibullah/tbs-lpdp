@@ -1,1 +1,0 @@
-`python3 scripts/bump_version.py <version | patch | minor | major>` bumps semver across all Tauri/NPM manifests; run from the repo root. The capacity guard can be exercised locally by setting `localStorage['tbs-lpdp.mock.full'] = 'true'` to simulate the full-capacity state without a live Supabase project.

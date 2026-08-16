@@ -1,0 +1,1 @@
+`npm run build` runs Vite to produce the SPA and triggers the Tauri pipeline; `npm run tauri dev` launches the desktop app from the same `src/`; the question bank must be compiled first via the Vite bank plugins before either web or Tauri builds can succeed.

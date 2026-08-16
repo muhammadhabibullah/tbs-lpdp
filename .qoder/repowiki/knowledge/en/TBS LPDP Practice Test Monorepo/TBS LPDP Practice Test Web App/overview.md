@@ -1,0 +1,1 @@
+Monorepo-style web project that builds a React SPA, embeds a compiled question bank via Vite plugins, and wraps the same source in Tauri for desktop and Android distribution.

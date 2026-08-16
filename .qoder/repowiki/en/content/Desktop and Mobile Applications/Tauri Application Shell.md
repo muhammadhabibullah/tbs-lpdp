@@ -15,7 +15,17 @@
 - [bankSource.ts](file://web/src/lib/bankSource.ts)
 - [localApi.ts](file://web/src/lib/localApi.ts)
 - [bank-asset-plugin.ts](file://web/vite/bank-asset-plugin.ts)
+- [FeedbackFooter.tsx](file://web/src/components/FeedbackFooter.tsx)
+- [LaporSoal.tsx](file://web/src/components/LaporSoal.tsx)
+- [config.ts](file://web/src/lib/config.ts)
 </cite>
+
+## Update Summary
+**Changes Made**
+- Updated offline reporting behavior section to reflect email draft functionality
+- Added documentation for feedbackMailto() function and its integration with native mail clients
+- Enhanced security model section to include mailto protocol handling
+- Updated troubleshooting guide with email-related issues
 
 ## Table of Contents
 1. Introduction
@@ -29,7 +39,7 @@
 9. Conclusion
 
 ## Introduction
-This document explains the Tauri application shell that wraps a React single-page application into native desktop and mobile applications. It covers the Rust entry point, Tauri configuration, Cargo build settings, offline mode with bundled question bank storage and an exam engine, security model (filesystem access, network restrictions, data persistence), and platform-specific behaviors.
+This document explains the Tauri application shell that wraps a React single-page application into native desktop and mobile applications. It covers the Rust entry point, Tauri configuration, Cargo build settings, offline mode with bundled question bank storage and an exam engine, security model (filesystem access, network restrictions, data persistence), and platform-specific behaviors. **Updated**: The offline reporting system now uses email drafts through the device's native mail client via the `feedbackMailto()` function, replacing the previous web-based report submission flow for offline users.
 
 ## Project Structure
 The project is organized as:
@@ -48,6 +58,8 @@ F --> G["Bundled Bank Artifacts<br/>manifest + bank JSON"]
 H["Rust Lib<br/>lib.rs"] --> I["Plugins<br/>fs, dialog, opener, process, updater"]
 J["App Runtime<br/>appRuntime.ts"] --> K["Local API<br/>localApi.ts"]
 K --> L["Bank Source<br/>bankSource.ts"]
+M["Feedback System<br/>FeedbackFooter.tsx"] --> N["Email Integration<br/>feedbackMailto()"]
+O["Report Dialog<br/>LaporSoal.tsx"] --> M
 ```
 
 **Diagram sources**
@@ -60,6 +72,8 @@ K --> L["Bank Source<br/>bankSource.ts"]
 - [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
 - [localApi.ts:1-560](file://web/src/lib/localApi.ts#L1-L560)
 - [bankSource.ts:1-323](file://web/src/lib/bankSource.ts#L1-L323)
+- [FeedbackFooter.tsx:1-113](file://web/src/components/FeedbackFooter.tsx#L1-L113)
+- [LaporSoal.tsx:1-199](file://web/src/components/LaporSoal.tsx#L1-L199)
 
 **Section sources**
 - [tauri.conf.json:1-98](file://web/src-tauri/tauri.conf.json#L1-L98)
@@ -69,8 +83,9 @@ K --> L["Bank Source<br/>bankSource.ts"]
 - Tauri entry point: minimal main.rs delegates to a shared library run function.
 - Shared library: initializes plugins, registers commands, and runs the app context.
 - Tauri configuration: defines window, security policy (CSP, asset protocol), bundling targets, updater plugin endpoints, and platform options.
-- Capabilities: fine-grained permissions for filesystem operations under $APPDATA/bank and opening URLs.
+- Capabilities: fine-grained permissions for filesystem operations under $APPDATA/bank and opening URLs including mailto protocols.
 - Offline mode: bundles a verified question bank snapshot and caches updates in the app data directory; the local exam engine persists attempts and statistics in localStorage.
+- **Enhanced offline reporting**: Uses email drafts through device's native mail client via `feedbackMailto()` function, eliminating server dependency for offline users.
 - Build system: Vite produces three flavors (web production, dev mock, offline app); Tauri builds cross-platform binaries and Android artifacts.
 
 **Section sources**
@@ -81,10 +96,12 @@ K --> L["Bank Source<br/>bankSource.ts"]
 - [desktop.json:1-9](file://web/src-tauri/capabilities/desktop.json#L1-L9)
 - [bankSource.ts:1-323](file://web/src/lib/bankSource.ts#L1-L323)
 - [localApi.ts:1-560](file://web/src/lib/localApi.ts#L1-L560)
+- [FeedbackFooter.tsx:1-113](file://web/src/components/FeedbackFooter.tsx#L1-L113)
+- [LaporSoal.tsx:1-199](file://web/src/components/LaporSoal.tsx#L1-L199)
 - [vite.config.ts:1-54](file://web/vite.config.ts#L1-L54)
 
 ## Architecture Overview
-The Tauri shell hosts a React SPA inside a WebView. The SPA uses a thin runtime layer to call native features only when running in Tauri. In offline mode, the app ships a verified question bank snapshot and caches updates locally. The local exam engine persists state in localStorage and grades answers client-side.
+The Tauri shell hosts a React SPA inside a WebView. The SPA uses a thin runtime layer to call native features only when running in Tauri. In offline mode, the app ships a verified question bank snapshot and caches updates locally. The local exam engine persists state in localStorage and grades answers client-side. **Updated**: Offline reporting now leverages the device's native mail client through email drafts, providing seamless feedback collection without network connectivity.
 
 ```mermaid
 graph TB
@@ -100,6 +117,11 @@ subgraph "SPA Runtime"
 R["appRuntime.ts"] --> LA["localApi.ts"]
 LA --> BS["bankSource.ts"]
 end
+subgraph "Offline Reporting"
+FR["FeedbackFooter.tsx"] --> FM["feedbackMailto()"]
+RS["LaporSoal.tsx"] --> FR
+FM --> MC["Native Mail Client"]
+end
 subgraph "Data"
 FS["$APPDATA/bank"]
 LS["localStorage"]
@@ -109,6 +131,7 @@ R --> FS
 LA --> LS
 BS --> FS
 BS --> BA
+RS --> MC
 ```
 
 **Diagram sources**
@@ -117,6 +140,8 @@ BS --> BA
 - [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
 - [localApi.ts:1-560](file://web/src/lib/localApi.ts#L1-L560)
 - [bankSource.ts:1-323](file://web/src/lib/bankSource.ts#L1-L323)
+- [FeedbackFooter.tsx:1-113](file://web/src/components/FeedbackFooter.tsx#L1-L113)
+- [LaporSoal.tsx:1-199](file://web/src/components/LaporSoal.tsx#L1-L199)
 
 ## Detailed Component Analysis
 
@@ -157,6 +182,7 @@ Lib-->>SPA : result
   - Asset protocol disabled.
   - Capabilities: default and desktop.
   - CSP restricts origins for scripts, styles, images, fonts, and connections; allows IPC and specific remote endpoints.
+  - **Enhanced**: Mailto protocol support through opener capability for native mail client integration.
 - Bundling:
   - Frontend dist path and dev URL configured.
   - Targets include app, dmg, nsis, appimage, deb, rpm.
@@ -177,12 +203,17 @@ Net --> |Yes| Connect["Connect to allowed origins"]
 Net --> |No| Deny["Block request"]
 Security --> FS["FS Permissions via capabilities"]
 FS --> Persist["Read/Write $APPDATA/bank"]
+Security --> Email{"mailto Protocol?"}
+Email --> |Allowed| MailClient["Open Native Mail Client"]
+Email --> |Denied| Block["Block Request"]
 Security --> Updater{"Desktop?"}
 Updater --> |Yes| Update["Enable updater plugin"]
 Updater --> |No| Skip["Skip updater"]
 Connect --> End(["Run App"])
 Deny --> End
 Persist --> End
+MailClient --> End
+Block --> End
 Update --> End
 Skip --> End
 ```
@@ -232,6 +263,7 @@ A --> G["Conditional updater (non-mobile)"]
 - Local exam engine:
   - Implements the same API semantics as the server: immutable release snapshots per attempt, deadlines with grace period, idempotent finish, and monotonic statistics.
   - Persists attempts, sections, answers, reports, releases, and statistics in localStorage.
+- **Enhanced offline reporting**: Uses email drafts through native mail client via `feedbackMailto()` function, eliminating server dependency for feedback collection.
 
 ```mermaid
 flowchart TD
@@ -253,24 +285,33 @@ Persist --> Ready
 KeepOld --> Ready
 UseBundled --> Ready
 UseCache --> Ready
-Ready --> End(["Exam Engine Active"])
+Ready --> Report{"Report Question?"}
+Report --> |Offline| EmailDraft["Open Email Draft via feedbackMailto()"]
+Report --> |Online| WebSubmit["Submit via Web API"]
+EmailDraft --> End(["Exam Engine Active"])
+WebSubmit --> End
 ```
 
 **Diagram sources**
 - [bankSource.ts:1-323](file://web/src/lib/bankSource.ts#L1-L323)
 - [localApi.ts:1-560](file://web/src/lib/localApi.ts#L1-L560)
 - [bank-asset-plugin.ts:1-58](file://web/vite/bank-asset-plugin.ts#L1-L58)
+- [FeedbackFooter.tsx:1-113](file://web/src/components/FeedbackFooter.tsx#L1-L113)
+- [LaporSoal.tsx:1-199](file://web/src/components/LaporSoal.tsx#L1-L199)
 
 **Section sources**
 - [bankSource.ts:1-323](file://web/src/lib/bankSource.ts#L1-L323)
 - [localApi.ts:1-560](file://web/src/lib/localApi.ts#L1-L560)
 - [bank-asset-plugin.ts:1-58](file://web/vite/bank-asset-plugin.ts#L1-L58)
+- [FeedbackFooter.tsx:1-113](file://web/src/components/FeedbackFooter.tsx#L1-L113)
+- [LaporSoal.tsx:1-199](file://web/src/components/LaporSoal.tsx#L1-L199)
 
 ### Platform-Specific Behavior and Capabilities
 - Desktop-only updater: enabled via capability and conditional compilation; Android/iOS do not use it.
 - Print page: desktop uses native print dialog; Android returns failure so UI hides the button.
 - Filesystem access: scoped to $APPDATA/bank via capabilities; read/write/rename/remove operations are explicitly allowed.
 - Network: CSP limits connect-src to self, ipc, and specific domains; asset protocol disabled.
+- **Enhanced email support**: Mailto protocol allowed through opener capability for native mail client integration.
 - Packaging:
   - Windows NSIS installer language list and install mode.
   - Linux DEB dependencies.
@@ -292,9 +333,15 @@ class Capabilities {
 class Runtime {
 +print_page()
 +updater_enabled?
++openExternal(url)
+}
+class FeedbackSystem {
++feedbackMailto(subject, extraLines)
++externalLinkProps(url)
 }
 TauriConfig --> Capabilities : "declares"
 Runtime --> TauriConfig : "uses"
+FeedbackSystem --> Runtime : "integrates"
 ```
 
 **Diagram sources**
@@ -302,6 +349,8 @@ Runtime --> TauriConfig : "uses"
 - [default.json:1-44](file://web/src-tauri/capabilities/default.json#L1-L44)
 - [desktop.json:1-9](file://web/src-tauri/capabilities/desktop.json#L1-L9)
 - [lib.rs:1-57](file://web/src-tauri/src/lib.rs#L1-L57)
+- [FeedbackFooter.tsx:1-113](file://web/src/components/FeedbackFooter.tsx#L1-L113)
+- [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
 
 **Section sources**
 - [tauri.conf.json:1-98](file://web/src-tauri/tauri.conf.json#L1-L98)
@@ -315,7 +364,7 @@ Runtime --> TauriConfig : "uses"
   - Dev mock: local engine with serve-only bank middleware.
   - Offline app: local engine with bundled/cached bank, base path ./ for Tauri.
 - Bank asset plugin emits manifest and bank JSON into the app bundle for offline-first behavior.
-- Target browser matrix tuned for Tauri’s WebView versions.
+- Target browser matrix tuned for Tauri's WebView versions.
 
 ```mermaid
 flowchart TD
@@ -339,6 +388,45 @@ Serve --> Bundle
 - [package.json:1-46](file://web/package.json#L1-L46)
 - [bank-asset-plugin.ts:1-58](file://web/vite/bank-asset-plugin.ts#L1-L58)
 
+### Offline Reporting System
+**Updated**: The offline reporting system has been enhanced to use email drafts through the device's native mail client, eliminating the need for network connectivity during feedback submission.
+
+- **feedbackMailto() function**: Generates prefilled email drafts with subject, body content, and contextual information about the reported question.
+- **Integration with LaporSoal component**: In offline mode, the report dialog replaces the web-based submission with a "Kirim via Email" button that opens email drafts.
+- **Native mail client integration**: Uses the device's built-in email application through mailto: protocol links, ensuring compatibility across all platforms.
+- **Context preservation**: Email drafts include package information, question details, reason for reporting, and user comments for comprehensive feedback.
+- **Security considerations**: Mailto protocol is explicitly allowed in capabilities for safe external link handling.
+
+```mermaid
+sequenceDiagram
+participant User as "User"
+participant LaporSoal as "LaporSoal.tsx"
+participant FeedbackFooter as "FeedbackFooter.tsx"
+participant AppRuntime as "appRuntime.ts"
+participant MailClient as "Native Mail Client"
+User->>LaporSoal : Click "Laporkan Soal"
+LaporSoal->>FeedbackFooter : feedbackMailto(subject, extraLines)
+FeedbackFooter->>FeedbackFooter : Generate mailto URL
+alt IS_OFFLINE_APP
+FeedbackFooter->>AppRuntime : openExternal(mailtoURL)
+AppRuntime->>MailClient : Launch native mail client
+MailClient-->>User : Show prefilled email draft
+else Web Mode
+FeedbackFooter->>User : Open mailto link in browser
+end
+```
+
+**Diagram sources**
+- [LaporSoal.tsx:1-199](file://web/src/components/LaporSoal.tsx#L1-L199)
+- [FeedbackFooter.tsx:1-113](file://web/src/components/FeedbackFooter.tsx#L1-L113)
+- [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
+
+**Section sources**
+- [FeedbackFooter.tsx:1-113](file://web/src/components/FeedbackFooter.tsx#L1-L113)
+- [LaporSoal.tsx:1-199](file://web/src/components/LaporSoal.tsx#L1-L199)
+- [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
+- [config.ts:1-68](file://web/src/lib/config.ts#L1-L68)
+
 ## Dependency Analysis
 - Tauri shell depends on:
   - Core tauri crate and selected plugins (dialog, fs, opener, process, optional updater).
@@ -355,11 +443,14 @@ Shell --> Plugins["Plugins: fs, dialog, opener, process, updater"]
 SPA["SPA (JS)"] --> TauriAPI["@tauri-apps/*"]
 SPA --> Supabase["@supabase/supabase-js (web prod)"]
 SPA --> React["React + Router"]
+SPA --> Feedback["Feedback System"]
+Feedback --> Mailto["mailto Protocol"]
 ```
 
 **Diagram sources**
 - [Cargo.toml:1-42](file://web/src-tauri/Cargo.toml#L1-L42)
 - [package.json:1-46](file://web/package.json#L1-L46)
+- [FeedbackFooter.tsx:1-113](file://web/src/components/FeedbackFooter.tsx#L1-L113)
 
 **Section sources**
 - [Cargo.toml:1-42](file://web/src-tauri/Cargo.toml#L1-L42)
@@ -370,21 +461,24 @@ SPA --> React["React + Router"]
 - Offline bank caching avoids repeated downloads; integrity checks prevent corrupted data.
 - Atomic file updates (write to .tmp then rename) reduce risk of partial states.
 - Vite target tuned to WebView versions to avoid polyfills and improve runtime performance.
-
-[No sources needed since this section provides general guidance]
+- **Enhanced offline reporting**: Email draft generation is lightweight and doesn't impact app performance since it operates outside the main application flow.
 
 ## Troubleshooting Guide
 - Cannot open external links: ensure opener capability allows the target domain or mailto scheme.
+- **Email draft not opening**: Verify that the device has a default mail client configured and that mailto protocol is supported.
 - Filesystem errors: verify permissions under $APPDATA/bank and that paths match allowed patterns.
 - Updater not working on Android: expected; the app falls back to downloading the APK in a browser.
 - Print button does nothing on Android: expected; the runtime detects Android and hides the feature.
 - CSP blocking resources: check connect-src and other directives in tauri.conf.json for required domains.
+- **Offline reporting issues**: Ensure IS_OFFLINE_APP flag is properly set and that the feedbackMailto() function is accessible in the offline build context.
 
 **Section sources**
 - [default.json:1-44](file://web/src-tauri/capabilities/default.json#L1-L44)
 - [desktop.json:1-9](file://web/src-tauri/capabilities/desktop.json#L1-L9)
 - [tauri.conf.json:1-98](file://web/src-tauri/tauri.conf.json#L1-L98)
 - [lib.rs:1-57](file://web/src-tauri/src/lib.rs#L1-L57)
+- [FeedbackFooter.tsx:1-113](file://web/src/components/FeedbackFooter.tsx#L1-L113)
+- [LaporSoal.tsx:1-199](file://web/src/components/LaporSoal.tsx#L1-L199)
 
 ## Conclusion
-The Tauri shell provides a secure, cross-platform wrapper around a React SPA with robust offline support. It bundles a verified question bank, caches updates safely, and exposes minimal native capabilities through strict capabilities and CSP. Platform differences are handled explicitly, ensuring consistent behavior across desktop and mobile while maintaining security and reliability.
+The Tauri shell provides a secure, cross-platform wrapper around a React SPA with robust offline support. It bundles a verified question bank, caches updates safely, and exposes minimal native capabilities through strict capabilities and CSP. **Updated**: The enhanced offline reporting system now seamlessly integrates with device-native mail clients through email drafts, ensuring users can provide feedback even without network connectivity while maintaining security and reliability across all platforms. Platform differences are handled explicitly, ensuring consistent behavior across desktop and mobile environments.

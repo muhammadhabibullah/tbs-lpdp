@@ -1,0 +1,1 @@
+Auxiliary assets for the project: evolving technical requirement specs, a capacity-guard deep-dive, a Python CLI that bumps the Tauri app version across all manifests, and Indonesian-language UI screenshots used as frontend reference material.

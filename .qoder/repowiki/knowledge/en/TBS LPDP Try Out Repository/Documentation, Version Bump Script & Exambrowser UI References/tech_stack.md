@@ -1,1 +1,0 @@
-Python 3 with only stdlib (`re`, `pathlib`, `sys`) for the version-bump utility; the documented capacity guard relies on PostgreSQL functions (`pg_database_size`, `pg_class.reltuples`) and Supabase RLS/security-definer RPCs.

@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: web_app/react_frontend
-title: TBS LPDP Try Out React Frontend
+title: React/Vite Frontend for TBS LPDP Practice Tests
 scope:
     - web/src/
     - web/public/
