@@ -50,7 +50,9 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-button:disabled {
+button:disabled,
+/* The offline report dialog's email action is an anchor, not a button (AP-9). */
+.btn[aria-disabled='true'] {
   cursor: not-allowed;
   opacity: 0.55;
 }
@@ -1176,12 +1178,12 @@ button.package-badge {
 
 /* Hover-only so a tap doesn't leave the highlight stuck on touch devices. */
 @media (hover: hover) {
-  .btn:hover:not(:disabled) {
+  .btn:hover:not(:disabled):not([aria-disabled='true']) {
     filter: brightness(1.06);
   }
 }
 
-.btn:active:not(:disabled) {
+.btn:active:not(:disabled):not([aria-disabled='true']) {
   transform: translateY(1px);
 }
 
@@ -2345,12 +2347,6 @@ button.package-badge {
 
 .app-toast button:hover {
   opacity: 1;
-}
-
-/* Sits under the reason list, above the withdraw link, in the app only. */
-.report-email {
-  display: inline-flex;
-  margin-top: 4px;
 }
 
 /* -------------------------------------------------- footer: open source -- */

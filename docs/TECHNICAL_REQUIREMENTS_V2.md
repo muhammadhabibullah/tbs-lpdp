@@ -55,6 +55,8 @@ Entry point is `web/src/pages/ReviewPage.tsx`, in the `Pembahasan` card, on each
 | FE-17 | **Mock parity**: `web/src/lib/mockApi.ts` implements the same `ExamApi` methods against `localStorage` (including the one-report-per-question rule and the reported state in `getReview`), so the whole flow is developable with `VITE_USE_MOCK=true` and no Supabase. |
 | FE-18 | All new copy is Bahasa Indonesia; reason codes, types, and comments in the source stay English (project convention). The dialog is keyboard-usable: focus moves into it on open, `Esc` cancels, and the reason list is a real radio group with labels. |
 
+**Offline app delta (v6 AP-9):** in the offline Tauri app the stored-report flow above is replaced by an email-only one: the dialog's primary action is *Kirim via Email* (the prefilled `mailto:` draft) instead of **Kirim laporan**, no report state is persisted on the device, and consequently the reported-state controls (FE-13/FE-15) and the *Dilaporkan* filter (FE-16) are not shown. FE-11, FE-12, and FE-18 apply unchanged.
+
 ### 4.1 Reason codes and UI labels
 
 Codes are stable identifiers (English, stored in DB); labels are what the user sees.

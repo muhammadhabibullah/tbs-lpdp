@@ -67,6 +67,18 @@ export default function LaporSoal({
   const missingComment = reason === 'other' && trimmed === ''
   const canSubmit = !submitting && !tooLong && !missingComment
 
+  // AP-9: the app stores no report state — the device mail client is the only
+  // way a report reaches the maintainer, so the email draft is the primary
+  // action and replaces the web flavor's "Kirim laporan" submit.
+  const emailProps = externalLinkProps(
+    feedbackMailto(`Laporan soal ${questionId} — TBS LPDP Try Out`, [
+      `Paket: ${packageTitle}`,
+      `Soal: nomor ${questionNumber} (id ${questionId})`,
+      `Alasan: ${REASON_LABELS[reason]}`,
+      `Catatan: ${trimmed || '-'}`,
+    ]),
+  )
+
   return (
     <Modal
       title={`Laporkan Soal nomor ${questionNumber}`}
@@ -80,6 +92,26 @@ export default function LaporSoal({
             <button className="btn btn-red" onClick={onDelete} disabled={submitting}>
               {submitting ? 'MENGHAPUS…' : 'Ya, batalkan laporan'}
             </button>
+          </>
+        ) : IS_OFFLINE_APP ? (
+          <>
+            <button className="btn btn-ghost" onClick={onCancel}>
+              Batal
+            </button>
+            <a
+              className="btn btn-cyan btn-lg"
+              href={emailProps.href}
+              aria-disabled={!canSubmit || undefined}
+              onClick={(event) => {
+                if (!canSubmit) {
+                  event.preventDefault()
+                  return
+                }
+                emailProps.onClick?.(event)
+              }}
+            >
+              Kirim via Email
+            </a>
           </>
         ) : (
           <>
@@ -103,7 +135,7 @@ export default function LaporSoal({
           <>
             <p className="muted" style={{ marginTop: 0 }}>
               {IS_OFFLINE_APP
-                ? 'Laporan tersimpan di perangkat ini sebagai penanda pribadi dan tidak mengubah skor try out Anda. Aplikasi offline tidak mengirim apa pun ke server — gunakan tombol “Kirim via Email” agar laporan sampai ke penulis soal.'
+                ? 'Aplikasi offline tidak menyimpan laporan dan tidak mengirim apa pun ke server — tombol “Kirim via Email” membuka draf email berisi laporan ini pada aplikasi email perangkat Anda.'
                 : 'Laporan Anda tersimpan untuk ditinjau penulis soal. Laporan tidak mengubah skor try out Anda.'}
             </p>
 
@@ -143,25 +175,7 @@ export default function LaporSoal({
               />
             </label>
 
-            {/* AP-9: the app has no backend to receive this, so the maintainer
-                is reachable the one way that still works offline-first. */}
-            {IS_OFFLINE_APP ? (
-              <a
-                className="btn btn-cyan btn-sm report-email"
-                {...externalLinkProps(
-                  feedbackMailto(`Laporan soal ${questionId} — TBS LPDP Try Out`, [
-                    `Paket: ${packageTitle}`,
-                    `Soal: nomor ${questionNumber} (id ${questionId})`,
-                    `Alasan: ${REASON_LABELS[reason]}`,
-                    `Catatan: ${trimmed || '-'}`,
-                  ]),
-                )}
-              >
-                Kirim via Email
-              </a>
-            ) : null}
-
-            {existing ? (
+            {!IS_OFFLINE_APP && existing ? (
               <button
                 className="btn btn-link-danger"
                 onClick={() => setConfirmingDelete(true)}

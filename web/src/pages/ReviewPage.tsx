@@ -6,6 +6,7 @@ import Passage from '../components/Passage'
 import { api, errorMessage, withRetry } from '../lib/api'
 import { canPrint, printPage } from '../lib/appRuntime'
 import { formatDate, formatDateTime } from '../lib/clock'
+import { IS_OFFLINE_APP } from '../lib/config'
 import { OPTION_KEYS } from '../lib/types'
 import type { QuestionReport, ReportReason, Review, ReviewQuestion } from '../lib/types'
 
@@ -29,7 +30,8 @@ function matches(question: ReviewQuestion, filter: Filter): boolean {
     case 'doubt':
       return question.is_doubtful
     case 'reported':
-      return Boolean(question.my_report)
+      // AP-9: the offline app stores no report state, so nothing is reported.
+      return !IS_OFFLINE_APP && Boolean(question.my_report)
     default:
       return true
   }
@@ -293,12 +295,14 @@ export default function ReviewPage() {
         </div>
 
         <div className="review-filters">
-          {(Object.keys(FILTER_LABELS) as Filter[]).map((key) => (
-            <button key={key} className={`chip ${filter === key ? 'active' : ''}`} onClick={() => setFilter(key)}>
-              {FILTER_LABELS[key]}
-              {section ? ` (${section.questions.filter((q) => matches(q, key)).length})` : ''}
-            </button>
-          ))}
+          {(Object.keys(FILTER_LABELS) as Filter[])
+            .filter((key) => key !== 'reported' || !IS_OFFLINE_APP)
+            .map((key) => (
+              <button key={key} className={`chip ${filter === key ? 'active' : ''}`} onClick={() => setFilter(key)}>
+                {FILTER_LABELS[key]}
+                {section ? ` (${section.questions.filter((q) => matches(q, key)).length})` : ''}
+              </button>
+            ))}
         </div>
 
         <div className="no-print" style={{ marginTop: 16 }}>
@@ -333,7 +337,7 @@ export default function ReviewPage() {
           questionNumber={reportingQuestion.number}
           questionId={reportingQuestion.id}
           packageTitle={packageTitle}
-          existing={reportingQuestion.my_report}
+          existing={IS_OFFLINE_APP ? null : reportingQuestion.my_report}
           initialConfirmDelete={reportConfirmDelete}
           submitting={reportBusy}
           error={reportError}
@@ -361,9 +365,10 @@ export default function ReviewPage() {
                     </span>
                     {question.is_doubtful ? <span className="tag doubt">Ragu-ragu</span> : null}
 
-                    {/* FE-11/FE-13: the only report entry point in the app. */}
+                    {/* FE-11/FE-13: the only report entry point in the app.
+                        AP-9: the offline app never shows the reported state. */}
                     <span className="report-slot">
-                      {question.my_report ? (
+                      {!IS_OFFLINE_APP && question.my_report ? (
                         <>
                           <span className="tag reported" title={REASON_LABELS[question.my_report.reason]}>
                             ✓ Sudah dilaporkan
