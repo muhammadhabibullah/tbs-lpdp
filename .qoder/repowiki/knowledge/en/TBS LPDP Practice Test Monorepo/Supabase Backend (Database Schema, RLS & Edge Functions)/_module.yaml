@@ -7,3 +7,4 @@ source_files: []
 depends_on: []
 related_to:
     - path: question_bank/generator_tool
+    - path: web_app/react_frontend

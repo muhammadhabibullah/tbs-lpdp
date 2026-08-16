@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: web_app/react_frontend
-title: React/Vite Frontend for TBS LPDP Practice Tests
+title: TBS LPDP Try-Out React Frontend
 scope:
     - web/src/
     - web/public/
@@ -8,4 +8,4 @@ scope:
 source_files: []
 depends_on: []
 related_to:
-    - path: web_app/vite_build_plugins
+    - path: supabase_backend

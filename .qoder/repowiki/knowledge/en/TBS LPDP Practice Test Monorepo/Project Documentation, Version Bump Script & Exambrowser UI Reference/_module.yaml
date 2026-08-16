@@ -7,4 +7,5 @@ scope:
     - exambrowser-ui/
 source_files: []
 depends_on: []
-related_to: []
+related_to:
+    - path: web_app/tauri_packaging

@@ -6,5 +6,4 @@ scope:
     - questions/schema.json
 source_files: []
 depends_on: []
-related_to:
-    - path: agents_config
+related_to: []

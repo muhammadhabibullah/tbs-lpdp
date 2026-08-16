@@ -6,7 +6,4 @@ scope:
     - web/scripts/
 source_files: []
 depends_on: []
-related_to:
-    - path: question_bank/question_bank_data
-    - path: web_app/react_frontend
-    - path: web_app/tauri_packaging
+related_to: []
