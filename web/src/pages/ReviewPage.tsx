@@ -37,6 +37,13 @@ function matches(question: ReviewQuestion, filter: Filter): boolean {
   }
 }
 
+/** Snake_case qtype to a display label, mirroring the .tag capitalize style. */
+function typeLabel(qtype: string): string {
+  return qtype
+    .replace(/_/g, ' ')
+    .replace(/(^|\s)\S/g, (ch) => ch.toUpperCase())
+}
+
 /** Server messages are English; the user gets Bahasa Indonesia (v2 §5.1). */
 function reportErrorMessage(err: unknown): string {
   switch ((err as { code?: string }).code) {
@@ -59,6 +66,7 @@ export default function ReviewPage() {
   const [loading, setLoading] = useState(true)
   const [activeSubtest, setActiveSubtest] = useState<string | null>(null)
   const [filter, setFilter] = useState<Filter>('all')
+  const [typeFilter, setTypeFilter] = useState<string | null>(null)
   // v2: the question whose report dialog is open, plus its in-flight state.
   const [reportingId, setReportingId] = useState<string | null>(null)
   const [reportConfirmDelete, setReportConfirmDelete] = useState(false)
@@ -108,7 +116,19 @@ export default function ReviewPage() {
     [review, activeSubtest],
   )
 
-  const visible = useMemo(() => (section ? section.questions.filter((q) => matches(q, filter)) : []), [section, filter])
+  // The question types present in the active subtest, in question order.
+  const availableTypes = useMemo(() => {
+    const seen: string[] = []
+    for (const q of section?.questions ?? []) if (!seen.includes(q.qtype)) seen.push(q.qtype)
+    return seen
+  }, [section])
+
+  const typeMatches = (q: ReviewQuestion) => typeFilter === null || q.qtype === typeFilter
+
+  const visible = useMemo(
+    () => (section ? section.questions.filter((q) => matches(q, filter) && typeMatches(q)) : []),
+    [section, filter, typeFilter],
+  )
 
   const reportingQuestion = useMemo(
     () => review?.sections.flatMap((s) => s.questions).find((q) => q.id === reportingId) ?? null,
@@ -287,7 +307,10 @@ export default function ReviewPage() {
             <button
               key={s.subtest.id}
               className={`chip ${section?.subtest.id === s.subtest.id ? 'active' : ''}`}
-              onClick={() => setActiveSubtest(s.subtest.id)}
+              onClick={() => {
+                setActiveSubtest(s.subtest.id)
+                setTypeFilter(null)
+              }}
             >
               {s.subtest.name}
             </button>
@@ -300,10 +323,24 @@ export default function ReviewPage() {
             .map((key) => (
               <button key={key} className={`chip ${filter === key ? 'active' : ''}`} onClick={() => setFilter(key)}>
                 {FILTER_LABELS[key]}
-                {section ? ` (${section.questions.filter((q) => matches(q, key)).length})` : ''}
+                {section ? ` (${section.questions.filter((q) => matches(q, key) && typeMatches(q)).length})` : ''}
               </button>
             ))}
         </div>
+
+        {availableTypes.length > 1 ? (
+          <div className="review-filters" style={{ marginTop: 12 }}>
+            <button className={`chip ${typeFilter === null ? 'active' : ''}`} onClick={() => setTypeFilter(null)}>
+              Semua tipe{section ? ` (${section.questions.filter((q) => matches(q, filter)).length})` : ''}
+            </button>
+            {availableTypes.map((t) => (
+              <button key={t} className={`chip ${typeFilter === t ? 'active' : ''}`} onClick={() => setTypeFilter(t)}>
+                {typeLabel(t)}
+                {section ? ` (${section.questions.filter((q) => q.qtype === t && matches(q, filter)).length})` : ''}
+              </button>
+            ))}
+          </div>
+        ) : null}
 
         <div className="no-print" style={{ marginTop: 16 }}>
           {visible.length === 0 ? (
