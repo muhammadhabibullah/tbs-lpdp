@@ -20,6 +20,7 @@
 - Added dedicated `pr-web.yml` workflow for web and Supabase changes
 - Separated question bank validation from web typechecking for better performance
 - Updated workflow triggers to use path filters for targeted CI execution
+- **Updated** Added comprehensive `fetch-depth: 0` configuration across all release workflow checkout steps to ensure complete git history availability for version checking and tag validation processes during automated releases
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -91,7 +92,7 @@ BBT --> BANK
 - [deploy-web.yml:1-133](file://.github/workflows/deploy-web.yml#L1-L133)
 - [pr.yml:1-85](file://.github/workflows/pr.yml#L1-L85)
 - [pr-web.yml:1-28](file://.github/workflows/pr-web.yml#L1-L28)
-- [release-app.yml:1-310](file://.github/workflows/release-app.yml#L1-L310)
+- [release-app.yml:1-312](file://.github/workflows/release-app.yml#L1-L312)
 - [validate_bank.py:1-208](file://questions/generator/validate_bank.py#L1-L208)
 - [build-bank.ts:1-81](file://web/scripts/build-bank.ts#L1-L81)
 - [push_to_supabase.py:107-119](file://questions/generator/push_to_supabase.py#L107-L119)
@@ -100,7 +101,7 @@ BBT --> BANK
 - [deploy-web.yml:1-133](file://.github/workflows/deploy-web.yml#L1-L133)
 - [pr.yml:1-85](file://.github/workflows/pr.yml#L1-L85)
 - [pr-web.yml:1-28](file://.github/workflows/pr-web.yml#L1-L28)
-- [release-app.yml:1-310](file://.github/workflows/release-app.yml#L1-L310)
+- [release-app.yml:1-312](file://.github/workflows/release-app.yml#L1-L312)
 
 ## Core Components
 - **Enhanced** Web deployment workflow: Builds the React/Vite app, validates environment flags to prevent local engine inclusion, generates a content-addressed question bank artifact, optionally publishes packages to Supabase, and deploys to GitHub Pages.
@@ -118,7 +119,7 @@ Key build and validation tools:
 - [deploy-web.yml:24-133](file://.github/workflows/deploy-web.yml#L24-L133)
 - [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
 - [pr-web.yml:11-28](file://.github/workflows/pr-web.yml#L11-L28)
-- [release-app.yml:24-310](file://.github/workflows/release-app.yml#L24-L310)
+- [release-app.yml:24-312](file://.github/workflows/release-app.yml#L24-L312)
 - [validate_bank.py:44-194](file://questions/generator/validate_bank.py#L44-L194)
 - [build-bank.ts:42-81](file://web/scripts/build-bank.ts#L42-L81)
 - [push_to_supabase.py:107-119](file://questions/generator/push_to_supabase.py#L107-L119)
@@ -169,7 +170,7 @@ WF->>REL : Publish release when all jobs pass
 - [deploy-web.yml:24-133](file://.github/workflows/deploy-web.yml#L24-L133)
 - [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
 - [pr-web.yml:11-28](file://.github/workflows/pr-web.yml#L11-L28)
-- [release-app.yml:24-310](file://.github/workflows/release-app.yml#L24-L310)
+- [release-app.yml:24-312](file://.github/workflows/release-app.yml#L24-L312)
 - [validate_bank.py:44-194](file://questions/generator/validate_bank.py#L44-L194)
 - [build-bank.ts:42-81](file://web/scripts/build-bank.ts#L42-L81)
 - [push_to_supabase.py:107-119](file://questions/generator/push_to_supabase.py#L107-L119)
@@ -297,11 +298,11 @@ PUB->>REL : Publish release (draft=false)
 ```
 
 **Diagram sources**
-- [release-app.yml:24-310](file://.github/workflows/release-app.yml#L24-L310)
+- [release-app.yml:24-312](file://.github/workflows/release-app.yml#L24-L312)
 - [tauri.conf.json:87-96](file://web/src-tauri/tauri.conf.json#L87-L96)
 
 **Section sources**
-- [release-app.yml:1-310](file://.github/workflows/release-app.yml#L1-L310)
+- [release-app.yml:1-312](file://.github/workflows/release-app.yml#L1-L312)
 - [tauri.conf.json:1-98](file://web/src-tauri/tauri.conf.json#L1-L98)
 
 ### Version Management Procedures
@@ -354,7 +355,7 @@ ANDR --> RELASSET
 - [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
 - [pr-web.yml:11-28](file://.github/workflows/pr-web.yml#L11-L28)
 - [deploy-web.yml:24-133](file://.github/workflows/deploy-web.yml#L24-L133)
-- [release-app.yml:59-310](file://.github/workflows/release-app.yml#L59-L310)
+- [release-app.yml:59-312](file://.github/workflows/release-app.yml#L59-L312)
 - [validate_bank.py:44-194](file://questions/generator/validate_bank.py#L44-L194)
 - [build-bank.ts:42-81](file://web/scripts/build-bank.ts#L42-L81)
 - [push_to_supabase.py:107-119](file://questions/generator/push_to_supabase.py#L107-L119)
@@ -363,7 +364,7 @@ ANDR --> RELASSET
 - [deploy-web.yml:24-133](file://.github/workflows/deploy-web.yml#L24-L133)
 - [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
 - [pr-web.yml:11-28](file://.github/workflows/pr-web.yml#L11-L28)
-- [release-app.yml:59-310](file://.github/workflows/release-app.yml#L59-L310)
+- [release-app.yml:59-312](file://.github/workflows/release-app.yml#L59-L312)
 
 ## Performance Considerations
 - **Enhanced** Caching:
@@ -371,7 +372,8 @@ ANDR --> RELASSET
   - pip cache via actions/setup-python speeds up Python dependency resolution.
   - Rust cache via swatinem/rust-cache accelerates native builds across matrix jobs.
 - **Improved** Full history requirement:
-  - Both web and release workflows use fetch-depth 0 to enable accurate question version derivation and reproducible builds.
+  - All workflows now use fetch-depth 0 to enable accurate question version derivation, reproducible builds, and reliable tag validation processes.
+  - **Updated** The release workflow now consistently applies fetch-depth 0 across all checkout steps (guard, desktop, and android jobs) to ensure complete git history availability for version checking and tag validation.
 - **Enhanced** Path-based filtering:
   - Intelligent routing prevents unnecessary job execution - web-only PRs skip Python validation, questions-only PRs skip TypeScript compilation.
   - Reduces CI queue times and resource consumption significantly.
@@ -380,8 +382,6 @@ ANDR --> RELASSET
 - Concurrency control:
   - Pages deployment concurrency prevents overlapping deployments and keeps the latest version.
   - Release concurrency groups per tag avoid duplicate builds for the same release.
-
-[No sources needed since this section provides general guidance]
 
 ## Troubleshooting Guide
 Common issues and resolutions:
@@ -402,6 +402,9 @@ Common issues and resolutions:
   - For bank building, confirm full git history is checked out to avoid fallback versions.
   - **New** Check path-based filtering results to understand which validation jobs were triggered for your PR.
   - **New** Use the dedicated web PR check workflow for web-specific issues separate from question bank validation.
+- **Updated** Release workflow issues:
+  - Ensure fetch-depth 0 is properly configured in all checkout steps to maintain complete git history for version validation.
+  - Verify that tag validation processes have access to full commit history for accurate version checking.
 
 **Section sources**
 - [deploy-web.yml:52-95](file://.github/workflows/deploy-web.yml#L52-L95)
@@ -412,9 +415,7 @@ Common issues and resolutions:
 - [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
 
 ## Conclusion
-The enhanced CI/CD pipeline provides robust automation for web deployment, intelligent question bank validation, and multi-platform app releases. The new path-based filtering system significantly improves CI efficiency by routing changes to appropriate validation jobs, while maintaining comprehensive coverage. The dedicated web PR check workflow provides focused testing for web and Supabase changes. The pipeline enforces security by preventing local engine inclusion in production builds, ensures data integrity through comprehensive validation, and streamlines releases with signed artifacts and updater metadata. Version management is centralized and consistent across project files, and concurrency controls maintain reliability during deployments and releases.
-
-[No sources needed since this section summarizes without analyzing specific files]
+The enhanced CI/CD pipeline provides robust automation for web deployment, intelligent question bank validation, and multi-platform app releases. The new path-based filtering system significantly improves CI efficiency by routing changes to appropriate validation jobs, while maintaining comprehensive coverage. The dedicated web PR check workflow provides focused testing for web and Supabase changes. The pipeline enforces security by preventing local engine inclusion in production builds, ensures data integrity through comprehensive validation, and streamlines releases with signed artifacts and updater metadata. Version management is centralized and consistent across project files, and concurrency controls maintain reliability during deployments and releases. **Updated** The comprehensive implementation of fetch-depth 0 across all release workflow checkout steps ensures reliable version checking and tag validation processes, enhancing the overall stability and accuracy of automated releases.
 
 ## Appendices
 
@@ -452,17 +453,18 @@ The enhanced CI/CD pipeline provides robust automation for web deployment, intel
 - Release App:
   - Success creates and publishes a GitHub Release with desktop installers and an Android APK.
   - Failure may indicate tag/version mismatch, missing secrets, or signing issues; resolve accordingly.
+- **Updated** Release workflow validation:
+  - Ensure complete git history is available for tag validation processes.
+  - Verify that version checking operations have access to full commit history.
 
 **Section sources**
 - [pr.yml:18-85](file://.github/workflows/pr.yml#L18-L85)
 - [pr-web.yml:11-28](file://.github/workflows/pr-web.yml#L11-L28)
 - [deploy-web.yml:24-133](file://.github/workflows/deploy-web.yml#L24-L133)
-- [release-app.yml:24-310](file://.github/workflows/release-app.yml#L24-L310)
+- [release-app.yml:24-312](file://.github/workflows/release-app.yml#L24-L312)
 
 ### Rollback Mechanisms
 - Web rollback:
   - Re-deploy a previous commit to master to revert the Pages site; concurrency ensures the newest deployment wins.
 - App rollback:
   - Publish a new tagged release with a prior version; users can downgrade via the updated latest.json provided by the updater.
-
-[No sources needed since this section provides general guidance]
