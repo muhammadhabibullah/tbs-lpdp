@@ -307,5 +307,5 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          gh release edit "app-v${{ needs.guard.outputs.version }}" --draft=false
+          gh release edit "app-v${{ needs.guard.outputs.version }}" --draft=false --repo "${{ github.repository }}"
 
