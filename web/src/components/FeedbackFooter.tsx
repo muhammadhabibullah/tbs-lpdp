@@ -79,7 +79,7 @@ export default function FeedbackFooter() {
               <ul>
                 <li>Konten dibuat dengan bantuan AI dan diperiksa otomatis. Laporan Anda membantu perbaikan.</li>
                 {!IS_OFFLINE_APP && (
-                  <li>Riwayat tersimpan selama <strong>10 hari</strong> kemudian dihapus otomatis.</li>
+                  <li>Riwayat tersimpan selama <strong>7 hari</strong> kemudian dihapus otomatis. Unduh aplikasi offline atau download PDF pada pembahasan untuk menyimpan riwayat pengerjaan soal.</li>
                 )}
                 <li>Try out gratis dan mandiri — bukan produk resmi LPDP atau PUSMENDIK.</li>
               </ul>
