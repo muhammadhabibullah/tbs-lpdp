@@ -78,7 +78,9 @@ export default function FeedbackFooter() {
               <h2>Disclaimer</h2>
               <ul>
                 <li>Konten dibuat dengan bantuan AI dan diperiksa otomatis. Laporan Anda membantu perbaikan.</li>
-                <li>Riwayat tersimpan selama <strong>7 hari</strong> kemudian dihapus otomatis.</li>
+                {!IS_OFFLINE_APP && (
+                  <li>Riwayat tersimpan selama <strong>10 hari</strong> kemudian dihapus otomatis.</li>
+                )}
                 <li>Try out gratis dan mandiri — bukan produk resmi LPDP atau PUSMENDIK.</li>
               </ul>
             </div>
