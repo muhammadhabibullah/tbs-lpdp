@@ -267,7 +267,7 @@ only place a user is told what to do about the warning.
 
 ### One-time operator setup (v6 §5)
 
-Both keys live **only** in GitHub Actions secrets, never in git (C-30):
+All of these credentials live **only** in GitHub Actions secrets, never in git (C-30):
 
 1. `npm run tauri signer generate -- -w ~/.tauri/tbs-lpdp.key` → commit the
    **public** key into `src-tauri/tauri.conf.json` (`plugins.updater.pubkey`,
@@ -280,6 +280,13 @@ Both keys live **only** in GitHub Actions secrets, never in git (C-30):
    (`base64 -i release.jks`), `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`,
    `ANDROID_KEY_PASSWORD`. **Back the keystore up privately** — losing it
    permanently breaks in-place APK upgrades for every existing install.
+3. **Google Play (AP-11):** create the app in the Play Console
+   (`io.github.muhammadhabibullah.tbslpdp`), enrol Play App Signing with the
+   step-2 keystore as the upload key, and complete the store listing, content
+   rating, and data-safety forms. Create a service account in the linked
+   Google Cloud project, invite it in Play Console → Users and permissions,
+   and add secret `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON` with its JSON key. Repo
+   variable `PLAY_TRACK` selects the upload track (default `internal`).
 
 ### Cutting a release
 
@@ -290,9 +297,11 @@ git tag app-v0.1.0 && git push origin app-v0.1.0
 
 CI asserts the tag matches the config version, builds the desktop matrix
 (macOS aarch64 + x86_64, Windows NSIS, Linux AppImage/deb/rpm) and a signed
-arm64 APK into one **draft** release. Review it, then publish. The web home
-page resolves its download links from the latest published release at runtime,
-so no site rebuild is needed.
+arm64 APK into one **draft** release, and uploads the matching AAB to Google
+Play's internal track as a draft (AP-11). Review both, then publish — the
+GitHub Release from the release page, the Play build from the Play Console.
+The web home page resolves its download links from the latest published
+release at runtime, so no site rebuild is needed.
 
 ## Deployment
 

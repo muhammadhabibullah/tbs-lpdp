@@ -44,7 +44,7 @@ Both selectors are `define`d as literals in `web/vite.config.ts` so the dead bra
 - `web/src-tauri/` — the offline app shell (Tauri 2: config, Rust entry, capabilities, icons)
 - `web/vite/bank-reader.ts`, `web/vite/bank-artifact.ts`, `web/scripts/build-bank.ts` — compile `questions/bank/` into the published `manifest.json` + `bank-<digest>.json`; versions come from git history, so the output is reproducible (AP-3/NF-32)
 - `.github/workflows/deploy-web.yml` — builds `web/`, publishes the bank artifact, deploys to GitHub Pages
-- `.github/workflows/release-app.yml` — tag `app-v*` → desktop matrix + signed Android APK → one GitHub Release
+- `.github/workflows/release-app.yml` — tag `app-v*` → desktop matrix + signed Android APK/AAB → one GitHub Release + Google Play internal track (AP-11)
 
 ## Question work — use the skill and agents
 
@@ -92,5 +92,5 @@ reaches the client") remains a property of the **web/Supabase** deployment only.
 - Figures are generated, never hand-drawn: add a builder to `figures.py` and run it. A figure may label only what its stem already gives, and a `kecukupan_data` figure labels no value at all — a drawing faithful enough to measure would answer the item.
 - Client never writes tables directly. The final client RPC definitions live in `schema_v3.sql`; applying `schema.sql` or `schema_v2_reports.sql` requires re-applying v3 afterwards.
 - `answer_keys` must never gain a client-readable RLS policy (constraint C-4).
-- Signing material — the Tauri updater minisign private key and the Android release keystore — lives only in GitHub Actions secrets, never in git (C-30). `web/src-tauri/tauri.conf.json` carries the **public** key; `release-app.yml` refuses to run while it is still the placeholder.
+- Signing material — the Tauri updater minisign private key, the Android release keystore, and the Google Play service-account key — lives only in GitHub Actions secrets, never in git (C-30). `web/src-tauri/tauri.conf.json` carries the **public** key; `release-app.yml` refuses to run while it is still the placeholder.
 - UI copy in Bahasa Indonesia; code, comments, and docs in English.
