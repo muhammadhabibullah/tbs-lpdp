@@ -13,6 +13,7 @@
 - [MaintenanceBanner.tsx](file://web/src/components/MaintenanceBanner.tsx)
 - [ScrollToTop.tsx](file://web/src/components/ScrollToTop.tsx)
 - [config.ts](file://web/src/lib/config.ts)
+- [appRuntime.ts](file://web/src/lib/appRuntime.ts)
 - [App.tsx](file://web/src/App.tsx)
 - [HomePage.tsx](file://web/src/pages/HomePage.tsx)
 - [AttemptPage.tsx](file://web/src/pages/AttemptPage.tsx)
@@ -20,10 +21,11 @@
 
 ## Update Summary
 **Changes Made**
-- Updated FeedbackFooter component documentation to reflect conditional data retention display logic
-- Added information about environment-specific retention periods (offline vs online applications)
-- Enhanced component props interface documentation with IS_OFFLINE_APP dependency
-- Updated usage examples to include environment-aware behavior
+- Updated FeedbackFooter component documentation to reflect enhanced retention period messaging
+- Added information about conditional data retention display logic based on deployment environment
+- Enhanced component props interface documentation with IS_OFFLINE_APP dependency and environment-aware behavior
+- Updated usage examples to include offline app guidance and PDF download options for preserving work history
+- Improved documentation around cross-platform link handling and external resource management
 
 ## Table of Contents
 1. Introduction
@@ -62,6 +64,7 @@ subgraph "Hooks & Lib"
 UT["useTick.ts"]
 CK["clock.ts"]
 CFG["config.ts"]
+AR["appRuntime.ts"]
 end
 HP --> AS
 AP --> AS
@@ -74,6 +77,7 @@ SW --> CK
 PG --> CFG
 MB --> CFG
 FB --> CFG
+FB --> AR
 ```
 
 **Diagram sources**
@@ -85,6 +89,7 @@ FB --> CFG
 - [useTick.ts:1-12](file://web/src/hooks/useTick.ts#L1-L12)
 - [clock.ts:1-65](file://web/src/lib/clock.ts#L1-L65)
 - [config.ts:1-68](file://web/src/lib/config.ts#L1-L68)
+- [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
 - [HomePage.tsx:1-400](file://web/src/pages/HomePage.tsx#L1-L400)
 - [AttemptPage.tsx:1-142](file://web/src/pages/AttemptPage.tsx#L1-L142)
 
@@ -99,14 +104,14 @@ FB --> CFG
 - MenuBar: Responsive navigation that scrolls to or navigates to sections based on current route.
 - SisaWaktu: Countdown timer driven by a tick hook and server-aligned clock utilities; emits expiration events.
 - Passage: Renders plain text or pipe-delimited tables with numeric alignment and accessibility attributes.
-- FeedbackFooter: Displays feedback options, contact information, and environment-specific disclaimer notices with conditional retention period messaging.
+- FeedbackFooter: Displays feedback options, contact information, and environment-specific disclaimer notices with conditional retention period messaging and cross-platform link handling.
 
 Key integration points:
 - AppShell composes MenuBar, FeedbackFooter, MaintenanceBanner, and ScrollToTop.
 - SisaWaktu depends on useTick and clock utilities for accurate countdowns.
 - MenuBar uses configuration flags to hide web-only items in offline mode.
 - Passage provides a table parser and renders semantic HTML when applicable.
-- FeedbackFooter adapts its disclaimer content based on IS_OFFLINE_APP flag to show appropriate retention periods.
+- FeedbackFooter adapts its disclaimer content based on IS_OFFLINE_APP flag to show appropriate retention periods and provides cross-platform external link handling.
 
 **Section sources**
 - [AppShell.tsx:1-56](file://web/src/components/AppShell.tsx#L1-L56)
@@ -118,9 +123,10 @@ Key integration points:
 - [useTick.ts:1-12](file://web/src/hooks/useTick.ts#L1-L12)
 - [clock.ts:1-65](file://web/src/lib/clock.ts#L1-L65)
 - [config.ts:1-68](file://web/src/lib/config.ts#L1-L68)
+- [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
 
 ## Architecture Overview
-The application uses React Router with HashRouter for host-agnostic routing and deep-link stability. Pages wrap content in AppShell, which centralizes chrome and integrates global features like maintenance banners and feedback footer. During exams, AppShell can hide navigation and footer to prevent accidental exits while deadlines continue ticking server-side. Timers are isolated in SisaWaktu to minimize re-renders across heavy pages. Passages auto-detect pipe-delimited tables to improve readability and accessibility. FeedbackFooter provides environment-aware user information about data retention policies.
+The application uses React Router with HashRouter for host-agnostic routing and deep-link stability. Pages wrap content in AppShell, which centralizes chrome and integrates global features like maintenance banners and feedback footer. During exams, AppShell can hide navigation and footer to prevent accidental exits while deadlines continue ticking server-side. Timers are isolated in SisaWaktu to minimize re-renders across heavy pages. Passages auto-detect pipe-delimited tables to improve readability and accessibility. FeedbackFooter provides environment-aware user information about data retention policies and handles cross-platform external links appropriately.
 
 ```mermaid
 sequenceDiagram
@@ -130,6 +136,8 @@ participant Shell as "AppShell"
 participant Nav as "MenuBar"
 participant Timer as "SisaWaktu"
 participant Footer as "FeedbackFooter"
+participant Config as "config.ts"
+participant Runtime as "appRuntime.ts"
 participant Clock as "clock.ts"
 participant Tick as "useTick.ts"
 User->>Page : Navigate to page
@@ -144,6 +152,8 @@ Clock-->>Timer : ms remaining
 Timer-->>Page : onExpire() when <= 0
 Footer->>Config : Check IS_OFFLINE_APP
 Config-->>Footer : Environment flag
+Footer->>Runtime : Handle external links
+Runtime-->>Footer : Platform-specific link handling
 Footer-->>User : Show appropriate retention period
 ```
 
@@ -155,6 +165,7 @@ Footer-->>User : Show appropriate retention period
 - [useTick.ts:1-12](file://web/src/hooks/useTick.ts#L1-L12)
 - [clock.ts:1-65](file://web/src/lib/clock.ts#L1-L65)
 - [config.ts:1-68](file://web/src/lib/config.ts#L1-L68)
+- [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
 - [HomePage.tsx:1-400](file://web/src/pages/HomePage.tsx#L1-L400)
 - [AttemptPage.tsx:1-142](file://web/src/pages/AttemptPage.tsx#L1-L142)
 
@@ -356,6 +367,7 @@ Integration points:
 Purpose:
 - Displays feedback submission options, contact information, and environment-specific disclaimer notices.
 - Provides conditional retention period messaging based on application deployment type.
+- Handles cross-platform external link navigation for both web and offline app environments.
 
 Props interface:
 - None (self-contained component with environment awareness).
@@ -364,10 +376,18 @@ Environment-aware behavior:
 - **Offline applications** (IS_OFFLINE_APP = true): Display 10-day retention period for stored history
 - **Online applications** (IS_OFFLINE_APP = false): Display 7-day retention period for stored history
 - Shows appropriate disclaimer content based on deployment environment
+- Provides guidance about offline app usage and PDF download options for preserving work history
+
+Cross-platform link handling:
+- **Web environment**: External links open in new tabs with proper security attributes
+- **Offline app environment**: Links are intercepted and opened through platform-specific handlers
+- Mailto links remain in current window for email clients
+- Prevents default navigation behavior in Tauri webview contexts
 
 Event handling:
 - External link handling through externalLinkProps function for cross-platform compatibility
 - Mailto link generation with pre-filled subject and body content
+- Platform-specific link opening mechanisms
 
 State management:
 - No local state; relies on environment configuration for dynamic content
@@ -398,12 +418,12 @@ Integration points:
 - Uses appRuntime utilities for external link handling
 - Integrates with AppShell for consistent footer placement
 
-**Updated** Enhanced with conditional data retention display logic that shows different retention periods based on IS_OFFLINE_APP flag - offline applications display 10-day retention while online applications show 7-day retention.
+**Updated** Enhanced with conditional data retention display logic that shows different retention periods based on IS_OFFLINE_APP flag - offline applications display 10-day retention while online applications show 7-day retention. Added comprehensive cross-platform link handling for both web and offline app environments, including proper mailto link behavior and platform-specific external link opening mechanisms.
 
 **Section sources**
 - [FeedbackFooter.tsx:1-115](file://web/src/components/FeedbackFooter.tsx#L1-L115)
 - [config.ts:1-68](file://web/src/lib/config.ts#L1-L68)
-- [appRuntime.ts:1-50](file://web/src/lib/appRuntime.ts#L1-L50)
+- [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
 
 ## Dependency Analysis
 Component-level relationships:
@@ -411,7 +431,7 @@ Component-level relationships:
 - SisaWaktu depends on useTick and clock utilities.
 - MenuBar depends on config flags for environment-aware behavior.
 - Passage is self-contained but often consumed by exam pages.
-- FeedbackFooter depends on config flags for environment-aware retention messaging.
+- FeedbackFooter depends on config flags for environment-aware retention messaging and appRuntime for cross-platform link handling.
 
 ```mermaid
 graph LR
@@ -423,6 +443,7 @@ SisaWaktu["SisaWaktu.tsx"] --> useTick["useTick.ts"]
 SisaWaktu --> clock["clock.ts"]
 MenuBar --> config["config.ts"]
 FeedbackFooter --> config
+FeedbackFooter --> appRuntime["appRuntime.ts"]
 Passage["Passage.tsx"] -.-> config
 ```
 
@@ -435,6 +456,7 @@ Passage["Passage.tsx"] -.-> config
 - [useTick.ts:1-12](file://web/src/hooks/useTick.ts#L1-L12)
 - [clock.ts:1-65](file://web/src/lib/clock.ts#L1-L65)
 - [config.ts:1-68](file://web/src/lib/config.ts#L1-L68)
+- [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
 
 **Section sources**
 - [AppShell.tsx:1-56](file://web/src/components/AppShell.tsx#L1-L56)
@@ -445,6 +467,7 @@ Passage["Passage.tsx"] -.-> config
 - [useTick.ts:1-12](file://web/src/hooks/useTick.ts#L1-L12)
 - [clock.ts:1-65](file://web/src/lib/clock.ts#L1-L65)
 - [config.ts:1-68](file://web/src/lib/config.ts#L1-L68)
+- [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
 
 ## Performance Considerations
 - SisaWaktu owns the tick to limit re-renders to the timer box, preventing full-page churn during countdowns.
@@ -452,8 +475,7 @@ Passage["Passage.tsx"] -.-> config
 - MenuBar closes on navigation changes to reduce unnecessary UI state.
 - AppShell conditionally hides chrome during exams to minimize interaction surface and potential navigation errors.
 - FeedbackFooter uses compile-time environment detection to eliminate unused code paths in different builds.
-
-[No sources needed since this section provides general guidance]
+- Cross-platform link handling in FeedbackFooter prevents unnecessary re-renders by using stable external link properties.
 
 ## Troubleshooting Guide
 Common issues and resolutions:
@@ -462,6 +484,8 @@ Common issues and resolutions:
 - MenuBar not showing expected items: Check IS_OFFLINE_APP flag and ensure VISIBLE_MENU_ITEMS filtering matches expectations.
 - Passage not rendering table: Validate input contains pipe-delimited lines with consistent column counts.
 - FeedbackFooter showing incorrect retention period: Verify IS_OFFLINE_APP configuration and ensure build environment is correctly set.
+- External links not working in offline app: Check Tauri plugin configuration and ensure proper external link handling through appRuntime utilities.
+- Mailto links behaving unexpectedly: Verify externalLinkProps function is properly configured for the current environment.
 
 **Section sources**
 - [SisaWaktu.tsx:1-33](file://web/src/components/SisaWaktu.tsx#L1-L33)
@@ -472,8 +496,7 @@ Common issues and resolutions:
 - [config.ts:1-68](file://web/src/lib/config.ts#L1-L68)
 - [Passage.tsx:1-75](file://web/src/components/Passage.tsx#L1-L75)
 - [FeedbackFooter.tsx:1-115](file://web/src/components/FeedbackFooter.tsx#L1-L115)
+- [appRuntime.ts:1-73](file://web/src/lib/appRuntime.ts#L1-L73)
 
 ## Conclusion
-The TBS LPDP Try Out UI components form a cohesive, accessible, and performant foundation. AppShell standardizes layout and chrome control, Modal provides robust dialog semantics, MenuBar offers responsive navigation with environment awareness, SisaWaktu ensures precise countdowns with minimal overhead, Passage enhances readability by auto-detecting tabular content, and FeedbackFooter delivers environment-aware user information about data retention policies. Together, they integrate cleanly with the application's routing and context layers to deliver a consistent user experience across web and offline modes, with intelligent adaptation to deployment environments for accurate user communication.
-
-[No sources needed since this section summarizes without analyzing specific files]
+The TBS LPDP Try Out UI components form a cohesive, accessible, and performant foundation. AppShell standardizes layout and chrome control, Modal provides robust dialog semantics, MenuBar offers responsive navigation with environment awareness, SisaWaktu ensures precise countdowns with minimal overhead, Passage enhances readability by auto-detecting tabular content, and FeedbackFooter delivers environment-aware user information about data retention policies with comprehensive cross-platform link handling. Together, they integrate cleanly with the application's routing and context layers to deliver a consistent user experience across web and offline modes, with intelligent adaptation to deployment environments for accurate user communication and seamless external resource access.
