@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-015",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Semua teknisi di bengkel itu telah lulus uji keselamatan kerja. Semua teknisi yang lulus uji keselamatan kerja wajib memakai alat pelindung diri saat bertugas. Raka adalah teknisi di bengkel itu.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Raka belum tentu wajib memakai alat pelindung diri saat bertugas."
+    },
+    {
+      "key": "B",
+      "text": "Raka wajib memakai alat pelindung diri saat bertugas."
+    },
+    {
+      "key": "C",
+      "text": "Semua teknisi yang memakai alat pelindung diri bekerja di bengkel itu."
+    },
+    {
+      "key": "D",
+      "text": "Raka tidak perlu memakai alat pelindung diri karena telah lulus uji keselamatan kerja."
+    },
+    {
+      "key": "E",
+      "text": "Sebagian teknisi di bengkel itu tidak wajib memakai alat pelindung diri."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Rantai premisnya lengkap: Raka adalah teknisi bengkel itu, semua teknisi bengkel itu lulus uji, dan semua yang lulus uji wajib memakai alat pelindung diri; tidak ada celah bagi keraguan.",
+    "B": "Benar. Raka termasuk teknisi bengkel itu sehingga ia lulus uji keselamatan kerja, dan karena semua yang lulus uji wajib memakai alat pelindung diri, kewajiban itu pasti berlaku baginya.",
+    "C": "Simpulan ini membalik arah hubungan; premis tidak menyatakan bahwa hanya teknisi bengkel itu yang memakai alat pelindung diri.",
+    "D": "Justru kelulusan uji keselamatan kerja mewajibkan pemakaian alat pelindung diri, bukan menghapus kewajiban itu.",
+    "E": "Karena semua teknisi bengkel itu lulus uji dan semua yang lulus uji wajib memakai alat pelindung diri, simpulan sebagian ini bertentangan dengan premis."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

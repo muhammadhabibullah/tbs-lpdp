@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-017",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 17,
+  "type": "deret_huruf",
+  "question_text": "X, W, U, V, T, S, Q, R, P, O, ... Huruf yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "J"
+    },
+    {
+      "key": "B",
+      "text": "M"
+    },
+    {
+      "key": "C",
+      "text": "N"
+    },
+    {
+      "key": "D",
+      "text": "L"
+    },
+    {
+      "key": "E",
+      "text": "K"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Membaca lompatan berikutnya sebagai −5, bukan −2.",
+    "B": "Benar. Perubahan posisi huruf mengulang siklus −1, −2, +1, −2. Jadi, huruf berikutnya adalah M.",
+    "C": "Salah. Mengulang lompatan −1, padahal giliran berikutnya adalah −2.",
+    "D": "Salah. Membaca lompatan berikutnya sebagai −3, bukan −2.",
+    "E": "Salah. Membaca lompatan berikutnya sebagai −4, bukan −2."
+  },
+  "difficulty": "hard",
+  "source": "deret_huruf.py",
+  "verified": true
+}

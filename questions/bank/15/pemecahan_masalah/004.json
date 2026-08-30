@@ -1,0 +1,43 @@
+{
+  "id": "15-pemecahan_masalah-004",
+  "package": 15,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Enam undangan (Anto, Bimo, Cakra, Dona, Eka, Fira) duduk mengelilingi satu meja bundar dengan enam kursi bernomor yang berjarak sama, semuanya menghadap ke pusat meja. Diketahui: (1) Bimo duduk tepat di sebelah kanan Anto, (2) Eka duduk berhadapan dengan Bimo, (3) Fira duduk berhadapan dengan Anto, (4) Cakra tidak duduk bersebelahan dengan Bimo, dan (5) Dona tidak duduk bersebelahan dengan Anto. Orang yang duduk tepat di antara Dona dan Eka adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Anto"
+    },
+    {
+      "key": "B",
+      "text": "Bimo"
+    },
+    {
+      "key": "C",
+      "text": "Fira"
+    },
+    {
+      "key": "D",
+      "text": "Eka"
+    },
+    {
+      "key": "E",
+      "text": "Dona"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Jawaban ini muncul jika posisi Cakra dan Eka tertukar dalam benak penjawab; dalam susunan yang sah, kursi di kiri dan kanan Anto ditempati Cakra dan Bimo, bukan Dona dan Eka.",
+    "B": "Salah. Jawaban ini muncul jika Dona dan Eka dianggap mengapit Bimo, padahal kursi di kiri dan kanan Bimo ditempati Anto dan Dona; Eka justru duduk berhadapan dengan Bimo (kendala 2).",
+    "C": "Benar. Kendala (1) mengunci Bimo di kursi kanan Anto, kendala (2) menempatkan Eka berhadapan dengan Bimo, dan kendala (3) menempatkan Fira berhadapan dengan Anto, sehingga tersisa dua kursi bagi Cakra dan Dona. Kendala (4) melarang Cakra menempati kursi di kiri Bimo, sehingga Cakra duduk bersebelahan dengan Anto dan Dona duduk di sisi lain Bimo, yang juga memenuhi kendala (5). Susunan ini tunggal hingga rotasi: Anto, Bimo, Dona, Fira, Eka, Cakra; kursi di antara Dona dan Eka ditempati Fira.",
+    "D": "Salah. Jawaban ini muncul karena membalik pertanyaan: Eka adalah salah satu dari dua orang yang mengapit, bukan yang diapit; kursi di kiri dan kanan Eka ditempati Fira dan Cakra.",
+    "E": "Salah. Jawaban ini muncul karena memilih orang yang justru menjadi salah satu pengapit; Dona duduk di antara Bimo dan Fira, dan seseorang tidak mungkin duduk di antara dirinya dan orang lain."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

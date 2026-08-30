@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-018",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat berikut tidak efektif.\n\nBagi seluruh peserta lomba diharapkan agar supaya hadir tepat waktu dan membawa perlengkapan yang dibutuhkan.\n\nPerbaikan kalimat tersebut yang paling tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Bagi seluruh peserta lomba diharapkan hadir tepat waktu serta membawa perlengkapan yang dibutuhkan."
+    },
+    {
+      "key": "B",
+      "text": "Seluruh peserta lomba mengharapkan supaya hadir tepat waktu dan membawa perlengkapan yang dibutuhkan."
+    },
+    {
+      "key": "C",
+      "text": "Seluruh peserta lomba diharapkan hadir tepat waktu dan perlengkapan yang dibutuhkan dibawa."
+    },
+    {
+      "key": "D",
+      "text": "Seluruh peserta lomba diharapkan hadir tepat waktu serta membawa perlengkapan yang dibutuhkan."
+    },
+    {
+      "key": "E",
+      "text": "Seluruh peserta lomba diharapkan agar supaya hadir tepat waktu dan membawa perlengkapan yang dibutuhkan."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Kata bagi di awal kalimat membuat subjek menjadi tidak jelas karena seluruh peserta lomba berubah menjadi keterangan; dalam kalimat efektif, subjek tidak boleh disembunyikan preposisi sebelum predikat pasif.",
+    "B": "Perbaikan ini salah afiksasi: bentuk mengharapkan bermakna peserta yang menaruh harapan, padahal maksud kalimat adalah peserta yang diharapkan; seharusnya dipakai bentuk pasif diharapkan.",
+    "C": "Perbaikan ini melanggar kesejajaran bentuk: bagian pertama berupa frasa verba aktif hadir dan membawa, lalu bagian kedua berubah menjadi klausa pasif dibawa, sehingga struktur kalimat tidak paralel.",
+    "D": "Benar. Perbaikan ini membuang preposisi bagi yang mengaburkan subjek, menghilangkan pleonasme agar supaya, dan menyandingkan dua frasa verba aktif secara paralel, sehingga kalimat menjadi efektif.",
+    "E": "Perbaikan ini masih mempertahankan pleonasme agar supaya; dua kata tugas bermakna sama tidak boleh dipakai sekaligus dalam kalimat efektif."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

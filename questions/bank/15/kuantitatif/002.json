@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-002",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 2,
+  "type": "aritmetika",
+  "question_text": "Nilai dari 5 × 30 − 19 × 15 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−495"
+    },
+    {
+      "key": "B",
+      "text": "435"
+    },
+    {
+      "key": "C",
+      "text": "116"
+    },
+    {
+      "key": "D",
+      "text": "−135"
+    },
+    {
+      "key": "E",
+      "text": "135"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai −495 diperoleh dengan menukar faktor kedua pada masing-masing perkalian, yaitu 5 × 15 − 19 × 30.",
+    "B": "Salah. Nilai 435 diperoleh dengan menjumlahkan kedua hasil kali, bukan mengurangkannya.",
+    "C": "Salah. Nilai 116 diperoleh dengan mengurangkan jumlah 19 dan 15, bukan hasil kalinya.",
+    "D": "Benar. 5 × 30 − 19 × 15 = 150 − 285 = −135.",
+    "E": "Salah. Nilai 135 diperoleh dengan membalik urutan pengurangan sehingga tandanya tertukar."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

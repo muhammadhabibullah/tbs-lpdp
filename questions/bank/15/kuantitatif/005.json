@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-005",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 5,
+  "type": "aritmetika",
+  "question_text": "Sebuah mesin fotokopi menghasilkan 48 lembar salinan dalam 4 menit. Apabila kecepatannya tetap, berapa lembar salinan yang dihasilkan mesin itu dalam 24 menit?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "1.152"
+    },
+    {
+      "key": "B",
+      "text": "240"
+    },
+    {
+      "key": "C",
+      "text": "8"
+    },
+    {
+      "key": "D",
+      "text": "288"
+    },
+    {
+      "key": "E",
+      "text": "68"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 1.152 diperoleh dengan mengalikan 48 dengan 24 tanpa membaginya dengan 4 lebih dahulu.",
+    "B": "Salah. Nilai 240 diperoleh dengan menghitung salinan untuk selisih waktunya saja, yaitu 24 − 4 menit.",
+    "C": "Salah. Nilai 8 diperoleh dengan membalik perbandingan menjadi 48 × 4 ÷ 24.",
+    "D": "Benar. Kecepatan mesin = 48 ÷ 4 = 12 lembar per menit; dalam 24 menit dihasilkan 12 × 24 = 288 lembar.",
+    "E": "Salah. Nilai 68 diperoleh dengan menambahkan selisih waktu (24 − 4) pada banyaknya salinan."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

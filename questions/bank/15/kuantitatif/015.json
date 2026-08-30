@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-015",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 15,
+  "type": "deret_angka",
+  "question_text": "8, 13, 21, 35, 59, 105, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "195"
+    },
+    {
+      "key": "B",
+      "text": "197"
+    },
+    {
+      "key": "C",
+      "text": "191"
+    },
+    {
+      "key": "D",
+      "text": "193"
+    },
+    {
+      "key": "E",
+      "text": "210"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai 195 diperoleh dengan meneruskan pengurang dengan bilangan ganjil 15, padahal setelah 13 bilangan prima berikutnya adalah 17.",
+    "B": "Salah. Nilai 197 diperoleh dengan mengulang pengurang 13, padahal pengurangnya mengikuti bilangan prima berurutan.",
+    "C": "Salah. Nilai 191 diperoleh dengan melompati bilangan prima 17 dan langsung memakai 19 sebagai pengurang.",
+    "D": "Benar. Setiap suku diperoleh dengan menggandakan suku sebelumnya, lalu mengurangkan bilangan prima berurutan 3, 5, 7, 11, dan 13. Pengurang berikutnya 17, sehingga 2 × 105 − 17 = 193. Setelah itu pengurangnya 19, sehingga 2 × 193 − 19 = 367.",
+    "E": "Salah. Nilai 210 diperoleh dengan menggandakan suku terakhir tetapi tidak mengurangkan bilangan prima berikutnya, yaitu 17."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

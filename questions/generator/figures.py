@@ -1284,6 +1284,11 @@ FIGURES: list[Figure] = [
         radius_u=7, cyl_height_u=10, cone_height_u=9, unit="cm")),
     Figure("14-kuantitatif-025", "lapangan.svg", lambda: stadium(
         length_u=90, width_u=56, unit="m")),
+    Figure("15-kuantitatif-024", "lintasan-cincin.svg", lambda: annular_track(
+        outer_diameter_u=42, track_width_u=7, unit="m")),
+    Figure("15-kuantitatif-025", "segitiga-potongan-sejajar.svg",
+           lambda: right_triangle_parallel_cut(
+               base_u=28, height_u=21, end_segment_u=8, unit="cm")),
 ]
 
 

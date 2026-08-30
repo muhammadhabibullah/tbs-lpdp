@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-025",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar di atas. Segitiga ABC siku-siku di A dengan AB = 28 cm dan AC = 21 cm. Titik D terletak pada AB sehingga DB = 8 cm, dan DE sejajar AC dengan E pada BC. Luas daerah ACED adalah ...",
+  "image": "images/segitiga-potongan-sejajar.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "108 cm²"
+    },
+    {
+      "key": "B",
+      "text": "210 cm²"
+    },
+    {
+      "key": "C",
+      "text": "234 cm²"
+    },
+    {
+      "key": "D",
+      "text": "270 cm²"
+    },
+    {
+      "key": "E",
+      "text": "420 cm²"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. 108 cm² = ½ × (21 + 6) × 8 diperoleh bila ACED dihitung sebagai trapesium dengan tinggi diambil DB = 8 cm, padahal jarak kedua sisi sejajar AC dan DE adalah AD = 20 cm.",
+    "B": "Salah. 210 cm² = 294 − 84 diperoleh bila DE dianggap tetap sama dengan AC = 21 cm (tidak menyusut akibat kesebangunan), sehingga luas DBE dihitung ½ × 8 × 21 = 84 cm².",
+    "C": "Salah. 234 cm² = 294 − 60 diperoleh bila DE dihitung dari AD, yaitu 21 × 20 : 28 = 15 cm, padahal kesebangunan memakai DB : AB, sehingga luas DBE menjadi ½ × 8 × 15 = 60 cm².",
+    "D": "Benar. Karena DE sejajar AC, segitiga DBE sebangun dengan segitiga ABC, sehingga DE = AC × DB : AB = 21 × 8 : 28 = 6 cm. Luas ABC = ½ × 28 × 21 = 294 cm² dan luas DBE = ½ × 8 × 6 = 24 cm², sehingga luas ACED = 294 − 24 = 270 cm². (Sebagai trapesium: ½ × (21 + 6) × 20 = 270 cm².)",
+    "E": "Salah. 420 cm² = 20 × 21 diperoleh bila ACED dianggap persegi panjang dengan ukuran AD × AC, padahal sisi DE hanya 6 cm, bukan 21 cm."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

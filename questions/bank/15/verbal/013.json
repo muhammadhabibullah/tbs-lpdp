@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-013",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "KAGUM : TERPESONA = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Lelah : letih"
+    },
+    {
+      "key": "B",
+      "text": "Malu : bangga"
+    },
+    {
+      "key": "C",
+      "text": "Marah : kesal"
+    },
+    {
+      "key": "D",
+      "text": "Takut : gentar"
+    },
+    {
+      "key": "E",
+      "text": "Sedih : gembira"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Lelah dan letih bersinonim tanpa jenjang intensitas yang jelas; pasangan stimulus menunjukkan kata kedua yang lebih kuat daripada kata pertama.",
+    "B": "Malu dan bangga berlawanan makna, sedangkan pasangan stimulus menunjukkan dua rasa yang searah dengan intensitas berbeda.",
+    "C": "Marah lebih kuat daripada kesal, sehingga jenjang intensitasnya terbalik dari pasangan stimulus; pasangan ini sengaja dipasang untuk mengecoh urutan.",
+    "D": "Benar. Hubungannya adalah jenjang intensitas: terpesona adalah rasa kagum yang lebih kuat, sebagaimana gentar adalah rasa takut yang lebih kuat.",
+    "E": "Sedih dan gembira berlawanan makna, bukan dua tingkat intensitas dari rasa yang sama."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

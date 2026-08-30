@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-002",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "URGEN = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rahasia"
+    },
+    {
+      "key": "B",
+      "text": "Mendasar"
+    },
+    {
+      "key": "C",
+      "text": "Tambahan"
+    },
+    {
+      "key": "D",
+      "text": "Mendesak"
+    },
+    {
+      "key": "E",
+      "text": "Tetap"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Rahasia berarti tertutup dari pengetahuan orang lain, tidak mengandung makna ketergesaan seperti urgen.",
+    "B": "Mendasar berarti bersifat dasar atau pokok; sesuatu yang mendasar belum tentu menuntut penanganan segera.",
+    "C": "Tambahan justru bermakna pelengkap yang tidak utama, bertolak belakang dengan sifat urgen yang sangat penting.",
+    "D": "Benar. Menurut KBBI, urgen berarti sangat penting sehingga harus segera ditangani; maknanya sama dengan mendesak.",
+    "E": "Tetap berarti tidak berubah atau tidak berpindah, tidak berkaitan dengan kepentingan atau waktu penanganan."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

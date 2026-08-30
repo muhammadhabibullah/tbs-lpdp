@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-004",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 4,
+  "type": "aritmetika",
+  "question_text": "15% dari 150 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "127,5"
+    },
+    {
+      "key": "B",
+      "text": "22,5"
+    },
+    {
+      "key": "C",
+      "text": "135"
+    },
+    {
+      "key": "D",
+      "text": "2,25"
+    },
+    {
+      "key": "E",
+      "text": "225"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Nilai 127,5 diperoleh dengan menghitung sisanya, yaitu bagian 85%.",
+    "B": "Benar. 15% × 150 = (15/100) × 150 = 22,5.",
+    "C": "Salah. Nilai 135 diperoleh dengan mengurangkan 15 dari 150 alih-alih menghitung persentasenya.",
+    "D": "Salah. Nilai 2,25 diperoleh dengan menggeser koma desimal satu tempat ke kiri.",
+    "E": "Salah. Nilai 225 diperoleh dengan menggeser koma desimal satu tempat ke kanan."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "15-pemecahan_masalah-011",
+  "package": 15,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Persoalan utama yang disorot penulis dalam teks tersebut adalah ...",
+  "image": null,
+  "passage": "Program literasi digital di sekolah selama ini lebih sibuk mengajarkan cara memakai perangkat daripada cara berpikir terhadap informasi yang diterima. Siswa memang terampil mengoperasikan gawai dan berbagai aplikasi, tetapi banyak di antara mereka tidak mampu membedakan berita bohong dari informasi yang teruji. Pelajaran literasi digital lebih sering diisi dengan praktik menggunakan perkakas digital, bukan latihan menelusuri sumber, menilai bukti, dan memeriksa keakuratan data. Selama kecakapan teknis diperlakukan sebagai tujuan akhir, sekolah hanya akan meluluskan pengguna teknologi yang mahir sekaligus mudah dibohongi oleh hoaks. Karena itu, kurikulum literasi digital perlu dibenahi: daya kritis terhadap informasi harus menjadi inti pelajaran, bukan sekadar keterampilan menekan tombol.",
+  "options": [
+    {
+      "key": "A",
+      "text": "ketidakmampuan banyak siswa membedakan berita bohong dari informasi yang teruji"
+    },
+    {
+      "key": "B",
+      "text": "pendidikan literasi digital yang lebih mengutamakan kecakapan teknis memakai perangkat daripada daya kritis terhadap informasi"
+    },
+    {
+      "key": "C",
+      "text": "pelajaran literasi digital yang lebih sering diisi dengan praktik menggunakan perkakas digital"
+    },
+    {
+      "key": "D",
+      "text": "kemudahan siswa mengoperasikan gawai dan berbagai aplikasi di sekolah"
+    },
+    {
+      "key": "E",
+      "text": "kekurangan jumlah guru yang terlatih dalam literasi digital"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Ketidakmampuan siswa membedakan berita bohong memang disebut dalam teks, tetapi penulis menempatkannya sebagai akibat dari orientasi pengajaran yang keliru, bukan sebagai persoalan utama; seluruh argumen justru menuntut pembenahan pada apa yang diajarkan sekolah.",
+    "B": "Benar. Sejak kalimat pertama penulis mempersoalkan program literasi digital yang lebih sibuk mengajarkan cara memakai perangkat daripada cara berpikir terhadap informasi, lalu menutup teks dengan tuntutan bahwa daya kritis harus menjadi inti pelajaran; seluruh rincian lain berfungsi menopang sorotan utama tersebut.",
+    "C": "Salah. Pernyataan bahwa pelajaran lebih sering diisi praktik menggunakan perkakas digital adalah rincian pendukung yang mengulang gagasan kalimat pertama, bukan persoalan utama yang diperjuangkan penulis.",
+    "D": "Salah. Keterampilan siswa mengoperasikan gawai justru diakui penulis sebagai sesuatu yang sudah tercapai; yang dipersoalkan adalah keterampilan itu tidak diimbangi daya kritis, bukan kemahiran itu sendiri.",
+    "E": "Salah. Teks sama sekali tidak menyinggung jumlah maupun ketersediaan guru yang terlatih; tuntutan penulis berkenaan dengan isi kurikulum, bukan tenaga pengajar."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

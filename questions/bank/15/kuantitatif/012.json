@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-012",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 12,
+  "type": "aljabar",
+  "question_text": "Jika y = 5x² − 2x − 4, nilai y untuk x = −2 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−20"
+    },
+    {
+      "key": "B",
+      "text": "100"
+    },
+    {
+      "key": "C",
+      "text": "28"
+    },
+    {
+      "key": "D",
+      "text": "20"
+    },
+    {
+      "key": "E",
+      "text": "12"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Nilai −20 diperoleh dengan membaca 5x² sebagai 5 × 2 × x sehingga pangkat dua berubah menjadi perkalian dua.",
+    "B": "Salah. Nilai 100 diperoleh dengan mengkuadratkan 5x sebagai satu kesatuan, yaitu (5 × (−2))², padahal yang dikuadratkan hanya x.",
+    "C": "Salah. Nilai 28 diperoleh dengan salah tanda pada tetapan − 4.",
+    "D": "Benar. y = 5 × (−2)² − 2 × (−2) − 4 = 20 + 4 − 4 = 20.",
+    "E": "Salah. Nilai 12 diperoleh dengan salah tanda pada suku − 2x ketika mensubstitusikan x = −2."
+  },
+  "difficulty": "medium",
+  "source": "aljabar.py",
+  "verified": true
+}

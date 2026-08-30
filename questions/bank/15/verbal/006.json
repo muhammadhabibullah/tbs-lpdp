@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-006",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "FASIH >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Lancar"
+    },
+    {
+      "key": "B",
+      "text": "Lantang"
+    },
+    {
+      "key": "C",
+      "text": "Gagap"
+    },
+    {
+      "key": "D",
+      "text": "Tegas"
+    },
+    {
+      "key": "E",
+      "text": "Pelan"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Lancar justru mendekati makna fasih, sehingga pilihan ini merupakan jebakan sinonim, bukan lawan kata.",
+    "B": "Lantang berarti nyaring dan jelas suaranya; orang yang gagap pun dapat berbicara lantang, jadi keduanya tidak berlawanan.",
+    "C": "Benar. Menurut KBBI, fasih berarti lancar dan bersih dalam mengucapkan kata-kata, sehingga lawan yang tepat adalah gagap, yaitu bicara yang tersendat-sendat dan terulang.",
+    "D": "Tegas berkaitan dengan keteguhan cara menyampaikan, bukan dengan kelancaran pengucapan.",
+    "E": "Pelan hanya menunjuk tempo suara; berbicara pelan dapat tetap fasih, jadi bukan lawan kata fasih."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

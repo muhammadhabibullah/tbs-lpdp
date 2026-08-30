@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-008",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "SANGKIL >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Hemat"
+    },
+    {
+      "key": "B",
+      "text": "Efektif"
+    },
+    {
+      "key": "C",
+      "text": "Boros"
+    },
+    {
+      "key": "D",
+      "text": "Cermat"
+    },
+    {
+      "key": "E",
+      "text": "Sederhana"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Hemat justru mendekati makna sangkil, sehingga pilihan ini merupakan jebakan sinonim, bukan lawan kata.",
+    "B": "Efektif adalah makna mangkus; memilihnya berarti tertukar antara mangkus dan sangkil, dan efektif bukan lawan sangkil.",
+    "C": "Benar. Menurut KBBI, sangkil berarti berdaya guna, dapat menghasilkan guna yang sebesar-besarnya, sehingga lawan katanya adalah boros, yaitu berlebih-lebihan dan tidak hemat dalam penggunaan.",
+    "D": "Cermat berarti teliti dan saksama; orang yang boros pun dapat bekerja cermat, jadi keduanya tidak berlawanan.",
+    "E": "Sederhana berarti bersahaja atau tidak berlebih; maknanya justru searah dengan sangkil, bukan berlawanan."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

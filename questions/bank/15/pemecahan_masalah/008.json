@@ -1,0 +1,43 @@
+{
+  "id": "15-pemecahan_masalah-008",
+  "package": 15,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Jalan Melati di Kota Rajawali ditetapkan sebagai jalan satu arah dengan arah resmi dari ujung selatan menuju ujung utara. Dua aturan tambahan berlaku. Pertama, bus kota memperoleh pengecualian: bus kota boleh melintasi Jalan Melati dari ujung utara menuju ujung selatan pada pukul berapa pun. Kedua, kendaraan pribadi dan taksi dilarang masuk Jalan Melati melalui ujung selatan pada pukul 06.00–09.00. Pada suatu hari tercatat lima kendaraan: (R1) mobil pribadi masuk melalui ujung selatan pukul 09.15 dan melaju ke arah utara; (R2) mobil pribadi masuk melalui ujung selatan pukul 05.45 dan melaju ke arah utara; (K1) bus kota masuk melalui ujung selatan pukul 08.10 dan melaju ke arah utara; (K2) bus kota masuk melalui ujung utara pukul 08.30 dan melaju ke arah selatan; serta (K3) taksi masuk melalui ujung selatan pukul 06.45 dan melaju ke arah utara. Kendaraan yang melanggar aturan adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "R1"
+    },
+    {
+      "key": "B",
+      "text": "R2"
+    },
+    {
+      "key": "C",
+      "text": "K1"
+    },
+    {
+      "key": "D",
+      "text": "K2"
+    },
+    {
+      "key": "E",
+      "text": "K3"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Larangan masuk melalui ujung selatan hanya berlaku pada pukul 06.00–09.00; R1 masuk pada pukul 09.15, sudah lewat dari batas akhir larangan, dan arah lajunya ke utara sesuai arah resmi satu arah. Menilai R1 melanggar berarti keliru memperluas rentang waktu larangan.",
+    "B": "Salah. R2 masuk melalui ujung selatan pada pukul 05.45, yaitu sebelum larangan pukul 06.00–09.00 mulai berlaku, dan melaju ke utara sesuai arah resmi, sehingga tidak melanggar aturan mana pun.",
+    "C": "Salah. Larangan masuk melalui ujung selatan pada pukul 06.00–09.00 hanya berlaku bagi kendaraan pribadi dan taksi; K1 adalah bus kota sehingga tidak termasuk, apalagi arah lajunya ke utara sesuai arah resmi satu arah.",
+    "D": "Salah. K2 memang melaju dari ujung utara ke selatan yang berlawanan dengan arah resmi, tetapi aturan pertama secara tegas memberikan pengecualian bagi bus kota untuk melintasi Jalan Melati dari utara ke selatan pada pukul berapa pun, sehingga K2 tidak melanggar.",
+    "E": "Benar. K3 masuk melalui ujung selatan pada pukul 06.45 yang berada dalam rentang larangan pukul 06.00–09.00; karena K3 adalah taksi, ia termasuk jenis kendaraan yang dilarang dan tidak memperoleh pengecualian yang hanya dimiliki bus kota. Sekalipun arah lajunya ke utara sesuai arah resmi satu arah, K3 tetap melanggar aturan kedua; menilai kasus ini menuntut penggabungan dua aturan sekaligus, yaitu pengecualian arah bagi bus kota dan pembatasan jam masuk dari ujung selatan bagi kendaraan pribadi serta taksi."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-009",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "GUNTING : MEMOTONG = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sekop : menggali"
+    },
+    {
+      "key": "B",
+      "text": "Buku : membaca"
+    },
+    {
+      "key": "C",
+      "text": "Hujan : banjir"
+    },
+    {
+      "key": "D",
+      "text": "Dapur : memasak"
+    },
+    {
+      "key": "E",
+      "text": "Matahari : panas"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Hubungannya adalah alat dan fungsinya: gunting digunakan untuk memotong, sebagaimana sekop digunakan untuk menggali.",
+    "B": "Buku adalah benda yang dibaca, bukan alat untuk membaca; arah hubungannya berbeda dari pasangan stimulus.",
+    "C": "Hujan dapat menyebabkan banjir; ini hubungan sebab-akibat, bukan alat dan fungsi.",
+    "D": "Dapur adalah tempat kegiatan memasak berlangsung, bukan alatnya; hubungan yang berlaku adalah tempat dan kegiatan.",
+    "E": "Panas adalah sifat matahari, sehingga pasangan ini menyatakan sumber dan sifatnya, bukan alat dan fungsi."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

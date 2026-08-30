@@ -1,0 +1,43 @@
+{
+  "id": "15-pemecahan_masalah-005",
+  "package": 15,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Lima perawat (Budi, Dedi, Eka, Ratna, Sari) dijadwalkan berjaga malam selama tujuh malam berurutan, malam pertama sampai malam ketujuh, dengan tepat satu perawat berjaga pada setiap malam. Ketentuan jadwal: (1) setiap perawat berjaga setidaknya satu malam, (2) Ratna tidak pernah berjaga pada dua malam yang berurutan, (3) Budi berjaga pada tepat dua malam yang berurutan, (4) Sari berjaga tepat satu malam setelah malam jaga Dedi sehingga keduanya berurutan, (5) Eka berjaga tepat satu malam, yaitu pada malam kelima (hari Jumat), dan (6) Sari berjaga pada malam akhir pekan, yaitu malam keenam atau malam ketujuh. Pernyataan yang pasti benar tentang jadwal tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Ratna hanya berjaga pada satu malam"
+    },
+    {
+      "key": "B",
+      "text": "Dedi berjaga pada malam kelima"
+    },
+    {
+      "key": "C",
+      "text": "Sari berjaga pada malam keenam"
+    },
+    {
+      "key": "D",
+      "text": "Budi berjaga pada malam kedua dan ketiga"
+    },
+    {
+      "key": "E",
+      "text": "Eka berjaga pada malam ketujuh"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Karena kelima perawat harus kebagian jaga dari tujuh malam (ketentuan 1), dua malam sisanya harus menjadi malam jaga kedua bagi seseorang; karena Budi tepat dua malam berurutan (ketentuan 3) dan Sari serta Dedi masing-masing tepat satu malam (ketentuan 4), justru Ratna yang memperoleh dua malam, yaitu malam pertama dan keempat.",
+    "B": "Salah. Malam kelima secara tegas ditetapkan sebagai malam jaga Eka (ketentuan 5), sehingga tidak mungkin ditempati Dedi.",
+    "C": "Salah. Sari memang berjaga pada malam keenam atau ketujuh (ketentuan 6), tetapi karena Sari tepat satu malam setelah Dedi (ketentuan 4), Sari di malam keenam memaksa Dedi di malam kelima yang sudah menjadi jatah Eka; yang benar adalah Dedi di malam keenam dan Sari di malam ketujuh.",
+    "D": "Benar. Karena Eka berjaga di malam kelima (ketentuan 5) dan Sari harus berjaga pada malam keenam atau ketujuh (ketentuan 6), pasangan berurutan Dedi–Sari (ketentuan 4) hanya dapat menempati malam keenam–ketujuh; Sari di malam keenam mustahil karena Dedi lalu jatuh di malam kelima yang menjadi jatah Eka, sehingga Dedi di malam keenam dan Sari di malam ketujuh. Malam 1 sampai 4 tersisa bagi Budi dan Ratna; dua malam berurutan Budi (ketentuan 3) tidak mungkin di malam 1–2 maupun 3–4 karena dua malam sisanya bagi Ratna menjadi berurutan dan melanggar ketentuan (2), sehingga satu-satunya kemungkinan adalah Budi di malam kedua dan ketiga, dengan Ratna di malam pertama dan keempat.",
+    "E": "Salah. Eka hanya berjaga satu malam, yaitu malam kelima (ketentuan 5); malam ketujuh ditempati Sari."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

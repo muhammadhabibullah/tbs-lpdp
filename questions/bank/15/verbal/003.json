@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-003",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "MANGKUS = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Efisien"
+    },
+    {
+      "key": "B",
+      "text": "Cepat"
+    },
+    {
+      "key": "C",
+      "text": "Efektif"
+    },
+    {
+      "key": "D",
+      "text": "Hemat"
+    },
+    {
+      "key": "E",
+      "text": "Mutakhir"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Efisien adalah makna sangkil, pasangan kata yang sering disandingkan dengan mangkus; memilih efisien berarti tertukar antara keduanya.",
+    "B": "Cepat hanya menunjuk waktu tempuh; sesuatu yang cepat belum tentu mencapai hasil yang diharapkan.",
+    "C": "Benar. Menurut KBBI, mangkus berarti mampu menghasilkan efek atau manfaat sesuai tujuan, bersinonim dengan efektif.",
+    "D": "Hemat berkaitan dengan penggunaan biaya atau sumber daya yang sedikit, bukan dengan ketercapaian tujuan.",
+    "E": "Mutakhir berarti terbaru atau paling akhir, tidak berkaitan dengan ketercapaian hasil."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

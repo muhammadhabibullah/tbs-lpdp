@@ -1,0 +1,43 @@
+{
+  "id": "15-pemecahan_masalah-010",
+  "package": 15,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Tabel di atas menyajikan data fiktif hasil panen empat komoditas di Kabupaten Argapura pada tahun 2023–2025. Berdasarkan tabel tersebut, pernyataan yang benar adalah ...",
+  "image": null,
+  "passage": "Komoditas | 2023 (ton) | 2024 (ton) | 2025 (ton)\nPadi | 520 | 500 | 600\nJagung | 380 | 420 | 370\nKedelai | 220 | 190 | 260\nKacang Tanah | 800 | 650 | 780",
+  "options": [
+    {
+      "key": "A",
+      "text": "Pada tahun 2025, komoditas jagung memiliki hasil panen paling rendah di antara seluruh komoditas"
+    },
+    {
+      "key": "B",
+      "text": "Total hasil panen seluruh komoditas pada tahun 2025 lebih kecil daripada total hasil panen pada tahun 2024"
+    },
+    {
+      "key": "C",
+      "text": "Hasil panen kedelai meningkat secara terus-menerus setiap tahun selama periode tersebut"
+    },
+    {
+      "key": "D",
+      "text": "Di antara komoditas yang hasil panennya meningkat dari tahun 2023 ke tahun 2025, komoditas dengan persentase kenaikan tertinggi bukanlah komoditas dengan kenaikan jumlah terbesar"
+    },
+    {
+      "key": "E",
+      "text": "Pada tahun 2024, hasil panen kacang tanah merupakan yang paling rendah di antara seluruh komoditas"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Pada kolom 2025, jagung memang hanya 370 ton, tetapi kedelai tercatat 260 ton, sehingga hasil panen paling rendah pada tahun 2025 adalah kedelai, bukan jagung.",
+    "B": "Salah. Total hasil panen 2024 adalah 500 + 420 + 190 + 650 = 1.760 ton, sedangkan total 2025 adalah 600 + 370 + 260 + 780 = 2.010 ton, sehingga total 2025 justru lebih besar 250 ton.",
+    "C": "Salah. Hasil panen kedelai memang naik dari 220 ton (2023) menjadi 260 ton (2025), tetapi pada tahun 2024 justru turun menjadi 190 ton; klaim meningkat terus-menerus muncul karena hanya membandingkan tahun awal dan tahun akhir tanpa memeriksa tahun di antaranya.",
+    "D": "Benar. Hanya dua komoditas yang hasil panennya meningkat dari 2023 ke 2025: padi naik 600 − 520 = 80 ton, yaitu sekitar 80 : 520 ≈ 15,4 persen, dan kedelai naik 260 − 220 = 40 ton, yaitu sekitar 40 : 220 ≈ 18,2 persen. Kenaikan jumlah terbesar dicapai padi (80 ton), tetapi persentase kenaikan tertinggi dicapai kedelai (18,2 persen), sehingga keduanya bukan komoditas yang sama; menilai klaim ini menuntut penggabungan data tahun 2023 dan 2025 untuk setiap komoditas.",
+    "E": "Salah. Pada kolom 2024, kacang tanah tercatat 650 ton, jauh di atas kedelai yang hanya 190 ton, sehingga hasil panen paling rendah pada tahun 2024 adalah kedelai, bukan kacang tanah."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

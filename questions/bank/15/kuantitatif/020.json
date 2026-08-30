@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-020",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Sebuah bak penampungan air dapat dipenuhi oleh keran A dalam 1,5 jam dan oleh keran B dalam 3 jam. Jika kedua keran dibuka secara bersamaan, waktu yang diperlukan untuk memenuhi bak tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "45 menit"
+    },
+    {
+      "key": "B",
+      "text": "60 menit"
+    },
+    {
+      "key": "C",
+      "text": "90 menit"
+    },
+    {
+      "key": "D",
+      "text": "135 menit"
+    },
+    {
+      "key": "E",
+      "text": "270 menit"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. 45 menit = 90 : 2 diperoleh bila waktu pengisian keran A hanya dibagi dua, tanpa memperhitungkan laju pengisian kedua keran.",
+    "B": "Benar. Keran A mengisi 1/90 bagian bak per menit dan keran B mengisi 1/180 bagian bak per menit. Bersama-sama lajunya 1/90 + 1/180 = 3/180 = 1/60 bagian bak per menit, sehingga bak penuh dalam 60 menit.",
+    "C": "Salah. 90 menit adalah waktu pengisian oleh keran A saja, seolah-olah keran B tidak ikut mengisi.",
+    "D": "Salah. 135 menit = (90 + 180) : 2 diperoleh bila waktu pengisian kedua keran dirata-ratakan, padahal waktu pengisian bersama tidak dihitung dengan rata-rata.",
+    "E": "Salah. 270 menit = 90 + 180 diperoleh bila kedua waktu pengisian dijumlahkan, bukan lajunya yang dijumlahkan."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

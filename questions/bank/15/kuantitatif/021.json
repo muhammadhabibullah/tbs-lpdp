@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-021",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Perbandingan banyak uang Ali dan Budi adalah 2 : 3, sedangkan perbandingan banyak uang Budi dan Candra adalah 4 : 5. Jika selisih uang Ali dan Budi Rp28.000,00, jumlah uang Budi dan Candra adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp126.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp140.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp161.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp189.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp245.000,00"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Rp126.000,00 = 9 × Rp14.000,00 diperoleh bila perbandingan digabungkan secara keliru menjadi 2 : 4 : 5 (angka Budi diambil dari perbandingan kedua), sehingga selisih Budi − Ali menjadi 2 bagian = Rp14.000,00 per bagian.",
+    "B": "Salah. Rp140.000,00 = 20 × Rp7.000,00 adalah jumlah uang Ali dan Budi, bukan jumlah uang Budi dan Candra yang ditanyakan.",
+    "C": "Salah. Rp161.000,00 = 23 × Rp7.000,00 adalah jumlah uang Ali dan Candra, bukan jumlah uang Budi dan Candra yang ditanyakan.",
+    "D": "Benar. Perbandingan disamakan pada Budi: Ali : Budi = 2 : 3 = 8 : 12 dan Budi : Candra = 4 : 5 = 12 : 15, sehingga Ali : Budi : Candra = 8 : 12 : 15. Selisih Ali dan Budi = 12 − 8 = 4 bagian = Rp28.000,00, sehingga 1 bagian = Rp7.000,00. Jumlah uang Budi dan Candra = (12 + 15) × Rp7.000,00 = 27 × Rp7.000,00 = Rp189.000,00.",
+    "E": "Salah. Rp245.000,00 = 35 × Rp7.000,00 adalah jumlah uang ketiganya, padahal yang ditanyakan hanya jumlah uang Budi dan Candra."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

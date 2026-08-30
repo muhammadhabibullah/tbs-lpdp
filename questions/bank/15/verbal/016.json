@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-016",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Hanya penghuni asrama yang wajib mengikuti kegiatan pagi. Tidak ada tamu yang menginap di asrama yang berstatus penghuni. Bima adalah tamu yang menginap di asrama.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Bima wajib mengikuti kegiatan pagi karena ia menginap di asrama."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian tamu yang menginap di asrama wajib mengikuti kegiatan pagi."
+    },
+    {
+      "key": "C",
+      "text": "Semua tamu yang menginap di asrama wajib mengikuti kegiatan pagi."
+    },
+    {
+      "key": "D",
+      "text": "Bima wajib mengikuti kegiatan pagi hanya pada hari pertama menginap."
+    },
+    {
+      "key": "E",
+      "text": "Bima tidak wajib mengikuti kegiatan pagi."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Menginap di asrama tidak sama dengan berstatus penghuni; premis kedua menegaskan tamu yang menginap bukan penghuni, sehingga kewajiban itu tidak melekat pada Bima.",
+    "B": "Premis kedua meniadakan status penghuni bagi seluruh tamu yang menginap, dan premis pertama membatasi kewajiban hanya pada penghuni, sehingga tidak ada tamu yang wajib.",
+    "C": "Simpulan ini bertentangan langsung dengan gabungan premis pertama dan kedua: tamu yang menginap bukan penghuni, sedangkan hanya penghuni yang wajib.",
+    "D": "Tidak ada satu pun premis yang mengatur hari pertama menginap; pembatasan waktu ini murni karangan.",
+    "E": "Benar. Premis pertama bermakna hanya penghuni yang wajib, jadi yang bukan penghuni tidak wajib; premis kedua dan ketiga memastikan Bima bukan penghuni, sehingga Bima tidak wajib mengikuti kegiatan pagi."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

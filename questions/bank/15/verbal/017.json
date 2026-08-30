@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-017",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat berikut tidak efektif.\n\nBanyak para petani saling bekerja sama dalam memanen hasil kebun.\n\nPerbaikan kalimat tersebut yang paling tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Banyak para petani bekerja sama dalam memanen hasil kebun."
+    },
+    {
+      "key": "B",
+      "text": "Banyak petani bekerja sama dalam memanen hasil kebun."
+    },
+    {
+      "key": "C",
+      "text": "Banyak petani-petani saling bekerja sama dalam memanen hasil kebun."
+    },
+    {
+      "key": "D",
+      "text": "Petani yang banyak saling bekerja-sama dalam memanen hasil kebun."
+    },
+    {
+      "key": "E",
+      "text": "Banyak petani bekerja sama-sama dalam memanen hasil kebun."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Perbaikan ini masih mempertahankan pleonasme banyak dan para; kedua penanda jamak itu tidak boleh dipakai bersamaan dalam kalimat efektif.",
+    "B": "Benar. Perbaikan ini menghapus pleonasme banyak-para dan kata saling yang mubazir karena bekerja sama sudah bermakna saling, sehingga subjek dan predikatnya jelas serta hemat.",
+    "C": "Perbaikan ini justru menimbulkan pleonasme baru: kata banyak tidak boleh dirangkai dengan bentuk ulang petani-petani, dan kata saling masih tersisa.",
+    "D": "Perbaikan ini kacau: susunan petani yang banyak mengaburkan makna, dan penulisan bekerja-sama menyalahi PUEBI karena bentuk ini ditulis terpisah.",
+    "E": "Perbaikan ini mengandung kesalahan bentukan kata: sama-sama bukan bentuk baku dari bekerja sama dan mengubah makna kalimat."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

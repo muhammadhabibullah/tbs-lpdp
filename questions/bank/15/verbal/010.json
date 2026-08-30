@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-010",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "SKETSA : LUKISAN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kanvas : pigura"
+    },
+    {
+      "key": "B",
+      "text": "Denah : bangunan"
+    },
+    {
+      "key": "C",
+      "text": "Kamera : foto"
+    },
+    {
+      "key": "D",
+      "text": "Naskah : pengarang"
+    },
+    {
+      "key": "E",
+      "text": "Panggung : pertunjukan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Kanvas dipasang pada pigura; hubungan keduanya adalah benda dan tempat pemasangannya, bukan rancangan dan hasil akhirnya.",
+    "B": "Benar. Hubungannya adalah rancangan awal dan wujud akhirnya: sketsa adalah rancangan awal sebelum lukisan diwujudkan, sebagaimana denah adalah rancangan awal sebelum bangunan diwujudkan.",
+    "C": "Kamera adalah alat penghasil foto; pada pasangan stimulus, sketsa bukan alat pembuat lukisan, melainkan tahap rancangannya.",
+    "D": "Naskah dihasilkan oleh pengarang; hubungannya adalah hasil karya dan penciptanya, arahnya terbalik dari pasangan stimulus.",
+    "E": "Panggung adalah tempat berlangsungnya pertunjukan, bukan rancangan awal dari pertunjukan itu."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

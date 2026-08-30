@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-011",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "TELESKOP : ASTRONOM = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Termometer : demam"
+    },
+    {
+      "key": "B",
+      "text": "Mikroskop : bakteri"
+    },
+    {
+      "key": "C",
+      "text": "Kamera : foto"
+    },
+    {
+      "key": "D",
+      "text": "Kompas : utara"
+    },
+    {
+      "key": "E",
+      "text": "Stetoskop : dokter"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Termometer digunakan untuk mendeteksi demam; pasangan ini menyatakan alat dan gejala yang dideteksi, bukan alat khas suatu profesi.",
+    "B": "Mikroskop digunakan untuk mengamati bakteri; pasangan ini menyatakan alat dan objeknya, bukan alat dan profesi penggunanya.",
+    "C": "Kamera menghasilkan foto; hubungan yang berlaku adalah alat dan produknya, bukan alat khas profesi.",
+    "D": "Kompas menunjuk arah utara; pasangan ini menyatakan alat dan arah acuannya, bukan alat dan profesi.",
+    "E": "Benar. Hubungannya adalah alat khas dan profesi penggunanya: teleskop adalah alat khas astronom, sebagaimana stetoskop adalah alat khas dokter."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

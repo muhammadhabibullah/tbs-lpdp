@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-004",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "LESAP = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Menyusut"
+    },
+    {
+      "key": "B",
+      "text": "Muncul"
+    },
+    {
+      "key": "C",
+      "text": "Berubah"
+    },
+    {
+      "key": "D",
+      "text": "Melebur"
+    },
+    {
+      "key": "E",
+      "text": "Hilang"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Menyusut berarti berkurang jumlahnya tetapi masih ada, sedangkan lesap berarti tidak ada lagi.",
+    "B": "Muncul justru berlawanan arah dengan lesap; sesuatu yang muncul menjadi tampak, bukan lenyap.",
+    "C": "Berubah hanya menunjuk pergantian keadaan; sesuatu yang berubah belum tentu lenyap.",
+    "D": "Melebur berarti menjadi satu atau luluh, misalnya logam yang dipanaskan, bukan hilang tanpa bekas.",
+    "E": "Benar. Menurut KBBI, lesap berarti hilang, lenyap, atau musnah, misalnya harta yang lesap seketika."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

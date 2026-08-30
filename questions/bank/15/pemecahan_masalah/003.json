@@ -1,0 +1,43 @@
+{
+  "id": "15-pemecahan_masalah-003",
+  "package": 15,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Enam buku (F, G, H, I, J, K) diletakkan berjajar pada sebuah rak mendatar pada petak 1 sampai 6 dari kiri ke kanan, satu buku pada setiap petak. Diketahui: (1) buku F berada pada petak 2, (2) buku G berada tepat di sebelah kanan buku F, (3) buku K berada tepat di sebelah kanan buku J, (4) buku J berada tepat di sebelah kanan buku H, (5) buku I berada di suatu petak di sebelah kiri buku H, dan (6) buku G berada di sebelah kiri buku J. Buku yang terletak tiga petak di sebelah kiri buku K adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "I"
+    },
+    {
+      "key": "B",
+      "text": "H"
+    },
+    {
+      "key": "C",
+      "text": "J"
+    },
+    {
+      "key": "D",
+      "text": "F"
+    },
+    {
+      "key": "E",
+      "text": "G"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Jawaban ini muncul jika pertanyaan keliru dibaca sebagai buku pada petak paling kiri rak, padahal yang ditanyakan adalah buku tepat tiga petak di kiri K; dengan susunan yang benar, tiga petak di kiri K (petak 6) adalah petak 3, bukan petak 1 yang berisi I.",
+    "B": "Salah. H menempati petak 4, satu petak di kanan petak yang ditanyakan (petak 3); jawaban ini muncul akibat selisih hitung satu petak, yaitu menghitung empat petak di kiri K sebagai tiga petak.",
+    "C": "Salah. J berada pada petak 5, yaitu tepat satu petak di kiri K; memilih J berarti kurang dua hitungan karena yang diminta adalah tiga petak di kiri K, yaitu petak 3.",
+    "D": "Salah. Jawaban ini muncul jika posisi K keliru ditempatkan pada petak 5 (misalnya dengan mengabaikan bahwa K berada tepat di kanan J), sehingga tiga petak di kirinya dianggap petak 2 yang berisi F; padahal K berada pada petak 6.",
+    "E": "Benar. Kendala (1) dan (2) menetapkan F=2 dan G=3. Kendala (3) dan (4) membentuk blok berurutan H–J–K, dan kendala (5) melarang H di petak 1 karena I harus berada di kirinya; satu-satunya posisi blok itu adalah H=4, J=5, K=6, yang sekaligus memenuhi kendala (6) bahwa G di kiri J. Petak 1 diisi I, sehingga susunan lengkapnya I, F, G, H, J, K. Tiga petak di kiri K (petak 6) adalah petak 3, yaitu buku G."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

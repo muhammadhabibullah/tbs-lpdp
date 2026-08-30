@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-024",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar lintasan cincin di atas. Diameter luar lintasan adalah 42 m dan lebar radial lintasan 7 m. Seluruh permukaan lintasan (bagian berbentuk cincin) akan dilapisi karet dengan biaya Rp85.000,00 per meter persegi. Dengan π = 22/7, total biaya pelapisan tersebut adalah ...",
+  "image": "images/lintasan-cincin.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp13.090.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp52.360.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp65.450.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp117.810.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp143.990.000,00"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Rp13.090.000,00 = 154 × Rp85.000,00 diperoleh bila lebar radial 7 m dianggap sebagai jari-jari lintasan, sehingga luasnya hanya π × 7² = 154 m².",
+    "B": "Salah. Rp52.360.000,00 = 616 × Rp85.000,00 diperoleh bila yang dihitung luas lingkaran dalam saja, yaitu π × 14² = 616 m², padahal yang dilapisi adalah bagian cincinnya.",
+    "C": "Benar. Jari-jari luar = 42 : 2 = 21 m dan jari-jari dalam = 21 − 7 = 14 m. Luas cincin = π × (21² − 14²) = 22/7 × (441 − 196) = 22/7 × 245 = 770 m². Total biaya = 770 × Rp85.000,00 = Rp65.450.000,00.",
+    "D": "Salah. Rp117.810.000,00 = 1.386 × Rp85.000,00 diperoleh bila yang dihitung luas lingkaran luar seluruhnya, yaitu π × 21² = 1.386 m², tanpa mengurangi lingkaran dalam.",
+    "E": "Salah. Rp143.990.000,00 = 1.694 × Rp85.000,00 diperoleh bila diameter luar 42 m dianggap jari-jari luar dan jari-jari dalam dihitung 42 − 7 = 35 m, sehingga luas cincin menjadi π × (42² − 35²) = 1.694 m²."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

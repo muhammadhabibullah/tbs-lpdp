@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-011",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 11,
+  "type": "aljabar",
+  "question_text": "Jika 6x − 9 = 27, nilai x adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "36"
+    },
+    {
+      "key": "B",
+      "text": "30"
+    },
+    {
+      "key": "C",
+      "text": "4,5"
+    },
+    {
+      "key": "D",
+      "text": "3"
+    },
+    {
+      "key": "E",
+      "text": "6"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Nilai 36 diperoleh dengan berhenti pada nilai 6x dan belum membaginya dengan 6.",
+    "B": "Salah. Nilai 30 diperoleh dengan mengurangkan koefisien 6 dari 36, padahal koefisien itu harus dijadikan pembagi.",
+    "C": "Salah. Nilai 4,5 diperoleh dengan membagi 27 dengan 6 tanpa memindahkan −9 lebih dahulu.",
+    "D": "Salah. Nilai 3 diperoleh dengan mengurangkan 9 sekali lagi ketika memindahkan ruas, padahal −9 berubah menjadi +9.",
+    "E": "Benar. 6x = 27 + 9 = 36, sehingga x = 36 : 6 = 6."
+  },
+  "difficulty": "easy",
+  "source": "aljabar.py",
+  "verified": true
+}

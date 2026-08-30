@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-005",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "TENTATIF >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Sementara"
+    },
+    {
+      "key": "B",
+      "text": "Pasti"
+    },
+    {
+      "key": "C",
+      "text": "Terbatas"
+    },
+    {
+      "key": "D",
+      "text": "Mendesak"
+    },
+    {
+      "key": "E",
+      "text": "Tambahan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Sementara justru dekat dengan makna tentatif, sehingga pilihan ini merupakan jebakan sinonim, bukan antonim.",
+    "B": "Benar. Menurut KBBI, tentatif berarti belum pasti atau masih dapat berubah, sehingga lawan katanya adalah pasti.",
+    "C": "Terbatas berkaitan dengan cakupan atau jumlah, bukan dengan kepastian suatu penetapan.",
+    "D": "Mendesak berkaitan dengan waktu penanganan, bukan lawan dari belum pasti.",
+    "E": "Tambahan bermakna pelengkap, tidak berlawanan dengan kepastian jadwal atau keputusan."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "15-pemecahan_masalah-006",
+  "package": 15,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Tujuh peserta (A, B, C, D, E, F, G) akan didistribusikan ke tiga komisi, yaitu komisi I, komisi II, dan komisi III; setiap peserta masuk tepat satu komisi dan setiap komisi boleh berisi lebih dari satu peserta. Ketentuan: (1) jika B masuk komisi I, maka A juga masuk komisi I, (2) jika A masuk komisi III, maka B juga masuk komisi III, (3) jika C masuk komisi III, maka G juga masuk komisi III, (4) E dan F masuk komisi yang berbeda, dan (5) F masuk komisi II. Distribusi peserta ke komisi yang memenuhi seluruh ketentuan adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "A, B, dan E masuk komisi I; F masuk komisi II; C, D, dan G masuk komisi III"
+    },
+    {
+      "key": "B",
+      "text": "A dan C masuk komisi III; B, D, E, F, dan G masuk komisi II"
+    },
+    {
+      "key": "C",
+      "text": "A dan B masuk komisi I; E dan F masuk komisi II; C, D, dan G masuk komisi III"
+    },
+    {
+      "key": "D",
+      "text": "A, C, dan E masuk komisi I; B dan G masuk komisi II; D dan F masuk komisi III"
+    },
+    {
+      "key": "E",
+      "text": "B, C, dan F masuk komisi I; A, D, dan G masuk komisi II; E masuk komisi III"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. A dan B sama-sama di komisi I sehingga ketentuan (1) dan (2) terpenuhi (A tidak berada di komisi III, jadi ketentuan 2 otomatis dipenuhi); C dan G sama-sama di komisi III sehingga ketentuan (3) terpenuhi; E di komisi I dan F di komisi II sehingga ketentuan (4) terpenuhi; dan F memang berada di komisi II sesuai ketentuan (5). Seluruh ketentuan terpenuhi.",
+    "B": "Salah. Ketentuan (2) menuntut B ikut masuk komisi III apabila A masuk komisi III, padahal pada distribusi ini B ditempatkan di komisi II sementara A di komisi III.",
+    "C": "Salah. Ketentuan (4) menuntut E dan F berada pada komisi yang berbeda, padahal distribusi ini menempatkan keduanya bersama-sama di komisi II.",
+    "D": "Salah. Ketentuan (5) menetapkan F harus masuk komisi II, sedangkan distribusi ini menempatkan F di komisi III. (Ketentuan lain tidak dilanggar: A dan C berada di komisi I sehingga ketentuan (1)–(3) tidak berlaku, dan E di komisi I serta F di komisi III tetap memenuhi ketentuan (4).)",
+    "E": "Salah. Ketentuan (5) menetapkan F harus masuk komisi II, sedangkan distribusi ini menempatkan F di komisi I."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "15-pemecahan_masalah-012",
+  "package": 15,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Sebuah toko memberikan diskon 20% untuk semua jenis tas. Jika harga sebuah tas sebelum diskon adalah Rp250.000,00, harga yang harus dibayar pembeli untuk tas tersebut setelah diskon adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp230.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp225.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp200.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp50.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp210.000,00"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai Rp230.000,00 diperoleh jika potongan diperlakukan sebagai Rp20.000,00 (angka 20 pada persentase keliru dibaca sebagai nominal rupiah), padahal potongan seharusnya dihitung 20% dari harga awal.",
+    "B": "Salah. Nilai Rp225.000,00 diperoleh jika diskon dihitung 10% (potongan Rp25.000,00), misalnya karena keliru membagi harga awal dengan sepuluh, bukan menghitung 20% daripadanya.",
+    "C": "Benar. Besar diskon adalah 20% × Rp250.000,00 = Rp50.000,00, sehingga harga setelah diskon adalah Rp250.000,00 − Rp50.000,00 = Rp200.000,00.",
+    "D": "Salah. Nilai Rp50.000,00 adalah besar potongan diskonnya saja, bukan harga yang harus dibayar setelah diskon.",
+    "E": "Salah. Nilai Rp210.000,00 diperoleh jika potongan dihitung Rp40.000,00, yaitu 20% dari Rp200.000,00, padahal persentase diskon harus dihitung dari harga awal Rp250.000,00."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

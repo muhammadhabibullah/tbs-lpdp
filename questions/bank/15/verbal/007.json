@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-007",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "TAKABUR >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Tinggi hati"
+    },
+    {
+      "key": "B",
+      "text": "Rendah hati"
+    },
+    {
+      "key": "C",
+      "text": "Besar hati"
+    },
+    {
+      "key": "D",
+      "text": "Keras hati"
+    },
+    {
+      "key": "E",
+      "text": "Kecil hati"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Tinggi hati bermakna sombong seperti takabur, sehingga pilihan ini jebakan sinonim, bukan lawan kata.",
+    "B": "Benar. Menurut KBBI, takabur berarti merasa diri lebih dari orang lain, sombong dan congkak; lawan katanya adalah rendah hati, yaitu tidak sombong dan tidak memandang diri lebih tinggi.",
+    "C": "Besar hati berarti bangga atau gembira, sifat yang tidak berlawanan langsung dengan kesombongan.",
+    "D": "Keras hati berarti kukuh pendirian atau tidak mudah menyerah, tidak berkaitan dengan sikap merendahkan diri.",
+    "E": "Kecil hati berarti takut, khawatir, atau kecewa; ini lawan dari besar hati, bukan dari takabur."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

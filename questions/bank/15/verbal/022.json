@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-022",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Simpulan tersirat yang paling tepat berdasarkan bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Pertanian perkotaan semakin berkembang di berbagai kota seiring meningkatnya kesadaran warga terhadap sumber pangan yang dekat dan terjangkau. Lahan sempit seperti atap bangunan, pekarangan rumah, dan dinding vertikal dimanfaatkan untuk menanam sayuran serta tanaman pangan lain. Sistem seperti hidroponik dan penanaman dalam wadah memungkinkan kegiatan ini dilakukan tanpa tanah yang luas. Selain menyediakan bahan pangan segar, aktivitas berkebun bersama juga memperkuat hubungan sosial antarwarga di lingkungan sekitar. Di beberapa kota, hasil panennya bahkan dijual ke pasar setempat sehingga menambah pendapatan keluarga.\n\nMeskipun demikian, pertanian perkotaan belum mampu menjadi sumber pangan utama bagi seluruh kebutuhan kota. Hasil panen dari lahan terbatas umumnya hanya memenuhi sebagian kecil kebutuhan pangan warga. Tantangan lain berupa keterbatasan air, pencemaran udara, dan belum adanya aturan yang mendukung di beberapa daerah. Sejumlah pemerintah daerah mulai menyusun program pelatihan, namun jangkauannya masih terbatas. Oleh karena itu, pertanian perkotaan sebaiknya dipandang sebagai pelengkap upaya ketahanan pangan kota, yang perlu didukung kebijakan tata ruang dan pendampingan teknis agar manfaatnya terus meningkat.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Dukungan kebijakan tata ruang dan pendampingan teknis berperan penting bagi peningkatan manfaat pertanian perkotaan."
+    },
+    {
+      "key": "B",
+      "text": "Pertanian perkotaan akan menggantikan seluruh pasokan pangan dari luar kota dalam waktu dekat."
+    },
+    {
+      "key": "C",
+      "text": "Ketahanan pangan kota tidak memerlukan peran pemerintah daerah sama sekali."
+    },
+    {
+      "key": "D",
+      "text": "Penjualan hasil panen ke pasar setempat dilarang oleh pemerintah daerah."
+    },
+    {
+      "key": "E",
+      "text": "Pertanian perkotaan hanya bermanfaat bagi warga yang memiliki atap bangunan."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Bacaan menegaskan pertanian perkotaan perlu didukung kebijakan tata ruang dan pendampingan teknis agar manfaatnya terus meningkat, sehingga tersirat bahwa dukungan tersebut berperan penting bagi peningkatan manfaatnya.",
+    "B": "Bacaan justru menyebut pertanian perkotaan hanya memenuhi sebagian kecil kebutuhan pangan warga, sehingga penggantian seluruh pasokan tidak tersirat.",
+    "C": "Bacaan menyebut pemerintah daerah mulai menyusun program pelatihan dan menekankan perlunya dukungan kebijakan, sehingga peran pemerintah justru diakui.",
+    "D": "Bacaan menyebut hasil panen dijual ke pasar setempat sebagai fakta positif, tanpa larangan apa pun dari pemerintah daerah.",
+    "E": "Atap bangunan hanyalah salah satu contoh lahan; bacaan juga menyebut pekarangan, dinding vertikal, dan penanaman dalam wadah, sehingga manfaatnya tidak terbatas pada pemilik atap."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

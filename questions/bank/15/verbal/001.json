@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-001",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "DERMA = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pinjaman"
+    },
+    {
+      "key": "B",
+      "text": "Sumbangan"
+    },
+    {
+      "key": "C",
+      "text": "Warisan"
+    },
+    {
+      "key": "D",
+      "text": "Titipan"
+    },
+    {
+      "key": "E",
+      "text": "Pajak"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Pinjaman adalah sesuatu yang diberikan dengan kewajiban dikembalikan, sedangkan derma diberikan tanpa pamrih.",
+    "B": "Benar. Menurut KBBI, derma berarti pemberian untuk tujuan kebaikan, misalnya sedekah atau sumbangan; jadi padanan maknanya adalah sumbangan.",
+    "C": "Warisan adalah harta yang ditinggalkan seseorang setelah meninggal, bukan pemberian sukarela semasa hidup.",
+    "D": "Titipan adalah barang yang dipercayakan untuk disimpan sementara, sehingga kepemilikannya tidak berpindah seperti pada derma.",
+    "E": "Pajak adalah pungutan wajib kepada negara berdasarkan undang-undang, bukan pemberian sukarela seperti derma."
+  },
+  "difficulty": "easy",
+  "source": "codex-generated",
+  "verified": true
+}

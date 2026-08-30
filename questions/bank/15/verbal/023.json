@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-023",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Pertanyaan berikut yang jawabannya TIDAK terdapat dalam bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Pertanian perkotaan semakin berkembang di berbagai kota seiring meningkatnya kesadaran warga terhadap sumber pangan yang dekat dan terjangkau. Lahan sempit seperti atap bangunan, pekarangan rumah, dan dinding vertikal dimanfaatkan untuk menanam sayuran serta tanaman pangan lain. Sistem seperti hidroponik dan penanaman dalam wadah memungkinkan kegiatan ini dilakukan tanpa tanah yang luas. Selain menyediakan bahan pangan segar, aktivitas berkebun bersama juga memperkuat hubungan sosial antarwarga di lingkungan sekitar. Di beberapa kota, hasil panennya bahkan dijual ke pasar setempat sehingga menambah pendapatan keluarga.\n\nMeskipun demikian, pertanian perkotaan belum mampu menjadi sumber pangan utama bagi seluruh kebutuhan kota. Hasil panen dari lahan terbatas umumnya hanya memenuhi sebagian kecil kebutuhan pangan warga. Tantangan lain berupa keterbatasan air, pencemaran udara, dan belum adanya aturan yang mendukung di beberapa daerah. Sejumlah pemerintah daerah mulai menyusun program pelatihan, namun jangkauannya masih terbatas. Oleh karena itu, pertanian perkotaan sebaiknya dipandang sebagai pelengkap upaya ketahanan pangan kota, yang perlu didukung kebijakan tata ruang dan pendampingan teknis agar manfaatnya terus meningkat.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Lahan apa saja yang dapat dimanfaatkan untuk pertanian perkotaan?"
+    },
+    {
+      "key": "B",
+      "text": "Tantangan apa saja yang dihadapi pertanian perkotaan?"
+    },
+    {
+      "key": "C",
+      "text": "Berapa biaya yang diperlukan untuk memulai usaha hidroponik di perkotaan?"
+    },
+    {
+      "key": "D",
+      "text": "Mengapa pertanian perkotaan sebaiknya dipandang sebagai pelengkap ketahanan pangan kota?"
+    },
+    {
+      "key": "E",
+      "text": "Dampak sosial apa yang diperoleh dari aktivitas berkebun bersama?"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Jawabannya terdapat dalam bacaan: atap bangunan, pekarangan rumah, dan dinding vertikal disebut sebagai lahan yang dimanfaatkan.",
+    "B": "Jawabannya terdapat dalam bacaan: keterbatasan air, pencemaran udara, dan belum adanya aturan yang mendukung disebut sebagai tantangan.",
+    "C": "Benar. Bacaan sama sekali tidak menyebut besaran biaya untuk memulai usaha hidroponik, sehingga pertanyaan ini tidak dapat dijawab dari bacaan.",
+    "D": "Jawabannya terdapat dalam bacaan: pertanian perkotaan belum mampu menjadi sumber pangan utama dan hasil panennya hanya memenuhi sebagian kecil kebutuhan warga.",
+    "E": "Jawabannya terdapat dalam bacaan: aktivitas berkebun bersama memperkuat hubungan sosial antarwarga di lingkungan sekitar."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

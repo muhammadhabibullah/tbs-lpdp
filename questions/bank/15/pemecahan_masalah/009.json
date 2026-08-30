@@ -1,0 +1,43 @@
+{
+  "id": "15-pemecahan_masalah-009",
+  "package": 15,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Tabel di atas menyajikan data fiktif banyak pengunjung Perpustakaan Daerah Kota Fajar selama lima bulan pada tahun 2025 menurut kategori pengunjung. Berdasarkan tabel tersebut, pernyataan yang sesuai dengan data adalah ...",
+  "image": null,
+  "passage": "Bulan | Pelajar | Umum | Rombongan\nMei | 540 | 980 | 180\nJuni | 610 | 1.060 | 210\nJuli | 780 | 940 | 260\nAgustus | 920 | 850 | 240\nSeptember | 660 | 790 | 150",
+  "options": [
+    {
+      "key": "A",
+      "text": "Banyak pengunjung kategori pelajar pada bulan Agustus merupakan yang paling tinggi di antara kelima bulan"
+    },
+    {
+      "key": "B",
+      "text": "Banyak pengunjung kategori umum pada bulan Mei merupakan yang paling tinggi di antara kelima bulan"
+    },
+    {
+      "key": "C",
+      "text": "Banyak pengunjung kategori rombongan pada bulan September lebih banyak 250 orang daripada bulan Mei"
+    },
+    {
+      "key": "D",
+      "text": "Sebagian besar pengunjung Perpustakaan Daerah pada periode tersebut berusia di bawah 20 tahun"
+    },
+    {
+      "key": "E",
+      "text": "Jumlah total pengunjung pada bulan September lebih sedikit 900 orang daripada bulan Mei"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Pada kolom pelajar tercatat Mei 540, Juni 610, Juli 780, Agustus 920, dan September 660 orang; nilai 920 pada bulan Agustus adalah yang paling tinggi di antara kelima bulan tersebut.",
+    "B": "Salah. Pada kolom umum, bulan Mei mencatat 980 pengunjung, tetapi bulan Juni mencatat 1.060 pengunjung, sehingga Mei bukan bulan dengan pengunjung umum paling tinggi.",
+    "C": "Salah. Pengunjung rombongan bulan September tercatat 150 orang, sedangkan bulan Mei 180 orang; September justru lebih sedikit 30 orang, bukan lebih banyak 250 orang.",
+    "D": "Salah. Tabel hanya menggolongkan pengunjung menurut kategori pelajar, umum, dan rombongan tanpa memuat data usia, sehingga klaim tentang sebagian besar pengunjung berusia di bawah 20 tahun tidak dapat dikonfirmasi maupun dibantah dari tabel.",
+    "E": "Salah. Total pengunjung Mei adalah 540 + 980 + 180 = 1.700 orang dan total September adalah 660 + 790 + 150 = 1.600 orang, sehingga September lebih sedikit 100 orang, bukan 900 orang."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

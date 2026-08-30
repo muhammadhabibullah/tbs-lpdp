@@ -1,0 +1,43 @@
+{
+  "id": "15-pemecahan_masalah-007",
+  "package": 15,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Seorang mahasiswa program studi hubungan internasional harus memilih tepat empat dari tujuh mata kuliah berikut untuk dua semester mendatang: A Hukum Internasional, B Metodologi Penelitian, C Ekonomi Internasional, D Keamanan Internasional, E Statistika, F Diplomasi dan Negosiasi, serta G Organisasi Internasional. Ketentuan pemilihan: (1) mata kuliah B wajib dipilih, (2) jika mata kuliah C dipilih, mata kuliah E harus dipilih, (3) mata kuliah A dan D tidak dapat dipilih bersama karena jadwal keduanya bertabrakan, (4) jika mata kuliah F dipilih, mata kuliah D harus dipilih sebagai prasyaratnya, (5) paling sedikit satu dari mata kuliah D dan E harus dipilih, dan (6) mata kuliah A dan G tidak dapat dipilih bersama. Kombinasi mata kuliah yang memenuhi seluruh ketentuan adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "A, B, C, dan G"
+    },
+    {
+      "key": "B",
+      "text": "A, B, C, dan E"
+    },
+    {
+      "key": "C",
+      "text": "A, B, E, dan G"
+    },
+    {
+      "key": "D",
+      "text": "A, D, E, dan G"
+    },
+    {
+      "key": "E",
+      "text": "B, C, E, dan F"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Kombinasi ini memilih C tanpa menyertakan E sehingga melanggar ketentuan (2); selain itu A dan G dipilih bersama sehingga juga melanggar ketentuan (6).",
+    "B": "Benar. B sebagai mata kuliah wajib turut terpilih sehingga ketentuan (1) terpenuhi; C dipilih bersama E sehingga ketentuan (2) terpenuhi; D tidak dipilih sehingga A tidak melanggar ketentuan (3); F tidak dipilih sehingga ketentuan (4) tidak berlaku; E terpilih sehingga ketentuan (5) terpenuhi; dan G tidak dipilih sehingga ketentuan (6) terpenuhi. Seluruh ketentuan dipenuhi.",
+    "C": "Salah. Kombinasi ini memilih A dan G sekaligus sehingga melanggar ketentuan (6) yang melarang keduanya dipilih bersama.",
+    "D": "Salah. Kombinasi ini memilih A dan D sekaligus sehingga melanggar ketentuan (3); pasangan A dan G yang terpilih bersama juga melanggar ketentuan (6).",
+    "E": "Salah. Kombinasi ini memilih F tanpa menyertakan D sehingga melanggar ketentuan (4) yang menjadikan D prasyarat bagi F."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

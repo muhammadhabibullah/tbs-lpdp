@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-014",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Tidak semua petani yang lahannya terdampak kekeringan menerima bantuan benih. Sebagian petani yang menerima bantuan benih juga menerima asuransi gagal panen.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Petani yang lahannya terdampak kekeringan belum tentu menerima asuransi gagal panen."
+    },
+    {
+      "key": "B",
+      "text": "Sebagian petani yang menerima bantuan benih pasti terdampak kekeringan."
+    },
+    {
+      "key": "C",
+      "text": "Semua petani yang menerima bantuan benih juga menerima asuransi gagal panen."
+    },
+    {
+      "key": "D",
+      "text": "Petani yang tidak menerima bantuan benih pasti menerima asuransi gagal panen."
+    },
+    {
+      "key": "E",
+      "text": "Semua petani yang menerima asuransi gagal panen lahannya terdampak kekeringan."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Premis pertama memastikan adanya petani terdampak kekeringan yang tidak menerima benih, dan tidak ada premis yang menjamin asuransi bagi mereka; petani penerima benih yang berasuransi pun belum tentu terdampak kekeringan. Satu-satunya simpulan yang sah adalah keraguan ini.",
+    "B": "Premis hanya menyatakan sebagian petani terdampak kekeringan menerima benih, bukan arah sebaliknya; penerima benih bisa saja berasal dari kelompok lain.",
+    "C": "Premis kedua hanya menyebut sebagian penerima benih yang menerima asuransi, sehingga simpulan semua ini mengabaikan kata sebagian.",
+    "D": "Tidak ada premis yang mengaitkan ketiadaan bantuan benih dengan penerimaan asuransi; simpulan ini murni karangan.",
+    "E": "Simpulan ini membalik arah hubungan; premis tidak pernah menyatakan penerima asuransi berasal dari petani yang terdampak kekeringan."
+  },
+  "difficulty": "medium",
+  "source": "codex-generated",
+  "verified": true
+}

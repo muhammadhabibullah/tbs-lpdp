@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-023",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Andi berangkat dari kota P menuju kota Q mengendarai mobil dengan kecepatan tetap 40 km/jam pada pukul 07.00. Pada pukul 07.30, Budi berangkat dari kota P menyusul Andi melalui jalan yang sama dengan kecepatan tetap 60 km/jam. Budi berhasil menyusul Andi pada pukul ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "08.30"
+    },
+    {
+      "key": "B",
+      "text": "09.00"
+    },
+    {
+      "key": "C",
+      "text": "09.30"
+    },
+    {
+      "key": "D",
+      "text": "10.00"
+    },
+    {
+      "key": "E",
+      "text": "10.30"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Saat Budi berangkat pukul 07.30, Andi sudah menempuh 40 × 0,5 = 20 km. Kecepatan Budi mendekati Andi sebesar 60 − 40 = 20 km/jam, sehingga jarak 20 km tertutup dalam 20 : 20 = 1 jam. Budi menyusul Andi pukul 07.30 + 1 jam = 08.30.",
+    "B": "Salah. 09.00 diperoleh bila jarak awal dihitung memakai kecepatan Budi, yaitu 60 × 0,5 = 30 km, sehingga waktu menyusul 30 : 20 = 1,5 jam setelah pukul 07.30.",
+    "C": "Salah. 09.30 diperoleh bila selisih waktu keberangkatan dianggap 1 jam, sehingga jarak awal 40 × 1 = 40 km dan waktu menyusul 40 : 20 = 2 jam setelah pukul 07.30.",
+    "D": "Salah. 10.00 diperoleh bila Budi dianggap baru berangkat pukul 08.00: jarak Andi setelah t jam memenuhi 40t = 60(t − 1), yaitu t = 3 jam setelah pukul 07.00.",
+    "E": "Salah. 10.30 diperoleh bila selisih waktu keberangkatan dihitung 1,5 jam, sehingga jarak awal 40 × 1,5 = 60 km dan waktu menyusul 60 : 20 = 3 jam setelah pukul 07.30."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "15-pemecahan_masalah-002",
+  "package": 15,
+  "subtest": "pemecahan_masalah",
+  "number": 2,
+  "type": "peluang_kombinatorik",
+  "question_text": "Dari 9 hari berturut-turut, sebuah tim harus memilih tepat dua hari untuk melakukan pemeriksaan. Kedua hari yang dipilih tidak boleh berurutan. Banyak pasangan hari yang dapat dipilih adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "8"
+    },
+    {
+      "key": "B",
+      "text": "36"
+    },
+    {
+      "key": "C",
+      "text": "28"
+    },
+    {
+      "key": "D",
+      "text": "56"
+    },
+    {
+      "key": "E",
+      "text": "72"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai 8 diperoleh dengan menghitung 8 pasangan hari yang justru berurutan.",
+    "B": "Salah. Nilai 36 diperoleh dengan menghitung seluruh C(9, 2) pasangan tanpa mengeluarkan pasangan hari yang berurutan.",
+    "C": "Benar. Seluruh pasangan dua hari berjumlah C(9, 2) = 36. Pasangan hari yang berurutan ada 8, sehingga pasangan yang tidak berurutan berjumlah 36 − 8 = 28.",
+    "D": "Salah. Nilai 56 diperoleh dengan menghitung setiap pasangan hari tidak berurutan dua kali, yaitu berdasarkan urutan hari pertama dan hari kedua.",
+    "E": "Salah. Nilai 72 diperoleh dengan menghitung pilihan hari pertama dan kedua dengan memperhatikan urutan serta mengabaikan larangan hari berurutan."
+  },
+  "difficulty": "medium",
+  "source": "peluang_kombinatorik.py",
+  "verified": true
+}

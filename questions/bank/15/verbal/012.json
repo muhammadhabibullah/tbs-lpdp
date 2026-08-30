@@ -1,0 +1,43 @@
+{
+  "id": "15-verbal-012",
+  "package": 15,
+  "subtest": "verbal",
+  "number": 12,
+  "type": "analogi",
+  "question_text": "GUGUS : BINTANG = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Bintang : gugus"
+    },
+    {
+      "key": "B",
+      "text": "Rak : buku"
+    },
+    {
+      "key": "C",
+      "text": "Kawanan : burung"
+    },
+    {
+      "key": "D",
+      "text": "Tangkai : bunga"
+    },
+    {
+      "key": "E",
+      "text": "Danau : air"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Pasangan ini membalik urutan pasangan stimulus; jika gugus adalah kumpulan bintang, kebalikannya bukan hubungan yang sama.",
+    "B": "Rak adalah tempat menyimpan buku; hubungan yang berlaku adalah tempat dan benda yang disimpannya, bukan istilah kumpulan dan anggotanya.",
+    "C": "Benar. Hubungannya adalah istilah kumpulan dan anggotanya: gugus adalah sebutan kumpulan bintang, sebagaimana kawanan adalah sebutan kumpulan burung.",
+    "D": "Tangkai adalah bagian penopang bunga; hubungan keduanya adalah bagian penyangga dan benda yang ditopangnya.",
+    "E": "Danau mengandung air; pasangan ini menyatakan tempat dan isinya, bukan istilah kumpulan dan anggotanya."
+  },
+  "difficulty": "hard",
+  "source": "codex-generated",
+  "verified": true
+}

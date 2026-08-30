@@ -1,0 +1,43 @@
+{
+  "id": "15-kuantitatif-018",
+  "package": 15,
+  "subtest": "kuantitatif",
+  "number": 18,
+  "type": "kecukupan_data",
+  "question_text": "Pada gambar di atas, garis l sejajar dengan garis m, sedangkan garis k dan garis n memotong keduanya. Berapakah nilai y?\n(1) Nilai x adalah 140.\n(2) Besar ∠PTR adalah 115°.\nPutuskan apakah pernyataan (1) dan (2) yang diberikan cukup untuk menjawab pertanyaan tersebut.",
+  "image": "images/kd-garis-sejajar.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup"
+    },
+    {
+      "key": "B",
+      "text": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup"
+    },
+    {
+      "key": "C",
+      "text": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup"
+    },
+    {
+      "key": "D",
+      "text": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup untuk menjawab pertanyaan"
+    },
+    {
+      "key": "E",
+      "text": "Pernyataan (1) dan (2) BERSAMA-SAMA tidak cukup untuk menjawab pertanyaan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [x = 140, z = 155] dan [x = 140, z = 150] sama-sama memenuhinya, tetapi memberikan nilai y sebesar 115 dan 110.",
+    "B": "Benar. Karena l ∥ m, sudut di P dan sudut di Q sehadap, sehingga pada segitiga QSR berlaku (180 − x) + (180 − z) + y = 180, yaitu y = x + z − 180; yang dibutuhkan hanyalah jumlah x dan z. Pernyataan (2) menentukan nilai y secara tunggal, yaitu 115; pernyataan (1) saja tidak cukup, sebab keadaan [x = 140, z = 155] dan [x = 140, z = 150] sama-sama memenuhinya, tetapi memberikan nilai y sebesar 115 dan 110.",
+    "C": "Salah. Pernyataan (2) menentukan nilai y secara tunggal, yaitu 115.",
+    "D": "Salah. Pernyataan (1) saja tidak cukup, sebab keadaan [x = 140, z = 155] dan [x = 140, z = 150] sama-sama memenuhinya, tetapi memberikan nilai y sebesar 115 dan 110.",
+    "E": "Salah. Pernyataan (1) dan (2) bersama-sama menentukan nilai y secara tunggal, yaitu 115."
+  },
+  "difficulty": "medium",
+  "source": "kecukupan_data.py",
+  "verified": true
+}
