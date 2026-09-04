@@ -1,0 +1,1 @@
+JSON Schema for validation; Python generator using NumPy/Pandas for deterministic question generation; Supabase client for publishing; SVG assets for geometry figures; npm packages for frontend distribution of each bank tier.

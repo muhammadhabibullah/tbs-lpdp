@@ -1,1 +1,0 @@
-JSON Schema + npm packages for the static question bank; Python (NumPy/Pandas implied by generator) with Supabase client for generation and publishing; SVG images for geometry figures.

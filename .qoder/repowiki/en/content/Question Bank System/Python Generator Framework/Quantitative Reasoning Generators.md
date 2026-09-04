@@ -14,8 +14,17 @@
 - [kecukupan_data_predikat.py](file://questions/generator/kecukupan_data_predikat.py)
 - [001.json](file://questions/bank/1/kuantitatif/001.json)
 - [002.json](file://questions/bank/1/kuantitatif/002.json)
+- [024.json](file://questions/bank/15/kuantitatif/024.json)
+- [025.json](file://questions/bank/15/kuantitatif/025.json)
 - [bankSchema.ts](file://web/src/lib/bankSchema.ts)
 </cite>
+
+## Update Summary
+**Changes Made**
+- Updated Figure-Based Questions section to document the two new geometric figure generators
+- Added specific examples from Package 15 showing the new annular track and right triangle parallel cut figures
+- Enhanced the Figures module description with details about the new capabilities
+- Updated configuration options to include references to the new figure types
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -284,7 +293,7 @@ Com-->>Bank : <package>/kuantitatif/<NNN>.json
 - Purpose: Generate data sufficiency items where the key is a claim about sufficiency, not just a numeric answer.
 - Algorithms:
   - Exact linear algebra over Fractions to determine if quantities are pinned down; rank comparison decides sufficiency.
-  - Witness pairs for “not sufficient” claims, found in null space and scaled to realistic integer assignments.
+  - Witness pairs for "not sufficient" claims, found in null space and scaled to realistic integer assignments.
   - Predicate variant uses symbolic equivalence for proofs plus exhaustive positive-integer witnesses for insufficiency.
 - Parameters:
   - --package, --count, --kind geometry (for figure-backed items), --template (predicate variant), --seed, --bank-dir.
@@ -320,11 +329,25 @@ Options --> Write["Write JSON"]
 - Purpose: Generate SVGs for geometry items and schematic diagrams for data sufficiency families.
 - Rules:
   - Measured figures scale with stem values; derived quantities are computed but never labeled.
-  - Schematic figures carry no values; they show relationships (parallel lines, right angles) and include a “not drawn to scale” note.
+  - Schematic figures carry no values; they show relationships (parallel lines, right angles) and include a "not drawn to scale" note.
 - Builders:
-  - Rectangle with inner square, cylinder, trapezoid, cuboid, circular sector, rhombus, cone, parallelogram, annular track, right triangle parallel cut, triangular prism, kite, square pyramid.
+  - Rectangle with inner square, cylinder, trapezoid, cuboid, circular sector, rhombus, cone, parallelogram, **annular track**, **right triangle parallel cut**, triangular prism, kite, square pyramid, stadium, cylinder with cone.
 - Usage:
   - --check validates SVGs against builders; --link attaches image paths to questions.
+
+**Updated** Added two new geometric figure generators for advanced quantitative reasoning questions:
+
+#### Annular Track Generator (`annular_track`)
+- **Purpose**: Creates ring-shaped track problems where students calculate areas of annular regions
+- **Parameters**: `outer_diameter_u`, `track_width_u`, `unit`, `target_d`
+- **Algorithm**: Computes inner radius from outer diameter and track width, then generates concentric circles with appropriate dimensioning
+- **Example**: Package 15 question 024 asks for coating cost of a ring-shaped track with outer diameter 42m and radial width 7m
+
+#### Right Triangle Parallel Cut Generator (`right_triangle_parallel_cut`) 
+- **Purpose**: Generates similar triangles scenarios where students find areas of trapezoidal regions
+- **Parameters**: `base_u`, `height_u`, `end_segment_u`, `unit`, `target_w`, `target_h`
+- **Algorithm**: Creates right triangle ABC with point D on base AB, draws parallel segment DE, and calculates area of trapezoid ACED using similarity principles
+- **Example**: Package 15 question 025 presents a right triangle with parallel cut, asking for the area of the resulting trapezoidal region
 
 ```mermaid
 graph LR
@@ -344,6 +367,8 @@ E --> F["Question image field"]
 - [figures.py:1-30](file://questions/generator/figures.py#L1-L30)
 - [figures.py:71-165](file://questions/generator/figures.py#L71-L165)
 - [figures.py:170-778](file://questions/generator/figures.py#L170-L778)
+- [figures.py:526-563](file://questions/generator/figures.py#L526-L563)
+- [figures.py:566-621](file://questions/generator/figures.py#L566-L621)
 
 ## Dependency Analysis
 - Generators depend on common.py for formatting, validation, and writing questions.
@@ -410,10 +435,14 @@ The quantitative reasoning generators produce high-quality, deterministic items 
 ### Example Questions
 - Arithmetic average example: see generated question showing mean calculation after adding a value.
 - Rate/proportion example: see generated question computing copies produced over time.
+- **New**: Ring-shaped track problem (Package 15, Question 024): Calculates coating costs for annular track with outer diameter 42m and radial width 7m.
+- **New**: Similar triangles scenario (Package 15, Question 025): Finds area of trapezoidal region formed by parallel cut in right triangle.
 
 **Section sources**
 - [001.json:1-44](file://questions/bank/1/kuantitatif/001.json#L1-L44)
 - [002.json:1-44](file://questions/bank/1/kuantitatif/002.json#L1-L44)
+- [024.json:1-44](file://questions/bank/15/kuantitatif/024.json#L1-L44)
+- [025.json:1-44](file://questions/bank/15/kuantitatif/025.json#L1-L44)
 
 ### Configuration Options Summary
 - Common: --package, --count, --seed, --bank-dir.

@@ -1,0 +1,1 @@
+Orchestrates the LPDP Scholastic Aptitude Test question bank by coupling a shared JSON schema and samples with a deterministic Python generator that publishes numbered packages consumed as npm artifacts.

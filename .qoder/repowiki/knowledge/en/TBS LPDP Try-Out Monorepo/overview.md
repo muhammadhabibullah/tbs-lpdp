@@ -1,1 +1,1 @@
-Monorepo that composes a React/Vite SPA, Python question-bank generator, Supabase backend, and AI agent configs into a deployable web app and offline Tauri desktop/Android package.
+Monorepo that composes a React/Vite SPA, Python question-bank generator, Supabase backend, and AI agent configs into a GitHub Pages site plus offline Tauri desktop/Android package.

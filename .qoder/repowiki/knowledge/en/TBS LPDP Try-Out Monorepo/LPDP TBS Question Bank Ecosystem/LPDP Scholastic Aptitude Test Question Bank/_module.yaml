@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: question_bank/question_bank_data
-title: LPDP Try-Out Question Bank (Packages 1–12)
+title: LPDP Scholastic Aptitude Test Question Bank
 scope:
     - questions/bank/
 source_files: []

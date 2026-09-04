@@ -1,0 +1,1 @@
+Regenerate all packages by running the generator scripts under `questions/generator/`, then commit the resulting `questions/bank/<n>/` directories; run `validate_bank.py` to validate against `schema.json` before publishing via `push_to_supabase.py`.

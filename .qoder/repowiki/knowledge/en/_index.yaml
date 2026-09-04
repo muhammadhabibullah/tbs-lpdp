@@ -3,7 +3,7 @@ schema_version: 1
 locale: en-US
 branch: master
 nodes_managed: true
-exported_at: "2026-08-22T05:10:20Z"
+exported_at: "2026-08-30T01:49:53Z"
 modules:
     "":
         dir_name: TBS LPDP Try-Out Monorepo
@@ -48,8 +48,8 @@ modules:
         related_to:
             - path: web_app/tauri_packaging
     question_bank:
-        dir_name: LPDP TBS Question Bank Suite
-        title: LPDP TBS Question Bank Suite
+        dir_name: LPDP TBS Question Bank Ecosystem
+        title: LPDP TBS Question Bank Ecosystem
         scope:
             - questions/
         source_files: []
@@ -70,8 +70,8 @@ modules:
         related_to:
             - path: supabase_backend
     question_bank/question_bank_data:
-        dir_name: LPDP Try-Out Question Bank (Packages 1–12)
-        title: LPDP Try-Out Question Bank (Packages 1–12)
+        dir_name: LPDP Scholastic Aptitude Test Question Bank
+        title: LPDP Scholastic Aptitude Test Question Bank
         scope:
             - questions/bank/
         source_files: []
