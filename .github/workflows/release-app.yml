@@ -6,9 +6,10 @@ name: Release offline app
 #   git tag app-v0.1.0 && git push origin app-v0.1.0
 #
 # The desktop matrix creates one DRAFT GitHub Release holding every installer,
-# its minisign signature, and latest.json; the Android job signs an APK and
-# uploads it into the same draft. Once both jobs complete, the publish job
-# automatically publishes the release.
+# its minisign signature, and latest.json; the Android job signs an APK and an
+# AAB, uploads both into the same draft, and uploads the AAB to the Google Play
+# internal track as a draft release (AP-11). Once all jobs complete, the
+# publish job automatically publishes the GitHub Release.
 on:
   push:
     tags: ['app-v*']
@@ -35,8 +36,9 @@ jobs:
       - id: check
         name: Tag must match tauri.conf.json, updater key must be configured
         env:
-          # Through the environment, so the secret never becomes script text.
+          # Through the environment, so the secrets never become script text.
           SIGNING_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          PLAY_KEY: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
         run: |
           set -euo pipefail
           VERSION=$(node -p "require('./web/src-tauri/tauri.conf.json').version")
@@ -55,6 +57,10 @@ jobs:
           fi
           if [ -z "${SIGNING_KEY:-}" ]; then
             echo "::error::secret TAURI_SIGNING_PRIVATE_KEY is not set (C-30)"
+            exit 1
+          fi
+          if [ -z "${PLAY_KEY:-}" ]; then
+            echo "::error::secret GOOGLE_PLAY_SERVICE_ACCOUNT_JSON is not set (v6 §5 step 4, AP-11)"
             exit 1
           fi
 
@@ -202,9 +208,11 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      # The Tauri CLI's Android template targets SDK 36, which is also what
+      # Google Play requires of new apps from 2026-08-31 onward.
       - uses: android-actions/setup-android@v3
         with:
-          packages: 'platform-tools platforms;android-34 build-tools;34.0.0 ndk;27.2.12479018'
+          packages: 'platform-tools platforms;android-36 build-tools;36.0.0 ndk;27.2.12479018'
 
       # `${{ env.X }}` only reads env blocks declared in this workflow, not the
       # runner's own environment, so ANDROID_HOME has to be expanded by the
@@ -270,9 +278,11 @@ jobs:
             > src-tauri/gen/android/keystore.properties
           node scripts/patch-android-signing.ts
 
-      - name: Build the APK
+      # The APK serves AP-7's sideload updates; the AAB is what Google Play
+      # accepts (AP-11). Both come from the same signed Gradle project.
+      - name: Build the APK and the AAB
         working-directory: web
-        run: npx tauri android build --apk --target aarch64
+        run: npx tauri android build --apk --aab --target aarch64
 
       - name: Verify the signature and rename the artifact
         id: apk
@@ -287,7 +297,7 @@ jobs:
           fi
           # AP-7: an unsigned or differently-signed APK cannot install over the
           # previous version, which would silently break every upgrade.
-          "$ANDROID_HOME"/build-tools/34.0.0/apksigner verify --print-certs "$APK"
+          "$ANDROID_HOME"/build-tools/36.0.0/apksigner verify --print-certs "$APK"
           OUT="tbs-lpdp-try-out_${{ needs.guard.outputs.version }}_arm64.apk"
           cp "$APK" "$OUT"
           echo "path=web/$OUT" >> "$GITHUB_OUTPUT"
@@ -297,8 +307,59 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload "app-v${{ needs.guard.outputs.version }}" "${{ steps.apk.outputs.path }}" --clobber
 
+      - name: Verify and rename the AAB
+        id: aab
+        working-directory: web
+        run: |
+          set -euo pipefail
+          AAB=$(find src-tauri/gen/android/app/build/outputs/bundle -name '*-release.aab' | head -n 1)
+          if [ -z "$AAB" ]; then
+            echo "::error::no release AAB was produced"
+            find src-tauri/gen/android/app/build/outputs/bundle -name '*.aab' || true
+            exit 1
+          fi
+          OUT="tbs-lpdp-try-out_${{ needs.guard.outputs.version }}_arm64.aab"
+          cp "$AAB" "$OUT"
+          echo "path=web/$OUT" >> "$GITHUB_OUTPUT"
+
+      - name: Upload the AAB into the same release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload "app-v${{ needs.guard.outputs.version }}" "${{ steps.aab.outputs.path }}" --clobber
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Install fastlane
+        run: gem install fastlane --no-document
+
+      # AP-11: lands as a DRAFT on the internal track, mirroring the draft
+      # GitHub Release — the operator reviews the build in the Play Console
+      # (store listing, rating, and data-safety forms are managed there) and
+      # promotes it. Repo variable PLAY_TRACK selects the track.
+      - name: Upload the AAB to Google Play
+        working-directory: web
+        env:
+          # Through the environment, so the key never becomes script text.
+          GOOGLE_PLAY_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          PLAY_TRACK: ${{ vars.PLAY_TRACK || 'internal' }}
+        run: |
+          set -euo pipefail
+          KEY_FILE=$(mktemp)
+          printf '%s' "$GOOGLE_PLAY_JSON" > "$KEY_FILE"
+          fastlane supply \
+            --json_key "$KEY_FILE" \
+            --package_name io.github.muhammadhabibullah.tbslpdp \
+            --aab "tbs-lpdp-try-out_${{ needs.guard.outputs.version }}_arm64.aab" \
+            --track "$PLAY_TRACK" \
+            --release_status draft \
+            --skip_upload_metadata --skip_upload_changelogs \
+            --skip_upload_images --skip_upload_screenshots
+          rm -f "$KEY_FILE"
+
   publish:
-    # Automatically publish the release once all desktop installers and the Android APK are uploaded.
+    # Automatically publish the release once all desktop installers, the Android APK, and the Play AAB upload are done.
     needs: [guard, desktop, android]
     runs-on: ubuntu-latest
     steps:

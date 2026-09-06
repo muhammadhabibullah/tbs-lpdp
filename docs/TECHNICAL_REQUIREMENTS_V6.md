@@ -6,7 +6,7 @@
 | Date | 2026-08-11 |
 | Extends | Core requirements through v5 |
 | Scope | Offline desktop/mobile app (macOS, Windows, Linux, Android) built with Tauri 2, released on GitHub Releases via GitHub Actions, with in-app application updates and pull-based question-bank updates; small web-app additions (download menu, open-source footer link) |
-| Out of scope | iOS (requires an Apple Developer Program membership for any practical distribution; revisit if one is obtained). App Store / Play Store / winget / Homebrew distribution. Any server component. |
+| Out of scope | iOS (requires an Apple Developer Program membership for any practical distribution; revisit if one is obtained). App Store / winget / Homebrew distribution (Android additionally ships to Google Play, AP-11). Any server component. |
 
 ## 1. Goal and limits
 
@@ -41,7 +41,7 @@ Vite, so each bundle contains only its own backend):
 |---|---|---|---|
 | Web production | *(default)* | `supabaseApi` | GitHub Pages (unchanged) |
 | Dev mock | `VITE_USE_MOCK=true`, dev server only | local engine + Vite middleware bank | never shipped (unchanged) |
-| **Offline app** | `VITE_OFFLINE=true` + Tauri shell | local engine + bundled/cached bank | GitHub Releases |
+| **Offline app** | `VITE_OFFLINE=true` + Tauri shell | local engine + bundled/cached bank | GitHub Releases + Google Play (Android AAB, AP-11) |
 
 Two independent update planes:
 
@@ -78,7 +78,7 @@ when code or the bank *schema* changes (AP-5 gates that case).
 
 | ID | Requirement |
 |----|-------------|
-| AP-1 | A Tauri 2 project lives at `web/src-tauri/` wrapping the existing SPA. `vite.config.ts` switches `base` to `'./'` for Tauri builds (`TAURI_ENV_PLATFORM` set) and keeps `/tbs-lpdp/` otherwise; HashRouter already makes routes host-agnostic. Targets: macOS (aarch64 + x86_64), Windows x64 (NSIS), Linux x64 (AppImage + deb + rpm), Android (arm64 APK). |
+| AP-1 | A Tauri 2 project lives at `web/src-tauri/` wrapping the existing SPA. `vite.config.ts` switches `base` to `'./'` for Tauri builds (`TAURI_ENV_PLATFORM` set) and keeps `/tbs-lpdp/` otherwise; HashRouter already makes routes host-agnostic. Targets: macOS (aarch64 + x86_64), Windows x64 (NSIS), Linux x64 (AppImage + deb + rpm), Android (arm64 APK, plus the AAB for Google Play, AP-11). |
 | AP-2 | The current `mockApi.ts` is promoted to a shared **local engine** (`localApi.ts`) behind a `BankSource` interface. Dev mock keeps the Vite-middleware source (`/__mock/bank.json`, still `apply: 'serve'` only). The offline flavor uses a source that loads, in order: the verified cached bank in the app data directory, else the bundled snapshot compiled into the app at build time. All release-pinning semantics (immutable `release_id` per attempt) carry over unchanged. |
 | AP-3 | A build-bank script (shared with the Vite mock plugin, extracted to `web/vite/bank-reader.ts` + `web/scripts/build-bank.ts`) compiles `questions/bank/` into a single self-contained `bank-<digest>.json` (images inlined as data URIs; revisit if the file exceeds ~10 MB) plus `manifest.json`. `question_version` / `last_updated_at` are derived deterministically from git history (last commit touching each file), not from in-memory counters, so republishing identical content yields an identical digest. |
 | AP-4 | **Bank updates:** on every launch, when online, the app fetches `manifest.json` (≤5 s timeout, silent failure offline) and compares `bank_version` with the active bank. If newer and schema-compatible, it downloads the bank file, verifies its SHA-256 against the manifest, writes it atomically (temp file + rename) into the app data dir, hot-swaps the in-memory bank, and shows a toast: *"Bank soal diperbarui (versi <digest>)."* A manual **"Perbarui Bank Soal"** button on the home page runs the same flow with visible progress and a clear result (updated / already latest / offline). In-progress and finished attempts are unaffected — they stay pinned to their stored release. |
@@ -88,6 +88,7 @@ when code or the bank *schema* changes (AP-5 gates that case).
 | AP-8 | **CI:** a new workflow `.github/workflows/release-app.yml` triggers on tags `app-v*` (plus `workflow_dispatch`). Desktop job: `tauri-apps/tauri-action` on a `macos-latest` / `ubuntu-22.04` / `windows-latest` matrix with `includeUpdaterJson: true`, publishing installers, updater signatures, and `latest.json` to one GitHub Release. Android job: Java 17 + Android SDK/NDK + Rust android targets, `tauri android build --apk`, sign with the keystore secret, upload the APK to the same release. The tag version must equal the `tauri.conf.json` version (CI asserts). |
 | AP-9 | Offline feature deltas, applied only under `VITE_OFFLINE`: no `MaintenanceGate` or `HumanVerificationGate` (neither concept applies), and package statistics are computed locally and labeled *"Statistik lokal (perangkat ini)"*. The report-question dialog (v2) stores **no** report state on the device: its primary action is *"Kirim via Email"*, which uses the existing prefilled `feedbackMailto()` to open a draft in the device mail app so reports can still reach the maintainer. Because nothing is stored, the reported-state controls — *✓ Sudah dilaporkan*, *Ubah*, *Batalkan laporan* (FE-13/FE-15) — and the *Dilaporkan* filter (FE-16) never appear in the app; every question keeps the plain *Laporkan soal* entry point. The web menu item added by FE-42 is hidden in the app. |
 | AP-10 | The app footer/about shows both versions — *"Aplikasi v<semver> · Bank soal <digest> (<tanggal>)"* — next to the two update actions (AP-4, AP-6), so a user can tell at a glance whether they are current. |
+| AP-11 | **Google Play distribution:** the Android job additionally builds the app bundle (`tauri android build --aab`) from the same signed Gradle project, archives it on the GitHub Release next to the APK, and a fastlane `supply` step uploads it to the Play track selected by repo variable `PLAY_TRACK` (default `internal`) as a **draft** release, authenticated with a Google Play service-account JSON key kept only in GitHub Actions secrets (C-30). The operator reviews the draft in the Play Console and promotes it; the store listing, content rating, and data-safety forms are maintained in the console, not in git. The APK keeps shipping on the release for AP-7 sideload updates. |
 
 ### 3.3 Web app additions (FE)
 
@@ -154,6 +155,14 @@ Notes:
    `ANDROID_KEY_PASSWORD`. **Back the keystore up privately** (C-30).
 3. First release: bump `web/src-tauri/tauri.conf.json` version, tag
    `app-v0.1.0`, push the tag; verify the drafted release, then publish it.
+4. **Google Play (AP-11):** create the app in the Play Console with package
+   name `io.github.muhammadhabibullah.tbslpdp` and enrol in Play App Signing —
+   the workflow's keystore (step 2) becomes the upload key, so it must be the
+   same one. Complete the store listing, content rating, and data-safety
+   forms. In the linked Google Cloud project, create a service account,
+   download its JSON key, invite that account in Play Console → Users and
+   permissions, and add secret `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON`. Repo
+   variable `PLAY_TRACK` selects the upload track (default `internal`).
 
 ## 6. Install instructions (FE-42 content)
 
@@ -203,7 +212,7 @@ YAML wraps the rendered page too.
 | `web/src/components/MenuBar.tsx`, `pages/HomePage.tsx` | "Unduh Aplikasi Offline" menu + one-button section resolving the visitor's installer from the latest release (FE-42); install steps live in the release notes |
 | `web/src/components/FeedbackFooter.tsx` | "Open Source Code" block below Kontak (FE-43) |
 | `web/src/components/UpdateControls.tsx` | App-flavor: version display, bank refresh, app update check (AP-4, AP-6, AP-10) |
-| `.github/workflows/release-app.yml` | New: tag-triggered desktop matrix + Android build → GitHub Release (AP-8) |
+| `.github/workflows/release-app.yml` | New: tag-triggered desktop matrix + Android build → GitHub Release (AP-8) + Google Play AAB upload (AP-11) |
 | `.github/workflows/deploy-web.yml` | Add bank artifact to Pages deploy; assert `VITE_OFFLINE`/`VITE_USE_MOCK` unset (C-29) |
 | `CLAUDE.md`, `web/README.md` | Document flavors, release procedure, secrets |
 
@@ -224,6 +233,7 @@ YAML wraps the rendered page too.
 | A-11 | Offline app UI | No download-app menu, no maintenance/CAPTCHA gates; local-statistics label; version line + both update actions visible; report dialog offers only *Batal* / *Kirim via Email*, with no reported-state controls and no *Dilaporkan* filter |
 | A-12 | Two consecutive bank publishes with no content change | Identical `bank_version` (NF-32); apps report "sudah terbaru" |
 | A-13 | "Unduh PDF" on the review screen, desktop app | Native print dialog opens with the whole attempt — all three subtests, every question — and "Save as PDF" writes it. Button absent on Android |
+| A-14 | Tag `app-v(N+1)` with the Play secret configured | The AAB is attached to the GitHub Release and appears as a draft release on the internal track in the Play Console; the release still carries the signed APK |
 
 ## 9. Phased rollout
 
@@ -337,6 +347,18 @@ this repository:
 Until step 1 is done, `npm run app:build` still produces working installers only
 with `TAURI_SIGNING_PRIVATE_KEY` set, because `createUpdaterArtifacts` is on;
 `npm run tauri build -- --no-bundle` compiles without it.
+
+**Google Play receives the AAB, not the APK (AP-11).** Play has required app
+bundles for new apps since 2021, so the Android job builds both artifacts from
+the same signed Gradle project; the APK keeps serving AP-7's sideload updates
+from the GitHub Release. The Play upload lands as a *draft* release — mirroring
+the draft GitHub Release — and the operator promotes it in the Play Console.
+Store listing text, screenshots, and the rating/data-safety forms stay
+console-managed: they are account-specific, rarely change, and fastlane-managed
+metadata would double-source them. The SDK pair installed in CI
+(`platforms;android-36`, `build-tools;36.0.0`) tracks the Tauri template's
+`compileSdk = 36`, which doubles as Google Play's target-API floor for new
+apps from 2026-08-31.
 
 Acceptance criteria A-9 through A-12 and the offline halves of A-1/A-3 were
 verified locally (flavor isolation greps, reproducible publishes, the full exam
