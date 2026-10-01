@@ -101,6 +101,8 @@ A data-sufficiency figure goes further and labels **no** value at all. Its numbe
 
 To add a figure: write (or reuse) a builder returning a `Drawing`, register it, and run `python3 questions/generator/figures.py --link`. A schematic builder takes no arguments — the moment one needs a parameter, the figure has started depending on the item, and the item's answer has started leaking into the picture.
 
+Placement is fixed by the app, not by the item: `ExamPage`/`ReviewPage` render `passage` first, then the figure, then the stem — the same order a table gets under `interpretasi_data`. A figure stem must therefore point **up**: `Perhatikan gambar ... di atas.` or `Pada gambar di atas, ...`. Never write `berikut` or `di bawah` for a figure; at that position the word points at the options, and a candidate who follows it concludes the figure is missing. That mismatch is what the Paket 13 report ("3 soal yg tidak ada gambarnya") turned out to be.
+
 Table convention for `interpretasi_data` — `|` separators, never space padding:
 
 ```

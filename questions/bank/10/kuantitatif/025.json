@@ -4,7 +4,7 @@
   "subtest": "kuantitatif",
   "number": 25,
   "type": "geometri",
-  "question_text": "Perhatikan gambar balok berikut! Sebuah balok memiliki panjang 10 cm, lebar 6 cm, dan tinggi 4 cm. Berapakah luas permukaan balok tersebut?",
+  "question_text": "Perhatikan gambar balok di atas! Sebuah balok memiliki panjang 10 cm, lebar 6 cm, dan tinggi 4 cm. Berapakah luas permukaan balok tersebut?",
   "image": "images/balok.svg",
   "passage": null,
   "options": [

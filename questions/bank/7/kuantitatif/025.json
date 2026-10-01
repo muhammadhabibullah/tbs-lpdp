@@ -4,7 +4,7 @@
   "subtest": "kuantitatif",
   "number": 25,
   "type": "geometri",
-  "question_text": "Perhatikan gambar belah ketupat berikut. Keliling belah ketupat tersebut adalah ...",
+  "question_text": "Perhatikan gambar belah ketupat di atas. Keliling belah ketupat tersebut adalah ...",
   "image": "images/belah-ketupat.svg",
   "passage": null,
   "options": [

@@ -284,10 +284,14 @@ export default function ExamPage({
 
         <div className="question-frame" style={frameStyle}>
           {question.passage ? <Passage text={question.passage} /> : null}
-          <p className="question-text">{question.question_text}</p>
+          {/* The figure renders above the stem, exactly like `passage`, because
+              every figure stem points at it with "gambar di atas". Below the
+              stem it also lands under the sticky action bar on a phone, so a
+              candidate reads a stem referring to a figure they cannot see. */}
           {question.image_url ? (
             <img className="question-image" src={question.image_url} alt={`Gambar untuk soal nomor ${question.number}`} />
           ) : null}
+          <p className="question-text">{question.question_text}</p>
           <div className="options">
             {question.options.map((option) => (
               <button

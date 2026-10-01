@@ -426,10 +426,12 @@ export default function ReviewPage() {
                   </header>
 
                   {question.passage ? <Passage text={question.passage} /> : null}
-                  <p className="question-text">{question.question_text}</p>
+                  {/* Same order as ExamPage: figure above the stem, which is
+                      what the stems' "gambar di atas" wording refers to. */}
                   {question.image_url ? (
                     <img className="question-image" src={question.image_url} alt={`Gambar soal ${question.number}`} />
                   ) : null}
+                  <p className="question-text">{question.question_text}</p>
 
                   <div>
                     {OPTION_KEYS.map((key) => {

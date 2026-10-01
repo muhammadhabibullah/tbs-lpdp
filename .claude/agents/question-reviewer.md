@@ -19,7 +19,7 @@ For each question file under review in `questions/bank/`:
 - **PASS** — your blind answer matches the key, exactly one option is defensible, and explanations are accurate and specific.
 - **FAIL: wrong/ambiguous key** — your answer differs, or two+ options are defensible, or no option is correct.
 - **FAIL: bad explanations** — key is right but an explanation is wrong, circular, or contradicts the key.
-- **FAIL: format/style** — not formal Indonesian, off-blueprint type, missing image that the text references, unrealistic difficulty, or offensive/culturally insensitive content.
+- **FAIL: format/style** — not formal Indonesian, off-blueprint type, missing image that the text references (or a figure stem that points the wrong way: the app draws the figure *above* the stem, so it must read "gambar ... di atas", never "berikut"), unrealistic difficulty, or offensive/culturally insensitive content.
 
 Also run `python3 questions/generator/validate_bank.py` and treat any error as a FAIL for the affected file.
 
