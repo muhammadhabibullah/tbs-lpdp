@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-016",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 16,
+  "type": "silogisme",
+  "question_text": "Semua peserta yang dinyatakan lulus seleksi administrasi mengikuti tes tertulis. Semua peserta yang mengikuti tes tertulis diwawancarai. Hanya peserta yang telah menyerahkan surat keterangan sehat sebelum wawancara yang diwawancarai. Sebagian peserta yang menyerahkan surat keterangan sehat sebelum wawancara mengundurkan diri setelah pengumuman.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua peserta yang dinyatakan lulus seleksi administrasi telah menyerahkan surat keterangan sehat sebelum wawancara."
+    },
+    {
+      "key": "B",
+      "text": "Semua peserta yang menyerahkan surat keterangan sehat sebelum wawancara diwawancarai."
+    },
+    {
+      "key": "C",
+      "text": "Peserta yang mengundurkan diri setelah pengumuman tidak menyerahkan surat keterangan sehat sebelum wawancara."
+    },
+    {
+      "key": "D",
+      "text": "Peserta yang tidak mengikuti tes tertulis tetap dapat diwawancarai."
+    },
+    {
+      "key": "E",
+      "text": "Semua peserta yang diwawancarai dinyatakan lulus seleksi administrasi."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Peserta yang lulus seleksi administrasi mengikuti tes tertulis, peserta yang mengikuti tes tertulis diwawancarai, dan hanya peserta yang telah menyerahkan surat keterangan sehat yang diwawancarai; rantai itu memastikan seluruh peserta yang lulus seleksi administrasi telah menyerahkan surat tersebut.",
+    "B": "Premis ketiga hanya menyatakan bahwa yang diwawancarai adalah peserta yang telah menyerahkan surat keterangan sehat, bukan bahwa semua penyerah surat otomatis diwawancarai; arah hubungannya dibaca terbalik.",
+    "C": "Premis keempat justru menyatakan sebagian penyerah surat keterangan sehat mengundurkan diri setelah pengumuman, sehingga pernyataan ini bertentangan dengan premis.",
+    "D": "Premis kedua hanya mengatur peserta yang mengikuti tes tertulis; peserta yang tidak mengikuti tes tertulis tidak diatur, sehingga status wawancaranya tidak dapat dipastikan. Pernyataan “tetap dapat diwawancarai” hanya kemungkinan, bukan simpulan yang niscaya.",
+    "E": "Premis hanya menjamin arah dari lulus seleksi administrasi menuju wawancara, bukan sebaliknya; peserta yang mengikuti tes tertulis tanpa dinyatakan lulus seleksi administrasi tidak diatur, sehingga simpulan semua ini melampaui premis."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

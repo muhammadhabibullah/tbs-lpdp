@@ -1,0 +1,43 @@
+{
+  "id": "16-pemecahan_masalah-009",
+  "package": 16,
+  "subtest": "pemecahan_masalah",
+  "number": 9,
+  "type": "interpretasi_data",
+  "question_text": "Tabel di atas menyajikan data fiktif peserta pelatihan pada empat program di Balai Latihan Kerja Kabupaten Sembadra pada tahun 2025. Berdasarkan tabel tersebut, pernyataan yang benar adalah ...",
+  "image": null,
+  "passage": "Program|Pendaftar|Lulus Seleksi|Ditempatkan\nMenjahit|320|96|72\nOtomotif|260|104|88\nTata Boga|240|60|48\nListrik|180|90|63",
+  "options": [
+    {
+      "key": "A",
+      "text": "Jumlah peserta yang ditempatkan pada program Otomotif lebih banyak 16 orang daripada jumlah peserta yang ditempatkan pada program Menjahit"
+    },
+    {
+      "key": "B",
+      "text": "Program Tata Boga merupakan program dengan jumlah pendaftar paling sedikit di antara keempat program"
+    },
+    {
+      "key": "C",
+      "text": "Program Menjahit memiliki persentase peserta yang ditempatkan terhadap pendaftar yang paling tinggi di antara keempat program"
+    },
+    {
+      "key": "D",
+      "text": "Rata-rata masa pelatihan pada keempat program adalah enam bulan"
+    },
+    {
+      "key": "E",
+      "text": "Jumlah peserta yang ditempatkan dari keempat program adalah 300 orang"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Peserta yang ditempatkan pada program Otomotif tercatat 88 orang, sedangkan pada program Menjahit 72 orang; selisihnya 88 - 72 = 16 orang. Pernyataan ini hanya menuntut pembacaan dua sel pada kolom yang sama.",
+    "B": "Salah. Jumlah pendaftar program Tata Boga adalah 240 orang, sedangkan program Listrik hanya 180 orang, sehingga program dengan pendaftar paling sedikit adalah program Listrik; memilih Tata Boga berarti berhenti pada baris yang angkanya lebih besar.",
+    "C": "Salah. Persentase peserta yang ditempatkan terhadap pendaftar pada program Menjahit adalah 72 : 320 = 22,5 persen, sedangkan program Listrik mencapai 63 : 180 = 35 persen; memilih Menjahit berarti menyamakan jumlah pendaftar terbesar dengan persentase terbesar.",
+    "D": "Salah. Tabel hanya memuat jumlah pendaftar, lulus seleksi, dan ditempatkan; tabel tidak memuat masa pelatihan, sehingga klaim tentang rata-rata masa pelatihan enam bulan tidak dapat dikonfirmasi maupun dibantah dari tabel.",
+    "E": "Salah. Jumlah peserta yang ditempatkan dari keempat program adalah 72 + 88 + 48 + 63 = 271 orang, bukan 300 orang; angka 300 muncul jika penjumlahan dibulatkan atau jika salah satu sel dihitung dua kali."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

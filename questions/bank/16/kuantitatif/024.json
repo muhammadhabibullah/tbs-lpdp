@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-024",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 24,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar lapangan di atas. Lapangan tersebut terdiri atas sebuah persegi panjang berukuran 80 m × 42 m dan sebuah setengah lingkaran pada masing-masing ujungnya. Dengan π = 22/7, keliling lapangan tersebut adalah ...",
+  "image": "images/lapangan.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "160 m"
+    },
+    {
+      "key": "B",
+      "text": "240 m"
+    },
+    {
+      "key": "C",
+      "text": "264 m"
+    },
+    {
+      "key": "D",
+      "text": "292 m"
+    },
+    {
+      "key": "E",
+      "text": "424 m"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. 160 m hanya jumlah kedua sisi panjang (2 × 80); kedua setengah lingkaran belum dihitung.",
+    "B": "Salah. 240 m adalah keliling persegi panjang 80 m × 42 m (2 × (80 + 42)); sisi selebar 42 m di kedua ujung bukan tepi lapangan karena digantikan setengah lingkaran.",
+    "C": "Salah. 264 m hanya keliling kedua setengah lingkaran, yaitu satu lingkaran penuh berdiameter 42 m; kedua sisi panjang belum ditambahkan.",
+    "D": "Benar. Kedua sisi panjang berjumlah 2 × 80 = 160 m. Dua setengah lingkaran bergabung menjadi satu lingkaran penuh berdiameter 42 m, sehingga kelilingnya π × 42 = 22/7 × 42 = 132 m. Keliling lapangan = 160 + 132 = 292 m.",
+    "E": "Salah. 424 m diperoleh dengan menghitung kedua setengah lingkaran sebagai dua lingkaran penuh, padahal keduanya bersama hanya membentuk satu lingkaran."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

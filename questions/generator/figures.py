@@ -1289,6 +1289,11 @@ FIGURES: list[Figure] = [
     Figure("15-kuantitatif-025", "segitiga-potongan-sejajar.svg",
            lambda: right_triangle_parallel_cut(
                base_u=28, height_u=21, end_segment_u=8, unit="cm")),
+    Figure("16-kuantitatif-024", "lapangan.svg", lambda: stadium(
+        length_u=80, width_u=42, unit="m")),
+    Figure("16-kuantitatif-025", "segitiga-rasio-luas.svg",
+           lambda: right_triangle_parallel_cut(
+               base_u=30, height_u=20, end_segment_u=12, unit="cm")),
 ]
 
 

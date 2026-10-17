@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-015",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 15,
+  "type": "silogisme",
+  "question_text": "Semua laporan yang diterbitkan sebelum tenggat telah melalui penyuntingan bahasa. Sebagian laporan yang telah melalui penyuntingan bahasa masih memuat data yang belum terverifikasi. Semua laporan yang memuat data yang belum terverifikasi ditandai sebagai draf.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Semua laporan yang diterbitkan sebelum tenggat memuat data yang belum terverifikasi."
+    },
+    {
+      "key": "B",
+      "text": "Laporan yang ditandai sebagai draf pasti diterbitkan sebelum tenggat."
+    },
+    {
+      "key": "C",
+      "text": "Tidak ada laporan yang diterbitkan sebelum tenggat yang ditandai sebagai draf."
+    },
+    {
+      "key": "D",
+      "text": "Laporan yang tidak melalui penyuntingan bahasa pasti tidak memuat data yang belum terverifikasi."
+    },
+    {
+      "key": "E",
+      "text": "Laporan yang diterbitkan sebelum tenggat belum tentu bebas dari data yang belum terverifikasi."
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Premis kedua hanya menyatakan sebagian laporan yang telah disunting masih memuat data belum terverifikasi, sehingga kata semua mengubah cakupan yang sebenarnya.",
+    "B": "Premis tidak menghubungkan tanda draf dengan tenggat; laporan yang ditandai draf karena datanya belum terverifikasi bisa saja belum diterbitkan atau diterbitkan setelah tenggat.",
+    "C": "Tidak ada premis yang meniadakan kemungkinan laporan yang terbit sebelum tenggat ditandai sebagai draf, sehingga pernyataan tidak ada ini melampaui bukti.",
+    "D": "Tidak ada premis yang mengaitkan laporan tanpa penyuntingan bahasa dengan data belum terverifikasi; hubungan ini dikarang dan tidak berlaku niscaya.",
+    "E": "Benar. Premis pertama hanya memastikan laporan yang terbit sebelum tenggat telah disunting, sedangkan premis kedua menyebut sebagian laporan tersunting masih memuat data belum terverifikasi; premis tidak menentukan apakah laporan yang terbit sebelum tenggat termasuk kelompok itu, sehingga kebersihannya dari data belum terverifikasi tidak dapat dipastikan."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

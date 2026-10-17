@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-015",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 15,
+  "type": "deret_angka",
+  "question_text": "11, 14, 20, 32, 56, 104, ..., ... Dua bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "200, 584"
+    },
+    {
+      "key": "B",
+      "text": "248, 584"
+    },
+    {
+      "key": "C",
+      "text": "200, 296"
+    },
+    {
+      "key": "D",
+      "text": "152, 392"
+    },
+    {
+      "key": "E",
+      "text": "200, 392"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Suku ketujuh sudah tepat, tetapi bilangan kedua 584 diperoleh dengan menambahkan selisih 192 pada suku kedelapan 392, yaitu mengulangi selisih suku ketujuh ke kedelapan alih-alih berhenti pada suku kedelapan.",
+    "B": "Salah. Suku ketujuh 248 diperoleh dengan mengalikan selisih terakhir dengan 3, bukan dengan 2, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "C": "Salah. Suku ketujuh sudah tepat, tetapi suku kedelapan 296 diperoleh dengan mengulangkan selisih suku ketujuh dan keenam (96), seolah-olah selisih deret ini tetap.",
+    "D": "Salah. Suku ketujuh 152 diperoleh dengan mengulang selisih terakhir (48) alih-alih menggandakannya, sehingga pasangan ini keliru sejak bilangan pertamanya.",
+    "E": "Benar. Selisih antarsuku berlipat dua setiap langkah: 3, 6, 12, dan seterusnya. Selisih berikutnya adalah 96, sehingga suku berikutnya 104 + 96 = 200. Dengan pola yang sama, suku kedelapan adalah 392."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "16-pemecahan_masalah-007",
+  "package": 16,
+  "subtest": "pemecahan_masalah",
+  "number": 7,
+  "type": "penalaran_kasus",
+  "question_text": "Seorang pelatih debat harus memilih tepat empat dari tujuh siswa berikut untuk mengikuti lomba tingkat provinsi: Andi, Bayu, Citra, Dika, Elin, Farid, dan Gita. Ketentuan pemilihan: (1) Andi harus dipilih, (2) jika Bayu dipilih, Citra harus dipilih, (3) Dika dan Elin tidak boleh dipilih bersama, (4) jika Citra dipilih, Gita harus dipilih, (5) paling sedikit satu dari Dika dan Farid harus dipilih, dan (6) Farid dan Gita tidak boleh dipilih bersama. Kombinasi empat siswa yang memenuhi seluruh ketentuan adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Andi, Bayu, Citra, dan Gita"
+    },
+    {
+      "key": "B",
+      "text": "Andi, Citra, Dika, dan Farid"
+    },
+    {
+      "key": "C",
+      "text": "Andi, Bayu, Dika, dan Farid"
+    },
+    {
+      "key": "D",
+      "text": "Andi, Citra, Dika, dan Gita"
+    },
+    {
+      "key": "E",
+      "text": "Andi, Dika, Elin, dan Gita"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Kombinasi ini memilih Bayu, Citra, dan Gita tanpa Dika maupun Farid, sehingga melanggar ketentuan (5) yang menuntut paling sedikit satu dari Dika dan Farid terpilih.",
+    "B": "Salah. Kombinasi ini memilih Citra tanpa Gita, sehingga melanggar ketentuan (4) yang menjadikan Gita syarat bagi Citra.",
+    "C": "Salah. Kombinasi ini memilih Bayu tanpa Citra, sehingga melanggar ketentuan (2) yang menjadikan Citra syarat bagi Bayu.",
+    "D": "Benar. Andi terpilih (ketentuan 1), sehingga tersisa tiga tempat. Bayu tidak dapat dipilih: Bayu menuntut Citra (ketentuan 2), Citra menuntut Gita (ketentuan 4), dan ketentuan (5) masih menuntut Dika atau Farid, sehingga jumlahnya melebihi empat orang. Farid juga tidak dapat dipilih: Gita lalu terlarang (ketentuan 6), Citra terlarang karena akan membawa Gita (ketentuan 4), dan Bayu sudah tersingkir, sehingga hanya Dika dan Elin yang tersisa padahal keduanya tidak boleh dipilih bersama (ketentuan 3). Karena itu ketentuan (5) memaksa Dika terpilih, Elin tidak boleh dipilih (ketentuan 3), dan dua tempat terakhir diisi Citra serta Gita yang memenuhi ketentuan (4). Kombinasinya Andi, Citra, Dika, dan Gita.",
+    "E": "Salah. Kombinasi ini memilih Dika dan Elin sekaligus, sehingga melanggar ketentuan (3) yang melarang keduanya dipilih bersama."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

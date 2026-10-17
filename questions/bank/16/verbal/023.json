@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-023",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 23,
+  "type": "reading",
+  "question_text": "Penulis bacaan di atas paling mungkin menyetujui pernyataan ...",
+  "image": null,
+  "passage": "Polusi cahaya di kawasan perkotaan kini dipandang sebagai tekanan lingkungan yang tidak ringan. Burung yang bermigrasi pada malam hari memanfaatkan posisi bintang dan medan magnet bumi untuk menentukan arah. Lampu jalan, papan iklan, dan fasad gedung yang menyala sepanjang malam mengaburkan informasi itu sehingga burung kehilangan orientasi, berputar-putar di sekitar bangunan, dan kehabisan tenaga. Kaca jendela yang diterangi dari dalam juga memantulkan lanskap yang tampak seperti ruang terbuka, sehingga burung menabraknya. Pada jalur migrasi tertentu, peristiwa semacam itu berulang pada malam yang sama setiap tahun.\n\nPerbaikan sederhana ternyata cukup berpengaruh. Sejumlah kota mewajibkan pemadaman lampu hias dan pengurangan penerangan gedung pada malam puncak migrasi, dan di kota-kota itu laporan tabrakan burung menurun tajam pada malam-malam tersebut. Namun, program itu belum menjangkau lampu jalan karena menyangkut keselamatan lalu lintas. Karena itu, penataan arah dan intensitas cahaya dinilai lebih menjanjikan daripada pemadaman menyeluruh: lampu tetap menyala untuk kebutuhan manusia, tetapi tidak lagi menyorot ke arah langit. Sayangnya, aturan semacam ini baru berlaku di beberapa kota dan penegakannya belum merata.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Pemadaman seluruh sumber cahaya kota merupakan cara terbaik mengatasi masalah."
+    },
+    {
+      "key": "B",
+      "text": "Polusi cahaya hanya berdampak pada burung yang bermigrasi pada siang hari."
+    },
+    {
+      "key": "C",
+      "text": "Pengurangan penerangan gedung pada malam puncak migrasi bermanfaat bagi burung tanpa mengorbankan keselamatan lalu lintas."
+    },
+    {
+      "key": "D",
+      "text": "Penegakan aturan pembatasan cahaya sudah merata sehingga tabrakan burung telah teratasi."
+    },
+    {
+      "key": "E",
+      "text": "Lampu jalan sebaiknya dipadamkan seluruhnya meskipun keselamatan lalu lintas terancam."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Bacaan menilai penataan arah dan intensitas cahaya lebih menjanjikan daripada pemadaman menyeluruh, sehingga pemadaman seluruh sumber cahaya bukan pilihan yang disetujui penulis.",
+    "B": "Bacaan justru menyatakan burung bermigrasi pada malam hari dan memanfaatkan bintang serta medan magnet bumi untuk menentukan arah.",
+    "C": "Benar. Bacaan menyebut pengurangan penerangan gedung dan pemadaman lampu hias pada malam puncak migrasi menurunkan tajam laporan tabrakan, sementara lampu jalan tetap dinyalakan karena menyangkut keselamatan lalu lintas; penggabungan kedua keterangan itu menunjukkan manfaat bagi burung tanpa mengorbankan keselamatan lalu lintas.",
+    "D": "Bacaan menegaskan aturan semacam itu baru berlaku di beberapa kota dan penegakannya belum merata, sehingga masalahnya belum teratasi.",
+    "E": "Bacaan justru menempatkan keselamatan lalu lintas sebagai alasan lampu jalan tidak dipadamkan, sehingga penulis tidak akan menyetujui pengorbanan itu."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

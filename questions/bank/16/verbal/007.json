@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-007",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 7,
+  "type": "antonim",
+  "question_text": "ANTUSIAS >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Bersemangat"
+    },
+    {
+      "key": "B",
+      "text": "Ragu"
+    },
+    {
+      "key": "C",
+      "text": "Apatis"
+    },
+    {
+      "key": "D",
+      "text": "Tenang"
+    },
+    {
+      "key": "E",
+      "text": "Pesimis"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Bersemangat justru menjadi padanan antusias, sehingga pilihan ini searah, bukan berlawanan.",
+    "B": "Ragu berarti belum dapat menentukan sikap; orang yang ragu belum tentu kehilangan minat atau gairah.",
+    "C": "Benar. Antusias berarti bergairah dan bersemangat terhadap sesuatu; lawannya adalah apatis, yaitu tidak peduli dan tidak berminat.",
+    "D": "Tenang menunjuk suasana batin yang tidak gelisah; ketenangan tidak berarti hilangnya semangat.",
+    "E": "Pesimis berarti cenderung melihat sisi buruk; orang pesimis masih dapat antusias terhadap hal tertentu, jadi bukan lawan katanya."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-001",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 1,
+  "type": "sinonim",
+  "question_text": "USANG = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Langka"
+    },
+    {
+      "key": "B",
+      "text": "Lapuk"
+    },
+    {
+      "key": "C",
+      "text": "Mahal"
+    },
+    {
+      "key": "D",
+      "text": "Baru"
+    },
+    {
+      "key": "E",
+      "text": "Antik"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Langka menunjuk jumlah yang sedikit atau sulit ditemukan, bukan keadaan barang yang sudah lama dipakai dan menurun mutunya.",
+    "B": "Benar. Usang berarti sudah lama sehingga keadaannya tidak baik lagi; lapuk juga menyatakan keadaan yang sudah tua dan rusak karena lama, sehingga keduanya sepadan.",
+    "C": "Mahal berkaitan dengan harga yang tinggi, sedangkan usang menyatakan umur dan kondisi barang, bukan nilainya di pasaran.",
+    "D": "Baru adalah lawan langsung usang karena menunjuk barang yang belum lama dipakai dan masih baik keadaannya.",
+    "E": "Antik menunjuk barang lama yang justru bernilai seni atau mahal; usang tidak mengandung nilai itu, melainkan keadaan yang sudah menurun mutunya."
+  },
+  "difficulty": "easy",
+  "source": "deepseek-flash",
+  "verified": true
+}

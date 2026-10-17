@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-021",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 21,
+  "type": "reading",
+  "question_text": "Pernyataan berikut yang TIDAK didukung oleh bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Polusi cahaya di kawasan perkotaan kini dipandang sebagai tekanan lingkungan yang tidak ringan. Burung yang bermigrasi pada malam hari memanfaatkan posisi bintang dan medan magnet bumi untuk menentukan arah. Lampu jalan, papan iklan, dan fasad gedung yang menyala sepanjang malam mengaburkan informasi itu sehingga burung kehilangan orientasi, berputar-putar di sekitar bangunan, dan kehabisan tenaga. Kaca jendela yang diterangi dari dalam juga memantulkan lanskap yang tampak seperti ruang terbuka, sehingga burung menabraknya. Pada jalur migrasi tertentu, peristiwa semacam itu berulang pada malam yang sama setiap tahun.\n\nPerbaikan sederhana ternyata cukup berpengaruh. Sejumlah kota mewajibkan pemadaman lampu hias dan pengurangan penerangan gedung pada malam puncak migrasi, dan di kota-kota itu laporan tabrakan burung menurun tajam pada malam-malam tersebut. Namun, program itu belum menjangkau lampu jalan karena menyangkut keselamatan lalu lintas. Karena itu, penataan arah dan intensitas cahaya dinilai lebih menjanjikan daripada pemadaman menyeluruh: lampu tetap menyala untuk kebutuhan manusia, tetapi tidak lagi menyorot ke arah langit. Sayangnya, aturan semacam ini baru berlaku di beberapa kota dan penegakannya belum merata.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Pemadaman seluruh lampu kota, termasuk lampu jalan, telah diterapkan di sejumlah kota pada malam puncak migrasi."
+    },
+    {
+      "key": "B",
+      "text": "Pemadaman lampu hias pada malam puncak migrasi diikuti penurunan laporan tabrakan burung."
+    },
+    {
+      "key": "C",
+      "text": "Kaca jendela yang diterangi dari dalam dapat membuat burung mengira ada ruang terbuka."
+    },
+    {
+      "key": "D",
+      "text": "Burung yang kehilangan orientasi dapat berputar-putar hingga kehabisan tenaga."
+    },
+    {
+      "key": "E",
+      "text": "Penegakan aturan pembatasan cahaya belum merata di kota-kota yang menerapkannya."
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Bacaan justru menyatakan program pemadaman belum menjangkau lampu jalan karena menyangkut keselamatan lalu lintas; yang diterapkan di sejumlah kota adalah pemadaman lampu hias dan pengurangan penerangan gedung.",
+    "B": "Didukung bacaan: di kota yang mewajibkan pemadaman lampu hias dan pengurangan penerangan gedung, laporan tabrakan burung menurun tajam pada malam-malam tersebut.",
+    "C": "Didukung bacaan: kaca jendela yang diterangi memantulkan lanskap yang tampak seperti ruang terbuka sehingga burung menabraknya.",
+    "D": "Didukung bacaan: burung kehilangan orientasi, berputar-putar di sekitar bangunan, dan kehabisan tenaga.",
+    "E": "Didukung bacaan: aturan semacam itu baru berlaku di beberapa kota dan penegakannya belum merata."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

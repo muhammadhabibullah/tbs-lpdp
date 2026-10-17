@@ -1,0 +1,43 @@
+{
+  "id": "16-pemecahan_masalah-003",
+  "package": 16,
+  "subtest": "pemecahan_masalah",
+  "number": 3,
+  "type": "logika_analitis",
+  "question_text": "Lima finalis lomba pidato, yaitu Alya, Bima, Citra, Danu, dan Elsa, akan tampil satu per satu pada urutan pertama sampai kelima. Diketahui: (1) Bima tampil pada urutan ketiga, (2) Danu tampil tepat setelah Alya, (3) Citra tampil sebelum Bima, (4) Alya tampil setelah Citra, dan (5) Elsa tampil sebelum Citra. Finalis yang tampil pada urutan keempat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Bima"
+    },
+    {
+      "key": "B",
+      "text": "Citra"
+    },
+    {
+      "key": "C",
+      "text": "Alya"
+    },
+    {
+      "key": "D",
+      "text": "Danu"
+    },
+    {
+      "key": "E",
+      "text": "Elsa"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Bima menempati urutan ketiga sesuai ketentuan (1); memilih Bima berarti menggeser seluruh susunan satu langkah ke belakang, sehingga Alya dianggap tampil sebelum Bima padahal ketentuan (2) menempatkan Alya tepat sebelum Danu di urutan keempat dan kelima.",
+    "B": "Salah. Citra menempati urutan kedua karena harus tampil sebelum Bima (ketentuan 3) dan didahului Elsa (ketentuan 5); urutan keempat sudah ditempati Alya, bukan Citra.",
+    "C": "Benar. Bima di urutan ketiga (ketentuan 1). Pasangan Alya-Danu harus berurutan (ketentuan 2), dan karena Alya harus tampil setelah Citra (ketentuan 4) sedangkan urutan ketiga sudah diisi Bima, satu-satunya tempat bagi pasangan itu adalah urutan keempat dan kelima. Dua urutan tersisa, yaitu pertama dan kedua, diisi Elsa dan Citra; karena Elsa harus tampil sebelum Citra (ketentuan 5), Elsa di urutan pertama dan Citra di urutan kedua. Susunannya Elsa, Citra, Bima, Alya, Danu, sehingga urutan keempat adalah Alya.",
+    "D": "Salah. Danu menempati urutan kelima karena tampil tepat setelah Alya (ketentuan 2); memilih Danu berarti menghitung satu urutan terlalu jauh ke belakang.",
+    "E": "Salah. Elsa menempati urutan pertama karena harus tampil sebelum Citra (ketentuan 5) dan tidak mungkin berada setelah Bima yang sudah menempati urutan ketiga."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-011",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 11,
+  "type": "analogi",
+  "question_text": "SAYAP : PESAWAT = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Adegan : film"
+    },
+    {
+      "key": "B",
+      "text": "Pesawat : sayap"
+    },
+    {
+      "key": "C",
+      "text": "Bahan bakar : pesawat"
+    },
+    {
+      "key": "D",
+      "text": "Pilot : pesawat"
+    },
+    {
+      "key": "E",
+      "text": "Bandara : pesawat"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Sayap adalah bagian dari pesawat, sebagaimana adegan adalah bagian dari film; hubungannya bagian dan keseluruhan.",
+    "B": "Pasangan ini membalik urutan stimulus: yang hadir lebih dahulu adalah keseluruhan, bukan bagiannya.",
+    "C": "Bahan bakar adalah sumber daya yang menjalankan pesawat, bukan bagian dari pesawat itu.",
+    "D": "Pilot adalah orang yang mengendalikan pesawat, bukan bagian dari pesawat.",
+    "E": "Bandara adalah tempat pesawat beroperasi, bukan bagian dari pesawat."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

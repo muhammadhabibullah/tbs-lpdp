@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-013",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 13,
+  "type": "deret_angka",
+  "question_text": "−4, −6, −3, −12, ..., ..., −77 Dua bilangan yang tepat untuk mengisi titik-titik tersebut berturut-turut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−17, −11"
+    },
+    {
+      "key": "B",
+      "text": "−7, −13"
+    },
+    {
+      "key": "C",
+      "text": "−17, −12"
+    },
+    {
+      "key": "D",
+      "text": "−21, −30"
+    },
+    {
+      "key": "E",
+      "text": "−14, −11"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Operasinya berulang dalam siklus tiga langkah — kurangi, tambah, lalu kali — sementara bilangan operasinya naik satu setiap langkah dan tidak ikut diulang: −2, +3, ×4, −5, +6, ×7. Langkah keenam adalah kali 7, sehingga −11 × 7 = −77. Dua bilangan yang hilang adalah −17 dan −11; suku terakhir yang tercetak (−77) mengonfirmasi pola tersebut.",
+    "B": "Salah. Pasangan ini diperoleh dengan menukar urutan kedua operasi dalam siklus (tambah dulu, baru kurangi).",
+    "C": "Salah. Pasangan ini diperoleh dengan menghitung suku kelima dengan benar, tetapi memakai bilangan 5 lagi untuk suku keenam alih-alih menaikkannya menjadi 6.",
+    "D": "Salah. Pasangan ini diperoleh dengan menganggap selisih deret tetap sebesar selisih dua suku tercetak terakhir (−9), yang tidak membawa deret sampai ke suku terakhir.",
+    "E": "Salah. Pasangan ini diperoleh dengan mengulang bilangan operasi dari awal (2, 3) ketika siklus berulang, padahal bilangan itu terus naik ke 5 dan 6."
+  },
+  "difficulty": "hard",
+  "source": "deret_angka.py",
+  "verified": true
+}

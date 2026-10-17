@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-004",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 4,
+  "type": "aritmetika",
+  "question_text": "Diketahui a : b = 5 : 4. Apabila a = 40, berapakah nilai b?",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "32"
+    },
+    {
+      "key": "B",
+      "text": "72"
+    },
+    {
+      "key": "C",
+      "text": "50"
+    },
+    {
+      "key": "D",
+      "text": "8"
+    },
+    {
+      "key": "E",
+      "text": "160"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. a : b = 5 : 4, sehingga b = a × 4/5 = 40 × 4/5 = 32.",
+    "B": "Salah. Nilai 72 diperoleh dengan menghitung jumlah a dan b, bukan nilai b saja.",
+    "C": "Salah. Nilai 50 diperoleh dengan membalik perbandingan sehingga menghitung 40 × 5/4.",
+    "D": "Salah. Nilai 8 diperoleh dengan berhenti pada faktor pengali perbandingan (40 ÷ 5) dan tidak mengalikannya kembali.",
+    "E": "Salah. Nilai 160 diperoleh dengan mengalikan dengan 4 tanpa membaginya dengan 5."
+  },
+  "difficulty": "easy",
+  "source": "aritmetika.py",
+  "verified": true
+}

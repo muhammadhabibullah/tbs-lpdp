@@ -1,0 +1,43 @@
+{
+  "id": "16-pemecahan_masalah-008",
+  "package": 16,
+  "subtest": "pemecahan_masalah",
+  "number": 8,
+  "type": "penalaran_kasus",
+  "question_text": "Sebuah ekspedisi ilmiah memerlukan tepat lima dari sembilan pendaftar berikut: Arman, Bunga, Cakra, Dewi, Erwin, Fahmi, Gita, Hendra, dan Intan. Ketentuan seleksi: (1) Arman harus dipilih sebagai koordinator lapangan, (2) Erwin harus dipilih sebagai tenaga medis, (3) Gita harus dipilih sebagai navigator, (4) paling sedikit satu dari Cakra dan Hendra harus dipilih untuk menangani peralatan, (5) jika Hendra dipilih, Bunga harus dipilih, dan (6) Cakra dan Gita tidak boleh dipilih bersama. Kombinasi lima peserta yang memenuhi seluruh ketentuan adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Bunga, Erwin, Gita, Hendra, dan Intan"
+    },
+    {
+      "key": "B",
+      "text": "Arman, Bunga, Cakra, Erwin, dan Intan"
+    },
+    {
+      "key": "C",
+      "text": "Arman, Bunga, Erwin, Gita, dan Hendra"
+    },
+    {
+      "key": "D",
+      "text": "Arman, Bunga, Erwin, Gita, dan Intan"
+    },
+    {
+      "key": "E",
+      "text": "Arman, Dewi, Erwin, Gita, dan Hendra"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Kombinasi ini tidak memuat Arman, sehingga melanggar ketentuan (1) yang mewajibkan Arman terpilih; ketentuan lain terpenuhi, tetapi satu pelanggaran sudah cukup menggugurkan kombinasi ini.",
+    "B": "Salah. Kombinasi ini tidak memuat Gita, sehingga melanggar ketentuan (3) yang mewajibkan Gita terpilih; akibatnya ketentuan (6) tidak sempat diuji.",
+    "C": "Benar. Ketentuan (1), (2), dan (3) mengunci Arman, Erwin, dan Gita, sehingga tersisa dua tempat. Karena Gita terpilih, Cakra tidak boleh dipilih (ketentuan 6), sehingga ketentuan (4) memaksa Hendra terpilih. Ketentuan (5) kemudian mewajibkan Bunga terpilih. Kelima tempat terisi oleh Arman, Bunga, Erwin, Gita, dan Hendra, sedangkan Dewi, Fahmi, dan Intan tidak terpilih.",
+    "D": "Salah. Kombinasi ini tidak memuat Cakra maupun Hendra, sehingga melanggar ketentuan (4) yang menuntut paling sedikit satu dari keduanya terpilih.",
+    "E": "Salah. Kombinasi ini memilih Hendra tanpa Bunga, sehingga melanggar ketentuan (5) yang menjadikan Bunga syarat bagi Hendra."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-014",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 14,
+  "type": "silogisme",
+  "question_text": "Jika suatu daerah dilanda kekeringan panjang, pasokan air bersih di daerah itu menurun. Jika pasokan air bersih menurun, harga air kemasan di daerah itu meningkat. Saat ini harga air kemasan di Daerah X tidak meningkat.\nSimpulan yang tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Daerah X dilanda kekeringan panjang, tetapi pasokan air bersihnya tidak menurun."
+    },
+    {
+      "key": "B",
+      "text": "Pasokan air bersih di Daerah X pasti menurun."
+    },
+    {
+      "key": "C",
+      "text": "Daerah X tidak dilanda kekeringan panjang."
+    },
+    {
+      "key": "D",
+      "text": "Semua daerah yang tidak dilanda kekeringan panjang memiliki harga air kemasan yang stabil."
+    },
+    {
+      "key": "E",
+      "text": "Harga air kemasan di Daerah X akan meningkat pada musim kemarau berikutnya."
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Pernyataan ini bertentangan dengan premis pertama: kekeringan panjang selalu menurunkan pasokan air bersih, sehingga pasokan yang tidak menurun tidak mungkin menyertai kekeringan.",
+    "B": "Premis kedua dan ketiga menutup kemungkinan ini; bila pasokan menurun, harga air kemasan semestinya meningkat, padahal harga di Daerah X tidak meningkat.",
+    "C": "Benar. Harga yang tidak meningkat berarti pasokan air tidak menurun (kontraposisi premis kedua), dan pasokan yang tidak menurun berarti Daerah X tidak dilanda kekeringan panjang (kontraposisi premis pertama).",
+    "D": "Premis hanya mengatur arah dari kekeringan menuju kenaikan harga, bukan sebaliknya; daerah tanpa kekeringan pun dapat mengalami kenaikan harga karena sebab lain.",
+    "E": "Kemungkinan ini tidak dijamin premis mana pun; simpulan silogisme harus berlaku niscaya, sedangkan pernyataan ini hanya prediksi yang mungkin terjadi."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-022",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 22,
+  "type": "reading",
+  "question_text": "Hubungan antara paragraf pertama dan paragraf kedua dalam bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Polusi cahaya di kawasan perkotaan kini dipandang sebagai tekanan lingkungan yang tidak ringan. Burung yang bermigrasi pada malam hari memanfaatkan posisi bintang dan medan magnet bumi untuk menentukan arah. Lampu jalan, papan iklan, dan fasad gedung yang menyala sepanjang malam mengaburkan informasi itu sehingga burung kehilangan orientasi, berputar-putar di sekitar bangunan, dan kehabisan tenaga. Kaca jendela yang diterangi dari dalam juga memantulkan lanskap yang tampak seperti ruang terbuka, sehingga burung menabraknya. Pada jalur migrasi tertentu, peristiwa semacam itu berulang pada malam yang sama setiap tahun.\n\nPerbaikan sederhana ternyata cukup berpengaruh. Sejumlah kota mewajibkan pemadaman lampu hias dan pengurangan penerangan gedung pada malam puncak migrasi, dan di kota-kota itu laporan tabrakan burung menurun tajam pada malam-malam tersebut. Namun, program itu belum menjangkau lampu jalan karena menyangkut keselamatan lalu lintas. Karena itu, penataan arah dan intensitas cahaya dinilai lebih menjanjikan daripada pemadaman menyeluruh: lampu tetap menyala untuk kebutuhan manusia, tetapi tidak lagi menyorot ke arah langit. Sayangnya, aturan semacam ini baru berlaku di beberapa kota dan penegakannya belum merata.",
+  "options": [
+    {
+      "key": "A",
+      "text": "Paragraf kedua membantah temuan yang dipaparkan pada paragraf pertama."
+    },
+    {
+      "key": "B",
+      "text": "Paragraf pertama berisi contoh, sedangkan paragraf kedua berisi klasifikasi."
+    },
+    {
+      "key": "C",
+      "text": "Paragraf kedua mengulang pernyataan paragraf pertama dengan bahasa yang berbeda."
+    },
+    {
+      "key": "D",
+      "text": "Paragraf pertama menjelaskan mekanisme masalah, sedangkan paragraf kedua memaparkan upaya penanganan beserta keterbatasannya."
+    },
+    {
+      "key": "E",
+      "text": "Paragraf pertama mengajukan solusi, sedangkan paragraf kedua menjelaskan penyebab masalah."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Paragraf kedua tidak membantah paragraf pertama; ia melanjutkan dengan membahas upaya perbaikan atas masalah yang diuraikan sebelumnya.",
+    "B": "Paragraf pertama bukan kumpulan contoh yang diklasifikasikan pada paragraf kedua; keduanya memiliki fungsi berbeda, yaitu pemaparan masalah dan penanganannya.",
+    "C": "Paragraf kedua tidak mengulang paragraf pertama; isinya menambahkan informasi baru tentang kota yang menerapkan pembatasan cahaya dan kendalanya.",
+    "D": "Benar. Paragraf pertama menguraikan sebab dan mekanisme gangguan cahaya terhadap burung, sedangkan paragraf kedua menyajikan hasil upaya pembatasan cahaya, kendalanya, dan penilaian atas pilihan kebijakan.",
+    "E": "Urutannya terbalik; solusi dibahas pada paragraf kedua, sedangkan penyebab dan mekanisme masalah dijelaskan pada paragraf pertama."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

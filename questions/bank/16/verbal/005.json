@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-005",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 5,
+  "type": "antonim",
+  "question_text": "TAJAM >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Bundar"
+    },
+    {
+      "key": "B",
+      "text": "Kusam"
+    },
+    {
+      "key": "C",
+      "text": "Licin"
+    },
+    {
+      "key": "D",
+      "text": "Tumpul"
+    },
+    {
+      "key": "E",
+      "text": "Rata"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Bundar menyatakan bentuk yang menyerupai lingkaran, bukan sisi yang tidak dapat memotong.",
+    "B": "Kusam menunjuk warna atau cahaya yang tidak cerah, bukan sisi yang tidak tajam.",
+    "C": "Licin menyatakan permukaan yang mudah dilewati benda lain, tidak berkaitan dengan ketajaman.",
+    "D": "Benar. Tajam berarti bertepi atau berujung yang dapat memotong dan melukai; lawan katanya adalah tumpul, yaitu tidak bertepi tajam.",
+    "E": "Rata menyatakan permukaan yang tidak bergelombang atau tidak berbeda tinggi, bukan sisi yang tidak tajam."
+  },
+  "difficulty": "easy",
+  "source": "deepseek-flash",
+  "verified": true
+}

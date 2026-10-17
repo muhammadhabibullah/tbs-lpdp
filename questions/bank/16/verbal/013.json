@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-013",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 13,
+  "type": "analogi",
+  "question_text": "PABRIK : BARANG = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Lumbung : padi"
+    },
+    {
+      "key": "B",
+      "text": "Pasar : barang"
+    },
+    {
+      "key": "C",
+      "text": "Truk : barang"
+    },
+    {
+      "key": "D",
+      "text": "Petani : padi"
+    },
+    {
+      "key": "E",
+      "text": "Sawah : padi"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Lumbung adalah tempat menyimpan padi, bukan tempat menghasilkannya; hubungannya tempat penyimpanan dan benda yang disimpan.",
+    "B": "Pasar adalah tempat barang diperjualbelikan, bukan tempat barang dihasilkan.",
+    "C": "Truk adalah alat pengangkut barang, bukan tempat barang dihasilkan.",
+    "D": "Petani menghasilkan padi, tetapi petani adalah orang, bukan tempat; pasangan stimulus menuntut tempat penghasil.",
+    "E": "Benar. Pabrik adalah tempat barang dihasilkan, sebagaimana sawah adalah tempat padi dihasilkan; keduanya tempat dan hasil yang berasal darinya."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

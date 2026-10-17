@@ -1,0 +1,43 @@
+{
+  "id": "16-pemecahan_masalah-011",
+  "package": 16,
+  "subtest": "pemecahan_masalah",
+  "number": 11,
+  "type": "analisis_teks",
+  "question_text": "Masalah pokok yang diangkat penulis dalam teks tersebut adalah ...",
+  "image": null,
+  "passage": "Kebijakan penilaian kinerja dosen di banyak perguruan tinggi masih bertumpu pada jumlah artikel yang diterbitkan, bukan pada mutu dan dampak penelitiannya. Dosen yang menerbitkan banyak artikel di jurnal bereputasi rendah memperoleh angka kredit lebih besar daripada dosen yang menghasilkan satu kajian mendalam dan sering dikutip. Akibatnya, penelitian yang memerlukan waktu panjang, seperti kajian lapangan dan eksperimen berulang, makin jarang diminati. Perguruan tinggi pun tampak produktif secara angka, tetapi lemah dalam menghasilkan pengetahuan yang menjawab persoalan masyarakat. Selama kuantitas tetap menjadi ukuran utama, mutu penelitian tidak akan menjadi prioritas. Karena itu, penilaian kinerja dosen perlu menimbang mutu, dampak, dan relevansi penelitian, bukan semata jumlah terbitan.",
+  "options": [
+    {
+      "key": "A",
+      "text": "banyaknya dosen yang menerbitkan artikel di jurnal bereputasi rendah"
+    },
+    {
+      "key": "B",
+      "text": "penilaian kinerja dosen yang bertumpu pada jumlah terbitan sehingga mutu penelitian terabaikan"
+    },
+    {
+      "key": "C",
+      "text": "makin jarangnya penelitian lapangan yang memerlukan waktu panjang"
+    },
+    {
+      "key": "D",
+      "text": "terbatasnya dana penelitian di perguruan tinggi"
+    },
+    {
+      "key": "E",
+      "text": "sedikitnya artikel dosen yang dikutip dalam kajian ilmiah"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Banyaknya artikel di jurnal bereputasi rendah adalah gejala yang disebut penulis sebagai akibat dari ukuran penilaian, bukan masalah pokok yang diperjuangkan; memilihnya berarti berhenti pada rincian pendukung.",
+    "B": "Benar. Sejak kalimat pertama penulis mempersoalkan penilaian kinerja dosen yang bertumpu pada jumlah artikel, lalu menutup teks dengan tuntutan agar mutu, dampak, dan relevansi penelitian menjadi pertimbangan. Rincian lain, termasuk jurnal bereputasi rendah dan penelitian lapangan yang makin jarang, berfungsi menopang masalah pokok itu.",
+    "C": "Salah. Makin jarangnya penelitian lapangan adalah akibat dari ukuran penilaian yang keliru, sehingga kedudukannya sebagai rincian pendukung, bukan masalah pokok yang diangkat penulis.",
+    "D": "Salah. Teks tidak menyinggung dana penelitian sama sekali; persoalan yang diangkat berkenaan dengan ukuran penilaian kinerja dosen, bukan pembiayaan penelitian.",
+    "E": "Salah. Teks justru menyebut kajian yang sering dikutip sebagai contoh penelitian bermutu, bukan mengeluhkan sedikitnya artikel yang dikutip."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

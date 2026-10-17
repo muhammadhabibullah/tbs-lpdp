@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-019",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 19,
+  "type": "reading",
+  "question_text": "Tujuan penulis dalam bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Polusi cahaya di kawasan perkotaan kini dipandang sebagai tekanan lingkungan yang tidak ringan. Burung yang bermigrasi pada malam hari memanfaatkan posisi bintang dan medan magnet bumi untuk menentukan arah. Lampu jalan, papan iklan, dan fasad gedung yang menyala sepanjang malam mengaburkan informasi itu sehingga burung kehilangan orientasi, berputar-putar di sekitar bangunan, dan kehabisan tenaga. Kaca jendela yang diterangi dari dalam juga memantulkan lanskap yang tampak seperti ruang terbuka, sehingga burung menabraknya. Pada jalur migrasi tertentu, peristiwa semacam itu berulang pada malam yang sama setiap tahun.\n\nPerbaikan sederhana ternyata cukup berpengaruh. Sejumlah kota mewajibkan pemadaman lampu hias dan pengurangan penerangan gedung pada malam puncak migrasi, dan di kota-kota itu laporan tabrakan burung menurun tajam pada malam-malam tersebut. Namun, program itu belum menjangkau lampu jalan karena menyangkut keselamatan lalu lintas. Karena itu, penataan arah dan intensitas cahaya dinilai lebih menjanjikan daripada pemadaman menyeluruh: lampu tetap menyala untuk kebutuhan manusia, tetapi tidak lagi menyorot ke arah langit. Sayangnya, aturan semacam ini baru berlaku di beberapa kota dan penegakannya belum merata.",
+  "options": [
+    {
+      "key": "A",
+      "text": "membandingkan keindahan cahaya kota dengan keindahan langit malam"
+    },
+    {
+      "key": "B",
+      "text": "memaparkan dampak polusi cahaya terhadap burung migran sekaligus menawarkan pendekatan penanganannya"
+    },
+    {
+      "key": "C",
+      "text": "meyakinkan pembaca agar seluruh lampu jalan dimatikan pada malam hari"
+    },
+    {
+      "key": "D",
+      "text": "menjelaskan secara rinci cara burung memanfaatkan medan magnet bumi"
+    },
+    {
+      "key": "E",
+      "text": "menolak anggapan bahwa burung memanfaatkan bintang untuk menentukan arah"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Bacaan tidak memuat perbandingan keindahan cahaya kota dengan langit malam; pembahasannya berpusat pada dampak cahaya buatan terhadap burung.",
+    "B": "Benar. Paragraf pertama memaparkan bagaimana cahaya buatan mengganggu orientasi burung hingga terjadi tabrakan, sedangkan paragraf kedua membahas upaya penanganan dan keterbatasannya; kedua bagian itu menunjukkan tujuan tersebut.",
+    "C": "Bacaan justru menyatakan program pemadaman belum menjangkau lampu jalan karena menyangkut keselamatan lalu lintas, dan penataan cahaya dinilai lebih menjanjikan daripada pemadaman menyeluruh.",
+    "D": "Medan magnet bumi hanya disebut sepintas sebagai penentu arah; bacaan tidak menjelaskan cara kerjanya secara rinci.",
+    "E": "Bacaan menegaskan burung memanfaatkan posisi bintang, bukan menolak anggapan itu."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

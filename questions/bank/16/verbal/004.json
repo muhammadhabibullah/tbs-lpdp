@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-004",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 4,
+  "type": "sinonim",
+  "question_text": "KEDAP = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rapat"
+    },
+    {
+      "key": "B",
+      "text": "Padat"
+    },
+    {
+      "key": "C",
+      "text": "Kaku"
+    },
+    {
+      "key": "D",
+      "text": "Tertutup"
+    },
+    {
+      "key": "E",
+      "text": "Kuat"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Kedap berarti rapat sehingga tidak dapat dimasuki atau dilalui air, udara, maupun bunyi; padanan yang sesuai adalah rapat.",
+    "B": "Padat menunjuk isi yang penuh dan tersusun rapat, bukan kemampuan menahan rembesan; benda padat belum tentu kedap air.",
+    "C": "Kaku menunjuk sifat tidak lentur, sedangkan kedap berkaitan dengan kemampuan menahan zat yang mencoba masuk.",
+    "D": "Tertutup berarti tidak terbuka, tetapi sesuatu yang tertutup masih dapat dilalui air atau udara bila tidak rapat.",
+    "E": "Kuat menunjuk daya tahan terhadap gaya atau tekanan, bukan kemampuan menahan air dan udara."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

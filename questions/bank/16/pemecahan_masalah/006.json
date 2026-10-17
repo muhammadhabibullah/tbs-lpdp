@@ -1,0 +1,43 @@
+{
+  "id": "16-pemecahan_masalah-006",
+  "package": 16,
+  "subtest": "pemecahan_masalah",
+  "number": 6,
+  "type": "logika_analitis",
+  "question_text": "Enam desa, yaitu Banjarsari, Karangasih, Mekarjaya, Sukamaju, Tirtawening, dan Wanasari, terletak berurutan di sepanjang tepi sebuah sungai; posisi pertama adalah yang paling hulu dan posisi keenam yang paling hilir. Diketahui: (1) Desa Tirtawening terletak tepat di hilir Desa Sukamaju, (2) Desa Banjarsari terletak di hilir Desa Mekarjaya, tetapi di hulu Desa Wanasari, (3) Desa Wanasari terletak tepat di hilir Desa Banjarsari, (4) Desa Karangasih bukan desa yang paling hulu dan bukan yang paling hilir, (5) Desa Mekarjaya terletak di hulu Desa Sukamaju, dan (6) Desa Tirtawening terletak di hulu Desa Karangasih. Desa yang terletak pada posisi ketiga dari hulu adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Banjarsari"
+    },
+    {
+      "key": "B",
+      "text": "Tirtawening"
+    },
+    {
+      "key": "C",
+      "text": "Karangasih"
+    },
+    {
+      "key": "D",
+      "text": "Sukamaju"
+    },
+    {
+      "key": "E",
+      "text": "Wanasari"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. Banjarsari menempati posisi kelima karena Wanasari harus tepat di hilirnya (ketentuan 3); memilih Banjarsari berarti menghitung dua posisi terlalu jauh ke hilir.",
+    "B": "Benar. Tirtawening tepat di hilir Sukamaju (ketentuan 1) dan Wanasari tepat di hilir Banjarsari (ketentuan 3), sehingga kedua pasangan itu menempati posisi berurutan. Karena Mekarjaya harus berada di hulu Sukamaju (ketentuan 5) sekaligus di hulu Banjarsari (ketentuan 2), Mekarjaya hanya dapat menempati posisi pertama. Empat posisi berikutnya diisi dua pasangan berurutan tersebut, dan Karangasih mengisi posisi yang tersisa. Ketentuan (6) yang menempatkan Tirtawening di hulu Karangasih menyingkirkan susunan Sukamaju-Tirtawening di posisi kelima-keenam maupun susunan yang menaruh Karangasih di posisi kedua, sehingga susunannya Mekarjaya, Sukamaju, Tirtawening, Karangasih, Banjarsari, Wanasari. Posisi ketiga dari hulu ditempati Tirtawening.",
+    "C": "Salah. Karangasih menempati posisi keempat, tepat di hilir Tirtawening; jawaban ini muncul jika ketentuan (6) dibalik, yaitu Karangasih dianggap berada di hulu Tirtawening, padahal ketentuan itu menempatkan Tirtawening di hulu Karangasih.",
+    "D": "Salah. Sukamaju menempati posisi kedua karena Tirtawening tepat di hilirnya (ketentuan 1); memilih Sukamaju berarti mundur satu posisi ke hulu.",
+    "E": "Salah. Wanasari menempati posisi keenam, yaitu desa paling hilir, karena Banjarsari tepat di hulunya (ketentuan 3); memilih Wanasari berarti menghitung tiga posisi terlalu jauh ke hilir."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

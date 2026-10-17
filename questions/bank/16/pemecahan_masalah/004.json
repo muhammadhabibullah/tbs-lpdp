@@ -1,0 +1,43 @@
+{
+  "id": "16-pemecahan_masalah-004",
+  "package": 16,
+  "subtest": "pemecahan_masalah",
+  "number": 4,
+  "type": "logika_analitis",
+  "question_text": "Enam modul pelatihan, yaitu Modul Anggaran, Modul Data, Modul Etika, Modul Komunikasi, Modul Kepemimpinan, dan Modul Risiko, dijadwalkan pada enam hari berturut-turut, hari pertama sampai hari keenam, dengan tepat satu modul pada setiap hari. Ketentuan penjadwalan: (1) Modul Komunikasi dijadwalkan pada hari pertama, (2) Modul Data dijadwalkan tepat setelah Modul Anggaran, (3) Modul Anggaran tidak dijadwalkan pada hari kedua, (4) Modul Kepemimpinan dijadwalkan pada hari kelima, dan (5) Modul Risiko dijadwalkan pada hari keenam. Modul yang dijadwalkan pada hari keempat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Modul Data"
+    },
+    {
+      "key": "B",
+      "text": "Modul Anggaran"
+    },
+    {
+      "key": "C",
+      "text": "Modul Etika"
+    },
+    {
+      "key": "D",
+      "text": "Modul Kepemimpinan"
+    },
+    {
+      "key": "E",
+      "text": "Modul Risiko"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Modul Komunikasi di hari pertama (ketentuan 1), Modul Kepemimpinan di hari kelima (ketentuan 4), dan Modul Risiko di hari keenam (ketentuan 5) meninggalkan hari kedua, ketiga, dan keempat bagi Modul Anggaran, Modul Data, dan Modul Etika. Modul Data harus tepat setelah Modul Anggaran (ketentuan 2) dan Modul Anggaran tidak boleh di hari kedua (ketentuan 3), sehingga Modul Anggaran di hari ketiga, Modul Data di hari keempat, dan Modul Etika di hari kedua. Jadi hari keempat dijadwalkan Modul Data.",
+    "B": "Salah. Modul Anggaran dijadwalkan pada hari ketiga, tepat satu hari sebelum Modul Data; memilih Modul Anggaran berarti menghitung satu hari terlalu maju.",
+    "C": "Salah. Modul Etika dijadwalkan pada hari kedua, yaitu satu-satunya hari yang tersisa setelah Modul Komunikasi, Modul Anggaran, Modul Data, Modul Kepemimpinan, dan Modul Risiko ditempatkan.",
+    "D": "Salah. Modul Kepemimpinan dijadwalkan pada hari kelima sesuai ketentuan (4), bukan pada hari keempat.",
+    "E": "Salah. Modul Risiko dijadwalkan pada hari keenam sesuai ketentuan (5), bukan pada hari keempat."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-010",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 10,
+  "type": "aljabar",
+  "question_text": "Diketahui 5x − 2y = −23 dan 2x − 2y = −14. Nilai dari 2x + 2y adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "2"
+    },
+    {
+      "key": "B",
+      "text": "−6"
+    },
+    {
+      "key": "C",
+      "text": "8"
+    },
+    {
+      "key": "D",
+      "text": "−14"
+    },
+    {
+      "key": "E",
+      "text": "1"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Menyelesaikan kedua persamaan diperoleh x = −3 dan y = 4, sehingga 2x + 2y = 2 × ((−3) + 4) = 2.",
+    "B": "Salah. Nilai −6 diperoleh dengan hanya menghitung 2x dan mengabaikan suku 2y.",
+    "C": "Salah. Nilai 8 diperoleh dengan hanya menghitung 2y dan mengabaikan suku 2x.",
+    "D": "Salah. Nilai −14 diperoleh dengan menghitung 2x − 2y, yaitu selisihnya, bukan jumlahnya.",
+    "E": "Salah. Nilai 1 diperoleh dengan berhenti pada x + y dan lupa mengalikannya dengan 2."
+  },
+  "difficulty": "hard",
+  "source": "aljabar.py",
+  "verified": true
+}

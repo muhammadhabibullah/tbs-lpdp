@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-025",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 25,
+  "type": "geometri",
+  "question_text": "Perhatikan gambar di atas. Segitiga ABC siku-siku di A dengan AB = 30 cm dan AC = 20 cm. Titik D terletak pada AB sehingga DB = 12 cm, dan DE sejajar AC dengan titik E pada BC. Perbandingan luas segitiga DBE dengan luas daerah ACED adalah ...",
+  "image": "images/segitiga-rasio-luas.svg",
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "2 : 3"
+    },
+    {
+      "key": "B",
+      "text": "4 : 21"
+    },
+    {
+      "key": "C",
+      "text": "4 : 25"
+    },
+    {
+      "key": "D",
+      "text": "2 : 5"
+    },
+    {
+      "key": "E",
+      "text": "21 : 4"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. 2 : 3 adalah perbandingan DB : AD = 12 : 18, yaitu perbandingan panjang, bukan perbandingan luas.",
+    "B": "Benar. Karena DE sejajar AC, segitiga DBE sebangun dengan segitiga ABC dengan faktor DB/AB = 12/30 = 2/5. Luas DBE = (2/5)² × luas ABC = 4/25 luas ABC, sehingga luas ACED = 21/25 luas ABC dan perbandingan DBE : ACED = 4 : 21.",
+    "C": "Salah. 4 : 25 adalah perbandingan luas DBE dengan luas ABC; luas ACED yang ditanyakan belum dihitung.",
+    "D": "Salah. 2 : 5 adalah perbandingan sisi DB : AB, bukan perbandingan luas.",
+    "E": "Salah. 21 : 4 membalik perbandingan yang diminta."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

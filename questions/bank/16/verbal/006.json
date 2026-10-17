@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-006",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 6,
+  "type": "antonim",
+  "question_text": "NETRAL >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Berpihak"
+    },
+    {
+      "key": "B",
+      "text": "Objektif"
+    },
+    {
+      "key": "C",
+      "text": "Bebas"
+    },
+    {
+      "key": "D",
+      "text": "Adil"
+    },
+    {
+      "key": "E",
+      "text": "Tegas"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Netral berarti tidak memihak kepada salah satu pihak; lawan katanya adalah berpihak, yaitu condong atau mendukung salah satu sisi.",
+    "B": "Objektif berarti bertumpu pada fakta tanpa kepentingan pribadi; sikap ini tidak berlawanan dengan netral, sehingga bukan lawan katanya.",
+    "C": "Bebas berarti tidak terikat oleh apa pun; sikap netral memang bebas dari keberpihakan, sehingga pilihan ini tidak berlawanan dengan netral, bukan lawan katanya.",
+    "D": "Adil berarti tidak berat sebelah; maknanya tidak berlawanan dengan netral, sehingga bukan lawan katanya.",
+    "E": "Tegas berarti jelas dan tidak ragu dalam bersikap; ketegasan tidak berlawanan dengan ketidakberpihakan."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

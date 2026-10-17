@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-018",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 18,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat berikut tidak efektif.\n\nDalam rapat tersebut membahas mengenai rencana penambahan armada, tetapi hasilnya belum diputuskan karena disebabkan oleh perbedaan pendapat.\n\nPerbaikan kalimat tersebut yang paling tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Dalam rapat tersebut dibahas mengenai rencana penambahan armada, tetapi hasilnya belum diputuskan karena perbedaan pendapat."
+    },
+    {
+      "key": "B",
+      "text": "Rapat tersebut membahas mengenai rencana penambahan armada, tetapi hasilnya belum diputuskan karena disebabkan oleh perbedaan pendapat."
+    },
+    {
+      "key": "C",
+      "text": "Dalam rapat tersebut membahas rencana penambahan armada, tetapi hasil rapat belum diputuskan karena perbedaan pendapat."
+    },
+    {
+      "key": "D",
+      "text": "Rapat tersebut membahas rencana penambahan armada, tetapi hasilnya belum diputuskan karena perbedaan pendapat."
+    },
+    {
+      "key": "E",
+      "text": "Rapat tersebut membahas rencana penambahan armada, tetapi hasilnya belum diputuskan karena disebabkan perbedaan pendapat."
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Perbaikan ini membiarkan pemborosan kata mengenai; dibahas sudah bermakna transitif sehingga preposisi mengenai tidak diperlukan lagi.",
+    "B": "Perbaikan ini membiarkan dua kesalahan sekaligus, yaitu mengenai yang mubazir setelah membahas dan karena disebabkan oleh yang berlebihan karena makna sebab diulang.",
+    "C": "Perbaikan ini masih mempertahankan frasa preposisional dalam rapat tersebut di awal kalimat, sehingga kalimat tidak memiliki subjek yang jelas dan predikatnya menggantung.",
+    "D": "Benar. Perbaikan ini menjadikan rapat tersebut sebagai subjek, membuang preposisi mubazir mengenai setelah membahas, dan mengganti karena disebabkan oleh dengan konjungsi karena saja sehingga kalimat hemat dan logis.",
+    "E": "Perbaikan ini masih mempertahankan pemborosan karena disebabkan; bentuk disebabkan memerlukan pelaku atau keterangan oleh, dan pemakaiannya bersama karena membuat makna sebab diulang."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-002",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 2,
+  "type": "aritmetika",
+  "question_text": "Nilai dari 30 × 14 − 25 × 8 adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "−220"
+    },
+    {
+      "key": "B",
+      "text": "620"
+    },
+    {
+      "key": "C",
+      "text": "220"
+    },
+    {
+      "key": "D",
+      "text": "−110"
+    },
+    {
+      "key": "E",
+      "text": "387"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Nilai −220 diperoleh dengan membalik urutan pengurangan sehingga tandanya tertukar.",
+    "B": "Salah. Nilai 620 diperoleh dengan menjumlahkan kedua hasil kali, bukan mengurangkannya.",
+    "C": "Benar. 30 × 14 − 25 × 8 = 420 − 200 = 220.",
+    "D": "Salah. Nilai −110 diperoleh dengan menukar faktor kedua pada masing-masing perkalian, yaitu 30 × 8 − 25 × 14.",
+    "E": "Salah. Nilai 387 diperoleh dengan mengurangkan jumlah 25 dan 8, bukan hasil kalinya."
+  },
+  "difficulty": "medium",
+  "source": "aritmetika.py",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-020",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 20,
+  "type": "soal_cerita",
+  "question_text": "Sebuah proyek dapat diselesaikan oleh 18 pekerja dalam 20 hari. Setelah bekerja selama 8 hari, 6 pekerja diberhentikan karena harus mengerjakan proyek lain. Jika kemampuan setiap pekerja sama dan tidak ada pekerja pengganti, sisa pekerjaan tersebut akan selesai dalam waktu ... hari lagi.",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "12 hari"
+    },
+    {
+      "key": "B",
+      "text": "18 hari"
+    },
+    {
+      "key": "C",
+      "text": "20 hari"
+    },
+    {
+      "key": "D",
+      "text": "26 hari"
+    },
+    {
+      "key": "E",
+      "text": "30 hari"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Salah. 12 hari adalah sisa jadwal semula (20 − 8); cara ini mengabaikan berkurangnya pekerja menjadi 12 orang.",
+    "B": "Benar. Total pekerjaan = 18 × 20 = 360 hari-orang. Delapan hari pertama memakai 18 × 8 = 144 hari-orang, sehingga sisa 216 hari-orang. Dengan 12 pekerja, sisa pekerjaan selesai dalam 216 : 12 = 18 hari.",
+    "C": "Salah. 20 hari adalah durasi semula; jika 6 pekerja berhenti, sisa pekerjaan justru memerlukan waktu lebih panjang daripada sisa jadwal.",
+    "D": "Salah. 26 hari diperoleh dengan menambahkan 8 hari yang sudah berjalan pada 18 hari sisa, padahal yang ditanyakan hanya waktu setelah pemberhentian.",
+    "E": "Salah. 30 hari diperoleh dengan membagi seluruh 360 hari-orang dengan 12 pekerja, seolah-olah 8 hari pertama belum dikerjakan."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

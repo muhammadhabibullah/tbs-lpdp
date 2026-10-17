@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-022",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 22,
+  "type": "soal_cerita",
+  "question_text": "Tiga sekutu menanamkan modal pada sebuah usaha. Sekutu A menanamkan Rp10.000.000,00 selama 12 bulan, sekutu B Rp8.000.000,00 selama 10 bulan, dan sekutu C Rp6.000.000,00 selama 5 bulan. Keuntungan sebesar Rp69.000.000,00 dibagi sebanding dengan hasil kali modal dan lama penanaman modal. Bagian keuntungan sekutu B adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp9.000.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp23.000.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp24.000.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp36.000.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp69.000.000,00"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Rp9.000.000,00 adalah bagian sekutu C (3/23 × 69.000.000).",
+    "B": "Salah. Rp23.000.000,00 diperoleh dengan membandingkan modal saja (10 : 8 : 6 = 5 : 4 : 3), sehingga B mendapat 4/12 × 69.000.000; lama penanaman diabaikan.",
+    "C": "Benar. Modal × lama: A = 10 × 12 = 120, B = 8 × 10 = 80, dan C = 6 × 5 = 30, sehingga perbandingannya 12 : 8 : 3 dengan jumlah 23 bagian. Satu bagian = 69.000.000 : 23 = 3.000.000, jadi bagian B = 8 × 3.000.000 = Rp24.000.000,00.",
+    "D": "Salah. Rp36.000.000,00 adalah bagian sekutu A (12/23 × 69.000.000).",
+    "E": "Salah. Rp69.000.000,00 adalah seluruh keuntungan, bukan bagian sekutu B."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

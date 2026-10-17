@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-002",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 2,
+  "type": "sinonim",
+  "question_text": "IMBAUAN = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Perintah"
+    },
+    {
+      "key": "B",
+      "text": "Larangan"
+    },
+    {
+      "key": "C",
+      "text": "Pujian"
+    },
+    {
+      "key": "D",
+      "text": "Rayuan"
+    },
+    {
+      "key": "E",
+      "text": "Ajakan"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Perintah adalah arahan yang mengikat dan wajib dijalankan, sedangkan imbauan berupa seruan yang tidak memaksa penerimanya.",
+    "B": "Larangan meminta sesuatu tidak dilakukan; arahnya berlawanan dengan imbauan yang justru mengajak melakukan sesuatu.",
+    "C": "Pujian merupakan penilaian positif terhadap orang lain, bukan seruan agar orang bertindak.",
+    "D": "Rayuan adalah bujukan dengan kata-kata manis untuk meluluhkan hati seseorang; imbauan disampaikan secara terbuka untuk kepentingan bersama, bukan dengan membujuk secara pribadi.",
+    "E": "Benar. KBBI mencatat imbauan sebagai panggilan atau ajakan kepada orang banyak, sehingga padanan maknanya adalah ajakan."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

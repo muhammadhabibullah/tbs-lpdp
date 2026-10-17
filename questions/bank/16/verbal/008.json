@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-008",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 8,
+  "type": "antonim",
+  "question_text": "SEGREGASI >< ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Integrasi"
+    },
+    {
+      "key": "B",
+      "text": "Pemisahan"
+    },
+    {
+      "key": "C",
+      "text": "Pengucilan"
+    },
+    {
+      "key": "D",
+      "text": "Pembatasan"
+    },
+    {
+      "key": "E",
+      "text": "Perbedaan"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Segregasi berarti pemisahan kelompok menjadi bagian-bagian yang terpisah; lawan katanya adalah integrasi, yaitu penyatuan menjadi satu kesatuan.",
+    "B": "Pemisahan justru sepadan dengan segregasi, sehingga searah, bukan berlawanan.",
+    "C": "Pengucilan berarti penyingkiran atau pengasingan seseorang atau kelompok dari pergaulan; maknanya searah dengan segregasi, bukan lawannya.",
+    "D": "Pembatasan berarti pengekangan atau pembatasan ruang gerak, bukan lawan dari pemisahan kelompok.",
+    "E": "Perbedaan menunjuk ketidaksamaan sifat, bukan lawan dari pemisahan kelompok."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "16-pemecahan_masalah-005",
+  "package": 16,
+  "subtest": "pemecahan_masalah",
+  "number": 5,
+  "type": "logika_analitis",
+  "question_text": "Enam peserta pelatihan, yaitu Fajar, Gita, Hana, Ivan, Joko, dan Kiki, akan ditempatkan pada tiga kamar, yaitu kamar 1, kamar 2, dan kamar 3, dengan tepat dua peserta pada setiap kamar. Ketentuan penempatan: (1) Fajar menempati kamar 2, (2) Gita sekamar dengan Hana, (3) Ivan tidak sekamar dengan Fajar, (4) Joko menempati kamar 3, (5) Kiki tidak menempati kamar 1, dan (6) Hana tidak menempati kamar 3. Peserta yang sekamar dengan Joko adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Fajar"
+    },
+    {
+      "key": "B",
+      "text": "Gita"
+    },
+    {
+      "key": "C",
+      "text": "Hana"
+    },
+    {
+      "key": "D",
+      "text": "Kiki"
+    },
+    {
+      "key": "E",
+      "text": "Ivan"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Fajar menempati kamar 2 sesuai ketentuan (1) dan justru sekamar dengan Kiki, bukan dengan Joko; memilih Fajar berarti memindahkannya ke kamar 3 sehingga ketentuan (1) dilanggar.",
+    "B": "Salah. Gita sekamar dengan Hana di kamar 1 (ketentuan 2), sedangkan kamar 3 ditempati Ivan dan Joko; memilih Gita berarti menempatkannya di kamar 3 meskipun Hana tidak boleh berada di kamar itu (ketentuan 6).",
+    "C": "Salah. Hana sekamar dengan Gita di kamar 1, bukan di kamar 3; ketentuan (6) secara tegas melarang Hana menempati kamar 3 bersama Joko.",
+    "D": "Salah. Kiki menempati kamar 2 bersama Fajar setelah Ivan dipindahkan ke kamar 3 agar tidak sekamar dengan Fajar (ketentuan 3); memilih Kiki berarti menukar posisinya dengan Ivan.",
+    "E": "Benar. Fajar di kamar 2 (ketentuan 1) dan Joko di kamar 3 (ketentuan 4). Gita harus sekamar dengan Hana (ketentuan 2), sedangkan Hana tidak boleh di kamar 3 (ketentuan 6); jika Gita dan Hana diletakkan di kamar 2, kamar itu akan berisi tiga orang karena Fajar sudah di sana, sehingga pasangan itu menempati kamar 1. Ivan tidak boleh sekamar dengan Fajar (ketentuan 3), sehingga Ivan mengisi kamar 3, dan Kiki mengisi kamar 2 bersama Fajar sambil memenuhi ketentuan (5) bahwa Kiki tidak di kamar 1. Jadi Ivan sekamar dengan Joko."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

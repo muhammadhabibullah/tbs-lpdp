@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-021",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 21,
+  "type": "soal_cerita",
+  "question_text": "Harga sebuah barang mula-mula Rp240.000,00. Harga tersebut dinaikkan 25%, kemudian harga baru didiskon 20%. Harga akhir yang harus dibayar adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp192.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp228.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp240.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp252.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp300.000,00"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Rp192.000,00 = 240.000 × 0,8, yaitu hanya diskon 20% dari harga awal; kenaikan 25% tidak diterapkan.",
+    "B": "Salah. Rp228.000,00 = 240.000 × 0,95, diperoleh dengan mengurangkan 25% − 20% = 5% sebagai penurunan.",
+    "C": "Benar. Kenaikan 25%: 240.000 × 1,25 = 300.000. Diskon 20% dari harga baru: 300.000 × 0,8 = 240.000, sama dengan harga awal.",
+    "D": "Salah. Rp252.000,00 = 240.000 × 1,05, diperoleh dengan menganggap selisih 25% − 20% = 5% sebagai kenaikan.",
+    "E": "Salah. Rp300.000,00 adalah harga setelah kenaikan 25%; diskon 20% belum diterapkan."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

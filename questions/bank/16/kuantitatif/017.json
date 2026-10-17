@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-017",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 17,
+  "type": "deret_huruf",
+  "question_text": "A, Z, B, Y, D, W, G, ..., ... Dua huruf yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "K dan T"
+    },
+    {
+      "key": "B",
+      "text": "S dan K"
+    },
+    {
+      "key": "C",
+      "text": "U dan J"
+    },
+    {
+      "key": "D",
+      "text": "T dan L"
+    },
+    {
+      "key": "E",
+      "text": "T dan K"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Pasangan K dan T diperoleh karena menukar urutan kedua suku yang sebenarnya.",
+    "B": "Salah. Pasangan S dan K diperoleh karena memundurkan suku pertama satu posisi walaupun suku kedua sudah benar.",
+    "C": "Salah. Pasangan U dan J diperoleh karena memajukan suku pertama dan memundurkan suku kedua masing-masing satu posisi.",
+    "D": "Salah. Pasangan T dan L diperoleh karena mempertahankan suku pertama yang benar tetapi memajukan suku kedua satu posisi.",
+    "E": "Benar. Dua jalur berselang-seling bergerak berlawanan. Jalur ganjil naik +1, +2, +3, +4, sedangkan jalur genap turun −1, −2, −3, −4. Dua huruf berikutnya adalah T dan K."
+  },
+  "difficulty": "hard",
+  "source": "deret_huruf.py",
+  "verified": true
+}

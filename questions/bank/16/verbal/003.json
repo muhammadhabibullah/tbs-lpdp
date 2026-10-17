@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-003",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 3,
+  "type": "sinonim",
+  "question_text": "DOMINAN = ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Seimbang"
+    },
+    {
+      "key": "B",
+      "text": "Tersembunyi"
+    },
+    {
+      "key": "C",
+      "text": "Menonjol"
+    },
+    {
+      "key": "D",
+      "text": "Teratur"
+    },
+    {
+      "key": "E",
+      "text": "Lemah"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Seimbang berarti kedua pihak sama kuat, justru berlawanan dengan dominan yang menunjuk keunggulan salah satu pihak.",
+    "B": "Tersembunyi berarti tidak tampak, sedangkan dominan justru tampak menonjol dan menentukan.",
+    "C": "Benar. Dominan berarti paling kuat atau paling menonjol pengaruhnya dibandingkan yang lain; padanan yang tepat adalah menonjol.",
+    "D": "Teratur berkaitan dengan susunan yang rapi, bukan kekuatan pengaruh terhadap pihak lain.",
+    "E": "Lemah adalah lawan makna dominan, bukan padanannya."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

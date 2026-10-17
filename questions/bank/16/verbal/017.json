@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-017",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 17,
+  "type": "kalimat_efektif",
+  "question_text": "Kalimat berikut tidak efektif.\n\nKehadiran para relawan sangat dibutuhkan sekali untuk membantu para korban-korban bencana di wilayah tersebut.\n\nPerbaikan kalimat tersebut yang paling tepat adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kehadiran para relawan sangat dibutuhkan sekali untuk membantu para korban bencana di wilayah tersebut."
+    },
+    {
+      "key": "B",
+      "text": "Kehadiran para relawan sangat dibutuhkan untuk membantu para korban bencana di wilayah tersebut."
+    },
+    {
+      "key": "C",
+      "text": "Kehadiran para relawan-relawan sangat dibutuhkan untuk membantu para korban bencana di wilayah tersebut."
+    },
+    {
+      "key": "D",
+      "text": "Para relawan sangat membutuhkan kehadiran para korban bencana untuk membantu wilayah tersebut."
+    },
+    {
+      "key": "E",
+      "text": "Kehadiran seluruh para relawan sangat dibutuhkan untuk membantu para korban bencana di wilayah itu."
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Perbaikan ini hanya menghapus kesalahan para korban-korban, tetapi masih mempertahankan pemborosan sangat ... sekali; dua penanda intensitas itu tidak perlu dipakai bersamaan.",
+    "B": "Benar. Perbaikan ini menghapus pemborosan sangat ... sekali dan bentuk ganda para korban-korban sehingga kalimat menjadi hemat, sementara subjek kehadiran dan predikatnya dibutuhkan tetap jelas.",
+    "C": "Perbaikan ini membuang sangat ... sekali, tetapi masih mempertahankan penanda jamak ganda para relawan-relawan; kata para dan bentuk ulang sama-sama menyatakan jamak.",
+    "D": "Perbaikan ini membalik peran pelaku dan penerima bantuan: yang membutuhkan pertolongan adalah korban bencana, bukan relawan, sehingga makna kalimat berubah.",
+    "E": "Perbaikan ini menambahkan pemborosan baru, yaitu seluruh para, karena seluruh dan para sama-sama menandai keseluruhan atau jamak."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

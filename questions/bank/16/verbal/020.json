@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-020",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 20,
+  "type": "reading",
+  "question_text": "Makna frasa \"tekanan lingkungan\" dalam bacaan di atas adalah ...",
+  "image": null,
+  "passage": "Polusi cahaya di kawasan perkotaan kini dipandang sebagai tekanan lingkungan yang tidak ringan. Burung yang bermigrasi pada malam hari memanfaatkan posisi bintang dan medan magnet bumi untuk menentukan arah. Lampu jalan, papan iklan, dan fasad gedung yang menyala sepanjang malam mengaburkan informasi itu sehingga burung kehilangan orientasi, berputar-putar di sekitar bangunan, dan kehabisan tenaga. Kaca jendela yang diterangi dari dalam juga memantulkan lanskap yang tampak seperti ruang terbuka, sehingga burung menabraknya. Pada jalur migrasi tertentu, peristiwa semacam itu berulang pada malam yang sama setiap tahun.\n\nPerbaikan sederhana ternyata cukup berpengaruh. Sejumlah kota mewajibkan pemadaman lampu hias dan pengurangan penerangan gedung pada malam puncak migrasi, dan di kota-kota itu laporan tabrakan burung menurun tajam pada malam-malam tersebut. Namun, program itu belum menjangkau lampu jalan karena menyangkut keselamatan lalu lintas. Karena itu, penataan arah dan intensitas cahaya dinilai lebih menjanjikan daripada pemadaman menyeluruh: lampu tetap menyala untuk kebutuhan manusia, tetapi tidak lagi menyorot ke arah langit. Sayangnya, aturan semacam ini baru berlaku di beberapa kota dan penegakannya belum merata.",
+  "options": [
+    {
+      "key": "A",
+      "text": "beban biaya yang harus ditanggung pemerintah kota"
+    },
+    {
+      "key": "B",
+      "text": "tekanan udara yang ditimbulkan oleh bangunan-bangunan tinggi"
+    },
+    {
+      "key": "C",
+      "text": "tuntutan warga agar kawasan kota tetap terang pada malam hari"
+    },
+    {
+      "key": "D",
+      "text": "kewajiban hukum untuk menekan pencemaran cahaya"
+    },
+    {
+      "key": "E",
+      "text": "pengaruh yang merugikan bagi keseimbangan lingkungan"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Beban biaya tidak dibahas dalam kalimat tersebut; tekanan lingkungan merujuk pada gangguan terhadap lingkungan, bukan pengeluaran pemerintah.",
+    "B": "Ini pembacaan harfiah atas kata tekanan; konteks kalimat menyebut polusi cahaya sebagai masalah lingkungan, bukan tekanan udara akibat bangunan.",
+    "C": "Tuntutan warga agar kota tetap terang justru berlawanan dengan makna tekanan lingkungan yang menunjuk pada gangguan.",
+    "D": "Kewajiban hukum tidak disebut dalam kalimat itu; tekanan lingkungan adalah keadaan yang menekan lingkungan, bukan aturan yang mewajibkan.",
+    "E": "Benar. Dalam konteks kalimat pertama, polusi cahaya dipandang sebagai tekanan lingkungan, yaitu pengaruh yang menekan dan merugikan keseimbangan lingkungan."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

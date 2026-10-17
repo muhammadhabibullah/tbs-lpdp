@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-011",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 11,
+  "type": "aljabar",
+  "question_text": "Jika 7x − 14 = 0, nilai x adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "2"
+    },
+    {
+      "key": "B",
+      "text": "−2"
+    },
+    {
+      "key": "C",
+      "text": "7"
+    },
+    {
+      "key": "D",
+      "text": "14"
+    },
+    {
+      "key": "E",
+      "text": "0"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. 7x = 0 + 14 = 14, sehingga x = 14 : 7 = 2.",
+    "B": "Salah. Nilai −2 diperoleh dengan mengurangkan 14 sekali lagi ketika memindahkan ruas, padahal −14 berubah menjadi +14.",
+    "C": "Salah. Nilai 7 diperoleh dengan mengurangkan koefisien 7 dari 14, padahal koefisien itu harus dijadikan pembagi.",
+    "D": "Salah. Nilai 14 diperoleh dengan berhenti pada nilai 7x dan belum membaginya dengan 7.",
+    "E": "Salah. Nilai 0 diperoleh dengan membagi 0 dengan 7 tanpa memindahkan −14 lebih dahulu."
+  },
+  "difficulty": "easy",
+  "source": "aljabar.py",
+  "verified": true
+}

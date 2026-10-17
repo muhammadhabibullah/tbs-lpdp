@@ -1,0 +1,43 @@
+{
+  "id": "16-pemecahan_masalah-012",
+  "package": 16,
+  "subtest": "pemecahan_masalah",
+  "number": 12,
+  "type": "soal_cerita",
+  "question_text": "Panitia sebuah kegiatan menyiapkan 240 botol air mineral untuk tiga posko, dan setiap posko menerima jumlah botol yang sama. Jika di setiap posko terdapat 15 botol yang tidak terpakai, banyak botol air mineral yang terpakai di seluruh posko adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "225 botol"
+    },
+    {
+      "key": "B",
+      "text": "80 botol"
+    },
+    {
+      "key": "C",
+      "text": "45 botol"
+    },
+    {
+      "key": "D",
+      "text": "195 botol"
+    },
+    {
+      "key": "E",
+      "text": "210 botol"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Salah. Angka 225 diperoleh dari 240 - 15, yaitu pengurangan hanya satu kali; padahal setiap posko menyisakan 15 botol sehingga total botol yang tidak terpakai 3 x 15 = 45 botol.",
+    "B": "Salah. Angka 80 adalah 240 : 3, yaitu banyak botol yang diterima setiap posko; langkah mengurangkan botol yang tidak terpakai belum dilakukan, padahal yang ditanyakan adalah botol terpakai di seluruh posko.",
+    "C": "Salah. Angka 45 adalah 3 x 15, yaitu banyak botol yang tidak terpakai; ini bukan banyak botol yang terpakai, sehingga jawaban berhenti pada besaran yang salah.",
+    "D": "Benar. Setiap posko menerima 240 : 3 = 80 botol, dan yang terpakai di setiap posko 80 - 15 = 65 botol, sehingga total yang terpakai 3 x 65 = 195 botol, sama dengan 240 - 45.",
+    "E": "Salah. Angka 210 diperoleh dari 240 - 2 x 15, yaitu pengurangan hanya untuk dua posko, padahal ada tiga posko yang masing-masing menyisakan 15 botol."
+  },
+  "difficulty": "easy",
+  "source": "deepseek-flash",
+  "verified": true
+}

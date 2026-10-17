@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-009",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 9,
+  "type": "analogi",
+  "question_text": "AYAM : UNGGAS = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Kelopak : melati"
+    },
+    {
+      "key": "B",
+      "text": "Melati : bunga"
+    },
+    {
+      "key": "C",
+      "text": "Bunga : taman"
+    },
+    {
+      "key": "D",
+      "text": "Melati : wangi"
+    },
+    {
+      "key": "E",
+      "text": "Pohon : hutan"
+    }
+  ],
+  "correct_option": "B",
+  "explanations": {
+    "A": "Kelopak adalah bagian dari melati; hubungannya bagian dan keseluruhan, bukan jenis dan kelompok.",
+    "B": "Benar. Ayam termasuk salah satu jenis unggas, sebagaimana melati termasuk salah satu jenis bunga; hubungannya jenis dan kelompoknya.",
+    "C": "Bunga dan taman menyatakan benda dan tempatnya, bukan jenis dan kelompok.",
+    "D": "Wangi adalah sifat yang melekat pada melati, bukan kelompok tempat melati termasuk.",
+    "E": "Hutan adalah kumpulan pohon, bukan kelompok atau kelas yang mencakup pohon; pohon tidak menjadi jenis dari hutan."
+  },
+  "difficulty": "easy",
+  "source": "deepseek-flash",
+  "verified": true
+}

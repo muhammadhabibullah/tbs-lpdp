@@ -1,0 +1,43 @@
+{
+  "id": "16-pemecahan_masalah-010",
+  "package": 16,
+  "subtest": "pemecahan_masalah",
+  "number": 10,
+  "type": "interpretasi_data",
+  "question_text": "Tabel di atas menyajikan data fiktif jumlah penumpang empat moda transportasi di Kota Larasati pada tahun 2024 dan 2025, beserta persentase penumpang yang menerima tarif bersubsidi pada tahun 2025. Berdasarkan tabel tersebut, pernyataan yang benar adalah ...",
+  "image": null,
+  "passage": "Moda|2024 (ribu penumpang)|2025 (ribu penumpang)|Penumpang Bersubsidi 2025 (%)\nBus Kota|480|540|25\nKereta Ringan|300|390|40\nAngkutan Sungai|260|260|15\nTaksi Listrik|160|200|30",
+  "options": [
+    {
+      "key": "A",
+      "text": "Seluruh moda mengalami kenaikan jumlah penumpang dari tahun 2024 ke tahun 2025"
+    },
+    {
+      "key": "B",
+      "text": "Persentase kenaikan penumpang taksi listrik dari tahun 2024 ke tahun 2025 lebih besar daripada persentase kenaikan penumpang kereta ringan"
+    },
+    {
+      "key": "C",
+      "text": "Rata-rata waktu tunggu penumpang bus kota pada tahun 2025 lebih lama daripada penumpang kereta ringan"
+    },
+    {
+      "key": "D",
+      "text": "Jumlah penumpang bersubsidi angkutan sungai pada tahun 2025 adalah 26 ribu orang"
+    },
+    {
+      "key": "E",
+      "text": "Jumlah penumpang bersubsidi kereta ringan pada tahun 2025 lebih banyak daripada jumlah penumpang bersubsidi bus kota pada tahun 2025"
+    }
+  ],
+  "correct_option": "E",
+  "explanations": {
+    "A": "Salah. Bus kota, kereta ringan, dan taksi listrik memang naik, tetapi angkutan sungai tetap 260 ribu penumpang pada kedua tahun; klaim seluruh moda muncul dari generalisasi tiga baris yang menonjol tanpa memeriksa baris keempat.",
+    "B": "Salah. Kenaikan taksi listrik adalah 200 - 160 = 40 ribu, yaitu 40 : 160 = 25 persen, sedangkan kenaikan kereta ringan adalah 390 - 300 = 90 ribu, yaitu 90 : 300 = 30 persen. Angka 25 persen tampak lebih besar hanya jika 90 ribu dibagi angka tahun 2025, yaitu 390, sehingga diperoleh sekitar 23,1 persen; itu kesalahan memakai tahun dasar.",
+    "C": "Salah. Tabel hanya memuat jumlah penumpang dan persentase penumpang bersubsidi; tabel tidak memuat waktu tunggu, sehingga klaim tentang lamanya waktu tunggu tidak dapat dikonfirmasi maupun dibantah dari tabel.",
+    "D": "Salah. Penumpang bersubsidi angkutan sungai adalah 15 persen dari 260 ribu, yaitu 39 ribu orang; angka 26 ribu berasal dari 10 persen dikali 260 ribu, yaitu persentase yang salah dibaca.",
+    "E": "Benar. Penumpang bersubsidi kereta ringan adalah 40 persen dari 390 ribu, yaitu 156 ribu orang, sedangkan penumpang bersubsidi bus kota adalah 25 persen dari 540 ribu, yaitu 135 ribu orang; kereta ringan lebih banyak 21 ribu orang. Pernyataan ini menuntut penggabungan dua baris dengan dua operasi persentase."
+  },
+  "difficulty": "hard",
+  "source": "deepseek-flash",
+  "verified": true
+}

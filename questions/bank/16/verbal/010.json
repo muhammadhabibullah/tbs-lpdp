@@ -1,0 +1,43 @@
+{
+  "id": "16-verbal-010",
+  "package": 16,
+  "subtest": "verbal",
+  "number": 10,
+  "type": "analogi",
+  "question_text": "BANJIR : KERUSAKAN = ... : ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Gempa : bangunan"
+    },
+    {
+      "key": "B",
+      "text": "Kebakaran : pemadam"
+    },
+    {
+      "key": "C",
+      "text": "Longsor : lereng"
+    },
+    {
+      "key": "D",
+      "text": "Kemarau : gagal panen"
+    },
+    {
+      "key": "E",
+      "text": "Kerusakan : perbaikan"
+    }
+  ],
+  "correct_option": "D",
+  "explanations": {
+    "A": "Gempa dan bangunan menyatakan peristiwa dan benda yang terkena; pasangan stimulus menyatakan peristiwa dan akibat yang ditimbulkannya.",
+    "B": "Kebakaran dan pemadam menyatakan peristiwa dan alat atau petugas yang menanganinya, bukan peristiwa dan akibatnya.",
+    "C": "Longsor dan lereng menyatakan peristiwa dan tempat terjadinya, bukan peristiwa dan akibat.",
+    "D": "Benar. Banjir mengakibatkan kerusakan, sebagaimana kemarau mengakibatkan gagal panen; kedua pasangan menyatakan sebab dan akibat.",
+    "E": "Kerusakan dan perbaikan menyatakan akibat dan tindakan pemulihannya; arah hubungannya berbeda dari pasangan stimulus."
+  },
+  "difficulty": "medium",
+  "source": "deepseek-flash",
+  "verified": true
+}

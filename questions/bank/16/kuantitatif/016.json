@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-016",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 16,
+  "type": "deret_angka",
+  "question_text": "−1, 3, 9, 17, 27, 39, ... Bilangan yang tepat untuk melanjutkan deret tersebut adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "53"
+    },
+    {
+      "key": "B",
+      "text": "46"
+    },
+    {
+      "key": "C",
+      "text": "56"
+    },
+    {
+      "key": "D",
+      "text": "69"
+    },
+    {
+      "key": "E",
+      "text": "51"
+    }
+  ],
+  "correct_option": "A",
+  "explanations": {
+    "A": "Benar. Suku ke-n mengikuti n(n + 1) − 3: 1 × 2 − 3 = −1, 2 × 3 − 3 = 3, dan seterusnya. Suku ketujuh adalah 7 × 8 − 3 = 53.",
+    "B": "Salah. Nilai 46 diperoleh dengan mengkuadratkan 7, padahal pola mengalikan dua bilangan berurutan 7 × 8.",
+    "C": "Salah. Nilai 56 diperoleh dengan menghitung 7 × 8 tetapi melupakan tetapan −3.",
+    "D": "Salah. Nilai 69 diperoleh dengan melompat ke pola 8 × 9 sehingga memperoleh suku kedelapan.",
+    "E": "Salah. Nilai 51 diperoleh dengan mengulang selisih terakhir 12, padahal selisihnya terus bertambah."
+  },
+  "difficulty": "medium",
+  "source": "deret_angka.py",
+  "verified": true
+}

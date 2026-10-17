@@ -1,0 +1,43 @@
+{
+  "id": "16-kuantitatif-023",
+  "package": 16,
+  "subtest": "kuantitatif",
+  "number": 23,
+  "type": "soal_cerita",
+  "question_text": "Harga 3 kg jeruk adalah Rp54.000,00. Dengan harga satuan yang sama, harga 5 kg jeruk adalah ...",
+  "image": null,
+  "passage": null,
+  "options": [
+    {
+      "key": "A",
+      "text": "Rp72.000,00"
+    },
+    {
+      "key": "B",
+      "text": "Rp81.000,00"
+    },
+    {
+      "key": "C",
+      "text": "Rp90.000,00"
+    },
+    {
+      "key": "D",
+      "text": "Rp108.000,00"
+    },
+    {
+      "key": "E",
+      "text": "Rp135.000,00"
+    }
+  ],
+  "correct_option": "C",
+  "explanations": {
+    "A": "Salah. Rp72.000,00 = 54.000 : 3 × 4, yaitu harga 4 kg, bukan 5 kg.",
+    "B": "Salah. Rp81.000,00 = 54.000 × 1,5, diperoleh dengan mengalikan harga 3 kg dengan 1,5, bukan dengan 5/3.",
+    "C": "Benar. Harga 1 kg = 54.000 : 3 = 18.000, sehingga harga 5 kg = 5 × 18.000 = Rp90.000,00.",
+    "D": "Salah. Rp108.000,00 = 2 × 54.000, diperoleh dengan menganggap 5 kg dua kali lipat 3 kg.",
+    "E": "Salah. Rp135.000,00 = 54.000 : 2 × 5, yaitu membagi harga 3 kg dengan 2 lebih dahulu."
+  },
+  "difficulty": "easy",
+  "source": "deepseek-flash",
+  "verified": true
+}
